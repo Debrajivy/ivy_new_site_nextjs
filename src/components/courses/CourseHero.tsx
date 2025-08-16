@@ -1,3 +1,4 @@
+"use client";
 import React, {useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -12,6 +13,8 @@ import NASSCOM from "@/assests/NASSCOM.png";
 import ivy from "@/assests/ivy.png";
 import IIT_logo from "@/assests/IIT_logo.jpg"; // Import the IIT_logo
 import IIT_BACKGROUND from "@/assests/IIT_BACKGROUND.webp"
+import Link from 'next/link';
+import Image from 'next/image';
 interface CourseHeroProps {
   course: Course;
 }
@@ -94,7 +97,6 @@ const handleSubmit = async (e) => {
 
     if (response.ok) {
       const result = await response.json();
-      console.log("LeadSquared API Response:", result);
 
       if (result && result.Status === "Success") {
         setSubmitStatus('success');
@@ -132,7 +134,7 @@ const handleSubmit = async (e) => {
     { name: 'Deloitte', logo: deloitte },
     { name: 'PwC', logo: pwc }
   ];
-  { console.log("course faq", course) }
+  
 
   // Determine if it's the specific IIT Guwahati course
   const isIITGuwahatiCourse = course.title === "Data Science & AI with IIT Guwahati" || course.title === "Executive Generative AI Course with IIT Guwahati" || course.title === "Cloud Data Engineering Course with IIT Guwahati";
@@ -148,8 +150,8 @@ const handleSubmit = async (e) => {
         marginTop: -30,
         // Conditional background for IIT Guwahati course
         backgroundImage: isIITGuwahatiCourse
-          ? `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${IIT_BACKGROUND})` // Dark overlay for better text readability, adjust opacity as needed (0.2 for lighter, 0.6 for darker)
-          : undefined, // No background image for other courses
+  ? `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${IIT_BACKGROUND.src})`
+  : undefined,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -163,7 +165,13 @@ const handleSubmit = async (e) => {
           <div className="space-y-6">
             <div style={{ marginTop: 10 }} className="flex flex-col">
               <Badge style={{ backgroundColor: '#4eaec3', color: 'white', fontWeight: 'normal' }} className="text-white hover:bg-white/20 w-fit mb-4">
-                <a href='/'>Home/<a href='/categories'>Courses</a></a>/&nbsp;<a href={course.slug}>{course.slug}</a>
+                <nav className="breadcrumbs">
+  <Link href="/">Home</Link>
+  <span>/</span>
+  <Link href="/categories">Courses</Link>
+  <span>/</span>
+  <Link href={`/courses/${course.slug}`}>{course.slug}</Link>
+</nav>
               </Badge>
 
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -177,19 +185,25 @@ const handleSubmit = async (e) => {
 
                 {
                   course.title === "Data Science with Machine Learning & AI" ? (
-                    <img
+                    <Image
+                      width={100}
+                      height={50}
                       className="h-20 w-auto object-contain"
                       src={NASSCOM}
                       alt="NASSCOM Certification"
                     />
                   ) : course.title === "Cloud Data Engineering Certification" || course.title === "Data Visualization Course" || course.title === "Data Analytics with Visualization Certification Course" || course.title === "Business Analytics Certification Course" ? (
-                    <img
+                    <Image
+                      width={100}
+                      height={50}
                       className="h-20 w-auto object-contain"
                       src={ivy}
                       alt="ivy"
                     />
                   ) : (
-                    <img
+                    <Image
+                      width={100}
+                      height={50}
                       className="h-10 w-auto object-contain"
                       src={E}
                       alt="E & ICT"
@@ -244,7 +258,9 @@ const handleSubmit = async (e) => {
                     <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
                       {partners.map((partner) => (
                         <div key={partner.name} className="flex items-center">
-                          <img
+                          <Image
+                            width={100}
+                            height={50}
                             src={partner.logo}
                             alt={`${partner.name} logo`}
 
@@ -261,7 +277,9 @@ const handleSubmit = async (e) => {
                     <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
                       {partners.map((partner) => (
                         <div key={partner.name} className="flex items-center">
-                          <img
+                          <Image
+                            width={100}
+                            height={50}
                             src={partner.logo}
                             alt={`${partner.name} logo`}
 
@@ -388,7 +406,7 @@ const handleSubmit = async (e) => {
                     <option value="Chennai">Chennai</option>
                   </select>
                 </div>
-                <div>
+                {/* <div>
                   <select
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm md:text-base text-gray-700"
                     required
@@ -402,8 +420,8 @@ const handleSubmit = async (e) => {
                     <option value="Bangalore">Bangalore</option>
                     <option value="Pune">Pune</option>
                   </select>
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <select
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm md:text-base text-gray-700"
                     required
@@ -421,7 +439,7 @@ const handleSubmit = async (e) => {
                     <option value="Cloud Data Engineering Program">Cloud Data Engineering Program </option>
                     <option value="Executive Gen AI Course with IIT Guwahati">Executive Gen AI Course with IIT Guwahati</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div style={{ marginTop: 30 }} className="mt-auto pt-4">
                   <Button

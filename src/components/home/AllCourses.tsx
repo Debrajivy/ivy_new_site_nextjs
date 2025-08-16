@@ -1,9 +1,10 @@
+"use client";
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Clock, Star, CheckCircle, Search, Filter as FilterIcon, X as CloseIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 
@@ -21,6 +22,7 @@ import BA from "@/assests/BA.webp";
 import DV from "@/assests/DV.webp";
 import CDI from "@/assests/CDI.webp";
 import CDEI from "@/assests/CDEI.webp";
+import Image from 'next/image';
 
 interface Course {
   id: string;
@@ -196,7 +198,9 @@ const CourseCard = ({ course }: { course: Course }) => {
      <Card className="card-hover flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg min-h-[520px] h-auto">
       {/* Improved Image Container - Won't crop on any device */}
       <div className="relative w-full aspect-video bg-gray-100 flex items-center justify-center">
-        <img
+        <Image
+          width={400}
+          height={300}
           src={course.image}
           alt={course.title}
           className="w-full h-full object-contain p-1"
@@ -304,7 +308,7 @@ const CourseCard = ({ course }: { course: Course }) => {
             <span className="text-gray-500 text-xs ml-1">({course.reviewCount} reviews)</span>
           </div>
           <Link
-            to={`/courses/${course.slug}`}
+            href={`/courses/${course.slug}`}
             onClick={() => window.scrollTo(0, 0)}
           >
             <Button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg text-sm transition-colors duration-300 shadow-md">

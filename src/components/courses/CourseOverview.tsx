@@ -4,6 +4,7 @@ import { Course } from '@/lib/api';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { CheckCircle, Users, Award, Briefcase, Brain } from 'lucide-react';
+import Image from 'next/image';
 
 interface CourseOverviewProps {
   course: Course;
@@ -97,7 +98,9 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                 <div className="space-y-6">
                   {course.instructors?.map((instructor) => (
                     <div key={instructor.id} className="flex items-start">
-                      <img
+                      <Image
+                        width={48}
+                        height={48}
                         src={instructor.image}
                         alt={instructor.name}
                         className="w-12 h-12 rounded-full object-cover mr-4"

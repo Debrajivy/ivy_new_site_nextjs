@@ -1,7 +1,7 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Award, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import ratingIcon from '@/assests/rating.png';
 
 const Hero = () => {
@@ -89,7 +89,6 @@ const Hero = () => {
 
     if (response.ok) {
       const result = await response.json();
-      console.log("LeadSquared API Response:", result);
 
       if (result && result.Status === "Success") {
         setSubmitStatus('success');

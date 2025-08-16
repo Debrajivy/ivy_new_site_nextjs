@@ -1,9 +1,10 @@
+"use client";
 import React, { useState } from 'react';
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Clock, Star, ChevronUp, ChevronDown, ChevronRight, CheckCircle } from 'lucide-react'; // Added CheckCircle for bullet points
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import webp1 from "@/assests/webp1.webp";
 import webp2 from "@/assests/webp2.webp";
 import webp3 from "@/assests/datascience.jpeg";
@@ -18,6 +19,7 @@ import BA from "@/assests/BA.webp";
 import DV from "@/assests/DV.webp";
 import CDI from "@/assests/CDI.webp";
 import CDEI from "@/assests/CDEI.webp";
+import Image from 'next/image';
 
 interface Course {
   id: string;
@@ -183,7 +185,9 @@ const CourseCard = ({ course }: { course: Course }) => {
   return (
     <Card className="card-hover h-full flex flex-col">
       <div className="relative">
-        <img
+        <Image
+          width={400}
+          height={300}
           src={course.image}
           alt={course.title}
           className="w-full h-auto max-h-60 object-cover rounded-t-lg"
@@ -249,7 +253,7 @@ const CourseCard = ({ course }: { course: Course }) => {
           <span className="text-gray-500 text-sm ml-2">({course.reviewCount} reviews)</span>
         </div>
         <Link
-          to={`/courses/${course.slug}`}
+          href={`/courses/${course.slug}`}
           className="w-full"
           onClick={() => window.scrollTo(0, 0)}
         >
@@ -282,7 +286,7 @@ const FeaturedCourses = () => {
               Explore our most popular Data, GenAI and Data Engineering Courses
             </p>
           </div>
-          <Link to="/categories" className="mt-4 md:mt-0">
+          <Link href="/categories" className="mt-4 md:mt-0">
             <Button variant="outline" className="flex items-center">
               View All Courses
               <ChevronRight size={16} className="ml-2" />

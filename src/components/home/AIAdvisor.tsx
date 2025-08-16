@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -35,8 +36,6 @@ const AIAdvisor = () => {
     return () => window.removeEventListener("resize", checkIfMobile)
   }, [])
 
-
-  const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
 
   const handleClick = () => {
     if (isMobile) {

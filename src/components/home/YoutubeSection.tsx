@@ -6,6 +6,7 @@ import youtube1 from "@/assests/youtube1.jpeg";
 import youtube2 from "@/assests/youtube2.jpeg";
 import youtube3 from "@/assests/youtube3.jpeg";
 import youtube4 from "@/assests/youtube4.jpeg";
+import Image from 'next/image';
 
 interface VideoItem {
   id: string;
@@ -110,7 +111,9 @@ const YoutubeSection = () => {
             <Card key={video.id} className="overflow-hidden border-none shadow-md hover:shadow-xl transition-shadow duration-300">
               <a href={video.url} target="_blank" rel="noopener noreferrer">
                 <div className="relative">
-                  <img
+                  <Image
+                    width={400}
+                    height={300}
                     src={video.thumbnail}
                     alt={video.title}
                     className="w-full h-48 object-cover"

@@ -31,7 +31,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
   if (!course.projects || course.projects.length === 0) {
     return null;
   }
-  console.log("course projects", course)
+  
   // Filter projects for practice (hands-on experience) vs. regular projects
   const practiceProjects = course.projects.filter(project => project.isPractice);
   const regularProjects = course.projects.filter(project => !project.isPractice);

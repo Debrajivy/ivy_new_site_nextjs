@@ -6,6 +6,7 @@ import PrateekAgarwal from "@/assests/pratilk.webp";
 import eeshani from "@/assests/eeshani.webp";
 import prakhar from "@/assests/prakhar.webp";
 import raju from "@/assests/raju.webp";
+import Image from 'next/image';
 
 interface Faculty {
   id: string;
@@ -80,7 +81,9 @@ const TopFaculty = () => {
               <CardContent className="pt-6">
                 <div className="flex flex-col items-center mb-4">
                   <div className="rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
-                    <img 
+                    <Image
+                      width={96}
+                      height={96} 
                       src={member.image} 
                       alt={member.name} 
                       className="w-24 h-24 object-cover"

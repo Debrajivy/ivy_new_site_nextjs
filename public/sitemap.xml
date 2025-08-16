@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://ivyproschool.com/</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Categories Page -->
+  <url>
+    <loc>https://ivyproschool.com/categories</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Alumni Page -->
+  <url>
+    <loc>https://ivyproschool.com/alumni</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://ivyproschool.com/contact-us</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Bootcamp Page -->
+  <url>
+    <loc>https://ivyproschool.com/bootcamp</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Course Page -->
+  <url>
+    <loc>https://ivyproschool.com/courses/iit-data-science-course</loc>
+  </url>
+  <url>
+    <loc>https://ivyproschool.com/courses/data-science-and-ml-course</loc>
+  </url>
+  <url>
+    <loc>https://ivyproschool.com/courses/data-engineering-course</loc>
+  </url>
+  <url>
+    <loc>https://ivyproschool.com/courses/iit-data-engineering-course</loc>
+  </url>
+  <url>
+    <loc>https://ivyproschool.com/courses/data-analytics-course</loc>
+  </url>
+  <url>
+    <loc>https://ivyproschool.com/courses/business-analytics-course</loc>
+  </url>
+  <url>
+    <loc>https://ivyproschool.com/courses/data-visualization-course</loc>
+  </url>
+  <url>
+    <loc>https://ivyproschool.com/courses/iit-generative-ai-course</loc>
+  </url>
+  
+</urlset>

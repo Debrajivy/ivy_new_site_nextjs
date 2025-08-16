@@ -7,6 +7,7 @@ import workshop from "@/assests/2.webp";
 import networking from "@/assests/3.webp";
 import training from "@/assests/4.webp";
 import CallToAction from './CallToAction';
+import Image from 'next/image';
 
 const DayAtIvy = () => {
   const campusEvents = [
@@ -58,7 +59,9 @@ const DayAtIvy = () => {
         {campusEvents.map((event) => (
           <Card key={event.id} className="overflow-hidden hover:shadow-lg transition-all border-none">
             <div className="relative w-full">
-              <img
+              <Image
+                width={500}
+                height={300}
                 src={event.image}
                 alt={event.title}
                 className="w-full h-auto object-contain"

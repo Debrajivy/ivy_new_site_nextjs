@@ -1,22 +1,36 @@
+"use client"
 
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ExternalLink, Linkedin, PlayCircle } from 'lucide-react';
-import { useQuery } from '@tanstack/react-query';
-import { fetchAlumniByourse } from '@/lib/api';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import Testimonials from '../home/Testimonials';
+import { useState, useEffect } from "react"
+import { fetchAlumniByourse } from "@/lib/api"
+import Testimonials from "../home/Testimonials"
 
 interface CourseAlumniProps {
-  courseId: string;
+  courseId: string
 }
 
 const CourseAlumni = ({ courseId }: CourseAlumniProps) => {
-  const { data: alumni, isLoading } = useQuery({
-    queryKey: ['alumni', courseId],
-    queryFn: () => fetchAlumniByourse(courseId),
-  });
+  const [alumni, setAlumni] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const loadAlumni = async () => {
+      try {
+        setIsLoading(true)
+        const data = await fetchAlumniByourse(courseId)
+        setAlumni(data)
+      } catch (err) {
+        setError(err)
+        console.error("Failed to fetch alumni:", err)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    if (courseId) {
+      loadAlumni()
+    }
+  }, [courseId])
 
   if (isLoading) {
     return (
@@ -28,16 +42,14 @@ const CourseAlumni = ({ courseId }: CourseAlumniProps) => {
           </div>
         </div>
       </section>
-    );
+    )
   }
 
   // if (!alumni || alumni.length === 0) {
   //   return null;
   // }
 
-  return (
-    <Testimonials/>
-  );
-};
+  return <Testimonials />
+}
 
-export default CourseAlumni;
+export default CourseAlumni

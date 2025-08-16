@@ -16,15 +16,16 @@ import amazond from "../../assests/amazond.webp"
 import deloitted from "../../assests/deloitted.webp";
 import pwcd from "../../assests/pwcd.webp";
 import capgeminid from "../../assests/capgeminid.webp";
-import pwctra from "../../assests/Pwctra.webp";
-import tescotra from "../../assests/Tescotra.webp";
-import hsbctra from "../../assests/hsbctra.webp";
-import tatatra from "../../assests/Tatatra1.webp";
-import ITctra from "../../assests/ITCtra.webp";
-import honeywelltra from "../../assests/Honeywelltra.webp";
-import genpacttra from "../../assests/Genpacttra.webp";
-import cognizanttra from "../../assests/Cognizanttra.webp";
-import accenturetra from "../../assests/Accenturetra.webp";
+import pwctra from "@/assests/Pwctra.webp";
+import tescotra from "@/assests/Tescotra.webp";
+import hsbctra from "@/assests/hsbctra.webp";
+import tatatra from "@/assests/Tatatra1.webp";
+import ITctra from "@/assests/ITCtra.webp";
+import honeywelltra from "@/assests/Honeywelltra.webp";
+import genpacttra from "@/assests/Genpacttra.webp";
+import cognizanttra from "@/assests/Cognizanttra.webp";
+import accenturetra from "@/assests/Accenturetra.webp";
+import Image from 'next/image';
 
 const Partners = () => {
   const partners = [
@@ -127,7 +128,9 @@ const Partners = () => {
 
                 {/* Big Size Logo - Directly on the card, no nested border/box */}
                 <div style={{marginTop:-20}} className="flex items-center justify-center mb-4">
-                  <img
+                  <Image
+                  width={128}
+                  height={128}
                     src={item.logo}
                     alt={`${item.description} logo`}
                     className="h-32 w-32 object-contain" // Increased size to h-32 w-32
@@ -157,7 +160,9 @@ const Partners = () => {
           <div className="flex flex-wrap justify-center items-center gap-x-0 gap-y-0 sm:gap-x-6 sm:gap-y-4">
             {partners.map((partner) => (
               <div key={partner.name} className="flex items-center justify-center w-[calc(33.333%)] sm:w-24 h-20 sm:h-24">
-                <img
+                <Image
+                width={128}
+                height={128}
                   src={partner.logo}
                   alt={`${partner.name} logo`}
                   className="h-14 sm:h-16 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
@@ -191,7 +196,9 @@ const Partners = () => {
               {enterpriseEvents.map((event) => (
                 <Card key={event.id} className="overflow-hidden border-none shadow-md">
                   <div>
-                    <img
+                    <Image
+                    width={128}
+                    height={128}
                       src={event.image}
                       alt={`Training at ${event.company}`}
                       className="w-full object-cover"

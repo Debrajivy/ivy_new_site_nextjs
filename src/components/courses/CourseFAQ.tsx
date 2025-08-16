@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
@@ -13,7 +14,7 @@ interface CourseHeroProps {
   course: Course;
 }
 const CourseFAQ = ({ course }: CourseHeroProps) => {
-  { console.log("course", course) };
+ 
 
   const [activeFilter, setActiveFilter] = useState<string>('program');
 

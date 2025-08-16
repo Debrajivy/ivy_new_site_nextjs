@@ -1,21 +1,34 @@
+"use client"
 
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Star, PlayCircle } from 'lucide-react';
-import { useQuery } from '@tanstack/react-query';
-import { fetchTestimonialsByCourse } from '@/lib/api';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { useState, useEffect } from "react"
+import { fetchTestimonialsByCourse } from "@/lib/api"
 
 interface CourseTestimonialsProps {
-  courseId: string;
+  courseId: string
 }
 
 const CourseTestimonials = ({ courseId }: CourseTestimonialsProps) => {
-  const { data: testimonials, isLoading } = useQuery({
-    queryKey: ['testimonials', courseId],
-    queryFn: () => fetchTestimonialsByCourse(courseId),
-  });
+  const [testimonials, setTestimonials] = useState<any[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    const loadTestimonials = async () => {
+      try {
+        setIsLoading(true)
+        const data = await fetchTestimonialsByCourse(courseId)
+        setTestimonials(data)
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to load testimonials")
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    if (courseId) {
+      loadTestimonials()
+    }
+  }, [courseId])
 
   if (isLoading) {
     return (
@@ -27,11 +40,23 @@ const CourseTestimonials = ({ courseId }: CourseTestimonialsProps) => {
           </div>
         </div>
       </section>
-    );
+    )
+  }
+
+  if (error) {
+    return (
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center text-red-600">
+            <p>Error loading testimonials: {error}</p>
+          </div>
+        </div>
+      </section>
+    )
   }
 
   if (!testimonials || testimonials.length === 0) {
-    return null;
+    return null
   }
 
   return (
@@ -53,7 +78,7 @@ const CourseTestimonials = ({ courseId }: CourseTestimonialsProps) => {
             <span className="text-gray-600">2,250+ reviews on Google</span>
           </div>
         </div> */}
-{/*         
+        {/*         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
             <Card key={testimonial.id} className="hover:shadow-lg transition-all h-full flex flex-col">
@@ -74,7 +99,7 @@ const CourseTestimonials = ({ courseId }: CourseTestimonialsProps) => {
                     <div className="mt-4">
                       <Dialog>
                         <DialogTrigger asChild>
-                          <Button variant="outline" size="sm" className="w-full flex items-center justify-center">
+                          <Button variant="outline" size="sm" className="w-full flex items-center justify-center bg-transparent">
                             <PlayCircle size={16} className="mr-2" />
                             Watch Video Testimonial
                           </Button>
@@ -99,7 +124,7 @@ const CourseTestimonials = ({ courseId }: CourseTestimonialsProps) => {
                 
                 <div className="flex items-center mt-6">
                   <img 
-                    src={testimonial.image} 
+                    src={testimonial.image || "/placeholder.svg"} 
                     alt={testimonial.name}
                     className="h-12 w-12 rounded-full mr-4 object-cover"
                   />
@@ -112,7 +137,7 @@ const CourseTestimonials = ({ courseId }: CourseTestimonialsProps) => {
             </Card>
           ))}
         </div> */}
-        
+
         {/* <div className="mt-12 flex justify-center">
           <div className="max-w-md p-6 bg-gray-50 rounded-lg shadow-sm text-center">
             <h3 className="font-bold text-lg mb-2">Google Reviews</h3>
@@ -141,7 +166,7 @@ const CourseTestimonials = ({ courseId }: CourseTestimonialsProps) => {
         </div> */}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default CourseTestimonials;
+export default CourseTestimonials

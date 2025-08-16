@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Youtube, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="mb-6">
-              <Link to="/" className="flex items-center">
+              <Link href="/" className="flex items-center">
                 <img 
                   src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png" 
                   alt="Ivy Professional School" 
@@ -74,29 +74,29 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Courses</h3>
             <ul className="space-y-2">
-              <li><Link to="/courses/iit-data-science-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Science</Link></li>
-              <li><Link to="/courses/data-engineering-course">Cloud Data Engineering</Link></li>
-              <li><Link to="/courses/iit-generative-ai-course" className="text-gray-300 hover:text-white transition-colors">Executive Generative AI</Link></li>
-              <li><Link to="/courses/data-science-and-ml-course" className="text-gray-300 hover:text-white transition-colors">Machine Learning & AI</Link></li>
-              <li><Link to="/courses/iit-data-engineering-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Engineering</Link></li>
-              <li><Link to="/courses/data-analytics-course" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
-              <li><Link to="/courses/business-analytics-course" className="text-gray-300 hover:text-white transition-colors">Business Analytics</Link></li>
-              <li><Link to="/courses/data-visualization-course" className="text-gray-300 hover:text-white transition-colors">Data Visualization</Link></li>
-              {/* <li><Link to="/categories/deep-learning" className="text-gray-300 hover:text-white transition-colors">Deep Learning</Link></li>
-              <li><Link to="/categories" className="text-gray-300 hover:text-white transition-colors">All Courses</Link></li> */}
+              <li><Link href="/courses/iit-data-science-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Science</Link></li>
+              <li><Link href="/courses/data-engineering-course">Cloud Data Engineering</Link></li>
+              <li><Link href="/courses/iit-generative-ai-course" className="text-gray-300 hover:text-white transition-colors">Executive Generative AI</Link></li>
+              <li><Link href="/courses/data-science-and-ml-course" className="text-gray-300 hover:text-white transition-colors">Machine Learning & AI</Link></li>
+              <li><Link href="/courses/iit-data-engineering-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Engineering</Link></li>
+              <li><Link href="/courses/data-analytics-course" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
+              <li><Link href="/courses/business-analytics-course" className="text-gray-300 hover:text-white transition-colors">Business Analytics</Link></li>
+              <li><Link href="/courses/data-visualization-course" className="text-gray-300 hover:text-white transition-colors">Data Visualization</Link></li>
+              {/* <li><Link href="/categories/deep-learning" className="text-gray-300 hover:text-white transition-colors">Deep Learning</Link></li>
+              <li><Link href="/categories" className="text-gray-300 hover:text-white transition-colors">All Courses</Link></li> */}
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
-              {/* <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/about#founders" className="text-gray-300 hover:text-white transition-colors">Our Founders</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li> */}
-              <li><Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">Enterprise</Link></li>
-              <li><Link to="/alumni" className="text-gray-300 hover:text-white transition-colors">Testimonials</Link></li>
-              <li><Link to="https://www.youtube.com/ivyproschool" className="text-gray-300 hover:text-white transition-colors">YouTube Channel</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
+              {/* <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/about#founders" className="text-gray-300 hover:text-white transition-colors">Our Founders</Link></li>
+              <li><Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li> */}
+              <li><Link href="/enterprise" className="text-gray-300 hover:text-white transition-colors">Enterprise</Link></li>
+              <li><Link href="/alumni" className="text-gray-300 hover:text-white transition-colors">Testimonials</Link></li>
+              <li><Link href="https://www.youtube.com/ivyproschool" className="text-gray-300 hover:text-white transition-colors">YouTube Channel</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
           
@@ -147,9 +147,9 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Ivy Professional School. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link to="/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</Link>
-              <Link to="/sitemap" className="text-gray-400 text-sm hover:text-white transition-colors">Sitemap</Link>
+              <Link href="/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</Link>
+              <Link href="/sitemap" className="text-gray-400 text-sm hover:text-white transition-colors">Sitemap</Link>
             </div>
           </div>
         </div>

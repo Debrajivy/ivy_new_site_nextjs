@@ -51,6 +51,7 @@ import Dsvc from "../../assests/Dsvc.jpg";
 import Nc from "../../assests/Nc.jpg";
 import { Course } from '@/lib/api';
 import Iitc from "../../assests/Iitc.jpg";
+import Image from 'next/image';
 interface CourseJobSupportProps {
   course: Course;
 }
@@ -60,7 +61,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
   if (!course.projects || course.projects.length === 0) {
     return null;
   }
-  console.log("course jobs", course)
+  
 
   const partners = [
     { name: 'Accenture', logo: smallaccenture },
@@ -378,7 +379,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
     display: 'flex',
     alignItems: 'stretch'
   }}>
-    <img
+    <Image
       src={
         course.title === "Executive Generative AI Course with IIT Guwahati" ? Iitc :
         course.title === "Data Science & AI with IIT Guwahati" ? Iitc :
@@ -412,7 +413,9 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 <div className="absolute flex items-center animate-scroll-left space-x-4" style={{ width: '200%' }}> {/* Adjusted space-x back to 4 for balance */}
                   {partners.concat(partners).map((partner, index) => (
                     <div key={`first-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44"> {/* Added specific h, w, and flex centering for uniform logo slots */}
-                      <img
+                      <Image
+                        width={120} 
+                        height={60}
                         src={partner.logo}
                         alt={`${partner.name} logo`}
                         className="max-h-full max-w-full object-contain transition-all hover:opacity-90"
@@ -428,7 +431,9 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 <div className="absolute flex items-center animate-scroll-right space-x-4" style={{ width: '200%' }}> {/* Adjusted space-x back to 4 for balance */}
                   {[...partners].reverse().concat([...partners].reverse()).map((partner, index) => (
                     <div key={`second-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44"> {/* Added specific h, w, and flex centering for uniform logo slots */}
-                      <img
+                      <Image
+                        width={120}
+                        height={60}
                         src={partner.logo}
                         alt={`${partner.name} logo`}
                         className="max-h-full max-w-full object-contain transition-all hover:opacity-90"

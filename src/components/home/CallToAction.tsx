@@ -1,6 +1,7 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { CalendarCheck, Sparkles } from 'lucide-react';
 import AssessmentModal from './AssessmentModal'; // Import the new AssessmentModal
 
@@ -50,7 +51,7 @@ const CallToAction: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <Link to="/categories">
+                <Link href="/categories">
                   Explore Courses
                 </Link>
               </Button>

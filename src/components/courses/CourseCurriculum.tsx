@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { Course } from '@/lib/api';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';

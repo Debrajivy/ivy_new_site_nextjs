@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'; // Updated to use Next.js Link
 import { Calendar, ChevronRight } from 'lucide-react';
 
 interface TrialClassCTAProps {
@@ -22,7 +22,7 @@ const TrialClassCTA = ({ variant = 'default', className = '' }: TrialClassCTAPro
             <p className="text-gray-600 text-sm">Experience our teaching methodology firsthand</p>
           </div>
           <Button className="ml-auto whitespace-nowrap" asChild>
-            <Link to="/register-trial">Register Now</Link>
+            <Link href="/register-trial">Register Now</Link>
           </Button>
         </div>
       </div>
@@ -34,7 +34,7 @@ const TrialClassCTA = ({ variant = 'default', className = '' }: TrialClassCTAPro
       <div className={`flex items-center ${className}`}>
         <Calendar className="h-5 w-5 text-primary mr-2" />
         <span className="mr-2 font-medium">New students:</span>
-        <Link to="/register-trial" className="text-primary font-medium hover:underline flex items-center">
+        <Link href="/register-trial" className="text-primary font-medium hover:underline flex items-center">
           Try First 2 Classes Free <ChevronRight className="h-4 w-4 ml-1" />
         </Link>
       </div>
@@ -55,7 +55,7 @@ const TrialClassCTA = ({ variant = 'default', className = '' }: TrialClassCTAPro
         </div>
         
         <Button size="lg" className="bg-ivy-blue-dominant" asChild>
-          <Link to="/register-trial">Register for Free Trial Classes</Link>
+          <Link href="/register-trial">Register for Free Trial Classes</Link>
         </Button>
       </div>
     </div>

@@ -4,6 +4,7 @@ import AanchalBhatia from "@/assests/alumni/AanchalBhatia.webp";
 import LahariSaha from "@/assests/alumni/LahariSaha.webp";
 import NavinPatle from "@/assests/alumni/NavinPatle.webp";
 import SankhadiptyaPaul from "@/assests/alumni/SankhadiptyaPaul.webp";
+import Image from 'next/image';
 
 interface AlumniData {
     name: string;
@@ -139,7 +140,9 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                             {/* Profile Header */}
                             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8 text-center sm:text-left">
                                 <div className="relative">
-                                    <img
+                                    <Image
+                                        width={96}
+                                        height={96}
                                         src={alumnus.image}
                                         alt={alumnus.name}
                                         className="w-24 h-24 rounded-full object-cover border-4 border-gray-200 shadow-md"
@@ -191,7 +194,9 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                             <div className="flex flex-row items-center justify-between my-8">
                                 <div className="text-center w-1/3">
                                     <p className="text-lg font-semibold text-gray-700 mb-2">Pre Ivy Pro</p>
-                                    <img
+                                    <Image
+                                        width={80}
+                                        height={80}
                                         src={alumnus.previousCompany.company}
                                         alt={alumnus.previousCompany.role}
                                         className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain mx-auto"
@@ -201,7 +206,9 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                                 <div className="text-2xl sm:text-4xl text-gray-400 mx-2">→</div>
                                 <div className="text-center w-1/3">
                                     <p className="text-lg font-semibold text-gray-700 mb-2">Post Ivy Pro</p>
-                                    <img
+                                    <Image
+                                        width={80}
+                                        height={80}
                                         src={alumnus.currentCompany.company}
                                         alt={alumnus.currentCompany.role}
                                         className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain mx-auto"
@@ -220,10 +227,22 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                                     We'll match you with an alumni based on your availability and career goals.
                                 </p>
                                 <div className="flex justify-center items-center -space-x-2 mb-4">
-                                    <img src={AanchalBhatia} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
-                                    <img src={LahariSaha} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
-                                    <img src={NavinPatle} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
-                                    <img src={SankhadiptyaPaul} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
+                                    <Image 
+                                        width={32}
+                                        height={32}
+                                    src={AanchalBhatia} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
+                                    <Image 
+                                        width={32}
+                                        height={32}
+                                    src={LahariSaha} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
+                                    <Image 
+                                        width={32}
+                                        height={32}
+                                    src={NavinPatle} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
+                                    <Image 
+                                        width={32}
+                                        height={32}
+                                    src={SankhadiptyaPaul} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
                                 </div>
                                 <p className="text-sm mb-6">+1380 Learners have connected with alumni</p>
                                 <button

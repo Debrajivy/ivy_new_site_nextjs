@@ -16,6 +16,7 @@ import Nac from "@/assests/Nac.webp";
 import Krishna from "@/assests/Krishna.webp";
 import Aghradip from "@/assests/Aghradip.webp";
 import Google from "@/assests/Google.webp";
+import Image from "next/image"
 
 interface CareerProgression {
   previous: {
@@ -151,7 +152,9 @@ const CareerProgressionDisplay = ({ progression }: { progression: CareerProgress
           <div className=" rounded-lg p-2 shadow-sm w-full flex flex-col items-center justify-center"> {/* Removed 'border' class, changed p-3 to p-2 for minor internal padding */}
             <div className="flex items-center justify-center h-12 w-full">
               {progression.previous.logo ? (
-                <img
+                <Image
+                  width={128} // Adjusted width to 128px
+                  height={64} // Adjusted height to 64px
                   src={progression.previous.logo}
                   alt={progression.previous.company}
                   className="h-32 w-auto max-w-full object-contain" // Increased height to h-32, max-w-full
@@ -177,7 +180,9 @@ const CareerProgressionDisplay = ({ progression }: { progression: CareerProgress
         <div className="flex-1 text-center mx-2 flex flex-col items-center">
           <div className="rounded-lg p-2 shadow-sm w-full flex flex-col items-center justify-center"> {/* Removed 'border' class, changed p-3 to p-2 for minor internal padding */}
             <div className="flex items-center justify-center  h-12 w-full">
-              <img
+              <Image
+                width={128} // Adjusted width to 128px
+                height={64} // Adjusted height to 64px
                 src={progression.current.logo || "/placeholder.svg"}
                 alt={progression.current.company}
                 className="h-32 w-auto max-w-full object-contain" // Increased height to h-32, max-w-full
@@ -199,7 +204,10 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
       <CardContent className="p-6 flex flex-col h-full">
         {/* Rating */}
         <div className="flex mb-4 justify-center items-center">
-          <img src={Google} alt="Google" className="h-4 w-4 mr-2" />
+          <Image 
+          width={16} // Adjusted width to 16px
+          height={16} // Adjusted height to 16px 
+          src={Google} alt="Google" className="h-4 w-4 mr-2" />
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
@@ -222,7 +230,9 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 
         {/* Student Profile */}
         <div className="flex items-center mb-4 relative"> {/* Added relative for positioning LinkedIn icon */}
-          <img
+          <Image
+            width={64} // Adjusted width to 64px
+            height={64} // Adjusted height to 64px
             src={testimonial.image || "/placeholder.svg"}
             alt={testimonial.name}
             className="h-16 w-16 rounded-full mr-4 object-cover border-2"
@@ -240,7 +250,9 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
                          hover:scale-110 transition-transform duration-200" // Added hover effect
               title="View LinkedIn Profile"
             >
-              <img className="rounded-[50%] w-3 h-3 " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/72px-LinkedIn_icon.svg.png?20210220164014" />
+              <img
+                alt="LinkedIn" 
+              className="rounded-[50%] w-3 h-3 " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/72px-LinkedIn_icon.svg.png?20210220164014" />
             </a>
           )}
           <div>

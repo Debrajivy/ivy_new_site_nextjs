@@ -3,6 +3,7 @@ import React from 'react';
 import { ArrowUpRight, Bookmark, MapPin, Briefcase, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
 
 interface JobListProps {
   filter: string;
@@ -98,7 +99,8 @@ const JobList = ({ filter }: JobListProps) => {
         filteredJobs.map(job => (
           <div key={job.id} className="bg-white rounded-lg shadow-sm border p-6 hover:shadow-md transition-shadow">
             <div className="flex items-start gap-4">
-              <img src={job.logo} alt={job.company} className="w-12 h-12 rounded-md" />
+              <img
+               src={job.logo} alt={job.company} className="w-12 h-12 rounded-md" />
               <div className="flex-1">
                 <div className="flex justify-between">
                   <h3 className="font-bold text-lg">{job.title}</h3>
