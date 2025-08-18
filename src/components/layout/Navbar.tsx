@@ -365,7 +365,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                width={50}
+                width={45}
                 height={100}
                 src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png"
                 alt="Ivy Professional School"
