@@ -14,21 +14,21 @@ import CourseJobSupport from "@/components/courses/CourseJobSupport"
 import type { Metadata } from "next"
 import { fetchCourseById } from "@/lib/api"
 
-// IMPORT THE NEW COURSE SUB-NAVIGATION COMPONENT HERE
-import CourseSubNavigation from "../../../components/CourseSubNavigation"
+// Prefer the alias to avoid fragile relatives
+import CourseSubNavigation from "@/components/CourseSubNavigation"
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+// Types that match Next's generated PageProps
+type Params = { slug: string }
+type AsyncPageProps = { params: Promise<Params> }
 
-  const resolvedParams = await params; // 👈 ensure params is resolved
-
+export async function generateMetadata(
+  { params }: AsyncPageProps
+): Promise<Metadata> {
   try {
-    const course = await fetchCourseById(resolvedParams.slug)
+    const { slug } = await params
+    const course = await fetchCourseById(slug)
 
-    if (!course) {
-      return {
-        title: "Course Not Found | Ivy Professional School",
-      }
-    }
+    if (!course) return { title: "Course Not Found | Ivy Professional School" }
 
     return {
       title: `${course.title} | Ivy Professional School`,
@@ -47,72 +47,64 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         images: [course.image],
       },
       alternates: {
-        canonical: `https://ivyprofessionalschool.com/courses/${resolvedParams.slug}`,
+        canonical: `https://ivyprofessionalschool.com/courses/${slug}`,
       },
     }
-  } catch (error) {
-    return {
-      title: "Course Not Found | Ivy Professional School",
-    }
+  } catch {
+    return { title: "Course Not Found | Ivy Professional School" }
   }
 }
 
-export default async function CoursePage({ params }: { params: { slug: string } }) {
-  let course
-   const { slug } = await params; // ✅ resolve params first
-
+export default async function CoursePage({ params }: AsyncPageProps) {
   try {
-    course = await fetchCourseById(slug)
+    const { slug } = await params
+    const course = await fetchCourseById(slug)
+
+    if (!course) notFound()
+
+    return (
+      <>
+        <Navbar />
+        <main>
+          <CourseHero course={course} />
+
+          {/* Sticky sub-nav */}
+          <CourseSubNavigation />
+
+          {/* Anchor targets */}
+          <div id="course-accreditation-section">
+            <CourseAccreditation />
+          </div>
+          <div id="course-overview-section">
+            <CourseOverview course={course} />
+          </div>
+          <div id="course-curriculum-section">
+            <CourseCurriculum course={course} />
+          </div>
+          <div id="course-projects-section">
+            <CourseProjects course={course} />
+          </div>
+          <div id="course-jobsupport-section">
+            <CourseJobSupport course={course} />
+          </div>
+          <div id="course-alumni-section">
+            <CourseAlumni courseId={course.id} />
+          </div>
+          <div id="course-testimonials-section">
+            <CourseTestimonials courseId={course.id} />
+          </div>
+          <div id="course-faq-section">
+            <CourseFAQ course={course} />
+          </div>
+          <div id="course-enrollcta-section">
+            <CourseEnrollCTA course={course} />
+          </div>
+        </main>
+        <Footer />
+      </>
+    )
   } catch (error) {
-    console.error("Error fetching course:", error)
+    console.error("Error rendering course page:", error)
     notFound()
   }
-
-  if (!course) {
-    notFound()
-  }
-
-  return (
-    <>
-      <Navbar />
-      <main>
-        <CourseHero course={course} />
-
-        {/* RENDER THE NEW COURSE-SPECIFIC STICKY NAVIGATION */}
-        <CourseSubNavigation />
-
-        {/* ADD 'id' ATTRIBUTES TO EACH SECTION COMPONENT */}
-        <div id="course-accreditation-section">
-          <CourseAccreditation />
-        </div>
-        <div id="course-overview-section">
-          <CourseOverview course={course} />
-        </div>
-        <div id="course-curriculum-section">
-          <CourseCurriculum course={course} />
-        </div>
-        <div id="course-projects-section">
-          <CourseProjects course={course} />
-        </div>
-        <div id="course-jobsupport-section">
-          <CourseJobSupport course={course} />
-        </div>
-        <div id="course-alumni-section">
-          <CourseAlumni courseId={course.id} />
-        </div>
-        <div id="course-testimonials-section">
-          <CourseTestimonials courseId={course.id} />
-        </div>
-        <div id="course-faq-section">
-          <CourseFAQ course={course} />
-        </div>
-        <div id="course-enrollcta-section">
-          {" "}
-          {/* Optional: Add an ID if you want to link to CTA */}
-          <CourseEnrollCTA course={course} />
-        </div>
-      </main>
-      <Footer />
-    </>
-  )
 }

@@ -699,7 +699,6 @@ const courses: Course[] = [
           { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
         ]
       },
-      ,
 
 
 
