@@ -24,9 +24,20 @@ const AIAdvisor = () => {
   const [streamingResponse, setStreamingResponse] = useState("")
   const [conversationPhase, setConversationPhase] = useState<"rapport" | "guidance" | "recommendation">("rapport")
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const chatContainerRef = useRef<HTMLDivElement>(null)
   const controllerRef = useRef<AbortController | null>(null)
   const [isMobile, setIsMobile] = useState(false)
   const [showNumber, setShowNumber] = useState(false)
+
+  const scrollToBottom = () => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight
+    }
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [chatHistory, streamingResponse, isTyping])
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -52,6 +63,8 @@ const AIAdvisor = () => {
   const generateAIResponse = async (userMessage: string) => {
     setIsTyping(true)
     setStreamingResponse("")
+
+    scrollToBottom()
 
     let systemPrompt = ""
     switch (conversationPhase) {
@@ -173,6 +186,7 @@ const AIAdvisor = () => {
       ])
     } finally {
       setIsTyping(false)
+      setStreamingResponse("")
       controllerRef.current = null
     }
   }
@@ -208,7 +222,7 @@ const AIAdvisor = () => {
               <h3 className="font-semibold text-lg">IvyPro AI Career Advisor</h3>
             </CardHeader>
             <CardContent className="p-0">
-              <div className="h-80 overflow-y-auto p-4">
+              <div ref={chatContainerRef} className="h-80 overflow-y-auto p-4">
                 {chatHistory.map((message, index) => (
                   <div key={index} className={`mb-4 flex ${message.role === "user" ? "justify-end" : "justify-start"}`}>
                     <div
