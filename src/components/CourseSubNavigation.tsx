@@ -110,7 +110,7 @@ const CourseSubNavigation = () => {
     setHasPopupBeenDismissed(true);
   };
 
-  const handleNavItemClick = (id) => {
+  const handleNavItemClick = (id: any) => {
     const element = document.getElementById(id);
     if (element) {
       const offset = window.innerWidth < 1024 ? 0 : NAVBAR_HEIGHT + SUBNAV_HEIGHT + 20;

@@ -40,7 +40,7 @@ const Partners = () => {
     { name: 'Accenture', logo: accenturetra },
   ];
 
-  const getAccreditationIcon = (description) => {
+  const getAccreditationIcon = (description: any) => {
     switch (description) {
       case 'Academic Partner':
         return GraduationCap;

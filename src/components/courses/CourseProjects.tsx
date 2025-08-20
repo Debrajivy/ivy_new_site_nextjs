@@ -23,6 +23,7 @@ import Ar from "../../assests/Ar.webp";
 import Cb from "../../assests/Cb.webp";
 import sp from "../../assests/sp.webp";
 import me1 from "../../assests/me1.webp";
+import Image from 'next/image';
 interface CourseProjectsProps {
   course: Course;
 }
@@ -461,7 +462,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                     <Card className="overflow-hidden hover:shadow-lg transition-all h-full flex flex-col">
                       {/* Image Container - Responsive Solution */}
                       <div className="relative w-full aspect-video bg-gray-100 flex items-center justify-center p-4">
-                        <img
+                        <Image
+                          width={500}
+                          height={300}
                           src={sp}
                           alt="Hate Speech Detection Using Machine Learning"
                           className="w-full h-full object-contain"
@@ -530,7 +533,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                     <Card className="overflow-hidden hover:shadow-lg transition-all h-full flex flex-col">
                       {/* Image Container - Responsive Solution */}
                       <div className="relative w-full aspect-video bg-gray-100 flex items-center justify-center p-4">
-                        <img
+                        <Image
+                          width={500}
+                          height={300}
                           src={me1}
                           alt="Hate Speech Detection Using Machine Learning"
                           className="w-full h-full object-contain"
@@ -617,7 +622,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                       <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                         <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                          <img
+                          <Image
+                            width={500}
+                            height={300}
                             src={Hs}
                             alt="Healthcare ML Project"
                             className="w-full h-full object-cover"
@@ -684,7 +691,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
                       <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                         <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                          <img
+                          <Image
+                            width={500}
+                            height={300}
                             src={Cpa}
                             alt="Financial ML Project"
                             className="w-full h-full object-cover"
@@ -820,7 +829,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                         <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                           <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <img
+                            <Image
+                              width={500}
+                              height={300}
                               src={Hs}
                               alt="Healthcare ML Project"
                               className="w-full h-full object-cover"
@@ -886,7 +897,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
                         <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                           <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <img
+                            <Image
+                              width={500}
+                              height={300}
                               src={Cpa}
                               alt="Financial ML Project"
                               className="w-full h-full object-cover"
@@ -1020,7 +1033,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                           <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                             <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                              <img
+                              <Image
+                                width={500}
+                                height={300}
                                 src={Ts}
                                 alt="Healthcare ML Project"
                                 className="w-full h-full object-cover"
@@ -1086,7 +1101,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
                           <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                             <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                              <img
+                              <Image
+                                width={500}
+                                height={300}
                                 src={oC}
                                 alt="Financial ML Project"
                                 className="w-full h-full object-cover"
@@ -1219,7 +1236,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                             <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                               <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                                <img
+                                <Image
+                                  width={500}
+                                  height={300}
                                   src={Ecommerce}
                                   alt="Healthcare ML Project"
                                   className="w-full h-full object-cover"
@@ -1286,7 +1305,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
                             <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                               <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                                <img
+                                <Image
+                                  width={500}
+                                  height={300}
                                   src={Consumer}
                                   alt="Financial ML Project"
                                   className="w-full h-full object-cover"
@@ -1412,7 +1433,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                               <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                                 <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                                  <img
+                                  <Image
+                                    width={500}
+                                    height={300}
                                     src={Msd}
                                     alt="Healthcare ML Project"
                                     className="w-full h-full object-cover"
@@ -1478,7 +1501,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
                               <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                                 <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                                  <img
+                                  <Image
+                                    width={500}
+                                    height={300}
                                     src={Ki}
                                     alt="Financial ML Project"
                                     className="w-full h-full object-cover"
@@ -1603,7 +1628,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                                 <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                                   <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                                    <img
+                                    <Image
+                                      width={500}
+                                      height={300}
                                       src={Ar}
                                       alt="Healthcare ML Project"
                                       className="w-full h-full object-cover"
@@ -1673,7 +1700,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
                                 <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                                   <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                                    <img
+                                    <Image
+                                      width={500}
+                                      height={300}
                                       src={Cb}
                                       alt="Financial ML Project"
                                       className="w-full h-full object-cover"

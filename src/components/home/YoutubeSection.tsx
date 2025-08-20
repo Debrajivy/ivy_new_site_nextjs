@@ -6,12 +6,12 @@ import youtube1 from "@/assests/youtube1.jpeg";
 import youtube2 from "@/assests/youtube2.jpeg";
 import youtube3 from "@/assests/youtube3.jpeg";
 import youtube4 from "@/assests/youtube4.jpeg";
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface VideoItem {
   id: string;
   title: string;
-  thumbnail: string;
+  thumbnail: StaticImageData;
   views: string;
   type: 'tutorial' | 'success-story' | 'tech-talk' | 'project-showcase';
   url: string;

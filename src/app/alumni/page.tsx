@@ -8,6 +8,7 @@ import { allAlumni, filterCategories, type AlumniData } from "@/lib/alumni-data"
 import AlumniProfileSidebar from "@/components/AlumniProfileSidebar"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
+import Placeholder from "@/assests/placeholder.png"
 
 const renderStars = (rating: number) => {
   return Array.from({ length: 5 }, (_, index) => (
@@ -111,7 +112,7 @@ const Alumni = () => {
                       width={64}
                       height={64}
                       loading="lazy"
-                      src={alumni.image || "/placeholder.svg"}
+                      src={alumni.image || Placeholder}
                       alt={alumni.name}
                       className="w-16 h-16 rounded-full object-cover border-2 border-gray-200"
                     />
@@ -136,7 +137,7 @@ const Alumni = () => {
                         <Image
                           width={80}
                           height={80}
-                          src={alumni.previousCompany.company || "/placeholder.svg"}
+                          src={alumni.previousCompany.company || Placeholder}
                           alt="Previous company"
                           className="w-20 h-20 object-contain"
                         />

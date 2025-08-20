@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://ivyproschool.com/",
     type: "website",
     siteName: "Ivy Professional School",
-    images: ["https://ivyproschool.com/assets/logo.webp"], // uncomment when image is available
+    images: ["/assets/logo.webp"], // uncomment when image is available
   },
   twitter: {
     card: "summary_large_image",
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
     description:
       "32500+ trained since 2008. Accredited by NASSCOM, IBM, IIT & MEITY. Empower your career in Data Science, Analytics & AI.",
     site: "@IvyProSchool",
-    images: ["https://ivyproschool.com/assets/logo.webp"], // uncomment when image is available
+    images: ["/assets/logo.webp"], // uncomment when image is available
   },
   icons: {
-    icon: "https://ivyproschool.com/favicon.ico",
+    icon: "/favicon.ico",
   },
   alternates: {
-    canonical: "https://ivyproschool.com/",
+    canonical: "/",
   },
   other: {
     // Extra meta tags that don't have direct support in Next Metadata API

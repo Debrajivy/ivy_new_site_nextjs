@@ -6,7 +6,7 @@ import PrateekAgarwal from "@/assests/pratilk.webp";
 import eeshani from "@/assests/eeshani.webp";
 import prakhar from "@/assests/prakhar.webp";
 import raju from "@/assests/raju.webp";
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface Faculty {
   id: string;
@@ -15,7 +15,7 @@ interface Faculty {
   expertise: string;
   experience: string;
   previousCompanies: string[];
-  image: string;
+  image: StaticImageData;
 }
 
 const faculty: Faculty[] = [

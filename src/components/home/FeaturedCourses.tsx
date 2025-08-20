@@ -19,13 +19,13 @@ import BA from "@/assests/BA.webp";
 import DV from "@/assests/DV.webp";
 import CDI from "@/assests/CDI.webp";
 import CDEI from "@/assests/CDEI.webp";
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface Course {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   category: string;
   students: number;
   duration: string;

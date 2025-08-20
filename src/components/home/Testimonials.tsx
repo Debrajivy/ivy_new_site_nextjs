@@ -16,25 +16,25 @@ import Nac from "@/assests/Nac.webp";
 import Krishna from "@/assests/Krishna.webp";
 import Aghradip from "@/assests/Aghradip.webp";
 import Google from "@/assests/Google.webp";
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 interface CareerProgression {
   previous: {
     company: string
     role: string
-    logo: string
+    logo: string | StaticImageData
   }
   current: {
     company: string
     role: string
-    logo: string
+    logo: StaticImageData
   }
 }
 
 interface Testimonial {
   id: string
   name: string
-  image: string
+  image: StaticImageData
   content: string
   rating: number
   course: string

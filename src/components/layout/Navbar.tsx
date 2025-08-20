@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap } from "lucide-react"
 import review from "../../assests/review.webp"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -137,7 +137,7 @@ const allCourses = [
   },
 ]
 
-const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { image?: string }>(
+const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { image?: StaticImageData }>(
   ({ className, title, children, image, href }, ref) => {
     return (
       <li>
@@ -145,14 +145,14 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
           <Link
             ref={ref}
             className={cn("flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors", className)}
-            href={href}
+            href={href|| "#"}
           >
             {image && (
               <Image
                 width={150}
                 height={40}
-                src={image || "/placeholder.svg"}
-                alt={title}
+                src={image}
+                alt={title|| "Course Image"}
                 className="w-12 h-12 object-contain rounded-md flex-shrink-0"
               />
             )}

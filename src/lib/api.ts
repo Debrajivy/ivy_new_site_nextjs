@@ -256,7 +256,7 @@ const courses: Course[] = [
         id: "i1",
         name: "Prateek Agrawal",
         role: "Founder and Director of Ivy Professional School",
-        image: Pratik,
+        image: "/assets/pratilk.webp",
         bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
         isFounder: true
       },
@@ -264,7 +264,7 @@ const courses: Course[] = [
         id: "i2",
         name: "Eeshani Agrawal",
         role: "Director of Ivy Professional School",
-        image: EEshani,
+        image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
       }
     ],
@@ -516,7 +516,7 @@ const courses: Course[] = [
         id: "i1",
         name: "Prateek Agrawal",
         role: "Founder and Director of Ivy Professional School",
-        image: Pratik,
+        image: "/assets/pratilk.webp",
         bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
         isFounder: true
       },
@@ -524,7 +524,7 @@ const courses: Course[] = [
         id: "i2",
         name: "Eeshani Agrawal",
         role: "Director of Ivy Professional School",
-        image: EEshani,
+        image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
       }
     ],
@@ -569,7 +569,7 @@ const courses: Course[] = [
         id: "i1",
         name: "Prateek Agrawal",
         role: "Founder and Director of Ivy Professional School",
-        image: Pratik,
+        image: "/assets/pratilk.webp",
         bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
         isFounder: true
       },
@@ -577,7 +577,7 @@ const courses: Course[] = [
         id: "i2",
         name: "Eeshani Agrawal",
         role: "Director of Ivy Professional School",
-        image: EEshani,
+        image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
       }
     ],
@@ -784,7 +784,7 @@ const courses: Course[] = [
         id: "i1",
         name: "Prateek Agrawal",
         role: "Founder and Director of Ivy Professional School",
-        image: Pratik,
+        image: "/assets/pratilk.webp",
         bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
         isFounder: true
       },
@@ -792,7 +792,7 @@ const courses: Course[] = [
         id: "i2",
         name: "Eeshani Agrawal",
         role: "Director of Ivy Professional School",
-        image: EEshani,
+        image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
       }
     ],
@@ -1081,7 +1081,7 @@ const courses: Course[] = [
         id: "i1",
         name: "Prateek Agrawal",
         role: "Founder and Director of Ivy Professional School",
-        image: Pratik,
+        image: "/assets/pratilk.webp",
         bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
         isFounder: true
       },
@@ -1089,7 +1089,7 @@ const courses: Course[] = [
         id: "i2",
         name: "Eeshani Agrawal",
         role: "Director of Ivy Professional School",
-        image: EEshani,
+        image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
       }
     ],
@@ -1281,7 +1281,7 @@ const courses: Course[] = [
         id: "i1",
         name: "Prateek Agrawal",
         role: "Founder and Director of Ivy Professional School",
-        image: Pratik,
+        image: "/assets/pratilk.webp",
         bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
         isFounder: true
       },
@@ -1289,7 +1289,7 @@ const courses: Course[] = [
         id: "i2",
         name: "Eeshani Agrawal",
         role: "Director of Ivy Professional School",
-        image: EEshani,
+        image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
       }
     ],
@@ -1509,7 +1509,7 @@ const courses: Course[] = [
         id: "i1",
         name: "Prateek Agrawal",
         role: "Founder and Director of Ivy Professional School",
-        image: Pratik,
+        image: "/assets/pratilk.webp",
         bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
         isFounder: true
       },
@@ -1517,7 +1517,7 @@ const courses: Course[] = [
         id: "i2",
         name: "Eeshani Agrawal",
         role: "Director of Ivy Professional School",
-        image: EEshani,
+        image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
       }
     ],
@@ -1703,7 +1703,7 @@ const courses: Course[] = [
         id: "i1",
         name: "Prateek Agrawal",
         role: "Founder and Director of Ivy Professional School",
-        image: Pratik,
+        image: "/assets/pratilk.webp",
         bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
         isFounder: true
       },
@@ -1711,7 +1711,7 @@ const courses: Course[] = [
         id: "i2",
         name: "Eeshani Agrawal",
         role: "Director of Ivy Professional School",
-        image: EEshani,
+        image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
       }
     ],
@@ -1863,7 +1863,7 @@ const alumni: Alumni[] = [
     name: "Pritam Shaw",
     role: "Data Scientist",
     company: "Microsoft",
-    image: pritam,
+    image: "/assets/pritam.webp",
     testimonial: "Prateek Sir made SQL feel like an exciting video game—challenging yet rewarding. His guidance, real-world focus, and constant support helped me master SQL with confidence and enjoy every step of the learning journey.",
     courseId: "1",
     linkedin: "https://www.linkedin.com/in/pritam-kumar-shaw-001029217/"
@@ -1873,7 +1873,7 @@ const alumni: Alumni[] = [
     name: "Pratiksha Chakraborty",
     role: "ML Engineer",
     company: "Google",
-    image: pratiksha,
+    image: "/assets/pratiksha.webp",
     testimonial: "Debjyoti Sir’s interactive and engaging teaching makes learning Python easy and enjoyable. His clear explanations, encouragement, and support build strong problem-solving skills and confidence, helping me apply Python effectively in real-world data science scenarios.",
     courseId: "1",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",

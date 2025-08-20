@@ -6,24 +6,20 @@ import NavinPatle from "@/assests/alumni/NavinPatle.webp";
 import SankhadiptyaPaul from "@/assests/alumni/SankhadiptyaPaul.webp";
 import Image from 'next/image';
 
+type Imgish = string | import("next/image").StaticImageData;
+
 interface AlumniData {
-    name: string;
-    title: string;
-    location: string;
-    rating: number;
-    image: string;
-    linkedin?: string;
-    previousCompany: {
-        company: string;
-        role: string;
-    };
-    currentCompany: {
-        company: string;
-        role: string;
-    };
-    university?: string;
-    degree?: string;
-    workExperiencePreScaler?: string;
+  name: string;
+  title: string;
+  location: string;
+  rating: number;
+  image: Imgish;
+  linkedin?: string;
+  previousCompany: { company: Imgish; role: string };
+  currentCompany: { company: Imgish; role: string };
+  university?: string;
+  degree?: string;
+  workExperiencePreScaler?: string;
 }
 
 interface AlumniProfileSidebarProps {

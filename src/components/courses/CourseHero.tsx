@@ -31,7 +31,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 });
 
 // State for form submission status and message
-const [submitStatus, setSubmitStatus] = useState(null);
+const [submitStatus, setSubmitStatus] = useState<any>(null);
 const [submitMessage, setSubmitMessage] = useState('');
 
 // LeadSquared API Details
@@ -41,7 +41,7 @@ const SECRET_KEY = '4f6bdb2f5df64d29fcdce73901dadb80fbcf0406';
 
 const API_URL = `${LEAD_SQUARED_API_HOST}LeadManagement.svc/Lead.Create?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
 
-const handleChange = (e) => {
+const handleChange = (e: any) => {
   const { name, value } = e.target;
   setFormData((prevData) => ({
     ...prevData,
@@ -49,7 +49,7 @@ const handleChange = (e) => {
   }));
 };
 
-const handleSubmit = async (e) => {
+const handleSubmit = async (e: any) => {
   e.preventDefault();
 
   setSubmitStatus('submitting');
