@@ -92,7 +92,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 450,
         certificateProvided: true,
         category: '',
-        youtubeUrl: 'https://www.youtube.com/watch?v=JDVCzgF6J64'
+        youtubeUrl: 'https://youtube.com/watch?v=JDVCzgF6J64'
     },
     {
         id: 'p2',
@@ -104,7 +104,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 550,
         certificateProvided: true,
         category: 'Gen AI',
-        youtubeUrl: 'https://www.youtube.com/watch?v=J9p5uZMnPec'
+        youtubeUrl: 'https://youtube.com/watch?v=J9p5uZMnPec'
     },
     {
         id: 'p3',
@@ -116,7 +116,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 440,
         certificateProvided: true,
         category: 'Gen AI',
-        youtubeUrl: 'https://www.youtube.com/live/0NnsjUiWo7A'
+        youtubeUrl: 'https://youtube.com/live/0NnsjUiWo7A'
     },
     {
         id: 'p4',
@@ -128,7 +128,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 370,
         certificateProvided: true,
         category: 'Gen AI',
-        youtubeUrl: 'https://www.youtube.com/watch?v=0NnsjUiWo7A'
+        youtubeUrl: 'https://youtube.com/watch?v=0NnsjUiWo7A'
     },
     {
         id: 'p5',
@@ -140,7 +140,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 709,
         certificateProvided: true,
         category: 'AI Agent',
-        youtubeUrl: 'https://www.youtube.com/watch?v=FkEQupUEvtM'
+        youtubeUrl: 'https://youtube.com/watch?v=FkEQupUEvtM'
     },
     {
         id: 'p6',
@@ -152,7 +152,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 890,
         certificateProvided: true,
         category: 'Python',
-        youtubeUrl: 'https://www.youtube.com/watch?v=f8Da8x8KNXE'
+        youtubeUrl: 'https://youtube.com/watch?v=f8Da8x8KNXE'
     },
     {
         id: 'p7',
@@ -164,7 +164,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 498,
         certificateProvided: true,
         category: 'AI Agent',
-        youtubeUrl: 'https://www.youtube.com/watch?v=nJPdv70xA0k'
+        youtubeUrl: 'https://youtube.com/watch?v=nJPdv70xA0k'
     },
     {
         id: 'p8',
@@ -176,7 +176,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 467,
         certificateProvided: true,
         category: '',
-        youtubeUrl: 'https://www.youtube.com/watch?v=MaG7XIyyNxQ'
+        youtubeUrl: 'https://youtube.com/watch?v=MaG7XIyyNxQ'
     },
     {
         id: 'p9',
@@ -188,7 +188,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 402,
         certificateProvided: true,
         category: 'SQL',
-        youtubeUrl: 'https://www.youtube.com/watch?v=HcQHErC2Ek0'
+        youtubeUrl: 'https://youtube.com/watch?v=HcQHErC2Ek0'
     },
     {
         id: 'p10',
@@ -200,7 +200,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 500,
         certificateProvided: true,
         category: '',
-        youtubeUrl: "https://www.youtube.com/watch?app=desktop&v=vkz7XGlCKMk"
+        youtubeUrl: "https://youtube.com/watch?app=desktop&v=vkz7XGlCKMk"
     },
     {
         id: 'p11',
@@ -212,7 +212,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 391,
         certificateProvided: true,
         category: 'Python',
-        youtubeUrl: 'https://www.youtube.com/watch?v=ucVqABYBsuQ'
+        youtubeUrl: 'https://youtube.com/watch?v=ucVqABYBsuQ'
     },
     {
         id: 'p12',
@@ -224,7 +224,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 461,
         certificateProvided: true,
         category: 'Automation',
-        youtubeUrl: 'https://www.youtube.com/watch?v=c58FfFG0HuI'
+        youtubeUrl: 'https://youtube.com/watch?v=c58FfFG0HuI'
     },
     {
         id: 'p13',
@@ -236,7 +236,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 309,
         certificateProvided: true,
         category: 'Automation',
-        youtubeUrl: 'https://www.youtube.com/watch?v=YuXtQcApE5U'
+        youtubeUrl: 'https://youtube.com/watch?v=YuXtQcApE5U'
     },
     {
         id: 'p14',
@@ -248,7 +248,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 294,
         certificateProvided: true,
         category: 'Python',
-        youtubeUrl: 'https://www.youtube.com/watch?v=XoMiGRTBmQk'
+        youtubeUrl: 'https://youtube.com/watch?v=XoMiGRTBmQk'
     },
     {
         id: 'p15',
@@ -260,7 +260,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 684,
         certificateProvided: true,
         category: 'SQL',
-        youtubeUrl: 'https://www.youtube.com/watch?v=yYbU_Bihvdc'
+        youtubeUrl: 'https://youtube.com/watch?v=yYbU_Bihvdc'
     },
     {
         id: 'p16',
@@ -272,7 +272,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 600,
         certificateProvided: true,
         category: 'SQL',
-        youtubeUrl: 'https://www.youtube.com/watch?v=NDHPeQnRItw&t=13s'
+        youtubeUrl: 'https://youtube.com/watch?v=NDHPeQnRItw&t=13s'
     },
     {
         id: 'p17',
@@ -284,7 +284,7 @@ const allBootcamps: BootcampEvent[] = [
         attendees: 120,
         certificateProvided: true,
         category: 'Python',
-        youtubeUrl: 'https://www.youtube.com/live/N-JsbgqBVIU'
+        youtubeUrl: 'https://youtube.com/live/N-JsbgqBVIU'
     }
 ];
 

@@ -54,7 +54,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     course: "Business Analytics",
     location: "Kolkata, 2018-19",
-    videoUrl: "https://www.youtube.com/embed/vrq7tlJGPig",
+    videoUrl: "https://youtube.com/embed/vrq7tlJGPig",
     careerProgression: {
       previous: {
         company: "Barclays",
@@ -67,7 +67,7 @@ const testimonials: Testimonial[] = [
         logo: Vtc,
       },
     },
-    linkedinUrl: "https://www.linkedin.com/in/vishal-tiwary-b6860817b", // Example LinkedIn URL
+    linkedinUrl: "https://linkedin.com/in/vishal-tiwary-b6860817b", // Example LinkedIn URL
   },
   {
     id: "2",
@@ -78,7 +78,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     course: "Data Analytics ",
     location: "Kolkata, 2023-24",
-    videoUrl: "https://www.youtube.com/embed/e0xsjgz0Sz4",
+    videoUrl: "https://youtube.com/embed/e0xsjgz0Sz4",
     careerProgression: {
       previous: {
         company: "Fresher",
@@ -91,7 +91,7 @@ const testimonials: Testimonial[] = [
         logo: Nac,
       },
     },
-    linkedinUrl: "https://www.linkedin.com/in/krishnakoli-datta-096a18206/", // Example LinkedIn URL
+    linkedinUrl: "https://linkedin.com/in/krishnakoli-datta-096a18206/", // Example LinkedIn URL
   },
   {
     id: "3",
@@ -115,7 +115,7 @@ const testimonials: Testimonial[] = [
         logo: Nac,
       },
     },
-    linkedinUrl: "https://www.linkedin.com/in/nandinii-agarwaal", // Example LinkedIn URL
+    linkedinUrl: "https://linkedin.com/in/nandinii-agarwaal", // Example LinkedIn URL
   },
   {
     id: "4",
@@ -139,7 +139,7 @@ const testimonials: Testimonial[] = [
         logo: Acc,
       },
     },
-    linkedinUrl: "https://www.linkedin.com/in/arghadip-charan", // Example LinkedIn URL
+    linkedinUrl: "https://linkedin.com/in/arghadip-charan", // Example LinkedIn URL
   },
 ]
 

@@ -24,7 +24,7 @@ const videos: VideoItem[] = [
     thumbnail: youtube1,
     views: "15K",
     type: "tutorial",
-    url: "https://www.youtube.com/playlist?list=PL6ajVQ6jyjvAA53KTnvn1kYDjafJjogNS"
+    url: "https://youtube.com/playlist?list=PL6ajVQ6jyjvAA53KTnvn1kYDjafJjogNS"
   },
   {
     id: '2',
@@ -32,7 +32,7 @@ const videos: VideoItem[] = [
     thumbnail: youtube2,
     views: "22K",
     type: "project-showcase",
-    url: "https://www.youtube.com/playlist?list=PL6ajVQ6jyjvBNzNS9GBB1QfiNzRJ--F1t"
+    url: "https://youtube.com/playlist?list=PL6ajVQ6jyjvBNzNS9GBB1QfiNzRJ--F1t"
   },
   {
     id: '3',
@@ -40,7 +40,7 @@ const videos: VideoItem[] = [
     thumbnail:youtube3,
     views: "18K",
     type: "tech-talk",
-    url: "https://www.youtube.com/playlist?list=PL6ajVQ6jyjvAdxv4QdhfvOlb9OGvbwDSl"
+    url: "https://youtube.com/playlist?list=PL6ajVQ6jyjvAdxv4QdhfvOlb9OGvbwDSl"
   },
   {
     id: '4',
@@ -48,7 +48,7 @@ const videos: VideoItem[] = [
     thumbnail: youtube4,
     views: "35K",
     type: "success-story",
-    url: "https://www.youtube.com/playlist?list=PL6ajVQ6jyjvBne1iy2SkQs_g-E4Ee-ehn"
+    url: "https://youtube.com/playlist?list=PL6ajVQ6jyjvBne1iy2SkQs_g-E4Ee-ehn"
   }
 ];
 
@@ -96,7 +96,7 @@ const YoutubeSection = () => {
           </div>
           <Button variant="default" className="mt-4 md:mt-0" asChild>
             <a
-              href="https://www.youtube.com/channel/IvyProfessionalSchool"
+              href="https://youtube.com/channel/IvyProfessionalSchool"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center"
@@ -142,7 +142,7 @@ const YoutubeSection = () => {
         <div className="mt-12 text-center">
           <Button asChild>
             <a
-              href="https://www.youtube.com/channel/IvyProfessionalSchool"
+              href="https://youtube.com/channel/IvyProfessionalSchool"
               target="_blank"
               rel="noopener noreferrer"
             >

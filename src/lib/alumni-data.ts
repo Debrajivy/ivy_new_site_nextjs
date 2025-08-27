@@ -285,7 +285,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Chennai",
     "rating": 5,
     "image": PritiJha,
-    "linkedin": "https://www.linkedin.com/in/priti-jha/",
+    "linkedin": "https://linkedin.com/in/priti-jha/",
     "previousCompany": {
       "company": PritiJhaPre,
       "role": "anayst"
@@ -302,7 +302,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": AbhinavSinha,
-    "linkedin": "https://www.linkedin.com/in/abhinavsinhalinkedin/",
+    "linkedin": "https://linkedin.com/in/abhinavsinhalinkedin/",
     "previousCompany": {
       "company": AbhinavSinhaPre,
       "role": "Talent Acquisition"
@@ -319,7 +319,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": ArindamNeogy,
-    "linkedin": "https://www.linkedin.com/in/arindam-neogy-7a2a32183/",
+    "linkedin": "https://linkedin.com/in/arindam-neogy-7a2a32183/",
     "previousCompany": {
       "company": ArindamNeogyCur,
       "role": "Senior MIS Analyst"
@@ -336,7 +336,7 @@ export const allAlumni: AlumniData[] = [
   "location": "Kolkata",
   "rating": 5,
   "image": SayaniHaldar,
-  "linkedin": "https://www.linkedin.com/in/sayani-haldar/",
+  "linkedin": "https://linkedin.com/in/sayani-haldar/",
   "previousCompany": {
     "company": Fresher,
     "role": ""
@@ -353,7 +353,7 @@ export const allAlumni: AlumniData[] = [
   "location": "Bengaluru",
   "rating": 5,
   "image": DiyaAgrawal,
-  "linkedin": "https://www.linkedin.com/in/diya-agarwal99/",
+  "linkedin": "https://linkedin.com/in/diya-agarwal99/",
   "previousCompany": {
     "company": Fresher,
     "role": ""
@@ -370,7 +370,7 @@ export const allAlumni: AlumniData[] = [
   "location": "Kolkata",
   "rating": 5,
   "image": SKFerozAli,
-  "linkedin": "https://www.linkedin.com/in/sk-feroz-ali/",
+  "linkedin": "https://linkedin.com/in/sk-feroz-ali/",
   "previousCompany": {
     "company": SKFerozAliPre,
     "role": "Assistant Manager"
@@ -387,7 +387,7 @@ export const allAlumni: AlumniData[] = [
   "location": "Kolkata",
   "rating": 5,
   "image": AnkitaMitra,
-  "linkedin": "https://www.linkedin.com/in/ankita-mitra-bb8973280/",
+  "linkedin": "https://linkedin.com/in/ankita-mitra-bb8973280/",
   "previousCompany": {
     "company": Fresher,
     "role": ""
@@ -404,7 +404,7 @@ export const allAlumni: AlumniData[] = [
   "location": "Kolkata",
   "rating": 5,
   "image": AbhradeepSamanta,
-  "linkedin": "https://www.linkedin.com/in/abhradeep-samanta-9366ba26b/",
+  "linkedin": "https://linkedin.com/in/abhradeep-samanta-9366ba26b/",
   "previousCompany": {
     "company": Fresher,
     "role": ""
@@ -421,7 +421,7 @@ export const allAlumni: AlumniData[] = [
   "location": "Kolkata",
   "rating": 5,
   "image": TanmayChakraborty,
-  "linkedin": "https://www.linkedin.com/in/tanmay--chakraborty/",
+  "linkedin": "https://linkedin.com/in/tanmay--chakraborty/",
   "previousCompany": {
     "company": TanmayChakrabortyPre,
     "role": "Lead Machine Learning Engineer"
@@ -438,7 +438,7 @@ export const allAlumni: AlumniData[] = [
   "location": "Bengaluru",
   "rating": 5,
   "image": AdityaKumarBarik,
-  "linkedin": "https://www.linkedin.com/in/aditya-barik/",
+  "linkedin": "https://linkedin.com/in/aditya-barik/",
   "previousCompany": {
     "company": AdityaKumarBarikPre,
     "role": "Python Developer"
@@ -455,7 +455,7 @@ export const allAlumni: AlumniData[] = [
   "location": "Kolkata",
   "rating": 5,
   "image": SoumyadeepSen,
-  "linkedin": "https://www.linkedin.com/in/soumyadeep-sen/",
+  "linkedin": "https://linkedin.com/in/soumyadeep-sen/",
   "previousCompany": {
     "company": SoumyadeepSenPre,
     "role": "Finance & Administration Coordinator"
@@ -472,7 +472,7 @@ export const allAlumni: AlumniData[] = [
   "location": "Kolkata",
   "rating": 5,
   "image": SambudhyaRoy,
-  "linkedin": "https://www.linkedin.com/in/sambudhya-roy-18a0921b2/",
+  "linkedin": "https://linkedin.com/in/sambudhya-roy-18a0921b2/",
   "previousCompany": {
     "company": SambudhyaRoyPre,
     "role": "Project Executive (Sales)"
@@ -490,7 +490,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kokata",
     "rating": 5,
     "image": KinjalDasgupta,
-    "linkedin": "https://www.linkedin.com/in/kinjal-dasgupta-b11471142/",
+    "linkedin": "https://linkedin.com/in/kinjal-dasgupta-b11471142/",
     "previousCompany": {
       "company": KinjalDasguptaPre,
       "role": "Sr. Associate Consultant"
@@ -507,7 +507,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": RajdeepTaluckdar,
-    "linkedin": "https://www.linkedin.com/in/rajdeep-taluckdar/",
+    "linkedin": "https://linkedin.com/in/rajdeep-taluckdar/",
     "previousCompany": {
       "company": RajdeepTaluckdarPre,
       "role": "Transaction Risk Investigator"
@@ -524,7 +524,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": PranabKumarPaul,
-    "linkedin": "https://www.linkedin.com/in/pranabkumarpaul/",
+    "linkedin": "https://linkedin.com/in/pranabkumarpaul/",
     "previousCompany": {
       "company": PranabKumarPaulPre,
       "role": "Senior Process Associate"
@@ -541,7 +541,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Mumbai",
     "rating": 5,
     "image": ShailyMody,
-    "linkedin": "https://www.linkedin.com/in/shaily-mody-847568234/",
+    "linkedin": "https://linkedin.com/in/shaily-mody-847568234/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -558,7 +558,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": MdSafeeUzzamac,
-    "linkedin": "https://www.linkedin.com/in/md-safee-uzzama/",
+    "linkedin": "https://linkedin.com/in/md-safee-uzzama/",
     "previousCompany": {
       "company": MdSafeeUzzamaPre,
       "role": "Associate Analyst"
@@ -575,7 +575,7 @@ export const allAlumni: AlumniData[] = [
     "location": "South 24 Parganas",
     "rating": 5,
     "image": SnehaShaw,
-    "linkedin": "https://www.linkedin.com/in/sneha-shaw-0b69171a7/",
+    "linkedin": "https://linkedin.com/in/sneha-shaw-0b69171a7/",
     "previousCompany": {
       "company": SnehaShawPre,
       "role": "Product Analyst Intern"
@@ -593,7 +593,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": RitaBehara,
-    "linkedin": "https://www.linkedin.com/in/rita-behara0511/",
+    "linkedin": "https://linkedin.com/in/rita-behara0511/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -611,7 +611,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": AnimeshSingh,
-    "linkedin": "https://www.linkedin.com/in/animesh-singh19/",
+    "linkedin": "https://linkedin.com/in/animesh-singh19/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -631,7 +631,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": MrinalDhar,
-    "linkedin": "https://www.linkedin.com/in/mrinal-dhar-387800164/",
+    "linkedin": "https://linkedin.com/in/mrinal-dhar-387800164/",
     "previousCompany": {
       "company": MrinalDharPre,
       "role": "Software Developer"
@@ -649,7 +649,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Delhi",
     "rating": 5,
     "image": BalkrishnaAgarwal,
-    "linkedin": "https://www.linkedin.com/in/balkrishnaagarwal/",
+    "linkedin": "https://linkedin.com/in/balkrishnaagarwal/",
     "previousCompany": {
       "company": BalkrishnaAgarwalPre,
       "role": "Analyst-Actuarial"
@@ -666,7 +666,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": AbhishekBhadra,
-    "linkedin": "https://www.linkedin.com/in/abhishek-bhadra-9059044b/",
+    "linkedin": "https://linkedin.com/in/abhishek-bhadra-9059044b/",
     "previousCompany": {
       "company": AbhishekBhadraPre,
       "role": "Management trainee"
@@ -683,7 +683,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": SatyajitPramanik,
-    "linkedin": "https://www.linkedin.com/in/satyajitpramanik/",
+    "linkedin": "https://linkedin.com/in/satyajitpramanik/",
     "previousCompany": {
       "company": SatyajitPramanikPre,
       "role": "Risk Analyst"
@@ -700,7 +700,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": AnkitaPaul,
-    "linkedin": "https://www.linkedin.com/in/ankita-paul-872713105/",
+    "linkedin": "https://linkedin.com/in/ankita-paul-872713105/",
     "previousCompany": {
       "company": AnkitaPaulPre,
       "role": "Analytics Consultant"
@@ -717,7 +717,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SarveshLunia,
-    "linkedin": "https://www.linkedin.com/in/sarvesh-lunia/",
+    "linkedin": "https://linkedin.com/in/sarvesh-lunia/",
     "previousCompany": {
       "company": SarveshLuniaPre,
       "role": "BI Analyst"
@@ -734,7 +734,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Delhi",
     "rating": 5,
     "image": AninditaMaity,
-    "linkedin": "https://www.linkedin.com/in/anindita-maity-191758175/",
+    "linkedin": "https://linkedin.com/in/anindita-maity-191758175/",
     "previousCompany": {
       "company": AninditaMaityPre,
       "role": "Demand Analyst"
@@ -751,7 +751,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": AnupriyaHaldar,
-    "linkedin": "https://www.linkedin.com/in/anupriya-halder-02398150/",
+    "linkedin": "https://linkedin.com/in/anupriya-halder-02398150/",
     "previousCompany": {
       "company": AnupriyaHaldarPre,
       "role": "Quality Analyst"
@@ -768,7 +768,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Noida",
     "rating": 5,
     "image": NoushinParween,
-    "linkedin": "https://www.linkedin.com/in/noushin-parween-b55139179/",
+    "linkedin": "https://linkedin.com/in/noushin-parween-b55139179/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -785,7 +785,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": AnishBanerjee,
-    "linkedin": "https://www.linkedin.com/in/anish-banerjee-07a218134/",
+    "linkedin": "https://linkedin.com/in/anish-banerjee-07a218134/",
     "previousCompany": {
       "company": AnishBanerjeePre,
       "role": "Data Quality Analyst"
@@ -802,7 +802,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": SnehaBaid,
-    "linkedin": "https://www.linkedin.com/in/baidsneha/",
+    "linkedin": "https://linkedin.com/in/baidsneha/",
     "previousCompany": {
       "company": SnehaBaidPre,
       "role": "Data Science Intern"
@@ -819,7 +819,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SovanNayak,
-    "linkedin": "https://www.linkedin.com/in/sovan-nayak-/",
+    "linkedin": "https://linkedin.com/in/sovan-nayak-/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -836,7 +836,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Cambodia",
     "rating": 5,
     "image": DebapriyaGhosh,
-    "linkedin": "https://www.linkedin.com/in/debapriya-ghosh/",
+    "linkedin": "https://linkedin.com/in/debapriya-ghosh/",
     "previousCompany": {
       "company": DebapriyaGhoshPre,
       "role": "Consultant"
@@ -853,7 +853,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SankhadiptyaPaul,
-    "linkedin": "https://www.linkedin.com/in/sankhadiptya-paul-381658146/",
+    "linkedin": "https://linkedin.com/in/sankhadiptya-paul-381658146/",
     "previousCompany": {
       "company": SankhadiptyaPaulPre,
       "role": "Research Associate"
@@ -870,7 +870,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SunandaKumari,
-    "linkedin": "https://www.linkedin.com/in/sunanda-kumari-07b9971a7/",
+    "linkedin": "https://linkedin.com/in/sunanda-kumari-07b9971a7/",
     "previousCompany": {
       "company": SunandaKumariPre,
       "role": "Business Associate"
@@ -887,7 +887,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Delhi",
     "rating": 5,
     "image": ManjuBajaj,
-    "linkedin": "https://www.linkedin.com/in/manju-bajaj-19437a176/",
+    "linkedin": "https://linkedin.com/in/manju-bajaj-19437a176/",
     "previousCompany": {
       "company": ManjuBajajPre,
       "role": "MIS Executive"
@@ -904,7 +904,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": SachinKashyap,
-    "linkedin": "https://www.linkedin.com/in/sachinkashyapk/",
+    "linkedin": "https://linkedin.com/in/sachinkashyapk/",
     "previousCompany": {
       "company": SachinKashyapPre,
       "role": "Regional Business Analyst"
@@ -921,7 +921,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": UdayJaiswal,
-    "linkedin": "https://www.linkedin.com/in/uday-prakash-jaiswal-877501b7/",
+    "linkedin": "https://linkedin.com/in/uday-prakash-jaiswal-877501b7/",
     "previousCompany": {
       "company": UdayJaiswalPre,
       "role": "System Engineer"
@@ -938,7 +938,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkatta",
     "rating": 5,
     "image": PradiptoDatta,
-    "linkedin": "https://www.linkedin.com/in/pradiptodatta/",
+    "linkedin": "https://linkedin.com/in/pradiptodatta/",
     "previousCompany": {
       "company": PradiptoDattaPre,
       "role": "Business Analyst Intern"
@@ -955,7 +955,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": SayantaniChoudhury,
-    "linkedin": "https://www.linkedin.com/in/sayantanichoudhury97/",
+    "linkedin": "https://linkedin.com/in/sayantanichoudhury97/",
     "previousCompany": {
       "company": SayantaniChoudhuryPre,
       "role": "data analyst"
@@ -972,7 +972,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SayanNayak,
-    "linkedin": "https://www.linkedin.com/in/sayan-nayak-68b529135/",
+    "linkedin": "https://linkedin.com/in/sayan-nayak-68b529135/",
     "previousCompany": {
       "company": SayanNayakPre,
       "role": "Excutive Bussines Analyst"
@@ -989,7 +989,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SaswataBose,
-    "linkedin": "https://www.linkedin.com/in/saswata-bose-17038919a/",
+    "linkedin": "https://linkedin.com/in/saswata-bose-17038919a/",
     "previousCompany": {
       "company": SaswataBosePre,
       "role": "Associate"
@@ -1006,7 +1006,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": PathikritGanguly,
-    "linkedin": "https://www.linkedin.com/in/pathikrit-ganguly-kol/",
+    "linkedin": "https://linkedin.com/in/pathikrit-ganguly-kol/",
     "previousCompany": {
       "company": PathikritGangulyPre,
       "role": "Bussines Analyst"
@@ -1023,7 +1023,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SoumalyaDutta,
-    "linkedin": "https://www.linkedin.com/in/soumalya-dutta/",
+    "linkedin": "https://linkedin.com/in/soumalya-dutta/",
     "previousCompany": {
       "company": SoumalyaDuttaPre,
       "role": "Software Tester"
@@ -1040,7 +1040,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": ArpanBasu,
-    "linkedin": "https://www.linkedin.com/in/arpan-basu-471a06165/",
+    "linkedin": "https://linkedin.com/in/arpan-basu-471a06165/",
     "previousCompany": {
       "company": ArpanBasuPre,
       "role": "Research Associate"
@@ -1057,7 +1057,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Gurgaon",
     "rating": 5,
     "image": SouvikBose,
-    "linkedin": "https://www.linkedin.com/in/souvik-bose-308500145/",
+    "linkedin": "https://linkedin.com/in/souvik-bose-308500145/",
     "previousCompany": {
       "company": SouvikBosePre,
       "role": "Data Science"
@@ -1074,7 +1074,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SusmitaMajumder,
-    "linkedin": "https://www.linkedin.com/in/susmita-majumder-736498167/",
+    "linkedin": "https://linkedin.com/in/susmita-majumder-736498167/",
     "previousCompany": {
       "company": SusmitaMajumderPre,
       "role": "Quality Analyst"
@@ -1091,7 +1091,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": DebjitChandra,
-    "linkedin": "https://www.linkedin.com/in/debjit--chandra/",
+    "linkedin": "https://linkedin.com/in/debjit--chandra/",
     "previousCompany": {
       "company": DebjitChandraPre,
       "role": "Business Analyst Intern"
@@ -1108,7 +1108,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Mumbai",
     "rating": 5,
     "image": LahariSaha,
-    "linkedin": "https://www.linkedin.com/in/lahari-saha/",
+    "linkedin": "https://linkedin.com/in/lahari-saha/",
     "previousCompany": {
       "company": LahariSahaPre,
       "role": "Junior Data Scientist"
@@ -1125,7 +1125,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SouvikChakraborty,
-    "linkedin": "https://www.linkedin.com/in/souvik-chakraborty-510a63186/",
+    "linkedin": "https://linkedin.com/in/souvik-chakraborty-510a63186/",
     "previousCompany": {
       "company": SouvikChakrabortyPre,
       "role": "Business Analyst"
@@ -1142,7 +1142,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": PritamChakraborty,
-    "linkedin": "https://www.linkedin.com/in/pritam-chakraborty-649967173/",
+    "linkedin": "https://linkedin.com/in/pritam-chakraborty-649967173/",
     "previousCompany": {
       "company": PritamChakrabortyPre,
       "role": "Data Analytics Consultant"
@@ -1159,7 +1159,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": AbhishekNath,
-    "linkedin": "https://www.linkedin.com/in/abhisheknath12/",
+    "linkedin": "https://linkedin.com/in/abhisheknath12/",
     "previousCompany": {
       "company": AbhishekNathPre,
       "role": "Data Science Intern"
@@ -1176,7 +1176,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Rajasthan",
     "rating": 5,
     "image": BhavyaGupta,
-    "linkedin": "https://www.linkedin.com/in/bhavya-gupta-8301228a/",
+    "linkedin": "https://linkedin.com/in/bhavya-gupta-8301228a/",
     "previousCompany": {
       "company": BhavyaGuptaPre,
       "role": "Data Analyst"
@@ -1193,7 +1193,7 @@ export const allAlumni: AlumniData[] = [
   //   "location": "Hyderabad",
   //   "rating": 5,
   //   "image": "/placeholder.svg",
-  //   "linkedin": "https://www.linkedin.com/in/anshuatreja/",
+  //   "linkedin": "https://linkedin.com/in/anshuatreja/",
   //   "previousCompany": {
   //     "company": "Novartis",
   //     "role": "Business Analyst"
@@ -1210,7 +1210,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Gurgaon",
     "rating": 5,
     "image": AshiGoel,
-    "linkedin": "https://www.linkedin.com/in/ashigoel/",
+    "linkedin": "https://linkedin.com/in/ashigoel/",
     "previousCompany": {
       "company": AshiGoelPre,
       "role": "PMO"
@@ -1227,7 +1227,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SamikBhattacharyya,
-    "linkedin": "https://www.linkedin.com/in/samik-bhatta-86443b74/",
+    "linkedin": "https://linkedin.com/in/samik-bhatta-86443b74/",
     "previousCompany": {
       "company": SamikBhattacharyyaPre,
       "role": "IT Analyst"
@@ -1244,7 +1244,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": MithilaParial,
-    "linkedin": "https://www.linkedin.com/in/mithila-parial-10038380/",
+    "linkedin": "https://linkedin.com/in/mithila-parial-10038380/",
     "previousCompany": {
       "company": MithilaParialPre,
       "role": "Research Assistant"
@@ -1261,7 +1261,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": KomalWahi,
-    "linkedin": "https://www.linkedin.com/in/komal-wahi-592244195/",
+    "linkedin": "https://linkedin.com/in/komal-wahi-592244195/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -1278,7 +1278,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": SpandanPan,
-    "linkedin": "https://www.linkedin.com/in/spandan-pan-605b45139/",
+    "linkedin": "https://linkedin.com/in/spandan-pan-605b45139/",
     "previousCompany": {
       "company": SpandanPanPre,
       "role": "Data Scientist"
@@ -1295,7 +1295,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SenjutiDas,
-    "linkedin": "https://www.linkedin.com/in/senjuti-das-b87a17a8/",
+    "linkedin": "https://linkedin.com/in/senjuti-das-b87a17a8/",
     "previousCompany": {
       "company": SenjutiDasPre,
       "role": "Associate"
@@ -1317,7 +1317,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": TaniaLaha,
-    "linkedin": "https://www.linkedin.com/in/tanialaha27/",
+    "linkedin": "https://linkedin.com/in/tanialaha27/",
     "previousCompany": {
       "company": TaniaLahaPre,
       "role": "Project Engineer"
@@ -1334,7 +1334,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Mumbai",
     "rating": 5,
     "image": NishaPrabhudesai,
-    "linkedin": "https://www.linkedin.com/in/nisha-prabhudesai-039950111/",
+    "linkedin": "https://linkedin.com/in/nisha-prabhudesai-039950111/",
     "previousCompany": {
       "company": NishaPrabhudesaiPre,
       "role": "Accounts/Admin Officer"
@@ -1351,7 +1351,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Chennai",
     "rating": 5,
     "image": SreoshiBhattacharya,
-    "linkedin": "https://www.linkedin.com/in/sreoshi-bhattacharya-085239110/",
+    "linkedin": "https://linkedin.com/in/sreoshi-bhattacharya-085239110/",
     "previousCompany": {
       "company": SreoshiBhattacharyaPre,
       "role": "Data Analyst Intern"
@@ -1368,7 +1368,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": PallaviChandra,
-    "linkedin": "https://www.linkedin.com/in/pallavi-chandra-b23513190/",
+    "linkedin": "https://linkedin.com/in/pallavi-chandra-b23513190/",
     "previousCompany": {
       "company": PallaviChandraPre,
       "role": "Intern"
@@ -1385,7 +1385,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SohiniDas,
-    "linkedin": "https://www.linkedin.com/in/sohini-das-1092/",
+    "linkedin": "https://linkedin.com/in/sohini-das-1092/",
     "previousCompany": {
       "company": SohiniDasPre,
       "role": "Marketing Research Analyst"
@@ -1402,7 +1402,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Hyderabad",
     "rating": 5,
     "image": BinoyanandaNandi,
-    "linkedin": "https://www.linkedin.com/in/binoyananda-nandi/",
+    "linkedin": "https://linkedin.com/in/binoyananda-nandi/",
     "previousCompany": {
       "company": BinoyanandaNandiPre,
       "role": "Business operations specialist"
@@ -1419,7 +1419,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": AliAhmad,
-    "linkedin": "https://www.linkedin.com/in/ali-ahmad-4a9107131/",
+    "linkedin": "https://linkedin.com/in/ali-ahmad-4a9107131/",
     "previousCompany": {
       "company": AliAhmadPre,
       "role": "Busniess Analyst"
@@ -1436,7 +1436,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": ArundhutiMaity,
-    "linkedin": "https://www.linkedin.com/in/arundhuti-maity-93340a1b9/",
+    "linkedin": "https://linkedin.com/in/arundhuti-maity-93340a1b9/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -1453,7 +1453,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": ParthivaShome,
-    "linkedin": "https://www.linkedin.com/in/parthiva-data-scientist/",
+    "linkedin": "https://linkedin.com/in/parthiva-data-scientist/",
     "previousCompany": {
       "company": ParthivaShomePre,
       "role": "GIS Data Analyst"
@@ -1470,7 +1470,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": SohamBrahma,
-    "linkedin": "https://www.linkedin.com/in/soham-brahma-42a061104/",
+    "linkedin": "https://linkedin.com/in/soham-brahma-42a061104/",
     "previousCompany": {
       "company": SohamBrahmaPre,
       "role": "Academic Research Analyst"
@@ -1487,7 +1487,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Remote",
     "rating": 5,
     "image": IndraPrasad,
-    "linkedin": "https://www.linkedin.com/in/indra-prasad-3723b2a8/",
+    "linkedin": "https://linkedin.com/in/indra-prasad-3723b2a8/",
     "previousCompany": {
       "company": IndraPrasadPre,
       "role": "Assistant Professor"
@@ -1504,7 +1504,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": SreerupaKundu,
-    "linkedin": "https://www.linkedin.com/in/sreerupa-kundu-6a24661b4/",
+    "linkedin": "https://linkedin.com/in/sreerupa-kundu-6a24661b4/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -1521,7 +1521,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": ParthaSaha,
-    "linkedin": "https://www.linkedin.com/in/theparthasaha/",
+    "linkedin": "https://linkedin.com/in/theparthasaha/",
     "previousCompany": {
       "company": ParthaSahaPre,
       "role": "Senior Business Analyst"
@@ -1538,7 +1538,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": ShamboSekharGhosh,
-    "linkedin": "https://www.linkedin.com/in/shambo-shekhar-ghosh/",
+    "linkedin": "https://linkedin.com/in/shambo-shekhar-ghosh/",
     "previousCompany": {
       "company": ShamboSekharGhoshPre,
       "role": "Business Analyst"
@@ -1555,7 +1555,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": KaushaniBanerjee,
-    "linkedin": "https://www.linkedin.com/in/kaushani-banerjee-0513301aa/",
+    "linkedin": "https://linkedin.com/in/kaushani-banerjee-0513301aa/",
     "previousCompany": {
       "company": KaushaniBanerjeePre,
       "role": "Research Associate"
@@ -1572,7 +1572,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Bangalore",
     "rating": 5,
     "image": SoumiDas,
-    "linkedin": "https://www.linkedin.com/in/soumi-das-12ab161a1/",
+    "linkedin": "https://linkedin.com/in/soumi-das-12ab161a1/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -1589,7 +1589,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SoumeeGhosh,
-    "linkedin": "https://www.linkedin.com/in/soumee-ghosh-b11547209/",
+    "linkedin": "https://linkedin.com/in/soumee-ghosh-b11547209/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -1606,7 +1606,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": ShrutiBanerjee,
-    "linkedin": "https://www.linkedin.com/in/shruti-banerjee06/",
+    "linkedin": "https://linkedin.com/in/shruti-banerjee06/",
     "previousCompany": {
       "company": ShrutiBanerjeePre,
       "role": "Camp K12"
@@ -1623,7 +1623,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Hyderabad",
     "rating": 5,
     "image": NaiwritaBoral,
-    "linkedin": "https://www.linkedin.com/in/naiwrita-boral/",
+    "linkedin": "https://linkedin.com/in/naiwrita-boral/",
     "previousCompany": {
       "company": NaiwritaBoralPre,
       "role": "Developer"
@@ -1640,7 +1640,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": SubhamRoy,
-    "linkedin": "https://www.linkedin.com/in/subhamroy94/",
+    "linkedin": "https://linkedin.com/in/subhamroy94/",
     "previousCompany": {
       "company": SubhamRoyPre,
       "role": "Certified Internet Consultant"
@@ -1657,7 +1657,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Pune",
     "rating": 5,
     "image": TouhidJainekhan,
-    "linkedin": "https://www.linkedin.com/in/touhid-jainekhan-410b56208/",
+    "linkedin": "https://linkedin.com/in/touhid-jainekhan-410b56208/",
     "previousCompany": {
       "company": Fresher,
       "role": ""
@@ -1674,7 +1674,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": ParthibSinghaRoy,
-    "linkedin": "https://www.linkedin.com/in/parthib-singha-roy-2051b7195/",
+    "linkedin": "https://linkedin.com/in/parthib-singha-roy-2051b7195/",
     "previousCompany": {
       "company": ParthibSinghaRoyPre,
       "role": "Internship"
@@ -1691,7 +1691,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": AanchalBhatia,
-    "linkedin": "https://www.linkedin.com/in/aanchal-bhatia0496/",
+    "linkedin": "https://linkedin.com/in/aanchal-bhatia0496/",
     "previousCompany": {
       "company": AanchalBhatiaPre,
       "role": "Internship"
@@ -1708,7 +1708,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Pune",
     "rating": 5,
     "image": NavinPatle,
-    "linkedin": "https://www.linkedin.com/in/n-patle/",
+    "linkedin": "https://linkedin.com/in/n-patle/",
     "previousCompany": {
       "company": Fresher,
       "role": ""

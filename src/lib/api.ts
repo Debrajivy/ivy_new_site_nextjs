@@ -2384,7 +2384,7 @@ const alumni: Alumni[] = [
     image: "/assets/pritam.webp",
     testimonial: "Prateek Sir made SQL feel like an exciting video game—challenging yet rewarding. His guidance, real-world focus, and constant support helped me master SQL with confidence and enjoy every step of the learning journey.",
     courseId: "1",
-    linkedin: "https://www.linkedin.com/in/pritam-kumar-shaw-001029217/"
+    linkedin: "https://linkedin.com/in/pritam-kumar-shaw-001029217/"
   },
   {
     id: "a2",
@@ -2394,8 +2394,8 @@ const alumni: Alumni[] = [
     image: "/assets/pratiksha.webp",
     testimonial: "Debjyoti Sir’s interactive and engaging teaching makes learning Python easy and enjoyable. His clear explanations, encouragement, and support build strong problem-solving skills and confidence, helping me apply Python effectively in real-world data science scenarios.",
     courseId: "1",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    linkedin: "https://www.linkedin.com/in/pratiksha-chakraborty-2013132b7"
+    videoUrl: "https://youtube.com/embed/dQw4w9WgXcQ",
+    linkedin: "https://linkedin.com/in/pratiksha-chakraborty-2013132b7"
   },
   {
     id: "a3",
@@ -2415,7 +2415,7 @@ const alumni: Alumni[] = [
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     testimonial: "Coming from a software engineering background, the Data Engineering course gave me the specialized skills to transition to data engineering. Now I'm leading a team at Netflix.",
     courseId: "3",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "https://youtube.com/embed/dQw4w9WgXcQ",
     linkedin: "https://linkedin.com/in/aishakhan"
   }
 ];
@@ -2442,7 +2442,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     course: "Generative AI Masterclass",
     courseId: "2",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    videoUrl: "https://youtube.com/embed/dQw4w9WgXcQ"
   }
 ];
 

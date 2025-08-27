@@ -134,7 +134,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                               <iframe
                                 width="100%"
                                 height="100%"
-                                src={`https://www.youtube.com/embed/${project.videoId}`}
+                                src={`https://youtube.com/embed/${project.videoId}`}
                                 title="Project Demonstration"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -252,7 +252,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                   <iframe
                                     width="100%"
                                     height="100%"
-                                    src={`https://www.youtube.com/embed/${project.videoId}`}
+                                    src={`https://youtube.com/embed/${project.videoId}`}
                                     title="Project Demonstration"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -338,7 +338,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                   <iframe
                                     width="100%"
                                     height="100%"
-                                    src={`https://www.youtube.com/embed/${project.videoId}`}
+                                    src={`https://youtube.com/embed/${project.videoId}`}
                                     title="Project Demonstration"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -421,7 +421,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                               <iframe
                                 width="100%"
                                 height="100%"
-                                src={`https://www.youtube.com/embed/${project.videoId}`}
+                                src={`https://youtube.com/embed/${project.videoId}`}
                                 title="Project Demonstration"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

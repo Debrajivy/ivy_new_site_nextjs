@@ -169,7 +169,7 @@ const Youtube = () => {
             </p>
             <div className="flex justify-center">
               <Button className="bg-red-600 hover:bg-red-700" size="lg" asChild>
-                <a href="https://www.youtube.com/channel/IvyProfessionalSchool" target="_blank" rel="noopener noreferrer">
+                <a href="https://youtube.com/channel/IvyProfessionalSchool" target="_blank" rel="noopener noreferrer">
                   Subscribe to Our Channel
                 </a>
               </Button>

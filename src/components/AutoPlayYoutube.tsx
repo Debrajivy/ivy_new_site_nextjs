@@ -27,7 +27,7 @@ export default function AutoPlayYouTube({
       {active ? (
         <iframe
           className="absolute top-0 left-0 w-full h-full"
-          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&modestbranding=1&rel=0`}
+          src={`https://youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&modestbranding=1&rel=0`}
           title={title}
           allow="autoplay; encrypted-media; picture-in-picture"
           allowFullScreen

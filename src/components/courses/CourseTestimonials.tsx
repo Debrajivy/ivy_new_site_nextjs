@@ -155,7 +155,7 @@ const CourseTestimonials = ({ courseId }: CourseTestimonialsProps) => {
             <p className="text-gray-600 text-sm mb-4">Based on 2,250+ reviews</p>
             <Button variant="outline" asChild>
               <a 
-                href="https://www.google.com/search?q=ivy+professional+school+reviews" 
+                href="https://google.com/search?q=ivy+professional+school+reviews" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
