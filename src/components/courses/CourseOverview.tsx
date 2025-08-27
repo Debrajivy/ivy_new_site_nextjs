@@ -4,7 +4,6 @@ import { Course } from '@/lib/api';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { CheckCircle, Users, Award, Briefcase, Brain } from 'lucide-react';
-import Image from 'next/image';
 
 interface CourseOverviewProps {
   course: Course;
@@ -20,6 +19,7 @@ const getAboutCourseTitle = (courseTitle: string) => {
     "Data Analytics with Visualization Certification Course",
     "Business Analytics Certification Course",
     "Cloud Data Engineering Course with IIT Guwahati",
+    "AI for Product Manager"
   ];
 
   if (knownTitles.includes(courseTitle)) {
@@ -60,9 +60,22 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
           <div className="lg:col-span-2 space-y-8">
             <div>
               <h2 className="text-3xl font-bold mb-4">
+
                 What is{" "}
-                <span className="text-[#009fda]">{course.title}</span>{" "}
-                and why should I learn it today?
+                {course.title !== "Data science course (Pay after Placement)"
+                  ? (
+                    <>
+                      <span className="text-[#009fda]">{course.title}</span>{" "}
+                      and why should I learn it today?
+                    </>
+                  )
+                  : (
+                    <>
+                      <span className="text-[#009fda]">Data Science Course</span>{" "}
+                      and why should I learn it today?
+                    </>
+                  )
+                }
               </h2>
 
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
@@ -73,7 +86,10 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
             <div>
               <h3 className="text-xl font-bold mb-4">
                 What will I learn in Ivy Pro School{" "}
-                <span className="text-[#00a0da]">{course.title}</span> course?
+                {
+                  course.title !== "Data science course (Pay after Placement)"?
+                  <span className="text-[#00a0da]">{course.title} course?</span> :  <span className="text-[#00a0da]"> Data Science Course?</span> 
+                }
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {course.outcomes?.map((outcome, index) => (
@@ -98,9 +114,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                 <div className="space-y-6">
                   {course.instructors?.map((instructor) => (
                     <div key={instructor.id} className="flex items-start">
-                      <Image
-                        width={48}
-                        height={48}
+                      <img
                         src={instructor.image}
                         alt={instructor.name}
                         className="w-12 h-12 rounded-full object-cover mr-4"

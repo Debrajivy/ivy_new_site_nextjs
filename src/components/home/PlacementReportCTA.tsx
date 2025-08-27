@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { BarChart3, Download, TrendingUp, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 const PlacementReportCTA = () => {
   return (
@@ -115,16 +116,18 @@ const PlacementReportCTA = () => {
               </div>
             </div>
 
-            <a
-              href="https://ivyproschool.com/wp-content/uploads/2015/07/Career-Transition-Handbook-4Jan2021.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            {/* <a href="https://drive.google.com/file/d/1wBpItH2J12IOnUn7CWc_ykAduDODulk7/preview" target="_blank">
+                    <Button size="lg" variant="outline" className="bg-white/10">
+                      Download Brochure
+                    </Button>
+                  </a> */}
+            <Link href="/alumni" className="mt-4 md:mt-0">
+
               <Button size="lg">
-                <Download className="mr-2 h-5 w-5" />
-                Download Placement Report
+                <TrendingUp className="mr-2 h-4 w-4" />
+                Watch Placement Success Stories
               </Button>
-            </a>
+            </Link>
 
           </div>
         </div>

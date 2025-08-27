@@ -31,18 +31,18 @@ export async function generateMetadata(
     if (!course) return { title: "Course Not Found | Ivy Professional School" }
 
     return {
-      title: `${course.title} | Ivy Professional School`,
+      title: `${course?.metaData?.title ? course?.metaData?.title : `${course.title} | Ivy Professional School`}`,
       description: course.description,
       keywords: `${course.title}, ${course.category}, Ivy Professional School, Data Science, AI, Machine Learning, Course, Training`,
       openGraph: {
-        title: `${course.title} | Ivy Professional School`,
+        title: `${course?.metaData?.title ? course?.metaData?.title : `${course.title} | Ivy Professional School`}`,
         description: course.description,
         images: [course.image],
         type: "website",
       },
       twitter: {
         card: "summary_large_image",
-        title: `${course.title} | Ivy Professional School`,
+        title: `${course?.metaData?.title ? course?.metaData?.title : `${course.title} | Ivy Professional School`}`,
         description: course.description,
         images: [course.image],
       },

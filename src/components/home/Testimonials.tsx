@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, ChevronLeft, ChevronRight, PlayCircle, ArrowRight, Linkedin } from "lucide-react"
+import { Star, ChevronLeft, ChevronRight, PlayCircle, ArrowRight, Linkedin, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import aparupa from "@/assests/aparupa.webp";
@@ -381,14 +381,20 @@ const Testimonials = () => {
                 variant="default"
                 size="lg"
                 className="text-white font-semibold"
-                style={{ backgroundColor: '#009fda' }}
+                style={{ backgroundColor: '#25D366' }} // WhatsApp green color
+                onClick={() => {
+                  const phoneNumber = '919748441111';
+                  const defaultMessage = "Hello! I'm interested in transforming my career into AI with Ivy Pro School. Could you please help me with more information?";
+                  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                  const encodedMessage = encodeURIComponent(defaultMessage);
+                  const whatsappUrl = isMobile
+                    ? `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`
+                    : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
               >
-                <a
-                  href="https://youtube.com/playlist?list=PL6ajVQ6jyjvCXW4Xfcn_XYXsSzfggBsW1&si=wSg25UvxKRPC6CdL"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Schedule a Free Consultation                </a>
+                <MessageSquare className="mr-2 h-5 w-5" />
+                Chat on WhatsApp
               </Button>
             </div>
           </div>

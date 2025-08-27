@@ -6,6 +6,7 @@ import Link from "next/link"
 import { PlayCircle, CalendarDays, Clock, User, Users } from "lucide-react"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
+import Image from "next/image"
 
 interface BootcampEvent {
   id: string
@@ -208,7 +209,7 @@ const BootcampClient: React.FC<BootcampClientProps> = ({ bootcamps }) => {
                   {nextUpcomingBootcamp.facultyProfilePic && nextUpcomingBootcamp.facultyName && (
                     <div className="flex items-center mb-8">
                       <div className="relative w-20 h-20 mr-4">
-                        <img
+                        <Image
                           src={nextUpcomingBootcamp.facultyProfilePic || "/placeholder.svg"}
                           alt={nextUpcomingBootcamp.facultyName}
                           

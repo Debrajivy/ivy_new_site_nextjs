@@ -1,8 +1,4 @@
 // Mock API functions to simulate data fetching
-import Pratik from "@/assests/pratilk.webp";
-import EEshani from "@/assests/eeshani.webp";
-import pratiksha from "@/assests/pratiksha.webp"
-import pritam from "@/assests/pritam.webp";
 export interface Course {
   id: string;
   title: string;
@@ -10,6 +6,7 @@ export interface Course {
   image: string;
   category: string;
   students: number;
+  metaData?:any;
   duration: string;
   rating: number;
   reviewCount: number;
@@ -17,12 +14,13 @@ export interface Course {
   slug: string;
   longDescription?: string;
   outcomes?: string[];
-  curriculum?: Module[];
+  curriculum?: any;
   projects?: Project[];
   prerequisites?: string[];
   instructors?: Instructor[];
   aiFeatures?: AIFeature[];
   faq?: FAQ[];
+  
 }
 
 export interface Module {
@@ -105,6 +103,12 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
+     metaData:{
+      title:"Generative AI Course with IIT Guwahati: #1 GenAI Course ",
+      description:"Join IIT Guwahati Certified Generative AI course and become job-ready in 18 weeks. Build 15+ GenAI apps on cloud. Get IBM & NASSCOM certified",
+      bio:"Learn advanced Gen AI skills, build super-functional apps, get certified by IIT, and become the perfect job candidate in 18 weeks."
+      
+    },
     duration: "225 Hours",
     rating: 4.9,
     reviewCount: 5567,
@@ -314,6 +318,12 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1677442135968-6bb674d4f8a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
     category: "Generative AI",
     students: 1876,
+     metaData:{
+      title:"Data Science Course with IIT Guwahati: GenAI, MLOps, Python",
+      description:"Become IIT Certified in 45 weeks. Join IIT Guwahati's Data Science course & learn Python, GenAI, MLOps on Cloud, work on 50+ projects, with placement support.",
+      bio:"Learn high-value data science skills, work on 50+ projects and case studies, get certified by IIT, and become job-ready in 45 weeks."
+      
+    },
     duration: "10 weeks",
     rating: 4.8,
     reviewCount: 432,
@@ -550,6 +560,12 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Engineering",
     students: 1549,
+    metaData:{
+      title:"Cloud Data Engineering Course with IIT Guwahati",
+      description:"Join IIT Guwahati certified Data Engineering course. Learn Cloud, Azure, Python, SQL, Spark, & work on 30+ projects with lifetime placement support.",
+      bio:"Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
+      
+    },
     duration: "12 weeks",
     rating: 4.7,
     reviewCount: 345,
@@ -699,6 +715,7 @@ const courses: Course[] = [
           { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
         ]
       },
+      ,
 
 
 
@@ -773,6 +790,12 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
+    metaData:{
+      title:"NASSCOM Certified Data Science Course with ML & GenAI. 4.8/5",
+      description:"Enroll in Ivy Pro's Data Science Course with ML & GenAI. Get fee rebate from Govt. Classroom & live online classes. 30+ hands-on projects and placement support.",
+      bio:"Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and land promising jobs for data scientist, analyst, or ML engineer roles."
+      
+    },
     duration: "14 weeks",
     rating: 4.8,
     reviewCount: 298,
@@ -1070,6 +1093,12 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
+    metaData:{
+      title:"Data Visualization Certification Course in Tableau & Power BI",
+      description:"Join IBM Certified Data Science course with Visualization. Work on 25+ real-world projects. Mentors from IIT, IIM, & US universities. Get placement support.",
+      bio:"Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Python, R, Tableau, PowerBI, and more."
+      
+    },
     duration: "14 weeks",
     rating: 4.8,
     reviewCount: 298,
@@ -1270,6 +1299,12 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
+    metaData:{
+      title:"Best Data Analytics Course Online with Placement Support",
+      description:"Join 4.8/5 rated Data Analytics course with 230 hours of live training, 50+ assignments, 30+ case studies, & 10+ industry projects. IBM Certified.",
+      bio:"Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
+      
+    },
     duration: "14 weeks",
     rating: 4.8,
     reviewCount: 298,
@@ -1498,6 +1533,12 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
+    metaData:{
+      title:"Data Analyst & Business Analytics Course with IBM [4.8/5]",
+      description:"Join Business Analytics course in collaboration with IBM. Learn in Classroom / Online Live & work on 20+ industry projects with IIT, IIM faculty",
+      bio:"Learn business analytics with advanced tools like Excel, SQL, Python, R, Tableau, etc., and become a data expert employers want to hire."
+      
+    },
     duration: "14 weeks",
     rating: 4.8,
     reviewCount: 298,
@@ -1692,6 +1733,11 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
+    metaData:{
+      title:"Cloud Data Engineering Course with IIT Guwahati",
+      description:"Join IIT Guwahati certified Data Engineering course. Learn Cloud, Azure, Python, SQL, Spark, & work on 30+ projects with lifetime placement support.",
+      bio:"Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
+    },
     duration: "14 weeks",
     rating: 4.8,
     reviewCount: 298,
@@ -1853,8 +1899,480 @@ const courses: Course[] = [
       "Receive 1:1 mentorship, resume support, and lifetime placement assistance to land top jobs"
     ],
 
-    
+
   },
+  {
+    id: '9',
+    title: "AI for Product Manager",
+    description: "Get coached by industry experts, master essential project management skills, complete 20+ real-world projects, and become job-ready in just 6 weeks",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1098,
+    metaData:{
+      title:"Become a Future Ready AI Product Manager using Generative AI",
+      description:"Upskill in 6 weeks with Ivy’s AI for Product Manager course. Learn Agile, AI tools, 20+ projects & job support. Become a future-ready PM."
+    },
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 20,
+    isFeatured: true,
+    slug: "ai-product-manager-course",
+    longDescription: "This course, created in collaboration with industry-leading professionals, equips you with the critical skills needed to manage projects successfully. You will be mentored by top experts, gain practical insights through real-world applications, and network with accomplished project managers globally.\n\n The curriculum is structured into key sections, covering Agile and Scrum methodologies, Team and Stakeholder Management, Risk and Resource Management, and Project Planning and Execution.\n\n One of the most sought-after project management courses, it will teach you to efficiently manage projects, lead teams, and master essential tools like Jira, Microsoft Project, Asana, and Trello. You’ll also work on 20+ real-world projects, building the confidence and expertise to handle actual business challenges.\n\n This 6-week program is perfect for professionals who want to upskill in project management or individuals transitioning into the field. Whether managing tech projects or leading large teams, this course will provide you with the necessary tools to excel in a project management role."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+      }
+    ],
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "Strategic AI Thinking for PMs",
+        duration: "3 hrs",
+        topics: [
+          { id: "t1", title: "What makes a problem “AI-suitable”: Repeatable, data-rich, fuzzy logic required", duration: "" },
+          { id: "t2", title: "The AI Opportunity Matrix: Value vs Feasibility vs Risk", duration: "" },
+          { id: "t3", title: "“Build vs Prompt vs Buy” framework: Decide the best approach based on cost, ownership, and capability", duration: "" },
+          { id: "t4", title: "Strategic Fit: When AI is a feature vs a foundation", duration: "" },
+          { id: "t5", title: "Notion AI vs ClickUp: Two different strategies for AI adoption", duration: "" },
+          { id: "t6", title: "Product Growth Example: How Spotify uses AI to personalize, vs operational use in support tools", duration: "" },
+          { id: "t7", title: "Hands-On: Map AI opportunities in your product: Identify 3 user or team problems where AI could improve efficiency or decision-making", duration: "" },
+        ]
+      },
+      {
+        id: "m2",
+        title: "Prompt Engineering in Product Workflows",
+        duration: "5 hrs",
+        topics: [
+          { id: "t1", title: "Prompt structure: Role, context, task, examples, constraints", duration: "" },
+          { id: "t2", title: "Prompt styles: Zero-shot, few-shot, chain-of-thought (CoT), role prompting", duration: "" },
+          { id: "t3", title: "System prompts: Controlling behavior across sessions", duration: "" },
+          { id: "t4", title: "Prompt testing: Success rate, robustness, hallucination control", duration: "" },
+          { id: "t5", title: "Framework: Prompt Development Lifecycle (write, test, refine, evaluate)", duration: "" },
+          { id: "t6", title: "Support Ticket Triage: Auto-categorize and summarize Zendesk conversations", duration: "" },
+          { id: "t7", title: "Product Copy Assistant: Generate in-product tooltips or feature descriptions in brand tone", duration: "" },
+
+        ]
+      },
+      {
+        id: "m3",
+        title: "Internal AI with RAG & Company Data",
+        duration: "4 hrs",
+        topics: [
+          { id: "t1", title: "What is RAG (Retrieval-Augmented Generation) and when to use it", duration: "" },
+          { id: "t2", title: "Vector DBs vs Document DBs: Choosing Pinecone, Weaviate, MongoDB, Elastic", duration: "" },
+          { id: "t3", title: "Typical RAG architecture: UI → Query parser → Vector search → Reranker → Response", duration: "" },
+          { id: "t4", title: "Business use cases: Internal policy chatbots, knowledge workers, sales playbooks", duration: "" },
+          { id: "t5", title: "Internal AI Assistant: Answers policy/HR/legal questions from internal docs", duration: "" },
+          { id: "t6", title: "Compliance Tool: Reads regulatory docs to flag risky copy in a PRD", duration: "" },
+          { id: "t7", title: "Sales Support Assistant: Suggests customer use cases from old deal notes", duration: "" },
+
+        ]
+      },
+      {
+        id: "m4",
+        title: "Rapid AI Prototyping (No-Code Tools)",
+        duration: "4 hrs",
+        topics: [
+          { id: "t1", title: "PromptLayer, Firebase Studio, Replit, Lovable, Streamlit", duration: "" },
+          { id: "t2", title: "How to go from idea → prompt → UI → evaluation", duration: "" },
+          { id: "t3", title: "Creating AI-driven microtools (assistants, summarizers, generators)", duration: "" },
+          { id: "t4", title: "Building 'testable surfaces' for stakeholder demos", duration: "" },
+          { id: "t5", title: "Product Feedback Synthesizer: Ingest user feedback and suggest features", duration: "" },
+          { id: "t6", title: "AI PRD Generator: Converts bullet notes into PRD format", duration: "" },
+          { id: "t7", title: "Copy Review Assistant: Checks product copy for tone, clarity, and word count", duration: "" },
+
+        ]
+      },
+
+      {
+        id: "m5",
+        title: "AI Agents & Workflow Automation",
+        duration: "3 hrs",
+        topics: [
+          { id: "t1", title: "What are AI agents? (MCP, Tool-Use, A2A)", duration: "" },
+          { id: "t2", title: "Platforms: n8n, AutoGen, LangGraph", duration: "" },
+          { id: "t3", title: "Orchestration concepts: Memory, intent switching, task scheduling", duration: "" },
+          { id: "t4", title: "Business use cases: Email sorters, meeting assistants, bug triage bots", duration: "" },
+          { id: "t5", title: "Customer Support Agent: Auto-replies to tickets using internal docs + sentiment", duration: "" },
+          { id: "t6", title: "Meeting Assistant: Prepares briefs using calendar + past emails", duration: "" },
+          { id: "t7", title: "Bug Report Summarizer: Converts GitHub issues into severity-ranked summaries", duration: "" },
+
+        ]
+      },
+      {
+        id: "m6",
+        title: "AI Evaluation, Risk & Governance",
+        duration: "4 hrs",
+        topics: [
+          { id: "t1", title: "Why traditional QA doesn’t work for LLMs", duration: "" },
+          { id: "t2", title: "Evaluation strategies: Human rating, prompt regression tests, LLM-as-judge", duration: "" },
+          { id: "t3", title: "Key metrics: Hallucination rate, accuracy, coverage, completion time", duration: "" },
+          { id: "t4", title: "Governance topics: Consent, fairness, prompt security, model drift", duration: "" },
+          { id: "t5", title: "Release Generator: Test for bias or hallucination when summarizing dev commits", duration: "" },
+          { id: "t6", title: "Prompt Drift Tracker: Compare old vs new outputs from the same prompt", duration: "" },
+          { id: "t7", title: "Hands-On: Run an A/B test with Claude vs ChatGPT and compare results with stakeholders", duration: "" },
+        ]
+      }
+
+
+    ]
+
+    ,
+    projects: [
+
+
+      {
+        id: "p1",
+        title: "Upcoming",
+        description: "Upcoming",
+        image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+        skills: [],
+        difficulty: "Beginner",
+        isPractice: true,
+        videoId: ""
+      },
+      // {
+      //   id: "p4",
+      //   title: "Superstore Sales Analysis Using Excel ",
+      //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
+      //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+      //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
+      //   difficulty: "Beginner to Intermediate",
+      //   videoId: "KGrApiKUR4M"
+      // },
+      // {
+      //   id: "p5",
+      //   title: "Predicting Car Sales using Linear Regression in R",
+      //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
+      //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
+      //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
+      //   difficulty: "Intermediate",
+      //   videoId: "8nNgJJH7pMk"
+      // },
+      // {
+      //   id: "p6",
+      //   title: "Crime Intelligence Dashboard in Power BI",
+      //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
+      //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
+      //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
+      //   difficulty: "Intermediate",
+      //   videoId: "sVXjAIa7YBs"
+      // }
+    ],
+    outcomes: [
+      "Master project management methodologies like Agile and Scrum to drive efficient project delivery",
+      "Manage resources, risks, and timelines to ensure project success using Jira, Asana, Trello, and other industry tools",
+      "Develop leadership and stakeholder management skills to effectively lead cross-functional teams",
+      "Build your portfolio with 20+ real-world projects and case studies from various industries",
+      "Get certified by top industry professionals and enhance your professional credibility",
+      "Receive 1:1 mentorship, resume support, and lifetime placement assistance to secure top project management roles"
+    ],
+
+
+  },
+
+  {
+    id: '10',
+    title: "Data science course (Pay after Placement)",
+    description: "Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and land promising jobs for data scientist, analyst, or ML engineer roles.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1098,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 20,
+    isFeatured: true,
+    slug: "no-upfront-fees-data-science-and-ml-course",
+    longDescription: "Our Pay After Placement (PAP) program removes upfront financial barriers. You only pay your course fee after you secure a job with a minimum CTC of ₹4 LPA. Backed by NASSCOM certification and Ivy Pro School’s reputation, this program ensures outcome-based learning with guaranteed career opportunities.\n\n "
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+      }
+    ],
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advance Excel",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        ]
+      },
+
+
+      {
+        id: "m2",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      },
+
+      {
+        id: "m3",
+        title: "Data Visualization Using Tableau",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Data Visualization Using Power BI",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        ]
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "Predictive Modeling with R",
+        duration: "22 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
+          { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
+          { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
+          { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
+          { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
+          { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
+          { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
+          { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
+          { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
+          { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
+          { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
+        ]
+      }
+
+      ,
+
+      {
+        id: "m6",
+        title: "Python for Data Science",
+        duration: "36 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        ]
+      }
+      ,
+      {
+        id: "m7",
+        title: "Machine Learning, Artificial Intelligence, and Deep Learning",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
+          { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
+          { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
+          { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
+          { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
+          { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
+          { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
+          { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
+          { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
+          { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
+          { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
+          { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
+          { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
+          { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
+        ]
+      }
+
+
+      ,
+
+      {
+        id: "m8",
+        title: "Statistics",
+        duration: "8 hrs",
+        topics: [
+          { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
+          { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
+          { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
+          { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
+          { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
+          { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
+          { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
+          { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
+          { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
+        ]
+      }
+
+      ,
+      {
+        "id": "m9",
+        "title": "Excel VBA Automation",
+        "duration": "26 hrs",
+        "topics": [
+          { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
+          { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
+          { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
+          { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
+        ]
+      }
+
+
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "Steps to Make a Career in AI & Data",
+        description: "Explore pathways to start and grow a career in AI and Data. Learn about essential skills, tools, career opportunities, and how AI is impacting various industries through this expert Q&A session.",
+        image: "https://img.youtube.com/vi/OoCffZ4VaJE/0.jpg",
+        skills: ["AI Career Path", "AI Tools", "AI Research", "AI & Web Development", "Chatbots"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "OoCffZ4VaJE"
+      },
+      {
+        id: "p2",
+        title: "Using AI Visuals in Power BI Dashboards",
+        description: "Learn to create AI-powered visuals in Power BI, including Key Influencer, Decomposition Tree, Q&A, and Smart Narrative. Explore current AI trends and integrate ChatGPT for enhanced insights",
+        image: "https://img.youtube.com/vi/ftTTrchGVbA/0.jpg",
+        skills: ["Key Influencer Visual", "Decomposition Tree", "Smart Narrative", "AI Trends"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "ftTTrchGVbA"
+      },
+      {
+        id: "p3",
+        title: "Python Prediction Model for Real Estate",
+        description: "Build a real estate price prediction model using Python and machine learning. Learn data preprocessing, regression techniques, and model building with practical insights from a real-world case study.",
+        image: "https://img.youtube.com/vi/TipOU1HPrxA/0.jpg",
+        skills: ["Regression Models", "Data Preprocessing", "Linear Regression", "Random Forest", "Neural Networks"],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "TipOU1HPrxA"
+      },
+      {
+        id: "p4",
+        title: "OYO Business Analysis with SQL",
+        description: "Learn how to perform business analysis using SQL with a real-world case study on OYO’s room sales. Cover data cleaning, SQL queries, business KPIs, and practical data-driven decision-making.",
+        image: "https://img.youtube.com/vi/ee7TajNEUrI/0.jpg",
+        skills: ["GROUP BY", "ARIMA Model", "Window Functions ", "CTE", "Data Cleaning"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "ee7TajNEUrI"
+      },
+      {
+        id: "p5",
+        title: "Predicting Computer Prices with Python",
+        description: "Build a predictive model for computer prices using Python. Learn data cleaning, regression modeling, and key Python libraries through this industry case study by an IvyPro student.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["Feature Engineering,", "Linear Regression", "Random Forest", "Scikit-learn", "Regression Metrics"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      },
+      {
+        id: "p6",
+        title: "ANOVA Using R - Bakery Case Study",
+        description: "Analyze how display factors affect product demand using Two-way ANOVA and Tukey’s Test in R. Learn statistical hypothesis testing through this practical bakery case study.",
+        image: "https://img.youtube.com/vi/UhO4y3a9yxQ/0.jpg",
+        skills: ["Data Loading", "Data Manipulation", "Two-way ANOVA", "Hypothesis Testing", "Statistical Modeling"],
+        difficulty: "Intermediate",
+        videoId: "UhO4y3a9yxQ"
+      }
+    ],
+    outcomes: [
+      "Hands-on with Python, R, SQL, Tableau, Power BI, Excel & VBA.",
+      "Work on 30+ projects, including 6 capstone projects in retail, finance, marketing, e-commerce, real estate, and entertainment.",
+      "Apply supervised & unsupervised ML, AI, and DL to solve real-world problems.",
+      "Gain holistic skills — resume prep, networking, interview training.",
+      
+    ],
+
+
+  },
+
 ];
 
 const alumni: Alumni[] = [
@@ -1929,39 +2447,26 @@ const testimonials: Testimonial[] = [
 ];
 
 export const fetchCourseById = async (slug: string): Promise<Course | undefined> => {
-  // Simulate API call
-  console.log(`Fetching course with slug: ${slug}`);
-  await new Promise(resolve => setTimeout(resolve, 500));
   return courses.find(course => course.slug === slug);
 };
 
 export const fetchCourses = async (): Promise<Course[]> => {
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 500));
   return courses;
 };
 
 export const fetchFeaturedCourses = async (): Promise<Course[]> => {
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 500));
   return courses.filter(course => course.isFeatured);
 };
 
 export const fetchCoursesByCategory = async (category: string): Promise<Course[]> => {
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 500));
   return courses.filter(course => course.category.toLowerCase() === category.toLowerCase());
 };
 
 export const fetchAlumniByourse = async (courseId: string): Promise<Alumni[]> => {
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 500));
   return alumni.filter(alum => alum.courseId === courseId);
 };
 
 export const fetchTestimonialsByCategory = async (category?: string): Promise<Testimonial[]> => {
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 500));
   if (!category) return testimonials;
   return testimonials.filter(testimonial =>
     testimonial.course.toLowerCase().includes(category.toLowerCase())
@@ -1969,7 +2474,5 @@ export const fetchTestimonialsByCategory = async (category?: string): Promise<Te
 };
 
 export const fetchTestimonialsByCourse = async (courseId: string): Promise<Testimonial[]> => {
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 500));
   return testimonials.filter(testimonial => testimonial.courseId === courseId);
 };

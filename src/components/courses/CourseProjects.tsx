@@ -23,6 +23,8 @@ import Ar from "../../assests/Ar.webp";
 import Cb from "../../assests/Cb.webp";
 import sp from "../../assests/sp.webp";
 import me1 from "../../assests/me1.webp";
+import AIC1 from "../../assests/AIC1.webp";
+import AIC2 from "../../assests/AIC2.webp";
 import Image from 'next/image';
 interface CourseProjectsProps {
   course: Course;
@@ -32,7 +34,6 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
   if (!course.projects || course.projects.length === 0) {
     return null;
   }
-  
   // Filter projects for practice (hands-on experience) vs. regular projects
   const practiceProjects = course.projects.filter(project => project.isPractice);
   const regularProjects = course.projects.filter(project => !project.isPractice);
@@ -95,7 +96,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                   {regularProjects.map((project) => (
                     <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-all h-full flex flex-col">
                       <div className="h-48 overflow-hidden">
-                        <img
+                        <Image
+                          width={400}
+                          height={200}
                           src={project.image}
                           alt={project.title}
                           className="w-full h-full object-cover"
@@ -205,7 +208,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       {practiceProjects.map((project) => (
                         <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-all h-full flex flex-col">
                           <div className="h-48 overflow-hidden">
-                            <img
+                            <Image
+                              width={400}
+                              height={200}
                               src={project.image}
                               alt={project.title}
                               className="w-full h-full object-cover"
@@ -289,7 +294,9 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       {practiceProjects.map((project) => (
                         <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-all h-full flex flex-col">
                           <div className="h-48 overflow-hidden">
-                            <img
+                            <Image
+                              width={400}
+                              height={200}
                               src={project.image}
                               alt={project.title}
                               className="w-full h-full object-cover"
@@ -377,7 +384,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                   {practiceProjects.map((project) => (
                     <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-all h-full flex flex-col">
                       <div className="h-48 overflow-hidden">
-                        <img
+                        <Image
                           src={project.image}
                           alt={project.title}
                           className="w-full h-full object-cover"
@@ -463,8 +470,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       {/* Image Container - Responsive Solution */}
                       <div className="relative w-full aspect-video bg-gray-100 flex items-center justify-center p-4">
                         <Image
-                          width={500}
-                          height={300}
+                          width={400}
+                          height={200}
                           src={sp}
                           alt="Hate Speech Detection Using Machine Learning"
                           className="w-full h-full object-contain"
@@ -534,8 +541,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       {/* Image Container - Responsive Solution */}
                       <div className="relative w-full aspect-video bg-gray-100 flex items-center justify-center p-4">
                         <Image
-                          width={500}
-                          height={300}
+                          width={400}
+                          height={200}
                           src={me1}
                           alt="Hate Speech Detection Using Machine Learning"
                           className="w-full h-full object-contain"
@@ -561,7 +568,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         </div>
                       </CardContent>
 
-                     <CardFooter className="border-t pt-4">
+                      <CardFooter className="border-t pt-4">
                         <Dialog>
                           <DialogTrigger asChild>
                             <Button variant="outline" size="sm" className="w-full">
@@ -623,8 +630,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                         <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                           <Image
-                            width={500}
-                            height={300}
+                            width={400}
+                            height={200}
                             src={Hs}
                             alt="Healthcare ML Project"
                             className="w-full h-full object-cover"
@@ -692,8 +699,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                         <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                           <Image
-                            width={500}
-                            height={300}
+                            width={400}
+                            height={200}
                             src={Cpa}
                             alt="Financial ML Project"
                             className="w-full h-full object-cover"
@@ -830,8 +837,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                           <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                             <Image
-                              width={500}
-                              height={300}
+                              width={400}
+                              height={200}
                               src={Hs}
                               alt="Healthcare ML Project"
                               className="w-full h-full object-cover"
@@ -898,8 +905,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                           <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                             <Image
-                              width={500}
-                              height={300}
+                              width={400}
+                              height={200}
                               src={Cpa}
                               alt="Financial ML Project"
                               className="w-full h-full object-cover"
@@ -1034,8 +1041,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                           <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                             <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                               <Image
-                                width={500}
-                                height={300}
+                                width={400}
+                                height={200}
                                 src={Ts}
                                 alt="Healthcare ML Project"
                                 className="w-full h-full object-cover"
@@ -1102,8 +1109,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                           <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                             <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                               <Image
-                                width={500}
-                                height={300}
+                                width={400}
+                                height={200}
                                 src={oC}
                                 alt="Financial ML Project"
                                 className="w-full h-full object-cover"
@@ -1237,8 +1244,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                             <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                               <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                                 <Image
-                                  width={500}
-                                  height={300}
+                                  width={400}
+                                  height={200}
                                   src={Ecommerce}
                                   alt="Healthcare ML Project"
                                   className="w-full h-full object-cover"
@@ -1306,8 +1313,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                             <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                               <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                                 <Image
-                                  width={500}
-                                  height={300}
+                                  width={400}
+                                  height={200}
                                   src={Consumer}
                                   alt="Financial ML Project"
                                   className="w-full h-full object-cover"
@@ -1434,8 +1441,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                               <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                                 <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                                   <Image
-                                    width={500}
-                                    height={300}
+                                    width={400}
+                                    height={200}
                                     src={Msd}
                                     alt="Healthcare ML Project"
                                     className="w-full h-full object-cover"
@@ -1502,8 +1509,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                               <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                                 <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                                   <Image
-                                    width={500}
-                                    height={300}
+                                    width={400}
+                                    height={200}
                                     src={Ki}
                                     alt="Financial ML Project"
                                     className="w-full h-full object-cover"
@@ -1629,8 +1636,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                 <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                                   <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                                     <Image
-                                      width={500}
-                                      height={300}
+                                      width={400}
+                                      height={200}
                                       src={Ar}
                                       alt="Healthcare ML Project"
                                       className="w-full h-full object-cover"
@@ -1701,8 +1708,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                 <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                                   <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                                     <Image
-                                      width={500}
-                                      height={300}
+                                      width={400}
+                                      height={200}
                                       src={Cb}
                                       alt="Financial ML Project"
                                       className="w-full h-full object-cover"
@@ -1818,7 +1825,213 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                             </div>
                           </TabsContent>
                           :
-                          null
+                          course.title === "AI for Product Manager" ?
+
+
+                            <TabsContent value="capstone">
+                              <div className="mb-8">
+                                <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-2 sm:gap-0">
+                                  <h3 className="text-2xl font-bold">Industry Capstone Projects</h3>
+                                </div>
+                                <p className="text-gray-600 mb-6 sm:mb-8 px-2 sm:px-0">
+                                  Every student completes a comprehensive capstone project working with real data and business problems from our industry partners.
+                                  These projects are often featured on resumes and serve as excellent talking points during job interviews.
+                                </p>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                                  <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
+                                    <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                                      <Image
+                                        width={400}
+                                        height={200}
+                                        src={AIC1}
+                                        alt="Healthcare ML Project"
+                                        className="w-full h-full object-cover"
+                                      />
+                                    </div>
+                                    <CardContent className="pt-6">
+                                      <div className="flex justify-between items-start mb-3 gap-2">
+                                        <h4 className="font-bold text-lg leading-snug max-w-[calc(100%-120px)]">
+                                          AI-Powered Knowledge Assistant                               </h4>
+                                        <Badge className="shrink-0">Intermediate</Badge>
+                                      </div>
+
+
+                                      <p className="text-gray-600 text-sm mb-4">
+                                        In this project, you will act as a Product Manager working with AI Engineers to design and prototype an AI
+                                        assistant that answers employee questions using internal company documents (policies, HR guidelines,
+                                        compliance manuals). You will apply the Retrieval-Augmented Generation (RAG) framework to reduce
+                                        hallucinations and ensure trusted responses.
+                                      </p>
+                                      <div className="flex flex-wrap gap-2 mb-4">
+                                        {['Rag Pipeline', 'LangChain', 'Flowise', 'Prompt'].map((skill, index) => (
+                                          <Badge variant="outline" key={index}>{skill}</Badge>
+                                        ))}
+                                      </div>
+
+
+                                      <CardFooter className="border-t pt-4">
+                                        <Dialog>
+                                          <DialogTrigger asChild>
+                                            <Button variant="outline" size="sm" className="w-full">
+                                              View Project Details
+                                            </Button>
+                                          </DialogTrigger>
+                                          <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                                            <div className="h-[80vh] w-full px-10 py-2 bg-white">
+                                              <iframe
+                                                src="https://drive.google.com/file/d/1oLcxVDOS9TcAnckcj53G0ETZlbGdZZaN/preview"
+                                                width="100%"
+                                                height="100%"
+                                                title="Project Details PDF"
+                                                className="border-0"
+                                                allow="autoplay"
+                                              />
+                                            </div>
+                                            <div className="p-4 border-t flex justify-end">
+                                              <Button
+                                                asChild
+                                                variant="outline"
+                                                size="sm"
+                                              >
+                                                <a
+                                                  href="https://drive.google.com/file/d/1oLcxVDOS9TcAnckcj53G0ETZlbGdZZaN/view"
+                                                  target="_blank"
+                                                  rel="noopener noreferrer"
+                                                  className="flex items-center"
+                                                >
+                                                  Open in New Tab <ExternalLink className="ml-2 h-4 w-4" />
+                                                </a>
+                                              </Button>
+                                            </div>
+                                          </DialogContent>
+                                        </Dialog>
+                                      </CardFooter>
+
+                                    </CardContent>
+                                  </Card>
+
+                                  <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
+                                    <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                                      <Image
+                                        width={400}
+                                        height={200}
+                                        src={AIC2}
+                                        alt="Financial ML Project"
+                                        className="w-full h-full object-cover"
+                                      />
+                                    </div>
+                                    <CardContent className="pt-6">
+
+                                      <div className="flex justify-between items-start mb-3 gap-2">
+                                        <h4 className="font-bold text-lg leading-snug max-w-[calc(100%-120px)]">
+                                          AI-Powered Product Feedback Synthesizer
+                                        </h4>
+                                        <Badge className="shrink-0">Intermediate to Advanced</Badge>
+                                      </div>
+                                      <p className="text-gray-600 text-sm mb-4">
+                                        In this project, you will act as a Product Manager leveraging AI to analyze large volumes of customer
+                                        reviews and survey responses. You will use prompt workflows and no-code prototyping tools to
+                                        automatically cluster feedback, summarize insights, and generate prioritized feature requests for the
+                                        roadmap.                                                </p>
+                                      <div className="flex flex-wrap gap-2 mb-4">
+                                        {['Prompt Layers', 'Streamlit', 'Prompt Engineering', ' AI Agents'].map((skill, index) => (
+                                          <Badge variant="outline" key={index}>{skill}</Badge>
+                                        ))}
+                                      </div>
+                                      <CardFooter className="border-t pt-4">
+                                        <Dialog>
+                                          <DialogTrigger asChild>
+                                            <Button variant="outline" size="sm" className="w-full">
+                                              View Project Details
+                                            </Button>
+                                          </DialogTrigger>
+                                          <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                                            <div className="h-[80vh] w-full px-10 py-2 bg-white">
+                                              <iframe
+                                                src="https://drive.google.com/file/d/1oVlMdxMgHEZ2iHmQHkmKAxribSxe5Klb/preview"
+                                                width="100%"
+                                                height="100%"
+                                                title="Project Details PDF"
+                                                className="border-0"
+                                                allow="autoplay"
+                                              />
+                                            </div>
+                                            <div className="p-4 border-t flex justify-end">
+                                              <Button
+                                                asChild
+                                                variant="outline"
+                                                size="sm"
+                                              >
+                                                <a
+                                                  href="https://drive.google.com/file/d/1oVlMdxMgHEZ2iHmQHkmKAxribSxe5Klb/view"
+                                                  target="_blank"
+                                                  rel="noopener noreferrer"
+                                                  className="flex items-center"
+                                                >
+                                                  Open in New Tab <ExternalLink className="ml-2 h-4 w-4" />
+                                                </a>
+                                              </Button>
+                                            </div>
+                                          </DialogContent>
+                                        </Dialog>
+                                      </CardFooter>
+                                    </CardContent>
+                                  </Card>
+                                </div>
+                              </div>
+
+                              <div className="mt-12 sm:mt-16">
+                                <div className="mb-6">
+                                  <h3 className="text-2xl font-bold mb-2">Startup Projects</h3>
+                                  <p className="text-gray-600 max-w-3xl px-2 sm:px-0">
+                                    Ivy Professional School has incubated and supported several successful AI startups.
+                                    Our students get exposure to cutting-edge projects similar to these.
+                                  </p>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
+                                  <Card>
+                                    <CardContent className="pt-6">
+                                      <h4 className="font-bold text-lg mb-2">time2justice.ai</h4>
+                                      <p className="text-gray-600 text-sm mb-4">Legal AI technology that automates legal document analysis and processing</p>
+                                      <Button variant="outline" size="sm" className="w-full" asChild>
+                                        <a href="https://time2justice.ai" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                                          Visit <ExternalLink size={14} className="ml-2" />
+                                        </a>
+                                      </Button>
+                                    </CardContent>
+                                  </Card>
+
+                                  <Card>
+                                    <CardContent className="pt-6">
+                                      <h4 className="font-bold text-lg mb-2">BiGo.bike</h4>
+                                      <p className="text-gray-600 text-sm mb-4">AI-powered electric vehicle platform for sustainable urban transportation</p>
+                                      <Button variant="outline" size="sm" className="w-full" asChild>
+                                        <a href="https://bigo.bike" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                                          Visit <ExternalLink size={14} className="ml-2" />
+                                        </a>
+                                      </Button>
+                                    </CardContent>
+                                  </Card>
+
+                                  <Card>
+                                    <CardContent className="pt-6">
+                                      <h4 className="font-bold text-lg mb-2">prepAI.com</h4>
+                                      <p className="text-gray-600 text-sm mb-4">AI-driven education platform for personalized learning and test preparation</p>
+                                      <Button variant="outline" size="sm" className="w-full" asChild>
+                                        <a href="https://prepai.ivyproschool.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                                          Visit <ExternalLink size={14} className="ml-2" />
+                                        </a>
+                                      </Button>
+                                    </CardContent>
+                                  </Card>
+                                </div>
+                              </div>
+                            </TabsContent>
+                            :
+                            null
+
           }
 
         </Tabs>

@@ -1,10 +1,17 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Award, Users } from 'lucide-react';
+
+
 import ratingIcon from '@/assests/rating.png';
+import { useRouter } from 'next/navigation';
+import AutpPlayYoutube from '../AutoPlayYoutube';
 
 const Hero = () => {
+
+    const router = useRouter(); // ⬅️ add this inside component
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -24,7 +31,7 @@ const Hero = () => {
 
   // State for form submission status and message
   const [submitStatus, setSubmitStatus] = useState<any>(null);
-  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitMessage, setSubmitMessage] = useState<any>('');
 
   // LeadSquared API Details
   const LEAD_SQUARED_API_HOST = 'https://api.leadsquared.com/v2/';
@@ -33,7 +40,7 @@ const Hero = () => {
 
   const API_URL = `${LEAD_SQUARED_API_HOST}LeadManagement.svc/Lead.Create?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
 
-  const handleChange = (e: any) => {
+  const handleChange = (e:any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -41,85 +48,77 @@ const Hero = () => {
     }));
   };
 
-  const handleSubmit = async (e:any) => {
-  e.preventDefault();
+ const handleSubmit = async (e:any) => {
+    e.preventDefault();
 
-  setSubmitStatus('submitting');
-  setSubmitMessage('Submitting your details...');
+    setSubmitStatus('submitting');
+    setSubmitMessage('Submitting your details...');
 
-  // Create the payload in the required LeadSquared format
-  const payload = [
-    {
-      "Attribute": "EmailAddress",
-      "Value": formData.email,
-    },
-    {
-      "Attribute": "FirstName",
-      "Value": formData.name,
-    },
-    {
-      "Attribute": "Phone",
-      "Value": formData.phone,
-    },
-    {
-      "Attribute": "mx_Citywise",
-      "Value": formData.city,
-    },
-    {
-      "Attribute": "mx_Program",
-      "Value": formData.program,
-    },
-    {
-      "Attribute": "mx_What_is_Your_Nearest_Branch",
-      "Value": formData.branch,
-    },
-  ];
-  
-  // Construct the API URL with the accessKey and secretKey as query parameters
-  const API_URL = `https://api.leadsquared.com/v2/LeadManagement.svc/Lead.Create?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
-
-  try {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    // ✅ keep your full payload
+    const payload = [
+      {
+        "Attribute": "EmailAddress",
+        "Value": formData.email,
       },
-      body: JSON.stringify(payload),
-    });
+      {
+        "Attribute": "FirstName",
+        "Value": formData.name,
+      },
+      {
+        "Attribute": "Phone",
+        "Value": formData.phone,
+      },
+      {
+        "Attribute": "mx_Citywise",
+        "Value": formData.city,
+      },
+      {
+        "Attribute": "mx_Program",
+        "Value": formData.program,
+      },
+      {
+        "Attribute": "mx_What_is_Your_Nearest_Branch",
+        "Value": formData.branch,
+      },
+      {
+        "Attribute": "Source",
+        "Value": "Organic Search",
+      }
+    ];
 
-    if (response.ok) {
-      const result = await response.json();
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
 
-      if (result && result.Status === "Success") {
-        setSubmitStatus('success');
-        setSubmitMessage('Form submitted successfully!');
+      if (response.ok) {
+        const result = await response.json();
+        console.log("LeadSquared API Response:", result);
 
-        setTimeout(() => {
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            city: '',
-            program: '',
-            branch: '',
-          });
-          setSubmitStatus(null);
-          setSubmitMessage('');
-        }, 3000);
+        if (result && result.Status === "Success") {
+          setSubmitStatus('success');
+          setSubmitMessage('Form submitted successfully!');
+
+          // ✅ Redirect to Thank You page after submission
+          setTimeout(() => {
+            router.push('/thank-you'); // unique URL for GTM conversion tracking
+          }, 1500);
+        } else {
+          setSubmitStatus('error');
+          setSubmitMessage(result.Message || 'An error occurred during submission. Please try again.');
+        }
       } else {
         setSubmitStatus('error');
-        setSubmitMessage(result.Message || 'An error occurred during submission. Please try again.');
+        setSubmitMessage(`Failed to submit form. Server responded with status: ${response.status}`);
       }
-    } else {
+    } catch (error) {
+      console.error("Network or JavaScript error during form submission:", error);
       setSubmitStatus('error');
-      setSubmitMessage(`Failed to submit form. Server responded with status: ${response.status}`);
+      setSubmitMessage('An error occurred. Please check your internet connection and try again.');
     }
-  } catch (error) {
-    console.error("Network or JavaScript error during form submission:", error);
-    setSubmitStatus('error');
-    setSubmitMessage('An error occurred. Please check your internet connection and try again.');
-  }
-};
+  };
   return (
     <div className="relative bg-white py-8 md:py-12">
       <div className="container mx-auto px-4">
@@ -134,15 +133,9 @@ const Hero = () => {
           {/* Left Column - Video and Content */}
           <div className="w-full lg:w-1/2 flex flex-col">
             {/* YouTube Video */}
-            <div className="relative rounded-xl overflow-hidden shadow-lg w-full h-0 pb-[56.25%] lg:pb-[65%]">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/3uHQEQ65yJM?autoplay=1&mute=1&loop=1&playlist=3uHQEQ65yJM"
-                title="Ivy Professional School Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+            <div className="relative rounded-xl overflow-hidden shadow-lg w-full">
+  <AutpPlayYoutube id="3uHQEQ65yJM" title="Ivy Professional School Video" className="rounded-xl" />
+</div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 mt-6">
@@ -156,7 +149,7 @@ const Hero = () => {
               <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-sm">
                 <Users className="text-primary" size={18} />
                 <div>
-                  <div className="font-bold text-md">33.5K+</div>
+                  <div className="font-bold text-md">32.5K+</div>
                   <div className="text-xs text-gray-500">Students Trained</div>
                 </div>
               </div>
@@ -241,7 +234,7 @@ const Hero = () => {
                     <option value="Chennai">Chennai</option>
                   </select>
                 </div>
-                <div>
+                {/* <div>
                   <select
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm md:text-base text-gray-700"
                     required
@@ -255,8 +248,8 @@ const Hero = () => {
                     <option value="Bangalore">Bangalore</option>
                     <option value="Pune">Pune</option>
                   </select>
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <select
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm md:text-base text-gray-700"
                     required
@@ -274,7 +267,7 @@ const Hero = () => {
                     <option value="Cloud Data Engineering Program">Cloud Data Engineering Program </option>
                     <option value="Executive Gen AI Course with IIT Guwahati">Executive Gen AI Course with IIT Guwahati</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div style={{ marginTop: 30 }} className="mt-auto pt-4">
                   <Button

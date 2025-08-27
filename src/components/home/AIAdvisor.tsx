@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Bot, Send, MessageSquare } from "lucide-react"
+import { Bot, Send, MessageSquare, Phone } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 
 interface ChatMessage {
@@ -28,6 +28,27 @@ const AIAdvisor = () => {
   const controllerRef = useRef<AbortController | null>(null)
   const [isMobile, setIsMobile] = useState(false)
   const [showNumber, setShowNumber] = useState(false)
+  const [showContactOptions, setShowContactOptions] = useState(false);
+
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '919748441111';
+    const defaultMessage = "Hello! I would like to schedule a phone call with a human career advisor from Ivy Professional School. Please provide available time slots.";
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const encodedMessage = encodeURIComponent(defaultMessage);
+
+    const whatsappUrl = isMobile
+      ? `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`
+      : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleCallClick = () => {
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      window.location.href = `tel:7676882222`;
+    }
+  };
+
 
   const scrollToBottom = () => {
     if (chatContainerRef.current) {
@@ -258,12 +279,45 @@ const AIAdvisor = () => {
             </CardContent>
           </Card>
 
-          <div className="mt-6 flex justify-center">
-            <Button variant="outline" className="flex items-center bg-transparent" onClick={handleClick}>
-              <MessageSquare className="mr-2 h-4 w-4" />
-              Schedule a Call with Human Advisor
-            </Button>
-          </div>
+          <div className="mt-6 flex justify-center relative">
+            <Button
+    variant="outline"
+    className="flex items-center"
+    onClick={() => setShowContactOptions(!showContactOptions)}
+  >
+    <MessageSquare className="mr-2 h-4 w-4" />
+    Schedule a Call with Human Advisor
+  </Button>
+
+  {showContactOptions && (
+    <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 animate-fade-in sm:left-auto sm:right-auto sm:w-auto">
+      <div className="flex flex-col sm:flex-row gap-3">
+        <Button
+          className="bg-green-600 hover:bg-green-700 text-white"
+          onClick={handleWhatsAppClick}
+        >
+          <MessageSquare className="mr-2 h-4 w-4" />
+          Enquire on WhatsApp
+        </Button>
+
+        <Button
+          variant="outline"
+          onClick={handleCallClick}
+          className="flex items-center justify-center"
+        >
+          <Phone className="mr-2 h-4 w-4" />
+          {/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? (
+            "Call Now"
+          ) : (
+            <>
+              Call: <span className="ml-1 font-mono">7676882222</span>
+            </>
+          )}
+        </Button>
+      </div>
+    </div>
+  )}
+</div>
           {showNumber && !isMobile && (
             <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-50 animate-fade-in">
               <div className="text-center">

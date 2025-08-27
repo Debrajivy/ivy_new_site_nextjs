@@ -4,7 +4,6 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Clock, Star, ChevronUp, ChevronDown, ChevronRight, CheckCircle } from 'lucide-react'; // Added CheckCircle for bullet points
-import Link from 'next/link';
 import webp1 from "@/assests/webp1.webp";
 import webp2 from "@/assests/webp2.webp";
 import webp3 from "@/assests/datascience.jpeg";
@@ -13,13 +12,16 @@ import DS from "@/assests/DSI.webp";
 import CDE from "@/assests/CDE.webp";
 import ML from "@/assests/ML.webp";
 import GA from "@/assests/GAI.webp";
+import AIPM from "@/assests/AIPM.webp";
 
 import DA from "@/assests/DA.webp";
 import BA from "@/assests/BA.webp";
 import DV from "@/assests/DV.webp";
 import CDI from "@/assests/CDI.webp";
 import CDEI from "@/assests/CDEI.webp";
+import DSPAP from "@/assests/DSPAP.webp";
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 interface Course {
   id: string;
@@ -37,6 +39,23 @@ interface Course {
 }
 
 const featuredCourses: Course[] = [
+  {
+    id: '9',
+    title: "AI for Product Manager",
+    description: "Learn to leverage AI tools and techniques to enhance project management efficiency.",
+    image: AIPM,
+    category: "Project Manager",
+    students: 440,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 122,
+    isFeatured: true,
+    slug: "ai-product-manager-course",
+    keyFeatures: [
+      "20+ real-life products scenarios",
+      "Industry-Focused Tools: Learn tools like PromptLayer, AI Agents, LangChain, Firebase Studio.",
+    ]
+  },
   {
     id: '1',
     title: "Executive Generative AI Course with IIT Guwahati",
@@ -179,6 +198,25 @@ const featuredCourses: Course[] = [
       "Learn industry focused tools i.e. Azure, Hive, MongoDB, Spark, Kafka & Hadoop"
     ]
   },
+  {
+    id: '10',
+    title: "Data science course (Pay after Placement)",
+     description: "Become job-ready with ML, DL, Python, and visualization tools",
+    image: DSPAP,
+    category: "Data Science",
+    students: 1243,
+    duration: "12 months",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "no-upfront-fees-data-science-and-ml-course",
+    keyFeatures: [
+      "In-depth ML algorithms",
+      "Deep learning with TensorFlow/PyTorch",
+      "Data visualization with Power BI"
+    ]
+  }
+
 ];
 
 const CourseCard = ({ course }: { course: Course }) => {
@@ -186,8 +224,6 @@ const CourseCard = ({ course }: { course: Course }) => {
     <Card className="card-hover h-full flex flex-col">
       <div className="relative">
         <Image
-          width={400}
-          height={300}
           src={course.image}
           alt={course.title}
           className="w-full h-auto max-h-60 object-cover rounded-t-lg"
@@ -196,8 +232,10 @@ const CourseCard = ({ course }: { course: Course }) => {
         <Badge className="absolute top-3 left-3 bg-primary">{course.category}</Badge>
         {course.isFeatured && (() => {
           switch (course.title) {
+             case "AI for Product Manager":
+              return <Badge className="absolute top-3 right-3 badge-featured">New</Badge>;
             case "Executive Generative AI Course with IIT Guwahati":
-              return <Badge className="absolute top-3 right-3 badge-featured">Trending</Badge>;
+              return <Badge className="absolute top-3 right-3 badge">Trending</Badge>;
             case "Data Science & AI with IIT Guwahati":
               return <Badge className="absolute top-3 right-3 badge-genai">Featured</Badge>;
             case "Cloud Data Engineering Certification":

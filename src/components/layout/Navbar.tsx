@@ -24,8 +24,18 @@ import DA from "@/assests/DA.webp"
 import BA from "@/assests/BA.webp"
 import DV from "@/assests/DV.webp"
 import CDI from "@/assests/CDI.webp"
+import AIPM from "@/assests/AIPM.webp"
+
 
 const courseCategories = {
+  "AI for Product Manager":[
+    {
+      title: "AI for Product Managers",
+      link: "/courses/ai-product-manager-course",
+      description: "Leverage AI tools and techniques to enhance project management",
+      image: AIPM,
+    }
+  ],
   "Data Science": [
     {
       title: "Data Science & AI with IIT Guwahati",
@@ -82,6 +92,14 @@ const courseCategories = {
       link: "/courses/iit-generative-ai-course",
       description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
       image: GA,
+    },
+  ],
+  "Data Science (Pay after Placement": [
+    {
+      title: "Data Science with Machine Learning & AI",
+      link: "/courses/no-upfront-fees-data-science-and-ml-course",
+      description: "Become job-ready with ML, DL, Python, and visualization tools",
+      image: ML,
     },
   ],
 }
@@ -241,64 +259,46 @@ const AnimatedPhoneButton = () => {
 
   const handleClick = () => {
     if (isMobile) {
-      window.location.href = "tel:7676882222"
+      window.location.href = "tel:7676882222";
     } else {
-      setShowNumber(true)
-      const timer = setTimeout(() => {
-        setShowNumber(false)
-      }, 5000)
-      return () => clearTimeout(timer)
+      setShowNumber(!showNumber); // Toggle instead of timeout for better UX
     }
-  }
+  };
 
-  return (
-    <div className="relative">
+return (
+    <div className="relative inline-block">
       <Button
         variant="ghost"
         size="icon"
-        className="relative overflow-hidden group rounded-full p-2"
+        className="relative h-10 w-10 rounded-full p-0 group"
         onClick={handleClick}
       >
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{
-            backgroundColor: "#f7af34",
-            opacity: 0.3,
-            animation: "ring-pulse 2s infinite ease-in-out",
-            zIndex: 0,
-          }}
-        />
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{
-            backgroundColor: "#f7af34",
-            zIndex: 1,
-          }}
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          className="h-16 w-16 text-white z-10"
-        >
-          <path d="M21 16.5v3a2.5 2.5 0 01-2.7 2.5 19.85 19.85 0 01-8.6-3.4A19.27 19.27 0 013.4 8.3 2.5 2.5 0 016 5.7h3a1 1 0 011 .8l.7 3a1 1 0 01-.3 1l-1.4 1.4a16.1 16.1 0 006.3 6.3l1.4-1.4a1 1 0 011-.3l3 .7a1 1 0 01.8 1z" />
-        </svg>
+        {/* Pulsing ring animation */}
+        <span className="absolute inset-0 rounded-full bg-[#f7af34] opacity-30 animate-ping" />
+
+        {/* Solid background */}
+        <span className="absolute inset-0 rounded-full bg-[#f7af34]" />
+
+        {/* Phone icon */}
+        <Phone className="h-5 w-5 text-white relative z-10" />
       </Button>
 
+      {/* Desktop number display - now positioned below */}
       {showNumber && !isMobile && (
-        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-50 animate-fade-in">
-          <div className="text-center">
-            <p className="text-gray-700 font-medium">Call us at:</p>
-            <a href="tel:7676882222" className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors">
+        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-2 z-50 animate-fade-in">
+          <div className="text-center whitespace-nowrap">
+            <span className="text-sm font-medium text-gray-700">Call us at</span>
+            <div className="text font-bold text-[#009fda]">
               7676882222
-            </a>
+            </div>
           </div>
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
+          {/* Tooltip arrow pointing up */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-white"></div>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 const ApplyNowModal = ({ onClose }: { onClose: () => void }) => {
   useEffect(() => {

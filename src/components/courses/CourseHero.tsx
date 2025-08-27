@@ -1,9 +1,9 @@
 "use client";
-import React, {useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Clock, Users, Star, Award } from 'lucide-react';
-import { Course } from '@/lib/api';
+import React, { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Clock, Users, Star, Award } from "lucide-react";
+import { Course } from "@/lib/api";
 import E from "@/assests/E&ICT.webp";
 import ibm from "@/assests/IBM2.webp";
 import deloitte from "@/assests/deloitte.webp";
@@ -12,136 +12,144 @@ import amazon from "@/assests/amazon.webp";
 import NASSCOM from "@/assests/NASSCOM.png";
 import ivy from "@/assests/ivy.png";
 import IIT_logo from "@/assests/IIT_logo.jpg"; // Import the IIT_logo
-import IIT_BACKGROUND from "@/assests/IIT_BACKGROUND.webp"
-import Link from 'next/link';
-import Image from 'next/image';
+import IIT_BACKGROUND from "@/assests/IIT_BACKGROUND.webp";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+
 interface CourseHeroProps {
   course: Course;
 }
 
 const CourseHero = ({ course }: CourseHeroProps) => {
+  const router = useRouter(); // ⬅️ add this inside component
 
   const [formData, setFormData] = useState({
-  name: '',
-  email: '',
-  phone: '',
-  city: '',
-  program: '',
-  branch: '',
-});
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    program: "",
+    branch: "",
+  });
 
-// State for form submission status and message
-const [submitStatus, setSubmitStatus] = useState<any>(null);
-const [submitMessage, setSubmitMessage] = useState('');
+  // State for form submission status and message
+  const [submitStatus, setSubmitStatus] = useState<any>(null);
+  const [submitMessage, setSubmitMessage] = useState<any>("");
 
-// LeadSquared API Details
-const LEAD_SQUARED_API_HOST = 'https://api.leadsquared.com/v2/';
-const ACCESS_KEY = 'u$rce467998c43a742e21a2b2747962236d';
-const SECRET_KEY = '4f6bdb2f5df64d29fcdce73901dadb80fbcf0406';
+  // LeadSquared API Details
+  const LEAD_SQUARED_API_HOST = "https://api.leadsquared.com/v2/";
+  const ACCESS_KEY = "u$rce467998c43a742e21a2b2747962236d";
+  const SECRET_KEY = "4f6bdb2f5df64d29fcdce73901dadb80fbcf0406";
 
-const API_URL = `${LEAD_SQUARED_API_HOST}LeadManagement.svc/Lead.Create?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
+  const API_URL = `${LEAD_SQUARED_API_HOST}LeadManagement.svc/Lead.Create?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
 
-const handleChange = (e: any) => {
-  const { name, value } = e.target;
-  setFormData((prevData) => ({
-    ...prevData,
-    [name]: value,
-  }));
-};
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-const handleSubmit = async (e: any) => {
-  e.preventDefault();
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
 
-  setSubmitStatus('submitting');
-  setSubmitMessage('Submitting your details...');
+    setSubmitStatus("submitting");
+    setSubmitMessage("Submitting your details...");
 
-  // Create the payload in the required LeadSquared format
-  const payload = [
-    {
-      "Attribute": "EmailAddress",
-      "Value": formData.email,
-    },
-    {
-      "Attribute": "FirstName",
-      "Value": formData.name,
-    },
-    {
-      "Attribute": "Phone",
-      "Value": formData.phone,
-    },
-    {
-      "Attribute": "mx_Citywise",
-      "Value": formData.city,
-    },
-    {
-      "Attribute": "mx_Program",
-      "Value": formData.program,
-    },
-    {
-      "Attribute": "mx_What_is_Your_Nearest_Branch",
-      "Value": formData.branch,
-    },
-  ];
-
-  // Construct the API URL with the accessKey and secretKey as query parameters
-  const API_URL = `https://api.leadsquared.com/v2/LeadManagement.svc/Lead.Create?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
-
-  try {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    // ✅ keep your full payload
+    const payload = [
+      {
+        Attribute: "EmailAddress",
+        Value: formData.email,
       },
-      body: JSON.stringify(payload),
-    });
+      {
+        Attribute: "FirstName",
+        Value: formData.name,
+      },
+      {
+        Attribute: "Phone",
+        Value: formData.phone,
+      },
+      {
+        Attribute: "mx_Citywise",
+        Value: formData.city,
+      },
+      {
+        Attribute: "mx_Program",
+        Value: formData.program,
+      },
+      {
+        Attribute: "mx_What_is_Your_Nearest_Branch",
+        Value: formData.branch,
+      },
+      {
+        Attribute: "Source",
+        Value: "Organic Search",
+      },
+    ];
 
-    if (response.ok) {
-      const result = await response.json();
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-      if (result && result.Status === "Success") {
-        setSubmitStatus('success');
-        setSubmitMessage('Form submitted successfully!');
+      if (response.ok) {
+        const result = await response.json();
+        console.log("LeadSquared API Response:", result);
 
-        setTimeout(() => {
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            city: '',
-            program: '',
-            branch: '',
-          });
-          setSubmitStatus(null);
-          setSubmitMessage('');
-        }, 3000);
+        if (result && result.Status === "Success") {
+          setSubmitStatus("success");
+          setSubmitMessage("Form submitted successfully!");
+
+          // ✅ Redirect to Thank You page after submission
+          setTimeout(() => {
+            router.push("/thank-you"); // unique URL for GTM conversion tracking
+          }, 1500);
+        } else {
+          setSubmitStatus("error");
+          setSubmitMessage(
+            result.Message ||
+              "An error occurred during submission. Please try again."
+          );
+        }
       } else {
-        setSubmitStatus('error');
-        setSubmitMessage(result.Message || 'An error occurred during submission. Please try again.');
+        setSubmitStatus("error");
+        setSubmitMessage(
+          `Failed to submit form. Server responded with status: ${response.status}`
+        );
       }
-    } else {
-      setSubmitStatus('error');
-      setSubmitMessage(`Failed to submit form. Server responded with status: ${response.status}`);
+    } catch (error) {
+      console.error(
+        "Network or JavaScript error during form submission:",
+        error
+      );
+      setSubmitStatus("error");
+      setSubmitMessage(
+        "An error occurred. Please check your internet connection and try again."
+      );
     }
-  } catch (error) {
-    console.error("Network or JavaScript error during form submission:", error);
-    setSubmitStatus('error');
-    setSubmitMessage('An error occurred. Please check your internet connection and try again.');
-  }
-};
+  };
   const partners = [
-    { name: 'Amazon', logo: amazon },
-    { name: 'IBM', logo: ibm },
-    { name: 'Deloitte', logo: deloitte },
-    { name: 'PwC', logo: pwc }
+    { name: "Amazon", logo: amazon },
+    { name: "IBM", logo: ibm },
+    { name: "Deloitte", logo: deloitte },
+    { name: "PwC", logo: pwc },
   ];
-  
+
 
   // Determine if it's the specific IIT Guwahati course
-  const isIITGuwahatiCourse = course.title === "Data Science & AI with IIT Guwahati" || course.title === "Executive Generative AI Course with IIT Guwahati" || course.title === "Cloud Data Engineering Course with IIT Guwahati";
+  const isIITGuwahatiCourse =
+    course.title === "Data Science & AI with IIT Guwahati" ||
+    course.title === "Executive Generative AI Course with IIT Guwahati" ||
+    course.title === "Cloud Data Engineering Course with IIT Guwahati";
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   }, []);
   return (
@@ -158,60 +166,81 @@ const handleSubmit = async (e: any) => {
         // If it's the IIT Guwahati course, remove the explicit background color to avoid clash
         backgroundColor: isIITGuwahatiCourse ? 'transparent' : '#179fc8',
       }}
-      className={`py-10 text-white ${!isIITGuwahatiCourse ? 'bg-gradient-to-r from-ivy-blue to-ivy-orange' : ''}`}
+      className={`py-10 text-white ${
+        !isIITGuwahatiCourse
+          ? "bg-gradient-to-r from-ivy-blue to-ivy-orange"
+          : ""
+      }`}
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div style={{ marginTop: 10 }} className="flex flex-col">
-              <Badge style={{ backgroundColor: '#4eaec3', color: 'white', fontWeight: 'normal' }} className="text-white hover:bg-white/20 w-fit mb-4">
+              <Badge
+                style={{
+                  backgroundColor: "#4eaec3",
+                  color: "white",
+                  fontWeight: "normal",
+                }}
+                className="text-white hover:bg-white/20 w-fit mb-4"
+              >
                 <nav className="breadcrumbs">
-  <Link href="/">Home</Link>
-  <span>/</span>
-  <Link href="/categories">Courses</Link>
-  <span>/</span>
-  <Link href={`/courses/${course.slug}`}>{course.slug}</Link>
-</nav>
+                  <Link href="/">Home</Link>
+                  <span>/</span>
+                  <Link href="/categories">Courses</Link>
+                  <span>/</span>
+                  <Link href={`/courses/${course.slug}`}>{course.slug}</Link>
+                </nav>
               </Badge>
 
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                 {course.title}
               </h1>
 
-              <div style={{ marginTop: 10 }} className="flex items-center gap-4 w-full"> {/* Added w-full to make it full screen width */}
+              <div
+                style={{ marginTop: 10 }}
+                className="flex items-center gap-4 w-full"
+              >
+                {" "}
+                {/* Added w-full to make it full screen width */}
                 <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit">
                   <p className="text-[#221e1f] font-bold">Powered by</p>
                 </div>
+                {course.title === "Data Science with Machine Learning & AI" ||
+                course.title === "Data science course (Pay after Placement)" ? (
+                  <Image
+                  
+                     width={150}
+                     height={50}
+                    className="h-20 w-auto object-contain"
+                    src={NASSCOM}
+                    alt="NASSCOM Certification"
+                  />
+                ) : course.title === "Cloud Data Engineering Certification" ||
+                  course.title === "Data Visualization Course" ||
+                  course.title ===
+                    "Data Analytics with Visualization Certification Course" ||
+                  course.title === "Business Analytics Certification Course" ||
+                  course.title === "AI for Product Manager" ? (
+                  <Image
 
-                {
-                  course.title === "Data Science with Machine Learning & AI" ? (
-                    <Image
-                      width={100}
-                      height={50}
-                      className="h-20 w-auto object-contain"
-                      src={NASSCOM}
-                      alt="NASSCOM Certification"
-                    />
-                  ) : course.title === "Cloud Data Engineering Certification" || course.title === "Data Visualization Course" || course.title === "Data Analytics with Visualization Certification Course" || course.title === "Business Analytics Certification Course" ? (
-                    <Image
-                      width={100}
-                      height={50}
-                      className="h-20 w-auto object-contain"
-                      src={ivy}
-                      alt="ivy"
-                    />
-                  ) : (
-                    <Image
-                      width={100}
-                      height={50}
-                      className="h-10 w-auto object-contain"
-                      src={E}
-                      alt="E & ICT"
-                    />
-                  )
-                }
+                     width={150}
+                     height={50}
+                    className="h-20 w-auto object-contain"
+                    src={ivy}
+                    alt="ivy"
+                  />
+                ) : (
+                  <Image
+
+                     width={150}
+                     height={50}
+                    className="h-10 w-auto object-contain"
+                    src={E}
+                    alt="E & ICT"
+                  />
+                )}
               </div>
-
             </div>
 
             <p style={{ marginTop: 10 }} className="text-lg opacity-90">
@@ -237,11 +266,15 @@ const handleSubmit = async (e: any) => {
                 <span>
                   {course.title === "Data Science with Machine Learning & AI"
                     ? "NASSCOM Certification"
-                    : (course.title === "Cloud Data Engineering Certification" ||
+                    : course.title === "Cloud Data Engineering Certification" ||
                       course.title === "Data Visualization Course" ||
-                      course.title === "Data Analytics with Visualization Certification Course" || course.title === "Business Analytics Certification Course")
-                      ? "Ivy Professional School Certification"
-                      : "E & ICT Academy, IIT Guwahati Certification"}
+                      course.title ===
+                        "Data Analytics with Visualization Certification Course" ||
+                      course.title ===
+                        "Business Analytics Certification Course" ||
+                      course.title === "AI for Product Manager"
+                    ? "Ivy Professional School Certification"
+                    : "E & ICT Academy, IIT Guwahati Certification"}
                 </span>
               </div>
             </div>
@@ -251,48 +284,45 @@ const handleSubmit = async (e: any) => {
                 Find our Alumni at
               </div>
 
-              {
-                course.title === "Executive Generative AI Course with IIT Guwahati" || course.title === "Data Science & AI with IIT Guwahati" || course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
-                  <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
+              {course.title ===
+                "Executive Generative AI Course with IIT Guwahati" ||
+              course.title === "Data Science & AI with IIT Guwahati" ||
+              course.title ===
+                "Cloud Data Engineering Course with IIT Guwahati" ? (
+                <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
+                  <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
+                    {partners.map((partner) => (
+                      <div key={partner.name} className="flex items-center">
+                        <Image
 
-                    <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
-                      {partners.map((partner) => (
-                        <div key={partner.name} className="flex items-center">
-                          <Image
-                            width={100}
-                            height={50}
-                            src={partner.logo}
-                            alt={`${partner.name} logo`}
-
-                            className="object-contain opacity-100 transition-all h-10 sm:h-12 lg:h-14 w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px]"
-                          />
-                        </div>
-                      ))}
-                    </div>
+                     width={150}
+                     height={50}
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="object-contain opacity-100 transition-all h-10 sm:h-12 lg:h-14 w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px]"
+                        />
+                      </div>
+                    ))}
                   </div>
-                  :
+                </div>
+              ) : (
+                <div className="flex items-center bg-[#75a082]/40 rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
+                  <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
+                    {partners.map((partner) => (
+                      <div key={partner.name} className="flex items-center">
+                        <Image
 
-                  <div className="flex items-center bg-[#75a082]/40 rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
-
-                    <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
-                      {partners.map((partner) => (
-                        <div key={partner.name} className="flex items-center">
-                          <Image
-                            width={100}
-                            height={50}
-                            src={partner.logo}
-                            alt={`${partner.name} logo`}
-
-                            className="object-contain opacity-100 transition-all h-10 sm:h-12 lg:h-14 w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px]"
-                          />
-                        </div>
-                      ))}
-                    </div>
+                     width={150}
+                     height={50}
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="object-contain opacity-100 transition-all h-10 sm:h-12 lg:h-14 w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px]"
+                        />
+                      </div>
+                    ))}
                   </div>
-
-              }
-
-
+                </div>
+              )}
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -301,60 +331,89 @@ const handleSubmit = async (e: any) => {
                 size="lg"
                 className="bg-white/10 text-white hover:bg-white/20"
                 onClick={() => {
-                  let syllabusUrl = '';
+                  let syllabusUrl = "";
 
-                  if (course.title === "Executive Generative AI Course with IIT Guwahati") {
-                    syllabusUrl = "https://drive.google.com/file/d/1G7uBOCpBKFvzEyXHM34vc6afqUJmdF_A/view?usp=sharing";
+                  if (
+                    course.title ===
+                    "Executive Generative AI Course with IIT Guwahati"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1G7uBOCpBKFvzEyXHM34vc6afqUJmdF_A/view?usp=sharing";
+                  } else if (
+                    course.title === "Data Science & AI with IIT Guwahati"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/13O3soUlLzRLcJGezJ23HmnPlQSerT_JJ/view?usp=sharing";
+                  } else if (
+                    course.title === "Cloud Data Engineering Certification"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/view?usp=sharing";
+                  } else if (
+                    course.title === "Data Science with Machine Learning & AI"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/view?usp=sharing";
+                  } else if (course.title === "Data Visualization Course") {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1TpyFrVqjCLdAsIEc-p9S2pUaD6AgJsXN/view?usp=sharing";
+                  } else if (
+                    course.title ===
+                    "Data Analytics with Visualization Certification Course"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1ih3Z5PO5ExixAxmoBu0SJKjYs5-wDRp9/view?usp=sharing";
+                  } else if (
+                    course.title === "Business Analytics Certification Course"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1u64bLjLe_lgItjmn9OagsaZNuyd9bz8K/view?usp=sharing";
+                  } else if (
+                    course.title ===
+                    "Cloud Data Engineering Course with IIT Guwahati"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1PrR-EKLovlmE3lxKFILL6eXhlCWeOmAB/view?usp=sharing";
+                  } else if (course.title === "AI for Product Manager") {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1Xmqo75SkOo9RBOUrgr0Xsn_XQUMUJJ2a/preview";
                   }
-                  else if (course.title === "Data Science & AI with IIT Guwahati") {
-                    syllabusUrl = "https://drive.google.com/file/d/13O3soUlLzRLcJGezJ23HmnPlQSerT_JJ/view?usp=sharing";
-                  }
-                  else if (course.title === "Cloud Data Engineering Certification") {
-                    syllabusUrl = "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/view?usp=sharing";
-                  }
-                  else if (course.title === "Data Science with Machine Learning & AI") {
-                    syllabusUrl = "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/view?usp=sharing";
-                  }
-                  else if (course.title === "Data Visualization Course") {
-                    syllabusUrl = "https://drive.google.com/file/d/1TpyFrVqjCLdAsIEc-p9S2pUaD6AgJsXN/view?usp=sharing";
-                  }
-                  else if (course.title === "Data Analytics with Visualization Certification Course") {
-                    syllabusUrl = "https://drive.google.com/file/d/1ih3Z5PO5ExixAxmoBu0SJKjYs5-wDRp9/view?usp=sharing";
-                  }
-                  else if (course.title === "Business Analytics Certification Course") {
-                    syllabusUrl = "https://drive.google.com/file/d/1u64bLjLe_lgItjmn9OagsaZNuyd9bz8K/view?usp=sharing";
-                  }
-                  else if (course.title === "Cloud Data Engineering Course with IIT Guwahati") {
-                    syllabusUrl = "https://drive.google.com/file/d/1PrR-EKLovlmE3lxKFILL6eXhlCWeOmAB/view?usp=sharing";
-                  }
-                  window.open(syllabusUrl, '_blank');
+                  window.open(syllabusUrl, "_blank");
                 }}
               >
                 Download Syllabus
               </Button>
-              {
-                course.title === "Data Science with Machine Learning & AI" ?
-                  <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end' }}>
-                    Earn ₹8,000* from Govt. of India incentive program
-                  </div>
-                  :
-                  null
-              }
+              {course.title === "Data Science with Machine Learning & AI" ? (
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "flex-end",
+                  }}
+                >
+                  Earn ₹8,000* from Govt. of India incentive program
+                </div>
+              ) : null}
             </div>
           </div>
 
-          <div style={{marginTop:30}} >
+          <div style={{ marginTop: 30 }}>
             <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-6 w-full h-full flex flex-col">
               <div className="text-center mb-6">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-                  Join Two Classes for <span className="text-[#1a98cb]">FREE</span>
+                  Join Two Classes for{" "}
+                  <span className="text-[#1a98cb]">FREE</span>
                 </h2>
                 <p className="text-gray-600 text-sm md:text-base">
                   Learn with Experts & Industry Leaders from IIT & IIM
                 </p>
               </div>
 
-              <form style={{color:'black'}} className="space-y-4 flex-grow" onSubmit={handleSubmit}>
+              <form
+                style={{ color: "black" }}
+                className="space-y-4 flex-grow"
+                onSubmit={handleSubmit}
+              >
                 <div>
                   <input
                     type="text"
@@ -396,7 +455,9 @@ const handleSubmit = async (e: any) => {
                     value={formData.city}
                     onChange={handleChange}
                   >
-                    <option value="" disabled className="text-gray-400">Select your city*</option>
+                    <option value="" disabled className="text-gray-400">
+                      Select your city*
+                    </option>
                     <option value="Kolkata">Kolkata</option>
                     <option value="Delhi">Delhi</option>
                     <option value="Mumbai">Mumbai</option>
@@ -445,23 +506,38 @@ const handleSubmit = async (e: any) => {
                   <Button
                     type="submit"
                     className="w-full py-3 text-white font-medium"
-                    style={{ backgroundColor: '#013a81' }}
-                    disabled={submitStatus === 'submitting'}
+                    style={{ backgroundColor: "#013a81" }}
+                    disabled={submitStatus === "submitting"}
                   >
-                    {submitStatus === 'submitting' ? 'Applying...' : 'Apply Now'}
+                    {submitStatus === "submitting"
+                      ? "Applying..."
+                      : "Apply Now"}
                   </Button>
 
                   {submitMessage && (
-                    <p className={`text-center mt-2 text-sm ${submitStatus === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+                    <p
+                      className={`text-center mt-2 text-sm ${
+                        submitStatus === "success"
+                          ? "text-green-600"
+                          : "text-red-600"
+                      }`}
+                    >
                       {submitMessage}
                     </p>
                   )}
 
-                  <div style={{ marginTop: 10 }} className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm">
-                    <span className="text-[#1a98cb] font-medium">Next batch starting in August</span>
+                  <div
+                    style={{ marginTop: 10 }}
+                    className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm"
+                  >
+                    <span className="text-[#1a98cb] font-medium">
+                      Next batch starting in August
+                    </span>
                     <div className="flex items-center gap-1">
                       <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                      <span className="text-red-600 font-medium">Limited seats left!</span>
+                      <span className="text-red-600 font-medium">
+                        Limited seats left!
+                      </span>
                     </div>
                   </div>
                 </div>
