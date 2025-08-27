@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [
+          { type: "host", value: "www.ivyproschool.com" },
+        ],
+        destination: "https://ivyproschool.com/:path*",
+        permanent: true, // 308
+      },
+      {
         source: "/iit-data-science-course",
         destination: "/courses/iit-data-science-course",
         permanent: true, // 308 redirect
