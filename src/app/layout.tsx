@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     url: "https://ivyproschool.com/",
     type: "website",
     siteName: "Ivy Professional School",
-    images: ["/assets/logo.webp"],
+    images: ["https://ivyproschool.com/assets/logo.webp"],
   },
   twitter: {
     card: "summary_large_image",
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
     description:
       "Join Ivy Pro's GenAI & Data Science Courses. 4.9/5 Rated since 2007. Partners: IIT Guwahati, NASSCOM, IBM. 32500+ Alumni in 500+ firms. 40+ Fortune 500 Clients",
     site: "@IvyProSchool",
-    images: ["/assets/logo.webp"],
+    images: ["https://ivyproschool.com/assets/logo.webp"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "https://ivyproschool.com//favicon.ico",
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://ivyproschool.com/",
   },
   other: {
     "application/ld+json": JSON.stringify({
@@ -61,11 +61,11 @@ export const metadata: Metadata = {
       url: "https://ivyproschool.com/",
       logo: "https://ivyproschool.com/assets/logo.png",
       sameAs: [
-        "https://facebook.com/ivyproschool",
+        "https://www.facebook.com/ivyproschool",
         "https://x.com/ivyproschool",
-        "https://linkedin.com/school/ivy-professional-school",
-        "https://youtube.com/ivyproschool",
-        "https://instagram.com/ivyproschool",
+        "https://www.linkedin.com/school/ivy-professional-school",
+        "https://www.youtube.com/ivyproschool",
+        "https://www.instagram.com/ivyproschool",
       ],
       description:
         "Join Ivy Pro's GenAI & Data Science Courses. 4.9/5 Rated since 2007. Partners: IIT Guwahati, NASSCOM, IBM. 32500+ Alumni in 500+ firms. 40+ Fortune 500 Clients",
@@ -103,7 +103,7 @@ export default function RootLayout({
              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-             'https://googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
              })(window,document,'script','dataLayer','GTM-PZPNXDVD'); `,
           }}
         />
@@ -135,7 +135,7 @@ export default function RootLayout({
         <noscript>
           
           <iframe
-            src="https://googletagmanager.com/ns.html?id=GTM-PZPNXDVD"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PZPNXDVD"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
@@ -145,7 +145,8 @@ export default function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://facebook.com/tr?id=1435433223444500&ev=PageView&noscript=1"
+            alt="facebook"
+            src="https://www.facebook.com/tr?id=1435433223444500&ev=PageView&noscript=1"
           />
          
         </noscript>
