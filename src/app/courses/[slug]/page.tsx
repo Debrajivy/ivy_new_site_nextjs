@@ -13,7 +13,6 @@ import CourseEnrollCTA from "@/components/courses/CourseEnrollCTA"
 import CourseJobSupport from "@/components/courses/CourseJobSupport"
 import type { Metadata } from "next"
 import { fetchCourseById } from "@/lib/api"
-
 // Prefer the alias to avoid fragile relatives
 import CourseSubNavigation from "@/components/CourseSubNavigation"
 

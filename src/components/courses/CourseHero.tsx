@@ -107,7 +107,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
           // ✅ Redirect to Thank You page after submission
           setTimeout(() => {
-            router.push("/thank-you"); // unique URL for GTM conversion tracking
+            router.push(`/courses/${course.slug}/thankyou`); // unique URL for GTM conversion tracking
           }, 1500);
         } else {
           setSubmitStatus("error");
