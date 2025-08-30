@@ -78,6 +78,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        {/* Google Ads */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-981187918"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-ads"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-981187918');
+            `,
+          }}
+        />
+
         {/*  JSON-LD: this is what schema tools look for */}
         <script
           type="application/ld+json"
@@ -122,7 +140,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
         {/* GTM noscript */}
-        <noscript>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PZPNXDVD"
             height="0"
@@ -136,7 +154,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             alt="facebook"
             src="https://www.facebook.com/tr?id=1435433223444500&ev=PageView&noscript=1"
           />
-        </noscript>
+        </noscript> */}
 
         {children}
 
