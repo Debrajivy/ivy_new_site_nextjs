@@ -217,6 +217,8 @@ const featuredCourses: Course[] = [
     ]
   }
 
+ 
+
 ];
 
 const CourseCard = ({ course }: { course: Course }) => {

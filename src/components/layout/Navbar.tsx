@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap } from "lucide-react"
+import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap, NotebookPen } from "lucide-react"
 import review from "../../assests/review.webp"
 import Image, { StaticImageData } from "next/image"
 import {
@@ -28,10 +28,10 @@ import AIPM from "@/assests/AIPM.webp"
 
 
 const courseCategories = {
-  "AI for Product Manager":[
+   "AI for Product Manager":[
     {
       title: "AI for Product Managers",
-      link: "/courses/ai-product-manager-course",
+      href: "/courses/ai-product-manager-course",
       description: "Leverage AI tools and techniques to enhance project management",
       image: AIPM,
     }
@@ -39,13 +39,13 @@ const courseCategories = {
   "Data Science": [
     {
       title: "Data Science & AI with IIT Guwahati",
-      link: "/courses/iit-data-science-course",
+      href: "/courses/iit-data-science-course",
       description: "Master end-to-end data science, AI, and visualization tools",
       image: DS,
     },
     {
       title: "Data Science with Machine Learning & AI",
-      link: "/courses/data-science-and-ml-course",
+      href: "/courses/data-science-and-ml-course",
       description: "Become job-ready with ML, DL, Python, and visualization tools",
       image: ML,
     },
@@ -53,35 +53,35 @@ const courseCategories = {
   "Cloud Data Engineering": [
     {
       title: "Cloud Data Engineering Certification",
-      link: "/courses/data-engineering-course",
+      href: "/courses/data-engineering-course",
       description: "Master data pipelines, big data tools, and real-time processing",
       image: CDE,
     },
     {
       title: "Cloud Data Engineering Course with IIT Guwahati",
-      link: "/courses/iit-data-engineering-course",
+      href: "/courses/iit-data-engineering-course",
       description: "Advanced cloud data engineering with industry experts",
       image: CDI,
     },
   ],
-  Analytics: [
+  "Analytics": [
     {
       title: "Data Analytics with Visualization Certification Course",
-      link: "/courses/data-analytics-course",
+      href: "/courses/data-analytics-course",
       description: "Learn comprehensive data analytics and visualization",
       image: DA,
     },
     {
       title: "Business Analytics Certification Course",
-      link: "/courses/business-analytics-course",
+      href: "/courses/business-analytics-course",
       description: "Strategic AI implementation for executives and managers",
       image: BA,
-    },
+    }
   ],
   "Data Visualization": [
     {
       title: "Data Visualization Course",
-      link: "/courses/data-visualization-course",
+      href: "/courses/data-visualization-course",
       description: "Deep dive into advanced visualization techniques",
       image: DV,
     },
@@ -89,7 +89,7 @@ const courseCategories = {
   "Generative AI": [
     {
       title: "Executive Generative AI Course with IIT Guwahati",
-      link: "/courses/iit-generative-ai-course",
+      href: "/courses/iit-generative-ai-course",
       description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
       image: GA,
     },
@@ -97,92 +97,94 @@ const courseCategories = {
   "Data Science (Pay after Placement": [
     {
       title: "Data Science with Machine Learning & AI",
-      link: "/courses/no-upfront-fees-data-science-and-ml-course",
+      href: "/courses/no-upfront-fees-data-science-and-ml-course",
       description: "Become job-ready with ML, DL, Python, and visualization tools",
       image: ML,
     },
   ],
+ 
 }
 
 const allCourses = [
   {
     title: "Executive Generative AI Course with IIT Guwahati",
-    link: "/courses/iit-generative-ai-course",
+    href: "/courses/iit-generative-ai-course",
     description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
     image: GA,
   },
   {
     title: "Data Science & AI with IIT Guwahati",
-    link: "/courses/iit-data-science-course",
+    href: "/courses/iit-data-science-course",
     description: "Master end-to-end data science, AI, and visualization tools",
     image: DS,
   },
   {
     title: "Cloud Data Engineering Certification",
-    link: "/courses/data-engineering-course",
+    href: "/courses/data-engineering-course",
     description: "Master data pipelines, big data tools, and real-time processing",
     image: CDE,
   },
   {
     title: "Data Science with Machine Learning & AI",
-    link: "/courses/data-science-and-ml-course",
+    href: "/courses/data-science-and-ml-course",
     description: "Become job-ready with ML, DL, Python, and visualization tools",
     image: ML,
   },
   {
     title: "Data Visualization Course",
-    link: "/courses/data-visualization-course",
+    href: "/courses/data-visualization-course",
     description: "Deep dive into neural networks and advanced ML techniques",
     image: DV,
   },
   {
     title: "Data Analytics with Visualization Certification Course",
-    link: "/courses/data-analytics-course",
+    href: "/courses/data-analytics-course",
     description: "Learn Hadoop, Spark, and big data processing frameworks",
     image: DA,
   },
   {
     title: "Business Analytics Certification Course",
-    link: "/courses/business-analytics-course",
+    href: "/courses/business-analytics-course",
     description: "Strategic AI implementation for executives and managers",
     image: BA,
   },
   {
     title: "Cloud Data Engineering Course with IIT Guwahati",
-    link: "/courses/iit-data-engineering-course",
+    href: "/courses/iit-data-engineering-course",
     description: "Image processing and recognition with deep learning",
     image: CDI,
   },
 ]
 
-const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { image?: StaticImageData }>(
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & { image?: string | StaticImageData }
+>(
   ({ className, title, children, image, href }, ref) => {
     return (
       <li>
         <NavigationMenuLink asChild>
           <Link
+            href={href}
             ref={ref}
             className={cn("flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors", className)}
-            href={href|| "#"}
           >
             {image && (
-              <Image
-                width={150}
-                height={40}
-                src={image}
-                alt={title|| "Course Image"}
+              <img
+                src={typeof image === "string" ? image : image.src}
+                alt={title}
                 className="w-12 h-12 object-contain rounded-md flex-shrink-0"
               />
             )}
             <div>
               <div className="text-sm font-medium leading-none mb-1">{title}</div>
-              <div className="text-sm leading-snug text-muted-foreground line-clamp-2">{children}</div>
+              <p className="text-sm leading-snug text-muted-foreground line-clamp-2">{children}</p>
             </div>
           </Link>
         </NavigationMenuLink>
       </li>
     )
-  },
+  }
 )
 ListItem.displayName = "ListItem"
 
@@ -223,7 +225,7 @@ const MultiLevelDropdown = () => {
                   <ListItem
                     key={course.title}
                     title={course.title}
-                    href={course.link}
+                    href={course.href}
                     className="transition-all duration-300 hover:bg-gradient-to-r hover:from-[#e0f7f7] hover:to-[#f0faf0] hover:shadow-md hover:text-[#009fda] rounded-lg"
                     image={course.image}
                   >
@@ -245,17 +247,17 @@ const MultiLevelDropdown = () => {
 }
 
 const AnimatedPhoneButton = () => {
-  const [isMobile, setIsMobile] = useState(false)
-  const [showNumber, setShowNumber] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
+  const [showNumber, setShowNumber] = useState(false);
 
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
-    }
-    checkIfMobile()
-    window.addEventListener("resize", checkIfMobile)
-    return () => window.removeEventListener("resize", checkIfMobile)
-  }, [])
+      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
+    };
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
 
   const handleClick = () => {
     if (isMobile) {
@@ -265,7 +267,7 @@ const AnimatedPhoneButton = () => {
     }
   };
 
-return (
+  return (
     <div className="relative inline-block">
       <Button
         variant="ghost"
@@ -303,34 +305,34 @@ return (
 const ApplyNowModal = ({ onClose }: { onClose: () => void }) => {
   useEffect(() => {
     // This is the container element where the iframe will be added
-    const iframeContainer = document.getElementById("iframe-container")
+    const iframeContainer = document.getElementById('iframe-container');
 
     if (iframeContainer) {
       // Clear any previous content
-      iframeContainer.innerHTML = ""
+      iframeContainer.innerHTML = '';
 
       // Create the iframe element
-      const iframe = document.createElement("iframe")
-      iframe.name = "leadsquared_landing_page_frame"
-      iframe.src = "https://ivyproschool.viewpage.co/IVY?ignoremxtracking=mxtrue"
-      iframe.width = "100%" // Use percentage for responsiveness
-      iframe.height = "100%" // Use percentage for responsiveness
-      iframe.frameBorder = "0"
-      iframe.marginWidth = "0"
-      iframe.marginHeight = "0"
-      iframe.scrolling = "no"
-      iframe.style.border = "none"
+      const iframe = document.createElement('iframe');
+      iframe.name = "leadsquared_landing_page_frame";
+      iframe.src = "https://ivyproschool.viewpage.co/IVY?ignoremxtracking=mxtrue";
+      iframe.width = "100%"; // Use percentage for responsiveness
+      iframe.height = "100%"; // Use percentage for responsiveness
+      iframe.frameBorder = "0";
+      iframe.marginWidth = "0";
+      iframe.marginHeight = "0";
+      iframe.scrolling = "no";
+      iframe.style.border = "none";
 
       // Append the iframe to the container
-      iframeContainer.appendChild(iframe)
+      iframeContainer.appendChild(iframe);
 
       // Create and append the script element
-      const script = document.createElement("script")
-      script.type = "text/javascript"
-      script.innerHTML = "var MXLandingPageId = '2c296ae6-63a9-11f0-aa4a-06f2115baecb';"
-      iframeContainer.appendChild(script)
+      const script = document.createElement('script');
+      script.type = "text/javascript";
+      script.innerHTML = "var MXLandingPageId = '2c296ae6-63a9-11f0-aa4a-06f2115baecb';";
+      iframeContainer.appendChild(script);
     }
-  }, [])
+  }, []);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -346,8 +348,8 @@ const ApplyNowModal = ({ onClose }: { onClose: () => void }) => {
         <div id="iframe-container" className="bg-white rounded-xl shadow-xl p-6 h-full w-full" />
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -364,9 +366,7 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between h-16 px-4 md:px-6">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Image
-                width={45}
-                height={100}
+              <img
                 src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png"
                 alt="Ivy Professional School"
                 className="h-9"
@@ -376,10 +376,8 @@ const Navbar = () => {
             <div className="hidden lg:flex items-center px-3 py-2 col-span-2 md:col-span-1">
               <div className="flex flex-col items-start ml-2">
                 <div className="flex items-center px-3 py-2 rounded-lg col-span-2 md:col-span-1">
-                  <Image
-                    width={150}
-                    height={40}
-                    src={review || "/placeholder.svg"}
+                  <img
+                    src={typeof review === "string" ? review : review?.src || "/placeholder.svg"}
                     alt="Rating"
                     className="w-36 h-9 border-2 border-white object-cover"
                   />
@@ -388,11 +386,9 @@ const Navbar = () => {
             </div>
 
             <div className="lg:hidden flex items-center space-x-2 ml-2">
-              <div className="flex items-center px-3 py-2 rounded-lg col-span-2 md:col-span-1">
-                <Image
-                  width={150}
-                  height={40}
-                  src={review || "/placeholder.svg"}
+              <div className="flex items-center  py-2 rounded-lg col-span-2 md:col-span-1">
+                <img
+                  src={typeof review === "string" ? review : review?.src || "/placeholder.svg"}
                   alt="Rating"
                   className="w-32 h-8 md:w-48 md:h-12 border-2 border-white object-cover"
                 />
@@ -436,7 +432,12 @@ const Navbar = () => {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <a style={{ fontSize: 14 }} href="https://ivyproschool.com/blog">
+                  <Link href="/enterprise" className="flex items-center px-3 py-2 text-sm font-medium">
+                    Enterprise
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <a style={{ fontSize: 14 }} href="https://ivyproschool.com/blog" >
                     Blog
                   </a>
                 </NavigationMenuItem>
@@ -449,9 +450,9 @@ const Navbar = () => {
                 className="bg-gradient-to-r from-ivy-blue"
                 onClick={handleApplyClick}
                 style={{
-                  backgroundImage: "linear-gradient(bottom, #bc4e00 10%, #ff9300 100%)",
-                  borderBottomColor: "#bc4e00",
-                  textShadow: "0px -1px 1px #eb6200",
+                  backgroundImage: 'linear-gradient(bottom, #bc4e00 10%, #ff9300 100%)',
+                  borderBottomColor: '#bc4e00',
+                  textShadow: '0px -1px 1px #eb6200'
                 }}
               >
                 Apply Now
@@ -484,26 +485,24 @@ const Navbar = () => {
 
               {isCoursesExpanded && (
                 <div className="grid grid-cols-1 gap-3 mt-4 animate-fade-in-slide-down">
-                  {allCourses.map((course) => (
+                  {allCourses.map((category) => (
                     <Link
-                      key={course.title}
-                      href={course.link}
+                      key={category.title}
+                      href={category.href}
                       className="flex items-start gap-3 p-3 rounded-lg border border-gray-200 bg-white hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group"
                       onClick={() => setIsOpen(false)}
                     >
-                      <Image
-                        width={150}
-                        height={40}
-                        src={course.image || "/placeholder.svg"}
-                        alt={course.title}
+                      <img
+                        src={category.image || "/placeholder.svg"}
+                        alt={category.title}
                         className="w-14 h-14 object-contain rounded-md flex-shrink-0"
                       />
 
                       <div className="flex-1 min-w-0 space-y-1">
                         <h3 className="text-base font-semibold text-gray-900 group-hover:text-blue-700 break-words">
-                          {course.title}
+                          {category.title}
                         </h3>
-                        <p className="text-sm text-gray-600 line-clamp-2 break-words">{course.description}</p>
+                        <p className="text-sm text-gray-600 line-clamp-2 break-words">{category.description}</p>
                       </div>
 
                       <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-blue-500 mt-1 flex-shrink-0" />
@@ -535,9 +534,27 @@ const Navbar = () => {
                 <GraduationCap className="h-6 w-6 text-blue-600" />
                 <span className="font-medium text-gray-800">Bootcamp</span>
               </Link>
+              <Link
+                href="/enterprise"
+                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <GraduationCap className="h-6 w-6 text-blue-600" />
+                <span className="font-medium text-gray-800">Enterprise</span>
+              </Link>
+
+              <a style={{ fontSize: 12 }} href="https://ivyproschool.com/blog"
+
+                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <NotebookPen className="h-5 w-5 text-blue-600" />
+                Blog
+              </a>
+
 
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -549,7 +566,9 @@ const Navbar = () => {
         </div>
       )}
 
-      {showApplyModal && <ApplyNowModal onClose={() => setShowApplyModal(false)} />}
+      {showApplyModal && (
+        <ApplyNowModal onClose={() => setShowApplyModal(false)} />
+      )}
 
       <style>
         {`

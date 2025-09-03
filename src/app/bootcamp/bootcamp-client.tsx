@@ -7,6 +7,7 @@ import { PlayCircle, CalendarDays, Clock, User, Users } from "lucide-react"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import Image from "next/image"
+import { Badge } from "@/components/ui/badge";
 
 interface BootcampEvent {
   id: string
@@ -174,6 +175,7 @@ const BootcampClient: React.FC<BootcampClientProps> = ({ bootcamps }) => {
     return (
       <>
         <Navbar />
+       
         <section className="relative bg-gradient-to-br bg-[#013a81] text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden flex items-center justify-center min-h-[600px]">
           {/* Animated Background Elements */}
           <div className="absolute inset-0 z-0 overflow-hidden">
@@ -183,13 +185,18 @@ const BootcampClient: React.FC<BootcampClientProps> = ({ bootcamps }) => {
           </div>
 
           <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center relative z-10 gap-12">
+
+            
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight mb-4 animate-fade-in-down drop-shadow-lg">
+                
                 Unlock Your Potential with <span className="text-yellow-300">Expert</span>
               </h1>
               <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto lg:mx-0 animate-fade-in-left opacity-90">
                 Join our free masterclasses, designed by industry experts from IIT & IIM to give you an unparalleled
                 edge in your career journey.
+
+         
               </p>
 
               {nextUpcomingBootcamp ? (
@@ -212,7 +219,7 @@ const BootcampClient: React.FC<BootcampClientProps> = ({ bootcamps }) => {
                         <Image
                           src={nextUpcomingBootcamp.facultyProfilePic || "/placeholder.svg"}
                           alt={nextUpcomingBootcamp.facultyName}
-                          
+
                           className="rounded-full border-4 border-yellow-300 object-cover shadow-lg"
                           onError={(e) => {
                             e.currentTarget.src = "https://placehold.co/100x100/FF5733/FFFFFF?text=FP"

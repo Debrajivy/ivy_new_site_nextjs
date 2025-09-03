@@ -21,6 +21,7 @@ interface CourseHeroProps {
   course: Course;
 }
 
+
 const CourseHero = ({ course }: CourseHeroProps) => {
   const router = useRouter(); // ⬅️ add this inside component
 
@@ -113,7 +114,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
           setSubmitStatus("error");
           setSubmitMessage(
             result.Message ||
-              "An error occurred during submission. Please try again."
+            "An error occurred during submission. Please try again."
           );
         }
       } else {
@@ -158,19 +159,18 @@ const CourseHero = ({ course }: CourseHeroProps) => {
         marginTop: -30,
         // Conditional background for IIT Guwahati course
         backgroundImage: isIITGuwahatiCourse
-  ? `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${IIT_BACKGROUND.src})`
-  : undefined,
+          ? `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${IIT_BACKGROUND.src})`
+          : undefined,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         // If it's the IIT Guwahati course, remove the explicit background color to avoid clash
         backgroundColor: isIITGuwahatiCourse ? 'transparent' : '#179fc8',
       }}
-      className={`py-10 text-white ${
-        !isIITGuwahatiCourse
+      className={`py-10 text-white ${!isIITGuwahatiCourse
           ? "bg-gradient-to-r from-ivy-blue to-ivy-orange"
           : ""
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -192,10 +192,20 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   <Link href={`/courses/${course.slug}`}>{course.slug}</Link>
                 </nav>
               </Badge>
+              {/* City specific content */}
+              {
+                course.title != "Data Engineering Course in Kolkata" ?
 
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                {course.title}
-              </h1>
+                  <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                    {course.title}
+                  </h1>
+                  :
+                  <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                    Data Engineering Course in Kolkata
+                  </h1>
+
+              }
+
 
               <div
                 style={{ marginTop: 10 }}
@@ -207,11 +217,11 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   <p className="text-[#221e1f] font-bold">Powered by</p>
                 </div>
                 {course.title === "Data Science with Machine Learning & AI" ||
-                course.title === "Data science course (Pay after Placement)" ? (
+                  course.title === "Data science course (Pay after Placement)" ? (
                   <Image
-                  
-                     width={150}
-                     height={50}
+
+                    width={150}
+                    height={50}
                     className="h-20 w-auto object-contain"
                     src={NASSCOM}
                     alt="NASSCOM Certification"
@@ -219,13 +229,13 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 ) : course.title === "Cloud Data Engineering Certification" ||
                   course.title === "Data Visualization Course" ||
                   course.title ===
-                    "Data Analytics with Visualization Certification Course" ||
+                  "Data Analytics with Visualization Certification Course" ||
                   course.title === "Business Analytics Certification Course" ||
-                  course.title === "AI for Product Manager" ? (
+                  course.title === "AI for Product Manager" || course.title === "Data Engineering Course in Kolkata" ? (
                   <Image
 
-                     width={150}
-                     height={50}
+                    width={150}
+                    height={50}
                     className="h-20 w-auto object-contain"
                     src={ivy}
                     alt="ivy"
@@ -233,8 +243,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 ) : (
                   <Image
 
-                     width={150}
-                     height={50}
+                    width={150}
+                    height={50}
                     className="h-10 w-auto object-contain"
                     src={E}
                     alt="E & ICT"
@@ -269,12 +279,12 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     : course.title === "Cloud Data Engineering Certification" ||
                       course.title === "Data Visualization Course" ||
                       course.title ===
-                        "Data Analytics with Visualization Certification Course" ||
+                      "Data Analytics with Visualization Certification Course" ||
                       course.title ===
-                        "Business Analytics Certification Course" ||
+                      "Business Analytics Certification Course" ||
                       course.title === "AI for Product Manager"
-                    ? "Ivy Professional School Certification"
-                    : "E & ICT Academy, IIT Guwahati Certification"}
+                      ? "Ivy Professional School Certification"
+                      : "E & ICT Academy, IIT Guwahati Certification"}
                 </span>
               </div>
             </div>
@@ -286,8 +296,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
               {course.title ===
                 "Executive Generative AI Course with IIT Guwahati" ||
-              course.title === "Data Science & AI with IIT Guwahati" ||
-              course.title ===
+                course.title === "Data Science & AI with IIT Guwahati" ||
+                course.title ===
                 "Cloud Data Engineering Course with IIT Guwahati" ? (
                 <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
                   <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
@@ -295,8 +305,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       <div key={partner.name} className="flex items-center">
                         <Image
 
-                     width={150}
-                     height={50}
+                          width={150}
+                          height={50}
                           src={partner.logo}
                           alt={`${partner.name} logo`}
                           className="object-contain opacity-100 transition-all h-10 sm:h-12 lg:h-14 w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px]"
@@ -312,8 +322,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       <div key={partner.name} className="flex items-center">
                         <Image
 
-                     width={150}
-                     height={50}
+                          width={150}
+                          height={50}
                           src={partner.logo}
                           alt={`${partner.name} logo`}
                           className="object-contain opacity-100 transition-all h-10 sm:h-12 lg:h-14 w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px]"
@@ -377,6 +387,10 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   } else if (course.title === "AI for Product Manager") {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1Xmqo75SkOo9RBOUrgr0Xsn_XQUMUJJ2a/preview";
+                  }
+                  else if (course.title === "Data Engineering Course in Kolkata") {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/view?usp=sharing";
                   }
                   window.open(syllabusUrl, "_blank");
                 }}
@@ -516,11 +530,10 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
                   {submitMessage && (
                     <p
-                      className={`text-center mt-2 text-sm ${
-                        submitStatus === "success"
+                      className={`text-center mt-2 text-sm ${submitStatus === "success"
                           ? "text-green-600"
                           : "text-red-600"
-                      }`}
+                        }`}
                     >
                       {submitMessage}
                     </p>

@@ -305,7 +305,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                         "The Executive Certification in GenAI with E&ICT Academy -IIT Guwahati ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
                         course.title === "Data Science & AI with IIT Guwahati" ?
                           "The Executive Certification in Data Science, offered in collaboration with the E&ICT Academy - IIT Guwahati, is widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
-                          course.title === "Cloud Data Engineering Certification" ?
+                          course.title === "Cloud Data Engineering Certification" || course.title==="Data Engineering Course in Kolkata"?
                             "Launch your cloud career with an elite certification FROM Ivy Pro School. Designed with experts from Amazon & Accenture, it proves your ability to build real-time data systems using Spark, Kafka, and AWS." :
                             course.title === "Data Science with Machine Learning & AI" ?
                               "This certification demonstrates your proficiency in end-to-end data science workflows, from data cleaning to deploying ML models." :
@@ -369,7 +369,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                         "A stamp of approval from E&ICT Academy, IIT-Guwahati tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
                         course.title === "Data Science & AI with IIT Guwahati" ?
                           "A stamp of approval from an E&ICT Academy, IIT-Guwahati tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
-                          course.title === "Cloud Data Engineering Certification" ?
+                          course.title === "Cloud Data Engineering Certification"  || course.title==="Data Engineering Course in Kolkata"?
                             "Show recruiters you're cloud-ready, with hands-on skills in AWS, GCP, and Azure. This certification validates your ability to design scalable pipelines and apply data engineering tools to real-world projects." :
                             course.title === "Data Science with Machine Learning & AI" ?
                               "Validates your ability to implement machine learning algorithms and AI solutions to solve complex business problems." :
@@ -407,7 +407,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     src={
                       course.title === "Executive Generative AI Course with IIT Guwahati" ? Iitc :
                         course.title === "Data Science & AI with IIT Guwahati" ? Iitc :
-                          course.title === "Cloud Data Engineering Certification" ? Cdec :
+                          course.title === "Cloud Data Engineering Certification" || course.title==="Data Engineering Course in Kolkata" ? Cdec :
                             course.title === "Data Science with Machine Learning & AI" ? Nc :
                               course.title === "Data Visualization Course" ? Dsvc :
                                 course.title === "Data Analytics with Visualization Certification Course" ? Davc :

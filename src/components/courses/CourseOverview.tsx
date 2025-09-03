@@ -76,6 +76,8 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                     </>
                   )
                 }
+
+            
               </h2>
 
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
@@ -87,8 +89,8 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
               <h3 className="text-xl font-bold mb-4">
                 What will I learn in Ivy Pro School{" "}
                 {
-                  course.title !== "Data science course (Pay after Placement)"?
-                  <span className="text-[#00a0da]">{course.title} course?</span> :  <span className="text-[#00a0da]"> Data Science Course?</span> 
+                  course.title !== "Data science course (Pay after Placement)" ?
+                    <span className="text-[#00a0da]">{course.title} course?</span> : <span className="text-[#00a0da]"> Data Science Course?</span>
                 }
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

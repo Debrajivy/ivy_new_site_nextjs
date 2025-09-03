@@ -160,7 +160,7 @@ const ContactClient = () => {
                     Experience our teaching methodology firsthand. Register for two free trial classes and explore our
                     learning environment.
                   </p>
-                  <Button className="bg-ivy-blue">Register for Free Classes</Button>
+                  {/* <Button className="bg-ivy-blue">Register for Free Classes</Button> */}
                 </div>
               </div>
             </div>

@@ -3,12 +3,14 @@
 import { useState, useMemo } from "react"
 import { Search, Star, ArrowRight, Phone } from "lucide-react"
 import Image from "next/image"
+import { Badge } from "@/components/ui/badge";
 
 import { allAlumni, filterCategories, type AlumniData } from "@/lib/alumni-data"
 import AlumniProfileSidebar from "@/components/AlumniProfileSidebar"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import Placeholder from "@/assests/placeholder.png"
+import Link from "next/link";
 
 const renderStars = (rating: number) => {
   return Array.from({ length: 5 }, (_, index) => (
@@ -64,6 +66,23 @@ const Alumni = () => {
           <div className="max-w-7xl mx-auto px-4 py-4">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Alumni Network</h1>
 
+
+            <Badge
+              style={{
+                backgroundColor: "#4eaec3",
+                color: "white",
+                fontWeight: "normal",
+              }}
+              className="text-white hover:bg-white/20 w-fit mb-4"
+            >
+              <nav className="breadcrumbs">
+                <Link href="/">Home</Link>
+                <span>/</span>
+                <Link href="/alumni">Alumni</Link>
+                {/* Removed broken course link due to missing 'course' variable */}
+              </nav>
+            </Badge>
+
             {/* Search */}
             <div className="relative mb-4">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -83,11 +102,10 @@ const Alumni = () => {
                 <button
                   key={filter}
                   onClick={() => toggleFilter(filter)}
-                  className={`px-3 py-1 text-xs rounded-full border transition-colors ${
-                    selectedFilters.includes(filter)
-                      ? "bg-blue-100 border-blue-300 text-blue-700"
-                      : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50"
-                  }`}
+                  className={`px-3 py-1 text-xs rounded-full border transition-colors ${selectedFilters.includes(filter)
+                    ? "bg-blue-100 border-blue-300 text-blue-700"
+                    : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50"
+                    }`}
                 >
                   {filter}
                 </button>
@@ -166,11 +184,10 @@ const Alumni = () => {
                 {/* Salary & CTA - Compact */}
                 <div className="mb-3 text-center">
                   <div
-                    className={`inline-block px-3 py-1.5 rounded-full transition-colors ${
-                      alumni.name === "Abhinav Sinha" || alumni.name === "Priti Jha"
-                        ? "bg-green-100 hover:bg-green-200"
-                        : "bg-gray-100 hover:bg-gray-200"
-                    }`}
+                    className={`inline-block px-3 py-1.5 rounded-full transition-colors ${alumni.name === "Abhinav Sinha" || alumni.name === "Priti Jha"
+                      ? "bg-green-100 hover:bg-green-200"
+                      : "bg-gray-100 hover:bg-gray-200"
+                      }`}
                   >
                     {alumni.name === "Abhinav Sinha" ? (
                       <p style={{ color: "green" }} className="text-xs font-medium">
@@ -207,7 +224,7 @@ const Alumni = () => {
               <AlumniProfileSidebar isOpen={isSidebarOpen} onClose={closeSidebar} alumnus={selectedAlumni} />
             )}
             {/* NEW: Sticky Fixed Bottom Section */}
-            <div className="fixed bottom-0 left-0 right-0 bg-[#013a81] text-white p-2 z-50">
+            {/* <div className="fixed bottom-0 left-0 right-0 bg-[#013a81] text-white p-2 z-50">
               <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center gap-3">
                   <Phone className="w-8 h-8 text-white" />
@@ -217,10 +234,9 @@ const Alumni = () => {
                   </div>
                 </div>
                 <button className="bg-[#193f82] hover:bg-[#193f82] text-white font-bold py-3 px-6 rounded-lg text-xs whitespace-nowrap">
-                  Activate Request 1 - Alumni Session: 20 Setting
-                </button>
+                  Request 1-1 Alumni Session                  </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -27,6 +27,9 @@ export async function generateMetadata(
     const { slug } = await params
     const course = await fetchCourseById(slug)
 
+
+    console.log("course page", course)
+
     if (!course) return { title: "Course Not Found | Ivy Professional School" }
 
     return {

@@ -24,7 +24,7 @@ const Footer = () => {
       address: "Karol Bagh"
     }
   ];
-  
+
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
@@ -32,10 +32,10 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <Link href="/" className="flex items-center">
-                <img 
-                  src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png" 
-                  alt="Ivy Professional School" 
-                  className="h-12 mb-3" 
+                <img
+                  src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png"
+                  alt="Ivy Professional School"
+                  className="h-12 mb-3"
                 />
               </Link>
               <div className="mt-2 flex items-center">
@@ -70,7 +70,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-lg mb-4">Courses</h3>
             <ul className="space-y-2">
@@ -86,7 +86,7 @@ const Footer = () => {
               <li><Link href="/categories" className="text-gray-300 hover:text-white transition-colors">All Courses</Link></li> */}
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
@@ -96,10 +96,10 @@ const Footer = () => {
               <li><Link href="/enterprise" className="text-gray-300 hover:text-white transition-colors">Enterprise</Link></li>
               <li><Link href="/alumni" className="text-gray-300 hover:text-white transition-colors">Testimonials</Link></li>
               <li><Link href="https://youtube.com/ivyproschool" className="text-gray-300 hover:text-white transition-colors">YouTube Channel</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
+              <li><Link href="/contact-us" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
-          
+
           <div>
             {/* <h3 className="font-semibold text-lg mb-4">Subscribe</h3> */}
             {/* <p className="text-gray-300 mb-4">
@@ -123,7 +123,7 @@ const Footer = () => {
                 <span className="text-gray-300">+91 9748441111</span>
               </div>
             </div>
-            
+
             <div className="mt-6">
               <h4 className="text-sm font-semibold mb-3">Our Offices</h4>
               <div className="grid grid-cols-2 gap-2">
@@ -140,16 +140,41 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 mt-8 pt-6">
-          <div className="flex flex-col md:flex-row justify-between">
-            <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Ivy Professional School. All rights reserved.
-            </p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</Link>
+          {/* Use grid-cols-1 for mobile, and grid-cols-3 for medium screens and up */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Column 1: Data Engineering Course text */}
+            <div className="w-full flex flex-col md:flex-row justify-center md:justify-start space-y-2 md:space-y-0 md:space-x-4">
+              <Link href="/courses/data-engineering-course-in-kolkata">
+                <p className="text-gray-400 text-xs hover:text-white transition-colors">
+                  Data Engineering Course in Kolkata
+                </p>
+              </Link>
+              <Link href="/courses/data-engineering-course-in-pune">
+                <p className="text-gray-400 text-xs hover:text-white transition-colors">
+                  Data Engineering Course in Pune
+                </p>
+              </Link>
+              <Link href="/courses/data-engineering-course-in-bengaluru">
+                <p className="text-gray-400 text-xs hover:text-white transition-colors">
+                  Data Engineering Course in Bangalore
+                </p>
+              </Link>
+            </div>
+
+            {/* Column 2: Copyright */}
+            <div className="flex justify-center">
+              <p className="text-gray-400 text-sm">
+                &copy; {new Date().getFullYear()} Ivy Professional School. All rights reserved.
+              </p>
+            </div>
+
+            {/* Column 3: Links */}
+            <div className="flex justify-center md:justify-end space-x-4 mt-4 md:mt-0">
+              <Link href="/privacy" className="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</Link>
-              <Link href="/sitemap" className="text-gray-400 text-sm hover:text-white transition-colors">Sitemap</Link>
+              <Link href="/sitemap.xml" className="text-gray-400 text-sm hover:text-white transition-colors">Sitemap</Link>
             </div>
           </div>
         </div>

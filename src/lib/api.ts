@@ -2373,6 +2373,235 @@ const courses: Course[] = [
 
   },
 
+
+//city specific content
+   {
+    id: '11',
+    title: "Data Engineering Course in Kolkata",
+    description: "Master data engineering and big data analytics with tools like Hadoop, Spark, Kafka, Hive, etc., to become a certified data engineer and get a guaranteed placement.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1098,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 20,
+    isFeatured: true,
+    slug: "data-engineering-course-in-kolkata",
+    longDescription: "Ready to build a high-paying career in tech? Enroll in Ivy Pro School's Data Engineering Course in Kolkata, a NASSCOM Certified program trusted by 6,000+ professionals. Designed for career changers and IT professionals alike, our curriculum equips you with job-ready skills using real-world projects and tools like Python, SQL, Hadoop, Spark, and cloud platforms.\n\n "
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+      }
+    ],
+
+       curriculum: [
+      {
+        id: "m1",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        "id": "m2",
+        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
+          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
+          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
+          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
+          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
+          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
+          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
+          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
+          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
+          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
+          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+        ]
+      },
+
+      {
+        "id": "m3",
+        "title": "Hadoop Framework & Architecture",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+        ]
+      },
+      {
+        "id": "m4",
+        "title": "Apache Spark Architecture & Programming",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
+          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
+          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
+          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
+          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
+          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
+          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m5",
+        "title": "MongoDB for Developers & Admins",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
+          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
+          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
+          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m6",
+        "title": "Apache Kafka Basics",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
+          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
+          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Apache Hive for Data Warehousing",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
+          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
+          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
+          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
+          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
+          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+        ]
+      },
+      ,
+
+
+
+
+
+    ]
+    ,
+    projects: [
+      {
+        id: "p1",
+        title: "Build Cloud Data Pipeline Using Databricks",
+        description: "This video offers an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+        image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
+        skills: ["Apache ", "Big Data", "Azure"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "aNja1KSqczo"
+      },
+      {
+        id: "p2",
+        title: "How to Create End-to-End ETL Pipeline",
+        description: "Dive deep into practical data solutions using Azure by setting up a complete data pipeline, from storing CSV files in Azure Blob Storage to efficiently transferring data into SQL databases.",
+        image: "https://img.youtube.com/vi/yYbU_Bihvdc/0.jpg",
+        skills: ["Virtual Machines ", "Azure", "SQL"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "yYbU_Bihvdc"
+      },
+      {
+        id: "p3",
+        title: "Data Engineering Career Roadmap 2025",
+        description: "Get comprehensive roadmap for anyone looking to start or grow their career in Data Engineering in 2025. You'll understand the real-world data pipeline, in-demand tools (SQL, Python, Spark, Docker, Cloud).",
+        image: "https://img.youtube.com/vi/QbI60IMgO_g/0.jpg",
+        skills: ["SQL", "Python", "Spark", "Docker", "Cloud"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "QbI60IMgO_g"
+      },
+      // {
+      //   id: "p4",
+      //   title: "Superstore Sales Analysis Using Excel ",
+      //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
+      //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+      //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
+      //   difficulty: "Beginner to Intermediate",
+      //   videoId: "KGrApiKUR4M"
+      // },
+      // {
+      //   id: "p5",
+      //   title: "Predicting Car Sales using Linear Regression in R",
+      //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
+      //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
+      //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
+      //   difficulty: "Intermediate",
+      //   videoId: "8nNgJJH7pMk"
+      // },
+      // {
+      //   id: "p6",
+      //   title: "Crime Intelligence Dashboard in Power BI",
+      //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
+      //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
+      //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
+      //   difficulty: "Intermediate",
+      //   videoId: "sVXjAIa7YBs"
+      // }
+    ],
+    outcomes: [
+      "Build scalable data pipelines using tools like Hadoop, Spark, Kafka, and Hive",
+      "Manage structured and unstructured data with MySQL, MongoDB, and real-time processing systems",
+      "Implement big data solutions on the cloud using Azure, AWS, and GCP platforms",
+      "Solve complex business problems with 30+ case studies and 10+ industry-aligned capstone projects",
+      "Prepare for top certifications like AWS and GCP with guided mentoring and hands-on labs",
+      "Get lifetime access to recordings and 1:1 expert mentorship to support your learning and job prep"
+    ],
+
+
+  },
+
 ];
 
 const alumni: Alumni[] = [
