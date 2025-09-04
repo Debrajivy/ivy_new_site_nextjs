@@ -159,8 +159,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
 
         {/* mxradon */}
+        {/* LeadSquared Tracking Code Start */}
         <Script src="https://web.mxradon.com/t/Tracker.js" type="text/javascript" strategy="lazyOnload" />
-        <Script id="mxradon-tracker" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `pidTracker('18802');` }} />
+        <Script id="leadsquared-tracker" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `pidTracker('18802');` }} />
+        {/* LeadSquared Tracking Code End */}
+
       </body>
     </html>
   );

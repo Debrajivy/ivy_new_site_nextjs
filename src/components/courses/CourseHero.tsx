@@ -53,6 +53,31 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     }));
   };
 
+  let sourceCampaignValue = "";
+  if (course.title === "AI for Product Manager") {
+    sourceCampaignValue = "AI for Product Manager";
+  } else if (course.title === "Executive Generative AI Course with IIT Guwahati") {
+    sourceCampaignValue = "IIT-G GenAI";
+  } else if (course.title === "Cloud Data Engineering Course with IIT Guwahati") {
+    sourceCampaignValue = "IIT-G Data Engg";
+  } else if (course.title === "Data Science & AI with IIT Guwahati") {
+    sourceCampaignValue = "IIT-G Data Science";
+  } else if (course.title === "Data Science with Machine Learning & AI") {
+    sourceCampaignValue = "Nasscom";
+  } else if (course.title === "Cloud Data Engineering Certification") {
+    sourceCampaignValue = "Data Engineering";
+  } else if (course.title === "Business Analytics Certification Course") {
+    sourceCampaignValue = "Business Analytics Certification";
+  } else if (course.title === "Data Analytics with Visualization Certification Course") {
+    sourceCampaignValue = "Data Analytics and Visualization (Tableau & Power BI)";
+  } else if (course.title === "Data science course (Pay after Placement)") {
+    sourceCampaignValue = "ISA";
+  } else if (course.title === "Data Visualization Course") {
+    sourceCampaignValue = "Data Visualization and Reporting (Tableau & Power BI)";
+  } else {
+    sourceCampaignValue = course.title; // fallback (or whatever you prefer)
+  }
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
@@ -89,6 +114,15 @@ const CourseHero = ({ course }: CourseHeroProps) => {
         Attribute: "Source",
         Value: "Organic Search",
       },
+      {
+        Attribute: "mx_Course",
+        Value: sourceCampaignValue
+      },
+      {
+        Attribute: "SourceMedium",
+        Value: "Google"
+      },
+
     ];
 
     try {
@@ -168,8 +202,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
         backgroundColor: isIITGuwahatiCourse ? 'transparent' : '#179fc8',
       }}
       className={`py-10 text-white ${!isIITGuwahatiCourse
-          ? "bg-gradient-to-r from-ivy-blue to-ivy-orange"
-          : ""
+        ? "bg-gradient-to-r from-ivy-blue to-ivy-orange"
+        : ""
         }`}
     >
       <div className="container mx-auto px-4">
@@ -531,8 +565,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   {submitMessage && (
                     <p
                       className={`text-center mt-2 text-sm ${submitStatus === "success"
-                          ? "text-green-600"
-                          : "text-red-600"
+                        ? "text-green-600"
+                        : "text-red-600"
                         }`}
                     >
                       {submitMessage}

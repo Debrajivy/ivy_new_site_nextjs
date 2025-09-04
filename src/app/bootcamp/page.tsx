@@ -487,7 +487,7 @@ const App: React.FC = () => {
                                           <nav className="breadcrumbs">
                                             <Link href="/">Home</Link>
                                             <span>/</span>
-                                            <Link href="/bootcamp">Bootcamp</Link>
+                                            <Link href="/bootcamp">Join a free data & AI webinar</Link>
                                             {/* Removed broken course link due to missing 'course' variable */}
                                           </nav>
                                         </Badge>
