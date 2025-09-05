@@ -19,14 +19,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
   if (!course.curriculum || course.curriculum.length === 0) {
     return null;
   }
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
-    }
-    checkIfMobile()
-    window.addEventListener("resize", checkIfMobile)
-    return () => window.removeEventListener("resize", checkIfMobile)
-  }, [])
+ 
   const handleWhatsAppClick = () => {
     const phoneNumber = '919748441111';
     const defaultMessage = "Hello! I would like to schedule a phone call with a human career advisor from Ivy Professional School. Please provide available time slots.";
@@ -46,6 +39,17 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     }
   };
 
+
+
+
+   useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
+    }
+    checkIfMobile()
+    window.addEventListener("resize", checkIfMobile)
+    return () => window.removeEventListener("resize", checkIfMobile)
+  }, [])
   const pricingDetails: Record<string, { courseFee: number; registration: number; emi: number; months: number }> = {
     'Cloud Data Engineering Course with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 9 },
     'Data Analytics with Visualization Certification Course': { courseFee: 46500, registration: 10000, emi: 4421, months: 9 },
