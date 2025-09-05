@@ -57,6 +57,11 @@ const faculty: Faculty[] = [
   }
 ];
 
+
+const linkedinLinks: { [key: string]: string } = {
+  '1': "https://www.linkedin.com/in/prateekagrawal",
+  '2': "https://www.linkedin.com/in/eeshani-agrawal-b674045"
+};
 const TopFaculty = () => {
   return (
     <section style={{paddingBottom:15}} className="bg-ivy-light">
@@ -75,52 +80,102 @@ const TopFaculty = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {faculty.map((member) => (
-            <Card key={member.id} className="overflow-hidden border-none shadow-md hover:shadow-xl transition-all">
-              <div className="bg-ivy-blue  h-2"></div>
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center mb-4">
-                  <div className="rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
-                    <Image
-                      width={96}
-                      height={96} 
-                      src={member.image} 
-                      alt={member.name} 
-                      className="w-24 h-24 object-cover"
-                    />
-                  </div>
-                  <h3 className="font-bold text-lg text-center">{member.name}</h3>
-                  <p className="text-primary font-medium text-sm">{member.position}</p>
-                </div>
-                
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <GraduationCap className="h-5 w-5 text-ivy-orange mr-2 mt-0.5" />
-                    <div>
-                      <p className="font-medium text-sm">Expertise</p>
-                      <p className="text-gray-600 text-sm">{member.expertise}</p>
+         {faculty.map((member) => {
+            const link = linkedinLinks[member.id];
+            
+            // Check if a link exists for the current member
+            if (link) {
+              return (
+                <a href={link} key={member.id} target="_blank" rel="noopener noreferrer" className="block h-full">
+                  <Card className="overflow-hidden border-none shadow-md hover:shadow-xl transition-all h-full">
+                    <div className="bg-ivy-blue h-2"></div>
+                    <CardContent className="pt-6">
+                      <div className="flex flex-col items-center mb-4">
+                        <div className="rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
+                          <Image
+                            width={96}
+                            height={96} 
+                            src={member.image} 
+                            alt={member.name} 
+                            className="w-24 h-24 object-cover"
+                          />
+                        </div>
+                        <h3 className="font-bold text-lg text-center">{member.name}</h3>
+                        <p className="text-primary font-medium text-sm">{member.position}</p>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="flex items-start">
+                          <GraduationCap className="h-5 w-5 text-ivy-orange mr-2 mt-0.5" />
+                          <div>
+                            <p className="font-medium text-sm">Expertise</p>
+                            <p className="text-gray-600 text-sm">{member.expertise}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start">
+                          <Briefcase className="h-5 w-5 text-ivy-blue mr-2 mt-0.5" />
+                          <div>
+                            <p className="font-medium text-sm">Previous Companies</p>
+                            <p className="text-gray-600 text-sm">{member.previousCompanies.join(", ")}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start">
+                          <Award className="h-5 w-5 text-ivy-orange mr-2 mt-0.5" />
+                          <div>
+                            <p className="font-medium text-sm">Experience</p>
+                            <p className="text-gray-600 text-sm">{member.experience}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </a>
+              );
+            } else {
+              return (
+                <Card key={member.id} className="overflow-hidden border-none shadow-md hover:shadow-xl transition-all h-full">
+                  <div className="bg-ivy-blue h-2"></div>
+                  <CardContent className="pt-6">
+                    <div className="flex flex-col items-center mb-4">
+                      <div className="rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
+                        <Image
+                          width={96}
+                          height={96} 
+                          src={member.image} 
+                          alt={member.name} 
+                          className="w-24 h-24 object-cover"
+                        />
+                      </div>
+                      <h3 className="font-bold text-lg text-center">{member.name}</h3>
+                      <p className="text-primary font-medium text-sm">{member.position}</p>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <Briefcase className="h-5 w-5 text-ivy-blue mr-2 mt-0.5" />
-                    <div>
-                      <p className="font-medium text-sm">Previous Companies</p>
-                      <p className="text-gray-600 text-sm">{member.previousCompanies.join(", ")}</p>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <GraduationCap className="h-5 w-5 text-ivy-orange mr-2 mt-0.5" />
+                        <div>
+                          <p className="font-medium text-sm">Expertise</p>
+                          <p className="text-gray-600 text-sm">{member.expertise}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <Briefcase className="h-5 w-5 text-ivy-blue mr-2 mt-0.5" />
+                        <div>
+                          <p className="font-medium text-sm">Previous Companies</p>
+                          <p className="text-gray-600 text-sm">{member.previousCompanies.join(", ")}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <Award className="h-5 w-5 text-ivy-orange mr-2 mt-0.5" />
+                        <div>
+                          <p className="font-medium text-sm">Experience</p>
+                          <p className="text-gray-600 text-sm">{member.experience}</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <Award className="h-5 w-5 text-ivy-orange mr-2 mt-0.5" />
-                    <div>
-                      <p className="font-medium text-sm">Experience</p>
-                      <p className="text-gray-600 text-sm">{member.experience}</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  </CardContent>
+                </Card>
+              );
+            }
+          })}
         </div>
       </div>
     </section>

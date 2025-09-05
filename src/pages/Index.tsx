@@ -24,6 +24,8 @@ const Index: React.FC = () => {
         <Hero />
         <Partners />
         <FeaturedCourses />
+        <CallToAction />
+
         <PlacementReportCTA />
         <TopFaculty />
         <DayAtIvy />
@@ -35,7 +37,6 @@ const Index: React.FC = () => {
         <WhatsAppCommunity />
         <YoutubeSection />
         <FAQ />
-        {/* <CallToAction /> */}
       </main>
       <Footer />
     </>

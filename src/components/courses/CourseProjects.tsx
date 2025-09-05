@@ -191,7 +191,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
 
           {
-            course.title === "Data Science with Machine Learning & AI" ?
+            course.title === "Data Science with Machine Learning & AI Certification" ?
 
 
               <TabsContent value="practice">
@@ -453,7 +453,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
 
           {
-            course.title === "Data Science with Machine Learning & AI" ?
+            course.title === "Data Science with Machine Learning & AI Certification" ?
 
               <TabsContent value="capstone">
                 <div className="mb-8">

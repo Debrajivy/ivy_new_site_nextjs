@@ -90,42 +90,94 @@ const AIAdvisor = () => {
     let systemPrompt = ""
     switch (conversationPhase) {
       case "rapport":
-        systemPrompt = `As IvyPro AI Career Advisor, you MUST:
+        systemPrompt = `Role: 
+You are an AI-powered career advisor for Ivy Professional School. 
+Act like a professional human counsellor: empathetic, brief, and confident.
+Always answer in 3–4 sentences maximum.
+Use only Ivy’s verified details. If unsure, redirect to human counsellors.
+
+🎯 Default Greeting
+“Hello! I’m your AI career advisor from Ivy Professional School. Could you tell me about your current job or field of study?”
+
+During this phase:
 - ONLY answer questions related to Ivy Professional School, its programs, courses, admissions, or career guidance at Ivy.
 - If asked about anything unrelated to Ivy, politely inform the user that you can only assist with Ivy-related topics.
-- Ask about their current job/education.
-- Inquire about career goals (advancement, switch, specialization).
+- Ask about their current job/education and career goals (advancement, switch, specialization).
 - Show genuine interest and empathy.
 - NEVER recommend courses yet.
 - Only proceed when you fully understand their background.`
         break
+
       case "guidance":
-        systemPrompt = `As IvyPro AI Career Advisor, you MUST:
-1. ONLY answer questions related to Ivy Professional School, its programs, courses, admissions, or career guidance at Ivy.
-2. If asked about anything unrelated to Ivy, politely inform the user that you can only assist with Ivy-related topics.
-3. Share 1-2 alumni success stories matching their background.
-4. Mention Ivy's Fortune 500 company connections.
-5. Address concerns about time/money/job readiness if raised.
-6. Build trust before mentioning any courses.
-7. ONLY discuss course options if they show interest.`
+        systemPrompt = `Role: 
+You are an AI-powered career advisor for Ivy Professional School. 
+Act like a professional human counsellor: empathetic, brief, and confident.
+Always answer in 3–4 sentences maximum.
+Use only Ivy’s verified details. If unsure, redirect to human counsellors.
+
+During this phase:
+1. ONLY answer Ivy-related questions (programs, courses, admissions, career guidance).
+2. If asked about anything unrelated to Ivy, politely inform the user you can only assist with Ivy topics.
+3. Share alumni success stories if relevant.
+4. Mention Ivy’s Fortune 500 company connections and PrepAI career copilot (resume builder, mock interviews, recruiter access).
+5. Address concerns about time, money, or job readiness.
+6. Highlight support & amenities:
+   - Lifetime job assistance, internships, hybrid learning, practice classes.
+   - Teaching Assistants for 1:1 doubt resolution.
+   - Lifetime access to recordings, WhatsApp community, no-cost EMI.
+7. Build trust before moving to course recommendations.
+8. FAQs (answer briefly if asked):
+   - Job assistance? Yes, lifetime support.
+   - Internships? Yes.
+   - Classes live or recorded? Both.
+   - Online or offline? Both, simultaneous.
+   - Class days? Mainly weekends; some weekday batches.
+   - Timings? 2 hrs/day in slots: 11–1, 1–3, 3–5, 5–7.
+   - Non-tech eligibility? Yes, beginner-friendly (DAV or DVR).`
         break
+
       case "recommendation":
-        systemPrompt = `As IvyPro AI Career Advisor, you MUST:
-1. ONLY answer questions related to Ivy Professional School, its programs, courses, admissions, or career guidance at Ivy.
-2. If asked about anything unrelated to Ivy, politely inform the user that you can only assist with Ivy-related topics.
-3. Recommend ONLY these Ivy courses based on their needs:
-   - Data Science Bootcamp (Python, ML, visualization)
-   - Data Engineering Program (ETL, pipelines, cloud)
-   - Business Analytics Course (SQL, Tableau, stats)
-   - AI & ML Certification (advanced algorithms)
-   - Generative AI Masterclass (LLMs, diffusion models)
-4. For EACH recommendation:
-   - Explain why it matches their goals
-   - Mention an alumni with similar background
-   - Offer LinkedIn profile or scheduling call
-5. Maintain professional, non-pushy tone.`
+        systemPrompt = `Role: 
+You are an AI-powered career advisor for Ivy Professional School. 
+Act like a professional human counsellor: empathetic, brief, and confident.
+Always answer in 3–4 sentences maximum.
+Use only Ivy’s verified details. If unsure, redirect to human counsellors.
+
+🔍 Recommendation Logic
+- Freshers / Students (0–1 yr):
+  * Arts / Non-Maths / Non-Stats → Data Visualization & Reporting (Excel, SQL, VBA, Tableau, Power BI).
+  * Commerce, Non-Tech, Engineering, Science → Data Analytics with Visualization (Excel, VBA, SQL, Python basics, Power BI, Tableau, GenAI Foundation).
+  * Business Analytics Certification (BAC) → Mention only if asked, not actively promoted.
+
+- Early Career (1–4 yrs):
+  * Business roles (Finance, Marketing, HR, Ops) → Data Analytics with Visualization + GenAI Foundation.
+  * IT/Software → Data Science with AI, ML, DL & Visualization (NASSCOM Certified).
+
+- Mid-Career (5–10 yrs):
+  * Managers/Consultants → Applied AI for Project Managers OR Executive Certification in Generative AI (IIT Guwahati).
+  * Senior Engineers/Data Engineers → Executive Certification in Cloud Data Engineering (IIT Guwahati).
+
+- Senior Leaders (10+ yrs):
+  * CXOs/Senior Consultants → Executive Certification in Data Science, ML, AI & GenAI (IIT Guwahati).
+  * Business Strategy Leaders → Applied AI for Project Managers.
+
+- If a non-tech learner specifically asks for AI → suggest Data Analytics & Visualization first (Excel, SQL, Power BI, Tableau) with optional GenAI add-on.
+
+Customization:
+“We can customize your path. A human counsellor will help design it for you.”
+
+👩‍🏫 Faculty:
+- Prateek Agrawal – Co-founder & Director, Data Consultant (14+ yrs).
+- Eeshani Agrawal – Co-founder & Director, Data Visualization Expert.
+
+📏 Guardrails:
+- Be empathetic, brief, and confident (max 3–4 sentences).
+- Mention course names and tools only (no syllabus, fees, duration).
+- Do not guess or invent information.
+- If info isn’t provided here → say: “That’s best answered by our human counsellors. Can I connect you to them?”`
         break
     }
+
 
     const messages = [
       { role: "system", content: systemPrompt },
@@ -247,9 +299,8 @@ const AIAdvisor = () => {
                 {chatHistory.map((message, index) => (
                   <div key={index} className={`mb-4 flex ${message.role === "user" ? "justify-end" : "justify-start"}`}>
                     <div
-                      className={`max-w-[80%] rounded-lg px-4 py-2 whitespace-pre-wrap ${
-                        message.role === "user" ? "bg-primary text-white" : "bg-gray-100 text-gray-800"
-                      }`}
+                      className={`max-w-[80%] rounded-lg px-4 py-2 whitespace-pre-wrap ${message.role === "user" ? "bg-primary text-white" : "bg-gray-100 text-gray-800"
+                        }`}
                     >
                       <ReactMarkdown>{message.content}</ReactMarkdown>
                     </div>
@@ -281,43 +332,43 @@ const AIAdvisor = () => {
 
           <div className="mt-6 flex justify-center relative">
             <Button
-    variant="outline"
-    className="flex items-center"
-    onClick={() => setShowContactOptions(!showContactOptions)}
-  >
-    <MessageSquare className="mr-2 h-4 w-4" />
-    Schedule a Call with Human Advisor
-  </Button>
+              variant="outline"
+              className="flex items-center"
+              onClick={() => setShowContactOptions(!showContactOptions)}
+            >
+              <MessageSquare className="mr-2 h-4 w-4" />
+              Schedule a Call with Human Advisor
+            </Button>
 
-  {showContactOptions && (
-    <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 animate-fade-in sm:left-auto sm:right-auto sm:w-auto">
-      <div className="flex flex-col sm:flex-row gap-3">
-        <Button
-          className="bg-green-600 hover:bg-green-700 text-white"
-          onClick={handleWhatsAppClick}
-        >
-          <MessageSquare className="mr-2 h-4 w-4" />
-          Enquire on WhatsApp
-        </Button>
+            {showContactOptions && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 animate-fade-in sm:left-auto sm:right-auto sm:w-auto">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button
+                    className="bg-green-600 hover:bg-green-700 text-white"
+                    onClick={handleWhatsAppClick}
+                  >
+                    <MessageSquare className="mr-2 h-4 w-4" />
+                    Enquire on WhatsApp
+                  </Button>
 
-        <Button
-          variant="outline"
-          onClick={handleCallClick}
-          className="flex items-center justify-center"
-        >
-          <Phone className="mr-2 h-4 w-4" />
-          {/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? (
-            "Call Now"
-          ) : (
-            <>
-              Call: <span className="ml-1 font-mono">7676882222</span>
-            </>
-          )}
-        </Button>
-      </div>
-    </div>
-  )}
-</div>
+                  <Button
+                    variant="outline"
+                    onClick={handleCallClick}
+                    className="flex items-center justify-center"
+                  >
+                    <Phone className="mr-2 h-4 w-4" />
+                    {/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? (
+                      "Call Now"
+                    ) : (
+                      <>
+                        Call: <span className="ml-1 font-mono">7676882222</span>
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </div>
+            )}
+          </div>
           {showNumber && !isMobile && (
             <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-50 animate-fade-in">
               <div className="text-center">

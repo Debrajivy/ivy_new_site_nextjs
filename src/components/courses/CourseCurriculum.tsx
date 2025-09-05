@@ -1,24 +1,56 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Course } from '@/lib/api';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Clock, FileText, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from "@/components/ui/button"
+import { Bot, Send, MessageSquare, Phone } from "lucide-react"
 
 interface CourseCurriculumProps {
   course: Course;
 }
 
 const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
+  const [showContactOptions, setShowContactOptions] = useState(false);
+  const [showNumber, setShowNumber] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   if (!course.curriculum || course.curriculum.length === 0) {
     return null;
   }
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
+    }
+    checkIfMobile()
+    window.addEventListener("resize", checkIfMobile)
+    return () => window.removeEventListener("resize", checkIfMobile)
+  }, [])
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '919748441111';
+    const defaultMessage = "Hello! I would like to schedule a phone call with a human career advisor from Ivy Professional School. Please provide available time slots.";
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const encodedMessage = encodeURIComponent(defaultMessage);
+
+    const whatsappUrl = isMobile
+      ? `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`
+      : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleCallClick = () => {
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      window.location.href = `tel:7676882222`;
+    }
+  };
+
   const pricingDetails: Record<string, { courseFee: number; registration: number; emi: number; months: number }> = {
     'Cloud Data Engineering Course with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 9 },
     'Data Analytics with Visualization Certification Course': { courseFee: 46500, registration: 10000, emi: 4421, months: 9 },
     'Data Visualization Course': { courseFee: 31500, registration: 10000, emi: 2604, months: 9 },
-    'Data Science with Machine Learning & AI': { courseFee: 64500, registration: 10000, emi: 6601, months: 9 },
+    'Data Science with Machine Learning & AI Certification': { courseFee: 56000, registration: 10000, emi: 6601, months: 9 },
     'Business Analytics Certification Course': { courseFee: 39000, registration: 10000, emi: 3512, months: 9 },
     'Cloud Data Engineering Certification': { courseFee: 55000, registration: 10000, emi: 6601, months: 9 },
     'Data Science & AI with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 12 },
@@ -308,12 +340,64 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
                 </div>
               </div>
+              {/* New Section for 'Fees seem higher?' */}
+              <div className="mt-8 text-center w-full max-w-4xl mx-auto">
+                <h3 className="text-lg font-semibold text-gray-800">Fees seems higher? Pick your own module.</h3>
+                <Button
+                  style={{ backgroundColor: '#009fda' }}
+                  className="mt-4 px-6 py-3 rounded-lg text-white font-medium shadow-md hover:shadow-lg transition-all duration-200"
+                  onClick={() => setShowContactOptions(!showContactOptions)}
+                >
+                  Pick your own customized course
+                </Button>
+
+                {showContactOptions && (
+                  <div className=" mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 animate-fade-in sm:left-auto sm:right-auto sm:w-auto">
+                    <div style={{display:'flex', flexDirection:'row',justifyContent:'center'}} className="flex flex-col sm:flex-row gap-3">
+                      <Button
+                        className="bg-green-600 hover:bg-green-700 text-white"
+                        onClick={handleWhatsAppClick}
+                      >
+                        <MessageSquare className="mr-2 h-4 w-4" />
+                        Enquire on WhatsApp
+                      </Button>
+
+                      <Button
+                        variant="outline"
+                        onClick={handleCallClick}
+                        className="flex items-center justify-center"
+                      >
+                        <Phone className="mr-2 h-4 w-4" />
+                        {/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? (
+                          "Call Now"
+                        ) : (
+                          <>
+                            Call: <span className="ml-1 font-mono">7676882222</span>
+                          </>
+                        )}
+                      </Button>
+                    </div>
+                  </div>
+                )}
+                {showNumber && !isMobile && (
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-50 animate-fade-in">
+                    <div className="text-center">
+                      <p className="text-gray-700 font-medium">Call us at:</p>
+                      <a
+                        href="tel:7676882222"
+                        className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
+                      >
+                        7676882222
+                      </a>
+                    </div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-
     </section>
   );
 };

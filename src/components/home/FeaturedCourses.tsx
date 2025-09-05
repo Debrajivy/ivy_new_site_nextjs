@@ -112,7 +112,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '4',
-    title: "Data Science with Machine Learning & AI",
+    title: "Data Science with Machine Learning & AI Certification",
     description: "Become job-ready with ML, DL, Python, and visualization tools",
     image: ML,
     category: "Data Science",
@@ -242,7 +242,7 @@ const CourseCard = ({ course }: { course: Course }) => {
               return <Badge className="absolute top-3 right-3 badge-genai">Featured</Badge>;
             case "Cloud Data Engineering Certification":
               return <Badge className="absolute top-3 right-3 badge-fullstack">Popular </Badge>;
-            case "Data Science with Machine Learning & AI":
+            case "Data Science with Machine Learning & AI Certification":
               return <Badge className="absolute top-3 right-3 badge-business">Best Choice</Badge>;
             case "Data Visualization Course":
               return <Badge className="absolute top-3 right-3 badge-deeplearning">Popular</Badge>;

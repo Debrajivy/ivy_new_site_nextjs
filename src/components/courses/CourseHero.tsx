@@ -62,7 +62,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     sourceCampaignValue = "IIT-G Data Engg";
   } else if (course.title === "Data Science & AI with IIT Guwahati") {
     sourceCampaignValue = "IIT-G Data Science";
-  } else if (course.title === "Data Science with Machine Learning & AI") {
+  } else if (course.title === "Data Science with Machine Learning & AI Certification") {
     sourceCampaignValue = "Nasscom";
   } else if (course.title === "Cloud Data Engineering Certification") {
     sourceCampaignValue = "Data Engineering";
@@ -250,7 +250,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit">
                   <p className="text-[#221e1f] font-bold">Powered by</p>
                 </div>
-                {course.title === "Data Science with Machine Learning & AI" ||
+                {course.title === "Data Science with Machine Learning & AI Certification" ||
                   course.title === "Data science course (Pay after Placement)" ? (
                   <Image
 
@@ -308,7 +308,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Award size={16} className="mr-2" />
                 <span>
-                  {course.title === "Data Science with Machine Learning & AI"
+                  {course.title === "Data Science with Machine Learning & AI Certification"
                     ? "NASSCOM Certification"
                     : course.title === "Cloud Data Engineering Certification" ||
                       course.title === "Data Visualization Course" ||
@@ -394,7 +394,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/view?usp=sharing";
                   } else if (
-                    course.title === "Data Science with Machine Learning & AI"
+                    course.title === "Data Science with Machine Learning & AI Certification"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/view?usp=sharing";
@@ -431,7 +431,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               >
                 Download Syllabus
               </Button>
-              {course.title === "Data Science with Machine Learning & AI" ? (
+              {course.title === "Data Science with Machine Learning & AI Certification" ? (
                 <div
                   style={{
                     display: "flex",

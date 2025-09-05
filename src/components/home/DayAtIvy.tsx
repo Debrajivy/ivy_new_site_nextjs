@@ -79,7 +79,7 @@ const DayAtIvy = () => {
       </div>
     </div>
     {/* Moved CallToAction outside the container div */}
-    <CallToAction />
+    {/* <CallToAction /> */}
 
     {/* <div style={{marginTop:10}} className="mt-12 text-center">
         <div className="inline-flex items-center gap-2 bg-gray-50 px-6 py-3 rounded-lg">
