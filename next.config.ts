@@ -60,7 +60,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/blog/:slug",
+        source: "/blog/:slug*",
         destination: "https://blog.ivyproschool.com/:slug*",
         permanent: true,
       },

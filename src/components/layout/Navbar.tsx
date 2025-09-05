@@ -158,7 +158,10 @@ const allCourses = [
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a"> & { image?: string | StaticImageData }
+  React.ComponentPropsWithoutRef<"a"> & { 
+    image?: string | StaticImageData;
+    href: string; // Make href required
+  }
 >(
   ({ className, title, children, image, href }, ref) => {
     return (
@@ -178,7 +181,9 @@ const ListItem = React.forwardRef<
             )}
             <div>
               <div className="text-sm font-medium leading-none mb-1">{title}</div>
-              <p className="text-sm leading-snug text-muted-foreground line-clamp-2">{children}</p>
+              <div className="text-sm leading-snug text-muted-foreground line-clamp-2">
+                {children}
+              </div>
             </div>
           </Link>
         </NavigationMenuLink>
@@ -493,7 +498,7 @@ const Navbar = () => {
                       onClick={() => setIsOpen(false)}
                     >
                       <img
-                        src={category.image || "/placeholder.svg"}
+                        src={typeof category.image === "string" ? category.image : category.image?.src || "/placeholder.svg"}
                         alt={category.title}
                         className="w-14 h-14 object-contain rounded-md flex-shrink-0"
                       />
