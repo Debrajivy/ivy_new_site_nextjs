@@ -64,6 +64,42 @@ const nextConfig: NextConfig = {
         destination: "https://blog.ivyproschool.com/:slug*",
         permanent: true,
       },
+        // ✅ New redirects
+      {
+        source: "/nasscom-certified-data-science-course",
+        destination: "/courses/data-science-and-ml-course",
+        permanent: true,
+      },
+      {
+        source: "/genai-course-with-iit-guwahati",
+        destination: "/courses/iit-generative-ai-course",
+        permanent: true,
+      },
+      {
+        source: "/data-analytics-with-visualization-certification-course",
+        destination: "/courses/data-analytics-course",
+        permanent: true,
+      },
+      {
+        source: "/register-trial",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/cloud-data-engineering-course-with-iit-guwahati",
+        destination: "/courses/iit-data-engineering-course",
+        permanent: true,
+      },
+      {
+        source: "/data-science-data-visualization-certification-training-course",
+        destination: "/courses/data-visualization-course",
+        permanent: true,
+      },
+      {
+        source: "/business-analytics-certification-training-course",
+        destination: "/courses/business-analytics-course",
+        permanent: true,
+      },
 
     ]
   },
