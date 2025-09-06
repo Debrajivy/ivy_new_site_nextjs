@@ -151,16 +151,7 @@ const Footer = () => {
                   Data Engineering Course in Kolkata
                 </p>
               </Link>
-              <Link href="/courses/data-engineering-course-in-pune">
-                <p className="text-gray-400 text-xs hover:text-white transition-colors">
-                  Data Engineering Course in Pune
-                </p>
-              </Link>
-              <Link href="/courses/data-engineering-course-in-bengaluru">
-                <p className="text-gray-400 text-xs hover:text-white transition-colors">
-                  Data Engineering Course in Bangalore
-                </p>
-              </Link>
+             
             </div>
 
             {/* Column 2: Copyright */}
