@@ -16,10 +16,20 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
   const [showNumber, setShowNumber] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
+    }
+    checkIfMobile()
+    window.addEventListener("resize", checkIfMobile)
+    return () => window.removeEventListener("resize", checkIfMobile)
+  }, [])
+
   if (!course.curriculum || course.curriculum.length === 0) {
     return null;
   }
- 
+
   const handleWhatsAppClick = () => {
     const phoneNumber = '919748441111';
     const defaultMessage = "Hello! I would like to schedule a phone call with a human career advisor from Ivy Professional School. Please provide available time slots.";
@@ -42,14 +52,6 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
 
 
-   useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
-    }
-    checkIfMobile()
-    window.addEventListener("resize", checkIfMobile)
-    return () => window.removeEventListener("resize", checkIfMobile)
-  }, [])
   const pricingDetails: Record<string, { courseFee: number; registration: number; emi: number; months: number }> = {
     'Cloud Data Engineering Course with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 9 },
     'Data Analytics with Visualization Certification Course': { courseFee: 46500, registration: 10000, emi: 4421, months: 9 },
@@ -357,7 +359,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
                 {showContactOptions && (
                   <div className=" mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 animate-fade-in sm:left-auto sm:right-auto sm:w-auto">
-                    <div style={{display:'flex', flexDirection:'row',justifyContent:'center'}} className="flex flex-col sm:flex-row gap-3">
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }} className="flex flex-col sm:flex-row gap-3">
                       <Button
                         className="bg-green-600 hover:bg-green-700 text-white"
                         onClick={handleWhatsAppClick}
