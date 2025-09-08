@@ -82,15 +82,14 @@ const AIAdvisor = () => {
   }
 
   const generateAIResponse = async (userMessage: string) => {
-    setIsTyping(true)
-    setStreamingResponse("")
+  setIsTyping(true);
+  setStreamingResponse("");
+  scrollToBottom();
 
-    scrollToBottom()
-
-    let systemPrompt = ""
-    switch (conversationPhase) {
-      case "rapport":
-        systemPrompt = `Role: 
+  let systemPrompt = "";
+  switch (conversationPhase) {
+    case "rapport":
+      systemPrompt = `Role: 
 You are an AI-powered career advisor for Ivy Professional School. 
 Act like a professional human counsellor: empathetic, brief, and confident.
 Always answer in 3–4 sentences maximum.
@@ -105,11 +104,11 @@ During this phase:
 - Ask about their current job/education and career goals (advancement, switch, specialization).
 - Show genuine interest and empathy.
 - NEVER recommend courses yet.
-- Only proceed when you fully understand their background.`
-        break
+- Only proceed when you fully understand their background.`;
+      break;
 
-      case "guidance":
-        systemPrompt = `Role: 
+    case "guidance":
+      systemPrompt = `Role: 
 You are an AI-powered career advisor for Ivy Professional School. 
 Act like a professional human counsellor: empathetic, brief, and confident.
 Always answer in 3–4 sentences maximum.
@@ -133,11 +132,11 @@ During this phase:
    - Online or offline? Both, simultaneous.
    - Class days? Mainly weekends; some weekday batches.
    - Timings? 2 hrs/day in slots: 11–1, 1–3, 3–5, 5–7.
-   - Non-tech eligibility? Yes, beginner-friendly (DAV or DVR).`
-        break
+   - Non-tech eligibility? Yes, beginner-friendly (DAV or DVR).`;
+      break;
 
-      case "recommendation":
-        systemPrompt = `Role: 
+    case "recommendation":
+      systemPrompt = `Role: 
 You are an AI-powered career advisor for Ivy Professional School. 
 Act like a professional human counsellor: empathetic, brief, and confident.
 Always answer in 3–4 sentences maximum.
@@ -174,95 +173,102 @@ Customization:
 - Be empathetic, brief, and confident (max 3–4 sentences).
 - Mention course names and tools only (no syllabus, fees, duration).
 - Do not guess or invent information.
-- If info isn’t provided here → say: “That’s best answered by our human counsellors. Can I connect you to them?”`
-        break
-    }
+- If info isn’t provided here → say: “That’s best answered by our human counsellors. Can I connect you to them?”`;
+      break;
+  }
 
+  const messages = [
+    { role: "system", content: systemPrompt },
+    ...chatHistory.map((msg) => ({ role: msg.role, content: msg.content })),
+    { role: "user", content: userMessage },
+  ];
 
-    const messages = [
-      { role: "system", content: systemPrompt },
-      ...chatHistory.map((msg) => ({ role: msg.role, content: msg.content })),
-      { role: "user", content: userMessage },
-    ]
+  try {
+    const controller = new AbortController();
+    controllerRef.current = controller;
 
-    try {
-      const controller = new AbortController()
-      controllerRef.current = controller
+    const response = await fetch("/api/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        messages,
+        conversationPhase,
+      }),
+      signal: controller.signal,
+    });
 
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          messages,
-          conversationPhase,
-        }),
-        signal: controller.signal,
-      })
+    if (!response.body) throw new Error("No response stream");
 
-      if (!response.body) throw new Error("No response stream")
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder("utf-8");
+    let fullResponse = "";
 
-      const reader = response.body.getReader()
-      const decoder = new TextDecoder("utf-8")
-      let fullResponse = ""
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
 
-      while (true) {
-        const { value, done } = await reader.read()
-        if (done) break
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split("\n").filter((line) => line.trim().startsWith("data: "));
 
-        const chunk = decoder.decode(value, { stream: true })
-        const lines = chunk.split("\n").filter((line) => line.trim().startsWith("data: "))
+      for (const line of lines) {
+        const message = line.replace(/^data: /, "");
+        if (message === "[DONE]") break;
 
-        for (const line of lines) {
-          const message = line.replace(/^data: /, "")
-          if (message === "[DONE]") break
+        if (!message || message === "[DONE]") continue;
 
-          if (!message || message === "[DONE]") continue
-
-          try {
-            const json = JSON.parse(message)
-            const content = json.choices?.[0]?.delta?.content
-            if (content) {
-              fullResponse += content
-              setStreamingResponse((prev) => prev + content)
-            }
-          } catch (err) {
-            console.warn("Skipping invalid JSON chunk:", message)
+        try {
+          const json = JSON.parse(message);
+          const content = json.choices?.[0]?.delta?.content;
+          if (content) {
+            fullResponse += content;
+            setStreamingResponse((prev) => prev + content);
           }
+        } catch (err) {
+          console.warn("Skipping invalid JSON chunk:", message);
         }
       }
-
-      setChatHistory((prev) => [...prev, { role: "assistant", content: fullResponse }])
-
-      if (
-        conversationPhase === "rapport" &&
-        (userMessage.toLowerCase().includes("goal") ||
-          userMessage.toLowerCase().includes("want") ||
-          userMessage.toLowerCase().includes("aspire"))
-      ) {
-        setConversationPhase("guidance")
-      } else if (
-        conversationPhase === "guidance" &&
-        (fullResponse.includes("recommend") || fullResponse.includes("suggest") || fullResponse.includes("consider"))
-      ) {
-        setConversationPhase("recommendation")
-      }
-    } catch (error) {
-      console.error("Streaming error:", error)
-      setChatHistory((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content: "Sorry, something went wrong. Please try again.",
-        },
-      ])
-    } finally {
-      setIsTyping(false)
-      setStreamingResponse("")
-      controllerRef.current = null
     }
+
+    setChatHistory((prev) => [...prev, { role: "assistant", content: fullResponse }]);
+
+    // ✅ CORRECTED LOGIC: Check user's message to transition to 'guidance'
+    if (
+      conversationPhase === "rapport" &&
+      (userMessage.toLowerCase().includes("goal") ||
+        userMessage.toLowerCase().includes("want") ||
+        userMessage.toLowerCase().includes("aspire") ||
+        userMessage.toLowerCase().includes("career path") ||
+        userMessage.toLowerCase().includes("next step"))
+    ) {
+      setConversationPhase("guidance");
+    } 
+    // ✅ CORRECTED LOGIC: Check user's message to transition to 'recommendation'
+    else if (
+      conversationPhase === "guidance" &&
+      (userMessage.toLowerCase().includes("recommend") ||
+        userMessage.toLowerCase().includes("suggest") ||
+        userMessage.toLowerCase().includes("which course") ||
+        userMessage.toLowerCase().includes("should i study"))
+    ) {
+      setConversationPhase("recommendation");
+    }
+  } catch (error) {
+    console.error("Streaming error:", error);
+    setChatHistory((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        content: "Sorry, something went wrong. Please try again.",
+      },
+    ]);
+  } finally {
+    setIsTyping(false);
+    setStreamingResponse("");
+    controllerRef.current = null;
   }
+};
 
   const handleSendMessage = async () => {
     if (!input.trim()) return
