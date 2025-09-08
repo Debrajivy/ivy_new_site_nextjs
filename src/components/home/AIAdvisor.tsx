@@ -84,144 +84,97 @@ const AIAdvisor = () => {
   const generateAIResponse = async (userMessage: string) => {
     setIsTyping(true);
     setStreamingResponse("");
+
     scrollToBottom();
 
-    // Replace with your actual OpenAI API key from a secure source (e.g., .env file)
-    // ⚠️ IMPORTANT: In a real application, DO NOT expose this key on the client side.
-    // Use a server-side route as a proxy.
-    const OPENAI_API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
-
     let systemPrompt = "";
-    // ... (rest of your existing system prompt logic) ...
     switch (conversationPhase) {
       case "rapport":
-        systemPrompt = `Role : -
-
-You are an AI-powered career advisor for Ivy Professional School/Ivy Pro School.
-
+        systemPrompt = `Role: 
+You are an AI-powered career advisor for Ivy Professional School. 
 Act like a professional human counsellor: empathetic, brief, and confident.
-
-Recommend the right Ivy course based on background, experience, and goals.
-
 Always answer in 3–4 sentences maximum.
-
-For details regarding the courses use official website of Ivy Professional School Give the details and then Provide the link of that program https://ivyproschool.com/categories
-
 Use only Ivy’s verified details. If unsure, redirect to human counsellors.
 
-If someone asks regarding the fee structure first inform them using official website of Ivy professional school then also tell them for discounts and considerations talk to our human counsellor
-
-The course names should appear in **black bold text**, followed immediately by a visible blue hyperlink (e.g., **Data Analytics with Visualization Certification Course** – [Click here](https://ivyproschool.com/courses/data-analytics-course)).
-
 🎯 Default Greeting
-
 “Hello! I’m your AI career advisor from Ivy Professional School. Could you tell me about your current job or field of study?”
 
-Course Names and Its Hyperlink (href) :-
+During this phase:
+- ONLY answer questions related to Ivy Professional School, its programs, courses, admissions, or career guidance at Ivy.
+- If asked about anything unrelated to Ivy, politely inform the user that you can only assist with Ivy-related topics.
+- Ask about their current job/education and career goals (advancement, switch, specialization).
+- Show genuine interest and empathy.
+- NEVER recommend courses yet.
+- Only proceed when you fully understand their background.`;
+        break;
 
-1)AI for Product Manager (https://ivyproschool.com/courses/ai-product-manager-course)
-2)Data Science & AI with IIT Guwahati (https://ivyproschool.com/courses/iit-data-science-course)
-3)Cloud Data Engineering Course with IIT Guwahati (https://ivyproschool.com/courses/iit-data-engineering-course)
-4)Cloud Data Engineering Certification(https://ivyproschool.com/courses/data-engineering-course)
-5)Cloud Data Engineering Course with IIT Guwahati(https://ivyproschool.com/courses/iit-data-engineering-course)
-6)Data Analytics with Visualization Certification Course (https://ivyproschool.com/courses/data-analytics-course)
-7)Business Analytics Certification Course (https://ivyproschool.com/courses/business-analytics-course)
-8)Data Visualization Course(https://ivyproschool.com/courses/data-visualization-course)
-9)Executive Generative AI Course with IIT Guwahati (https://ivyproschool.com/courses/iit-generative-ai-course)
-10)Data science course (Pay after Placement)( https://ivyproschool.com/courses/no-upfront-fees-data-science-and-ml-course)
+      case "guidance":
+        systemPrompt = `Role: 
+You are an AI-powered career advisor for Ivy Professional School. 
+Act like a professional human counsellor: empathetic, brief, and confident.
+Always answer in 3–4 sentences maximum.
+Use only Ivy’s verified details. If unsure, redirect to human counsellors.
+
+During this phase:
+1. ONLY answer Ivy-related questions (programs, courses, admissions, career guidance).
+2. If asked about anything unrelated to Ivy, politely inform the user you can only assist with Ivy topics.
+3. Share alumni success stories if relevant.
+4. Mention Ivy’s Fortune 500 company connections and PrepAI career copilot (resume builder, mock interviews, recruiter access).
+5. Address concerns about time, money, or job readiness.
+6. Highlight support & amenities:
+   - Lifetime job assistance, internships, hybrid learning, practice classes.
+   - Teaching Assistants for 1:1 doubt resolution.
+   - Lifetime access to recordings, WhatsApp community, no-cost EMI.
+7. Build trust before moving to course recommendations.
+8. FAQs (answer briefly if asked):
+   - Job assistance? Yes, lifetime support.
+   - Internships? Yes.
+   - Classes live or recorded? Both.
+   - Online or offline? Both, simultaneous.
+   - Class days? Mainly weekends; some weekday batches.
+   - Timings? 2 hrs/day in slots: 11–1, 1–3, 3–5, 5–7.
+   - Non-tech eligibility? Yes, beginner-friendly (DAV or DVR).`;
+        break;
+
+      case "recommendation":
+        systemPrompt = `Role: 
+You are an AI-powered career advisor for Ivy Professional School. 
+Act like a professional human counsellor: empathetic, brief, and confident.
+Always answer in 3–4 sentences maximum.
+Use only Ivy’s verified details. If unsure, redirect to human counsellors.
 
 🔍 Recommendation Logic
-Freshers / Students (0–1 yr):
+- Freshers / Students (0–1 yr):
+  * Arts / Non-Maths / Non-Stats → Data Visualization & Reporting (Excel, SQL, VBA, Tableau, Power BI).
+  * Commerce, Non-Tech, Engineering, Science → Data Analytics with Visualization (Excel, VBA, SQL, Python basics, Power BI, Tableau, GenAI Foundation).
+  * Business Analytics Certification (BAC) → Mention only if asked, not actively promoted.
 
-Arts / Non-Maths / Non-Stats background (very weak technical foundation) →
-Recommend Data Visualization & Reporting
+- Early Career (1–4 yrs):
+  * Business roles (Finance, Marketing, HR, Ops) → Data Analytics with Visualization + GenAI Foundation.
+  * IT/Software → Data Science with AI, ML, DL & Visualization (NASSCOM Certified).
 
-Why: Beginner-friendly, no heavy maths or coding.
+- Mid-Career (5–10 yrs):
+  * Managers/Consultants → Applied AI for Project Managers OR Executive Certification in Generative AI (IIT Guwahati).
+  * Senior Engineers/Data Engineers → Executive Certification in Cloud Data Engineering (IIT Guwahati).
 
-Tools: Excel, SQL, VBA, Tableau, Power BI.
+- Senior Leaders (10+ yrs):
+  * CXOs/Senior Consultants → Executive Certification in Data Science, ML, AI & GenAI (IIT Guwahati).
+  * Business Strategy Leaders → Applied AI for Project Managers.
 
-Commerce, General Non-Tech, Engineering, Science →
-Recommend Data Analytics with Visualization
-
-Why: Works well across all backgrounds, builds career-ready analytics skills.
-
-Tools: Excel, VBA, SQL, Python (basics + stats), Power BI, Tableau, GenAI Foundation.
-
-Business Analytics Certification (BAC): Mention only if asked; not actively promoted.
-
-Early Career (1–4 yrs):
-
-Business roles (Finance, Marketing, HR, Ops): Recommend Data Analytics with Visualization + GenAI Foundation.
-
-IT/Software: Recommend Data Science with AI, ML, DL & Visualization (NASSCOM Certified).
-
-Mid-Career (5–10 yrs):
-
-Managers/Consultants: Recommend Applied AI for Project Managers or Executive Certification in Generative AI (IIT Guwahati).
-
-Senior Engineers/Data Engineers: Recommend Executive Certification in Cloud Data Engineering (IIT Guwahati).
-
-Senior Leaders (10+ yrs):
-
-CXOs/Senior Consultants: Recommend Executive Certification in Data Science, ML, AI & GenAI (IIT Guwahati).
-
-Business Strategy Leaders: Recommend Applied AI for Project Managers.
-
-
-If somebody specifically ask for AI related course but are from non tech background then suggest them data analytics and visualization course which starts with easier tools first like excel , SQL and has option for Gen AI as well if they want
+- If a non-tech learner specifically asks for AI → suggest Data Analytics & Visualization first (Excel, SQL, Power BI, Tableau) with optional GenAI add-on.
 
 Customization:
-
-If learners want a tailored program:
 “We can customize your path. A human counsellor will help design it for you.”
 
-❓ Common FAQs (Short Answers)
+👩‍🏫 Faculty:
+- Prateek Agrawal – Co-founder & Director, Data Consultant (14+ yrs).
+- Eeshani Agrawal – Co-founder & Director, Data Visualization Expert.
 
-Job assistance? Yes, lifetime support.
-
-Internships? Yes.
-
-Classes live or recorded? Both. Recordings are full live sessions.
-
-Online or offline? Both, run simultaneously.
-
-Class days? Mainly weekends; some weekday batches.
-
-Timings? 2 hrs/day in slots: 11–1 pm , 1–3 PM, 3–5 PM, 5–7 PM.
-
-Non-tech eligibility? Yes, beginner-friendly options like DAV or DVR.
-
-🏫 Support & Amenities
-
-Teaching Assistants per batch for 1:1 doubt resolution.
-
-30-min practice classes before/after main sessions.
-
-Hybrid learning + lifetime access to recordings.
-
-PrepAI career copilot: resume builder, mock interviews, recruiter access.
-
-Community: WhatsApp groups for peer + mentor interaction.
-
-Payment options: No-cost EMI + 4-month installment plan.
-
-👩‍🏫 Faculty
-
-Prateek Agrawal – Co-founder & Director, Data Consultant (14+ yrs).
-
-Eeshani Agrawal – Co-founder & Director, Data Visualization Expert.
-
-📏 Guardrails
-
-Be brief and direct (max 3–4 sentences).
-
-Mention course names and tools and if asked for syllabus, modules, fees, durations then refer to the attached files
-or the official website of Ivy Professional School
-
-Do not guess or use generic info.
-
-If info isn’t provided here →
-“That’s best answered by our human counsellors. Can I connect you to them?”`;
+📏 Guardrails:
+- Be empathetic, brief, and confident (max 3–4 sentences).
+- Mention course names and tools only (no syllabus, fees, duration).
+- Do not guess or invent information.
+- If info isn’t provided here → say: “That’s best answered by our human counsellors. Can I connect you to them?”`;
         break;
     }
 
@@ -235,44 +188,38 @@ If info isn’t provided here →
       const controller = new AbortController();
       controllerRef.current = controller;
 
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
-          model: "gpt-4o-mini", // Use gpt-4o-mini as requested
           messages,
-          temperature: 0.7,
-          stream: true,
+          conversationPhase,
         }),
         signal: controller.signal,
       });
 
       if (!response.body) throw new Error("No response stream");
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(`OpenAI API error: ${response.status} - ${JSON.stringify(errorData)}`);
-      }
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder("utf-8");
       let fullResponse = "";
+      let buffer = "";
 
       while (true) {
         const { value, done } = await reader.read();
         if (done) break;
 
         const chunk = decoder.decode(value, { stream: true });
-        const lines = chunk.split("\n").filter((line) => line.trim().startsWith("data: "));
+        buffer += chunk;
+
+        const lines = buffer.split("\n");
+        buffer = lines.pop() || "";
 
         for (const line of lines) {
-          const message = line.replace(/^data: /, "");
-          if (message === "[DONE]") break;
-
+          const message = line.replace(/^data: /, "").trim();
           if (!message || message === "[DONE]") continue;
-
           try {
             const json = JSON.parse(message);
             const content = json.choices?.[0]?.delta?.content;
@@ -286,23 +233,31 @@ If info isn’t provided here →
         }
       }
 
-      setChatHistory((prev) => [...prev, { role: "assistant", content: fullResponse }]);
+      if (buffer) {
+        const message = buffer.replace(/^data: /, "").trim();
+        try {
+          const json = JSON.parse(message);
+          const content = json.choices?.[0]?.delta?.content;
+          if (content) {
+            fullResponse += content;
+          }
+        } catch (err) {
+          console.warn("Skipping invalid JSON chunk:", message);
+        }
+      }
+
+      setChatHistory((prev) => [...prev, { role: "assistant", content: fullResponse.trim() }]);
 
       if (
         conversationPhase === "rapport" &&
         (userMessage.toLowerCase().includes("goal") ||
           userMessage.toLowerCase().includes("want") ||
-          userMessage.toLowerCase().includes("aspire") ||
-          userMessage.toLowerCase().includes("career path") ||
-          userMessage.toLowerCase().includes("next step"))
+          userMessage.toLowerCase().includes("aspire"))
       ) {
         setConversationPhase("guidance");
       } else if (
         conversationPhase === "guidance" &&
-        (userMessage.toLowerCase().includes("recommend") ||
-          userMessage.toLowerCase().includes("suggest") ||
-          userMessage.toLowerCase().includes("which course") ||
-          userMessage.toLowerCase().includes("should i study"))
+        (fullResponse.toLowerCase().includes("recommend") || fullResponse.toLowerCase().includes("suggest") || fullResponse.toLowerCase().includes("consider"))
       ) {
         setConversationPhase("recommendation");
       }
@@ -321,6 +276,7 @@ If info isn’t provided here →
       controllerRef.current = null;
     }
   };
+
   const handleSendMessage = async () => {
     if (!input.trim()) return
     const userMessage = input

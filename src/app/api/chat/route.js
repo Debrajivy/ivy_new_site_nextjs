@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 
 export async function POST(request) {
   try {
-    const { messages, conversationPhase } = await request.json()
+    const { messages } = await request.json()
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -11,7 +11,7 @@ export async function POST(request) {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-4o", // Changed from gpt-4o-mini to gpt-4o
         messages,
         temperature: 0.7,
         stream: true,
@@ -22,29 +22,7 @@ export async function POST(request) {
       throw new Error(`OpenAI API error: ${response.status}`)
     }
 
-    // Create a readable stream to forward the OpenAI response
-    const stream = new ReadableStream({
-      async start(controller) {
-        const reader = response.body.getReader()
-        const decoder = new TextDecoder()
-
-        try {
-          while (true) {
-            const { done, value } = await reader.read()
-            if (done) break
-
-            const chunk = decoder.decode(value, { stream: true })
-            controller.enqueue(new TextEncoder().encode(chunk))
-          }
-        } catch (error) {
-          controller.error(error)
-        } finally {
-          controller.close()
-        }
-      },
-    })
-
-    return new NextResponse(stream, {
+    return new NextResponse(response.body, {
       headers: {
         "Content-Type": "text/plain; charset=utf-8",
         "Cache-Control": "no-cache",
