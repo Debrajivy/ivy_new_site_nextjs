@@ -56,7 +56,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     'Cloud Data Engineering Course with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 9 },
     'Data Analytics with Visualization Certification Course': { courseFee: 46500, registration: 10000, emi: 4421, months: 9 },
     'Data Visualization Course': { courseFee: 31500, registration: 10000, emi: 2604, months: 9 },
-    'Data Science with Machine Learning & AI Certification': { courseFee: 56000, registration: 10000, emi: 6601, months: 9 },
+    'Data Science with Machine Learning & AI Certification': { courseFee: 56000, registration: 10000, emi: 5571, months: 9 },
     'Business Analytics Certification Course': { courseFee: 39000, registration: 10000, emi: 3512, months: 9 },
     'Cloud Data Engineering Certification': { courseFee: 55000, registration: 10000, emi: 6601, months: 9 },
     'Data Science & AI with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 12 },
@@ -69,7 +69,11 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     <section style={{ marginTop: -30, paddingBottom: 20 }} className="bg-gray-50">
       {/* Main Curriculum Content */}
       <div className="container mx-auto px-4">
+
+         
         <div className="max-w-3xl mx-auto">
+
+
           <div style={{ paddingTop: 20 }} className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
 
@@ -82,19 +86,19 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                     {course.title !== "Data science course (Pay after Placement)"
                       ? (
                         <>
-                          What will I learn in <span style={{ whiteSpace: 'nowrap', color: '#16a5db' }}>{course.title}</span> course?
+                          Which tools will I learn in <span style={{ whiteSpace: 'nowrap', color: '#16a5db' }}>{course.title}</span> course?
                         </>
                       )
                       : (
                         <>
-                          What will I learn in Data Science Course?
+                          Which tools will I learn in Data Science Course?
                         </>
                       )
                     }
                   </>
                   :
                   <>
-                    What will I learn in Data Engineering Course in Kolkata?
+                    Which tools will I learn in Data Engineering Course in Kolkata?
 
 
                   </>

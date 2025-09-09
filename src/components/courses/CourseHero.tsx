@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Star, Award } from "lucide-react";
+import { Clock, Users, Star, Award , CheckCircle} from "lucide-react";
 import { Course } from "@/lib/api";
 import E from "@/assests/E&ICT.webp";
 import ibm from "@/assests/IBM2.webp";
@@ -382,49 +382,57 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     "Executive Generative AI Course with IIT Guwahati"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1G7uBOCpBKFvzEyXHM34vc6afqUJmdF_A/view?usp=sharing";
+                      "https://drive.google.com/file/d/1G7uBOCpBKFvzEyXHM34vc6afqUJmdF_A/preview";
                   } else if (
                     course.title === "Data Science & AI with IIT Guwahati"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/13O3soUlLzRLcJGezJ23HmnPlQSerT_JJ/view?usp=sharing";
+                      "https://drive.google.com/file/d/13O3soUlLzRLcJGezJ23HmnPlQSerT_JJ/preview";
                   } else if (
                     course.title === "Cloud Data Engineering Certification"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/view?usp=sharing";
+                      "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/preview";
                   } else if (
                     course.title === "Data Science with Machine Learning & AI Certification"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/view?usp=sharing";
+                      "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/preview";
                   } else if (course.title === "Data Visualization Course") {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1TpyFrVqjCLdAsIEc-p9S2pUaD6AgJsXN/view?usp=sharing";
+                      "https://drive.google.com/file/d/1TpyFrVqjCLdAsIEc-p9S2pUaD6AgJsXN/preview";
                   } else if (
                     course.title ===
                     "Data Analytics with Visualization Certification Course"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1ih3Z5PO5ExixAxmoBu0SJKjYs5-wDRp9/view?usp=sharing";
+                      "https://drive.google.com/file/d/1ih3Z5PO5ExixAxmoBu0SJKjYs5-wDRp9/preview";
                   } else if (
                     course.title === "Business Analytics Certification Course"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1u64bLjLe_lgItjmn9OagsaZNuyd9bz8K/view?usp=sharing";
+                      "https://drive.google.com/file/d/1u64bLjLe_lgItjmn9OagsaZNuyd9bz8K/preview";
                   } else if (
                     course.title ===
                     "Cloud Data Engineering Course with IIT Guwahati"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1PrR-EKLovlmE3lxKFILL6eXhlCWeOmAB/view?usp=sharing";
+                      "https://drive.google.com/file/d/1PrR-EKLovlmE3lxKFILL6eXhlCWeOmAB/preview";
                   } else if (course.title === "AI for Product Manager") {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1Xmqo75SkOo9RBOUrgr0Xsn_XQUMUJJ2a/preview";
                   }
+                  else if (
+                    course.title === "Data science course (Pay after Placement)"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/preview";
+                  }
+
+                  //city specific
                   else if (course.title === "Data Engineering Course in Kolkata") {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/view?usp=sharing";
+                      "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/preview";
                   }
                   window.open(syllabusUrl, "_blank");
                 }}
@@ -588,6 +596,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     </div>
                   </div>
                 </div>
+
+             
               </form>
             </div>
           </div>

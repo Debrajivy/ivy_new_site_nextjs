@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Bot, Send, MessageSquare, Phone } from "lucide-react"
+import { Bot, Send, MessageSquare, Phone, ShieldCheck } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 
 interface ChatMessage {
@@ -13,6 +13,9 @@ interface ChatMessage {
 
 const AIAdvisor = () => {
   const [input, setInput] = useState("")
+  const [showCaptcha, setShowCaptcha] = useState(false);
+  const [captchaCode, setCaptchaCode] = useState("");
+  const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState<ChatMessage[]>([
     {
       role: "assistant",
@@ -30,9 +33,18 @@ const AIAdvisor = () => {
   const [showNumber, setShowNumber] = useState(false)
   const [showContactOptions, setShowContactOptions] = useState(false);
 
+  // your original WhatsApp function but gated by captcha
   const handleWhatsAppClick = () => {
-    const phoneNumber = '919748441111';
-    const defaultMessage = "Hello! I would like to schedule a phone call with a human career advisor from Ivy Professional School. Please provide available time slots.";
+    if (userInput !== captchaCode) {
+      alert("Verification failed. Please try again.");
+      generateCaptcha();
+      setUserInput("");
+      return;
+    }
+
+    const phoneNumber = "919748441111";
+    const defaultMessage =
+      "Hello! I would like to schedule a phone call with a human career advisor from Ivy Professional School. Please provide available time slots.";
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const encodedMessage = encodeURIComponent(defaultMessage);
 
@@ -40,7 +52,11 @@ const AIAdvisor = () => {
       ? `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`
       : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, "_blank");
+
+    // reset captcha state
+    setShowCaptcha(false);
+    setUserInput("");
   };
 
   const handleCallClick = () => {
@@ -80,6 +96,16 @@ const AIAdvisor = () => {
       return () => clearTimeout(timer)
     }
   }
+
+  // generate random captcha code like a4T6bY7
+  const generateCaptcha = () => {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let code = "";
+    for (let i = 0; i < 7; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    setCaptchaCode(code);
+  };
 
   const generateAIResponse = async (userMessage: string) => {
     setIsTyping(true)
@@ -384,7 +410,6 @@ If unsure:
               </div>
             </CardContent>
           </Card>
-
           <div className="mt-6 flex justify-center relative">
             <Button
               variant="outline"
@@ -398,28 +423,76 @@ If unsure:
             {showContactOptions && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 animate-fade-in sm:left-auto sm:right-auto sm:w-auto">
                 <div className="flex flex-col sm:flex-row gap-3">
+                  {/* WhatsApp button triggers captcha modal */}
                   <Button
                     className="bg-green-600 hover:bg-green-700 text-white"
-                    onClick={handleWhatsAppClick}
+                    onClick={() => {
+                      generateCaptcha();
+                      setShowCaptcha(true);
+                    }}
                   >
                     <MessageSquare className="mr-2 h-4 w-4" />
                     Enquire on WhatsApp
                   </Button>
 
+                  {/* Call button */}
                   <Button
                     variant="outline"
-                    onClick={handleCallClick}
                     className="flex items-center justify-center"
+                    onClick={() => {
+                      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                        window.open("tel:7676882222");
+                      }
+                    }}
                   >
                     <Phone className="mr-2 h-4 w-4" />
-                    {/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ? (
-                      "Call Now"
-                    ) : (
-                      <>
-                        Call: <span className="ml-1 font-mono">7676882222</span>
-                      </>
-                    )}
+                    {/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+                      ? "Call Now"
+                      : (
+                        <>
+                          Call: <span className="ml-1 font-mono">7676882222</span>
+                        </>
+                      )}
                   </Button>
+                </div>
+              </div>
+            )}
+
+            {/* Captcha Modal */}
+            {showCaptcha && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+                <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+                  <ShieldCheck className="w-10 h-10 text-blue-600 mx-auto mb-3" />
+                  <h3 className="text-lg font-bold mb-2">Verification Required</h3>
+                  <p className="text-sm text-gray-600 mb-4">Enter the code below to continue</p>
+
+                  <div className="font-mono text-lg tracking-widest bg-gray-100 px-4 py-2 rounded-lg mb-3">
+                    {captchaCode}
+                  </div>
+
+                  <input
+                    type="text"
+                    value={userInput}
+                    onChange={(e) => setUserInput(e.target.value)}
+                    placeholder="Enter the code"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 mb-4"
+                  />
+
+                  <div className="flex justify-between gap-2">
+                    <Button
+                      className="flex-1 bg-green-600 hover:bg-green-700 text-white"
+                      onClick={handleWhatsAppClick}
+                    >
+                      Verify & Continue
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="flex-1"
+                      onClick={() => setShowCaptcha(false)}
+                    >
+                      Cancel
+                    </Button>
+                  </div>
                 </div>
               </div>
             )}

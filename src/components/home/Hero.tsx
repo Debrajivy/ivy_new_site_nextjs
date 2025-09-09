@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Award, Users } from 'lucide-react';
-
+import { CheckCircle } from "lucide-react"
 
 import ratingIcon from '@/assests/rating.png';
 import { useRouter } from 'next/navigation';
@@ -10,7 +10,7 @@ import AutpPlayYoutube from '../AutoPlayYoutube';
 
 const Hero = () => {
 
-    const router = useRouter(); // ⬅️ add this inside component
+  const router = useRouter(); // ⬅️ add this inside component
 
   useEffect(() => {
     window.scrollTo({
@@ -40,7 +40,7 @@ const Hero = () => {
 
   const API_URL = `${LEAD_SQUARED_API_HOST}LeadManagement.svc/Lead.Create?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -48,7 +48,7 @@ const Hero = () => {
     }));
   };
 
- const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     setSubmitStatus('submitting');
@@ -299,6 +299,30 @@ const Hero = () => {
                       <span className="text-red-600 font-medium">Limited seats left!</span>
                     </div>
                   </div>
+                  {/* <div className="flex flex-col items-center mt-5 text-center" style={{ marginTop: -20 }}>
+                    <div className="flex flex-col items-center mt-5 text-center">
+                      <div className="bg-white shadow-md rounded-xl px-6 py-3 flex flex-wrap items-center justify-center text-[11px] sm:text-xs md:text-sm font-bold text-gray-800 gap-2 sm:gap-3">
+
+                        <span style={{ color: '#013a81' }}>Dedicated Teaching Assistants for 1:1 doubt resolution.|</span>
+                        <span style={{ color: '#013a81' }}>30-min practice classes before and after main sessions.|</span>
+                        <span style={{ color: '#013a81' }}>Hybrid learning model with lifetime access to recordings.|</span>
+                        <span style={{ color: '#013a81' }}>PrepAI career copilot: resume builder, mock interviews, recruiter connects.|</span>
+                        <span style={{ color: '#013a81' }}>Active community groups on WhatsApp for peer and mentor interaction.|</span>
+                        <span style={{ color: '#013a81' }}>Flexible payment plans with no-cost EMI and 4-month installments.|</span>
+                      </div>
+                    </div>
+
+
+                  </div> */}
+
+
+                
+
+
+
+
+
+
                 </div>
               </form>
             </div>

@@ -1,5 +1,5 @@
 "use client"
-
+import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Star, ChevronLeft, ChevronRight, PlayCircle, ArrowRight, Linkedin, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -204,10 +204,10 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
       <CardContent className="p-6 flex flex-col h-full">
         {/* Rating */}
         <div className="flex mb-4 justify-center items-center">
-          <Image 
-          width={16} // Adjusted width to 16px
-          height={16} // Adjusted height to 16px 
-          src={Google} alt="Google" className="h-4 w-4 mr-2" />
+          <Image
+            width={16} // Adjusted width to 16px
+            height={16} // Adjusted height to 16px 
+            src={Google} alt="Google" className="h-4 w-4 mr-2" />
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
@@ -251,8 +251,8 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
               title="View LinkedIn Profile"
             >
               <img
-                alt="LinkedIn" 
-              className="rounded-[50%] w-3 h-3 " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/72px-LinkedIn_icon.svg.png?20210220164014" />
+                alt="LinkedIn"
+                className="rounded-[50%] w-3 h-3 " src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/72px-LinkedIn_icon.svg.png?20210220164014" />
             </a>
           )}
           <div>
@@ -324,6 +324,47 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 }
 
 const Testimonials = () => {
+  const [showContactOptions, setShowContactOptions] = useState(false);
+  const [showCaptcha, setShowCaptcha] = useState(false);
+  const [captchaCode, setCaptchaCode] = useState("");
+  const [userInput, setUserInput] = useState("");
+
+  // generate random captcha like a4T6bY7
+  const generateCaptcha = () => {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let code = "";
+    for (let i = 0; i < 7; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    setCaptchaCode(code);
+  };
+
+  // your original WhatsApp function but gated by captcha
+  const handleWhatsAppClick = () => {
+    if (userInput !== captchaCode) {
+      alert("Verification failed. Please try again.");
+      generateCaptcha();
+      setUserInput("");
+      return;
+    }
+
+    const phoneNumber = "919748441111";
+    const defaultMessage =
+      "Hello! I'm interested in transforming my career into AI with Ivy Pro School. Could you please help me with more information?";
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const encodedMessage = encodeURIComponent(defaultMessage);
+
+    const whatsappUrl = isMobile
+      ? `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`
+      : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank");
+
+    // reset captcha state
+    setShowCaptcha(false);
+    setUserInput("");
+  };
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -331,8 +372,7 @@ const Testimonials = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div className="text-center md:text-left w-full md:w-auto">
             <h2 className="text-4xl font-bold mb-4 text-[#030712]">
-              What Are Alumni Saying About Their Career
-            </h2>
+              What are alumni says about Ivy Pro School reviews            </h2>
             <p className="max-w-2xl mx-auto md:mx-0 text-lg" style={{ color: "#79808a" }}>
               These reviews show how our faculty, curriculum, and teaching methods, real world projects have helped our students learn the right skills, gain practical experience to find jobs in top companies.
             </p>
@@ -383,14 +423,7 @@ const Testimonials = () => {
                 className="text-white font-semibold"
                 style={{ backgroundColor: '#25D366' }} // WhatsApp green color
                 onClick={() => {
-                  const phoneNumber = '919748441111';
-                  const defaultMessage = "Hello! I'm interested in transforming my career into AI with Ivy Pro School. Could you please help me with more information?";
-                  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-                  const encodedMessage = encodeURIComponent(defaultMessage);
-                  const whatsappUrl = isMobile
-                    ? `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`
-                    : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-                  window.open(whatsappUrl, '_blank');
+                handleWhatsAppClick();
                 }}
               >
                 <MessageSquare className="mr-2 h-5 w-5" />

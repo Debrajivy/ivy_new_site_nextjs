@@ -56,8 +56,41 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
   return (
     <section className="py-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          <div className="bg-white shadow-md rounded-xl px-6 py-4 w-full">
+                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px] sm:text-xs md:text-sm font-bold text-gray-800">
+                       <li className="flex items-start gap-2 text-[#013a81]">
+                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                         <span>Dedicated Teaching Assistants for 1:1 doubt resolution</span>
+                       </li>
+                       <li className="flex items-start gap-2 text-[#013a81]">
+                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                         <span>30-min practice classes before and after main sessions</span>
+                       </li>
+                       <li className="flex items-start gap-2 text-[#013a81]">
+                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                         <span>Hybrid learning model with lifetime access to recordings</span>
+                       </li>
+                       <li className="flex items-start gap-2 text-[#013a81]">
+                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                         <span>PrepAI: resume builder, interview & recruiter connects</span>
+                       </li>
+                       <li className="flex items-start gap-2 text-[#013a81]">
+                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                         <span>Active WhatsApp groups for peer & mentor</span>
+                       </li>
+                       <li className="flex items-start gap-2 text-[#013a81]">
+                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                         <span>No-cost EMI + 4-month installment plans</span>
+                       </li>
+                     </ul>
+                   </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" style={{marginTop:40}}>
+
+
           <div className="lg:col-span-2 space-y-8">
+
+          
             <div>
               <h2 className="text-3xl font-bold mb-4">
 
@@ -77,7 +110,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                   )
                 }
 
-            
+
               </h2>
 
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">

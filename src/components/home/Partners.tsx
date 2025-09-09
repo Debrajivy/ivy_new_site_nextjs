@@ -102,7 +102,38 @@ const Partners = () => {
   return (
     <section className="bg-gray-50 py-8 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="mb-8 md:mb-12">
+
+        <div className="flex flex-col items-center mt-5 text-center" style={{marginTop:-40}}>
+          <div className="bg-white shadow-md rounded-xl px-6 py-4 w-full">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px] sm:text-xs md:text-sm font-bold text-gray-800">
+              <li className="flex items-start gap-2 text-[#013a81]">
+                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                <span>Dedicated Teaching Assistants for 1:1 doubt resolution</span>
+              </li>
+              <li className="flex items-start gap-2 text-[#013a81]">
+                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                <span>30-min practice classes before and after main sessions</span>
+              </li>
+              <li className="flex items-start gap-2 text-[#013a81]">
+                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                <span>Hybrid learning model with lifetime access to recordings</span>
+              </li>
+              <li className="flex items-start gap-2 text-[#013a81]">
+                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                <span>PrepAI: resume builder, interview & recruiter connects</span>
+              </li>
+              <li className="flex items-start gap-2 text-[#013a81]">
+                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                <span>Active WhatsApp groups for peer & mentor</span>
+              </li>
+              <li className="flex items-start gap-2 text-[#013a81]">
+                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
+                <span>No-cost EMI + 4-month installment plans</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="mb-8 md:mb-12" style={{marginTop:40}}>
           <h2 className="text-center text-2xl sm:text-3xl font-bold text-gray-800 mb-4 px-2">
             Stand out with our Reputed Partnership Certification
           </h2>
@@ -127,17 +158,17 @@ const Partners = () => {
                 )}
 
                 {/* Big Size Logo - Directly on the card, no nested border/box */}
-                <div style={{marginTop:-20}} className="flex items-center justify-center mb-4">
+                <div style={{ marginTop: -20 }} className="flex items-center justify-center mb-4">
                   <Image
-                  width={128}
-                  height={128}
+                    width={128}
+                    height={128}
                     src={item.logo}
                     alt={`${item.description} logo`}
                     className="h-32 w-32 object-contain" // Increased size to h-32 w-32
                   />
                 </div>
 
-                <p style={{marginTop:-30}} className="text-base font-medium text-gray-700 mb-2 leading-tight">{item.description}</p>
+                <p style={{ marginTop: -30 }} className="text-base font-medium text-gray-700 mb-2 leading-tight">{item.description}</p>
 
                 {/* Badge as blue text with checkmark */}
                 <span className="text-[#00a1db] text-sm flex items-center gap-1 font-medium whitespace-nowrap">
@@ -161,8 +192,8 @@ const Partners = () => {
             {partners.map((partner) => (
               <div key={partner.name} className="flex items-center justify-center w-[calc(33.333%)] sm:w-24 h-20 sm:h-24">
                 <Image
-                width={128}
-                height={128}
+                  width={128}
+                  height={128}
                   src={partner.logo}
                   alt={`${partner.name} logo`}
                   className="h-14 sm:h-16 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
@@ -197,8 +228,8 @@ const Partners = () => {
                 <Card key={event.id} className="overflow-hidden border-none shadow-md">
                   <div>
                     <Image
-                    width={128}
-                    height={128}
+                      width={128}
+                      height={128}
                       src={event.image}
                       alt={`Training at ${event.company}`}
                       className="w-full object-cover"

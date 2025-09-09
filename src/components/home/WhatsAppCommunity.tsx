@@ -14,8 +14,7 @@ const WhatsAppCommunity = () => {
 
     const whatsappUrl = isMobile
       ? `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`
-      : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-
+      : `https://chat.whatsapp.com/ImcpUAYaD87FVwce6ZMaYN`;
     window.open(whatsappUrl, '_blank');
   };
 
