@@ -15,6 +15,7 @@ import DayAtIvy from '@/components/home/DayAtIvy';
 import FAQ from '@/components/home/FAQ';
 import WhatsAppCommunity from '@/components/home/WhatsAppCommunity';
 import PlacementReportCTA from '@/components/home/PlacementReportCTA';
+import CertificateVerification from '@/app/certificateVerification/page';
 
 const Index: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const Index: React.FC = () => {
         <Partners />
         <FeaturedCourses />
         <CallToAction />
-
+        {/* <CertificateVerification /> */}
         <PlacementReportCTA />
         <TopFaculty />
         <DayAtIvy />

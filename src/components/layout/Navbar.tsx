@@ -3,9 +3,10 @@
 import React, { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap, NotebookPen } from "lucide-react"
+import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap, NotebookPen, Building, Trophy } from "lucide-react"
 import review from "../../assests/review.webp"
 import Image, { StaticImageData } from "next/image"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -25,10 +26,10 @@ import BA from "@/assests/BA.webp"
 import DV from "@/assests/DV.webp"
 import CDI from "@/assests/CDI.webp"
 import AIPM from "@/assests/AIPM.webp"
-
+import icon from "../../assests/icon.webp"
 
 const courseCategories = {
-   "AI for Product Manager":[
+  "AI for Product Manager": [
     {
       title: "AI for Product Managers",
       href: "/courses/ai-product-manager-course",
@@ -102,7 +103,7 @@ const courseCategories = {
       image: ML,
     },
   ],
- 
+
 }
 
 const allCourses = [
@@ -158,7 +159,7 @@ const allCourses = [
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a"> & { 
+  React.ComponentPropsWithoutRef<"a"> & {
     image?: string | StaticImageData;
     href: string; // Make href required
   }
@@ -372,7 +373,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <img
-                src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png"
+                src={typeof icon === "string" ? icon : icon.src}
                 alt="Ivy Professional School"
                 className="h-9"
               />
@@ -431,21 +432,71 @@ const Navbar = () => {
                     </button>
                   </Link>
                 </NavigationMenuItem>
+                {/* 🎯 Updated Code for Case Studies Dropdown */}
                 <NavigationMenuItem>
+                  <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium">
+                    Resources
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    {/* Set a dark background for the entire dropdown content */}
+                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]" style={{ backgroundColor: '#013a81' }}>
+                      <li className="row-span-3">
+                        <NavigationMenuLink asChild>
+                          <Link
+                            // Enhanced class names for a better visual effect
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-white p-6 no-underline outline-none transition-all duration-300 transform hover:scale-[1.02] shadow-2xl hover:bg-gray-50"
+                            href="/casestudies"
+                          >
+                            <Trophy className="h-6 w-6 text-amber-500" />
+                            <div className="mb-2 mt-4 text-lg font-medium text-[#000B19]">
+                              Case Studies
+                            </div>
+                            <p className="text-sm leading-tight text-gray-700">
+                              Explore our case studies, discover real-world applications and transformations.
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      {/* Updated ListItem for Bootcamp for clarity */}
+                      <ListItem
+                        href="/bootcamp"
+                        title="Bootcamp"
+                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02]"
+                      >
+                        Unlock Your Potential with Expert-led Bootcamps.
+                      </ListItem>
+                      {/* New ListItem for Blog to create a box-like appearance */}
+                      <ListItem
+                        href="https://ivyproschool.com/blog"
+                        title="Blog"
+                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02]"
+                      >
+                        Explore the Future of Data, Gen AI, Analytics & Career Growth with Ivy's Insights
+                      </ListItem>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                {/* 🎯 End of Updated Code */}
+
+
+
+
+
+                {/* <NavigationMenuItem>
                   <Link href="/bootcamp" className="flex items-center px-3 py-2 text-sm font-medium">
                     Bootcamp
                   </Link>
-                </NavigationMenuItem>
+                </NavigationMenuItem> */}
                 <NavigationMenuItem>
                   <Link href="/enterprise" className="flex items-center px-3 py-2 text-sm font-medium">
                     Enterprise
                   </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
+                {/* <NavigationMenuItem>
                   <a style={{ fontSize: 14 }} href="https://ivyproschool.com/blog" >
                     Blog
                   </a>
-                </NavigationMenuItem>
+                </NavigationMenuItem> */}
               </NavigationMenuList>
             </NavigationMenu>
 
@@ -474,98 +525,105 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden fixed inset-0 z-40 mt-16 bg-white overflow-y-auto shadow-lg">
           <div className="container mx-auto px-4 py-6">
-            <div className="mb-8">
-              <button
-                className="w-full text-left flex items-center justify-between text-lg font-bold text-gray-900 mb-4 px-2 py-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
-                onClick={() => setIsCoursesExpanded(!isCoursesExpanded)}
-              >
-                <div className="flex items-center gap-2">
-                  <BookOpen className="h-5 w-5 text-indigo-600" />
-                  Our Courses
-                </div>
-                <ChevronDown
-                  className={`h-5 w-5 text-gray-600 transition-transform ${isCoursesExpanded ? "rotate-180" : "rotate-0"}`}
-                />
-              </button>
-
-              {isCoursesExpanded && (
-                <div className="grid grid-cols-1 gap-3 mt-4 animate-fade-in-slide-down">
-                  {allCourses.map((category) => (
-                    <Link
-                      key={category.title}
-                      href={category.href}
-                      className="flex items-start gap-3 p-3 rounded-lg border border-gray-200 bg-white hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <img
-                        src={typeof category.image === "string" ? category.image : category.image?.src || "/placeholder.svg"}
-                        alt={category.title}
-                        className="w-14 h-14 object-contain rounded-md flex-shrink-0"
-                      />
-
-                      <div className="flex-1 min-w-0 space-y-1">
-                        <h3 className="text-base font-semibold text-gray-900 group-hover:text-blue-700 break-words">
-                          {category.title}
-                        </h3>
-                        <p className="text-sm text-gray-600 line-clamp-2 break-words">{category.description}</p>
-                      </div>
-
-                      <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-blue-500 mt-1 flex-shrink-0" />
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div className="space-y-3 mb-8">
-              <h2 className="text-lg font-bold text-gray-900 mb-4 px-2 flex items-center gap-2">
-                <ChevronDown className="h-5 w-5 text-green-600" />
-                Quick Links
+            <div className="flex flex-col space-y-2">
+              {/* Main "Our Courses" Link */}
+              <h2 style={{ color: 'black' }} className="text-lg font-bold text-white-900 mb-2 px-2 flex items-center gap-2">
+                <BookOpen style={{ color: 'black' }} className="h-5 w-5 text-ivy-white" />
+                Our Courses
               </h2>
 
-              <Link
-                href="/alumni"
-                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                <Briefcase className="h-5 w-5 text-purple-600" />
-                <span className="font-medium text-gray-800"> Alumni & Reviews </span>
-              </Link>
-              <Link
-                href="/bootcamp"
-                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                <GraduationCap className="h-6 w-6 text-blue-600" />
-                <span className="font-medium text-gray-800">Bootcamp</span>
-              </Link>
-              <Link
-                href="/enterprise"
-                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                <GraduationCap className="h-6 w-6 text-blue-600" />
-                <span className="font-medium text-gray-800">Enterprise</span>
-              </Link>
+              {/* All Courses in a single list */}
+              {allCourses.map((category) => (
+                <Link
+                  key={category.title}
+                  href={category.href}
+                  className="flex items-start gap-3 p-3 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 hover:border-ivy-blue transition-all duration-200 group"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <img
+                    src={typeof category.image === "string" ? category.image : category.image?.src || "/placeholder.svg"}
+                    alt={category.title}
+                    className="w-10 h-10 object-contain rounded-md flex-shrink-0"
+                  />
+                  <div className="flex-1 min-w-0 space-y-1">
+                    <h3 className="text-base font-semibold text-gray-900 group-hover:text-ivy-blue break-words">
+                      {category.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 line-clamp-2 break-words">{category.description}</p>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-ivy-blue mt-1 flex-shrink-0" />
+                </Link>
+              ))}
+            </div>
 
-              <a style={{ fontSize: 12 }} href="https://ivyproschool.com/blog"
+            <div className="mt-8">
+              <h2 style={{ color: 'black' }} className="text-lg font-bold text-white-900 mb-2 px-2 flex items-center gap-2">
+                <Link style={{ color: 'black' }} className="h-5 w-5 text-white-600" href="#" />
+                <BookOpen style={{ color: 'black', marginLeft: -25 }} className="h-5 w-5 text-ivy-white" />
 
-                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                <NotebookPen className="h-5 w-5 text-blue-600" />
-                Blog
-              </a>
+                Quick Links
+              </h2>
+              <div className="flex flex-col space-y-2">
+                {/* Alumni & Reviews */}
+                <Link
+                  href="/alumni"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-ivy-blue transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Trophy className="h-5 w-5 text-amber-500" />
+                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Alumni & Reviews</span>
+                </Link>
 
+                {/* Case Studies */}
+                <Link
+                  href="/casestudies"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-ivy-blue transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Briefcase className="h-5 w-5 text-indigo-600" />
+                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Case Studies</span>
+                </Link>
 
-              <Link
-                href="/contact-us"
-                className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                <Phone className="h-5 w-5 text-red-600" />
-                <span className="font-medium text-gray-800">Contact Us</span>
-              </Link>
+                {/* Bootcamp */}
+                <Link
+                  href="/bootcamp"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-ivy-blue transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <GraduationCap className="h-5 w-5 text-blue-600" />
+                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Bootcamp</span>
+                </Link>
+
+                {/* Enterprise */}
+                <Link
+                  href="/enterprise"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-ivy-blue transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Building className="h-5 w-5 text-green-600" />
+                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Enterprise</span>
+                </Link>
+
+                {/* Blog */}
+                <a
+                  href="https://ivyproschool.com/blog"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-ivy-blue transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <NotebookPen className="h-5 w-5 text-blue-600" />
+                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Blog</span>
+                </a>
+
+                {/* Contact Us */}
+                <Link
+                  href="/contact-us"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-ivy-blue transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Phone className="h-5 w-5 text-red-600" />
+                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Contact Us</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ import genpacttra from "@/assests/Genpacttra.webp";
 import cognizanttra from "@/assests/Cognizanttra.webp";
 import accenturetra from "@/assests/Accenturetra.webp";
 import Image from 'next/image';
-
+import Link from "next/link";
 const Partners = () => {
   const partners = [
     { name: 'Pwc', logo: pwctra },
@@ -103,37 +103,8 @@ const Partners = () => {
     <section className="bg-gray-50 py-8 md:py-16">
       <div className="container mx-auto px-4">
 
-        <div className="flex flex-col items-center mt-5 text-center" style={{marginTop:-40}}>
-          <div className="bg-white shadow-md rounded-xl px-6 py-4 w-full">
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px] sm:text-xs md:text-sm font-bold text-gray-800">
-              <li className="flex items-start gap-2 text-[#013a81]">
-                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                <span>Dedicated Teaching Assistants for 1:1 doubt resolution</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#013a81]">
-                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                <span>30-min practice classes before and after main sessions</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#013a81]">
-                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                <span>Hybrid learning model with lifetime access to recordings</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#013a81]">
-                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                <span>PrepAI: resume builder, interview & recruiter connects</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#013a81]">
-                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                <span>Active WhatsApp groups for peer & mentor</span>
-              </li>
-              <li className="flex items-start gap-2 text-[#013a81]">
-                <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                <span>No-cost EMI + 4-month installment plans</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="mb-8 md:mb-12" style={{marginTop:40}}>
+       
+        <div className="mb-8 md:mb-12" style={{marginTop:-20}}>
           <h2 className="text-center text-2xl sm:text-3xl font-bold text-gray-800 mb-4 px-2">
             Stand out with our Reputed Partnership Certification
           </h2>
@@ -224,23 +195,36 @@ const Partners = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {enterpriseEvents.map((event) => (
-                <Card key={event.id} className="overflow-hidden border-none shadow-md">
-                  <div>
-                    <Image
-                      width={128}
-                      height={128}
-                      src={event.image}
-                      alt={`Training at ${event.company}`}
-                      className="w-full object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-4">
-                    <h4 style={{ color: '#00a1db' }} className="font-semibold text-lg">{event.company}</h4>
-                    <p className="text-sm text-gray-600">{event.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+               {enterpriseEvents.map((event) => (
+        <Link
+          key={event.id}
+          href="https://ivyproschool.com/enterprise"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow cursor-pointer">
+            <div>
+              <Image
+                width={128}
+                height={128}
+                src={event.image}
+                alt={`Training at ${event.company}`}
+                className="w-full object-cover"
+              />
+            </div>
+            <CardContent className="p-4">
+              <h4
+                style={{ color: "#00a1db" }}
+                className="font-semibold text-lg"
+              >
+                {event.company}
+              </h4>
+              <p className="text-sm text-gray-600">{event.description}</p>
+            </CardContent>
+          </Card>
+        </Link>
+      ))}
             </div>
           </div>
         </div>

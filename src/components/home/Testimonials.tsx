@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, ChevronLeft, ChevronRight, PlayCircle, ArrowRight, Linkedin, MessageSquare } from "lucide-react"
+import { Star, ChevronLeft, ChevronRight, PlayCircle, ArrowRight, Linkedin, MessageSquare, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import aparupa from "@/assests/aparupa.webp";
@@ -423,13 +423,52 @@ const Testimonials = () => {
                 className="text-white font-semibold"
                 style={{ backgroundColor: '#25D366' }} // WhatsApp green color
                 onClick={() => {
-                handleWhatsAppClick();
+                  generateCaptcha();
+                  setShowCaptcha(true);
                 }}
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Chat on WhatsApp
               </Button>
             </div>
+
+            {showCaptcha && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+                <div className="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+                  <ShieldCheck className="w-10 h-10 text-blue-600 mx-auto mb-3" />
+                  <h3 className="text-lg font-bold mb-2">Verification Required</h3>
+                  <p className="text-sm text-gray-600 mb-4">Enter the code below to continue</p>
+
+                  <div className="font-mono text-lg tracking-widest bg-gray-100 px-4 py-2 rounded-lg mb-3">
+                    {captchaCode}
+                  </div>
+
+                  <input
+                    type="text"
+                    value={userInput}
+                    onChange={(e) => setUserInput(e.target.value)}
+                    placeholder="Enter the code"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 mb-4"
+                  />
+
+                  <div className="flex justify-between gap-2">
+                    <Button
+                      className="flex-1 bg-green-600 hover:bg-green-700 text-white"
+                      onClick={handleWhatsAppClick}
+                    >
+                      Verify & Continue
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="flex-1"
+                      onClick={() => setShowCaptcha(false)}
+                    >
+                      Cancel
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -40,7 +40,7 @@ const PlacementReportCTA = () => {
                     <div>
                       <div className="flex justify-between text-sm mb-1">
                         <span className="font-medium">Placement Rate</span>
-                        <span className="text-primary font-semibold">95%</span>
+                        <span className="text-primary font-semibold">82%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div className="bg-primary h-2 rounded-full" style={{ width: "95%" }}></div>
@@ -87,17 +87,28 @@ const PlacementReportCTA = () => {
 
             <h2 className="text-3xl md:text-4xl font-bold mb-6">What should I know about Ivy Pro School's placement and career outcomes?</h2>
 
-            <p className="text-lg text-gray-700 mb-6">
-              Ivy Professional School has a proven track record of placing students in top companies with significant salary improvements. Download our latest placement report to see how our graduates are thriving.
-            </p>
+           <p className="text-lg text-gray-700 mb-6">
+  Ivy Professional School has a proven track record of placing students in top
+  companies with significant salary improvements. Download our{" "}
+  <a
+    href="https://ivyproschool.com/alumni"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[#00a1db] font-semibold hover:underline"
+  >
+    latest placement report
+  </a>{" "}
+  to see how our graduates are thriving.
+</p>
+
             {/* Advanced AI for CXOs at Atlas Copco. 
             We can take the name of this company while posting. But we should also post with some use cases. */}
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold">95% Placement Rate</h3>
-                  <p className="text-gray-600">Almost all our students find relevant positions within 6 months</p>
+                  <h3 className="font-semibold">82% Placement Rate</h3>
+                  <p className="text-gray-600">8 out of 10 certified learners find relevant positions within 3 months</p>
                 </div>
               </div>
               <div className="flex items-start">

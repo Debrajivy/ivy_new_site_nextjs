@@ -56,7 +56,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
   return (
     <section className="py-10">
       <div className="container mx-auto px-4">
-
+{/* 
           <div className="bg-white shadow-md rounded-xl px-6 py-4 w-full">
                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px] sm:text-xs md:text-sm font-bold text-gray-800">
                        <li className="flex items-start gap-2 text-[#013a81]">
@@ -84,7 +84,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                          <span>No-cost EMI + 4-month installment plans</span>
                        </li>
                      </ul>
-                   </div>
+                   </div> */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" style={{marginTop:40}}>
 
 
@@ -185,10 +185,39 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
 
                 <div className="flex items-start">
                   <Users size={20} className="text-ivy-blue mr-3 mt-1" />
-                  <div>
-                    <div style={{ marginLeft: 1 }} className="font-medium">Alumni Network</div>
-                    <p className="text-sm text-gray-600">Lifetime Placement Assistance</p>
-                  </div>
+                 <div>
+  <div style={{ marginLeft: 1 }} className="font-medium">Alumni Network</div>
+  <p className="text-sm text-gray-600">
+    <a
+      href="https://ivyproschool.com/alumni"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#00a1db] font-semibold hover:underline"
+    >
+      Get
+    </a>{" "}
+    connected with alumni,{" "}
+    <a
+      href="https://chat.whatsapp.com/ImcpUAYaD87FVwce6ZMaYN"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#00a1db] font-semibold hover:underline"
+    >
+      Join over
+    </a>{" "}
+    WhatsApp Student Community and{" "}
+    <a
+      href="https://youtu.be/HTTMGTCxd0Q?si=__QkZiVlXQM9t8A0"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#00a1db] font-semibold hover:underline"
+    >
+      Lifetime
+    </a>{" "}
+    Placement Assistance
+  </p>
+</div>
+
                 </div>
 
                 <div className="flex items-start">

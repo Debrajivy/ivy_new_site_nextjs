@@ -22,10 +22,21 @@ const AIFeatures = () => {
             AI-Powered Learning
           </div>
           {/* Updated Main Heading */}
-          <h2 className="text-3xl font-bold mb-4">Introducing PrepAI- Your AI-Powered Career Copilot</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Introducing{" "}
+            <a
+              href="https://prepai.ivyproschool.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[black] hover:underline "
+            >
+              PrepAI
+            </a>
+            – Your AI-Powered Career Copilot
+          </h2>
           {/* Updated Subheading */}
           <p className="text-white/80 max-w-3xl mx-auto">
-PrepAI, powered by Ivy Pro School, that offers role-based diagnosis, detailed feedback, lesson plans, AI interviews, an AI career coach, and connections with real recruiters—all in one place.          </p>
+            PrepAI, powered by Ivy Pro School, that offers role-based diagnosis, detailed feedback, lesson plans, AI interviews, an AI career coach, and connections with real recruiters—all in one place.          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
