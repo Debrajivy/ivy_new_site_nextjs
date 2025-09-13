@@ -1,17 +1,22 @@
-// /app/casestudies/[slug]/page.tsx
+// /app/casestudies/details/page.tsx
+'use client'
+
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
-
+import { useSearchParams } from 'next/navigation';
+import Case1 from "../../../assests/casestudies/Case1.webp";
+import Case2 from "../../../assests/casestudies/Case2.webp";
+import Case4 from "../../../assests/casestudies/Case4.webp";
 // Data for each case study, you'll put your detailed content here
 const caseStudyData = {
   'case-study-1': {
     businessType: 'Industrial Manufacturing & Engineering',
     title: 'Enterprise-Wide Training in Data Analytics, Data Science & AI',
     subtitle: 'Empowering employees across all levels to make faster, data-driven business decisions',
-    image: '/images/aws-forecasting.jpg',
+    image: Case1.src,
     situation: `The organization is a global leader in industrial solutions, operating across multiple business verticals. While it had access to large volumes of operational and business data, decision-making was often slow and reactive. Reports were delayed, and employees across departments heavily depended on a small set of analysts for insights. This created bottlenecks in problem-solving and hampered overall agility.`,
     problem: [
       'Decision-making lagged due to delayed access to critical reports.',
@@ -45,7 +50,7 @@ const caseStudyData = {
     businessType: 'Steel Manufacturing & Engineering',
     title: 'Establishing “Gurukul” – A Centralized Learning & Development Department for Workforce Transformation',
     subtitle: 'Driving productivity, skill enhancement, and revenue growth through a structured, AI-enabled L&D ecosystem',
-    image: '/images/azure-financial.jpg',
+    image: Case2.src,
     situation: `The organization, a leading steel manufacturer with multiple plants across India, faced significant challenges in training and workforce development. Training for labor and machine operators was inconsistent, recruitment across plants was fragmented, and managers lacked tools to make data-driven workforce decisions. Leadership realized the need for a formal Learning & Development (L&D) department that could centralize training, streamline recruitment, and directly link employee development to business growth.`,
     problem: [
       'No structured L&D function to oversee workforce capability building.',
@@ -78,7 +83,7 @@ const caseStudyData = {
     businessType: 'Global Retail & Consumer Goods',
     title: 'AI for Leaders: Enabling CxOs & Senior Executives to Drive Enterprise Transformation',
     subtitle: 'Equipping senior leadership across departments with dashboard automation, GenAI, and AI agents for competitive advantage',
-    image: '/images/aws-retail.jpg',
+    image: Case4.src,
     situation: `A global retail giant wanted its CxOs and senior executives to move beyond traditional reporting and embrace AI-first decision-making. While the company had strong business intelligence systems, leadership processes were still manual, time-consuming, and reactive. With rapid advances in Generative AI (GenAI) and AI agents, executives recognized the need to reimagine how decisions were made at the enterprise level — across finance, operations, marketing, supply chain, and HR.`,
     problem: [
       'CxOs and senior leaders were relying on delayed dashboards and manual insights, slowing strategic actions.',
@@ -109,8 +114,11 @@ const caseStudyData = {
   },
 };
 
-const CaseStudyPage = ({ params }: { params: { slug: string } }) => {
-  const caseStudy = caseStudyData[params.slug];
+const CaseStudiesDetailsPage = () => {
+  const searchParams = useSearchParams();
+  const id = searchParams.get('id');
+
+  const caseStudy = caseStudyData[id as keyof typeof caseStudyData];
 
   if (!caseStudy) {
     return (
@@ -173,4 +181,4 @@ const CaseStudyPage = ({ params }: { params: { slug: string } }) => {
   );
 };
 
-export default CaseStudyPage;
+export default CaseStudiesDetailsPage;

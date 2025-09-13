@@ -41,7 +41,6 @@ const FAQ = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center gap-2 mb-4">
-            <HelpCircle className="h-6 w-6 text-primary" />
             <h2 className="text-3xl font-bold">Have Questions About Ivy Pro School's Courses or Admissions?</h2>
           </div>
           <p className="text-gray-600 max-w-3xl mx-auto">

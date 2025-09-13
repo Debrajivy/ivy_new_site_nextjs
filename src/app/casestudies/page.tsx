@@ -7,6 +7,9 @@ import { ChevronDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import Case1 from "../../assests/casestudies/Case1.webp";
+import Case2 from "../../assests/casestudies/Case2.webp";
+import Case4 from "../../assests/casestudies/Case4.webp";
 
 // Updated Placeholder data with subtitles
 const caseStudies = [
@@ -15,24 +18,24 @@ const caseStudies = [
     businessType: 'Industrial Manufacturing Engineering',
     title: 'Enterprise-Wide Training in Data Analytics, Data Science & AI',
     subtitle: 'Empowering employees across all levels to make faster, data-driven business decisions',
-    image: '/images/aws-forecasting.jpg',
-    link: '/casestudies/case-study-1', // CHANGED
+    image: Case1.src, // REVERTED
+    link: '/casestudies/details?id=case-study-1', // CHANGED
   },
   {
     id: 'case-study-2',
     businessType: 'Steel Manufacturing Engineering',
     title: 'Establishing “Gurukul” – A Centralized Learning & Development Department for Workforce Transformation',
     subtitle: 'Driving productivity, skill enhancement, and revenue growth through a structured, AI-enabled L&D ecosystem',
-    image: '/images/azure-financial.jpg',
-    link: '/casestudies/case-study-2', // CHANGED
+    image: Case2.src,
+    link: '/casestudies/details?id=case-study-2', // CHANGED
   },
   {
     id: 'case-study-3',
     businessType: 'Global Retail & Consumer Goods',
     title: 'AI for Leaders: Enabling CxOs & Senior Executives to Drive Enterprise Transformation',
     subtitle: 'Equipping senior leadership across departments with dashboard automation, GenAI, and AI agents for competitive advantage',
-    image: '/images/aws-retail.jpg',
-    link: '/casestudies/case-study-3', // CHANGED
+    image: Case4.src,
+    link: '/casestudies/details?id=case-study-3', // CHANGED
   },
 ];
 

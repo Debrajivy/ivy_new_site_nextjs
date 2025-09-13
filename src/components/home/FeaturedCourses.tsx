@@ -354,6 +354,7 @@ const FeaturedCourses = () => {
               variant="outline"
               onClick={toggleShowAllCourses}
               className="flex items-center"
+              style={{backgroundColor:'#05a2db',color:'white'}}
             >
               {showAllCourses ? 'Show Less' : 'Show More'}
               {showAllCourses ? (

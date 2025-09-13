@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Star, Award , CheckCircle} from "lucide-react";
+import { Clock, Users, Star, Award, CheckCircle } from "lucide-react";
 import { Course } from "@/lib/api";
 import E from "@/assests/E&ICT.webp";
 import ibm from "@/assests/IBM2.webp";
@@ -23,6 +23,8 @@ interface CourseHeroProps {
 
 
 const CourseHero = ({ course }: CourseHeroProps) => {
+
+  console.log("course insight", course)
   const router = useRouter(); // ⬅️ add this inside component
 
   const [formData, setFormData] = useState({
@@ -174,6 +176,20 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     { name: "Deloitte", logo: deloitte },
     { name: "PwC", logo: pwc },
   ];
+  const courseHours: Record<string, string> = {
+    "Data Science & AI with IIT Guwahati": "260 Hours",
+    "AI for Product Manager": "180 Hours",
+    "Data Analytics with Visualization Certification Course": "195 Hours",
+    "Cloud Data Engineering Certification": "120 Hours",
+    "Cloud Data Engineering Course with IIT Guwahati": "120 Hours",
+    "Business Analytics Certification Course": "185 Hours",
+    "Executive Generative AI Course with IIT Guwahati": "75 Hours",
+    "Business Analytics with Python": "190 Hours",
+    "Data Visualization Course": "160 Hours",
+    "Cybersecurity Fundamentals": "170 Hours",
+  };
+
+  // usage
 
 
   // Determine if it's the specific IIT Guwahati course
@@ -294,15 +310,59 @@ const CourseHero = ({ course }: CourseHeroProps) => {
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Users size={16} className="mr-2" />
-                <span>6,876 students</span>
+                <span>
+                  {course.title === "AI for Product Manager"
+                    ? "720 students"
+                    : course.title === "Executive Generative AI Course with IIT Guwahati"
+                      ? "1220 students"
+                      : course.title === "Data Science & AI with IIT Guwahati"
+                        ? "1136 students"
+                        : course.title === "Cloud Data Engineering Certification"
+                          ? "862 students"
+                          : course.title === "Data Science with Machine Learning & AI Certification"
+                            ? "1158 students"
+                            : course.title === "Data Visualization Course"
+                              ? "855 students"
+                              : course.title === "Data Analytics with Visualization Certification Course"
+                                ? "967 students"
+                                : course.title === "Business Analytics Certification Course"
+                                  ? "25,090 students"
+                                  : course.title === "Cloud Data Engineering Course with IIT Guwahati"
+                                    ? "445 students"
+                                    : course.title === "Data science course (Pay after Placement)"
+                                      ? "430 students"
+                                      : "N/A"}
+                </span>
               </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Clock size={16} className="mr-2" />
-                <span>225 Hours</span>
+
+                <span>{courseHours[course.title] || "225 Hours"}</span>
+
               </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Star size={16} className="mr-2" />
-                <span>4.4 (5,667 reviews)</span>
+                <span> {course.title === "AI for Product Manager"
+                  ? "4.7 (195 reviews)"
+                  : course.title === "Executive Generative AI Course with IIT Guwahati"
+                    ? "4.9 (209 reviews)"
+                    : course.title === "Data Science & AI with IIT Guwahati"
+                      ? "4.8 (230 reviews)"
+                      : course.title === "Cloud Data Engineering Certification"
+                        ? "4.7 (198 reviews)"
+                        : course.title === "Data Science with Machine Learning & AI Certification"
+                          ? "4.8 (324 reviews)"
+                          : course.title === "Data Visualization Course"
+                            ? "4.7 (212 reviews)"
+                            : course.title === "Data Analytics with Visualization Certification Course"
+                              ? "4.6 (286 reviews)"
+                              : course.title === "Business Analytics Certification Course"
+                                ? "4.8 (6983 reviews)"
+                                : course.title === "Cloud Data Engineering Course with IIT Guwahati"
+                                  ? "4.7 (189 reviews)"
+                                  : course.title === "Data science course (Pay after Placement)"
+                                    ? "4.8 (109 reviews)"
+                                    : "N/A"}</span>
               </div>
 
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
@@ -597,7 +657,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   </div>
                 </div>
 
-             
+
               </form>
             </div>
           </div>

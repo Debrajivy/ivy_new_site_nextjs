@@ -168,6 +168,29 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+            <div className="grid grid-cols-3 gap-3 mt-2">
+              <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-sm">
+                <Award className="text-primary" size={18} />
+                <div>
+                  <div className="font-bold text-md">1:1</div>
+                  <div className="text-xs text-gray-500"> Doubt Resolution </div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-sm">
+                <Users className="text-primary" size={18} />
+                <div>
+                  <div className="font-bold text-md">30</div>
+                  <div className="text-xs text-gray-500">Minutes Practice Classes</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-sm">
+                <Users className="text-primary" size={18} />
+                <div>
+                  <div className="font-bold text-md">100%</div>
+                  <div className="text-xs text-gray-500">Lifetime Access to Recordings</div>
+                </div>
+              </div>
+            </div>
 
             {/* Description - Hidden on mobile, shown on desktop */}
             <div className="hidden lg:block mt-6">
