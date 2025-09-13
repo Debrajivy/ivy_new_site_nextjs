@@ -19,7 +19,7 @@ const caseStudies = [
     title: 'Enterprise-Wide Training in Data Analytics, Data Science & AI',
     subtitle: 'Empowering employees across all levels to make faster, data-driven business decisions',
     image: Case1.src, // REVERTED
-    link: '/casestudies/details?id=case-study-1', // CHANGED
+    link: '/', // CHANGED
   },
   {
     id: 'case-study-2',
@@ -27,7 +27,7 @@ const caseStudies = [
     title: 'Establishing “Gurukul” – A Centralized Learning & Development Department for Workforce Transformation',
     subtitle: 'Driving productivity, skill enhancement, and revenue growth through a structured, AI-enabled L&D ecosystem',
     image: Case2.src,
-    link: '/casestudies/details?id=case-study-2', // CHANGED
+    link: '/', // CHANGED
   },
   {
     id: 'case-study-3',
@@ -35,7 +35,7 @@ const caseStudies = [
     title: 'AI for Leaders: Enabling CxOs & Senior Executives to Drive Enterprise Transformation',
     subtitle: 'Equipping senior leadership across departments with dashboard automation, GenAI, and AI agents for competitive advantage',
     image: Case4.src,
-    link: '/casestudies/details?id=case-study-3', // CHANGED
+    link: '/', // CHANGED
   },
 ];
 
