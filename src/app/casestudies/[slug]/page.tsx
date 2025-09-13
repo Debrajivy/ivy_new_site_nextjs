@@ -1,11 +1,9 @@
-// /app/case-studies/[slug]/page.tsx
-'use client';
-
+// /app/casestudies/[slug]/page.tsx
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import Link from 'next/link';
 
 // Data for each case study, you'll put your detailed content here
 const caseStudyData = {
@@ -90,7 +88,7 @@ const caseStudyData = {
       'The organization lacked AI leadership champions to guide transformation across departments.',
     ],
     solution: {
-      text: 'Ivy Professional School designed a cross-functional “AI for Leaders” program tailored specifically for senior leadership, including CxOs, VPs, and department heads. The program was built to blend technical exposure with strategic application, ensuring leaders could adopt AI in ways that directly impacted business outcomes.',
+      text: 'Ivy Professional School partnered with the client to design and deliver a tailored Data Analytics, Data Science & AI training program. The program was customized for different departments—finance, operations, HR, and leadership—ensuring relevance to daily workflows.',
       points: [
         'Executive Dashboard Automation – Enabling CxOs to track KPIs in real time with self-updating, automated dashboards.',
         'GenAI for Enterprise Leaders – Training on LLMs (ChatGPT, Gemini) for strategic insight generation and scenario testing.',
@@ -112,7 +110,6 @@ const caseStudyData = {
 };
 
 const CaseStudyPage = ({ params }: { params: { slug: string } }) => {
-  const router = useRouter();
   const caseStudy = caseStudyData[params.slug];
 
   if (!caseStudy) {
@@ -127,27 +124,23 @@ const CaseStudyPage = ({ params }: { params: { slug: string } }) => {
     <>
       <Navbar />
       <div className="container mx-auto px-4 py-8 md:py-16">
-        <button
-          onClick={() => router.back()}
+        <Link 
+          href="/casestudies" 
           className="flex items-center text-blue-600 hover:underline mb-8"
         >
           <ArrowLeft className="h-5 w-5 mr-2" /> Back to Case Studies
-        </button>
-
+        </Link>
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{caseStudy.title}</h1>
           <p className="mt-2 text-xl font-medium text-gray-600">{caseStudy.subtitle}</p>
           <span className="inline-block mt-4 px-3 py-1 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">{caseStudy.businessType}</span>
-
           <div className="mt-8 w-full aspect-video">
             <img src={caseStudy.image} alt={caseStudy.title} className="w-full h-full object-cover rounded-lg" />
           </div>
-
           <div className="mt-12">
             <h2 className="text-2xl font-semibold text-gray-800">Situation</h2>
             <p className="mt-4 text-gray-700 leading-relaxed">{caseStudy.situation}</p>
           </div>
-
           <div className="mt-8">
             <h2 className="text-2xl font-semibold text-gray-800">Problem</h2>
             <ul className="mt-4 list-disc list-inside space-y-2 text-gray-700 leading-relaxed">
@@ -156,7 +149,6 @@ const CaseStudyPage = ({ params }: { params: { slug: string } }) => {
               ))}
             </ul>
           </div>
-
           <div className="mt-8">
             <h2 className="text-2xl font-semibold text-gray-800">Solution</h2>
             <p className="mt-4 text-gray-700 leading-relaxed">{caseStudy.solution.text}</p>
@@ -166,7 +158,6 @@ const CaseStudyPage = ({ params }: { params: { slug: string } }) => {
               ))}
             </ul>
           </div>
-
           <div className="mt-8">
             <h2 className="text-2xl font-semibold text-gray-800">Impact</h2>
             <ul className="mt-4 list-disc list-inside space-y-2 text-gray-700 leading-relaxed">
