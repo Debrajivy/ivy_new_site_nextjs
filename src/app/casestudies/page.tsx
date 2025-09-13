@@ -103,7 +103,7 @@ const CaseStudiesPage = () => {
           {filteredCaseStudies.map((caseStudy) => (
             <Link
               key={caseStudy.id}
-              href={caseStudy.link}
+              href={"/"}
               className="block w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-[1.01]"
             >
               <div className="w-full aspect-video">
