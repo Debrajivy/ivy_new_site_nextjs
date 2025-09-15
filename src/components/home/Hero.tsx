@@ -7,6 +7,7 @@ import { CheckCircle } from "lucide-react"
 import ratingIcon from '@/assests/rating.png';
 import { useRouter } from 'next/navigation';
 import AutpPlayYoutube from '../AutoPlayYoutube';
+import Link from 'next/link';
 
 const Hero = () => {
 
@@ -193,31 +194,26 @@ const Hero = () => {
             </div>
 
             {/* Description - Hidden on mobile, shown on desktop */}
-            <div className="hidden lg:block mt-6">
-              <p className="text-sm md:text-base text-gray-700">
-                Land high-paying jobs by choosing Ivy Pro's courses that are accredited by
-
-                <a
-                  className="font-bold"
-                  style={{color:'#013a81'}}
-                  href="/courses/data-science-and-ml-course"
-                >
-                   &nbsp;NASSCOM, IBM, Govt. of India (MEITY)
-                </a> and 
-                
-                
-                <a
-                  className="font-bold"
-                  style={{color:'#013a81'}}
-                  href="/courses/iit-data-engineering-course"
-                >
-                   &nbsp;IIT&nbsp;
-                </a>
-                
-                
-                that compiled as per National Occupation Standards.
-              </p>
-            </div>
+        <div className="hidden lg:block mt-6">
+  <p className="text-sm md:text-base text-gray-700">
+    Land high-paying jobs by choosing Ivy Pro's courses that are accredited by
+    <Link
+      href="/courses/data-science-and-ml-course"
+      className="font-bold"
+      style={{color:'#013a81'}}
+    >
+      &nbsp;NASSCOM, IBM, Govt. of India (MEITY)
+    </Link> and 
+    <Link
+      href="/courses/iit-data-engineering-course"
+      className="font-bold"
+      style={{color:'#013a81'}}
+    >
+      &nbsp;IIT&nbsp;
+    </Link>
+    that compiled as per National Occupation Standards.
+  </p>
+</div>
           </div>
 
           {/* Right Column - Form */}

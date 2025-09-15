@@ -324,23 +324,21 @@ const FeaturedCourses = () => {
             <h2 className="text-3xl font-bold mb-2">Which Data & AI Courses Should I Explore at Ivy?</h2>
             <p className="text-gray-600 max-w-2xl">
               Explore our most popular
-
-              <a
+              <Link
+                href="/courses/data-science-and-ml-course"
                 className="font-bold"
                 style={{ color: '#013a81' }}
-                href="/courses/data-science-and-ml-course"
               >
                 &nbsp;Data,
-              </a>
+              </Link>
 
-
-              <a
+              <Link
+                href="/courses/iit-generative-ai-course"
                 className="font-bold"
                 style={{ color: '#013a81' }}
-                href="/courses/iit-generative-ai-course"
               >
                 &nbsp;GenAI&nbsp;
-              </a>
+              </Link>
               and
               <a
                 className="font-bold"
