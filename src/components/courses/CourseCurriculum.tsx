@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Course } from '@/lib/api';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Clock, FileText, CheckCircle } from 'lucide-react';
+import { Clock, FileText, CheckCircle, X } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from "@/components/ui/button"
 import { Bot, Send, MessageSquare, Phone } from "lucide-react"
@@ -15,8 +15,61 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
   const [showContactOptions, setShowContactOptions] = useState(false);
   const [showNumber, setShowNumber] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [showApplyModal, setShowApplyModal] = useState(false)
 
 
+  const handleApplyClick = useCallback(() => {
+    setShowApplyModal(true)
+  }, [])
+
+  const ApplyNowModal = ({ onClose }: { onClose: () => void }) => {
+    useEffect(() => {
+      // This is the container element where the iframe will be added
+      const iframeContainer = document.getElementById('iframe-container');
+
+      if (iframeContainer) {
+        // Clear any previous content
+        iframeContainer.innerHTML = '';
+
+        // Create the iframe element
+        const iframe = document.createElement('iframe');
+        iframe.name = "leadsquared_landing_page_frame";
+        iframe.src = "https://ivyproschool.viewpage.co/IVY?ignoremxtracking=mxtrue";
+        iframe.width = "100%"; // Use percentage for responsiveness
+        iframe.height = "100%"; // Use percentage for responsiveness
+        iframe.frameBorder = "0";
+        iframe.marginWidth = "0";
+        iframe.marginHeight = "0";
+        iframe.scrolling = "no";
+        iframe.style.border = "none";
+
+        // Append the iframe to the container
+        iframeContainer.appendChild(iframe);
+
+        // Create and append the script element
+        const script = document.createElement('script');
+        script.type = "text/javascript";
+        script.innerHTML = "var MXLandingPageId = '2c296ae6-63a9-11f0-aa4a-06f2115baecb';";
+        iframeContainer.appendChild(script);
+      }
+    }, []);
+
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm" onClick={onClose} />
+        <div className="relative z-10 w-full max-w-sm h-[80vh] md:h-[600px] flex flex-col">
+          <button
+            onClick={onClose}
+            className="absolute top-3 right-3 p-1 rounded-full hover:bg-gray-100 transition-colors z-20"
+            aria-label="Close"
+          >
+            <X className="h-5 w-5 text-gray-500" />
+          </button>
+          <div id="iframe-container" className="bg-white rounded-xl shadow-xl p-6 h-full w-full" />
+        </div>
+      </div>
+    );
+  };
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
@@ -70,7 +123,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
       {/* Main Curriculum Content */}
       <div className="container mx-auto px-4">
 
-         
+
         <div className="max-w-3xl mx-auto">
 
 
@@ -341,6 +394,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                         <button
                           style={{ backgroundColor: '#009fda' }}
                           className="w-full bg-gradient-to-r text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
+                          onClick={handleApplyClick}
                         >
                           Apply Now
                         </button>
@@ -388,6 +442,10 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                       </Button>
                     </div>
                   </div>
+                )}
+
+                {showApplyModal && (
+                  <ApplyNowModal onClose={() => setShowApplyModal(false)} />
                 )}
                 {showNumber && !isMobile && (
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-50 animate-fade-in">

@@ -6,7 +6,7 @@ export interface Course {
   image: string;
   category: string;
   students: number;
-  metaData?:any;
+  metaData?: any;
   duration: string;
   rating: number;
   reviewCount: number;
@@ -20,7 +20,7 @@ export interface Course {
   instructors?: Instructor[];
   aiFeatures?: AIFeature[];
   faq?: FAQ[];
-  
+
 }
 
 export interface Module {
@@ -56,6 +56,7 @@ export interface Instructor {
   image: string;
   bio: string;
   isFounder?: boolean;
+  isDirector?: boolean;
 }
 
 export interface AIFeature {
@@ -103,11 +104,11 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
-     metaData:{
-      title:"Generative AI Course with IIT Guwahati: #1 GenAI Course ",
-      description:"Join IIT Guwahati Certified Generative AI course and become job-ready in 18 weeks. Build 15+ GenAI apps on cloud. Get IBM & NASSCOM certified",
-      bio:"Learn advanced Gen AI skills, build super-functional apps, get certified by IIT, and become the perfect job candidate in 18 weeks."
-      
+    metaData: {
+      title: "Generative AI Course with IIT Guwahati: #1 GenAI Course ",
+      description: "Join IIT Guwahati Certified Generative AI course and become job-ready in 18 weeks. Build 15+ GenAI apps on cloud. Get IBM & NASSCOM certified",
+      bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IIT, and become the perfect job candidate in 18 weeks."
+
     },
     duration: "225 Hours",
     rating: 4.9,
@@ -269,7 +270,9 @@ const courses: Course[] = [
         name: "Eeshani Agrawal",
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
-        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University.",
+        isDirector: true
+
       }
     ],
     aiFeatures: [
@@ -318,18 +321,18 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1677442135968-6bb674d4f8a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
     category: "Generative AI",
     students: 1876,
-     metaData:{
-      title:"Data Science Course with IIT Guwahati: GenAI, MLOps, Python",
-      description:"Become IIT Certified in 45 weeks. Join IIT Guwahati's Data Science course & learn Python, GenAI, MLOps on Cloud, work on 50+ projects, with placement support.",
-      bio:"Learn high-value data science skills, work on 50+ projects and case studies, get certified by IIT, and become job-ready in 45 weeks."
-      
+    metaData: {
+      title: "Data Science Course with IIT Guwahati: GenAI, MLOps, Python",
+      description: "Become IIT Certified in 45 weeks. Join IIT Guwahati's Data Science course & learn Python, GenAI, MLOps on Cloud, work on 50+ projects, with placement support.",
+      bio: "Learn high-value data science skills, work on 50+ projects and case studies, get certified by IIT, and become job-ready in 45 weeks."
+
     },
     duration: "10 weeks",
     rating: 4.8,
     reviewCount: 432,
     isFeatured: true,
     slug: "iit-data-science-course",
-    longDescription: "The Generative AI Masterclass is our cutting-edge program designed to give you practical expertise in building, fine-tuning, and deploying state-of-the-art generative AI models. This course covers the theoretical foundations and practical applications of language models like GPT, image generation models like DALL-E, and multimodal AI systems. You'll learn from industry pioneers who have built and deployed generative AI systems at scale, and graduate with the skills to create your own AI applications that can generate text, images, code, and more.",
+    longDescription: "This data science certification program is created with E&ICT Academy IIT Guwahati. You will learn directly from IIT Guwahati professors, attend a special 3-day program at the IIT campus, and have networking opportunities with IIT alumni.\n\n The course will teach how to handle data in advanced Excel, analyze data using SQL and advanced SQL, visualize data using Power BI, make data-driven decisions using statistics, wrangle and analyze data with Python, etc. The course also covers advanced topics like machine learning, text mining, deep learning, GenAI, etc., to help you remain updated with the current technology.\n\n But, theoretical knowledge alone is not enough. That’s why these 45 weeks of this data science course in India help you gain practical experience by working on 10+ projects, 40+ case studies, and 50+ assignments. This way, you master the advanced data science concepts and become an ideal candidate for high-paying jobs.",
     outcomes: [
       "Learn ML ops, Power Query, SQL, Python, Excel from prestigious faculty",
       "Build and fine-tune large language models (LLMs)",
@@ -536,6 +539,9 @@ const courses: Course[] = [
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        ,
+        isDirector: true
+
       }
     ],
     aiFeatures: [
@@ -560,11 +566,11 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Engineering",
     students: 1549,
-    metaData:{
-      title:"Cloud Data Engineering Course with IIT Guwahati",
-      description:"Join IIT Guwahati certified Data Engineering course. Learn Cloud, Azure, Python, SQL, Spark, & work on 30+ projects with lifetime placement support.",
-      bio:"Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
-      
+    metaData: {
+      title: "Cloud Data Engineering Course with IIT Guwahati",
+      description: "Join IIT Guwahati certified Data Engineering course. Learn Cloud, Azure, Python, SQL, Spark, & work on 30+ projects with lifetime placement support.",
+      bio: "Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
+
     },
     duration: "12 weeks",
     rating: 4.7,
@@ -595,6 +601,7 @@ const courses: Course[] = [
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
       }
     ],
 
@@ -790,18 +797,18 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
-    metaData:{
-      title:"NASSCOM Certified Data Science Course with ML & GenAI. 4.8/5",
-      description:"Enroll in Ivy Pro's Data Science Course with ML & GenAI. Get fee rebate from Govt. Classroom & live online classes. 30+ hands-on projects and placement support.",
-      bio:"Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and land promising jobs for data scientist, analyst, or ML engineer roles."
-      
+    metaData: {
+      title: "NASSCOM Certified Data Science Course with ML & GenAI. 4.8/5",
+      description: "Enroll in Ivy Pro's Data Science Course with ML & GenAI. Get fee rebate from Govt. Classroom & live online classes. 30+ hands-on projects and placement support.",
+      bio: "Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and land promising jobs for data scientist, analyst, or ML engineer roles."
+
     },
     duration: "14 weeks",
     rating: 4.8,
     reviewCount: 298,
     isFeatured: true,
     slug: "data-science-and-ml-course",
-    longDescription: "Our Deep Learning Specialization takes you on a comprehensive journey through the fascinating world of neural networks and their applications. Starting from the fundamentals of neural networks, you'll progress to mastering convolutional neural networks (CNNs) for computer vision, recurrent neural networks (RNNs) for sequence modeling, and transformers for natural language processing. By the end of this specialization, you'll be able to build, train, and deploy sophisticated deep learning models for a wide range of applications."
+    longDescription: "The data science and machine learning program will make you an industry-ready data scientist in just 12-14 months. Whether you are a college graduate who is just starting your career or a working professional who wants to advance your skills, this online program is perfect for you. \n\n The data science and machine learning program will make you an industry-ready data scientist in just 12-14 months. Whether you are a college graduate who is just starting your career or a working professional who wants to advance your skills, this online program is perfect for you. \n\n This course on data science and machine learning is made in partnership with FutureSkills Prime, a digital skilling initiative by MeitY and NASSCOM. The content of the course is aligned with the National Occupation Standards (NOS). That means the training provided is of high quality and meets the industry standards."
     , instructors: [
       {
         id: "i1",
@@ -817,6 +824,7 @@ const courses: Course[] = [
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
       }
     ],
     outcomes: [
@@ -1093,11 +1101,11 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
-    metaData:{
-      title:"Data Visualization Certification Course in Tableau & Power BI",
-      description:"Join IBM Certified Data Science course with Visualization. Work on 25+ real-world projects. Mentors from IIT, IIM, & US universities. Get placement support.",
-      bio:"Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Python, R, Tableau, PowerBI, and more."
-      
+    metaData: {
+      title: "Data Visualization Certification Course in Tableau & Power BI",
+      description: "Join IBM Certified Data Science course with Visualization. Work on 25+ real-world projects. Mentors from IIT, IIM, & US universities. Get placement support.",
+      bio: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Python, R, Tableau, PowerBI, and more."
+
     },
     duration: "14 weeks",
     rating: 4.8,
@@ -1120,6 +1128,7 @@ const courses: Course[] = [
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
       }
     ],
     outcomes: [
@@ -1299,11 +1308,11 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
-    metaData:{
-      title:"Best Data Analytics Course Online with Placement Support",
-      description:"Join 4.8/5 rated Data Analytics course with 230 hours of live training, 50+ assignments, 30+ case studies, & 10+ industry projects. IBM Certified.",
-      bio:"Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
-      
+    metaData: {
+      title: "Best Data Analytics Course Online with Placement Support",
+      description: "Join 4.8/5 rated Data Analytics course with 230 hours of live training, 50+ assignments, 30+ case studies, & 10+ industry projects. IBM Certified.",
+      bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
+
     },
     duration: "14 weeks",
     rating: 4.8,
@@ -1326,6 +1335,7 @@ const courses: Course[] = [
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
       }
     ],
     outcomes: [
@@ -1533,11 +1543,11 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
-    metaData:{
-      title:"Data Analyst & Business Analytics Course with IBM [4.8/5]",
-      description:"Join Business Analytics course in collaboration with IBM. Learn in Classroom / Online Live & work on 20+ industry projects with IIT, IIM faculty",
-      bio:"Learn business analytics with advanced tools like Excel, SQL, Python, R, Tableau, etc., and become a data expert employers want to hire."
-      
+    metaData: {
+      title: "Data Analyst & Business Analytics Course with IBM [4.8/5]",
+      description: "Join Business Analytics course in collaboration with IBM. Learn in Classroom / Online Live & work on 20+ industry projects with IIT, IIM faculty",
+      bio: "Learn business analytics with advanced tools like Excel, SQL, Python, R, Tableau, etc., and become a data expert employers want to hire."
+
     },
     duration: "14 weeks",
     rating: 4.8,
@@ -1553,6 +1563,7 @@ const courses: Course[] = [
         image: "/assets/pratilk.webp",
         bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
         isFounder: true
+        , isDirector: true
       },
       {
         id: "i2",
@@ -1733,10 +1744,10 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
-    metaData:{
-      title:"Cloud Data Engineering Course with IIT Guwahati",
-      description:"Join IIT Guwahati certified Data Engineering course. Learn Cloud, Azure, Python, SQL, Spark, & work on 30+ projects with lifetime placement support.",
-      bio:"Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
+    metaData: {
+      title: "Cloud Data Engineering Course with IIT Guwahati",
+      description: "Join IIT Guwahati certified Data Engineering course. Learn Cloud, Azure, Python, SQL, Spark, & work on 30+ projects with lifetime placement support.",
+      bio: "Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
     },
     duration: "14 weeks",
     rating: 4.8,
@@ -1759,6 +1770,7 @@ const courses: Course[] = [
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
       }
     ],
 
@@ -1908,9 +1920,9 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
-    metaData:{
-      title:"Become a Future Ready AI Product Manager using Generative AI",
-      description:"Upskill in 6 weeks with Ivy’s AI for Product Manager course. Learn Agile, AI tools, 20+ projects & job support. Become a future-ready PM."
+    metaData: {
+      title: "Become a Future Ready AI Product Manager using Generative AI",
+      description: "Upskill in 6 weeks with Ivy’s AI for Product Manager course. Learn Agile, AI tools, 20+ projects & job support. Become a future-ready PM."
     },
     duration: "6 weeks",
     rating: 4.7,
@@ -1933,6 +1945,7 @@ const courses: Course[] = [
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
       }
     ],
 
@@ -2112,6 +2125,7 @@ const courses: Course[] = [
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
       }
     ],
 
@@ -2367,15 +2381,15 @@ const courses: Course[] = [
       "Work on 30+ projects, including 6 capstone projects in retail, finance, marketing, e-commerce, real estate, and entertainment.",
       "Apply supervised & unsupervised ML, AI, and DL to solve real-world problems.",
       "Gain holistic skills — resume prep, networking, interview training.",
-      
+
     ],
 
 
   },
 
 
-//city specific content
-   {
+  //city specific content
+  {
     id: '11',
     title: "Data Engineering Course in Kolkata",
     description: "Master data engineering and big data analytics with tools like Hadoop, Spark, Kafka, Hive, etc., to become a certified data engineer and get a guaranteed placement.",
@@ -2403,10 +2417,11 @@ const courses: Course[] = [
         role: "Director of Ivy Professional School",
         image: "/assets/eeshani.webp",
         bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
       }
     ],
 
-       curriculum: [
+    curriculum: [
       {
         id: "m1",
         title: "SQL Queries & Relational Database Management",

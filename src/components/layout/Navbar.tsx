@@ -107,6 +107,13 @@ const courseCategories = {
 }
 
 const allCourses = [
+
+  {
+    title: "AI for Product Managers",
+    href: "/courses/ai-product-manager-course",
+    description: "Leverage AI tools and techniques to enhance project management",
+    image: AIPM,
+  },
   {
     title: "Executive Generative AI Course with IIT Guwahati",
     href: "/courses/iit-generative-ai-course",
@@ -155,6 +162,12 @@ const allCourses = [
     description: "Image processing and recognition with deep learning",
     image: CDI,
   },
+  {
+    title: "Data science course (Pay after Placement)",
+    href: "/courses/no-upfront-fees-data-science-and-ml-course",
+    description: "Become job-ready with ML, DL, Python, and visualization tools",
+    image: ML,
+  }
 ]
 
 const ListItem = React.forwardRef<

@@ -179,15 +179,15 @@ const Hero = () => {
               <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-sm">
                 <Users className="text-primary" size={18} />
                 <div>
-                  <div className="font-bold text-md">30</div>
-                  <div className="text-xs text-gray-500">Minutes Practice Classes</div>
+                  <div className="font-bold text-md">30 min.</div>
+                  <div className="text-xs text-gray-500">Practice Classes</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-sm">
                 <Users className="text-primary" size={18} />
                 <div>
-                  <div className="font-bold text-md">100%</div>
-                  <div className="text-xs text-gray-500">Lifetime Access to Recordings</div>
+                  <div className="font-bold text-md">100% </div>
+                  <div className="text-xs text-gray-500">Recordings for Lifetime</div>
                 </div>
               </div>
             </div>
@@ -195,7 +195,27 @@ const Hero = () => {
             {/* Description - Hidden on mobile, shown on desktop */}
             <div className="hidden lg:block mt-6">
               <p className="text-sm md:text-base text-gray-700">
-                Land high-paying jobs by choosing Ivy Pro's courses that are accredited by NASSCOM, IBM, IIT and Govt. of India (MEITY) and compiled as per National Occupation Standards.
+                Land high-paying jobs by choosing Ivy Pro's courses that are accredited by
+
+                <a
+                  className="font-bold"
+                  style={{color:'#013a81'}}
+                  href="/courses/data-science-and-ml-course"
+                >
+                   &nbsp;NASSCOM, IBM, Govt. of India (MEITY)
+                </a> and 
+                
+                
+                <a
+                  className="font-bold"
+                  style={{color:'#013a81'}}
+                  href="/courses/iit-data-engineering-course"
+                >
+                   &nbsp;IIT&nbsp;
+                </a>
+                
+                
+                that compiled as per National Occupation Standards.
               </p>
             </div>
           </div>
@@ -316,7 +336,7 @@ const Hero = () => {
                   )}
 
                   <div style={{ marginTop: 10 }} className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm">
-                    <span className="text-[#1a98cb] font-medium">Next batch starting in August</span>
+                    <span className="text-[#1a98cb] font-medium">Next batch starting in September</span>
                     <div className="flex items-center gap-1">
                       <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                       <span className="text-red-600 font-medium">Limited seats left!</span>
@@ -339,7 +359,7 @@ const Hero = () => {
                   </div> */}
 
 
-                
+
 
 
 

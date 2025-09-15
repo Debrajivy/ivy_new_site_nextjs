@@ -113,7 +113,7 @@ const featuredCourses: Course[] = [
   {
     id: '4',
     title: "Data Science with Machine Learning & AI Certification",
-    description: "Become job-ready with ML, DL, Python, and visualization tools",
+    description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
     image: ML,
     category: "Data Science",
     students: 1158,
@@ -131,7 +131,7 @@ const featuredCourses: Course[] = [
   {
     id: '5',
     title: "Data Visualization Course",
-    description: "Deep dive into neural networks and advanced ML techniques",
+    description: "Deep dive into Excel, SQL, Tableau, Power BI techniques",
     image: DV,
     category: "Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Visualization Course" which contradicts. If you want this to be a Data Visualization course, the description should be updated. I'll keep the description as is but noted this discrepancy.
     students: 855,
@@ -149,7 +149,7 @@ const featuredCourses: Course[] = [
   {
     id: '6',
     title: "Data Analytics with Visualization Certification Course",
-    description: "Learn Hadoop, Spark, and big data processing frameworks",
+    description: "Learn Excel, SQL, Tableau, Power BI and VBA for data analysis",
     image: DA,
     category: "Analytics",
     students: 967,
@@ -166,7 +166,7 @@ const featuredCourses: Course[] = [
   {
     id: '7',
     title: "Business Analytics Certification Course",
-    description: "Strategic AI implementation for executives and managers",
+    description: "Learn Excel, SQL, R, Python and VBA for business analytics",
     image: BA,
     category: "Analytics", // This also seems like a mismatch. Title is "Business Analytics" but category and description point to AI. I'll keep it as is.
     students: 25090,
@@ -201,7 +201,7 @@ const featuredCourses: Course[] = [
   {
     id: '10',
     title: "Data science course (Pay after Placement)",
-     description: "Become job-ready with ML, DL, Python, and visualization tools",
+    description: "Become job-ready with ML, DL, Python, and visualization tools",
     image: DSPAP,
     category: "Data Science",
     students: 430,
@@ -217,7 +217,7 @@ const featuredCourses: Course[] = [
     ]
   }
 
- 
+
 
 ];
 
@@ -234,7 +234,7 @@ const CourseCard = ({ course }: { course: Course }) => {
         <Badge className="absolute top-3 left-3 bg-primary">{course.category}</Badge>
         {course.isFeatured && (() => {
           switch (course.title) {
-             case "AI for Product Manager":
+            case "AI for Product Manager":
               return <Badge className="absolute top-3 right-3 badge-featured">New</Badge>;
             case "Executive Generative AI Course with IIT Guwahati":
               return <Badge className="absolute top-3 right-3 badge">Trending</Badge>;
@@ -323,7 +323,35 @@ const FeaturedCourses = () => {
           <div>
             <h2 className="text-3xl font-bold mb-2">Which Data & AI Courses Should I Explore at Ivy?</h2>
             <p className="text-gray-600 max-w-2xl">
-              Explore our most popular Data, GenAI and Data Engineering Courses
+              Explore our most popular
+
+              <a
+                className="font-bold"
+                style={{ color: '#013a81' }}
+                href="/courses/data-science-and-ml-course"
+              >
+                &nbsp;Data,
+              </a>
+
+
+              <a
+                className="font-bold"
+                style={{ color: '#013a81' }}
+                href="/courses/iit-generative-ai-course"
+              >
+                &nbsp;GenAI&nbsp;
+              </a>
+              and
+              <a
+                className="font-bold"
+                style={{ color: '#013a81' }}
+                href="courses/data-engineering-course"
+              >
+                &nbsp;Data Engineering&nbsp;
+              </a>
+
+              Courses
+
             </p>
           </div>
           <Link href="/categories" className="mt-4 md:mt-0">
@@ -354,7 +382,7 @@ const FeaturedCourses = () => {
               variant="outline"
               onClick={toggleShowAllCourses}
               className="flex items-center"
-              style={{backgroundColor:'#05a2db',color:'white'}}
+              style={{ backgroundColor: '#05a2db', color: 'white' }}
             >
               {showAllCourses ? 'Show Less' : 'Show More'}
               {showAllCourses ? (

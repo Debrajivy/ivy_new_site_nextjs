@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Course } from '@/lib/api';
 import { Card, CardContent } from '@/components/ui/card';
@@ -28,6 +27,7 @@ const getAboutCourseTitle = (courseTitle: string) => {
 
   return "What is Data Science with AI & ML and why should I learn it today?";
 };
+
 const getAboutWhatYouWillLearn = (whatYouWillLearn: string) => {
   const knownTitles = [
     "Executive Generative AI Course with IIT Guwahati",
@@ -47,53 +47,14 @@ const getAboutWhatYouWillLearn = (whatYouWillLearn: string) => {
   return "What is Data Science with AI & ML and why should I learn it today?";
 };
 
-
-
-
-
-
 const CourseOverview = ({ course }: CourseOverviewProps) => {
   return (
     <section className="py-10">
       <div className="container mx-auto px-4">
-{/* 
-          <div className="bg-white shadow-md rounded-xl px-6 py-4 w-full">
-                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px] sm:text-xs md:text-sm font-bold text-gray-800">
-                       <li className="flex items-start gap-2 text-[#013a81]">
-                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                         <span>Dedicated Teaching Assistants for 1:1 doubt resolution</span>
-                       </li>
-                       <li className="flex items-start gap-2 text-[#013a81]">
-                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                         <span>30-min practice classes before and after main sessions</span>
-                       </li>
-                       <li className="flex items-start gap-2 text-[#013a81]">
-                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                         <span>Hybrid learning model with lifetime access to recordings</span>
-                       </li>
-                       <li className="flex items-start gap-2 text-[#013a81]">
-                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                         <span>PrepAI: resume builder, interview & recruiter connects</span>
-                       </li>
-                       <li className="flex items-start gap-2 text-[#013a81]">
-                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                         <span>Active WhatsApp groups for peer & mentor</span>
-                       </li>
-                       <li className="flex items-start gap-2 text-[#013a81]">
-                         <CheckCircle className="w-4 h-4 text-[#013a81] flex-shrink-0" />
-                         <span>No-cost EMI + 4-month installment plans</span>
-                       </li>
-                     </ul>
-                   </div> */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" style={{marginTop:40}}>
-
-
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" style={{ marginTop: 40 }}>
           <div className="lg:col-span-2 space-y-8">
-
-          
             <div>
               <h2 className="text-3xl font-bold mb-4">
-
                 What is{" "}
                 {course.title !== "Data science course (Pay after Placement)"
                   ? (
@@ -109,15 +70,11 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                     </>
                   )
                 }
-
-
               </h2>
-
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">
                 {course.longDescription}
               </p>
             </div>
-
             <div>
               <h3 className="text-xl font-bold mb-4">
                 What will I learn in Ivy Pro School{" "}
@@ -135,45 +92,69 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                 ))}
               </div>
             </div>
-
-
           </div>
-
           <div className="space-y-6">
+          <Card>
+  <CardContent className="p-6">
+    <h3 className="font-bold text-lg mb-4">Who are the instructors for this course?</h3>
+    <div className="space-y-6">
+      {course.instructors?.map((instructor) => {
+        const linkedInUrl =
+          instructor.name === "Prateek Agrawal"
+            ? "https://www.linkedin.com/in/prateekagrawal/"
+            : instructor.name === "Eeshani Agrawal"
+            ? "https://www.linkedin.com/in/eeshani-agrawal-b674045/"
+            : "#";
+
+        return (
+          <a
+            key={instructor.id}
+            href={linkedInUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start mb-3 hover:bg-gray-50 rounded-lg p-2 transition"
+          >
+            <img
+              src={instructor.image}
+              alt={instructor.name}
+              className="w-12 h-12 rounded-full object-cover mr-4"
+            />
+            <div>
+              <div className="font-semibold flex items-center">
+                {instructor.name}
+                {/* LinkedIn icon — now just a decorative image inside the same link */}
+                {(instructor.name === "Prateek Agrawal" ||
+                  instructor.name === "Eeshani Agrawal") && (
+                  <img
+                    alt="LinkedIn"
+                    className="w-4 h-4 ml-2"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/72px-LinkedIn_icon.svg.png?20210220164014"
+                  />
+                )}
+                {instructor.isFounder && (
+                  <span className="ml-2 text-xs bg-ivy-orange text-white px-2 py-0.5 rounded-full">
+                    Founder
+                  </span>
+                )}
+                {instructor.isDirector && (
+                  <span className="ml-2 text-xs bg-blue-600 text-white px-2 py-0.5 rounded-full">
+                    Director
+                  </span>
+                )}
+              </div>
+              <div className="text-sm text-gray-500">{instructor.role}</div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </CardContent>
+</Card>
 
 
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="font-bold text-lg mb-4">Who are the instructors for this course?</h3>
-
-                <div className="space-y-6">
-                  {course.instructors?.map((instructor) => (
-                    <div key={instructor.id} className="flex items-start">
-                      <img
-                        src={instructor.image}
-                        alt={instructor.name}
-                        className="w-12 h-12 rounded-full object-cover mr-4"
-                      />
-                      <div>
-                        <div className="font-semibold flex items-center">
-                          {instructor.name}
-                          {instructor.isFounder && (
-                            <span className="ml-2 text-xs bg-ivy-orange text-white px-2 py-0.5 rounded-full">
-                              Founder
-                            </span>
-                          )}
-                        </div>
-                        <div className="text-sm text-gray-500">{instructor.role}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
 
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="font-bold text-lg mb-4">What career opportunities can I expect after this course?</h3>
-
               <div className="space-y-4">
                 <div className="flex items-start">
                   <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
@@ -182,44 +163,55 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                     <p className="text-sm text-gray-600"> 94% Placement Rate | 4-5 LPA avg salary | 17,000+ job openings in India</p>
                   </div>
                 </div>
-
                 <div className="flex items-start">
                   <Users size={20} className="text-ivy-blue mr-3 mt-1" />
-                 <div>
-  <div style={{ marginLeft: 1 }} className="font-medium">Alumni Network</div>
-  <p className="text-sm text-gray-600">
-    <a
-      href="https://ivyproschool.com/alumni"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[#00a1db] font-semibold hover:underline"
-    >
-      Get
-    </a>{" "}
-    connected with alumni,{" "}
-    <a
-      href="https://chat.whatsapp.com/ImcpUAYaD87FVwce6ZMaYN"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[#00a1db] font-semibold hover:underline"
-    >
-      Join over
-    </a>{" "}
-    WhatsApp Student Community and{" "}
-    <a
-      href="https://youtu.be/HTTMGTCxd0Q?si=__QkZiVlXQM9t8A0"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[#00a1db] font-semibold hover:underline"
-    >
-      Lifetime
-    </a>{" "}
-    Placement Assistance
-  </p>
-</div>
+                  <div>
+                    <div style={{ marginLeft: 1 }} className="font-medium">Alumni Network</div>
+                    <p className="text-sm text-gray-600">
 
+                      Get&nbsp;
+
+
+                      <a
+                        href="https://ivyproschool.com/alumni"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#00a1db] font-semibold hover:underline"
+
+                      >
+                        connected with alumni,{" "}
+
+                      </a>
+
+                      Join over&nbsp;
+
+                      <a
+                        href="https://chat.whatsapp.com/ImcpUAYaD87FVwce6ZMaYN"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#00a1db] font-semibold hover:underline"
+                      >
+
+                        WhatsApp Student Community {" "}
+
+                      </a>
+
+                      and Lifetime&nbsp;
+
+
+                      <a
+                        href="https://youtu.be/HTTMGTCxd0Q?si=__QkZiVlXQM9t8A0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#00a1db] font-semibold hover:underline"
+                      >
+
+                        Placement Assistance
+
+                      </a>
+                    </p>
+                  </div>
                 </div>
-
                 <div className="flex items-start">
                   <Award size={30} className="text-ivy-blue mr-3 mt-1" />
                   <div>
@@ -232,7 +224,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
           </div>
         </div>
       </div>
-    </section >
+    </section>
   );
 };
 
