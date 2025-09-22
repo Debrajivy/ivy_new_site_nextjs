@@ -279,291 +279,6 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
   "Data Science & AI with IIT Guwahati": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "data-science", name: "Data Science" },
-    { id: "job and career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" }
-  ],
-  faqs: [
-    {
-      question: "What is the duration of the Data Science & AI with IIT Guwahati course?",
-      answer: "The course lasts for 45 weeks and includes 7 modules with 50 sessions totaling 225 hours.",
-      category: "Program"
-    },
-    {
-      question: "Is this course hybrid or fully online?",
-      answer: "The course follows a hybrid model with live classes and lifetime access to recordings.",
-      category: "Program"
-    },
-    {
-      question: "What makes this program unique?",
-      answer: "It offers Generative AI mastery, IT certification, and production-level model deployment.",
-      category: "Program"
-    },
-    {
-      question: "Do I get practice sessions?",
-      answer: "Yes, there are 30-minute practice sessions before and after each main class.",
-      category: "Program"
-    },
-    {
-      question: "Is this course beginner-friendly?",
-      answer: "Yes, this course is designed for students and professionals transitioning into data roles.",
-      category: "Program"
-    },
-    {
-      question: "Can I pay in installments?",
-      answer: "Yes, no-cost EMI and 4-month installment plans are available.",
-      category: "Program"
-    },
-    {
-      question: "Who is eligible for this course?",
-      answer: "Graduates, final-year students, and working professionals in any field can apply.",
-      category: "Eligibility"
-    },
-    {
-      question: "Do I need prior experience in AI or ML?",
-      answer: "No, the course starts from basics and gradually advances to GenAI.",
-      category: "Eligibility"
-    },
-    {
-      question: "Is this suitable for non-programmers?",
-      answer: "Yes, it is suitable for non-programmers.",
-      category: "Eligibility"
-    },
-    {
-      question: "Do I need to attend live classes?",
-      answer: "No, live attendance is encouraged but recordings are available for flexibility.",
-      category: "Eligibility"
-    },
-    {
-      question: "Can I take only selected modules?",
-      answer: "Yes, there is a 'Pick Your Own Module' option available.",
-      category: "Eligibility"
-    },
-    {
-      question: "Is there an admission test?",
-      answer: "No, you can enroll directly by paying the fee.",
-      category: "Eligibility"
-    },
-    {
-      question: "What are the core technologies covered?",
-      answer: "Python, SQL, Excel, Power BI, MLOps, and generative AI APIs like OpenAI and Anthropic.",
-      category: "Data Science"
-    },
-    {
-      question: "Are ML and DL concepts taught?",
-      answer: "Yes, along with building and fine-tuning LLMs.",
-      category: "Data Science"
-    },
-    {
-      question: "Do I learn data visualization?",
-      answer: "Yes, Power BI and Excel are covered in detail.",
-      category: "Data Science"
-    },
-    {
-      question: "Are MLOps included in the course?",
-      answer: "Yes, as part of model deployment and production.",
-      category: "Data Science"
-    },
-    {
-      question: "Will I learn how to build AI applications?",
-      answer: "Yes, including deploying models and using GenAI APIs.",
-      category: "Data Science"
-    },
-    {
-      question: "Are statistics and problem solving covered?",
-      answer: "Yes, including business statistics and interview-based problem solving.",
-      category: "Data Science"
-    },
-    {
-      question: "What job roles can I get after this course?",
-      answer: "Data Analyst, AI Developer, LLM Engineer, BI Developer, ML Engineer.",
-      category: "Job And Career"
-    },
-    {
-      question: "What is the average salary offered?",
-      answer: "4-5 LPA is the average for freshers. Experienced professionals may earn more.",
-      category: "Job And Career"
-    },
-    {
-      question: "Is there a job guarantee?",
-      answer: "Yes, a 6-month job guarantee is available for eligible learners.",
-      category: "Job And Career"
-    },
-    {
-      question: "Does the course help with interview prep?",
-      answer: "Yes, with mock interviews, resume review, and analytical workshops.",
-      category: "Job And Career"
-    },
-    {
-      question: "Do I get help building my resume?",
-      answer: "Yes, via the PrepAI platform and expert mentors.",
-      category: "Job And Career"
-    },
-    {
-      question: "Will I be connected to recruiters?",
-      answer: "Yes, Ivy offers recruiter access and job fairs.",
-      category: "Job And Career"
-    },
-    {
-      question: "Do I get an IIT Guwahati certificate?",
-      answer: "Yes, from the ESICT Academy, IIT Guwahati.",
-      category: "Certification"
-    },
-    {
-      question: "How is this certificate different?",
-      answer: "It's among India's most respected academic validations for Data Science.",
-      category: "Certification"
-    },
-    {
-      question: "Is this certificate verifiable?",
-      answer: "Yes, it includes digital credentials shareable on LinkedIn.",
-      category: "Certification"
-    },
-    {
-      question: "Is this certification government-backed?",
-      answer: "Yes, via the ESICT Academy and aligned with national skilling standards.",
-      category: "Certification"
-    },
-    {
-      question: "Will it boost my profile for jobs?",
-      answer: "Yes, IT certification provides a strong credibility with top employers.",
-      category: "Certification"
-    },
-    {
-      question: "Is there a final evaluation to earn it?",
-      answer: "Yes, you must complete all modules and assessments.",
-      category: "Certification"
-    },
-    {
-      question: "What types of projects will I work on?",
-      answer: "Projects include Excel sales analysis, Tableau dashboards, and R-based predictions.",
-      category: "Projects"
-    },
-    {
-      question: "Are these real-world case studies?",
-      answer: "Yes, across retail, law enforcement, and automotive industries.",
-      category: "Projects"
-    },
-    {
-      question: "Do projects include AI, LLMs?",
-      answer: "Yes, generative AI, LLMs, and model deployment are part of final projects.",
-      category: "Projects"
-    },
-    {
-      question: "Will I build a professional portfolio?",
-      answer: "Yes, all projects can be showcased to recruiters.",
-      category: "Projects"
-    },
-    {
-      question: "Are projects group-based or individual?",
-      answer: "Mostly individual with guidance from mentors.",
-      category: "Projects"
-    },
-    {
-      question: "Can I get feedback on my projects?",
-      answer: "Yes, via project reviews and teaching assistants.",
-      category: "Projects"
-    },
-    {
-      question: "Which companies recruit from this course?",
-      answer: "Amazon, IBM, Accenture, PwC, Microsoft, and 500+ hiring partners.",
-      category: "Placement"
-    },
-    {
-      question: "What is the placement success rate?",
-      answer: "94% for full-time graduates.",
-      category: "Placement"
-    },
-    {
-      question: "Is placement assistance lifetime?",
-      answer: "Yes, Ivy offers lifetime job and career support.",
-      category: "Placement"
-    },
-    {
-      question: "Are there dedicated recruiters?",
-      answer: "Yes, including networking events with recruiters.",
-      category: "Placement"
-    },
-    {
-      question: "Can I get support for freelancing or remote jobs?",
-      answer: "Yes, opportunities are shared based on learner preferences.",
-      category: "Placement"
-    },
-    {
-      question: "Is salary negotiation assistance provided?",
-      answer: "Yes, Ivy mentors support evaluation and negotiation.",
-      category: "Placement"
-    },
-    {
-      question: "Which industries hire graduates from this course?",
-      answer: "Tech, healthcare, e-commerce, banking, media, manufacturing.",
-      category: "Opportunities"
-    },
-    {
-      question: "Can I work internationally after this course?",
-      answer: "Yes, the skills are aligned to global standards.",
-      category: "Opportunities"
-    },
-    {
-      question: "Will this course help me transition careers?",
-      answer: "Yes, it's ideal for both freshers and professionals switching to AIData.",
-      category: "Opportunities"
-    },
-    {
-      question: "Can I freelance after this course?",
-      answer: "Yes, especially in analytics, dashboarding, and GenAI apps.",
-      category: "Opportunities"
-    },
-    {
-      question: "Will this help me if I'm specializing in IT?",
-      answer: "Yes, it upgrades your profile for AI/ML specializations.",
-      category: "Opportunities"
-    },
-    {
-      question: "Does this course use suitable tools for entrepreneurs?",
-      answer: "Yes, it teaches how to use AI tools to build products.",
-      category: "Opportunities"
-    },
-    {
-      question: "What kind of support will I receive?",
-      answer: "Dedicated mentors, 1:1 doubt sessions, peer groups, and TA access.",
-      category: "Support"
-    },
-    {
-      question: "What is PrepAI and how does it help?",
-      answer: "It's Ivy's AI-powered support tool for resumes, interview prep, and assessments.",
-      category: "Support"
-    },
-    {
-      question: "Are WhatsApp groups available?",
-      answer: "Yes, for ongoing peer discussion and mentor guidance.",
-      category: "Support"
-    },
-    {
-      question: "Do I get lifetime support?",
-      answer: "Yes, you can revisit content anytime.",
-      category: "Support"
-    },
-    {
-      question: "Is there a technical helpdesk?",
-      answer: "Yes, for any issues during your learning.",
-      category: "Support"
-    },
-    {
-      question: "Can I access support after completing the course?",
-      answer: "Yes, career and learning support continues even post-completion.",
-      category: "Support"
-    }
-  ]
-},
-  "Another Course Title": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -577,13 +292,1756 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is this 'Another Course' about?",
-        answer: "This course covers the fundamentals of a different domain...",
+        question: "What is the duration of the Data Science & AI with IIT Guwahati course?",
+        answer: "The course lasts for 45 weeks and includes 7 modules with 50 sessions totaling 225 hours.",
         category: "program"
       },
-      // ... (Add all other unique FAQs for this course here)
+      {
+        question: "Is this course hybrid or fully online?",
+        answer: "The course follows a hybrid model with live classes and lifetime access to recordings.",
+        category: "program"
+      },
+      {
+        question: "What makes this program unique?",
+        answer: "It offers Generative AI mastery, IT certification, and production-level model deployment.",
+        category: "program"
+      },
+      {
+        question: "Do I get practice sessions?",
+        answer: "Yes, there are 30-minute practice sessions before and after each main class.",
+        category: "program"
+      },
+      {
+        question: "Is this course beginner-friendly?",
+        answer: "Yes, this course is designed for students and professionals transitioning into data roles.",
+        category: "program"
+      },
+      {
+        question: "Can I pay in installments?",
+        answer: "Yes, no-cost EMI and 4-month installment plans are available.",
+        category: "program"
+      },
+      {
+        question: "Who is eligible for this course?",
+        answer: "Graduates, final-year students, and working professionals in any field can apply.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior experience in AI or ML?",
+        answer: "No, the course starts from basics and gradually advances to GenAI.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this suitable for non-programmers?",
+        answer: "Yes, it is suitable for non-programmers.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need to attend live classes?",
+        answer: "No, live attendance is encouraged but recordings are available for flexibility.",
+        category: "eligibility"
+      },
+      {
+        question: "Can I take only selected modules?",
+        answer: "Yes, there is a 'Pick Your Own Module' option available.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an admission test?",
+        answer: "No, you can enroll directly by paying the fee.",
+        category: "eligibility"
+      },
+      {
+        question: "What are the core technologies covered?",
+        answer: "Python, SQL, Excel, Power BI, MLOps, and generative AI APIs like OpenAI and Anthropic.",
+        category: "data-science"
+      },
+      {
+        question: "Are ML and DL concepts taught?",
+        answer: "Yes, along with building and fine-tuning LLMs.",
+        category: "data-science"
+      },
+      {
+        question: "Do I learn data visualization?",
+        answer: "Yes, Power BI and Excel are covered in detail.",
+        category: "data-science"
+      },
+      {
+        question: "Are MLOps included in the course?",
+        answer: "Yes, as part of model deployment and production.",
+        category: "data-science"
+      },
+      {
+        question: "Will I learn how to build AI applications?",
+        answer: "Yes, including deploying models and using GenAI APIs.",
+        category: "data-science"
+      },
+      {
+        question: "Are statistics and problem solving covered?",
+        answer: "Yes, including business statistics and interview-based problem solving.",
+        category: "data-science"
+      },
+      {
+        question: "What job roles can I get after this course?",
+        answer: "Data Analyst, AI Developer, LLM Engineer, BI Developer, ML Engineer.",
+        category: "job and career"
+      },
+      {
+        question: "What is the average salary offered?",
+        answer: "4-5 LPA is the average for freshers. Experienced professionals may earn more.",
+        category: "job and career"
+      },
+      {
+        question: "Is there a job guarantee?",
+        answer: "Yes, a 6-month job guarantee is available for eligible learners.",
+        category: "job and career"
+      },
+      {
+        question: "Does the course help with interview prep?",
+        answer: "Yes, with mock interviews, resume review, and analytical workshops.",
+        category: "job and career"
+      },
+      {
+        question: "Do I get help building my resume?",
+        answer: "Yes, via the PrepAI platform and expert mentors.",
+        category: "job and career"
+      },
+      {
+        question: "Will I be connected to recruiters?",
+        answer: "Yes, Ivy offers recruiter access and job fairs.",
+        category: "job and career"
+      },
+      {
+        question: "Do I get an IIT Guwahati certificate?",
+        answer: "Yes, from the ESICT Academy, IIT Guwahati.",
+        category: "certification"
+      },
+      {
+        question: "How is this certificate different?",
+        answer: "It's among India's most respected academic validations for Data Science.",
+        category: "certification"
+      },
+      {
+        question: "Is this certificate verifiable?",
+        answer: "Yes, it includes digital credentials shareable on LinkedIn.",
+        category: "certification"
+      },
+      {
+        question: "Is this certification government-backed?",
+        answer: "Yes, via the ESICT Academy and aligned with national skilling standards.",
+        category: "certification"
+      },
+      {
+        question: "Will it boost my profile for jobs?",
+        answer: "Yes, IT certification provides a strong credibility with top employers.",
+        category: "certification"
+      },
+      {
+        question: "Is there a final evaluation to earn it?",
+        answer: "Yes, you must complete all modules and assessments.",
+        category: "certification"
+      },
+      {
+        question: "What types of projects will I work on?",
+        answer: "Projects include Excel sales analysis, Tableau dashboards, and R-based predictions.",
+        category: "projects"
+      },
+      {
+        question: "Are these real-world case studies?",
+        answer: "Yes, across retail, law enforcement, and automotive industries.",
+        category: "projects"
+      },
+      {
+        question: "Do projects include AI, LLMs?",
+        answer: "Yes, generative AI, LLMs, and model deployment are part of final projects.",
+        category: "projects"
+      },
+      {
+        question: "Will I build a professional portfolio?",
+        answer: "Yes, all projects can be showcased to recruiters.",
+        category: "projects"
+      },
+      {
+        question: "Are projects group-based or individual?",
+        answer: "Mostly individual with guidance from mentors.",
+        category: "projects"
+      },
+      {
+        question: "Can I get feedback on my projects?",
+        answer: "Yes, via project reviews and teaching assistants.",
+        category: "projects"
+      },
+      {
+        question: "Which companies recruit from this course?",
+        answer: "Amazon, IBM, Accenture, PwC, Microsoft, and 500+ hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What is the placement success rate?",
+        answer: "94% for full-time graduates.",
+        category: "placement"
+      },
+      {
+        question: "Is placement assistance lifetime?",
+        answer: "Yes, Ivy offers lifetime job and career support.",
+        category: "placement"
+      },
+      {
+        question: "Are there dedicated recruiters?",
+        answer: "Yes, including networking events with recruiters.",
+        category: "placement"
+      },
+      {
+        question: "Can I get support for freelancing or remote jobs?",
+        answer: "Yes, opportunities are shared based on learner preferences.",
+        category: "placement"
+      },
+      {
+        question: "Is salary negotiation assistance provided?",
+        answer: "Yes, Ivy mentors support evaluation and negotiation.",
+        category: "placement"
+      },
+      {
+        question: "Which industries hire graduates from this course?",
+        answer: "Tech, healthcare, e-commerce, banking, media, manufacturing.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I work internationally after this course?",
+        answer: "Yes, the skills are aligned to global standards.",
+        category: "opportunities"
+      },
+      {
+        question: "Will this course help me transition careers?",
+        answer: "Yes, it's ideal for both freshers and professionals switching to AIData.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I freelance after this course?",
+        answer: "Yes, especially in analytics, dashboarding, and GenAI apps.",
+        category: "opportunities"
+      },
+      {
+        question: "Will this help me if I'm specializing in IT?",
+        answer: "Yes, it upgrades your profile for AI/ML specializations.",
+        category: "opportunities"
+      },
+      {
+        question: "Does this course use suitable tools for entrepreneurs?",
+        answer: "Yes, it teaches how to use AI tools to build products.",
+        category: "opportunities"
+      },
+      {
+        question: "What kind of support will I receive?",
+        answer: "Dedicated mentors, 1:1 doubt sessions, peer groups, and TA access.",
+        category: "support"
+      },
+      {
+        question: "What is PrepAI and how does it help?",
+        answer: "It's Ivy's AI-powered support tool for resumes, interview prep, and assessments.",
+        category: "support"
+      },
+      {
+        question: "Are WhatsApp groups available?",
+        answer: "Yes, for ongoing peer discussion and mentor guidance.",
+        category: "support"
+      },
+      {
+        question: "Do I get lifetime support?",
+        answer: "Yes, you can revisit content anytime.",
+        category: "support"
+      },
+      {
+        question: "Is there a technical helpdesk?",
+        answer: "Yes, for any issues during your learning.",
+        category: "support"
+      },
+      {
+        question: "Can I access support after completing the course?",
+        answer: "Yes, career and learning support continues even post-completion.",
+        category: "support"
+      }
+    ]
+  },
+  "Data Science with Machine Learning & AI Certification": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-science", name: "Data Science" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "What is the duration of the Data Science with ML & AI course?",
+        answer: "The course spans 225 hours over 14 weeks, including 9 modules and 103 lessons.",
+        category: "program"
+      },
+      {
+        question: "Is the course curriculum beginner-friendly?",
+        answer: "Yes, it is designed for beginners and progresses to advanced topics.",
+        category: "program"
+      },
+      {
+        question: "What topics are covered in the curriculum?",
+        answer: "Topics include Excel, SQL, Tableau, Power BI, R, Python, ML, AI, and Deep Learning.",
+        category: "program"
+      },
+      {
+        question: "Can I access the course materials after completion?",
+        answer: "Yes, you get lifetime access to all recorded sessions and resources.",
+        category: "program"
+      },
+      {
+        question: "Is the course available online?",
+        answer: "Yes, it is a fully online course with live sessions and self-paced content.",
+        category: "program"
+      },
+      {
+        question: "Who designed the curriculum?",
+        answer: "The curriculum is designed by industry experts and Ivy’s leadership team from IITs and IIMs.",
+        category: "program"
+      },
+      {
+        question: "Who can enroll in this course?",
+        answer: "Anyone from technical or non-technical backgrounds can join.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior coding experience?",
+        answer: "No prior coding experience is required.",
+        category: "eligibility"
+      },
+      {
+        question: "Are final-year students welcome to enroll?",
+        answer: "Yes, final-year students are welcome to enroll.",
+        category: "eligibility"
+      },
+      {
+        question: "Can working professionals join this course?",
+        answer: "Yes, many working professionals enroll to switch to a data science career.",
+        category: "eligibility"
+      },
+      {
+        question: "Are there any prerequisites?",
+        answer: "Basic computer literacy is sufficient.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an age limit to join?",
+        answer: "No, the course is open to learners of all ages.",
+        category: "eligibility"
+      },
+      {
+        question: "What tools will I start using in this course?",
+        answer: "Python, R, SQL, Tableau, Power BI, Excel, Spark, MongoDB, and cloud platforms.",
+        category: "data-science"
+      },
+      {
+        question: "Does the course teach machine learning and AI?",
+        answer: "Yes, the course covers ML, AI, Deep Learning, and their real-world applications.",
+        category: "data-science"
+      },
+      {
+        question: "Are cloud tools like AWS and Azure included?",
+        answer: "Yes, the course includes AWS, Azure, and GCP.",
+        category: "data-science"
+      },
+      {
+        question: "Do we work with real datasets?",
+        answer: "Yes, learners work on industry-aligned case studies and datasets.",
+        category: "data-science"
+      },
+      {
+        question: "Do I learn both structured and unstructured data handling?",
+        answer: "Yes, including tools like MySQL and MongoDB.",
+        category: "data-science"
+      },
+      {
+        question: "Is there focus on both theory and practice?",
+        answer: "Yes, the course is a blend of conceptual understanding and hands-on application.",
+        category: "data-science"
+      },
+      {
+        question: "What kind of job roles can I apply for?",
+        answer: "Roles include Data Analyst, Data Scientist, ML Engineer, and Business Analyst.",
+        category: "job and career"
+      },
+      {
+        question: "Does Ivy provide interview preparation?",
+        answer: "Yes, with mock interviews, resume building, and expert guidance.",
+        category: "job and career"
+      },
+      {
+        question: "Is there a job guarantee program?",
+        answer: "Yes, eligible students can opt into the job guarantee program.",
+        category: "job and career"
+      },
+      {
+        question: "What is the placement rate?",
+        answer: "Ivy has a 94% placement rate.",
+        category: "job and career"
+      },
+      {
+        question: "What salary can I expect after this course?",
+        answer: "Average salary offered is 12 LPA, depending on background and role.",
+        category: "job and career"
+      },
+      {
+        question: "Will I get help with salary negotiation?",
+        answer: "Yes, Ivy provides support in offer evaluation and salary negotiation.",
+        category: "job and career"
+      },
+      {
+        question: "Do I receive a certificate after completion?",
+        answer: "Yes, you receive a certificate co-branded by IBM and NASSCOM.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized in the industry?",
+        answer: "Yes, it is valued by recruiters and hiring managers.",
+        category: "certification"
+      },
+      {
+        question: "Is the certificate government-approved?",
+        answer: "Yes, through NASSCOM’s FutureSkills Prime initiative.",
+        category: "certification"
+      },
+      {
+        question: "Can I share my certificate on LinkedIn?",
+        answer: "Yes, it’s digital and shareable.",
+        category: "certification"
+      },
+      {
+        question: "Does the course help with external certifications?",
+        answer: "Yes, including AWS and GCP certification prep.",
+        category: "certification"
+      },
+      {
+        question: "Is the certificate permanent?",
+        answer: "Yes, there is no expiration on the issued certificate.",
+        category: "certification"
+      },
+      {
+        question: "What kinds of projects will I work on?",
+        answer: "Projects include real estate prediction, AI visuals in Power BI, and chatbot design.",
+        category: "projects"
+      },
+      {
+        question: "Are the projects industry-aligned?",
+        answer: "Yes, they are designed with inputs from industry experts.",
+        category: "projects"
+      },
+      {
+        question: "How many capstone projects are there?",
+        answer: "There are over 10 capstone projects and 30 case studies.",
+        category: "projects"
+      },
+      {
+        question: "Will I build a portfolio?",
+        answer: "Yes, the projects help build a professional portfolio.",
+        category: "projects"
+      },
+      {
+        question: "Do projects involve real datasets?",
+        answer: "Yes, learners solve real-world business problems.",
+        category: "projects"
+      },
+      {
+        question: "Can I try sample projects before enrolling?",
+        answer: "Yes, you can access trial projects for free.",
+        category: "projects"
+      },
+      {
+        question: "Who are the hiring partners?",
+        answer: "Top companies like Amazon, IBM, PwC, Deloitte, and many Fortune 500 firms.",
+        category: "placement"
+      },
+      {
+        question: "Is there placement support after course completion?",
+        answer: "Yes, including job fairs and one-on-one guidance.",
+        category: "placement"
+      },
+      {
+        question: "How long does it take to get placed?",
+        answer: "Most learners are placed within 3–6 months.",
+        category: "placement"
+      },
+      {
+        question: "Does Ivy offer lifetime placement assistance?",
+        answer: "Yes, you can access placement services anytime.",
+        category: "placement"
+      },
+      {
+        question: "Are remote jobs supported?",
+        answer: "Yes, many learners get remote roles in data science.",
+        category: "placement"
+      },
+      {
+        question: "Do you host exclusive hiring drives?",
+        answer: "Yes, Ivy conducts hiring events with partner firms.",
+        category: "placement"
+      },
+      {
+        question: "Which industries hire data scientists?",
+        answer: "Finance, healthcare, e-commerce, IT, logistics, and more.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I freelance after completing this course?",
+        answer: "Yes, many learners successfully freelance post-completion.",
+        category: "opportunities"
+      },
+      {
+        question: "Is the course helpful for international careers?",
+        answer: "Yes, the curriculum aligns with global job requirements.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I transition from a non-tech role?",
+        answer: "Yes, many learners successfully switch from social sciences, HR, etc.",
+        category: "opportunities"
+      },
+      {
+        question: "Does the course suit entrepreneurs?",
+        answer: "Yes, it helps entrepreneurs use data in decision-making.",
+        category: "opportunities"
+      },
+      {
+        question: "Is this relevant for academic researchers?",
+        answer: "Yes, especially for data-heavy or social science research.",
+        category: "opportunities"
+      },
+      {
+        question: "What kind of support do learners receive?",
+        answer: "Learners receive doubt-clearing sessions, doubt classes, and community access.",
+        category: "support"
+      },
+      {
+        question: "Is 1:1 mentorship provided?",
+        answer: "Yes, personalized mentoring is available for all learners.",
+        category: "support"
+      },
+      {
+        question: "Do I get help with resume building?",
+        answer: "Yes, resume reviews and optimization are part of the service.",
+        category: "support"
+      },
+      {
+        question: "Is there technical support if I face issues?",
+        answer: "Yes, Ivy’s team offers full tech and learning support.",
+        category: "support"
+      },
+      {
+        question: "Can I attend free classes after course enrollment?",
+        answer: "Yes, sample classes are available after enrollment.",
+        category: "support"
+      },
+      {
+        question: "Is PrepAI integrated for learning support?",
+        answer: "Yes, PrepAI offers mock interviews, career coaching, and assessments.",
+        category: "support"
+      }
+    ]
+  },
+  "Cloud Data Engineering Certification": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "cloud-data-engineering", name: "Cloud Data Engineering" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "What is the duration of the Cloud Data Engineering Certification course?",
+        answer: "The course spans 225 hours and is completed over 12 weeks, covering 8 modules and 62 lessons.",
+        category: "program"
+      },
+      {
+        question: "Is this course beginner-friendly or do I need prior experience?",
+        answer: "Yes, it’s beginner-friendly and starts with basics before moving to advanced topics.",
+        category: "program"
+      },
+      {
+        question: "What topics are covered in this course?",
+        answer: "Topics include SQL, Big Data in Azure, Hadoop, Spark, MongoDB, Kafka, Hive, and cloud-based implementation.",
+        category: "program"
+      },
+      {
+        question: "Are the classes live or recorded?",
+        answer: "The program includes live sessions with industry experts and lifetime access to recorded lectures.",
+        category: "program"
+      },
+      {
+        question: "How is this program different from other data courses?",
+        answer: "It focuses exclusively on data engineering and big data tools for cloud, with real-world implementation.",
+        category: "program"
+      },
+      {
+        question: "Are there any trial labs before enrolling?",
+        answer: "Yes, you can join two free classes before enrollment.",
+        category: "program"
+      },
+      {
+        question: "Who is eligible for this course?",
+        answer: "Anyone with basic computer knowledge can enroll. It’s suitable for freshers and working professionals.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need to know coding experience?",
+        answer: "No prior coding experience is needed.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this suitable for working professionals?",
+        answer: "Yes, it’s designed for professionals looking to upskill or transition to data engineering.",
+        category: "eligibility"
+      },
+      {
+        question: "Can graduates from non-technical fields apply?",
+        answer: "Yes, learners from commerce, science, and even arts backgrounds have successfully completed it.",
+        category: "eligibility"
+      },
+      {
+        question: "Are students allowed to join this program?",
+        answer: "Yes, final-year students and recent graduates are encouraged to apply.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an entrance test?",
+        answer: "No, there’s no entrance test. Admission is based on interest and eligibility.",
+        category: "eligibility"
+      },
+      {
+        question: "What technologies are covered in the course?",
+        answer: "Hadoop, Spark, Kafka, Hive, MongoDB, Azure, AWS, GCP, SQL, and Python.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Will I learn cloud technologies?",
+        answer: "Yes, you’ll learn cloud implementation using Azure, AWS, and GCP.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Are real-time data tools included?",
+        answer: "Yes, tools like Kafka and MongoDB are part of the curriculum.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Do I get hands-on experience with big data tools?",
+        answer: "Yes, hands-on practice is provided through guided labs and assignments.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Is data modeling taught in the course?",
+        answer: "Yes, relational and non-relational database modeling is covered.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Is there an emphasis on scalability?",
+        answer: "Yes. You’ll learn to build scalable data pipelines using distributed frameworks.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "What career roles can I pursue after this course?",
+        answer: "Data Engineer, Big Data Engineer, Cloud Data Engineer, and ETL Developer.",
+        category: "job and career"
+      },
+      {
+        question: "Does Ivy offer job placement assistance?",
+        answer: "Yes, including end-to-end placement assistance and career coaching.",
+        category: "job and career"
+      },
+      {
+        question: "Is there a job guarantee?",
+        answer: "Yes, eligible students are covered under a 6-month job guarantee program.",
+        category: "job and career"
+      },
+      {
+        question: "What is the average salary for graduates?",
+        answer: "The average CTC is around 12 LPA, with roles in top firms.",
+        category: "job and career"
+      },
+      {
+        question: "Will I get help with LinkedIn and resume building?",
+        answer: "Yes, Ivy provides LinkedIn optimization and resume building.",
+        category: "job and career"
+      },
+      {
+        question: "Are mock interviews part of the support?",
+        answer: "Yes, mock interviews and job-specific coaching are included.",
+        category: "job and career"
+      },
+      {
+        question: "Do I receive a certificate after course completion?",
+        answer: "Yes, an industry-recognized certification from Ivy, co-branded with NASSCOM.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification useful for job applications?",
+        answer: "Yes, it’s well-recognized across Fortune 500 and mid-sized firms.",
+        category: "certification"
+      },
+      {
+        question: "Does the course prepare me for AWS and GCP certifications?",
+        answer: "Yes, with dedicated mentoring and practice labs.",
+        category: "certification"
+      },
+      {
+        question: "Can I share my certificate on LinkedIn?",
+        answer: "Yes, it’s digitally shareable and verified.",
+        category: "certification"
+      },
+      {
+        question: "Is the certificate issued only upon exam?",
+        answer: "It is granted on successful completion of course and assessments.",
+        category: "certification"
+      },
+      {
+        question: "Is the certificate government-backed?",
+        answer: "Yes, it’s aligned with NASSCOM’s FutureSkills Prime initiative.",
+        category: "certification"
+      },
+      {
+        question: "What kinds of projects are included?",
+        answer: "Projects include Superstore Sales in Excel, Car Sales in R, and Crime Dashboard in Power BI.",
+        category: "projects"
+      },
+      {
+        question: "How many capstone projects are included?",
+        answer: "There are over 10 capstone projects and 30+ case studies.",
+        category: "projects"
+      },
+      {
+        question: "Are the projects hands-on?",
+        answer: "Yes, they involve real-world data and business problem-solving.",
+        category: "projects"
+      },
+      {
+        question: "Can I build a portfolio with these projects?",
+        answer: "Yes, projects help you create a job-ready portfolio.",
+        category: "projects"
+      },
+      {
+        question: "Are tools like Power BI and Excel covered in projects?",
+        answer: "Yes, several projects use tools like Excel, R, and Power BI.",
+        category: "projects"
+      },
+      {
+        question: "Can I access the projects after course ends?",
+        answer: "Yes, you get lifetime access to all materials and projects.",
+        category: "projects"
+      },
+      {
+        question: "Who are the hiring partners?",
+        answer: "Top companies like Amazon, IBM, Deloitte, Microsoft, and PwC.",
+        category: "placement"
+      },
+      {
+        question: "What is Ivy’s placement rate?",
+        answer: "94% of the learners are successfully placed.",
+        category: "placement"
+      },
+      {
+        question: "Does Ivy offer networking opportunities?",
+        answer: "Yes, through valuable job fairs, meetups, and alumni events.",
+        category: "placement"
+      },
+      {
+        question: "Is placement support available after course completion?",
+        answer: "Yes, lifetime placement assistance is offered.",
+        category: "placement"
+      },
+      {
+        question: "Does Ivy offer salary negotiation help?",
+        answer: "Yes, Ivy provides offer evaluation and negotiation guidance.",
+        category: "placement"
+      },
+      {
+        question: "Which sectors hire Cloud Data Engineers?",
+        answer: "Tech, finance, logistics, healthcare, and manufacturing.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I freelance in data engineering after this course?",
+        answer: "Yes, the course equips you with project-ready skills for freelancing.",
+        category: "opportunities"
+      },
+      {
+        question: "Does the course support international opportunities?",
+        answer: "Yes, curriculum is globally relevant and certification is recognized.",
+        category: "opportunities"
+      },
+      {
+        question: "Is the course helpful for career switchers?",
+        answer: "Yes, many learners have moved from non-tech roles to data engineering.",
+        category: "opportunities"
+      },
+      {
+        question: "Does it help in DevOps/DataOps roles too?",
+        answer: "Yes, it’s relevant for understanding data infrastructure tasks.",
+        category: "opportunities"
+      },
+      {
+        question: "What type of support is provided?",
+        answer: "Mentorship, expert-led classes, and support via PrepAI platform.",
+        category: "support"
+      },
+      {
+        question: "Are mock interviews included in this course?",
+        answer: "Yes, with role-specific interview and job-specific coaching are included.",
+        category: "support"
+      },
+      {
+        question: "Are doubt-clearing sessions included?",
+        answer: "Yes, dedicated doubt-clearing sessions and community access.",
+        category: "support"
+      },
+      {
+        question: "Do I get 1:1 mentorship?",
+        answer: "Yes, personalized guidance and mentoring are available.",
+        category: "support"
+      },
+      {
+        question: "Can I schedule a call with instructors after enrollment?",
+        answer: "Yes, scheduled calls with instructors are available for learners.",
+        category: "support"
+      },
+      {
+        question: "Is PrepAI used as a support tool?",
+        answer: "Yes, PrepAI provides mock interviews, resume evaluation, and skill assessments.",
+        category: "support"
+      }
+    ]
+  },
+
+  "Cloud Data Engineering Course with IIT Guwahati": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "cloud-data-engineering", name: "Cloud Data Engineering" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "What is the duration of the Cloud Data Engineering Certification course?",
+        answer: "The course spans 225 hours and is completed over 12 weeks, covering 8 modules and 62 lessons.",
+        category: "program"
+      },
+      {
+        question: "Is this course beginner-friendly or do I need prior experience?",
+        answer: "Yes, it’s beginner-friendly and starts with basics before moving to advanced topics.",
+        category: "program"
+      },
+      {
+        question: "What topics are covered in this course?",
+        answer: "Topics include SQL, Big Data in Azure, Hadoop, Spark, MongoDB, Kafka, Hive, and cloud-based implementation.",
+        category: "program"
+      },
+      {
+        question: "Are the classes live or recorded?",
+        answer: "The program includes live sessions with industry experts and lifetime access to recorded lectures.",
+        category: "program"
+      },
+      {
+        question: "How is this program different from other data courses?",
+        answer: "It focuses exclusively on data engineering and big data tools for cloud, with real-world implementation.",
+        category: "program"
+      },
+      {
+        question: "Are there any trial labs before enrolling?",
+        answer: "Yes, you can join two free classes before enrollment.",
+        category: "program"
+      },
+      {
+        question: "Who is eligible for this course?",
+        answer: "Anyone with basic computer knowledge can enroll. It’s suitable for freshers and working professionals.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need to know coding experience?",
+        answer: "No prior coding experience is needed.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this suitable for working professionals?",
+        answer: "Yes, it’s designed for professionals looking to upskill or transition to data engineering.",
+        category: "eligibility"
+      },
+      {
+        question: "Can graduates from non-technical fields apply?",
+        answer: "Yes, learners from commerce, science, and even arts backgrounds have successfully completed it.",
+        category: "eligibility"
+      },
+      {
+        question: "Are students allowed to join this program?",
+        answer: "Yes, final-year students and recent graduates are encouraged to apply.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an entrance test?",
+        answer: "No, there’s no entrance test. Admission is based on interest and eligibility.",
+        category: "eligibility"
+      },
+      {
+        question: "What technologies are covered in the course?",
+        answer: "Hadoop, Spark, Kafka, Hive, MongoDB, Azure, AWS, GCP, SQL, and Python.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Will I learn cloud technologies?",
+        answer: "Yes, you’ll learn cloud implementation using Azure, AWS, and GCP.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Are real-time data tools included?",
+        answer: "Yes, tools like Kafka and MongoDB are part of the curriculum.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Do I get hands-on experience with big data tools?",
+        answer: "Yes, hands-on practice is provided through guided labs and assignments.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Is data modeling taught in the course?",
+        answer: "Yes, relational and non-relational database modeling is covered.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "Is there an emphasis on scalability?",
+        answer: "Yes. You’ll learn to build scalable data pipelines using distributed frameworks.",
+        category: "cloud-data-engineering"
+      },
+      {
+        question: "What career roles can I pursue after this course?",
+        answer: "Data Engineer, Big Data Engineer, Cloud Data Engineer, and ETL Developer.",
+        category: "job and career"
+      },
+      {
+        question: "Does Ivy offer job placement assistance?",
+        answer: "Yes, including end-to-end placement assistance and career coaching.",
+        category: "job and career"
+      },
+      {
+        question: "Is there a job guarantee?",
+        answer: "Yes, eligible students are covered under a 6-month job guarantee program.",
+        category: "job and career"
+      },
+      {
+        question: "What is the average salary for graduates?",
+        answer: "The average CTC is around 12 LPA, with roles in top firms.",
+        category: "job and career"
+      },
+      {
+        question: "Will I get help with LinkedIn and resume building?",
+        answer: "Yes, Ivy provides LinkedIn optimization and resume building.",
+        category: "job and career"
+      },
+      {
+        question: "Are mock interviews part of the support?",
+        answer: "Yes, mock interviews and job-specific coaching are included.",
+        category: "job and career"
+      },
+      {
+        question: "Do I receive a certificate after course completion?",
+        answer: "Yes, an industry-recognized certification from Ivy, co-branded with NASSCOM.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification useful for job applications?",
+        answer: "Yes, it’s well-recognized across Fortune 500 and mid-sized firms.",
+        category: "certification"
+      },
+      {
+        question: "Does the course prepare me for AWS and GCP certifications?",
+        answer: "Yes, with dedicated mentoring and practice labs.",
+        category: "certification"
+      },
+      {
+        question: "Can I share my certificate on LinkedIn?",
+        answer: "Yes, it’s digitally shareable and verified.",
+        category: "certification"
+      },
+      {
+        question: "Is the certificate issued only upon exam?",
+        answer: "It is granted on successful completion of course and assessments.",
+        category: "certification"
+      },
+      {
+        question: "Is the certificate government-backed?",
+        answer: "Yes, it’s aligned with NASSCOM’s FutureSkills Prime initiative.",
+        category: "certification"
+      },
+      {
+        question: "What kinds of projects are included?",
+        answer: "Projects include Superstore Sales in Excel, Car Sales in R, and Crime Dashboard in Power BI.",
+        category: "projects"
+      },
+      {
+        question: "How many capstone projects are included?",
+        answer: "There are over 10 capstone projects and 30+ case studies.",
+        category: "projects"
+      },
+      {
+        question: "Are the projects hands-on?",
+        answer: "Yes, they involve real-world data and business problem-solving.",
+        category: "projects"
+      },
+      {
+        question: "Can I build a portfolio with these projects?",
+        answer: "Yes, projects help you create a job-ready portfolio.",
+        category: "projects"
+      },
+      {
+        question: "Are tools like Power BI and Excel covered in projects?",
+        answer: "Yes, several projects use tools like Excel, R, and Power BI.",
+        category: "projects"
+      },
+      {
+        question: "Can I access the projects after course ends?",
+        answer: "Yes, you get lifetime access to all materials and projects.",
+        category: "projects"
+      },
+      {
+        question: "Who are the hiring partners?",
+        answer: "Top companies like Amazon, IBM, Deloitte, Microsoft, and PwC.",
+        category: "placement"
+      },
+      {
+        question: "What is Ivy’s placement rate?",
+        answer: "94% of the learners are successfully placed.",
+        category: "placement"
+      },
+      {
+        question: "Does Ivy offer networking opportunities?",
+        answer: "Yes, through valuable job fairs, meetups, and alumni events.",
+        category: "placement"
+      },
+      {
+        question: "Is placement support available after course completion?",
+        answer: "Yes, lifetime placement assistance is offered.",
+        category: "placement"
+      },
+      {
+        question: "Does Ivy offer salary negotiation help?",
+        answer: "Yes, Ivy provides offer evaluation and negotiation guidance.",
+        category: "placement"
+      },
+      {
+        question: "Which sectors hire Cloud Data Engineers?",
+        answer: "Tech, finance, logistics, healthcare, and manufacturing.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I freelance in data engineering after this course?",
+        answer: "Yes, the course equips you with project-ready skills for freelancing.",
+        category: "opportunities"
+      },
+      {
+        question: "Does the course support international opportunities?",
+        answer: "Yes, curriculum is globally relevant and certification is recognized.",
+        category: "opportunities"
+      },
+      {
+        question: "Is the course helpful for career switchers?",
+        answer: "Yes, many learners have moved from non-tech roles to data engineering.",
+        category: "opportunities"
+      },
+      {
+        question: "Does it help in DevOps/DataOps roles too?",
+        answer: "Yes, it’s relevant for understanding data infrastructure tasks.",
+        category: "opportunities"
+      },
+      {
+        question: "What type of support is provided?",
+        answer: "Mentorship, expert-led classes, and support via PrepAI platform.",
+        category: "support"
+      },
+      {
+        question: "Are mock interviews included in this course?",
+        answer: "Yes, with role-specific interview and job-specific coaching are included.",
+        category: "support"
+      },
+      {
+        question: "Are doubt-clearing sessions included?",
+        answer: "Yes, dedicated doubt-clearing sessions and community access.",
+        category: "support"
+      },
+      {
+        question: "Do I get 1:1 mentorship?",
+        answer: "Yes, personalized guidance and mentoring are available.",
+        category: "support"
+      },
+      {
+        question: "Can I schedule a call with instructors after enrollment?",
+        answer: "Yes, scheduled calls with instructors are available for learners.",
+        category: "support"
+      },
+      {
+        question: "Is PrepAI used as a support tool?",
+        answer: "Yes, PrepAI provides mock interviews, resume evaluation, and skill assessments.",
+        category: "support"
+      }
+    ]
+  },
+
+  "Data Analytics with Visualization Certification Course": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-analytics", name: "Data Analytics" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "What is the duration of the Data Analytics with Visualization Certification Course?",
+        answer: "The course spans 225 hours across 14 weeks and includes live sessions, projects, and hands-on practice.",
+        category: "program"
+      },
+      {
+        question: "Is this course beginner-friendly?",
+        answer: "Yes, it’s suitable for beginners as well as professionals looking to shift to analytics roles.",
+        category: "program"
+      },
+      {
+        question: "Which tools will I learn in this course?",
+        answer: "You’ll learn Excel, SQL, Python, R, Tableau, Power BI, Hadoop, Spark, and Scala.",
+        category: "program"
+      },
+      {
+        question: "Are the classes live or recorded?",
+        answer: "The course includes live instructor-led classes, with recorded sessions for flexible access.",
+        category: "program"
+      },
+      {
+        question: "What domains are covered in projects?",
+        answer: "Projects span across retail, finance, healthcare, aviation, and more.",
+        category: "program"
+      },
+      {
+        question: "What makes this course different from others?",
+        answer: "It combines data analysis, visualization, machine learning, and big data into one job-focused program.",
+        category: "program"
+      },
+      {
+        question: "Who can apply for this course?",
+        answer: "Anyone including students, recent graduates, and working professionals from any background.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need technical or coding experience?",
+        answer: "No prior coding experience is required. The course starts from basics.",
+        category: "eligibility"
+      },
+      {
+        question: "Can non-tech graduates join?",
+        answer: "Yes, many successful learners come from non-technical fields like commerce or humanities.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this course open to final-year college students?",
+        answer: "Yes, final-year students can enroll and build their career early.",
+        category: "eligibility"
+      },
+      {
+        question: "Can I join while working full-time?",
+        answer: "Yes, the course is designed to accommodate working professionals.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an eligibility test?",
+        answer: "No, there is no entrance test required for admission.",
+        category: "eligibility"
+      },
+      {
+        question: "Which data science skills are covered?",
+        answer: "Skills include data manipulation, visualization, statistics, ML, big data processing.",
+        category: "data-analytics"
+      },
+      {
+        question: "Are visualization and analytics tools taught?",
+        answer: "Yes, the course blends both data analytics and visualization for business use.",
+        category: "data-analytics"
+      },
+      {
+        question: "Is predictive modeling included?",
+        answer: "Yes, predictive modeling techniques are part of the curriculum.",
+        category: "data-analytics"
+      },
+      {
+        question: "Are big data tools like Spark and Hadoop included?",
+        answer: "Yes, Hadoop, Spark, and Scala are taught for big data workflows.",
+        category: "data-analytics"
+      },
+      {
+        question: "Will I build dashboards in this course?",
+        answer: "Yes, dashboards in Tableau, Excel, and R are covered.",
+        category: "data-analytics"
+      },
+      {
+        question: "Will I learn programming languages?",
+        answer: "Yes, Python and R are included for data handling and analytics.",
+        category: "data-analytics"
+      },
+      {
+        question: "What career roles can I pursue after this course?",
+        answer: "Data Analyst, Business Analyst, Visualization Expert, Junior Data Scientist.",
+        category: "job and career"
+      },
+      {
+        question: "Is placement assistance provided?",
+        answer: "Yes, Ivy offers full career support including job fairs and referrals.",
+        category: "job and career"
+      },
+      {
+        question: "What is the placement success rate?",
+        answer: "94% of Ivy’s full-time program learners are successfully placed.",
+        category: "job and career"
+      },
+      {
+        question: "Is there a job guarantee?",
+        answer: "Yes, eligible students may avail the 6-month job guarantee option.",
+        category: "job and career"
+      },
+      {
+        question: "What’s the average expected salary?",
+        answer: "An average package of 8-12 LPA is reported for qualified candidates.",
+        category: "job and career"
+      },
+      {
+        question: "Do you help with resume and LinkedIn profiles?",
+        answer: "Yes, Ivy provides end-to-end career guidance including personal branding.",
+        category: "job and career"
+      },
+      {
+        question: "Will I get a certificate after completion?",
+        answer: "Yes, a certificate co-branded by IBM and Ivy, aligned with NASSCOM standards.",
+        category: "certification"
+      },
+      {
+        question: "Is the certificate recognized by employers?",
+        answer: "Yes, it is recognized across the data and analytics industry.",
+        category: "certification"
+      },
+      {
+        question: "Is it a government-approved certificate?",
+        answer: "Yes, it’s aligned with the FutureSkills Prime initiative by NASSCOM.",
+        category: "certification"
+      },
+      {
+        question: "Can I share this certificate on LinkedIn?",
+        answer: "Yes, it is verifiable and can be added to your profile.",
+        category: "certification"
+      },
+      {
+        question: "Do I need to pass an exam to get certified?",
+        answer: "Yes, completion of assessments and projects is required.",
+        category: "certification"
+      },
+      {
+        question: "Does it help with future certifications?",
+        answer: "Yes, this forms the foundation for advanced certifications in data science.",
+        category: "certification"
+      },
+      {
+        question: "What kind of projects are included?",
+        answer: "Projects include sales data analysis and dashboarding using Excel and Tableau.",
+        category: "projects"
+      },
+      {
+        question: "How many projects will I work on?",
+        answer: "You will complete over 10 projects and 30+ case studies.",
+        category: "projects"
+      },
+      {
+        question: "Are these projects aligned with real-world business needs?",
+        answer: "Yes, they simulate real industry problems across sectors.",
+        category: "projects"
+      },
+      {
+        question: "Can I use these projects in my job portfolio?",
+        answer: "Yes, they are designed to help you showcase practical experience.",
+        category: "projects"
+      },
+      {
+        question: "Will I work on data from multiple domains?",
+        answer: "Yes, datasets are from finance, retail, healthcare, aviation, and more.",
+        category: "projects"
+      },
+      {
+        question: "Is project mentorship available?",
+        answer: "Yes, projects are mentored by industry experts.",
+        category: "projects"
+      },
+      {
+        question: "Who are the hiring partners for this course?",
+        answer: "Top firms like Amazon, IBM, Cognizant, PwC, KPMG, and many others.",
+        category: "placement"
+      },
+      {
+        question: "Is there lifetime placement assistance?",
+        answer: "Yes, Ivy supports learners with job opportunities even after course completion.",
+        category: "placement"
+      },
+      {
+        question: "Do you offer interview preparation?",
+        answer: "Yes, mock interviews and personalized coaching are part of the career support.",
+        category: "placement"
+      },
+      {
+        question: "Are remote roles supported?",
+        answer: "Yes, many Ivy learners are placed in remote and hybrid roles.",
+        category: "placement"
+      },
+      {
+        question: "Do you help with offer negotiations?",
+        answer: "Yes, support is offered to assess and negotiate offers.",
+        category: "placement"
+      },
+      {
+        question: "Is job fair participation included?",
+        answer: "Yes, learners are invited to exclusive hiring events and meetups.",
+        category: "placement"
+      },
+      {
+        question: "Which industries hire data analysts?",
+        answer: "Banking, retail, healthcare, logistics, education, aviation, and IT sectors.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I switch careers from another field?",
+        answer: "Yes, this course is ideal for career switchers into analytics.",
+        category: "opportunities"
+      },
+      {
+        question: "Are freelance or consulting roles possible?",
+        answer: "Yes, learners start freelance or contract projects after the course.",
+        category: "opportunities"
+      },
+      {
+        question: "Is this course helpful for international roles?",
+        answer: "Yes, the certification and skills are globally aligned.",
+        category: "opportunities"
+      },
+      {
+        question: "Can entrepreneurs benefit from this program?",
+        answer: "Yes, it helps in managing and analyzing business data.",
+        category: "opportunities"
+      },
+      {
+        question: "Is this relevant for academic researchers?",
+        answer: "Yes, it’s useful in applying statistical and analytical methods to research.",
+        category: "opportunities"
+      },
+      {
+        question: "What kind of support is available during the course?",
+        answer: "Dedicated teaching assistants, 1:1 mentoring, career support, and PrepAI resources.",
+        category: "support"
+      },
+      {
+        question: "Do I get access to recordings?",
+        answer: "Yes, live session recordings are available for lifetime access.",
+        category: "support"
+      },
+      {
+        question: "Are doubt-clearing sessions included?",
+        answer: "Yes, faculty and TAs conduct regular doubt-clearing sessions.",
+        category: "support"
+      },
+      {
+        question: "Do you offer PrepAI support for interviews?",
+        answer: "Yes, PrepAI includes resume review, mock interviews, and skill assessments.",
+        category: "support"
+      },
+      {
+        question: "Is personalized mentorship included?",
+        answer: "Yes, Ivy provides 1:1 mentorship for students.",
+        category: "support"
+      },
+      {
+        question: "Is support available post-course?",
+        answer: "Yes, placement and career services are extended beyond course duration.",
+        category: "support"
+      }
+    ]
+  },
+  "Business Analytics Certification Course": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "business-analytics", name: "Business Analytics" },
+      { id: "job-and-career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      { question: "What is the duration of the Business Analytics Certification Course?", answer: "The course runs for 225 hours over approximately 8 months and includes 5 structured modules and real-world projects.", category: "program" },
+      { question: "Is the course designed for beginners or professionals?", answer: "It’s designed for both freshers and professionals seeking business analytics roles.", category: "program" },
+      { question: "What tools and technologies are taught?", answer: "Excel, SQL, Python, R, Tableau, and Excel VBA are included.", category: "program" },
+      { question: "Is this course delivered online?", answer: "Yes, the course is fully online with live sessions and recorded access.", category: "program" },
+      { question: "What is the learning format?", answer: "You’ll learn via instructor-led classes, projects, and self-paced resources.", category: "program" },
+      { question: "Are trial classes available?", answer: "Yes, you can join two free trial sessions before enrollment.", category: "program" },
+      { question: "Who is this course for?", answer: "MBA students, engineers, B.Sc., M.Sc. grads, professionals in banking/IT, and students from math, stats, econ, and commerce.", category: "program" },
+      { question: "Do I need coding experience?", answer: "No, prior coding experience is not required.", category: "eligibility" },
+      { question: "Is this course suitable for college students?", answer: "Yes, especially for final-year or third-year students.", category: "eligibility" },
+      { question: "Can working professionals join?", answer: "Yes, the schedule accommodates professionals.", category: "eligibility" },
+      { question: "Are non-technical learners eligible?", answer: "Yes, it’s suitable for non-tech backgrounds.", category: "eligibility" },
+      { question: "Is an entrance test required?", answer: "No, direct enrollment is available without a test.", category: "eligibility" },
+      { question: "What analytics concepts are taught?", answer: "Business statistics, dashboarding, predictive modeling, and machine learning.", category: "business-analytics" },
+      { question: "Do I learn data science and visualization?", answer: "Yes, including Python, R, Tableau, and Excel.", category: "business-analytics" },
+      { question: "Are machine learning techniques included?", answer: "Yes, such as decision trees, ensemble learning, and text mining.", category: "business-analytics" },
+      { question: "Is business-centric problem solving taught?", answer: "Yes, with domain-based case studies and real projects.", category: "business-analytics" },
+      { question: "Will I learn automation as part of analytics?", answer: "Yes, Excel VBA automation is a module in the course.", category: "business-analytics" },
+      { question: "Are both structured and unstructured data handled?", answer: "Yes, using SQL, Python, and R techniques.", category: "business-analytics" },
+      { question: "What job roles can I pursue after the course?", answer: "Roles like Business Analyst, Data Analyst, MIS Analyst, and Research Analyst.", category: "job-and-career" },
+      { question: "Does Ivy provide placement assistance?", answer: "Yes, with resume building, interview prep, and job referrals.", category: "job-and-career" },
+      { question: "Is there a job guarantee option?", answer: "Yes, eligible students can opt for a 6-month job guarantee.", category: "job-and-career" },
+      { question: "What is the average salary offered?", answer: "Around ₹12 LPA for full-time roles, depending on profile and experience.", category: "job-and-career" },
+      { question: "Is the job switcher-friendly?", answer: "Yes, the course is designed to support domain switchers.", category: "job-and-career" },
+      { question: "Will I get mock interview support?", answer: "Yes, through Prepal and mentor interactions.", category: "job-and-career" },
+      { question: "Do I get certified after completing the course?", answer: "Yes, by an IBM certificate co-branded with NASSCOM is awarded.", category: "certification" },
+      { question: "Is the certification recognized?", answer: "Yes, by Fortune 500 companies and hiring managers.", category: "certification" },
+      { question: "Is it a government-backed certificate?", answer: "Yes, aligned with FutureSkills Prime by NASSCOM.", category: "certification" },
+      { question: "Can I share the certificate digitally?", answer: "Yes, the certificate is digital and shareable.", category: "certification" },
+      { question: "Is certification based on exams or project work?", answer: "Yes, it’s based on completing course milestones and evaluations.", category: "certification" },
+      { question: "Will it help with other advanced certifications?", answer: "Yes, it builds a strong foundation for future analytics certifications.", category: "certification" },
+      { question: "Are projects based on real clients’ business problems?", answer: "Projects include solving Disney, Hotstar, and sentiment analysis use cases.", category: "projects" },
+      { question: "Do projects use real datasets?", answer: "Yes, datasets are sourced from domains like retail, streaming, and airlines.", category: "projects" },
+      { question: "How many projects will I complete?", answer: "Over 10 projects and 30+ case studies are included.", category: "projects" },
+      { question: "Can I use projects in my portfolio?", answer: "Yes, they are meant to showcase your practical skills.", category: "projects" },
+      { question: "Who are the placement partners?", answer: "Companies like Amazon, IBM, EY, PwC, Deloitte, KPMG, and more.", category: "placement" },
+      { question: "Is lifetime placement support available?", answer: "Yes, Ivy provides lifelong career support.", category: "placement" },
+      { question: "Are resume and LinkedIn reviews offered?", answer: "Yes, Ivy offers standard placement process.", category: "placement" },
+      { question: "Can I get help with senior or freelance roles?", answer: "Yes, placement services also include mentor opportunities.", category: "placement" },
+      { question: "Will I be supported in salary negotiations?", answer: "Yes, Ivy provides expert advice and offer evaluations.", category: "placement" },
+      { question: "Is job fair participation included?", answer: "Yes, learners are invited to hiring events and job fairs.", category: "placement" },
+      { question: "Which industries hire business analytics professionals?", answer: "Finance, marketing, IT, e-commerce, retail, and consulting.", category: "opportunities" },
+      { question: "Is this course useful for career switches?", answer: "Yes, it helps learners transition into analytics roles.", category: "opportunities" },
+      { question: "Are freelance or consulting roles possible?", answer: "Yes, learners can take up consulting and dashboarding services independently.", category: "opportunities" },
+      { question: "Will this course help me apply for international roles?", answer: "Yes, the curriculum is globally aligned.", category: "opportunities" },
+      { question: "Are the skills applicable to startups?", answer: "Yes, it strengthens skills like business insights and operations analytics.", category: "opportunities" },
+      { question: "Is this course helpful for MBA or M.Sc. students?", answer: "Yes, it strengthens analytical decision-making and quantitative skills.", category: "opportunities" },
+      { question: "What kind of mentorship is provided?", answer: "Yes, including one-on-one sessions with industry experts.", category: "support" },
+      { question: "Do I get access to Prepal career support?", answer: "Yes, for mock interviews, resume prep, and assessments.", category: "support" },
+      { question: "Is technical support included?", answer: "Yes, Ivy offers full academic and tech support.", category: "support" },
+      { question: "Can I interact with peers and alumni?", answer: "Yes, via community channels and networking events.", category: "support" },
+      { question: "Is support available post-course?", answer: "Yes, including job support, mentoring, and project guidance.", category: "support" }
+    ]
+  },
+
+  "Data Visualization Course": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "business-analytics", name: "Business Analytics" },
+      { id: "job-and-career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "What is the duration of the Data Visualization Certification Course?",
+        answer: "The course spans 225 hours including live training projects, and assignments over 14 weeks.",
+        category: "program"
+      },
+      {
+        question: "What skills are suitable for beginners?",
+        answer: "You're a perfect fit as well as professionals looking to upskill.",
+        category: "eligibility"
+      },
+      {
+        question: "What tools will I learn?",
+        answer: "You'll learn Excel, MySQL, Python, R, Tableau, and Power BI.",
+        category: "business-analytics"
+      },
+      {
+        question: "Is this course fully online?",
+        answer: "Yes, it includes live sessions along with lifetime access to recorded content.",
+        category: "program"
+      },
+      {
+        question: "What content does this course offer?",
+        answer: "You'll learn data science, data story telling, and about 50+ real-world projects.",
+        category: "program"
+      },
+      {
+        question: "What is the mode of instruction?",
+        answer: "Classes are live, and recordings are available for self-paced learning.",
+        category: "program"
+      },
+      {
+        question: "Who can apply for this course?",
+        answer: "Students, freshers, and working professionals from any background can apply.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior experience in data?",
+        answer: "No, prior experience isn't needed; the course starts from fundamentals.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this course suitable for non-technical students?",
+        answer: "Yes, learners with non-technical backgrounds can successfully complete it.",
+        category: "eligibility"
+      },
+      {
+        question: "Can college students enroll?",
+        answer: "Yes, especially final-year students or recent graduates.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this course flexible for working professionals?",
+        answer: "Yes, it's structured to fit around working schedules.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an age or degree restriction?",
+        answer: "No, there are no strict eligibility restrictions.",
+        category: "eligibility"
+      },
+      {
+        question: "What data analytics are included?",
+        answer: "You'll learn business analytics, business statistics, predictive modeling, and analysis.",
+        category: "Data Visualization"
+      },
+      {
+        question: "Will I learn data story-telling?",
+        answer: "Yes, including basic Python and R for analysis and visualization are covered.",
+        category: "Data Visualization"
+      },
+      {
+        question: "Do I learn data storytelling?",
+        answer: "Yes, there is a strong emphasis on storytelling and communication.",
+        category: "Data Visualization"
+      },
+      {
+        question: "What data domains are covered in the course?",
+        answer: "Projects include domains like retail, finance, and healthcare.",
+        category: "Data Visualization"
+      },
+      {
+        question: "Is dashboarding a significant detail?",
+        answer: "Yes, Tableau, Power BI, and Excel dashboarding are core components.",
+        category: "Data Visualization"
+      },
+      {
+        question: "Are business analytics skills covered?",
+        answer: "Yes, including data-driven problem solving and reporting.",
+        category: "Data Visualization"
+      },
+      {
+        question: "What job roles can I apply for after this course?",
+        answer: "You can apply for roles like Data Analyst, BI Analyst, Dashboard Developer, or Visualization Expert.",
+        category: "job-and-career"
+      },
+      {
+        question: "Does Ivy provide placement support?",
+        answer: "Yes, full placement support is included.",
+        category: "job-and-career"
+      },
+      {
+        question: "What is the average salary I can expect?",
+        answer: "The average package is 12 LPA for experienced candidates.",
+        category: "job-and-career"
+      },
+      {
+        question: "Will I get help in preparing my resume?",
+        answer: "Yes, personalized resume building support is included.",
+        category: "job-and-career"
+      },
+      {
+        question: "Is there interview preparation?",
+        answer: "Yes, including mock interviews and job-specific coaching.",
+        category: "job-and-career"
+      },
+      {
+        question: "Is there a job guarantee?",
+        answer: "Yes, eligible candidates can opt for the 6-month job guarantee.",
+        category: "job-and-career"
+      },
+      {
+        question: "Do I get a certificate after the course?",
+        answer: "Yes, you get an Ivy and IBM co-branded certificate aligned with NASSCOM.",
+        category: "certification"
+      },
+      {
+        question: "Is this certificate recognized?",
+        answer: "Yes, it's recognized by top firms and HR recruiters.",
+        category: "certification"
+      },
+      {
+        question: "Can I use the certificate for LinkedIn and job applications?",
+        answer: "Yes, it's digitally shareable and verifiable.",
+        category: "certification"
+      },
+      {
+        question: "Do I have to appear for an exam to get the certificate?",
+        answer: "No, it’s based on project work, assignments and evaluations.",
+        category: "certification"
+      },
+      {
+        question: "Is it globally recognized?",
+        answer: "Yes, it has a foundation in global and other tech-forward countries.",
+        category: "certification"
+      },
+      {
+        question: "Does it help with further certifications?",
+        answer: "Yes, it helps lay a foundation for Tableau, Power BI, or data analytics certifications.",
+        category: "certification"
+      },
+      {
+        question: "What kind of projects will I do?",
+        answer: "Projects include Excel dashboards, Tableau crime analysis, and Airbnb case studies.",
+        category: "projects"
+      },
+      {
+        question: "How many projects will there be?",
+        answer: "You will complete over 50 projects and 50+ case studies.",
+        category: "projects"
+      },
+      {
+        question: "Will I build a portfolio?",
+        answer: "Yes, the projects are designed to help you build a job-ready portfolio.",
+        category: "projects"
+      },
+      {
+        question: "Are projects based on real-world problems?",
+        answer: "Yes, all projects are industry-aligned and practical.",
+        category: "projects"
+      },
+      {
+        question: "Are visualization tools used in projects?",
+        answer: "Yes, Excel, Tableau, and Power BI are core to project work.",
+        category: "projects"
+      },
+      {
+        question: "Can I showcase these projects during interviews?",
+        answer: "Absolutely, they are designed to be showcased to recruiters.",
+        category: "placement"
+      },
+      {
+        question: "Which companies hire from this course?",
+        answer: "Amazon, PwC, IBM, Deloitte, Cognizant, KPMG, and others.",
+        category: "placement"
+      },
+      {
+        question: "What is the placement rate?",
+        answer: "Ivy reports a 94% placement rate for full-time program graduates.",
+        category: "placement"
+      },
+      {
+        question: "Is there lifetime placement support?",
+        answer: "Yes, Ivy provides ongoing placement support even after course completion.",
+        category: "placement"
+      },
+      {
+        question: "Are resume and LinkedIn reviews offered?",
+        answer: "Yes, a dedicated executive mentoring expert for resume reviews is provided.",
+        category: "placement"
+      },
+      {
+        question: "Can I get remote or freelance roles?",
+        answer: "Yes, many learners secure remote and freelance roles in visualization.",
+        category: "placement"
+      },
+      {
+        question: "Is support offered for salary negotiation?",
+        answer: "Yes, including guidance on offers and benchmarking.",
+        category: "placement"
+      },
+      {
+        question: "Which industries will I find jobs in after this course?",
+        answer: "All major industries, including retail, finance, healthcare, and IT.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I work as a freelancer after the course?",
+        answer: "Yes, many learners move on to freelance and consulting.",
+        category: "opportunities"
+      },
+      {
+        question: "Is the course suitable for career changers?",
+        answer: "Yes, especially for those from marketing, sales, or operations.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I get international roles?",
+        answer: "Yes, the course content is aligned with global visualization standards.",
+        category: "opportunities"
+      },
+      {
+        question: "Is the course useful for startups?",
+        answer: "Yes, it helps in day-to-day visualization and reporting needs.",
+        category: "opportunities"
+      },
+      {
+        question: "Can researchers benefit from this course?",
+        answer: "Yes, especially for presenting findings with clear visuals.",
+        category: "opportunities"
+      },
+      {
+        question: "Will I receive support during the course?",
+        answer: "You'll get access to live doubt-clearing, mentoring, and career support.",
+        category: "support"
+      },
+      {
+        question: "Are classes recorded for later access?",
+        answer: "Yes, all sessions are recorded and available anytime.",
+        category: "support"
+      },
+      {
+        question: "Can I schedule 1:1 help?",
+        answer: "Yes, one-on-one sessions with a mentor are available.",
+        category: "support"
+      },
+      {
+        question: "Is there a support team for technical issues?",
+        answer: "Yes, Ivy has a dedicated tech and academic support team.",
+        category: "support"
+      },
+      {
+        question: "Are mock interviews part of the course?",
+        answer: "Yes, they are included as part of the Prepal platform.",
+        category: "support"
+      },
+      {
+        question: "Can I access support post-course?",
+        answer: "Yes, Ivy provides lifetime access to career and course support.",
+        category: "support"
+      }
     ]
   }
+
+
+
+
+
 };
 
 const defaultData = {

@@ -15,6 +15,7 @@ import type { Metadata } from "next"
 import { fetchCourseById } from "@/lib/api"
 // Prefer the alias to avoid fragile relatives
 import CourseSubNavigation from "@/components/CourseSubNavigation"
+import MicroLinkFAQ from "@/components/MicroLinkFAQ"
 
 // Types that match Next's generated PageProps
 type Params = { slug: string }
@@ -100,6 +101,9 @@ export default async function CoursePage({ params }: AsyncPageProps) {
           </div>
           <div id="course-enrollcta-section">
             <CourseEnrollCTA course={course} />
+          </div>
+          <div id="course-enrollcta-section">
+            <MicroLinkFAQ course={course} />
           </div>
         </main>
         <Footer />

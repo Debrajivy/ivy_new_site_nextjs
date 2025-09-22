@@ -28,7 +28,7 @@ const AIFeatures = () => {
               href="https://prepai.ivyproschool.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[black] hover:underline "
+              className="text-[#ffffff] hover:underline "
             >
               PrepAI
             </a>
