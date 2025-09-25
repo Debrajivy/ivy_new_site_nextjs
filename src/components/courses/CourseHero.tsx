@@ -367,19 +367,17 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Award size={16} className="mr-2" />
-                <span>
-                  {course.title === "Data Science with Machine Learning & AI Certification"
-                    ? "NASSCOM Certification"
-                    : course.title === "Cloud Data Engineering Certification" ||
-                      course.title === "Data Visualization Course" ||
-                      course.title ===
-                      "Data Analytics with Visualization Certification Course" ||
-                      course.title ===
-                      "Business Analytics Certification Course" ||
-                      course.title === "AI for Product Manager"
-                      ? "Ivy Professional School Certification"
-                      : "E & ICT Academy, IIT Guwahati Certification"}
-                </span>
+                {course.title === "Data Science with Machine Learning & AI Certification" ||
+                  course.title === "Data science course (Pay after Placement)"
+                  ? "NASSCOM Certification"
+                  : course.title === "Cloud Data Engineering Certification" ||
+                    course.title === "Data Visualization Course" ||
+                    course.title ===
+                    "Data Analytics with Visualization Certification Course" ||
+                    course.title === "Business Analytics Certification Course" ||
+                    course.title === "AI for Product Manager"
+                    ? "Ivy Professional School Certification"
+                    : "E & ICT Academy, IIT Guwahati Certification"}
               </div>
             </div>
 

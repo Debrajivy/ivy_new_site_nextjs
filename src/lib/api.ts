@@ -793,7 +793,7 @@ const courses: Course[] = [
   {
     id: '4',
     title: "Data Science with Machine Learning & AI Certification",
-    description: "Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and land promising jobs for data scientist, analyst, or ML engineer roles.",
+    description: "Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and get jobs for data scientist, analyst, or ML engineer roles.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -1097,7 +1097,7 @@ const courses: Course[] = [
   {
     id: '5',
     title: "Data Visualization Course",
-    description: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Python, R, Tableau, PowerBI, and more.",
+    description: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Excel, VBA, Tableau, PowerBI, and more.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,

@@ -103,8 +103,8 @@ const Partners = () => {
     <section className="bg-gray-50 py-8 md:py-16">
       <div className="container mx-auto px-4">
 
-       
-        <div className="mb-8 md:mb-12" style={{marginTop:-20}}>
+
+        <div className="mb-8 md:mb-12" style={{ marginTop: -20 }}>
           <h2 className="text-center text-2xl sm:text-3xl font-bold text-gray-800 mb-4 px-2">
             Stand out with our Reputed Partnership Certification
           </h2>
@@ -194,38 +194,68 @@ const Partners = () => {
               </div>
             </div>
 
+
+
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-               {enterpriseEvents.map((event) => (
-        <Link
-          key={event.id}
-          href="https://ivyproschool.com/enterprise"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-            <div>
-              <Image
-                width={128}
-                height={128}
-                src={event.image}
-                alt={`Training at ${event.company}`}
-                className="w-full object-cover"
-              />
+              {enterpriseEvents.map((event) => (
+                <Link
+                  key={event.id}
+                  href="https://ivyproschool.com/enterprise"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Card key={event.id} className="overflow-hidden border-none shadow-md">
+                    <div>
+                      <img
+                        src={event.image.src}
+                        alt={`Training at ${event.company}`}
+                        className="w-full object-cover"
+                      />
+                    </div>
+                    <CardContent className="p-4">
+                      <h4 style={{ color: '#00a1db' }} className="font-semibold text-lg">{event.company}</h4>
+                      <p className="text-sm text-gray-600">{event.description}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
+
+              ))}
             </div>
-            <CardContent className="p-4">
-              <h4
-                style={{ color: "#00a1db" }}
-                className="font-semibold text-lg"
-              >
-                {event.company}
-              </h4>
-              <p className="text-sm text-gray-600">{event.description}</p>
-            </CardContent>
-          </Card>
-        </Link>
-      ))}
-            </div>
+
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {enterpriseEvents.map((event) => (
+                <Link
+                  key={event.id}
+                  href="https://ivyproschool.com/enterprise"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow cursor-pointer">
+                    <div>
+                      <Image
+                        width={128}
+                        height={128}
+                        src={event.image}
+                        alt={`Training at ${event.company}`}
+                        className="w-full object-cover"
+                      />
+                    </div>
+                    <CardContent className="p-4">
+                      <h4
+                        style={{ color: "#00a1db" }}
+                        className="font-semibold text-lg"
+                      >
+                        {event.company}
+                      </h4>
+                      <p className="text-sm text-gray-600">{event.description}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div> */}
           </div>
         </div>
       </div>

@@ -178,9 +178,9 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
                   </h3>
                   <p className="text-gray-500 text-sm">
-                    {course.curriculum.reduce((total: any, module: any) => {
+                    {/* {course.curriculum.reduce((total: any, module: any) => {
                       return total + module.topics.length;
-                    }, 0)} Lessons
+                    }, 0)} Lessons */}
                   </p>
                 </div>
                 <div className="flex items-center">
@@ -230,8 +230,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                               )}
                             </div>
                             <div style={{ width: '10%' }} className="flex items-center text-sm text-gray-500">
-                              <Clock size={14} className="mr-1" />
-                              <span >{topic.duration}</span>
+                              {/* <Clock size={14} className="mr-1" /> */}
+                              {/* <span >{topic.duration}</span> */}
                             </div>
                           </li>
                         ))}

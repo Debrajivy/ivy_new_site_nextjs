@@ -9,6 +9,7 @@ import webp2 from "@/assests/webp2.webp";
 import webp3 from "@/assests/datascience.jpeg";
 import webp4 from "@/assests/webp4.webp";
 import DS from "@/assests/DSI.webp";
+import DS2 from "@/assests/DSI2.webp";
 import CDE from "@/assests/CDE.webp";
 import ML from "@/assests/ML.webp";
 import GA from "@/assests/GAI.webp";
@@ -44,7 +45,7 @@ const featuredCourses: Course[] = [
     title: "AI for Product Manager",
     description: "Learn to leverage AI tools and techniques to enhance project management efficiency.",
     image: AIPM,
-    category: "Project Manager",
+    category: "Product Manager",
     students: 720,
     duration: "6 weeks",
     rating: 4.7,
@@ -78,7 +79,7 @@ const featuredCourses: Course[] = [
     id: '2',
     title: "Data Science & AI with IIT Guwahati",
     description: "Master end-to-end data science, AI, and visualization tools",
-    image: DS,
+    image: DS2,
     category: "Data Science",
     students: 1136,
     duration: "12 months",
@@ -89,7 +90,7 @@ const featuredCourses: Course[] = [
     keyFeatures: [
       "50+ real-life projects",
       "Live doubt-clearing sessions",
-      "Learn Adv Excel, SQL, Python, Power BI, VBA, Machine Learning & Tensorflow"
+      "Learn Adv Excel, SQL, Python, Power BI, VBA, Machine Learning & Tensorflow, MLOps, Power Query, Power Pivot"
     ]
   },
   {
@@ -105,7 +106,7 @@ const featuredCourses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course",
     keyFeatures: [
-      "Hands-on with AWS, Azure, GCP",
+      "Hands-on with Azure, GCP",
       "Build scalable data architectures",
       "Real-time data stream processing"
     ]
@@ -135,13 +136,13 @@ const featuredCourses: Course[] = [
     image: DV,
     category: "Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Visualization Course" which contradicts. If you want this to be a Data Visualization course, the description should be updated. I'll keep the description as is but noted this discrepancy.
     students: 855,
-    duration: "7 months",
+    duration: "6 months",
     rating: 4.7,
     reviewCount: 212,
     isFeatured: true,
     slug: "data-visualization-course",
     keyFeatures: [
-      "Master Tableau, Power BI",
+      "Master Tableau, Power BI, VBA",
       "Create interactive dashboards",
       "Storytelling with data"
     ]
@@ -149,11 +150,11 @@ const featuredCourses: Course[] = [
   {
     id: '6',
     title: "Data Analytics with Visualization Certification Course",
-    description: "Learn Excel, SQL, Tableau, Power BI and VBA for data analysis",
+    description: "Learn Excel, Python, SQL, Tableau, Power BI and VBA for data analysis",
     image: DA,
     category: "Analytics",
     students: 967,
-    duration: "11 months",
+    duration: "8 months",
     rating: 4.6,
     reviewCount: 286,
     isFeatured: true,
@@ -201,7 +202,7 @@ const featuredCourses: Course[] = [
   {
     id: '10',
     title: "Data science course (Pay after Placement)",
-    description: "Become job-ready with ML, DL, Python, and visualization tools",
+    description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
     image: DSPAP,
     category: "Data Science",
     students: 430,
