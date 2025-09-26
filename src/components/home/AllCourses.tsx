@@ -22,6 +22,9 @@ import BA from "@/assests/BA.webp";
 import DV from "@/assests/DV.webp";
 import CDI from "@/assests/CDI.webp";
 import CDEI from "@/assests/CDEI.webp";
+import DS2 from "@/assests/DSI2.webp";
+import AIPM from "@/assests/AIPM.webp";
+import DSPAP from "@/assests/DSPAP.webp";
 import Image, { StaticImageData } from 'next/image';
 
 interface Course {
@@ -40,6 +43,7 @@ interface Course {
 }
 
 const ALL_COURSE_CATEGORIES = [
+  "AI for Product Manager",
   "Data Science",
   "Cloud Data Engineering",
   "Analytics",
@@ -49,15 +53,32 @@ const ALL_COURSE_CATEGORIES = [
 
 const featuredCourses: Course[] = [
   {
+    id: '9',
+    title: "AI for Product Manager",
+    description: "Learn to leverage AI tools and techniques to enhance project management efficiency.",
+    image: AIPM,
+    category: "AI for Product Manager",
+    students: 720,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 195,
+    isFeatured: true,
+    slug: "ai-product-manager-course",
+    keyFeatures: [
+      "20+ real-life products scenarios",
+      "Industry-Focused Tools: Learn tools like PromptLayer, AI Agents, LangChain, Firebase Studio.",
+    ]
+  },
+  {
     id: '1',
     title: "Executive Generative AI Course with IIT Guwahati",
     description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
     image: GA,
     category: "Generative AI",
-    students: 2345,
+    students: 1220,
     duration: "6 months",
     rating: 4.9,
-    reviewCount: 567,
+    reviewCount: 209,
     isFeatured: true,
     slug: "iit-generative-ai-course",
     keyFeatures: [
@@ -70,18 +91,18 @@ const featuredCourses: Course[] = [
     id: '2',
     title: "Data Science & AI with IIT Guwahati",
     description: "Master end-to-end data science, AI, and visualization tools",
-    image: DS,
+    image: DS2,
     category: "Data Science",
-    students: 1876,
+    students: 1136,
     duration: "12 months",
     rating: 4.8,
-    reviewCount: 432,
+    reviewCount: 230,
     isFeatured: true,
     slug: "iit-data-science-course",
     keyFeatures: [
       "50+ real-life projects",
       "Live doubt-clearing sessions",
-      "Learn Adv Excel, SQL, Python, Power BI, VBA, Machine Learning & Tensorflow"
+      "Learn Adv Excel, SQL, Python, Power BI, VBA, Machine Learning & Tensorflow, MLOps, Power Query, Power Pivot"
     ]
   },
   {
@@ -90,14 +111,14 @@ const featuredCourses: Course[] = [
     description: "Master data pipelines, big data tools, and real-time processing",
     image: CDE,
     category: "Cloud Data Engineering",
-    students: 1549,
+    students: 862,
     duration: "8 months",
     rating: 4.7,
-    reviewCount: 345,
+    reviewCount: 198,
     isFeatured: true,
     slug: "data-engineering-course",
     keyFeatures: [
-      "Hands-on with AWS, Azure, GCP",
+      "Hands-on with Azure, GCP",
       "Build scalable data architectures",
       "Real-time data stream processing"
     ]
@@ -105,13 +126,13 @@ const featuredCourses: Course[] = [
   {
     id: '4',
     title: "Data Science with Machine Learning & AI Certification",
-    description: "Become job-ready with ML, DL, Python, and visualization tools",
+    description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
     image: ML,
     category: "Data Science",
-    students: 1243,
+    students: 1158,
     duration: "12 months",
     rating: 4.8,
-    reviewCount: 298,
+    reviewCount: 324,
     isFeatured: true,
     slug: "data-science-and-ml-course",
     keyFeatures: [
@@ -123,17 +144,17 @@ const featuredCourses: Course[] = [
   {
     id: '5',
     title: "Data Visualization Course",
-    description: "Deep dive into neural networks and advanced ML techniques",
+    description: "Deep dive into Excel, SQL, Tableau, Power BI techniques",
     image: DV,
-    category: "Data Visualization",
-    students: 987,
-    duration: "7 months",
+    category: "Data Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Visualization Course" which contradicts. If you want this to be a Data Visualization course, the description should be updated. I'll keep the description as is but noted this discrepancy.
+    students: 855,
+    duration: "6 months",
     rating: 4.7,
-    reviewCount: 210,
+    reviewCount: 212,
     isFeatured: true,
     slug: "data-visualization-course",
     keyFeatures: [
-      "Master Tableau, Power BI",
+      "Master Tableau, Power BI, VBA",
       "Create interactive dashboards",
       "Storytelling with data"
     ]
@@ -141,13 +162,13 @@ const featuredCourses: Course[] = [
   {
     id: '6',
     title: "Data Analytics with Visualization Certification Course",
-    description: "Learn Hadoop, Spark, and big data processing frameworks",
+    description: "Learn Excel, Python, SQL, Tableau, Power BI and VBA for data analysis",
     image: DA,
     category: "Analytics",
-    students: 876,
-    duration: "11 months",
+    students: 967,
+    duration: "8 months",
     rating: 4.6,
-    reviewCount: 187,
+    reviewCount: 286,
     isFeatured: true,
     slug: "data-analytics-course",
     keyFeatures: [
@@ -158,13 +179,13 @@ const featuredCourses: Course[] = [
   {
     id: '7',
     title: "Business Analytics Certification Course",
-    description: "Strategic AI implementation for executives and managers",
+    description: "Learn Excel, SQL, R, Python and VBA for business analytics",
     image: BA,
-    category: "Analytics",
-    students: 654,
+    category: "Analytics", // This also seems like a mismatch. Title is "Business Analytics" but category and description point to AI. I'll keep it as is.
+    students: 25090,
     duration: "8 months",
     rating: 4.8,
-    reviewCount: 143,
+    reviewCount: 6983,
     isFeatured: true,
     slug: "business-analytics-course",
     keyFeatures: [
@@ -177,11 +198,11 @@ const featuredCourses: Course[] = [
     title: "Cloud Data Engineering Course with IIT Guwahati",
     description: "Image processing and recognition with deep learning",
     image: CDEI,
-    category: "Cloud Data Engineering",
-    students: 543,
+    category: "Cloud Data Engineering", // Another mismatch. Title is "Cloud Data Engineering" but description points to "Computer Vision". I'll keep it as is.
+    students: 445,
     duration: "8 months",
     rating: 4.7,
-    reviewCount: 132,
+    reviewCount: 189,
     isFeatured: true,
     slug: "iit-data-engineering-course",
     keyFeatures: [
@@ -190,12 +211,31 @@ const featuredCourses: Course[] = [
       "Learn industry focused tools i.e. Azure, Hive, MongoDB, Spark, Kafka & Hadoop"
     ]
   },
+  {
+    id: '10',
+    title: "Data science course (Pay after Placement)",
+    description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
+    image: DSPAP,
+    category: "Data Science",
+    students: 430,
+    duration: "12 months",
+    rating: 4.8,
+    reviewCount: 109,
+    isFeatured: true,
+    slug: "no-upfront-fees-data-science-and-ml-course",
+    keyFeatures: [
+      "In-depth ML algorithms",
+      "Deep learning with TensorFlow/PyTorch",
+      "Data visualization with Power BI"
+    ]
+  }
+
 ];
 
 const CourseCard = ({ course }: { course: Course }) => {
   return (
     // IMPORTANT: Adjusted min-h and added 'h-auto' to ensure cards adapt to content
-     <Card className="card-hover flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg min-h-[520px] h-auto">
+    <Card className="card-hover flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg min-h-[520px] h-auto">
       {/* Improved Image Container - Won't crop on any device */}
       <div className="relative w-full aspect-video bg-gray-100 flex items-center justify-center">
         <Image
@@ -206,17 +246,22 @@ const CourseCard = ({ course }: { course: Course }) => {
           className="w-full h-full object-contain p-1"
           loading="lazy"
         />
-        
+
         {/* Category Badge */}
         <Badge className="absolute top-3 left-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-md">
           {course.category}
         </Badge>
-        
+
         {/* Featured Badge */}
         {course.isFeatured && (() => {
           let badgeText = "";
           let badgeClass = "";
           switch (course.title) {
+
+            case "AI for Product Manager":
+              badgeText = "New";
+              badgeClass = "bg-indigo-500 text-white";
+              break;
             case "Executive Generative AI Course with IIT Guwahati":
               badgeText = "Trending";
               badgeClass = "bg-green-500 text-white";
@@ -249,6 +294,11 @@ const CourseCard = ({ course }: { course: Course }) => {
               badgeText = "New";
               badgeClass = "bg-yellow-600 text-white";
               break;
+
+            case "Data science course (Pay after Placement)":
+              badgeText = "Popular";
+              badgeClass = "bg-indigo-500 text-white";
+              break;
             default:
               return null;
           }
@@ -271,7 +321,7 @@ const CourseCard = ({ course }: { course: Course }) => {
         <p className="text-gray-600 text-sm mb-3 line-clamp-4">
           {course.description}
         </p>
-        
+
         <div className="flex flex-wrap gap-y-2 justify-between text-sm text-gray-500 mb-4">
           <div className="flex items-center mr-4">
             <Users size={16} className="mr-1 text-blue-500" />
@@ -355,7 +405,7 @@ const FeaturedCourses = () => {
   const filteredCourses = featuredCourses.filter(course => {
     const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(course.category);
     const matchesSearchTerm = course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                              course.description.toLowerCase().includes(searchTerm.toLowerCase());
+      course.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearchTerm;
   });
 

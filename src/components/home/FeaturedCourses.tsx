@@ -354,7 +354,7 @@ const FeaturedCourses = () => {
             </p>
           </div>
           <Link href="/categories" className="mt-4 md:mt-0">
-            <Button variant="outline" className="flex items-center">
+            <Button variant="outline" className="flex items-center" style={{backgroundColor:'#009fda',color:'white'}}>
               View All Courses
               <ChevronRight size={16} className="ml-2" />
             </Button>
