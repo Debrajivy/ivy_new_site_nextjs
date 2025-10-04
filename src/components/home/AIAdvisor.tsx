@@ -412,13 +412,13 @@ If unsure:
           </Card>
           <div className="mt-6 flex justify-center relative">
             <Button
-              variant="outline"
-              className="flex items-center"
+              className="flex items-center bg-[#009fda] text-white hover:bg-[#009fda]"
               onClick={() => setShowContactOptions(!showContactOptions)}
             >
               <MessageSquare className="mr-2 h-4 w-4" />
               Schedule a Call with Human Advisor
             </Button>
+
 
             {showContactOptions && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 animate-fade-in sm:left-auto sm:right-auto sm:w-auto">

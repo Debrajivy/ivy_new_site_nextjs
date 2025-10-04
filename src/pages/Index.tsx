@@ -16,6 +16,7 @@ import FAQ from '@/components/home/FAQ';
 import WhatsAppCommunity from '@/components/home/WhatsAppCommunity';
 import PlacementReportCTA from '@/components/home/PlacementReportCTA';
 import CertificateVerification from '@/app/certificateVerification/page';
+import StickyAIHelpCenter from '@/components/StickyAIHelpCenter';
 
 const Index: React.FC = () => {
   return (
@@ -23,6 +24,8 @@ const Index: React.FC = () => {
       <Navbar />
       <main className=' overflow-hidden'>
         <Hero />
+        <StickyAIHelpCenter />
+
         <Partners />
         <FeaturedCourses />
         <CallToAction />
