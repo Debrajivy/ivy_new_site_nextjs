@@ -128,41 +128,21 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
 
           <div style={{ paddingTop: 20 }} className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-
-
-              {
-                course.title != "Data Engineering Course in Kolkata" ?
-
-
-                  <>
-                    {course.title !== "Data science course (Pay after Placement)"
-                      ? (
-                        <>
-                          Which tools will I learn in <span style={{ whiteSpace: 'nowrap', color: '#16a5db' }}>{course.title}</span> course?
-                        </>
-                      )
-                      : (
-                        <>
-                          Which tools will I learn in Data Science Course?
-                        </>
-                      )
-                    }
-                  </>
-                  :
-                  <>
-                    Which tools will I learn in Data Engineering Course in Kolkata?
-
-
-                  </>
-              }
-
-
-
-
-
-
-            </h2>            <p className="text-gray-600">
+           <h2 className="text-xl font-bold mb-4">
+  Which tools will I learn in
+  {
+    course.title === "Data Engineering Course in Kolkata"
+      ? " Data Engineering Course in Kolkata?"
+      : course.title === "Data science course (Pay after Placement)"
+        ? " Data Science Course?"
+        : (
+            <>
+              {" "}
+              <span style={{ color: '#16a5db' }}>{course.title}</span> course?
+            </>
+          )
+  }
+</h2>           <p className="text-gray-600">
               Comprehensive, structured learning path designed by industry experts
             </p>
           </div>
