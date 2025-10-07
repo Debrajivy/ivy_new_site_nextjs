@@ -17,12 +17,15 @@ import WhatsAppCommunity from '@/components/home/WhatsAppCommunity';
 import PlacementReportCTA from '@/components/home/PlacementReportCTA';
 import CertificateVerification from '@/app/certificateVerification/page';
 import StickyAIHelpCenter from '@/components/StickyAIHelpCenter';
+import Notifications from '@/components/layout/Notification';
 
 const Index: React.FC = () => {
   return (
     <>
+    <Notifications/>
       <Navbar />
       <main className=' overflow-hidden'>
+        
         <Hero />
         <StickyAIHelpCenter />
 
