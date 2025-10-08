@@ -1752,7 +1752,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
-  "Data Visualization Certification": {
+  "Data Visualization Certifications": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },

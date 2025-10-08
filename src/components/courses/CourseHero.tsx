@@ -185,7 +185,6 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     "Data Visualization Certification": "185 Hours",
     "Executive Generative AI Course with IIT Guwahati": "75 Hours",
     "Business Analytics with Python": "190 Hours",
-    "Data Visualization Certification": "160 Hours",
     "Cybersecurity Fundamentals": "170 Hours",
   };
 
