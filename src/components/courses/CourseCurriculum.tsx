@@ -107,11 +107,11 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
   const pricingDetails: Record<string, { courseFee: number; registration: number; emi: number; months: number }> = {
     'Cloud Data Engineering Course with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 9 },
-    'Data Analytics with Visualization Certification Course': { courseFee: 46500, registration: 10000, emi: 4421, months: 9 },
-    'Data Visualization Course': { courseFee: 31500, registration: 10000, emi: 2604, months: 9 },
-    'Data Science with Machine Learning & AI Certification': { courseFee: 56000, registration: 10000, emi: 5571, months: 9 },
-    'Business Analytics Certification Course': { courseFee: 39000, registration: 10000, emi: 3512, months: 9 },
-    'Cloud Data Engineering Certification': { courseFee: 55000, registration: 10000, emi: 6601, months: 9 },
+    'Data Analytics with Visualization Certification': { courseFee: 46500, registration: 10000, emi: 4421, months: 9 },
+    'Data Visualization Certification': { courseFee: 31500, registration: 10000, emi: 2604, months: 9 },
+    'Data Science & AI with Nasscom Certification': { courseFee: 56000, registration: 10000, emi: 5571, months: 9 },
+    'Data Visualization Certification': { courseFee: 39000, registration: 10000, emi: 3512, months: 9 },
+    ' Cloud Data Engineering with Nasscom Certification': { courseFee: 55000, registration: 10000, emi: 6601, months: 9 },
     'Data Science & AI with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 12 },
     'Executive Generative AI Course with IIT Guwahati': { courseFee: 69000, registration: 30000, emi: 3768, months: 12 },
     'AI for Product Manager': { courseFee: 29000, registration: 30000, emi: 17110, months: 12 },

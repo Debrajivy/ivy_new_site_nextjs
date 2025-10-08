@@ -64,17 +64,17 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     sourceCampaignValue = "IIT-G Data Engg";
   } else if (course.title === "Data Science & AI with IIT Guwahati") {
     sourceCampaignValue = "IIT-G Data Science";
-  } else if (course.title === "Data Science with Machine Learning & AI Certification") {
+  } else if (course.title === "Data Science & AI with Nasscom Certification") {
     sourceCampaignValue = "Nasscom";
-  } else if (course.title === "Cloud Data Engineering Certification") {
+  } else if (course.title === " Cloud Data Engineering with Nasscom Certification") {
     sourceCampaignValue = "Data Engineering";
-  } else if (course.title === "Business Analytics Certification Course") {
+  } else if (course.title === "Data Visualization Certification") {
     sourceCampaignValue = "Business Analytics Certification";
-  } else if (course.title === "Data Analytics with Visualization Certification Course") {
+  } else if (course.title === "Data Analytics with Visualization Certification") {
     sourceCampaignValue = "Data Analytics and Visualization (Tableau & Power BI)";
   } else if (course.title === "Data science course (Pay after Placement)") {
     sourceCampaignValue = "ISA";
-  } else if (course.title === "Data Visualization Course") {
+  } else if (course.title === "Data Visualization Certification") {
     sourceCampaignValue = "Data Visualization and Reporting (Tableau & Power BI)";
   } else {
     sourceCampaignValue = course.title; // fallback (or whatever you prefer)
@@ -179,13 +179,13 @@ const CourseHero = ({ course }: CourseHeroProps) => {
   const courseHours: Record<string, string> = {
     "Data Science & AI with IIT Guwahati": "260 Hours",
     "AI for Product Manager": "180 Hours",
-    "Data Analytics with Visualization Certification Course": "195 Hours",
-    "Cloud Data Engineering Certification": "120 Hours",
+    "Data Analytics with Visualization Certification": "195 Hours",
+    " Cloud Data Engineering with Nasscom Certification": "120 Hours",
     "Cloud Data Engineering Course with IIT Guwahati": "120 Hours",
-    "Business Analytics Certification Course": "185 Hours",
+    "Data Visualization Certification": "185 Hours",
     "Executive Generative AI Course with IIT Guwahati": "75 Hours",
     "Business Analytics with Python": "190 Hours",
-    "Data Visualization Course": "160 Hours",
+    "Data Visualization Certification": "160 Hours",
     "Cybersecurity Fundamentals": "170 Hours",
   };
 
@@ -266,7 +266,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit">
                   <p className="text-[#221e1f] font-bold">Powered by</p>
                 </div>
-                {course.title === "Data Science with Machine Learning & AI Certification" ||
+                {course.title === "Data Science & AI with Nasscom Certification" ||
                   course.title === "Data science course (Pay after Placement)" ? (
                   <Image
 
@@ -276,11 +276,11 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     src={NASSCOM}
                     alt="NASSCOM Certification"
                   />
-                ) : course.title === "Cloud Data Engineering Certification" ||
-                  course.title === "Data Visualization Course" ||
+                ) : course.title === " Cloud Data Engineering with Nasscom Certification" ||
+                  course.title === "Data Visualization Certification" ||
                   course.title ===
-                  "Data Analytics with Visualization Certification Course" ||
-                  course.title === "Business Analytics Certification Course" ||
+                  "Data Analytics with Visualization Certification" ||
+                  course.title === "Data Visualization Certification" ||
                   course.title === "AI for Product Manager" || course.title === "Data Engineering Course in Kolkata" ? (
                   <Image
 
@@ -317,15 +317,15 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       ? "1220 students"
                       : course.title === "Data Science & AI with IIT Guwahati"
                         ? "1136 students"
-                        : course.title === "Cloud Data Engineering Certification"
+                        : course.title === " Cloud Data Engineering with Nasscom Certification"
                           ? "862 students"
-                          : course.title === "Data Science with Machine Learning & AI Certification"
+                          : course.title === "Data Science & AI with Nasscom Certification"
                             ? "1158 students"
-                            : course.title === "Data Visualization Course"
+                            : course.title === "Data Visualization Certification"
                               ? "855 students"
-                              : course.title === "Data Analytics with Visualization Certification Course"
+                              : course.title === "Data Analytics with Visualization Certification"
                                 ? "967 students"
-                                : course.title === "Business Analytics Certification Course"
+                                : course.title === "Data Visualization Certification"
                                   ? "25,090 students"
                                   : course.title === "Cloud Data Engineering Course with IIT Guwahati"
                                     ? "445 students"
@@ -348,15 +348,15 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     ? "4.9 (209 reviews)"
                     : course.title === "Data Science & AI with IIT Guwahati"
                       ? "4.8 (230 reviews)"
-                      : course.title === "Cloud Data Engineering Certification"
+                      : course.title === " Cloud Data Engineering with Nasscom Certification"
                         ? "4.7 (198 reviews)"
-                        : course.title === "Data Science with Machine Learning & AI Certification"
+                        : course.title === "Data Science & AI with Nasscom Certification"
                           ? "4.8 (324 reviews)"
-                          : course.title === "Data Visualization Course"
+                          : course.title === "Data Visualization Certification"
                             ? "4.7 (212 reviews)"
-                            : course.title === "Data Analytics with Visualization Certification Course"
+                            : course.title === "Data Analytics with Visualization Certification"
                               ? "4.6 (286 reviews)"
-                              : course.title === "Business Analytics Certification Course"
+                              : course.title === "Data Visualization Certification"
                                 ? "4.8 (6983 reviews)"
                                 : course.title === "Cloud Data Engineering Course with IIT Guwahati"
                                   ? "4.7 (189 reviews)"
@@ -367,14 +367,14 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Award size={16} className="mr-2" />
-                {course.title === "Data Science with Machine Learning & AI Certification" ||
+                {course.title === "Data Science & AI with Nasscom Certification" ||
                   course.title === "Data science course (Pay after Placement)"
                   ? "NASSCOM Certification"
-                  : course.title === "Cloud Data Engineering Certification" ||
-                    course.title === "Data Visualization Course" ||
+                  : course.title === " Cloud Data Engineering with Nasscom Certification" ||
+                    course.title === "Data Visualization Certification" ||
                     course.title ===
-                    "Data Analytics with Visualization Certification Course" ||
-                    course.title === "Business Analytics Certification Course" ||
+                    "Data Analytics with Visualization Certification" ||
+                    course.title === "Data Visualization Certification" ||
                     course.title === "AI for Product Manager"
                     ? "Ivy Professional School Certification"
                     : "E & ICT Academy, IIT Guwahati Certification"}
@@ -447,26 +447,26 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     syllabusUrl =
                       "https://drive.google.com/file/d/13O3soUlLzRLcJGezJ23HmnPlQSerT_JJ/preview";
                   } else if (
-                    course.title === "Cloud Data Engineering Certification"
+                    course.title === " Cloud Data Engineering with Nasscom Certification"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/preview";
                   } else if (
-                    course.title === "Data Science with Machine Learning & AI Certification"
+                    course.title === "Data Science & AI with Nasscom Certification"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/preview";
-                  } else if (course.title === "Data Visualization Course") {
+                  } else if (course.title === "Data Visualization Certification") {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1TpyFrVqjCLdAsIEc-p9S2pUaD6AgJsXN/preview";
                   } else if (
                     course.title ===
-                    "Data Analytics with Visualization Certification Course"
+                    "Data Analytics with Visualization Certification"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1ih3Z5PO5ExixAxmoBu0SJKjYs5-wDRp9/preview";
                   } else if (
-                    course.title === "Business Analytics Certification Course"
+                    course.title === "Data Visualization Certification"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1u64bLjLe_lgItjmn9OagsaZNuyd9bz8K/preview";
@@ -497,7 +497,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               >
                 Download Syllabus
               </Button>
-              {course.title === "Data Science with Machine Learning & AI Certification" ? (
+              {course.title === "Data Science & AI with Nasscom Certification" ? (
                 <div
                   style={{
                     display: "flex",

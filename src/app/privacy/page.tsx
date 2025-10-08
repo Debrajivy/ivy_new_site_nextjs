@@ -148,7 +148,7 @@ const PrivacyPolicy = () => {
                 <address>
                     <strong>Ivy Professional School</strong><br />
                     Email: <a href="mailto:[info@ivyproschool.com]">[info@ivyproschool.com]</a><br />
-                    Phone: <a href="tel:+919748441111">[+91 9748441111]</a><br />
+                    Phone: <a href="tel:+919748441111">[+91 7676882222]</a><br />
                     Address: [Camac Street, Kolkata]
                 </address>
             </div>

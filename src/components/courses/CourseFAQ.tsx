@@ -563,7 +563,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-  "Data Science with Machine Learning & AI Certification": {
+  "Data Science & AI with Nasscom Certification": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -848,7 +848,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-  "Cloud Data Engineering Certification": {
+  " Cloud Data Engineering with Nasscom Certification": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -862,7 +862,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the Cloud Data Engineering Certification course?",
+        question: "What is the duration of the  Cloud Data Engineering with Nasscom Certification course?",
         answer: "The course spans 225 hours and is completed over 12 weeks, covering 8 modules and 62 lessons.",
         category: "program"
       },
@@ -1138,7 +1138,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the Cloud Data Engineering Certification course?",
+        question: "What is the duration of the  Cloud Data Engineering with Nasscom Certification course?",
         answer: "The course spans 225 hours and is completed over 12 weeks, covering 8 modules and 62 lessons.",
         category: "program"
       },
@@ -1400,7 +1400,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
-  "Data Analytics with Visualization Certification Course": {
+  "Data Analytics with Visualization Certification": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -1414,7 +1414,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the Data Analytics with Visualization Certification Course?",
+        question: "What is the duration of the Data Analytics with Visualization Certification?",
         answer: "The course spans 225 hours across 14 weeks and includes live sessions, projects, and hands-on practice.",
         category: "program"
       },
@@ -1685,7 +1685,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-  "Business Analytics Certification Course": {
+  "Data Visualization Certification": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -1698,7 +1698,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       { id: "support", name: "Support" }
     ],
     faqs: [
-      { question: "What is the duration of the Business Analytics Certification Course?", answer: "The course runs for 225 hours over approximately 8 months and includes 5 structured modules and real-world projects.", category: "program" },
+      { question: "What is the duration of the Data Visualization Certification?", answer: "The course runs for 225 hours over approximately 8 months and includes 5 structured modules and real-world projects.", category: "program" },
       { question: "Is the course designed for beginners or professionals?", answer: "It’s designed for both freshers and professionals seeking business analytics roles.", category: "program" },
       { question: "What tools and technologies are taught?", answer: "Excel, SQL, Python, R, Tableau, and Excel VBA are included.", category: "program" },
       { question: "Is this course delivered online?", answer: "Yes, the course is fully online with live sessions and recorded access.", category: "program" },
@@ -1752,7 +1752,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
-  "Data Visualization Course": {
+  "Data Visualization Certification": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },

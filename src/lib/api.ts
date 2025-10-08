@@ -561,7 +561,7 @@ const courses: Course[] = [
   },
   {
     id: '3',
-    title: "Cloud Data Engineering Certification",
+    title: " Cloud Data Engineering with Nasscom Certification",
     description: "Master data engineering and big data analytics with tools like Hadoop, Spark, Kafka, Hive, etc., to become a certified data engineer and get a guaranteed placement.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Engineering",
@@ -792,7 +792,7 @@ const courses: Course[] = [
   },
   {
     id: '4',
-    title: "Data Science with Machine Learning & AI Certification",
+    title: "Data Science & AI with Nasscom Certification",
     description: "Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and get jobs for data scientist, analyst, or ML engineer roles.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
@@ -1096,7 +1096,7 @@ const courses: Course[] = [
   },
   {
     id: '5',
-    title: "Data Visualization Course",
+    title: "Data Visualization Certification",
     description: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Excel, VBA, Tableau, PowerBI, and more.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
@@ -1303,7 +1303,7 @@ const courses: Course[] = [
   },
   {
     id: '6',
-    title: "Data Analytics with Visualization Certification Course",
+    title: "Data Analytics with Visualization Certification",
     description: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
@@ -1538,7 +1538,7 @@ const courses: Course[] = [
   },
   {
     id: '7',
-    title: "Business Analytics Certification Course",
+    title: "Data Visualization Certification",
     description: "Learn business analytics with advanced tools like Excel, SQL, Python, R, Tableau, etc., and become a data expert employers want to hire.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",

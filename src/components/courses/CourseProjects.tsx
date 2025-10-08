@@ -191,7 +191,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
 
           {
-            course.title === "Data Science with Machine Learning & AI Certification" ?
+            course.title === "Data Science & AI with Nasscom Certification" ?
 
 
               <TabsContent value="practice">
@@ -453,7 +453,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
 
 
           {
-            course.title === "Data Science with Machine Learning & AI Certification" ?
+            course.title === "Data Science & AI with Nasscom Certification" ?
 
               <TabsContent value="capstone">
                 <div className="mb-8">
@@ -1026,7 +1026,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                   </TabsContent>
                   :
 
-                  course.title === "Data Visualization Course" ?
+                  course.title === "Data Visualization Certification" ?
                     <TabsContent value="capstone">
                       <div className="mb-8">
                         <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-2 sm:gap-0">
@@ -1229,7 +1229,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       </div>
                     </TabsContent>
                     :
-                    course.title === "Data Analytics with Visualization Certification Course" ?
+                    course.title === "Data Analytics with Visualization Certification" ?
                       <TabsContent value="capstone">
                         <div className="mb-8">
                           <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-2 sm:gap-0">
@@ -1426,7 +1426,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         </div>
                       </TabsContent>
                       :
-                      course.title === "Business Analytics Certification Course" ?
+                      course.title === "Data Visualization Certification" ?
                         <TabsContent value="capstone">
                           <div className="mb-8">
                             <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-2 sm:gap-0">
@@ -1621,7 +1621,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                           </div>
                         </TabsContent>
                         :
-                        course.title === "Cloud Data Engineering Certification" || course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
+                        course.title === " Cloud Data Engineering with Nasscom Certification" || course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
                           <TabsContent value="capstone">
                             <div className="mb-8">
                               <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-2 sm:gap-0">

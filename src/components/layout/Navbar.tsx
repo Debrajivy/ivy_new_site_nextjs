@@ -37,7 +37,7 @@ const courseCategories = {
       image: AIPM,
     }
   ],
-  "Data Science": [
+  "Data Science & AI": [
     {
       title: "Data Science & AI with IIT Guwahati",
       href: "/courses/iit-data-science-course",
@@ -45,7 +45,7 @@ const courseCategories = {
       image: DS,
     },
     {
-      title: "Data Science with Machine Learning & AI Certification",
+      title: "Data Science & AI with Nasscom Certification",
       href: "/courses/data-science-and-ml-course",
       description: "Become job-ready with ML, DL, Python, and visualization tools",
       image: ML,
@@ -53,27 +53,27 @@ const courseCategories = {
   ],
   "Cloud Data Engineering": [
     {
-      title: "Cloud Data Engineering Certification",
+      title: "Cloud Data Engineering with Nasscom Certification",
       href: "/courses/data-engineering-course",
       description: "Master data pipelines, big data tools, and real-time processing",
       image: CDE,
     },
     {
-      title: "Cloud Data Engineering Course with IIT Guwahati",
+      title: "Cloud Data Engineering with IIT Guwahati",
       href: "/courses/iit-data-engineering-course",
       description: "Advanced cloud data engineering with industry experts",
       image: CDI,
     },
   ],
-  "Analytics": [
+  "Data Analytics": [
     {
-      title: "Data Analytics with Visualization Certification Course",
+      title: "Data Analytics with Visualization Certification",
       href: "/courses/data-analytics-course",
       description: "Learn comprehensive data analytics and visualization",
       image: DA,
     },
     {
-      title: "Business Analytics Certification Course",
+      title: "Business Analytics Certification",
       href: "/courses/business-analytics-course",
       description: "Strategic AI implementation for executives and managers",
       image: BA,
@@ -81,7 +81,7 @@ const courseCategories = {
   ],
   "Data Visualization": [
     {
-      title: "Data Visualization Course",
+      title: "Data Visualization Certification",
       href: "/courses/data-visualization-course",
       description: "Deep dive into advanced visualization techniques",
       image: DV,
@@ -89,15 +89,15 @@ const courseCategories = {
   ],
   "Generative AI": [
     {
-      title: "Executive Generative AI Course with IIT Guwahati",
+      title: "Executive Generative AI with IIT Guwahati",
       href: "/courses/iit-generative-ai-course",
       description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
       image: GA,
     },
   ],
-  "Data Science (Pay after Placement": [
+  "Data Science (Pay after Placement)": [
     {
-      title: "Data Science with Machine Learning & AI Certification",
+      title: "Data Science & AI with Nasscom Certification",
       href: "/courses/no-upfront-fees-data-science-and-ml-course",
       description: "Become job-ready with ML, DL, Python, and visualization tools",
       image: ML,
@@ -127,31 +127,31 @@ const allCourses = [
     image: DS,
   },
   {
-    title: "Cloud Data Engineering Certification",
+    title: " Cloud Data Engineering with Nasscom Certification",
     href: "/courses/data-engineering-course",
     description: "Master data pipelines, big data tools, and real-time processing",
     image: CDE,
   },
   {
-    title: "Data Science with Machine Learning & AI Certification",
+    title: "Data Science & AI with Nasscom Certification",
     href: "/courses/data-science-and-ml-course",
     description: "Become job-ready with ML, DL, Python, and visualization tools",
     image: ML,
   },
   {
-    title: "Data Visualization Course",
+    title: "Data Visualization Certification",
     href: "/courses/data-visualization-course",
     description: "Deep dive into neural networks and advanced ML techniques",
     image: DV,
   },
   {
-    title: "Data Analytics with Visualization Certification Course",
+    title: "Data Analytics with Visualization Certification",
     href: "/courses/data-analytics-course",
     description: "Learn Hadoop, Spark, and big data processing frameworks",
     image: DA,
   },
   {
-    title: "Business Analytics Certification Course",
+    title: "Data Visualization Certification",
     href: "/courses/business-analytics-course",
     description: "Strategic AI implementation for executives and managers",
     image: BA,

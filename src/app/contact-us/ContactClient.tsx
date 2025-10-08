@@ -15,11 +15,10 @@ const ContactClient = () => {
     // Handle form submission - would connect to backend in real application
     console.log("Form submitted")
   }
-
   const officeLocations = [
     {
       city: "Kolkata",
-      address: "Camac St, West Bengal 700017",
+      address: "14B, Camac St (5th Floor)",
       mapUrl: "https://maps.app.goo.gl/qPX2pAFBFZLiqvZ87",
     },
     {
@@ -29,14 +28,14 @@ const ContactClient = () => {
     },
     {
       city: "Bangalore",
-      address: "Indiranagar, Karnataka 560038",
+      address: "183, Double Road, 10th Main Rd, 2nd Stage, Indiranagar",
       mapUrl: "https://maps.app.goo.gl/faxoYXNquyqNyxVaA",
     },
     {
-      city: "Delhi",
-      address: "Karol Bagh, New Delhi 110055",
-      mapUrl: "https://maps.app.goo.gl/8L2Hc1ee8iwJ4QsE6",
-    },
+      "city": "Delhi",
+      "address": "Start Works, 1st Floor DCM Building Barakhamba Road ",
+      "mapUrl": "https://www.google.com/maps/search/Start+Works,+1st+Floor+DCM+Building+Barakhamba+Road,+Delhi/@28.6296453,77.2234432,954m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI1MTAwNC4wIKXMDSoASAFQAw%3D%3D"
+}
   ]
 
   return (
@@ -112,7 +111,7 @@ const ContactClient = () => {
                       <div>
                         <p className="font-medium">Phone</p>
                         <a href="tel:+919748441111" className="text-primary hover:underline">
-                          +91 9748441111
+                         +91 7676882222
                         </a>
                       </div>
                     </div>
@@ -120,8 +119,7 @@ const ContactClient = () => {
                       <Clock className="h-5 w-5 text-primary mr-3 flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-medium">Office Hours</p>
-                        <p className="text-gray-600">Monday - Saturday: 10:00 AM - 7:00 PM</p>
-                        <p className="text-gray-600">Sunday: Closed</p>
+                        <p className="text-gray-600">Monday - Sunday: 10:00 AM - 7:00 PM</p>
                       </div>
                     </div>
                   </div>

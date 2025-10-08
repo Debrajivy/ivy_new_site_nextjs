@@ -12,11 +12,11 @@ const getAboutCourseTitle = (courseTitle: string) => {
   const knownTitles = [
     "Executive Generative AI Course with IIT Guwahati",
     "Data Science & AI with IIT Guwahati",
-    "Cloud Data Engineering Certification",
-    "Data Science with Machine Learning & AI Certification",
-    "Data Visualization Course",
-    "Data Analytics with Visualization Certification Course",
-    "Business Analytics Certification Course",
+    " Cloud Data Engineering with Nasscom Certification",
+    "Data Science & AI with Nasscom Certification",
+    "Data Visualization Certification",
+    "Data Analytics with Visualization Certification",
+    "Data Visualization Certification",
     "Cloud Data Engineering Course with IIT Guwahati",
     "AI for Product Manager"
   ];
@@ -32,11 +32,11 @@ const getAboutWhatYouWillLearn = (whatYouWillLearn: string) => {
   const knownTitles = [
     "Executive Generative AI Course with IIT Guwahati",
     "Data Science & AI with IIT Guwahati",
-    "Cloud Data Engineering Certification",
-    "Data Science with Machine Learning & AI Certification",
-    "Data Visualization Course",
-    "Data Analytics with Visualization Certification Course",
-    "Business Analytics Certification Course",
+    " Cloud Data Engineering with Nasscom Certification",
+    "Data Science & AI with Nasscom Certification",
+    "Data Visualization Certification",
+    "Data Analytics with Visualization Certification",
+    "Data Visualization Certification",
     "Cloud Data Engineering Course with IIT Guwahati",
   ];
 

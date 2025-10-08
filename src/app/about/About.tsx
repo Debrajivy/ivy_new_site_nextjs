@@ -328,7 +328,7 @@ const About = () => {
                       <Phone className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold">Phone</h4>
-                        <p className="text-gray-600">+91 9748441111</p>
+                        <p className="text-gray-600">+91 7676882222</p>
                       </div>
                     </div>
                     <Button className="w-full mt-2" asChild>

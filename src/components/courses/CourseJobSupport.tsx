@@ -305,15 +305,15 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                         "The Executive Certification in GenAI with E&ICT Academy -IIT Guwahati ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
                         course.title === "Data Science & AI with IIT Guwahati" ?
                           "The Executive Certification in Data Science, offered in collaboration with the E&ICT Academy - IIT Guwahati, is widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
-                          course.title === "Cloud Data Engineering Certification" || course.title==="Data Engineering Course in Kolkata"?
+                          course.title === " Cloud Data Engineering with Nasscom Certification" || course.title==="Data Engineering Course in Kolkata"?
                             "Launch your cloud career with an elite certification FROM Ivy Pro School. Designed with experts from Amazon & Accenture, it proves your ability to build real-time data systems using Spark, Kafka, and AWS." :
-                            course.title === "Data Science with Machine Learning & AI Certification" ?
+                            course.title === "Data Science & AI with Nasscom Certification" ?
                               "This certification demonstrates your proficiency in end-to-end data science workflows, from data cleaning to deploying ML models." :
-                              course.title === "Data Visualization Course" ?
+                              course.title === "Data Visualization Certification" ?
                                 "Earn Ivy’s Data Science with Visualization certificate and prove your command over Excel, SQL, Python, Tableau & Power BI. Backed by 1:1 mentoring, this certification blends dashboarding, predictive modeling & automation into job-ready expertise." :
-                                course.title === "Data Analytics with Visualization Certification Course" ?
+                                course.title === "Data Analytics with Visualization Certification" ?
                                   "This dual-focus certification covers both analytical techniques and visualization best practices for comprehensive data storytelling." :
-                                  course.title === "Business Analytics Certification Course" ?
+                                  course.title === "Data Visualization Certification" ?
                                     "The Business Analytics certification demonstrates your ability to derive actionable insights from data to drive business decisions." :
                                     course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
                                       "The Executive Certification in Cloud Data Engineering with IIT Guwahati combines academic rigor with industry-relevant cloud technologies." :
@@ -369,15 +369,15 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                         "A stamp of approval from E&ICT Academy, IIT-Guwahati tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
                         course.title === "Data Science & AI with IIT Guwahati" ?
                           "A stamp of approval from an E&ICT Academy, IIT-Guwahati tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
-                          course.title === "Cloud Data Engineering Certification"  || course.title==="Data Engineering Course in Kolkata"?
+                          course.title === " Cloud Data Engineering with Nasscom Certification"  || course.title==="Data Engineering Course in Kolkata"?
                             "Show recruiters you're cloud-ready, with hands-on skills in AWS, GCP, and Azure. This certification validates your ability to design scalable pipelines and apply data engineering tools to real-world projects." :
-                            course.title === "Data Science with Machine Learning & AI Certification" ?
+                            course.title === "Data Science & AI with Nasscom Certification" ?
                               "Validates your ability to implement machine learning algorithms and AI solutions to solve complex business problems." :
-                              course.title === "Data Visualization Course" ?
+                              course.title === "Data Visualization Certification" ?
                                 "Trusted by 100+ recruiters, this certificate shows your hands-on mastery in data storytelling and analytics tools—validated through real-world projects in telecom, pharma, retail, and BFSI sectors." :
-                                course.title === "Data Analytics with Visualization Certification Course" ?
+                                course.title === "Data Analytics with Visualization Certification" ?
                                   "Shows employers you can both analyze data and present findings visually for maximum business impact." :
-                                  course.title === "Business Analytics Certification Course" ?
+                                  course.title === "Data Visualization Certification" ?
                                     "Signals to employers that you can bridge the gap between data and business strategy for measurable results." :
                                     course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
                                       "Combines the prestige of IIT with practical cloud engineering skills that are in high demand across industries." :
@@ -407,11 +407,11 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     src={
                       course.title === "Executive Generative AI Course with IIT Guwahati" ? Iitc :
                         course.title === "Data Science & AI with IIT Guwahati" ? Iitc :
-                          course.title === "Cloud Data Engineering Certification" || course.title==="Data Engineering Course in Kolkata" ? Cdec :
-                            course.title === "Data Science with Machine Learning & AI Certification" ? Nc :
-                              course.title === "Data Visualization Course" ? Dsvc :
-                                course.title === "Data Analytics with Visualization Certification Course" ? Davc :
-                                  course.title === "Business Analytics Certification Course" ? Bavc :
+                          course.title === " Cloud Data Engineering with Nasscom Certification" || course.title==="Data Engineering Course in Kolkata" ? Cdec :
+                            course.title === "Data Science & AI with Nasscom Certification" ? Nc :
+                              course.title === "Data Visualization Certification" ? Dsvc :
+                                course.title === "Data Analytics with Visualization Certification" ? Davc :
+                                  course.title === "Data Visualization Certification" ? Bavc :
                                     course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
                                       course.title === "AI for Product Manager" ? Pmc :
 

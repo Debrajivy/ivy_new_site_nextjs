@@ -95,7 +95,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '3',
-    title: "Cloud Data Engineering Certification",
+    title: " Cloud Data Engineering with Nasscom Certification",
     description: "Master data pipelines, big data tools, and real-time processing",
     image: CDE,
     category: "Data Engineering",
@@ -113,7 +113,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '4',
-    title: "Data Science with Machine Learning & AI Certification",
+    title: "Data Science & AI with Nasscom Certification",
     description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
     image: ML,
     category: "Data Science",
@@ -131,10 +131,10 @@ const featuredCourses: Course[] = [
   },
   {
     id: '5',
-    title: "Data Visualization Course",
+    title: "Data Visualization Certification",
     description: "Deep dive into Excel, SQL, Tableau, Power BI techniques",
     image: DV,
-    category: "Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Visualization Course" which contradicts. If you want this to be a Data Visualization course, the description should be updated. I'll keep the description as is but noted this discrepancy.
+    category: "Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Visualization Certification" which contradicts. If you want this to be a Data Visualization Certification, the description should be updated. I'll keep the description as is but noted this discrepancy.
     students: 855,
     duration: "6 months",
     rating: 4.7,
@@ -149,7 +149,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '6',
-    title: "Data Analytics with Visualization Certification Course",
+    title: "Data Analytics with Visualization Certification",
     description: "Learn Excel, Python, SQL, Tableau, Power BI and VBA for data analysis",
     image: DA,
     category: "Analytics",
@@ -166,7 +166,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '7',
-    title: "Business Analytics Certification Course",
+    title: "Data Visualization Certification",
     description: "Learn Excel, SQL, R, Python and VBA for business analytics",
     image: BA,
     category: "Analytics", // This also seems like a mismatch. Title is "Business Analytics" but category and description point to AI. I'll keep it as is.
@@ -241,15 +241,15 @@ const CourseCard = ({ course }: { course: Course }) => {
               return <Badge className="absolute top-3 right-3 badge">Trending</Badge>;
             case "Data Science & AI with IIT Guwahati":
               return <Badge className="absolute top-3 right-3 badge-genai">Featured</Badge>;
-            case "Cloud Data Engineering Certification":
+            case " Cloud Data Engineering with Nasscom Certification":
               return <Badge className="absolute top-3 right-3 badge-fullstack">Popular </Badge>;
-            case "Data Science with Machine Learning & AI Certification":
+            case "Data Science & AI with Nasscom Certification":
               return <Badge className="absolute top-3 right-3 badge-business">Best Choice</Badge>;
-            case "Data Visualization Course":
+            case "Data Visualization Certification":
               return <Badge className="absolute top-3 right-3 badge-deeplearning">Popular</Badge>;
-            case "Data Analytics with Visualization Certification Course":
+            case "Data Analytics with Visualization Certification":
               return <Badge className="absolute top-3 right-3 badge-dataeng">Best Choice</Badge>;
-            case "Business Analytics Certification Course":
+            case "Data Visualization Certification":
               return <Badge className="absolute top-3 right-3 badge-analytics">Featured </Badge>;
             case "Cloud Data Engineering Course with IIT Guwahati":
               return <Badge className="absolute top-3 right-3 badge-ml">New</Badge>;
