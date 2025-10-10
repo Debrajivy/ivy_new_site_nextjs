@@ -112,7 +112,6 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     'Data Science with Machine Learning & AI Certification': { courseFee: 56000, registration: 10000, emi: 5571, months: 9 },
     // Removed duplicate 'Data Analytics and Generative AI Course' key to fix error
     ' Data Engineering Course': { courseFee: 55000, registration: 10000, emi: 6601, months: 9 },
-    'Data Science with Machine Learning & AI Certification': { courseFee: 90000, registration: 30000, emi: 5675, months: 12 },
     'Generative AI Course': { courseFee: 69000, registration: 30000, emi: 3768, months: 12 },
     'AI for Product Managers': { courseFee: 29000, registration: 30000, emi: 17110, months: 12 },
     'Data science course (Pay after Placement)': { courseFee: 135000, registration: 10000, emi: 17110, months: 12 },
