@@ -29,130 +29,145 @@ import AIPM from "@/assests/AIPM.webp"
 import icon from "../../assests/icon.webp"
 
 const courseCategories = {
-  "AI for Product Manager": [
+  "AI for Product Managers": [
     {
       title: "AI for Product Managers",
       href: "/courses/ai-product-manager-course",
-      description: "Leverage AI tools and techniques to enhance project management",
+      description: "2-month program designed to help managers harness the power of AI and GenAI for smarter decisions and innovation.",
       image: AIPM,
     }
   ],
   "Data Science & AI": [
+    // {
+    //   title: "Data Science with Machine Learning & AI Certification",
+    //   href: "/courses/iit-data-science-course",
+    //   description: "Master end-to-end data science, AI, and visualization tools",
+    //   image: DS,
+    // },
     {
-      title: "Data Science & AI with IIT Guwahati",
-      href: "/courses/iit-data-science-course",
-      description: "Master end-to-end data science, AI, and visualization tools",
-      image: DS,
-    },
-    {
-      title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
+      title: "Data Science with Machine Learning & AI Certification",
       href: "/courses/data-science-and-ml-course",
-      description: "Become job-ready with ML, DL, Python, and visualization tools",
+      description: "11-month NASSCOM-certified program designed to build strong foundations in Data Science, Machine Learning, and AI.",
       image: ML,
+
     },
   ],
-  "Cloud Data Engineering": [
+  "Data Engineering": [
     {
-      title: "Cloud Data Engineering with Nasscom Certification",
+      title: "Data Engineering Course",
       href: "/courses/data-engineering-course",
-      description: "Master data pipelines, big data tools, and real-time processing",
+      description: "8-month industry-aligned program designed to build expertise in modern Data Engineering and cloud-based data pipelines.",
       image: CDE,
     },
-    {
-      title: "Cloud Data Engineering with IIT Guwahati",
-      href: "/courses/iit-data-engineering-course",
-      description: "Advanced cloud data engineering with industry experts",
-      image: CDI,
-    },
+    // {
+    //   title: "Cloud Data Engineering with IIT Guwahati",
+    //   href: "/courses/iit-data-engineering-course",
+    //   description: "Advanced cloud data engineering with industry experts",
+    //   image: CDI,
+    // },
   ],
   "Data Analytics": [
     {
-      title: "Data Analytics with Visualization Certification",
+      title: "Data Analytics Course",
       href: "/courses/data-analytics-course",
-      description: "Learn comprehensive data analytics and visualization",
+      description: "8-month program to build strong analytical, statistical, and visualization skills for data-driven decision-making.",
       image: DA,
     },
     {
-      title: "Business Analytics Certification",
-      href: "/courses/business-analytics-course",
-      description: "Strategic AI implementation for executives and managers",
+      title: "Data Analytics and Generative AI Course",
+      href: "/courses/data-analytics-and-generative-ai-course",
+      description: "7-month program combining data analytics and generative AI to transform raw data into intelligent business insights.",
       image: BA,
     }
+    // {
+    //   title: "Data Analytics and Generative AI Course",
+    //   href: "/courses/data-analytics-and-generative-ai-course",
+    //   description: "Strategic AI implementation for executives and managers",
+    //   image: BA,
+    // }
   ],
-  "Data Visualization": [
-    {
-      title: "Data Visualization Certification",
-      href: "/courses/data-visualization-course",
-      description: "Deep dive into advanced visualization techniques",
-      image: DV,
-    },
-  ],
+  // "Data Visualization": [
+  //   {
+  //     title: "Data Analytics and Generative AI Course",
+  //     href: "/courses/data-visualization-course",
+  //     description: "Deep dive into advanced visualization techniques",
+  //     image: DV,
+  //   },
+  // ],
   "Generative AI": [
     {
-      title: "Executive Generative AI with IIT Guwahati",
+      title: "Generative AI Course",
       href: "/courses/iit-generative-ai-course",
-      description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
+      description: "5-month advanced program to master Generative AI, from app building to multimodal AI integration and frameworks.",
       image: GA,
     },
   ],
-  "Data Science (Pay after Placement)": [
+  "Machine Learning": [
     {
-      title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
-      href: "/courses/no-upfront-fees-data-science-and-ml-course",
-      description: "Become job-ready with ML, DL, Python, and visualization tools",
-      image: ML,
+      title: "AI and Machine Learning Course",
+      href: "/courses/ai-machine-learning-course",
+      description: "4-month program focused on mastering core AI and Machine Learning concepts through hands-on modeling and real-world applications.",
+      image: GA,
     },
   ],
+  // "Data Science (Pay after Placement)": [
+  //   {
+  //     title: "Data Science with Machine Learning & AI Certification",
+  //     href: "/courses/no-upfront-fees-data-science-and-ml-course",
+  //     description: "Become job-ready with ML, DL, Python, and visualization tools",
+  //     image: ML,
+  //   },
+  // ],
 
 }
 
 const allCourses = [
 
   {
-    title: "AI for Product Managers",
+    title: "AI for Product Managerss",
     href: "/courses/ai-product-manager-course",
     description: "Leverage AI tools and techniques to enhance project management",
     image: AIPM,
   },
   {
-    title: "Executive Generative AI Course with IIT Guwahati",
+    title: "Generative AI Course",
     href: "/courses/iit-generative-ai-course",
     description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
     image: GA,
   },
+  // {
+  //   title: "Data Science with Machine Learning & AI Certification",
+  //   href: "/courses/iit-data-science-course",
+  //   description: "Master end-to-end data science, AI, and visualization tools",
+  //   image: DS,
+  // },
   {
-    title: "Data Science & AI with IIT Guwahati",
-    href: "/courses/iit-data-science-course",
-    description: "Master end-to-end data science, AI, and visualization tools",
-    image: DS,
-  },
-  {
-    title: " Cloud Data Engineering with Nasscom Certification",
+    title: " Data Engineering Course",
     href: "/courses/data-engineering-course",
     description: "Master data pipelines, big data tools, and real-time processing",
     image: CDE,
   },
   {
-    title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
+    title: "Data Science with Machine Learning & AI Certification",
     href: "/courses/data-science-and-ml-course",
     description: "Become job-ready with ML, DL, Python, and visualization tools",
     image: ML,
   },
   {
-    title: "Data Visualization Certification",
+    title: "Data Analytics and Generative AI Course",
     href: "/courses/data-visualization-course",
     description: "Deep dive into neural networks and advanced ML techniques",
     image: DV,
   },
   {
-    title: "Data Analytics with Visualization Certification",
+    title: "Data Analytics Course",
     href: "/courses/data-analytics-course",
     description: "Learn Hadoop, Spark, and big data processing frameworks",
     image: DA,
   },
   {
-    title: "Data Visualization Certification",
-    href: "/courses/business-analytics-course",
+    title: "Data Analytics and Generative AI Course",
+    href: "/courses/data-analytics-and-generative-ai-course",
     description: "Strategic AI implementation for executives and managers",
     image: BA,
   },
@@ -163,11 +178,17 @@ const allCourses = [
     image: CDI,
   },
   {
-    title: "Data science course (Pay after Placement)",
-    href: "/courses/no-upfront-fees-data-science-and-ml-course",
-    description: "Become job-ready with ML, DL, Python, and visualization tools",
-    image: ML,
-  }
+    title: "AI and Machine Learning Course",
+    href: "/courses/ai-machine-learning-course",
+    description: "4-month program focused on mastering core AI and Machine Learning concepts through hands-on modeling and real-world applications.",
+    image: CDI,
+  },
+  // {
+  //   title: "Data science course (Pay after Placement)",
+  //   href: "/courses/no-upfront-fees-data-science-and-ml-course",
+  //   description: "Become job-ready with ML, DL, Python, and visualization tools",
+  //   image: ML,
+  // }
 ]
 
 const ListItem = React.forwardRef<
@@ -248,7 +269,8 @@ const MultiLevelDropdown = () => {
                     className="transition-all duration-300 hover:bg-gradient-to-r hover:from-[#e0f7f7] hover:to-[#f0faf0] hover:shadow-md hover:text-[#009fda] rounded-lg"
                     image={course.image}
                   >
-                    <div>{course.description}</div>
+                    <div style={{fontSize:13}}>{course.description}</div>
+                    {/* <div >{course.month}</div> */}
                   </ListItem>
                 ))}
               </ul>

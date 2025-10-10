@@ -80,7 +80,7 @@ const Footer = () => {
               <li><Link href="/courses/data-science-and-ml-course" className="text-gray-300 hover:text-white transition-colors">Machine Learning & AI</Link></li>
               <li><Link href="/courses/iit-data-engineering-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Engineering</Link></li>
               <li><Link href="/courses/data-analytics-course" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
-              <li><Link href="/courses/business-analytics-course" className="text-gray-300 hover:text-white transition-colors">Business Analytics</Link></li>
+              <li><Link href="/courses/data-analytics-and-generative-ai-course" className="text-gray-300 hover:text-white transition-colors">Business Analytics</Link></li>
               <li><Link href="/courses/data-visualization-course" className="text-gray-300 hover:text-white transition-colors">Data Visualization</Link></li>
               {/* <li><Link href="/categories/deep-learning" className="text-gray-300 hover:text-white transition-colors">Deep Learning</Link></li>
               <li><Link href="/categories" className="text-gray-300 hover:text-white transition-colors">All Courses</Link></li> */}

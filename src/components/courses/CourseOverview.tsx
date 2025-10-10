@@ -10,15 +10,15 @@ interface CourseOverviewProps {
 
 const getAboutCourseTitle = (courseTitle: string) => {
   const knownTitles = [
-    "Executive Generative AI Course with IIT Guwahati",
-    "Data Science & AI with IIT Guwahati",
-    " Cloud Data Engineering with Nasscom Certification",
-    "Data Science with Machine Learning & AI Certification (NASSCOM)",
-    "Data Visualization Certification",
-    "Data Analytics with Visualization Certification",
-    "Data Visualization Certification",
+    "Generative AI Course",
+    "Data Science with Machine Learning & AI Certification",
+    " Data Engineering Course",
+    "Data Science with Machine Learning & AI Certification",
+    "Data Analytics and Generative AI Course",
+    "Data Analytics Course",
+    "Data Analytics and Generative AI Course",
     "Cloud Data Engineering Course with IIT Guwahati",
-    "AI for Product Manager"
+    "AI for Product Managers"
   ];
 
   if (knownTitles.includes(courseTitle)) {
@@ -30,13 +30,13 @@ const getAboutCourseTitle = (courseTitle: string) => {
 
 const getAboutWhatYouWillLearn = (whatYouWillLearn: string) => {
   const knownTitles = [
-    "Executive Generative AI Course with IIT Guwahati",
-    "Data Science & AI with IIT Guwahati",
-    " Cloud Data Engineering with Nasscom Certification",
-    "Data Science with Machine Learning & AI Certification (NASSCOM)",
-    "Data Visualization Certification",
-    "Data Analytics with Visualization Certification",
-    "Data Visualization Certification",
+    "Generative AI Course",
+    "Data Science with Machine Learning & AI Certification",
+    " Data Engineering Course",
+    "Data Science with Machine Learning & AI Certification",
+    "Data Analytics and Generative AI Course",
+    "Data Analytics Course",
+    "Data Analytics and Generative AI Course",
     "Cloud Data Engineering Course with IIT Guwahati",
   ];
 

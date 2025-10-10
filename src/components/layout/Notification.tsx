@@ -14,7 +14,7 @@ import { Bell, Sparkles, TrendingUp, Cpu, Cloud } from 'lucide-react';
 const ANNOUNCEMENTS = [
   {
     icon: Sparkles,
-    text: "HOT COURSES NOW: AI for Product Managers & Generative AI - Enroll Today!",
+    text: "HOT COURSES NOW: AI for Product Managerss & Generative AI - Enroll Today!",
     color: "text-amber-300"
   },
   {

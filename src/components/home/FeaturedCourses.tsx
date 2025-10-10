@@ -14,7 +14,7 @@ import CDE from "@/assests/CDE.webp";
 import ML from "@/assests/ML.webp";
 import GA from "@/assests/GAI.webp";
 import AIPM from "@/assests/AIPM.webp";
-
+import DAGA from "@/assests/DAGA.webp";
 import DA from "@/assests/DA.webp";
 import BA from "@/assests/BA.webp";
 import DV from "@/assests/DV.webp";
@@ -23,7 +23,8 @@ import CDEI from "@/assests/CDEI.webp";
 import DSPAP from "@/assests/DSPAP.webp";
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-
+import DSMAI from "@/assests/DSM&AI.webp";
+import AIML from "@/assests/AI&ML.webp";
 interface Course {
   id: string;
   title: string;
@@ -42,12 +43,12 @@ interface Course {
 const featuredCourses: Course[] = [
   {
     id: '9',
-    title: "AI for Product Manager",
+    title: "AI for Product Managers",
     description: "Learn to leverage AI tools and techniques to enhance project management efficiency.",
     image: AIPM,
     category: "Product Manager",
     students: 720,
-    duration: "6 weeks",
+    duration: "2 months",
     rating: 4.7,
     reviewCount: 195,
     isFeatured: true,
@@ -59,12 +60,12 @@ const featuredCourses: Course[] = [
   },
   {
     id: '1',
-    title: "Executive Generative AI Course with IIT Guwahati",
+    title: "Generative AI Course",
     description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
     image: GA,
     category: "Generative AI",
     students: 1220,
-    duration: "6 months",
+    duration: "5 months",
     rating: 4.9,
     reviewCount: 209,
     isFeatured: true,
@@ -75,27 +76,27 @@ const featuredCourses: Course[] = [
       "Learn Machine Learning, Deep Learning, Langchain, RAG, Transformer, LLM"
     ]
   },
-  {
-    id: '2',
-    title: "Data Science & AI with IIT Guwahati",
-    description: "Master end-to-end data science, AI, and visualization tools",
-    image: DS2,
-    category: "Data Science",
-    students: 1136,
-    duration: "12 months",
-    rating: 4.8,
-    reviewCount: 230,
-    isFeatured: true,
-    slug: "iit-data-science-course",
-    keyFeatures: [
-      "50+ real-life projects",
-      "Live doubt-clearing sessions",
-      "Learn Adv Excel, SQL, Python, Power BI, VBA, Machine Learning & Tensorflow, MLOps, Power Query, Power Pivot"
-    ]
-  },
+  // {
+  //   id: '2',
+  //   title: "Data Science with Machine Learning & AI Certification",
+  //   description: "Master end-to-end data science, AI, and visualization tools",
+  //   image: DS2,
+  //   category: "Data Science",
+  //   students: 1136,
+  //   duration: "12 months",
+  //   rating: 4.8,
+  //   reviewCount: 230,
+  //   isFeatured: true,
+  //   slug: "iit-data-science-course",
+  //   keyFeatures: [
+  //     "50+ real-life projects",
+  //     "Live doubt-clearing sessions",
+  //     "Learn Adv Excel, SQL, Python, Power BI, VBA, Machine Learning & Tensorflow, MLOps, Power Query, Power Pivot"
+  //   ]
+  // },
   {
     id: '3',
-    title: " Cloud Data Engineering with Nasscom Certification",
+    title: " Data Engineering Course",
     description: "Master data pipelines, big data tools, and real-time processing",
     image: CDE,
     category: "Data Engineering",
@@ -113,12 +114,12 @@ const featuredCourses: Course[] = [
   },
   {
     id: '4',
-    title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
+    title: "Data Science with Machine Learning & AI Certification",
     description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
-    image: ML,
+    image: DSMAI,
     category: "Data Science",
     students: 1158,
-    duration: "12 months",
+    duration: "11 months",
     rating: 4.8,
     reviewCount: 324,
     isFeatured: true,
@@ -131,12 +132,12 @@ const featuredCourses: Course[] = [
   },
   {
     id: '5',
-    title: "Data Visualization Certification",
+    title: "Data Analytics and Generative AI Course",
     description: "Deep dive into Excel, SQL, Tableau, Power BI techniques",
-    image: DV,
-    category: "Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Visualization Certification" which contradicts. If you want this to be a Data Visualization Certification, the description should be updated. I'll keep the description as is but noted this discrepancy.
+    image: DAGA,
+    category: "Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Analytics and Generative AI Course" which contradicts. If you want this to be a Data Analytics and Generative AI Course, the description should be updated. I'll keep the description as is but noted this discrepancy.
     students: 855,
-    duration: "6 months",
+    duration: "7 months",
     rating: 4.7,
     reviewCount: 212,
     isFeatured: true,
@@ -149,7 +150,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '6',
-    title: "Data Analytics with Visualization Certification",
+    title: "Data Analytics Course",
     description: "Learn Excel, Python, SQL, Tableau, Power BI and VBA for data analysis",
     image: DA,
     category: "Analytics",
@@ -158,63 +159,83 @@ const featuredCourses: Course[] = [
     rating: 4.6,
     reviewCount: 286,
     isFeatured: true,
-    slug: "data-analytics-course",
+    slug: "",
     keyFeatures: [
       "Analyze large datasets",
       "Data mining techniques"
     ]
   },
-  {
-    id: '7',
-    title: "Data Visualization Certification",
-    description: "Learn Excel, SQL, R, Python and VBA for business analytics",
-    image: BA,
-    category: "Analytics", // This also seems like a mismatch. Title is "Business Analytics" but category and description point to AI. I'll keep it as is.
-    students: 25090,
-    duration: "8 months",
-    rating: 4.8,
-    reviewCount: 6983,
-    isFeatured: true,
-    slug: "business-analytics-course",
-    keyFeatures: [
-      "Data-driven decision making",
-      "Predictive modeling for business"
-    ]
-  },
-  {
-    id: '8',
-    title: "Cloud Data Engineering Course with IIT Guwahati",
-    description: "Image processing and recognition with deep learning",
-    image: CDEI,
-    category: "Big Data", // Another mismatch. Title is "Cloud Data Engineering" but description points to "Computer Vision". I'll keep it as is.
-    students: 445,
-    duration: "8 months",
-    rating: 4.7,
-    reviewCount: 189,
-    isFeatured: true,
-    slug: "iit-data-engineering-course",
-    keyFeatures: [
-      "30+ real-life projects",
-      "Live doubt-clearing sessions",
-      "Learn industry focused tools i.e. Azure, Hive, MongoDB, Spark, Kafka & Hadoop"
-    ]
-  },
+  // {
+  //   id: '7',
+  //   title: "Data Analytics and Generative AI Course",
+  //   description: "Learn Excel, SQL, R, Python and VBA for business analytics",
+  //   image: BA,
+  //   category: "Analytics", // This also seems like a mismatch. Title is "Business Analytics" but category and description point to AI. I'll keep it as is.
+  //   students: 25090,
+  //   duration: "8 months",
+  //   rating: 4.8,
+  //   reviewCount: 6983,
+  //   isFeatured: true,
+  //   slug: "data-analytics-and-generative-ai-course",
+  //   keyFeatures: [
+  //     "Data-driven decision making",
+  //     "Predictive modeling for business"
+  //   ]
+  // },
+  // {
+  //   id: '8',
+  //   title: "Cloud Data Engineering Course with IIT Guwahati",
+  //   description: "Image processing and recognition with deep learning",
+  //   image: CDEI,
+  //   category: "Big Data", // Another mismatch. Title is "Cloud Data Engineering" but description points to "Computer Vision". I'll keep it as is.
+  //   students: 445,
+  //   duration: "8 months",
+  //   rating: 4.7,
+  //   reviewCount: 189,
+  //   isFeatured: true,
+  //   slug: "iit-data-engineering-course",
+  //   keyFeatures: [
+  //     "30+ real-life projects",
+  //     "Live doubt-clearing sessions",
+  //     "Learn industry focused tools i.e. Azure, Hive, MongoDB, Spark, Kafka & Hadoop"
+  //   ]
+  // },
+  // {
+  //   id: '10',
+  //   title: "Data science course (Pay after Placement)",
+  //   description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
+  //   image: DSPAP,
+  //   category: "Data Science",
+  //   students: 430,
+  //   duration: "12 months",
+  //   rating: 4.8,
+  //   reviewCount: 109,
+  //   isFeatured: true,
+  //   slug: "no-upfront-fees-data-science-and-ml-course",
+  //   keyFeatures: [
+  //     "In-depth ML algorithms",
+  //     "Deep learning with TensorFlow/PyTorch",
+  //     "Data visualization with Power BI"
+  //   ]
+  // },
+
   {
     id: '10',
-    title: "Data science course (Pay after Placement)",
+    title: "AI and Machine Learning Course",
     description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
-    image: DSPAP,
+    image: AIML,
     category: "Data Science",
     students: 430,
-    duration: "12 months",
+    duration: "4 months",
     rating: 4.8,
     reviewCount: 109,
     isFeatured: true,
     slug: "no-upfront-fees-data-science-and-ml-course",
     keyFeatures: [
-      "In-depth ML algorithms",
-      "Deep learning with TensorFlow/PyTorch",
-      "Data visualization with Power BI"
+      "Stats(recorded),",
+      "Python",
+      "Modeling",
+      "ML"
     ]
   }
 
@@ -235,21 +256,21 @@ const CourseCard = ({ course }: { course: Course }) => {
         <Badge className="absolute top-3 left-3 bg-primary">{course.category}</Badge>
         {course.isFeatured && (() => {
           switch (course.title) {
-            case "AI for Product Manager":
+            case "AI for Product Managers":
               return <Badge className="absolute top-3 right-3 badge-featured">New</Badge>;
-            case "Executive Generative AI Course with IIT Guwahati":
+            case "Generative AI Course":
               return <Badge className="absolute top-3 right-3 badge">Trending</Badge>;
-            case "Data Science & AI with IIT Guwahati":
+            case "Data Science with Machine Learning & AI Certification":
               return <Badge className="absolute top-3 right-3 badge-genai">Featured</Badge>;
-            case " Cloud Data Engineering with Nasscom Certification":
+            case " Data Engineering Course":
               return <Badge className="absolute top-3 right-3 badge-fullstack">Popular </Badge>;
-            case "Data Science with Machine Learning & AI Certification (NASSCOM)":
+            case "Data Science with Machine Learning & AI Certification":
               return <Badge className="absolute top-3 right-3 badge-business">Best Choice</Badge>;
-            case "Data Visualization Certification":
+            case "Data Analytics and Generative AI Course":
               return <Badge className="absolute top-3 right-3 badge-deeplearning">Popular</Badge>;
-            case "Data Analytics with Visualization Certification":
+            case "Data Analytics Course":
               return <Badge className="absolute top-3 right-3 badge-dataeng">Best Choice</Badge>;
-            case "Data Visualization Certification":
+            case "Data Analytics and Generative AI Course":
               return <Badge className="absolute top-3 right-3 badge-analytics">Featured </Badge>;
             case "Cloud Data Engineering Course with IIT Guwahati":
               return <Badge className="absolute top-3 right-3 badge-ml">New</Badge>;
@@ -353,12 +374,12 @@ const FeaturedCourses = () => {
 
             </p>
           </div>
-          <Link href="/categories" className="mt-4 md:mt-0">
+          {/* <Link href="/categories" className="mt-4 md:mt-0">
             <Button variant="outline" className="flex items-center" style={{backgroundColor:'#009fda',color:'white'}}>
               View All Courses
               <ChevronRight size={16} className="ml-2" />
             </Button>
-          </Link>
+          </Link> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

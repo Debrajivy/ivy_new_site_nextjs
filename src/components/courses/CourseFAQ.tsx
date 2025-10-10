@@ -23,7 +23,7 @@ type CourseFAQData = {
   faqs: FAQ[];
 };
 const courseData: { [key: string]: CourseFAQData } = {
-  "AI for Product Manager": {
+  "AI for Product Managers": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -37,7 +37,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the AI for Product Managers course?",
+        question: "What is the duration of the AI for Product Managerss course?",
         answer: "The course runs for 6–8 weeks with 25–30 hours of live and recorded sessions, offering flexible weekday, weekend, and fast-track options for working professionals.",
         category: "program"
       },
@@ -77,12 +77,12 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "program"
       },
       {
-        question: "Who can enroll in the AI for Product Managers course?",
+        question: "Who can enroll in the AI for Product Managerss course?",
         answer: "This course is designed for project managers, product leaders, team leads, and professionals who want to integrate AI into project workflows and decision-making.",
         category: "eligibility"
       },
       {
-        question: "Is the AI for Product Managers course suitable for non-coders?",
+        question: "Is the AI for Product Managerss course suitable for non-coders?",
         answer: "Yes. The course uses no-code and low-code AI tools, making it perfect for managers without programming experience.",
         category: "eligibility"
       },
@@ -163,7 +163,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What certification will I receive upon completion?",
-        answer: "You will receive a course completion certificate in AI for Product Managers issued by Ivy Professional School, validating your expertise in AI-driven project workflows.",
+        answer: "You will receive a course completion certificate in AI for Product Managerss issued by Ivy Professional School, validating your expertise in AI-driven project workflows.",
         category: "certification"
       },
       {
@@ -278,7 +278,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-  "Data Science & AI with IIT Guwahati": {
+  "Data Science with Machine Learning & AI Certification": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -292,7 +292,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the Data Science & AI with IIT Guwahati course?",
+        question: "What is the duration of the Data Science with Machine Learning & AI Certification course?",
         answer: "The course lasts for 45 weeks and includes 7 modules with 50 sessions totaling 225 hours.",
         category: "program"
       },
@@ -563,7 +563,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-  "Data Science with Machine Learning & AI Certification (NASSCOM)": {
+  "Data Science with Machine Learning & AI Certification": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -848,7 +848,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-  " Cloud Data Engineering with Nasscom Certification": {
+  " Data Engineering Course": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -862,7 +862,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the  Cloud Data Engineering with Nasscom Certification course?",
+        question: "What is the duration of the  Data Engineering Course course?",
         answer: "The course spans 225 hours and is completed over 12 weeks, covering 8 modules and 62 lessons.",
         category: "program"
       },
@@ -1138,7 +1138,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the  Cloud Data Engineering with Nasscom Certification course?",
+        question: "What is the duration of the  Data Engineering Course course?",
         answer: "The course spans 225 hours and is completed over 12 weeks, covering 8 modules and 62 lessons.",
         category: "program"
       },
@@ -1400,7 +1400,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
-  "Data Analytics with Visualization Certification": {
+  "Data Analytics Course": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -1414,7 +1414,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the Data Analytics with Visualization Certification?",
+        question: "What is the duration of the Data Analytics Course?",
         answer: "The course spans 225 hours across 14 weeks and includes live sessions, projects, and hands-on practice.",
         category: "program"
       },
@@ -1685,7 +1685,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-  "Data Visualization Certification": {
+  "Data Analytics and Generative AI Course": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -1698,7 +1698,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       { id: "support", name: "Support" }
     ],
     faqs: [
-      { question: "What is the duration of the Data Visualization Certification?", answer: "The course runs for 225 hours over approximately 8 months and includes 5 structured modules and real-world projects.", category: "program" },
+      { question: "What is the duration of the Data Analytics and Generative AI Course?", answer: "The course runs for 225 hours over approximately 8 months and includes 5 structured modules and real-world projects.", category: "program" },
       { question: "Is the course designed for beginners or professionals?", answer: "It’s designed for both freshers and professionals seeking business analytics roles.", category: "program" },
       { question: "What tools and technologies are taught?", answer: "Excel, SQL, Python, R, Tableau, and Excel VBA are included.", category: "program" },
       { question: "Is this course delivered online?", answer: "Yes, the course is fully online with live sessions and recorded access.", category: "program" },
@@ -1752,7 +1752,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
-  "Data Visualization Certifications": {
+  "Data Analytics and Generative AI Courses": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -1766,7 +1766,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the Data Visualization Certification Course?",
+        question: "What is the duration of the Data Analytics and Generative AI Course Course?",
         answer: "The course spans 225 hours including live training projects, and assignments over 14 weeks.",
         category: "program"
       },
@@ -2322,7 +2322,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
- "Executive Generative AI Course with IIT Guwahati": {
+ "Generative AI Course": {
   categories: [
     { id: "program", name: "Program" },
     { id: "eligibility", name: "Eligibility" },

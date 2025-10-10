@@ -45,8 +45,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/business-analytics-course",
-        destination: "/courses/business-analytics-course",
+        source: "/data-analytics-and-generative-ai-course",
+        destination: "/courses/data-analytics-and-generative-ai-course",
         permanent: true,
       },
       {

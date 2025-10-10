@@ -99,7 +99,7 @@ export interface Testimonial {
 const courses: Course[] = [
   {
     id: '1',
-    title: "Executive Generative AI Course with IIT Guwahati",
+    title: "Generative AI Course",
     description: "Learn advanced Gen AI skills, build super-functional apps, get certified by IIT, and become the perfect job candidate in 18 weeks.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
@@ -316,7 +316,7 @@ const courses: Course[] = [
   },
   {
     id: '2',
-    title: "Data Science & AI with IIT Guwahati",
+    title: "Data Science with Machine Learning & AI Certification",
     description: "Learn high-value data science skills, work on 50+ projects and case studies, get certified by IIT, and become job-ready in 45 weeks.",
     image: "https://images.unsplash.com/photo-1677442135968-6bb674d4f8a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
     category: "Generative AI",
@@ -561,7 +561,7 @@ const courses: Course[] = [
   },
   {
     id: '3',
-    title: " Cloud Data Engineering with Nasscom Certification",
+    title: " Data Engineering Course",
     description: "Master data engineering and big data analytics with tools like Hadoop, Spark, Kafka, Hive, etc., to become a certified data engineer and get a guaranteed placement.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Engineering",
@@ -792,7 +792,7 @@ const courses: Course[] = [
   },
   {
     id: '4',
-    title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
+    title: "Data Science with Machine Learning & AI Certification",
     description: "Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and get jobs for data scientist, analyst, or ML engineer roles.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
@@ -1096,13 +1096,13 @@ const courses: Course[] = [
   },
   {
     id: '5',
-    title: "Data Visualization Certification",
+    title: "Data Analytics and Generative AI Course",
     description: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Excel, VBA, Tableau, PowerBI, and more.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Visualization Certification Course in Tableau & Power BI",
+      title: "Data Analytics and Generative AI Course Course in Tableau & Power BI",
       description: "Join IBM Certified Data Science course with Visualization. Work on 25+ real-world projects. Mentors from IIT, IIM, & US universities. Get placement support.",
       bio: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Python, R, Tableau, PowerBI, and more."
 
@@ -1303,7 +1303,7 @@ const courses: Course[] = [
   },
   {
     id: '6',
-    title: "Data Analytics with Visualization Certification",
+    title: "Data Analytics Course",
     description: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
@@ -1538,7 +1538,7 @@ const courses: Course[] = [
   },
   {
     id: '7',
-    title: "Data Visualization Certification",
+    title: "Data Analytics and Generative AI Course",
     description: "Learn business analytics with advanced tools like Excel, SQL, Python, R, Tableau, etc., and become a data expert employers want to hire.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
@@ -1553,7 +1553,7 @@ const courses: Course[] = [
     rating: 4.8,
     reviewCount: 298,
     isFeatured: true,
-    slug: "business-analytics-course",
+    slug: "data-analytics-and-generative-ai-course",
     longDescription: "This business analytics course in India will make you a job-ready data expert in 8 months. You will learn dashboarding and automation in Excel, database management in SQL, data visualization in Tableau, predictive modeling with R, and data science in Python. The course also teaches you business statistics and machine learning essentials like decision trees, ensemble learning, text mining, etc.\n\n But, theoretical knowledge alone is not enough. That’s why we let you solidify what you learn by working on real-life projects. For instance, you will work on several projects related to industries like finance, marketing, retail, automobile, etc.\n\n This business analyst course is ideal for MBA students, engineering students in their third or final year, B.Sc. or M.Sc. students, working professionals in banking, finance, or IT, and undergraduate or postgraduate students studying math, statistics, economics, commerce, or finance."
     , instructors: [
       {
@@ -1915,14 +1915,14 @@ const courses: Course[] = [
   },
   {
     id: '9',
-    title: "AI for Product Manager",
+    title: "AI for Product Managers",
     description: "Get coached by industry experts, master essential project management skills, complete 20+ real-world projects, and become job-ready in just 6 weeks",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
     metaData: {
       title: "Become a Future Ready AI Product Manager using Generative AI",
-      description: "Upskill in 6 weeks with Ivy’s AI for Product Manager course. Learn Agile, AI tools, 20+ projects & job support. Become a future-ready PM."
+      description: "Upskill in 6 weeks with Ivy’s AI for Product Managers course. Learn Agile, AI tools, 20+ projects & job support. Become a future-ready PM."
     },
     duration: "6 weeks",
     rating: 4.7,

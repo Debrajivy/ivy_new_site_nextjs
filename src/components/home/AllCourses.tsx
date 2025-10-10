@@ -26,7 +26,7 @@ import DS2 from "@/assests/DSI2.webp";
 import AIPM from "@/assests/AIPM.webp";
 import DSPAP from "@/assests/DSPAP.webp";
 import Image, { StaticImageData } from 'next/image';
-
+import DAGA from "@/assests/DAGA.webp";
 interface Course {
   id: string;
   title: string;
@@ -43,7 +43,7 @@ interface Course {
 }
 
 const ALL_COURSE_CATEGORIES = [
-  "AI for Product Manager",
+  "AI for Product Managers",
   "Data Science",
   "Cloud Data Engineering",
   "Analytics",
@@ -54,10 +54,10 @@ const ALL_COURSE_CATEGORIES = [
 const featuredCourses: Course[] = [
   {
     id: '9',
-    title: "AI for Product Manager",
+    title: "AI for Product Managers",
     description: "Learn to leverage AI tools and techniques to enhance project management efficiency.",
     image: AIPM,
-    category: "AI for Product Manager",
+    category: "AI for Product Managers",
     students: 720,
     duration: "6 weeks",
     rating: 4.7,
@@ -71,7 +71,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '1',
-    title: "Executive Generative AI Course with IIT Guwahati",
+    title: "Generative AI Course",
     description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
     image: GA,
     category: "Generative AI",
@@ -89,7 +89,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '2',
-    title: "Data Science & AI with IIT Guwahati",
+    title: "Data Science with Machine Learning & AI Certification",
     description: "Master end-to-end data science, AI, and visualization tools",
     image: DS2,
     category: "Data Science",
@@ -107,7 +107,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '3',
-    title: " Cloud Data Engineering with Nasscom Certification",
+    title: " Data Engineering Course",
     description: "Master data pipelines, big data tools, and real-time processing",
     image: CDE,
     category: "Cloud Data Engineering",
@@ -125,7 +125,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '4',
-    title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
+    title: "Data Science with Machine Learning & AI Certification",
     description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
     image: ML,
     category: "Data Science",
@@ -143,10 +143,10 @@ const featuredCourses: Course[] = [
   },
   {
     id: '5',
-    title: "Data Visualization Certification",
+    title: "Data Analytics and Generative AI Course",
     description: "Deep dive into Excel, SQL, Tableau, Power BI techniques",
-    image: DV,
-    category: "Data Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Visualization Certification" which contradicts. If you want this to be a Data Visualization Certification, the description should be updated. I'll keep the description as is but noted this discrepancy.
+    image: DAGA,
+    category: "Data Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Analytics and Generative AI Course" which contradicts. If you want this to be a Data Analytics and Generative AI Course, the description should be updated. I'll keep the description as is but noted this discrepancy.
     students: 855,
     duration: "6 months",
     rating: 4.7,
@@ -161,7 +161,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '6',
-    title: "Data Analytics with Visualization Certification",
+    title: "Data Analytics Course",
     description: "Learn Excel, Python, SQL, Tableau, Power BI and VBA for data analysis",
     image: DA,
     category: "Analytics",
@@ -178,7 +178,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '7',
-    title: "Data Visualization Certification",
+    title: "Data Analytics and Generative AI Course",
     description: "Learn Excel, SQL, R, Python and VBA for business analytics",
     image: BA,
     category: "Analytics", // This also seems like a mismatch. Title is "Business Analytics" but category and description point to AI. I'll keep it as is.
@@ -187,7 +187,7 @@ const featuredCourses: Course[] = [
     rating: 4.8,
     reviewCount: 6983,
     isFeatured: true,
-    slug: "business-analytics-course",
+    slug: "data-analytics-and-generative-ai-course",
     keyFeatures: [
       "Data-driven decision making",
       "Predictive modeling for business"
@@ -258,35 +258,35 @@ const CourseCard = ({ course }: { course: Course }) => {
           let badgeClass = "";
           switch (course.title) {
 
-            case "AI for Product Manager":
+            case "AI for Product Managers":
               badgeText = "New";
               badgeClass = "bg-indigo-500 text-white";
               break;
-            case "Executive Generative AI Course with IIT Guwahati":
+            case "Generative AI Course":
               badgeText = "Trending";
               badgeClass = "bg-green-500 text-white";
               break;
-            case "Data Science & AI with IIT Guwahati":
+            case "Data Science with Machine Learning & AI Certification":
               badgeText = "Featured";
               badgeClass = "bg-orange-500 text-white";
               break;
-            case " Cloud Data Engineering with Nasscom Certification":
+            case " Data Engineering Course":
               badgeText = "Popular";
               badgeClass = "bg-red-500 text-white";
               break;
-            case "Data Science with Machine Learning & AI Certification (NASSCOM)":
+            case "Data Science with Machine Learning & AI Certification":
               badgeText = "Best Choice";
               badgeClass = "bg-indigo-500 text-white";
               break;
-            case "Data Visualization Certification":
+            case "Data Analytics and Generative AI Course":
               badgeText = "Popular";
               badgeClass = "bg-pink-500 text-white";
               break;
-            case "Data Analytics with Visualization Certification":
+            case "Data Analytics Course":
               badgeText = "Best Choice";
               badgeClass = "bg-teal-500 text-white";
               break;
-            case "Data Visualization Certification":
+            case "Data Analytics and Generative AI Course":
               badgeText = "Featured";
               badgeClass = "bg-cyan-500 text-white";
               break;
