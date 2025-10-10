@@ -125,7 +125,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '4',
-    title: "Data Science & AI with Nasscom Certification",
+    title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
     description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
     image: ML,
     category: "Data Science",
@@ -274,7 +274,7 @@ const CourseCard = ({ course }: { course: Course }) => {
               badgeText = "Popular";
               badgeClass = "bg-red-500 text-white";
               break;
-            case "Data Science & AI with Nasscom Certification":
+            case "Data Science with Machine Learning & AI Certification (NASSCOM)":
               badgeText = "Best Choice";
               badgeClass = "bg-indigo-500 text-white";
               break;

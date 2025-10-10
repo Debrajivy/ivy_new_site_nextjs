@@ -64,7 +64,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     sourceCampaignValue = "IIT-G Data Engg";
   } else if (course.title === "Data Science & AI with IIT Guwahati") {
     sourceCampaignValue = "IIT-G Data Science";
-  } else if (course.title === "Data Science & AI with Nasscom Certification") {
+  } else if (course.title === "Data Science with Machine Learning & AI Certification (NASSCOM)") {
     sourceCampaignValue = "Nasscom";
   } else if (course.title === " Cloud Data Engineering with Nasscom Certification") {
     sourceCampaignValue = "Data Engineering";
@@ -265,7 +265,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit">
                   <p className="text-[#221e1f] font-bold">Powered by</p>
                 </div>
-                {course.title === "Data Science & AI with Nasscom Certification" ||
+                {course.title === "Data Science with Machine Learning & AI Certification (NASSCOM)" ||
                   course.title === "Data science course (Pay after Placement)" ? (
                   <Image
 
@@ -318,7 +318,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         ? "1136 students"
                         : course.title === " Cloud Data Engineering with Nasscom Certification"
                           ? "862 students"
-                          : course.title === "Data Science & AI with Nasscom Certification"
+                          : course.title === "Data Science with Machine Learning & AI Certification (NASSCOM)"
                             ? "1158 students"
                             : course.title === "Data Visualization Certification"
                               ? "855 students"
@@ -349,7 +349,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       ? "4.8 (230 reviews)"
                       : course.title === " Cloud Data Engineering with Nasscom Certification"
                         ? "4.7 (198 reviews)"
-                        : course.title === "Data Science & AI with Nasscom Certification"
+                        : course.title === "Data Science with Machine Learning & AI Certification (NASSCOM)"
                           ? "4.8 (324 reviews)"
                           : course.title === "Data Visualization Certification"
                             ? "4.7 (212 reviews)"
@@ -366,7 +366,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Award size={16} className="mr-2" />
-                {course.title === "Data Science & AI with Nasscom Certification" ||
+                {course.title === "Data Science with Machine Learning & AI Certification (NASSCOM)" ||
                   course.title === "Data science course (Pay after Placement)"
                   ? "NASSCOM Certification"
                   : course.title === " Cloud Data Engineering with Nasscom Certification" ||
@@ -451,7 +451,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/preview";
                   } else if (
-                    course.title === "Data Science & AI with Nasscom Certification"
+                    course.title === "Data Science with Machine Learning & AI Certification (NASSCOM)"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/preview";
@@ -496,7 +496,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               >
                 Download Syllabus
               </Button>
-              {course.title === "Data Science & AI with Nasscom Certification" ? (
+              {course.title === "Data Science with Machine Learning & AI Certification (NASSCOM)" ? (
                 <div
                   style={{
                     display: "flex",

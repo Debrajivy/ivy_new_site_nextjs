@@ -45,7 +45,7 @@ const courseCategories = {
       image: DS,
     },
     {
-      title: "Data Science & AI with Nasscom Certification",
+      title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
       href: "/courses/data-science-and-ml-course",
       description: "Become job-ready with ML, DL, Python, and visualization tools",
       image: ML,
@@ -97,7 +97,7 @@ const courseCategories = {
   ],
   "Data Science (Pay after Placement)": [
     {
-      title: "Data Science & AI with Nasscom Certification",
+      title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
       href: "/courses/no-upfront-fees-data-science-and-ml-course",
       description: "Become job-ready with ML, DL, Python, and visualization tools",
       image: ML,
@@ -133,7 +133,7 @@ const allCourses = [
     image: CDE,
   },
   {
-    title: "Data Science & AI with Nasscom Certification",
+    title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
     href: "/courses/data-science-and-ml-course",
     description: "Become job-ready with ML, DL, Python, and visualization tools",
     image: ML,

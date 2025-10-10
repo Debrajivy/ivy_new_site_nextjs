@@ -109,7 +109,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     'Cloud Data Engineering Course with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 9 },
     'Data Analytics with Visualization Certification': { courseFee: 46500, registration: 10000, emi: 4421, months: 9 },
     'Data Visualization Certification': { courseFee: 31500, registration: 10000, emi: 2604, months: 9 },
-    'Data Science & AI with Nasscom Certification': { courseFee: 56000, registration: 10000, emi: 5571, months: 9 },
+    'Data Science with Machine Learning & AI Certification (NASSCOM)': { courseFee: 56000, registration: 10000, emi: 5571, months: 9 },
     // Removed duplicate 'Data Visualization Certification' key to fix error
     ' Cloud Data Engineering with Nasscom Certification': { courseFee: 55000, registration: 10000, emi: 6601, months: 9 },
     'Data Science & AI with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 12 },

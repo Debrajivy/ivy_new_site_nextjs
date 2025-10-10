@@ -563,7 +563,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-  "Data Science & AI with Nasscom Certification": {
+  "Data Science with Machine Learning & AI Certification (NASSCOM)": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },

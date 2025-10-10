@@ -62,7 +62,7 @@ const IVY_COURSES: Course[] = [
   },
   {
     id: 'ds-ml-ai',
-    name: 'Data Science & AI with Nasscom Certification',
+    name: 'Data Science with Machine Learning & AI Certification (NASSCOM)',
     description: 'Deep dive into machine learning algorithms and AI applications, focusing on practical implementation.',
     keywords: ['data science', 'machine learning', 'ai', 'algorithms', 'python', 'modeling'],
     link: '/courses/data-science-and-ml-course',

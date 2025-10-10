@@ -792,7 +792,7 @@ const courses: Course[] = [
   },
   {
     id: '4',
-    title: "Data Science & AI with Nasscom Certification",
+    title: "Data Science with Machine Learning & AI Certification (NASSCOM)",
     description: "Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and get jobs for data scientist, analyst, or ML engineer roles.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
