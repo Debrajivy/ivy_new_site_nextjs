@@ -263,7 +263,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 {" "}
                 {/* Added w-full to make it full screen width */}
                 <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit">
-                  <p className="text-[#221e1f] font-bold">Powered by</p>
+                  <p className="text-[#221e1f] font-bold">Powered by </p>
                 </div>
                 {course.title === "Data Science with Machine Learning & AI Certification" ||
                   course.title === "Data science course (Pay after Placement)" ? (
