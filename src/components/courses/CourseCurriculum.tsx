@@ -106,15 +106,14 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
 
   const pricingDetails: Record<string, { courseFee: number; registration: number; emi: number; months: number }> = {
-    'Cloud Data Engineering Course with IIT Guwahati': { courseFee: 90000, registration: 30000, emi: 5675, months: 9 },
-    'Data Analytics Course': { courseFee: 46500, registration: 10000, emi: 4421, months: 9 },
-    'Data Analytics and Generative AI Course': { courseFee: 31500, registration: 10000, emi: 2604, months: 9 },
+    'Data Analytics Course': { courseFee: 42000, registration: 10000, emi: 4421, months: 9 },
+    'Data Analytics and Generative AI Course': { courseFee: 44000, registration: 10000, emi: 2604, months: 9 },
     'Data Science with Machine Learning & AI Certification': { courseFee: 56000, registration: 10000, emi: 5571, months: 9 },
     // Removed duplicate 'Data Analytics and Generative AI Course' key to fix error
-    ' Data Engineering Course': { courseFee: 55000, registration: 10000, emi: 6601, months: 9 },
+    ' Data Engineering Course': { courseFee: 58500, registration: 10000, emi: 6601, months: 9 },
     'Generative AI Course': { courseFee: 69000, registration: 30000, emi: 3768, months: 12 },
     'AI for Product Managers': { courseFee: 29000, registration: 30000, emi: 17110, months: 12 },
-    'Data science course (Pay after Placement)': { courseFee: 135000, registration: 10000, emi: 17110, months: 12 },
+    'AI and Machine Learning Course': { courseFee: 39000, registration: 10000, emi: 17110, months: 12 },
   };
 
   return (

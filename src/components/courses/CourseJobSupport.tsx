@@ -302,7 +302,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       textShadow: '1px 1px 1px rgba(135, 206, 235, 0.2)'
                     }}>
                       {course.title === "Generative AI Course" ?
-                        "The Executive Certification in GenAI with E&ICT Academy -IIT Guwahati ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
+                        "The Executive Certification in GenAI ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
                         course.title === "Data Science with Machine Learning & AI Certification" ?
                           "The Executive Certification in Data Science, offered in collaboration with the E&ICT Academy - IIT Guwahati, is widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
                           course.title === " Data Engineering Course" || course.title==="Data Engineering Course in Kolkata"?
@@ -366,9 +366,9 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
 
                     <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
                       {course.title === "Generative AI Course" ?
-                        "A stamp of approval from E&ICT Academy, IIT-Guwahati tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
+                        "A stamp of approval from E&ICT Academy, tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
                         course.title === "Data Science with Machine Learning & AI Certification" ?
-                          "A stamp of approval from an E&ICT Academy, IIT-Guwahati tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
+                          "A stamp of approval from an E&ICT Academy, tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
                           course.title === " Data Engineering Course"  || course.title==="Data Engineering Course in Kolkata"?
                             "Show recruiters you're cloud-ready, with hands-on skills in AWS, GCP, and Azure. This certification validates your ability to design scalable pipelines and apply data engineering tools to real-world projects." :
                             course.title === "Data Science with Machine Learning & AI Certification" ?

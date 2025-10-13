@@ -56,11 +56,11 @@ const Partners = () => {
   };
 
   const accreditations = [
-    {
-      logo: IIT,
-      description: 'Academic Partner',
-      badge: 'Official Partner'
-    },
+    // {
+    //   logo: IIT,
+    //   description: 'Academic Partner',
+    //   badge: 'Official Partner'
+    // },
     {
       logo: meityLogo,
       description: 'Recognized by MeitY',
@@ -111,7 +111,7 @@ const Partners = () => {
         </div>
 
         {/* UPDATED ACCREDITATIONS SECTION STARTS HERE */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
           {accreditations.map((item) => {
             const IconComponent = getAccreditationIcon(item.description);
             return (

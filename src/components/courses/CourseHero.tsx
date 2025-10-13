@@ -203,24 +203,12 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     });
   }, []);
   return (
-    <section
-      style={{
-        marginTop: -30,
-        // Conditional background for IIT Guwahati course
-        backgroundImage: isIITGuwahatiCourse
-          ? `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${IIT_BACKGROUND.src})`
-          : undefined,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        // If it's the IIT Guwahati course, remove the explicit background color to avoid clash
-        backgroundColor: isIITGuwahatiCourse ? 'transparent' : '#179fc8',
-      }}
-      className={`py-10 text-white ${!isIITGuwahatiCourse
-        ? "bg-gradient-to-r from-ivy-blue to-ivy-orange"
-        : ""
-        }`}
-    >
+<section
+  style={{ marginTop: -30 }}
+  className="py-10 text-white bg-gradient-to-r from-ivy-blue to-ivy-orange"
+>
+
+
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -374,9 +362,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     course.title ===
                     "Data Analytics Course" ||
                     course.title === "Data Analytics and Generative AI Course" ||
-                    course.title === "AI for Product Managers"
+                    course.title === "AI for Product Managers" || course.title === "Generative AI Course"
                     ? "Ivy Professional School Certification"
-                    : "E & ICT Academy, IIT Guwahati Certification"}
+                    : ""}
               </div>
             </div>
 

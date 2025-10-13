@@ -100,14 +100,14 @@ const courses: Course[] = [
   {
     id: '1',
     title: "Generative AI Course",
-    description: "Learn advanced Gen AI skills, build super-functional apps, get certified by IIT, and become the perfect job candidate in 18 weeks.",
+    description: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
     metaData: {
       title: "Generative AI Course with IIT Guwahati: #1 GenAI Course ",
       description: "Join IIT Guwahati Certified Generative AI course and become job-ready in 18 weeks. Build 15+ GenAI apps on cloud. Get IBM & NASSCOM certified",
-      bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IIT, and become the perfect job candidate in 18 weeks."
+      bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
     duration: "225 Hours",
@@ -115,7 +115,7 @@ const courses: Course[] = [
     reviewCount: 5567,
     isFeatured: true,
     slug: "iit-generative-ai-course",
-    longDescription: "This Gen AI course teaches you programming fundamentals, introduces you to generative AI and machine learning, and helps you build advanced Gen AI apps with solid practical applications. For instance, you will build a chatbot that can converse like humans, develop an application that automates social media posting, and build an AI assistant that combines text, image, and voice generation.\n\nThis will not only help you gain practical experience but also build a solid portfolio that showcases your skills and expertise to employers. This way, the 18-week course will help you become a Gen AI expert and increase your chances of getting high-paying jobs.\n\nBesides, this Gen AI certification program is made in partnership with E&ICT Academy IIT Guwahati. You will be taught by IIT Guwahati professors, attend a special 3-day campus immersion program at IIT Guwahati, and network with IIT alumni. So, the opportunities are endless."
+    longDescription: "This Gen AI course teaches you programming fundamentals, introduces you to generative AI and machine learning, and helps you build advanced Gen AI apps with solid practical applications. For instance, you will build a chatbot that can converse like humans, develop an application that automates social media posting, and build an AI assistant that combines text, image, and voice generation.\n\nThis will not only help you gain practical experience but also build a solid portfolio that showcases your skills and expertise to employers. This way, the 18-week course will help you become a Gen AI expert and increase your chances of getting high-paying jobs. So, the opportunities are endless."
     , outcomes: [
       "Understand the foundations of Gen AI, ML, and LLMs through hands-on coding and real-world examples",
       "Build cutting-edge Gen AI apps using LangChain, ChatGPT, DALL·E, Whisper, and other advanced tools",
@@ -317,14 +317,14 @@ const courses: Course[] = [
   {
     id: '2',
     title: "Data Science with Machine Learning & AI Certification",
-    description: "Learn high-value data science skills, work on 50+ projects and case studies, get certified by IIT, and become job-ready in 45 weeks.",
+    description: "Learn high-value data science skills, work on 50+ projects and case studies, get certified by IVY, and become job-ready in 45 weeks.",
     image: "https://images.unsplash.com/photo-1677442135968-6bb674d4f8a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
     category: "Generative AI",
     students: 1876,
     metaData: {
       title: "Data Science Course with IIT Guwahati: GenAI, MLOps, Python",
       description: "Become IIT Certified in 45 weeks. Join IIT Guwahati's Data Science course & learn Python, GenAI, MLOps on Cloud, work on 50+ projects, with placement support.",
-      bio: "Learn high-value data science skills, work on 50+ projects and case studies, get certified by IIT, and become job-ready in 45 weeks."
+      bio: "Learn high-value data science skills, work on 50+ projects and case studies, get certified by IVY, and become job-ready in 45 weeks."
 
     },
     duration: "10 weeks",
@@ -1907,7 +1907,7 @@ const courses: Course[] = [
       "Manage and manipulate structured and unstructured data with advanced SQL and Python",
       "Implement scalable big data architectures to solve real business challenges",
       "Build your portfolio with 30+ real-life projects and capstone case studies across industries",
-      "Get certified by IIT Guwahati and boost your professional credibility",
+      "get certified by IVY Guwahati and boost your professional credibility",
       "Receive 1:1 mentorship, resume support, and lifetime placement assistance to land top jobs"
     ],
 
@@ -1929,7 +1929,7 @@ const courses: Course[] = [
     reviewCount: 20,
     isFeatured: true,
     slug: "ai-product-manager-course",
-    longDescription: "This course, created in collaboration with industry-leading professionals, equips you with the critical skills needed to manage projects successfully. You will be mentored by top experts, gain practical insights through real-world applications, and network with accomplished project managers globally.\n\n The curriculum is structured into key sections, covering Agile and Scrum methodologies, Team and Stakeholder Management, Risk and Resource Management, and Project Planning and Execution.\n\n One of the most sought-after project management courses, it will teach you to efficiently manage projects, lead teams, and master essential tools like Jira, Microsoft Project, Asana, and Trello. You’ll also work on 20+ real-world projects, building the confidence and expertise to handle actual business challenges.\n\n This 6-week program is perfect for professionals who want to upskill in project management or individuals transitioning into the field. Whether managing tech projects or leading large teams, this course will provide you with the necessary tools to excel in a project management role."
+    longDescription: "This course, created with senior AI and product leaders, equips you with the skills to build and ship AI-powered products end-to-end. You’ll be mentored by top practitioners, apply learning to real use-cases, and network with PMs and AI leads across industries.\n\n The curriculum is structured into key sections, covering AI Problem Discovery & UX, Opportunity Sizing & Feasibility, Prompt/Model Design (LLMs, RAG, agents), Experimentation & Metrics, Roadmapping & Stakeholder Management, and Responsible AI Delivery.\n\n One of the most hands-on AI+PM programs, it will teach you to scope the right AI bets, design human-in-the-loop workflows, and lead cross-functional teams. You’ll use tools PMs rely on—Figma, Productboard/Jira, Amplitude/Mixpanel, LaunchDarkly/Optimizely, Retool/Airtable—alongside ChatGPT/Claude/Gemini and no-/low-code orchestration (Promptflow/Flowise). You’ll also work on 20+ real-world product labs, building confidence to handle live AI features.\n\n This 6-week program is ideal for PMs upskilling for AI or professionals transitioning into product. Whether shaping consumer experiences or internal copilots, this course gives you the practical tools to excel in an AI product management role."
     , instructors: [
       {
         id: "i1",
@@ -1953,7 +1953,7 @@ const courses: Course[] = [
       {
         id: "m1",
         title: "Strategic AI Thinking for PMs",
-        duration: "3 hrs",
+        duration: "2hrs",
         topics: [
           { id: "t1", title: "What makes a problem “AI-suitable”: Repeatable, data-rich, fuzzy logic required", duration: "" },
           { id: "t2", title: "The AI Opportunity Matrix: Value vs Feasibility vs Risk", duration: "" },
@@ -1969,6 +1969,7 @@ const courses: Course[] = [
         title: "Prompt Engineering in Product Workflows",
         duration: "5 hrs",
         topics: [
+          { id: "t8", title: "Model selection: Choose optimal LLMs based on task type, performance, and cost trade-offs", duration: "" },
           { id: "t1", title: "Prompt structure: Role, context, task, examples, constraints", duration: "" },
           { id: "t2", title: "Prompt styles: Zero-shot, few-shot, chain-of-thought (CoT), role prompting", duration: "" },
           { id: "t3", title: "System prompts: Controlling behavior across sessions", duration: "" },
