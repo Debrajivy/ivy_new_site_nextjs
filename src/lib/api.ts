@@ -2087,12 +2087,12 @@ const courses: Course[] = [
       // }
     ],
     outcomes: [
-      "Master project management methodologies like Agile and Scrum to drive efficient project delivery",
-      "Manage resources, risks, and timelines to ensure project success using Jira, Asana, Trello, and other industry tools",
-      "Develop leadership and stakeholder management skills to effectively lead cross-functional teams",
-      "Build your portfolio with 20+ real-world projects and case studies from various industries",
-      "Get certified by top industry professionals and enhance your professional credibility",
-      "Receive 1:1 mentorship, resume support, and lifetime placement assistance to secure top project management roles"
+      "Master AI-PM foundations: opportunity discovery, AI UX, prompt design, and core LLM/RAG/agent patterns to ship real features.",
+      "Manage data, models & risk: assess feasibility, cost/latency, privacy, bias, and deploy guardrails with human-in-the-loop.",
+      "Lead cross-functional delivery: write PRDs, define success/guardrail metrics, and align Eng/DS/Design/Legal and GTM teams.",
+      "Work with the modern toolchain: Figma, Productboard/Jira, Amplitude/Mixpanel, Segment, LaunchDarkly/Optimizely, Retool—plus ChatGPT/Claude/Gemini & no/low-code orchestration.",
+      "Build a portfolio that hires: 20+ labs and case studies (onboarding copilot, RAG assistant, workflow automation, recommendations) plus a capstone.",
+      "Get certified & supported: certificate co-signed by industry experts, 1:1 mentorship, resume reviews, and career assistance for AI PM roles."
     ],
 
 

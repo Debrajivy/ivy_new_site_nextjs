@@ -37,13 +37,13 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the AI for Product Managerss course?",
+        question: "What is the duration of the AI for Product Manager course?",
         answer: "The course runs for 6–8 weeks with 25–30 hours of live and recorded sessions, offering flexible weekday, weekend, and fast-track options for working professionals.",
         category: "program"
       },
       {
         question: "Is this course beginner-friendly?",
-        answer: "Yes. No coding or prior technical background is required. It is designed for project managers and leaders, focusing on real AI applications using no-code and low-code tools.",
+        answer: "Yes. No coding or prior technical background is required. It is designed for both beginners and Senior leaders, focusing on real AI applications using no-code and low-code tools.",
         category: "program"
       },
       {
@@ -78,17 +78,17 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Who can enroll in the AI for Product Managerss course?",
-        answer: "This course is designed for project managers, product leaders, team leads, and professionals who want to integrate AI into project workflows and decision-making.",
+        answer: "This course is designed for product managers, product leaders, team leads, and professionals who want to integrate AI into project workflows and decision-making.",
         category: "eligibility"
       },
       {
-        question: "Is the AI for Product Managerss course suitable for non-coders?",
+        question: "Is the AI for Product Managers course suitable for non-coders?",
         answer: "Yes. The course uses no-code and low-code AI tools, making it perfect for managers without programming experience.",
         category: "eligibility"
       },
       {
         question: "Is this course only for IT project managers?",
-        answer: "Not at all. The course is industry-agnostic and applies to IT, manufacturing, consulting, media, retail, and any sector where project management is crucial.",
+        answer: "Not at all. The course is industry-agnostic and applies to IT, manufacturing, consulting, media, retail, and any sector where end-to-end automation is needed.",
         category: "eligibility"
       },
       {
