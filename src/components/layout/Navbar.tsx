@@ -51,6 +51,7 @@ const courseCategories = {
       image: ML,
 
     },
+    
   ],
   "Data Engineering": [
     {
@@ -110,14 +111,14 @@ const courseCategories = {
       image: GA,
     },
   ],
-  // "Data Science (Pay after Placement)": [
-  //   {
-  //     title: "Data Science with Machine Learning & AI Certification",
-  //     href: "/courses/no-upfront-fees-data-science-and-ml-course",
-  //     description: "Become job-ready with ML, DL, Python, and visualization tools",
-  //     image: ML,
-  //   },
-  // ],
+  "Data Science (Pay after Placement)": [
+    {
+      title: "Data Science with Machine Learning & AI Certification",
+      href: "/courses/no-upfront-fees-data-science-and-ml-course",
+      description: "Become job-ready with ML, DL, Python, and visualization tools",
+      image: ML,
+    },
+  ],
 
 }
 

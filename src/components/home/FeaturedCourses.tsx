@@ -200,24 +200,24 @@ const featuredCourses: Course[] = [
   //     "Learn industry focused tools i.e. Azure, Hive, MongoDB, Spark, Kafka & Hadoop"
   //   ]
   // },
-  // {
-  //   id: '10',
-  //   title: "Data science course (Pay after Placement)",
-  //   description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
-  //   image: DSPAP,
-  //   category: "Data Science",
-  //   students: 430,
-  //   duration: "12 months",
-  //   rating: 4.8,
-  //   reviewCount: 109,
-  //   isFeatured: true,
-  //   slug: "no-upfront-fees-data-science-and-ml-course",
-  //   keyFeatures: [
-  //     "In-depth ML algorithms",
-  //     "Deep learning with TensorFlow/PyTorch",
-  //     "Data visualization with Power BI"
-  //   ]
-  // },
+  {
+    id: '10',
+    title: "Data science course (Pay after Placement)",
+    description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
+    image: DSPAP,
+    category: "Data Science",
+    students: 430,
+    duration: "12 months",
+    rating: 4.8,
+    reviewCount: 109,
+    isFeatured: true,
+    slug: "no-upfront-fees-data-science-and-ml-course",
+    keyFeatures: [
+      "In-depth ML algorithms",
+      "Deep learning with TensorFlow/PyTorch",
+      "Data visualization with Power BI"
+    ]
+  },
 
   {
     id: '10',

@@ -114,6 +114,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     'Generative AI Course': { courseFee: 69000, registration: 30000, emi: 3768, months: 12 },
     'AI for Product Managers': { courseFee: 29000, registration: 30000, emi: 17110, months: 12 },
     'AI and Machine Learning Course': { courseFee: 39000, registration: 10000, emi: 17110, months: 12 },
+    'Data science course (Pay after Placement)': { courseFee: 135000, registration: 10000, emi: 17110, months: 12 },
+
   };
 
   return (
