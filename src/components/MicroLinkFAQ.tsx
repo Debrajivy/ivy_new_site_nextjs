@@ -29,7 +29,6 @@ const linkData: LinkData[] = [
   { "anchorText": "data science course outline", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "data science course certificate", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "data science course in kolkata", "hyperlink": "Kolkata Micro Page" },
-  { "anchorText": "data science course in iit", "hyperlink": "https://ivyproschool.com/courses/iit-data-science-course" },
   { "anchorText": "data science course after 12th", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "data science course with placement", "hyperlink": "https://ivyproschool.com/courses/no-upfront-fees-data-science-and-ml-course" },
   { "anchorText": "data science course in india", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
