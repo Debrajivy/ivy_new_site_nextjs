@@ -230,7 +230,7 @@ const featuredCourses: Course[] = [
     rating: 4.8,
     reviewCount: 109,
     isFeatured: true,
-    slug: "no-upfront-fees-data-science-and-ml-course",
+    slug: "ai-machine-learning-course",
     keyFeatures: [
       "Stats(recorded),",
       "Python",

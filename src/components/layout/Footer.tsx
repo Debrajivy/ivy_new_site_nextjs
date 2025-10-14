@@ -9,19 +9,19 @@ const Footer = () => {
   const officeLocations = [
     {
       city: "Kolkata",
-      address: "Camac Street"
+      address: "14B, Camac St (5th Floor)"
     },
     {
       city: "Pune",
-      address: "Shivaji Nagar"
+      address: "Shivajinagar, Maharashtra 411016"
     },
     {
       city: "Bangalore",
-      address: "Indiranagar"
+      address: "183, Double Road, 10th Main Rd, 2nd Stage, Indiranagar"
     },
     {
       city: "Delhi",
-      address: "Karol Bagh"
+      address: "Start Works, 1st Floor DCM Building Barakhamba Road"
     }
   ];
 
@@ -74,14 +74,14 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Courses</h3>
             <ul className="space-y-2">
-              <li><Link href="/courses/iit-data-science-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Science</Link></li>
-              <li><Link href="/courses/data-engineering-course">Cloud Data Engineering</Link></li>
-              <li><Link href="/courses/iit-generative-ai-course" className="text-gray-300 hover:text-white transition-colors">Executive Generative AI</Link></li>
-              <li><Link href="/courses/data-science-and-ml-course" className="text-gray-300 hover:text-white transition-colors">Machine Learning & AI</Link></li>
-              <li><Link href="/courses/iit-data-engineering-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Engineering</Link></li>
+              <li><Link href="/courses/data-science-and-ml-course" className="text-gray-300 hover:text-white transition-colors"> Data Science</Link></li>
+              <li><Link href="/courses/data-engineering-course"> Data Engineering</Link></li>
+              <li><Link href="/courses/iit-generative-ai-course" className="text-gray-300 hover:text-white transition-colors"> Generative AI</Link></li>
+              <li><Link href="/courses/ai-machine-learning-course" className="text-gray-300 hover:text-white transition-colors">Machine Learning & AI</Link></li>
+              {/* <li><Link href="/courses/iit-data-engineering-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Engineering</Link></li> */}
               <li><Link href="/courses/data-analytics-course" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
-              <li><Link href="/courses/data-analytics-and-generative-ai-course" className="text-gray-300 hover:text-white transition-colors">Business Analytics</Link></li>
-              <li><Link href="/courses/data-visualization-course" className="text-gray-300 hover:text-white transition-colors">Data Visualization</Link></li>
+              <li><Link href="/courses/data-analytics-and-generative-ai-course" className="text-gray-300 hover:text-white transition-colors">Data Analytics and Gen AI </Link></li>
+              <li><Link href="/courses/no-upfront-fees-data-science-and-ml-course" className="text-gray-300 hover:text-white transition-colors">Data Science (Pay after placement)</Link></li>
               {/* <li><Link href="/categories/deep-learning" className="text-gray-300 hover:text-white transition-colors">Deep Learning</Link></li>
               <li><Link href="/categories" className="text-gray-300 hover:text-white transition-colors">All Courses</Link></li> */}
             </ul>

@@ -15,7 +15,6 @@ const linkData: LinkData[] = [
   { "anchorText": "data science course", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "data science classes", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "data science course online", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
-  { "anchorText": "iit data science course", "hyperlink": "https://ivyproschool.com/courses/iit-data-science-course" },
   { "anchorText": "data science masters programs online", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "python data science course", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "data science course with placement guarantee", "hyperlink": "https://ivyproschool.com/courses/no-upfront-fees-data-science-and-ml-course" },
