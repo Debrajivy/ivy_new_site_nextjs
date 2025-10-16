@@ -262,7 +262,7 @@ const CourseSubNavigation = () => {
                   </Button>
                   <div className="flex items-center justify-center gap-2 pt-2">
                     <p className="text-sm font-semibold text-center">
-                      <span style={{ color: '#1a98cb' }}>Next batch starting in September &nbsp;</span>
+                      <span style={{ color: '#1a98cb' }}>Next batch starting on 25 Oct, 2025 &nbsp;</span>
                       <span className="inline-block w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                       <span className="text-red-600">&nbsp;Limited seats left!</span>
                     </p>

@@ -631,7 +631,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm"
                   >
                     <span className="text-[#1a98cb] font-medium">
-                      Next batch starting in September
+                      Next batch starting on 25 Oct, 2025
                     </span>
                     <div className="flex items-center gap-1">
                       <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
