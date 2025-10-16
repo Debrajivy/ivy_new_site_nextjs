@@ -32,7 +32,7 @@ const features = [
   {
     icon: <Award className="h-8 w-8 text-primary" />,
     title: "Accredited Certification",
-    description: "Industry-recognized credentials ie. IIT, IBM, Nasscom & many more"
+    description: "Industry-recognized credentials ie, IBM, Nasscom & many more"
   }
 ];
 

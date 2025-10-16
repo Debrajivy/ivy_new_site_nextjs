@@ -203,14 +203,7 @@ const Hero = () => {
       style={{color:'#013a81'}}
     >
       &nbsp;NASSCOM, IBM, Govt. of India (MEITY)
-    </Link> and 
-    <Link
-      href="/courses/iit-data-engineering-course"
-      className="font-bold"
-      style={{color:'#013a81'}}
-    >
-      &nbsp;IIT&nbsp;
-    </Link>
+    </Link> 
     that compiled as per National Occupation Standards.
   </p>
 </div>
