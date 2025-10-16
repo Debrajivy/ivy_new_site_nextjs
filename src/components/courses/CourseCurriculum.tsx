@@ -107,7 +107,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
   const pricingDetails: Record<string, { courseFee: number; registration: number; emi: number; months: number }> = {
     'Data Analytics Course': { courseFee: 42000, registration: 10000, emi: 4421, months: 9 },
-    'Data Analytics and Generative AI Course': { courseFee: 44000, registration: 10000, emi: 2604, months: 9 },
+    'Data Analytics and Generative AI Course': { courseFee: 41000, registration: 10000, emi: 2604, months: 9 },
     'Data Science with Machine Learning & AI Certification': { courseFee: 56000, registration: 10000, emi: 5571, months: 9 },
     // Removed duplicate 'Data Analytics and Generative AI Course' key to fix error
     ' Data Engineering Course': { courseFee: 58500, registration: 10000, emi: 6601, months: 9 },
@@ -164,8 +164,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                   </p>
                 </div>
                 <div className="flex items-center">
-                  <Clock size={18} className="mr-2 text-gray-500" />
-                  <span className="text-gray-500">{course.duration} total</span>
+                  {/* <Clock size={18} className="mr-2 text-gray-500" /> */}
+                  {/* <span className="text-gray-500">{course.duration} total</span> */}
                 </div>
               </div>
             </div>
@@ -185,9 +185,9 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                           <span className="no-underline hover:no-underline">{module.duration}</span>
                           <span className="mx-2">•</span>
                           <FileText size={14} className="mr-1" />
-                          <span className="no-underline hover:no-underline">
+                          {/* <span className="no-underline hover:no-underline">
                             {module.topics.length} lessons
-                          </span>
+                          </span> */}
                         </div>
                       </div>
                     </div>
