@@ -2075,7 +2075,7 @@ const courses: Course[] = [
   {
     id: '9',
     title: "AI for Product Managers",
-    description: "Get coached by industry experts, master essential project management skills, complete 20+ real-world projects, and become job-ready in just 6 weeks",
+    description: "Get coached by industry experts, master essential product management skills, complete 20+ real-world projects, and become job-ready in just 6 weeks",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
