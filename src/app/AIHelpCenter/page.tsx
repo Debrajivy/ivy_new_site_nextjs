@@ -5,6 +5,7 @@ import { useState, useMemo } from "react"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/helpcenter/Footer";
 import FooterMain from "@/components/layout/Footer";
+import { useRouter } from "next/navigation";
 
 import {
   Sparkles,
@@ -20,8 +21,6 @@ import {
   Users,
   ArrowRight,
   Filter,
-  X,
-  ExternalLink,
 } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -32,13 +31,14 @@ import { Input } from "@/components/ui/input"
 // TYPE DEFINITIONS - What each topic contains
 // ============================================
 
-type TopicCategory = "LLMs" | "AI Agents" | "Tools" | "Ethics" | "Computer Vision" | "Audio AI"
+type TopicCategory = "llms" | "ai-agents" | "tools" | "ethics" | "computer-vision" | "audio-ai"
 type DifficultyLevel = "Beginner" | "Intermediate" | "Advanced"
 type TrendStatus = "Hot" | "Rising" | "Stable"
 
 interface AITopic {
   id: number
   title: string
+  slug: string
   category: TopicCategory
   difficulty: DifficultyLevel
   status: TrendStatus
@@ -60,7 +60,8 @@ const aiTopics: AITopic[] = [
   {
     id: 1,
     title: "Perplexity AI & RAG Systems",
-    category: "Tools",
+    slug: "perplexity-ai-rag-systems",
+    category: "tools",
     difficulty: "Intermediate",
     status: "Hot",
     icon: Search,
@@ -86,7 +87,8 @@ const aiTopics: AITopic[] = [
   {
     id: 2,
     title: "AI Agents & Autonomous Systems",
-    category: "AI Agents",
+    slug: "ai-agents-autonomous-systems",
+    category: "ai-agents",
     difficulty: "Advanced",
     status: "Hot",
     icon: Bot,
@@ -112,7 +114,8 @@ const aiTopics: AITopic[] = [
   {
     id: 3,
     title: "Large Language Models (LLMs)",
-    category: "LLMs",
+    slug: "large-language-models",
+    category: "llms",
     difficulty: "Beginner",
     status: "Stable",
     icon: Brain,
@@ -138,7 +141,8 @@ const aiTopics: AITopic[] = [
   {
     id: 4,
     title: "Prompt Engineering & Optimization",
-    category: "LLMs",
+    slug: "prompt-engineering-optimization",
+    category: "llms",
     difficulty: "Beginner",
     status: "Rising",
     icon: Zap,
@@ -164,7 +168,8 @@ const aiTopics: AITopic[] = [
   {
     id: 5,
     title: "Open Source AI Models",
-    category: "LLMs",
+    slug: "open-source-ai-models",
+    category: "llms",
     difficulty: "Intermediate",
     status: "Rising",
     icon: Code,
@@ -190,7 +195,8 @@ const aiTopics: AITopic[] = [
   {
     id: 6,
     title: "AI Ethics & Safety",
-    category: "Ethics",
+    slug: "ai-ethics-safety",
+    category: "ethics",
     difficulty: "Beginner",
     status: "Rising",
     icon: Shield,
@@ -216,7 +222,8 @@ const aiTopics: AITopic[] = [
   {
     id: 7,
     title: "Multimodal AI (Vision + Language)",
-    category: "Computer Vision",
+    slug: "multimodal-ai-vision-language",
+    category: "computer-vision",
     difficulty: "Advanced",
     status: "Hot",
     icon: Globe,
@@ -242,7 +249,8 @@ const aiTopics: AITopic[] = [
   {
     id: 8,
     title: "Voice AI & Speech Recognition",
-    category: "Audio AI",
+    slug: "voice-ai-speech-recognition",
+    category: "audio-ai",
     difficulty: "Intermediate",
     status: "Rising",
     icon: Sparkles,
@@ -273,12 +281,12 @@ const aiTopics: AITopic[] = [
 
 // Badge color mapping for visual consistency
 const categoryColors: Record<TopicCategory, string> = {
-  LLMs: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-  "AI Agents": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-  Tools: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-  Ethics: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
-  "Computer Vision": "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
-  "Audio AI": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
+  "llms": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+  "ai-agents": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+  "tools": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+  "ethics": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+  "computer-vision": "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
+  "audio-ai": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
 }
 
 const difficultyColors: Record<DifficultyLevel, string> = {
@@ -291,13 +299,25 @@ const difficultyColors: Record<DifficultyLevel, string> = {
 // TOPIC CARD - Shows brief overview of each AI topic
 // ============================================
 
-function TopicCard({ topic, onClick }: { topic: AITopic; onClick: () => void }) {
+function TopicCard({ topic }: { topic: AITopic }) {
+  const router = useRouter()
   const Icon = topic.icon
+
+  const handleLearnMore = () => {
+    router.push(`/ai/${topic.category}/${topic.slug}`)
+  }
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    // Only navigate if the click is not on the Learn More button
+    if (!(e.target as HTMLElement).closest('button')) {
+      handleLearnMore()
+    }
+  }
 
   return (
     <Card
       className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-1"
-      onClick={onClick}
+      onClick={handleCardClick}
     >
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
@@ -322,7 +342,9 @@ function TopicCard({ topic, onClick }: { topic: AITopic; onClick: () => void }) 
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2 mb-4">
-          <Badge className={categoryColors[topic.category]}>{topic.category}</Badge>
+          <Badge className={categoryColors[topic.category]}>
+            {topic.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+          </Badge>
           <Badge className={difficultyColors[topic.difficulty]}>{topic.difficulty}</Badge>
         </div>
         <div className="flex items-center justify-between text-sm text-muted-foreground">
@@ -330,135 +352,17 @@ function TopicCard({ topic, onClick }: { topic: AITopic; onClick: () => void }) 
             <BookOpen className="w-4 h-4" />
             {topic.estimatedLearningTime}
           </span>
-          <span className="text-primary font-medium group-hover:underline">Learn more →</span>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="text-primary font-medium group-hover:underline"
+            onClick={handleLearnMore}
+          >
+            Learn more →
+          </Button>
         </div>
       </CardContent>
     </Card>
-  )
-}
-
-// ============================================
-// TOPIC DETAIL MODAL - Full learning guide for each topic
-// ============================================
-
-function TopicDetailModal({ topic, onClose }: { topic: AITopic | null; onClose: () => void }) {
-  if (!topic) return null
-
-  const Icon = topic.icon
-
-  return (
-    <div
-      className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4"
-      onClick={onClose}
-    >
-      <div
-        className="bg-background border border-border rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Header */}
-        <div className="sticky top-0 bg-background border-b border-border p-6 flex items-start justify-between">
-          <div className="flex items-start gap-4 flex-1">
-            <div className="p-3 bg-primary/10 rounded-lg">
-              <Icon className="w-8 h-8 text-primary" />
-            </div>
-            <div className="flex-1">
-              <h2 className="text-2xl font-bold mb-2">{topic.title}</h2>
-              <div className="flex flex-wrap gap-2">
-                <Badge className={categoryColors[topic.category]}>{topic.category}</Badge>
-                <Badge className={difficultyColors[topic.difficulty]}>{topic.difficulty}</Badge>
-                <Badge variant="outline">{topic.estimatedLearningTime}</Badge>
-              </div>
-            </div>
-          </div>
-          <Button variant="ghost" size="icon" onClick={onClose}>
-            <X className="w-5 h-5" />
-          </Button>
-        </div>
-
-        {/* Content */}
-        <div className="p-6 space-y-6">
-          {/* What is it? */}
-          <section>
-            <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-primary" />
-              What is it?
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">{topic.whatIsIt}</p>
-          </section>
-
-          {/* Why it matters */}
-          <section>
-            <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-primary" />
-              Why it matters
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">{topic.whyItMatters}</p>
-          </section>
-
-          {/* How to learn */}
-          <section>
-            <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-primary" />
-              How to learn (Step-by-step)
-            </h3>
-            <ol className="space-y-3">
-              {topic.howToLearn.map((step, index) => (
-                <li key={index} className="flex gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">
-                    {index + 1}
-                  </span>
-                  <p className="text-muted-foreground leading-relaxed pt-0.5">{step}</p>
-                </li>
-              ))}
-            </ol>
-          </section>
-
-          {/* Key tools */}
-          <section>
-            <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
-              <Code className="w-5 h-5 text-primary" />
-              Key tools & platforms
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {topic.keyTools.map((tool) => (
-                <Badge key={tool} variant="secondary" className="text-sm">
-                  {tool}
-                </Badge>
-              ))}
-            </div>
-          </section>
-
-          {/* Resources */}
-          <section>
-            <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
-              <ExternalLink className="w-5 h-5 text-primary" />
-              Learning resources
-            </h3>
-            <div className="space-y-2">
-              {topic.resources.map((resource) => (
-                <a
-                  key={resource.name}
-                  href={resource.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 p-3 rounded-lg border border-border hover:bg-accent transition-colors group"
-                >
-                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
-                  <span className="text-sm font-medium group-hover:text-primary">{resource.name}</span>
-                </a>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA */}
-          <div className="pt-4 border-t border-border">
-            <Button className="w-full" size="lg">
-              Start Learning {topic.title}
-            </Button>
-          </div>
-        </div>
-      </div>
-    </div>
   )
 }
 
@@ -468,9 +372,8 @@ function TopicDetailModal({ topic, onClose }: { topic: AITopic | null; onClose: 
 
 export default function AILearningHub() {
   const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState<TopicCategory | "All">("All")
-  const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel | "All">("All")
-  const [selectedTopic, setSelectedTopic] = useState<AITopic | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState<TopicCategory | "all">("all")
+  const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel | "all">("all")
 
   // Filter topics based on search and filters
   const filteredTopics = useMemo(() => {
@@ -480,23 +383,24 @@ export default function AILearningHub() {
         topic.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
         topic.category.toLowerCase().includes(searchQuery.toLowerCase())
 
-      const matchesCategory = selectedCategory === "All" || topic.category === selectedCategory
-      const matchesDifficulty = selectedDifficulty === "All" || topic.difficulty === selectedDifficulty
+      const matchesCategory = selectedCategory === "all" || topic.category === selectedCategory
+      const matchesDifficulty = selectedDifficulty === "all" || topic.difficulty === selectedDifficulty
 
       return matchesSearch && matchesCategory && matchesDifficulty
     })
   }, [searchQuery, selectedCategory, selectedDifficulty])
 
-  const categories: (TopicCategory | "All")[] = [
-    "All",
-    "LLMs",
-    "AI Agents",
-    "Tools",
-    "Computer Vision",
-    "Audio AI",
-    "Ethics",
+  const categories: (TopicCategory | "all")[] = [
+    "all",
+    "llms",
+    "ai-agents",
+    "tools",
+    "computer-vision",
+    "audio-ai",
+    "ethics",
   ]
-  const difficulties: (DifficultyLevel | "All")[] = ["All", "Beginner", "Intermediate", "Advanced"]
+  
+  const difficulties: (DifficultyLevel | "all")[] = ["all", "Beginner", "Intermediate", "Advanced"]
 
   return (
     <div className="min-h-screen bg-background">
@@ -513,8 +417,8 @@ export default function AILearningHub() {
             Master the <span className="text-primary">Trending AI Topics</span> Everyone's Talking About
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 text-pretty">
-            From Perplexity's RAG systems to autonomous AI agents - learn the technologies shaping the future. Clear
-            explanations, step-by-step guides, and resources curated for students.
+            From Perplexity's RAG systems to autonomous AI agents - learn the technologies shaping the future. 
+            Clear explanations, step-by-step guides, and resources curated for students.
           </p>
         </section>
 
@@ -546,7 +450,7 @@ export default function AILearningHub() {
                         size="sm"
                         onClick={() => setSelectedCategory(category)}
                       >
-                        {category}
+                        {category === "all" ? "All" : category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
                       </Button>
                     ))}
                   </div>
@@ -561,7 +465,7 @@ export default function AILearningHub() {
                         size="sm"
                         onClick={() => setSelectedDifficulty(difficulty)}
                       >
-                        {difficulty}
+                        {difficulty === "all" ? "All" : difficulty}
                       </Button>
                     ))}
                   </div>
@@ -584,7 +488,7 @@ export default function AILearningHub() {
           {filteredTopics.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredTopics.map((topic) => (
-                <TopicCard key={topic.id} topic={topic} onClick={() => setSelectedTopic(topic)} />
+                <TopicCard key={topic.id} topic={topic} />
               ))}
             </div>
           ) : (
@@ -603,8 +507,8 @@ export default function AILearningHub() {
                   variant="outline"
                   onClick={() => {
                     setSearchQuery("")
-                    setSelectedCategory("All")
-                    setSelectedDifficulty("All")
+                    setSelectedCategory("all")
+                    setSelectedDifficulty("all")
                   }}
                 >
                   Clear all filters
@@ -659,7 +563,7 @@ export default function AILearningHub() {
         </section>
 
         {/* Community CTA */}
-        <section id="community" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="community" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{marginBottom:40}}>
           <Card className="p-8 text-center bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-0">
             <Users className="w-12 h-12 mx-auto mb-4" />
             <h2 className="text-3xl font-bold mb-4">Join the AI Learning Community</h2>
@@ -682,11 +586,8 @@ export default function AILearningHub() {
         </section>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
       <FooterMain />
-
-      {/* Topic Detail Modal */}
-      {selectedTopic && <TopicDetailModal topic={selectedTopic} onClose={() => setSelectedTopic(null)} />}
     </div>
   )
 }
