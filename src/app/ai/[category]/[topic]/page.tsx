@@ -523,19 +523,21 @@ export default function TopicDetailPage({ params }: PageProps) {
                           <p className="text-muted-foreground leading-relaxed">{step}</p>
                         </div>
                         <ChevronDown
-                          className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${
-                            expandedSteps.has(index) ? "rotate-180" : ""
-                          }`}
+                          className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${expandedSteps.has(index) ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
 
-                      {expandedSteps.has(index) && descriptions[index] && (
-                        <div className="ml-12 p-4 bg-accent/30 rounded-lg border border-accent animate-in fade-in slide-in-from-top-2 duration-200">
-                          <p className="text-sm text-muted-foreground leading-relaxed">{descriptions[index]}</p>
+                      {expandedSteps.has(index) && (
+                        <div className="ml-12 mt-2 border-l border-muted pl-4">
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            {descriptions[index] || "Explore this step in detail to understand its core concept."}
+                          </p>
                         </div>
                       )}
                     </li>
                   ))}
+
                 </ol>
               </CardContent>
             </Card>
