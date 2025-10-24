@@ -354,12 +354,15 @@ const difficultyColors = {
   Advanced: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
 }
 
-interface PageProps {
+
+
+type PageProps = {
   params: {
-    category: string
-    topic: string
-  }
-}
+    category: string;
+    topic: string;
+  };
+};
+
 
 export default function TopicDetailPage({ params }: PageProps) {
   const [expandedSteps, setExpandedSteps] = useState<Set<number>>(new Set())
