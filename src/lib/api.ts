@@ -2075,7 +2075,7 @@ const courses: Course[] = [
   {
     id: '9',
     title: "AI for Product Managers",
-    description: "Get coached by industry experts, master essential product management skills, complete 20+ real-world projects, and become job-ready in just 6 weeks",
+    description: "Get coached by industry experts through our AI product manager course, master essential AI product management skills, work on 20+ real-world projects, and become job-ready in just 6 weeks.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -2088,7 +2088,7 @@ const courses: Course[] = [
     reviewCount: 20,
     isFeatured: true,
     slug: "ai-product-manager-course",
-    longDescription: "This course, created with senior AI and product leaders, equips you with the skills to build and ship AI-powered products end-to-end. You’ll be mentored by top practitioners, apply learning to real use-cases, and network with PMs and AI leads across industries.\n\n The curriculum is structured into key sections, covering AI Problem Discovery & UX, Opportunity Sizing & Feasibility, Prompt/Model Design (LLMs, RAG, agents), Experimentation & Metrics, Roadmapping & Stakeholder Management, and Responsible AI Delivery.\n\n One of the most hands-on AI+PM programs, it will teach you to scope the right AI bets, design human-in-the-loop workflows, and lead cross-functional teams. You’ll use tools PMs rely on—Figma, Productboard/Jira, Amplitude/Mixpanel, LaunchDarkly/Optimizely, Retool/Airtable—alongside ChatGPT/Claude/Gemini and no-/low-code orchestration (Promptflow/Flowise). You’ll also work on 20+ real-world product labs, building confidence to handle live AI features.\n\n This 6-week program is ideal for PMs upskilling for AI or professionals transitioning into product. Whether shaping consumer experiences or internal copilots, this course gives you the practical tools to excel in an AI product management role."
+    longDescription: "This product management training course, created with senior AI and product leaders, equips you with the skills to build and ship AI-powered products end-to-end. You’ll be mentored by top practitioners, apply learning to real use-cases, and network with PMs and AI leads across industries.\n\n The curriculum of this product manager course with placement is structured into key sections, covering AI Problem Discovery & UX, Opportunity Sizing & Feasibility, Prompt/Model Design (LLMs, RAG, agents), Experimentation & Metrics, Roadmapping & Stakeholder Management, and Responsible AI Delivery.\n\n This is one of best course in product management that has hands-on AI+PM programs, it will teach you to scope the right AI bets, design human-in-the-loop workflows, and lead cross-functional teams. You’ll use tools PMs rely on—Figma, Productboard/Jira, Amplitude/Mixpanel, LaunchDarkly/Optimizely, Retool/Airtable—alongside ChatGPT/Claude/Gemini and no-/low-code orchestration (Promptflow/Flowise). You’ll also work on 20+ real-world product labs, building confidence to handle live AI features in this product management courses online.\n\n This 6-week product manager training online program is ideal for PMs upskilling for AI or professionals transitioning into product. Whether shaping consumer experiences or internal copilots, this course gives you the practical tools to excel in an product management certification role."
     , instructors: [
       {
         id: "i1",

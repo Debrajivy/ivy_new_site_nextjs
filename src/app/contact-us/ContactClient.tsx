@@ -28,7 +28,7 @@ const ContactClient = () => {
     },
     {
       city: "Bangalore",
-      address: "183, Double Road, 10th Main Rd, 2nd Stage, Indiranagar",
+      address: "George Thangaiah Complex, Kalyan Nagar, Indira Nagar 1st Stage, H Colony, Indiranagar, Bengaluru, Karnataka 560038",
       mapUrl: "https://maps.app.goo.gl/faxoYXNquyqNyxVaA",
     },
     {

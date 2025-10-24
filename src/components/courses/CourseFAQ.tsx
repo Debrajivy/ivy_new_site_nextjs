@@ -37,7 +37,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the AI for Product Manager course?",
+        question: "What is the duration of the AI Product Manager course?",
         answer: "The course runs for 6–8 weeks with 25–30 hours of live and recorded sessions, offering flexible weekday, weekend, and fast-track options for working professionals.",
         category: "program"
       },
@@ -162,7 +162,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "job and career"
       },
       {
-        question: "What certification will I receive upon completion?",
+        question: "Will I receive a certificate for product manager certification courses upon completion?",
         answer: "You will receive a course completion certificate in AI for Product Managerss issued by Ivy Professional School, validating your expertise in AI-driven project workflows.",
         category: "certification"
       },
@@ -208,7 +208,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Does Ivy offer placement support after the course?",
-        answer: "Yes. Ivy Professional School provides lifetime placement assistance, including resume building, interview preparation, mock interviews, and job referrals.",
+        answer: "Yes. Ivy Professional School provides product manager course with placement assistance, including resume building, interview preparation, mock interviews, and job referrals.",
         category: "placement"
       },
       {

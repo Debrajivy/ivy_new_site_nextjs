@@ -318,7 +318,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                                     course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
                                       "The Executive Certification in Cloud Data Engineering with IIT Guwahati combines academic rigor with industry-relevant cloud technologies." :
                                       course.title === "AI for Product Managers" ?
-                                        "This professional certification empowers product managers to lead AI-driven transformations, equipping you with future-ready skills for high-impact roles across industries." :
+                                        "This product management certification empowers product managers to lead AI-driven transformations, equipping you with future-ready skills for high-impact roles across industries." :
 
                                         course.title === "Data science course (Pay after Placement)" ?
 
@@ -382,7 +382,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                                     course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
                                       "Combines the prestige of IIT with practical cloud engineering skills that are in high demand across industries." :
                                       course.title === "AI for Product Managers" ?
-                                        "By completing this program, you gain hands-on expertise in AI adoption frameworks, prompt engineering, and GenAI strategy making your product leadership profile stand out to hiring managers and senior stakeholders." :
+                                        "By completing certifications for product management, you gain hands-on expertise in AI adoption frameworks, prompt engineering, and GenAI strategy. A product mgmt certification helps your product leadership profile stand out to hiring managers and senior stakeholders." :
 
                                         course.title === "Data science course (Pay after Placement)" ?
 
