@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, use } from "react"
 import { notFound } from "next/navigation"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/helpcenter/Footer"
@@ -354,23 +354,23 @@ const difficultyColors = {
   Advanced: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
 }
 
-
-
 type PageProps = {
-  params: {
+  params: Promise<{
     category: string;
     topic: string;
-  };
+  }>;
 };
-
 
 export default function TopicDetailPage({ params }: PageProps) {
   const [expandedSteps, setExpandedSteps] = useState<Set<number>>(new Set())
   const [learningStarted, setLearningStarted] = useState(false)
 
-  const topic = aiTopics.find((t) => t.slug === params.topic && t.category === params.category)
+  // Use the use() hook to unwrap the params promise
+  const { category, topic: topicSlug } = use(params)
 
-  if (!topic) {
+  const aiTopic = aiTopics.find((t) => t.slug === topicSlug && t.category === category)
+
+  if (!aiTopic) {
     notFound()
   }
 
@@ -387,7 +387,7 @@ export default function TopicDetailPage({ params }: PageProps) {
   const handleStartLearning = () => {
     setLearningStarted(true)
     // Expand all steps when learning journey starts
-    const allSteps = new Set(topic.howToLearn.map((_, i) => i))
+    const allSteps = new Set(aiTopic.howToLearn.map((_, i) => i))
     setExpandedSteps(allSteps)
     // Scroll to learning path section
     setTimeout(() => {
@@ -395,10 +395,10 @@ export default function TopicDetailPage({ params }: PageProps) {
     }, 100)
   }
 
-  const Icon = topic.icon
-  const relatedTopics = aiTopics.filter((t) => t.category === params.category && t.id !== topic.id)
+  const Icon = aiTopic.icon
+  const relatedTopics = aiTopics.filter((t) => t.category === category && t.id !== aiTopic.id)
 
-  const descriptions = learningStepDescriptions[topic.slug] || {}
+  const descriptions = learningStepDescriptions[aiTopic.slug] || {}
 
   const formatCategoryName = (category: string): string => {
     const categoryNames: Record<string, string> = {
@@ -431,9 +431,9 @@ export default function TopicDetailPage({ params }: PageProps) {
               Help Center
             </Link>
             <span>/</span>
-            <span className="hover:text-foreground transition-colors">{formatCategoryName(params.category)}</span>
+            <span className="hover:text-foreground transition-colors">{formatCategoryName(category)}</span>
             <span>/</span>
-            <span className="text-foreground font-medium">{topic.title}</span>
+            <span className="text-foreground font-medium">{aiTopic.title}</span>
           </div>
         </div>
 
@@ -444,16 +444,16 @@ export default function TopicDetailPage({ params }: PageProps) {
           </div>
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-4 mb-4">
-              <Badge className={categoryColors[topic.category as keyof typeof categoryColors]}>
-                {topic.category
+              <Badge className={categoryColors[aiTopic.category as keyof typeof categoryColors]}>
+                {aiTopic.category
                   .split("-")
                   .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
                   .join(" ")}
               </Badge>
-              <Badge className={difficultyColors[topic.difficulty as keyof typeof difficultyColors]}>
-                {topic.difficulty}
+              <Badge className={difficultyColors[aiTopic.difficulty as keyof typeof difficultyColors]}>
+                {aiTopic.difficulty}
               </Badge>
-              {topic.status === "Hot" && (
+              {aiTopic.status === "Hot" && (
                 <Badge variant="destructive" className="gap-1">
                   <TrendingUp className="w-3 h-3" />
                   Hot Topic
@@ -461,11 +461,11 @@ export default function TopicDetailPage({ params }: PageProps) {
               )}
               <div className="flex items-center gap-1 text-sm text-muted-foreground">
                 <Clock className="w-4 h-4" />
-                {topic.estimatedLearningTime}
+                {aiTopic.estimatedLearningTime}
               </div>
             </div>
-            <h1 className="text-4xl font-bold mb-4">{topic.title}</h1>
-            <p className="text-xl text-muted-foreground">{topic.shortDescription}</p>
+            <h1 className="text-4xl font-bold mb-4">{aiTopic.title}</h1>
+            <p className="text-xl text-muted-foreground">{aiTopic.shortDescription}</p>
           </div>
         </div>
 
@@ -481,7 +481,7 @@ export default function TopicDetailPage({ params }: PageProps) {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed">{topic.whatIsIt}</p>
+                <p className="text-muted-foreground leading-relaxed">{aiTopic.whatIsIt}</p>
               </CardContent>
             </Card>
 
@@ -494,7 +494,7 @@ export default function TopicDetailPage({ params }: PageProps) {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed">{topic.whyItMatters}</p>
+                <p className="text-muted-foreground leading-relaxed">{aiTopic.whyItMatters}</p>
               </CardContent>
             </Card>
 
@@ -513,7 +513,7 @@ export default function TopicDetailPage({ params }: PageProps) {
               </CardHeader>
               <CardContent>
                 <ol className="space-y-3">
-                  {topic.howToLearn.map((step, index) => (
+                  {aiTopic.howToLearn.map((step, index) => (
                     <li key={index} className="space-y-2">
                       <button
                         onClick={() => toggleStep(index)}
@@ -526,8 +526,9 @@ export default function TopicDetailPage({ params }: PageProps) {
                           <p className="text-muted-foreground leading-relaxed">{step}</p>
                         </div>
                         <ChevronDown
-                          className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${expandedSteps.has(index) ? "rotate-180" : ""
-                            }`}
+                          className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${
+                            expandedSteps.has(index) ? "rotate-180" : ""
+                          }`}
                         />
                       </button>
 
@@ -540,7 +541,6 @@ export default function TopicDetailPage({ params }: PageProps) {
                       )}
                     </li>
                   ))}
-
                 </ol>
               </CardContent>
             </Card>
@@ -558,7 +558,7 @@ export default function TopicDetailPage({ params }: PageProps) {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {topic.keyTools.map((tool) => (
+                  {aiTopic.keyTools.map((tool) => (
                     <Badge key={tool} variant="secondary" className="text-sm mr-2 mb-2">
                       {tool}
                     </Badge>
@@ -577,7 +577,7 @@ export default function TopicDetailPage({ params }: PageProps) {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  {topic.resources.map((resource) => (
+                  {aiTopic.resources.map((resource) => (
                     <a
                       key={resource.name}
                       href={resource.url}
@@ -594,7 +594,7 @@ export default function TopicDetailPage({ params }: PageProps) {
             </Card>
 
             {/* Prerequisites */}
-            {topic.prerequisites && (
+            {aiTopic.prerequisites && (
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -604,7 +604,7 @@ export default function TopicDetailPage({ params }: PageProps) {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    {topic.prerequisites.map((prereq, index) => (
+                    {aiTopic.prerequisites.map((prereq, index) => (
                       <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                         {prereq}
@@ -654,7 +654,6 @@ export default function TopicDetailPage({ params }: PageProps) {
         )}
       </main>
 
-      {/* <Footer /> */}
       <FooterMain />
     </div>
   )
