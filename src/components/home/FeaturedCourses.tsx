@@ -159,7 +159,7 @@ const featuredCourses: Course[] = [
     rating: 4.6,
     reviewCount: 286,
     isFeatured: true,
-    slug: "",
+    slug: "data-analytics-course",
     keyFeatures: [
       "Analyze large datasets",
       "Data mining techniques"
