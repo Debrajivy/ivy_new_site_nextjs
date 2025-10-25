@@ -365,8 +365,9 @@ export default function TopicDetailPage({ params }: PageProps) {
   const [expandedSteps, setExpandedSteps] = useState<Set<number>>(new Set())
   const [learningStarted, setLearningStarted] = useState(false)
 
-  // Use the use() hook to unwrap the params promise
-  const { category, topic: topicSlug } = use(params)
+  // Use the use() hook to unwrap the params promise - FIXED FOR NEXT.JS 15
+  const unwrappedParams = use(params)
+  const { category, topic: topicSlug } = unwrappedParams
 
   const aiTopic = aiTopics.find((t) => t.slug === topicSlug && t.category === category)
 
