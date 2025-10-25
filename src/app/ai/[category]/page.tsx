@@ -1,3 +1,6 @@
+"use client"
+
+import { use } from "react" // ADD THIS IMPORT
 import { notFound } from "next/navigation"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/helpcenter/Footer"
@@ -70,21 +73,25 @@ const categoryTopics = [
   // Add more topics...
 ]
 
+// FIX: Update PageProps to use Promise for Next.js 15
 interface PageProps {
-  params: {
+  params: Promise<{
     category: string
-  }
+  }>
 }
 
 export default function CategoryPage({ params }: PageProps) {
-  const category = categoryData[params.category as keyof typeof categoryData]
+  // FIX: Use the use() hook to unwrap the params promise
+  const { category: categoryParam } = use(params)
+  
+  const category = categoryData[categoryParam as keyof typeof categoryData]
 
   if (!category) {
     notFound()
   }
 
   const Icon = category.icon
-  const topics = categoryTopics.filter(topic => topic.category === params.category)
+  const topics = categoryTopics.filter(topic => topic.category === categoryParam)
 
   return (
     <div className="min-h-screen bg-background">
