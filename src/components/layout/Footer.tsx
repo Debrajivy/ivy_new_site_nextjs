@@ -97,6 +97,7 @@ const Footer = () => {
               <li><Link href="/alumni" className="text-gray-300 hover:text-white transition-colors">Testimonials</Link></li>
               <li><Link href="https://youtube.com/ivyproschool" className="text-gray-300 hover:text-white transition-colors">YouTube Channel</Link></li>
               <li><Link href="/contact-us" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
+              <li><Link href="/verify-certificate" className="text-gray-300 hover:text-white transition-colors">Verify Certificate</Link></li>
             </ul>
           </div>
 
