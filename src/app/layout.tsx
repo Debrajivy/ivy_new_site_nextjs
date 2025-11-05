@@ -151,15 +151,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
 
         {/* LeadSquared Tracking: Placed at the end of the body for optimal loading and execution timing */}
+
+        {/* LeadSquared Tracking: Combined and set to load earlier */}
         <Script
+          id="leadsquared-combined"
           src="https://web.mxradon.com/t/Tracker.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="leadsquared-tracker"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: "pidTracker('18802');",
+          // Change strategy from 'afterInteractive' to 'beforeInteractive'
+          strategy="beforeInteractive"
+          onLoad={() => {
+            // Execute the pidTracker call immediately after the script loads
+            if (typeof (window as any).pidTracker === 'function') {
+              (window as any).pidTracker('18802');
+            }
           }}
         />
 
