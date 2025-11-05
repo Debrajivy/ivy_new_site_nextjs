@@ -16,6 +16,7 @@ import IIT_BACKGROUND from "@/assests/IIT_BACKGROUND.webp";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import NASSCOMNEW from "@/assests/NASSCOMNEW.webp";
 
 interface CourseHeroProps {
   course: Course;
@@ -120,9 +121,13 @@ const CourseHero = ({ course }: CourseHeroProps) => {
         Attribute: "mx_Course",
         Value: sourceCampaignValue
       },
+      // {
+      //   Attribute: "SourceMedium",
+      //   Value: "Google"
+      // },
       {
-        Attribute: "SourceMedium",
-        Value: "Google"
+        Attribute: "Source",
+        Value: "Pay per Click Ads",
       },
 
     ];
@@ -250,17 +255,17 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               >
                 {" "}
                 {/* Added w-full to make it full screen width */}
-                <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit">
+                {/* <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit">
                   <p className="text-[#221e1f] font-bold">Powered by </p>
-                </div>
+                </div> */}
                 {course.title === "Data Science with Machine Learning & AI Certification" ||
                   course.title === "Data science course (Pay after Placement)" ? (
                   <Image
 
                     width={150}
-                    height={50}
+                    height={80}
                     className="h-20 w-auto object-contain"
-                    src={NASSCOM}
+                    src={NASSCOMNEW}
                     alt="NASSCOM Certification"
                   />
                 ) : course.title === " Data Engineering Course" || course.title === "Generative AI Course" ||
