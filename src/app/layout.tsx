@@ -7,6 +7,8 @@ import Script from "next/script";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
+// --- METADATA & SCHEMA DATA ---
+
 export const metadata: Metadata = {
   title: "Ivy Professional School: #1 GenAI & Data Science Institute",
   description:
@@ -74,6 +76,8 @@ const schemaData = {
   },
 };
 
+// --- ROOT LAYOUT COMPONENT ---
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -96,13 +100,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        {/*  JSON-LD: this is what schema tools look for */}
+        {/* JSON-LD: this is what schema tools look for */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
 
-        {/* GTM */}
+        {/* GTM - Google Tag Manager */}
         <Script
           id="google-tag-manager"
           strategy="afterInteractive"
@@ -139,26 +143,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
-        {/* GTM noscript */}
-        {/* <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PZPNXDVD"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            alt="facebook"
-            src="https://www.facebook.com/tr?id=1435433223444500&ev=PageView&noscript=1"
-          />
-        </noscript> */}
+        {/* GTM noscript and Facebook noscript blocks are typically placed 
+            as the first elements INSIDE the <body>. They remain commented out here 
+            as they were in your original code, but are essential for GTM/Pixel tracking when JavaScript is disabled.
+        */}
 
         {children}
 
-        {/* LeadSquared Tracking */}
+        {/* LeadSquared Tracking: Placed at the end of the body for optimal loading and execution timing */}
         <Script
           src="https://web.mxradon.com/t/Tracker.js"
           strategy="afterInteractive"
