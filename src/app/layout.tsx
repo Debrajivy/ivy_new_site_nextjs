@@ -151,17 +151,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
 
         {/* LeadSquared Tracking: Placed at the end of the body for optimal loading and execution timing */}
-        <Script
-          src="https://web.mxradon.com/t/Tracker.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="leadsquared-tracker"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: "pidTracker('18802');",
-          }}
-        />
+        <script type="text/javascript" src="https://web.mxradon.com/t/Tracker.js"></script>
+        <script type="text/javascript">
+          pidTracker('18802');
+        </script>
 
       </body>
     </html>
