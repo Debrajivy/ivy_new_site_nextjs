@@ -121,15 +121,11 @@ const CourseHero = ({ course }: CourseHeroProps) => {
         Attribute: "mx_Course",
         Value: sourceCampaignValue
       },
-      // {
-      //   Attribute: "SourceMedium",
-      //   Value: "Google"
-      // },
       {
-        Attribute: "Source",
-        Value: "Pay per Click Ads",
+        Attribute: "SourceMedium",
+        Value: "Google"
       },
-
+      
     ];
 
     try {
