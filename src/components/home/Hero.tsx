@@ -39,7 +39,7 @@ const Hero = () => {
   const ACCESS_KEY = 'u$rce467998c43a742e21a2b2747962236d';
   const SECRET_KEY = '4f6bdb2f5df64d29fcdce73901dadb80fbcf0406';
 
-  const API_URL = `${LEAD_SQUARED_API_HOST}LeadManagement.svc/Lead.Create?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
+  const API_URL = `${LEAD_SQUARED_API_HOST}LeadManagement.svc/Lead.Capture?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
