@@ -35,9 +35,9 @@ const Hero = () => {
   const [submitMessage, setSubmitMessage] = useState<any>('');
 
   // LeadSquared API Details
-  const LEAD_SQUARED_API_HOST = 'https://api.leadsquared.com/v2/';
-  const ACCESS_KEY = 'u$rce467998c43a742e21a2b2747962236d';
-  const SECRET_KEY = '4f6bdb2f5df64d29fcdce73901dadb80fbcf0406';
+  const LEAD_SQUARED_API_HOST = process.env.NEXT_PUBLIC_LEAD_SQUARED_API_HOST;
+  const ACCESS_KEY = process.env.NEXT_PUBLIC_LEAD_SQUARED_ACCESS_KEY;
+  const SECRET_KEY = process.env.NEXT_PUBLIC_LEAD_SQUARED_SECRET_KEY;
 
   const API_URL = `${LEAD_SQUARED_API_HOST}LeadManagement.svc/Lead.Capture?accessKey=${ACCESS_KEY}&secretKey=${SECRET_KEY}`;
 
