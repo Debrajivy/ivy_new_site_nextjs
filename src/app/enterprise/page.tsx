@@ -86,11 +86,11 @@ const Enterprise = () => {
   };
 
   const accreditations = [
-    {
-      logo: IIT,
-      description: 'Academic Partner',
-      badge: 'Official Partner'
-    },
+    // {
+    //   logo: IIT,
+    //   description: 'Academic Partner',
+    //   badge: 'Official Partner'
+    // },
     {
       logo: meityLogo,
       description: 'Recognized by MeitY',
