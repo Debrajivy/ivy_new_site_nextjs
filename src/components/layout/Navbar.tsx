@@ -51,7 +51,7 @@ const courseCategories = {
       image: ML,
 
     },
-    
+
   ],
   "Data Engineering": [
     {
@@ -270,7 +270,7 @@ const MultiLevelDropdown = () => {
                     className="transition-all duration-300 hover:bg-gradient-to-r hover:from-[#e0f7f7] hover:to-[#f0faf0] hover:shadow-md hover:text-[#009fda] rounded-lg"
                     image={course.image}
                   >
-                    <div style={{fontSize:13}}>{course.description}</div>
+                    <div style={{ fontSize: 13 }}>{course.description}</div>
                     {/* <div >{course.month}</div> */}
                   </ListItem>
                 ))}
@@ -475,15 +475,18 @@ const Navbar = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     {/* Set a dark background for the entire dropdown content */}
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]" style={{ backgroundColor: '#013a81' }}>
-                      <li className="row-span-3">
+                    {/* Added 'items-stretch' to the grid to ensure all items fill the available height */}
+                    <ul
+                      className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2 items-stretch"
+                      style={{ backgroundColor: '#013a81' }}
+                    >
+                      <li className="">
                         <NavigationMenuLink asChild>
+                          {/* Ensured Link/Card takes up full height of the list item (which now stretches) */}
                           <Link
-                            // Enhanced class names for a better visual effect
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-white p-6 no-underline outline-none transition-all duration-300 transform hover:scale-[1.02] shadow-2xl hover:bg-gray-50"
                             href="/casestudies"
                           >
-                            <Trophy className="h-6 w-6 text-amber-500" />
                             <div className="mb-2 mt-4 text-lg font-medium text-[#000B19]">
                               Case Studies
                             </div>
@@ -493,30 +496,35 @@ const Navbar = () => {
                           </Link>
                         </NavigationMenuLink>
                       </li>
-                      {/* Updated ListItem for Bootcamp for clarity */}
+                      {/* Updated ListItem for Bootcamp - assuming ListItem itself renders a div that fills its space */}
                       <ListItem
                         href="/bootcamp"
                         title="Bootcamp"
-                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02]"
+                        // Adding h-full here might help if ListItem accepts this prop for its container
+                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02] h-full"
                       >
                         Unlock Your Potential with Expert-led Bootcamps.
+
                       </ListItem>
-                      {/* New ListItem for Blog to create a box-like appearance */}
+                      {/* New ListItem for Blog */}
                       <ListItem
                         href="https://ivyproschool.com/blog"
                         title="Blog"
-                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02]"
+                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02] h-full"
                       >
                         Explore the Future of Data, Gen AI, Analytics & Career Growth with Ivy's Insights
+                      </ListItem>
+                      <ListItem
+                        href="https://ivyproschool.com/AIHelpCenter"
+                        title="AI Help Center"
+                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02] h-full"
+                      >
+                        Master the Trending AI Topics Everyone's Talking About
                       </ListItem>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 {/* 🎯 End of Updated Code */}
-
-
-
-
 
                 {/* <NavigationMenuItem>
                   <Link href="/bootcamp" className="flex items-center px-3 py-2 text-sm font-medium">
