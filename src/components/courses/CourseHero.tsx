@@ -438,36 +438,28 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     "Generative AI Course"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1G7uBOCpBKFvzEyXHM34vc6afqUJmdF_A/preview";
+                      "https://drive.google.com/file/d/1cT9-gqqqifm-HvBE81WDsql0FxQIs8hP/preview";
                   } else if (
                     course.title === "Data Science with Machine Learning & AI Certification"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/13O3soUlLzRLcJGezJ23HmnPlQSerT_JJ/preview";
+                      "https://drive.google.com/file/d/1a1gYATYn33yUVxWXZOdp5aGjFkYXCCk4/preview";
                   } else if (
                     course.title === " Data Engineering Course"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/preview";
-                  } else if (
-                    course.title === "Data Science with Machine Learning & AI Certification"
-                  ) {
-                    syllabusUrl =
-                      "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/preview";
-                  } else if (course.title === "Data Analytics and Generative AI Course") {
-                    syllabusUrl =
-                      "https://drive.google.com/file/d/1TpyFrVqjCLdAsIEc-p9S2pUaD6AgJsXN/preview";
+                      "https://drive.google.com/file/d/15dM1mZal1HjDpJYYj2z0MB41bJf7egi2/preview";
                   } else if (
                     course.title ===
                     "Data Analytics Course"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1ih3Z5PO5ExixAxmoBu0SJKjYs5-wDRp9/preview";
+                      "https://drive.google.com/file/d/13LLhT-UYWyEtwOHa5ycbVoOGkgLAw3pr/preview";
                   } else if (
                     course.title === "Data Analytics and Generative AI Course"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1u64bLjLe_lgItjmn9OagsaZNuyd9bz8K/preview";
+                      "https://drive.google.com/file/d/1Z7JSZ6hlidaSbNAX4so5eXBBJHlSmxJN/preview";
                   } else if (
                     course.title ===
                     "Cloud Data Engineering Course with IIT Guwahati"
@@ -476,13 +468,19 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       "https://drive.google.com/file/d/1PrR-EKLovlmE3lxKFILL6eXhlCWeOmAB/preview";
                   } else if (course.title === "AI for Product Managers") {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1Xmqo75SkOo9RBOUrgr0Xsn_XQUMUJJ2a/preview";
+                      "https://drive.google.com/file/d/1lwkKAtfPeDvY1lU2h0CdD3RqqT2QLgEZ/preview";
                   }
                   else if (
                     course.title === "Data science course (Pay after Placement)"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/preview";
+                  }
+                  else if (
+                    course.title === "AI and Machine Learning Course"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1p4d84pQ8c-HmIYD7fUH16HNPkmfQzN7r/preview";
                   }
 
                   //city specific
