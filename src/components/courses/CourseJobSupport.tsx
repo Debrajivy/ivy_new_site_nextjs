@@ -53,6 +53,8 @@ import { Course } from '@/lib/api';
 import Pmc from "../../assests/PMC.png";
 import Iitc from "../../assests/Iitc.jpg";
 import PAPC from "../../assests/PAPC.jpeg";
+import AIML from "../../assests/AIML.webp";
+import NASSCOMML from "../../assests/NASSCOMML.webp";
 import Image from 'next/image';
 interface CourseJobSupportProps {
   course: Course;
@@ -406,14 +408,15 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                   <Image
                     src={
                       course.title === "Generative AI Course" ? Iitc :
-                        course.title === "Data Science with Machine Learning & AI Certification" ? Iitc :
+                        course.title === "Data Science with Machine Learning & AI Certification" ? NASSCOMML :
                           course.title === " Data Engineering Course" || course.title==="Data Engineering Course in Kolkata" ? Cdec :
-                            course.title === "Data Science with Machine Learning & AI Certification" ? Nc :
+                            course.title === "Data Science with Machine Learning & AI Certification" ? NASSCOMML :
                               course.title === "Data Analytics and Generative AI Course" ? Dsvc :
                                 course.title === "Data Analytics Course" ? Davc :
                                   course.title === "Data Analytics and Generative AI Course" ? Bavc :
                                     course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
                                       course.title === "AI for Product Managers" ? Pmc :
+                                      course.title === "AI and Machine Learning Course" ? AIML :
 
                                         course.title === "Data science course (Pay after Placement)" ? PAPC :""}
                     alt="Certificate"

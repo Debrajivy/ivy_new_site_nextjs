@@ -808,7 +808,7 @@ const courses: Course[] = [
     reviewCount: 298,
     isFeatured: true,
     slug: "data-science-and-ml-course",
-    longDescription: "The data science and machine learning program will make you an industry-ready data scientist in just 12-14 months. Whether you are a college graduate who is just starting your career or a working professional who wants to advance your skills, this online program is perfect for you. \n\n The data science and machine learning program will make you an industry-ready data scientist in just 12-14 months. Whether you are a college graduate who is just starting your career or a working professional who wants to advance your skills, this online program is perfect for you. \n\n This course on data science and machine learning is made in partnership with FutureSkills Prime, a digital skilling initiative by MeitY and NASSCOM. The content of the course is aligned with the National Occupation Standards (NOS). That means the training provided is of high quality and meets the industry standards."
+    longDescription: "The data science and machine learning program will make you an industry-ready data scientist in just 12-14 months. Whether you are a college graduate who is just starting your career or a working professional who wants to advance your skills, this online program is perfect for you. \n\n The course explores various supervised and unsupervised machine learning algorithms practiced on tools like SQL, R, Python, Tableau, Excel. You will not only learn high-earning skills like data analytics, machine learning, visualization, deep learning, etc., but you will also gain practical experience in solving real-world business problems. \n\n This course on data science and machine learning is made in partnership with FutureSkills Prime, a digital skilling initiative by MeitY and NASSCOM. The content of the course is aligned with the National Occupation Standards (NOS). That means the training provided is of high quality and meets the industry standards."
     , instructors: [
       {
         id: "i1",
@@ -2541,6 +2541,202 @@ const courses: Course[] = [
       "Work on 30+ projects, including 6 capstone projects in retail, finance, marketing, e-commerce, real estate, and entertainment.",
       "Apply supervised & unsupervised ML, AI, and DL to solve real-world problems.",
       "Gain holistic skills — resume prep, networking, interview training.",
+
+    ],
+
+
+  },
+
+
+  {
+    id: '10',
+    title: "AI and Machine Learning Course",
+    description: "Learn Artificial Intelligence, Machine Learning, Deep Learning, and Generative AI through real-world projects designed by experts from IIT, IIM, and top analytics firms.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "AI & Machine Learning",
+    students: 1098,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 20,
+    isFeatured: true,
+    slug: "ai-machine-learning-course",
+    longDescription: " The AI & Machine Learning Course by Ivy Professional School is a comprehensive 4-month program that prepares learners for careers in AI, ML, and Deep Learning.\n\n It covers the complete AI lifecycle — from data preprocessing and modeling to deployment and automation, integrating Generative AI tools, MLOps, and predictive analytics across business domains like finance, marketing, and operations. \n\n Whether you’re a college graduate starting your career or a working professional seeking a career pivot into AI, this program helps you build a solid foundation and transform into an AI-driven decision-maker. "
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "Statistics — Self-paced",
+        duration: "",
+        topics: [
+          { id: "t1", title: "Data types, measurement scales, descriptive statistics", duration: "1.25 hrs" },
+          { id: "t2", title: "Probability distributions (Binomial, Poisson, Normal)", duration: "1.25 hrs" },
+          { id: "t3", title: "Sampling, Central Limit Theorem, sampling distributions", duration: "1.5 hrs" },
+          { id: "t4", title: "Estimation & hypothesis testing (t-test, z-test, chi-square, ANOVA)", duration: "1.5 hrs" },
+          { id: "t5", title: "Regression basics, correlation, residual analysis", duration: "1.75 hrs" },
+          { id: "t6", title: "Time series basics: decomposition & simple forecasting", duration: "1.5 hrs" },
+
+
+        ]
+      },
+      {
+        id: "m2",
+        title: "Python — Predictive Modeling & Basic ML",
+        duration: "2.5 months",
+        topics: [
+          { id: "t1", title: "Advanced Pandas: merge, join, groupby, pivot, reshaping, and data aggregation", duration: "1.75 hrs" },
+          { id: "t2", title: "Data Preprocessing: missing value imputation, outlier detection, scaling & normalization", duration: "1.25 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): visualization & insight generation using matplotlib & seaborn", duration: "2.0 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: encoding, binning, transformations, and automation", duration: "1.5 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN & Naïve Bayes", duration: "2.25 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging & Stacking basics", duration: "1.5 hrs" },
+          { id: "t7", title: "Model Evaluation & Validation: cross-validation, confusion matrix, ROC-AUC, RMSE, F1-score", duration: "1.0 hrs" },
+          { id: "t8", title: "Model Explainability & Deployment: feature importance, SHAP/partial plots, Flask/Streamlit intro", duration: "1.75 hrs" },
+          { id: "t9", title: "AI in ML: prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "1.25 hrs" },
+          { id: "t-header", title: " 🔽 PROJECTS 🔽" }, // <-- New bold header item
+
+          // --- Added Project Topics Below ---
+          {
+            id: "t10",
+            title: " Sales Forecasting Model : Predict monthly sales using regression and time-based feature engineering.",
+
+          },
+          {
+            id: "t11",
+            title: " Customer Churn Prediction :  Build a classification model to identify customers likely to discontinue a service",
+
+          },
+          {
+            id: "t12",
+            title: " Credit Risk Scoring : Use ensemble models to classify loan applicants by default probability.",
+
+          }
+        ]
+      },
+      {
+        id: "m3",
+        title: "Python — AI / ML & Deep Learning",
+        duration: "2.5 months",
+        topics: [
+          { id: "t1", title: "Predictive Modelling Basics: supervised vs unsupervised learning, bias-variance tradeoff, cross-validation", duration: "1.75 hrs" },
+          { id: "t2", title: "Clustering & Dimension Reduction: K-Means, EM, Hierarchical, DBSCAN, PCA, t-SNE", duration: "2.0 hrs" },
+          { id: "t3", title: "Decision Trees & Ensemble Methods: Bagging, Random Forest, Boosting, XGBoost, CatBoost, LightGBM", duration: "2.5 hrs" },
+          { id: "t4", title: "Model Optimization: Hyperparameter tuning using GridSearchCV & RandomizedSearchCV", duration: "1.5 hrs" },
+          { id: "t5", title: "Support Vector Machines, KNN, Naïve Bayes, Model Comparison & Evaluation Metrics", duration: "2.25 hrs" },
+          { id: "t6", title: "Text Mining & NLP: Sentiment Analysis, Topic Modeling, Text Classification, Word Embeddings (Word2Vec, BERT intro)", duration: "3.0 hrs" },
+          { id: "t7", title: "Deep Learning with TensorFlow & Keras: CNNs, RNNs, LSTMs, Transfer Learning & FineTuning", duration: "3.5 hrs" },
+          { id: "t8", title: "AI Use Cases & Model Deployment: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "2.75 hrs" },
+          { id: "t9", title: "AI-powered Case Studies on Image, Text & Time-Series Data", duration: "2.0 hrs" }
+          ,
+          { id: "t-header", title: " 🔽 PROJECTS 🔽" }, // <-- New bold header item
+
+          // --- Added Project Topics Below ---
+          {
+            id: "t10",
+            title: " Image Classification Model: Build a CNN using TensorFlow to identify objects or handwritten digits.",
+
+          },
+          {
+            id: "t11",
+            title: " Sentiment Analysis Engine: Analyze customer reviews using NLP techniques and classify emotions as positive, neutral, or negative.",
+
+          },
+          {
+            id: "t12",
+            title: "Stock Price Prediction: Use LSTM networks to forecast time-series data and visualize trend accuracy.",
+
+          }
+        ]
+      }
+
+
+
+
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "Steps to Make a Career in AI & Data",
+        description: "Explore pathways to start and grow a career in AI and Data. Learn about essential skills, tools, career opportunities, and how AI is impacting various industries through this expert Q&A session.",
+        image: "https://img.youtube.com/vi/OoCffZ4VaJE/0.jpg",
+        skills: ["AI Career Path", "AI Tools", "AI Research", "AI & Web Development", "Chatbots"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "OoCffZ4VaJE"
+      },
+      {
+        id: "p2",
+        title: "Using AI Visuals in Power BI Dashboards",
+        description: "Learn to create AI-powered visuals in Power BI, including Key Influencer, Decomposition Tree, Q&A, and Smart Narrative. Explore current AI trends and integrate ChatGPT for enhanced insights",
+        image: "https://img.youtube.com/vi/ftTTrchGVbA/0.jpg",
+        skills: ["Key Influencer Visual", "Decomposition Tree", "Smart Narrative", "AI Trends"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "ftTTrchGVbA"
+      },
+      {
+        id: "p3",
+        title: "Python Prediction Model for Real Estate",
+        description: "Build a real estate price prediction model using Python and machine learning. Learn data preprocessing, regression techniques, and model building with practical insights from a real-world case study.",
+        image: "https://img.youtube.com/vi/TipOU1HPrxA/0.jpg",
+        skills: ["Regression Models", "Data Preprocessing", "Linear Regression", "Random Forest", "Neural Networks"],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "TipOU1HPrxA"
+      },
+      {
+        id: "p4",
+        title: "OYO Business Analysis with SQL",
+        description: "Learn how to perform business analysis using SQL with a real-world case study on OYO’s room sales. Cover data cleaning, SQL queries, business KPIs, and practical data-driven decision-making.",
+        image: "https://img.youtube.com/vi/ee7TajNEUrI/0.jpg",
+        skills: ["GROUP BY", "ARIMA Model", "Window Functions ", "CTE", "Data Cleaning"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "ee7TajNEUrI"
+      },
+      {
+        id: "p5",
+        title: "Predicting Computer Prices with Python",
+        description: "Build a predictive model for computer prices using Python. Learn data cleaning, regression modeling, and key Python libraries through this industry case study by an IvyPro student.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["Feature Engineering,", "Linear Regression", "Random Forest", "Scikit-learn", "Regression Metrics"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      },
+      {
+        id: "p6",
+        title: "ANOVA Using R - Bakery Case Study",
+        description: "Analyze how display factors affect product demand using Two-way ANOVA and Tukey’s Test in R. Learn statistical hypothesis testing through this practical bakery case study.",
+        image: "https://img.youtube.com/vi/UhO4y3a9yxQ/0.jpg",
+        skills: ["Data Loading", "Data Manipulation", "Two-way ANOVA", "Hypothesis Testing", "Statistical Modeling"],
+        difficulty: "Intermediate",
+        videoId: "UhO4y3a9yxQ"
+      }
+    ],
+    outcomes: [
+      "Gain mastery in Python, Statistics, Machine Learning, and Deep Learning.",
+      "Apply AI and GenAI tools to automate EDA, model documentation, and insights generation.",
+      "Build and deploy models with TensorFlow, Keras, Flask, and Streamlit.",
+      "Work on domain projects in healthcare, finance, retail, and marketing.",
+      "Learn model evaluation, interpretability, and explainability (SHAP, feature importance).",
+      "Participate in career coaching, mock interviews, and internships that lead to real jobs.",
 
     ],
 

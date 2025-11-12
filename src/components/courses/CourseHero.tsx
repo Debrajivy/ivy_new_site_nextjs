@@ -56,7 +56,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     }));
   };
 
-   useEffect(() => {
+  useEffect(() => {
     console.log('Environment Variables:', {
       API_HOST: process.env.NEXT_PUBLIC_LEAD_SQUARED_API_HOST,
       ACCESS_KEY: process.env.NEXT_PUBLIC_LEAD_SQUARED_ACCESS_KEY,
@@ -133,7 +133,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
         Attribute: "SourceMedium",
         Value: "Google"
       },
-      
+
     ];
 
     try {
@@ -212,10 +212,10 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     });
   }, []);
   return (
-<section
-  style={{ marginTop: -30 }}
-  className="py-10 text-white bg-gradient-to-r from-ivy-blue to-ivy-orange"
->
+    <section
+      style={{ marginTop: -30 }}
+      className="py-10 text-white bg-gradient-to-r from-ivy-blue to-ivy-orange"
+    >
 
 
       <div className="container mx-auto px-4">
@@ -276,8 +276,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   course.title === "Data Analytics and Generative AI Course" ||
                   course.title ===
                   "Data Analytics Course" ||
-                  course.title === "Data Analytics and Generative AI Course" ||course.title === "Generative AI Course"||
-                  course.title === "AI for Product Managers" || course.title === "Data Engineering Course in Kolkata" ? (
+                  course.title === "Data Analytics and Generative AI Course" || course.title === "Generative AI Course" ||
+                  course.title === "AI for Product Managers" || course.title === "AI and Machine Learning Course" || course.title === "Data Engineering Course in Kolkata" ? (
                   <Image
 
                     width={150}
@@ -325,16 +325,17 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                                   ? "25,090 students"
                                   : course.title === "Cloud Data Engineering Course with IIT Guwahati"
                                     ? "445 students"
-                                    : course.title === "Data science course (Pay after Placement)"
-                                      ? "430 students"
-                                      : "N/A"}
+                                    : course.title === "AI and Machine Learning Course" ? "658 students"
+                                      : course.title === "Data science course (Pay after Placement)"
+                                        ? "430 students"
+                                        : "N/A"}
                 </span>
               </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Clock size={16} className="mr-2" />
 
-                <span>{courseHours[course.title] || "225 Hours"}</span>
-
+                {/* <span>{courseHours[course.title] || "225 Hours"}</span> */}
+                <span>{course.title === "AI and Machine Learning Course" ? "32 Hours" : "225 Hours"}</span>
               </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Star size={16} className="mr-2" />
@@ -356,9 +357,10 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                                 ? "4.8 (6983 reviews)"
                                 : course.title === "Cloud Data Engineering Course with IIT Guwahati"
                                   ? "4.7 (189 reviews)"
-                                  : course.title === "Data science course (Pay after Placement)"
-                                    ? "4.8 (109 reviews)"
-                                    : "N/A"}</span>
+                                  : course.title === "AI and Machine Learning Course" ? "4.8 (230 reviews)"
+                                    : course.title === "Data science course (Pay after Placement)"
+                                      ? "4.8 (109 reviews)"
+                                      : "N/A"}</span>
               </div>
 
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
@@ -371,7 +373,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     course.title ===
                     "Data Analytics Course" ||
                     course.title === "Data Analytics and Generative AI Course" ||
-                    course.title === "AI for Product Managers" || course.title === "Generative AI Course"
+                    course.title === "AI for Product Managers" || course.title === "Generative AI Course" || course.title ==="AI and Machine Learning Course" 
                     ? "Ivy Professional School Certification"
                     : ""}
               </div>
