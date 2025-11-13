@@ -2030,7 +2030,211 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                               </div>
                             </TabsContent>
                             :
-                            null
+
+
+
+
+
+                            course.title === "AI and Machine Learning Course" ?
+                              <TabsContent value="capstone">
+                                <div className="mb-8">
+                                  <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-2 sm:gap-0">
+                                    <h3 className="text-2xl font-bold">Industry Capstone Projects</h3>
+                                  </div>
+                                  <p className="text-gray-600 mb-6 sm:mb-8 px-2 sm:px-0">
+                                    Every student completes a comprehensive capstone project working with real data and business problems from our industry partners.
+                                    These projects are often featured on resumes and serve as excellent talking points during job interviews.
+                                  </p>
+
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                                    <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
+                                      <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                                        <Image
+                                          width={400}
+                                          height={200}
+                                          src={Hs}
+                                          alt="Healthcare ML Project"
+                                          className="w-full h-full object-cover"
+                                        />
+                                      </div>
+                                      <CardContent className="pt-6">
+                                        <div className="flex justify-between items-start mb-3 gap-2">
+                                          <h4 className="font-bold text-lg leading-snug max-w-[calc(100%-120px)]">
+                                            Hate Speech Detection Using Machine Learning</h4>
+                                          <Badge className="shrink-0">Intermediate</Badge>
+                                        </div>
+                                        <p className="text-gray-600 text-sm mb-4">
+                                          In this project, you will act as a Machine Learning Engineer tasked with building a text classification system
+                                          to detect hate speech in online content. Using natural language processing techniques, you will clean and
+                                          preprocess text data, extract relevant features, and train classification models to differentiate hate speech
+                                          from neutral or non-offensive content.                                        </p>
+                                        <div className="flex flex-wrap gap-2 mb-4">
+                                          {['Python', 'Scikit-learn', 'Natural Language Processing', 'Logistic Regression', 'Naive Bayes'].map((skill, index) => (
+                                            <Badge variant="outline" key={index}>{skill}</Badge>
+                                          ))}
+                                        </div>
+
+
+                                        <CardFooter className="border-t pt-4">
+                                          <Dialog>
+                                            <DialogTrigger asChild>
+                                              <Button variant="outline" size="sm" className="w-full">
+                                                View Project Details
+                                              </Button>
+                                            </DialogTrigger>
+                                            <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                                              <div className="h-[80vh] w-full px-10 py-2 bg-white">
+                                                <iframe
+                                                  src="https://drive.google.com/file/d/1I_zpBYoKpNCq51lijF4cYePXttFwYRLA/preview"
+                                                  width="100%"
+                                                  height="100%"
+                                                  title="Project Details PDF"
+                                                  className="border-0"
+                                                  allow="autoplay"
+                                                />
+                                              </div>
+                                              <div className="p-4 border-t flex justify-end">
+                                                <Button
+                                                  asChild
+                                                  variant="outline"
+                                                  size="sm"
+                                                >
+                                                  <a
+                                                    href="https://drive.google.com/file/d/1I_zpBYoKpNCq51lijF4cYePXttFwYRLA/view"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center"
+                                                  >
+                                                    Open in New Tab <ExternalLink className="ml-2 h-4 w-4" />
+                                                  </a>
+                                                </Button>
+                                              </div>
+                                            </DialogContent>
+                                          </Dialog>
+                                        </CardFooter>
+
+                                      </CardContent>
+                                    </Card>
+
+                                    <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
+                                      <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                                        <Image
+                                          width={400}
+                                          height={200}
+                                          src={""}
+                                          alt="Financial ML Project"
+                                          className="w-full h-full object-cover"
+                                        />
+                                      </div>
+                                      <CardContent className="pt-6">
+
+                                        <div className="flex justify-between items-start mb-3 gap-2">
+                                          <h4 className="font-bold text-lg leading-snug max-w-[calc(100%-120px)]">
+                                            Customer Personality Segmentation using Clustering Analysis                                   </h4>
+                                          <Badge className="shrink-0">Intermediate to Advanced</Badge>
+                                        </div>
+                                        <p className="text-gray-600 text-sm mb-4">
+                                          In this project, you will act as a Customer Insights Analyst for a retail company aiming to enhance its
+                                          marketing strategy through customer segmentation. By analyzing demographic, behavioral, and
+                                          transactional attributes, you will group customers into distinct segments to enable targeted marketing and
+                                          product personalization.                                        </p>
+                                        <div className="flex flex-wrap gap-2 mb-4">
+                                          {['Python', 'Pandas', 'Scikit-learn', 'Matplotlib', 'Seaborn', 'Clustering Algorithms (K-Means)'].map((skill, index) => (
+                                            <Badge variant="outline" key={index}>{skill}</Badge>
+                                          ))}
+                                        </div>
+                                        <CardFooter className="border-t pt-4">
+                                          <Dialog>
+                                            <DialogTrigger asChild>
+                                              <Button variant="outline" size="sm" className="w-full">
+                                                View Project Details
+                                              </Button>
+                                            </DialogTrigger>
+                                            <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                                              <div className="h-[80vh] w-full px-10 py-2 bg-white">
+                                                <iframe
+                                                  src="https://drive.google.com/file/d/1nR1y2gCIrJ41uo_5KUvYzcEmXrwmiuGh/preview"
+                                                  width="100%"
+                                                  height="100%"
+                                                  title="Project Details PDF"
+                                                  className="border-0"
+                                                  allow="autoplay"
+                                                />
+                                              </div>
+                                              <div className="p-4 border-t flex justify-end">
+                                                <Button
+                                                  asChild
+                                                  variant="outline"
+                                                  size="sm"
+                                                >
+                                                  <a
+                                                    href="https://drive.google.com/file/d/1nR1y2gCIrJ41uo_5KUvYzcEmXrwmiuGh/view"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center"
+                                                  >
+                                                    Open in New Tab <ExternalLink className="ml-2 h-4 w-4" />
+                                                  </a>
+                                                </Button>
+                                              </div>
+                                            </DialogContent>
+                                          </Dialog>
+                                        </CardFooter>
+                                      </CardContent>
+                                    </Card>
+                                  </div>
+                                </div>
+
+                                <div className="mt-12 sm:mt-16">
+                                  <div className="mb-6">
+                                    <h3 className="text-2xl font-bold mb-2">Startup Projects</h3>
+                                    <p className="text-gray-600 max-w-3xl px-2 sm:px-0">
+                                      Ivy Professional School has incubated and supported several successful AI startups.
+                                      Our students get exposure to cutting-edge projects similar to these.
+                                    </p>
+                                  </div>
+
+                                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
+                                    <Card>
+                                      <CardContent className="pt-6">
+                                        <h4 className="font-bold text-lg mb-2">time2justice.ai</h4>
+                                        <p className="text-gray-600 text-sm mb-4">Legal AI technology that automates legal document analysis and processing</p>
+                                        <Button variant="outline" size="sm" className="w-full" asChild>
+                                          <a href="https://time2justice.ai" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                                            Visit <ExternalLink size={14} className="ml-2" />
+                                          </a>
+                                        </Button>
+                                      </CardContent>
+                                    </Card>
+
+                                    <Card>
+                                      <CardContent className="pt-6">
+                                        <h4 className="font-bold text-lg mb-2">BiGo.bike</h4>
+                                        <p className="text-gray-600 text-sm mb-4">AI-powered electric vehicle platform for sustainable urban transportation</p>
+                                        <Button variant="outline" size="sm" className="w-full" asChild>
+                                          <a href="https://bigo.bike" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                                            Visit <ExternalLink size={14} className="ml-2" />
+                                          </a>
+                                        </Button>
+                                      </CardContent>
+                                    </Card>
+
+                                    <Card>
+                                      <CardContent className="pt-6">
+                                        <h4 className="font-bold text-lg mb-2">prepAI.com</h4>
+                                        <p className="text-gray-600 text-sm mb-4">AI-driven education platform for personalized learning and test preparation</p>
+                                        <Button variant="outline" size="sm" className="w-full" asChild>
+                                          <a href="https://prepai.ivyproschool.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                                            Visit <ExternalLink size={14} className="ml-2" />
+                                          </a>
+                                        </Button>
+                                      </CardContent>
+                                    </Card>
+                                  </div>
+                                </div>
+                              </TabsContent>
+                              :
+                              null
 
           }
 

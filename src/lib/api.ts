@@ -2684,13 +2684,13 @@ const courses: Course[] = [
       },
       {
         id: "p2",
-        title: "Using AI Visuals in Power BI Dashboards",
-        description: "Learn to create AI-powered visuals in Power BI, including Key Influencer, Decomposition Tree, Q&A, and Smart Narrative. Explore current AI trends and integrate ChatGPT for enhanced insights",
-        image: "https://img.youtube.com/vi/ftTTrchGVbA/0.jpg",
-        skills: ["Key Influencer Visual", "Decomposition Tree", "Smart Narrative", "AI Trends"],
-        difficulty: "Intermediate to Advanced",
+        title: "Detect Fraud Calls Using Deep Learning & AI",
+        description: "Learn how to use Artificial Intelligence and Deep Learning to detect fraudulent phone calls with real audio data. This project covers audio preprocessing with Librosa, feature extraction, embeddings, and building a TensorFlow Neural Network for accurate fraud call classification.",
+        image: "https://img.youtube.com/vi/CeDUuCYfxrs/hqdefault.jpg",
+        skills: ["Understanding Embeddings", "Audio Data Fundamentals", "Audio Processing with Librosa", "Neural Network Architecture", "TensorFlow Model Training", "Model Performance Evaluation"],
+        difficulty: "Advanced",
         isPractice: true,
-        videoId: "ftTTrchGVbA"
+        videoId: "CeDUuCYfxrs"
       },
       {
         id: "p3",
@@ -2716,7 +2716,7 @@ const courses: Course[] = [
         title: "Time Series Forecasting with Air Passengers Data using ML",
         description: "Learn how to perform Time Series Forecasting on the Air Passengers dataset using Python. This project covers importing data, understanding time series structures, visualizing trends and seasonality, transforming non-stationary data, and building forecasting models such as ARIMA and SARIMAX to generate accurate future predictions.",
         image: "https://img.youtube.com/vi/F5cz6RGrqf8/hqdefault.jpg",
-        skills: ["Time Series Concepts,", "Additive vs Multiplicative Models", "Data Visualization", "AR & MA Models", "ARIMA Model", "Forecasting &amp; Evaluation"],
+        skills: ["Time Series Concepts,", "Additive vs Multiplicative Models", "Data Visualization", "AR & MA Models", "ARIMA Model", "Forecasting & Evaluation"],
         difficulty: "Beginner to Intermediate",
         videoId: "F5cz6RGrqf8"
       },
