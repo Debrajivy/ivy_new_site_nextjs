@@ -2704,30 +2704,30 @@ const courses: Course[] = [
       },
       {
         id: "p4",
-        title: "OYO Business Analysis with SQL",
-        description: "Learn how to perform business analysis using SQL with a real-world case study on OYO’s room sales. Cover data cleaning, SQL queries, business KPIs, and practical data-driven decision-making.",
-        image: "https://img.youtube.com/vi/ee7TajNEUrI/0.jpg",
-        skills: ["GROUP BY", "ARIMA Model", "Window Functions ", "CTE", "Data Cleaning"],
+        title: "Employee Promotion Analysis with Python",
+        description: "Learn how to analyze employee data and build a Machine Learning model to predict employee promotion using Python. This real-world project covers data preprocessing, exploratory analysis, encoding, model training, and deployment. You will also learn how to extract business insights using Grouped Bar Plots and Box Plots to help organizations make smarter, data-driven promotion decisions.",
+        image: "https://img.youtube.com/vi/cbGNMjbjqrY/hqdefault.jpg",
+        skills: ["Data Cleaning", "Missing Value Treatment", "Exploratory Data Analysis ", "Grouped Bar Plot", "ML Model Building", "Model Deployment"],
         difficulty: "Beginner to Intermediate",
-        videoId: "ee7TajNEUrI"
+        videoId: "cbGNMjbjqrY"
       },
       {
         id: "p5",
-        title: "Predicting Computer Prices with Python",
-        description: "Build a predictive model for computer prices using Python. Learn data cleaning, regression modeling, and key Python libraries through this industry case study by an IvyPro student.",
-        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
-        skills: ["Feature Engineering,", "Linear Regression", "Random Forest", "Scikit-learn", "Regression Metrics"],
+        title: "Time Series Forecasting with Air Passengers Data using ML",
+        description: "Learn how to perform Time Series Forecasting on the Air Passengers dataset using Python. This project covers importing data, understanding time series structures, visualizing trends and seasonality, transforming non-stationary data, and building forecasting models such as ARIMA and SARIMAX to generate accurate future predictions.",
+        image: "https://img.youtube.com/vi/F5cz6RGrqf8/hqdefault.jpg",
+        skills: ["Time Series Concepts,", "Additive vs Multiplicative Models", "Data Visualization", "AR & MA Models", "ARIMA Model", "Forecasting &amp; Evaluation"],
         difficulty: "Beginner to Intermediate",
-        videoId: "Wt8jyPvdGRo"
+        videoId: "F5cz6RGrqf8"
       },
       {
         id: "p6",
-        title: "ANOVA Using R - Bakery Case Study",
-        description: "Analyze how display factors affect product demand using Two-way ANOVA and Tukey’s Test in R. Learn statistical hypothesis testing through this practical bakery case study.",
-        image: "https://img.youtube.com/vi/UhO4y3a9yxQ/0.jpg",
-        skills: ["Data Loading", "Data Manipulation", "Two-way ANOVA", "Hypothesis Testing", "Statistical Modeling"],
-        difficulty: "Intermediate",
-        videoId: "UhO4y3a9yxQ"
+        title: "Twitter Sentiment Analysis with Machine Learning",
+        description: "Learn how to apply Natural Language Processing (NLP) and Machine Learning to classify sentiments from real Twitter data. This hands-on case study walks through data cleaning, text preprocessing, TF-IDF vectorization, model building (Random Forest, Logistic Regression, Naive Bayes), evaluation, and real business applications such as brand monitoring and customer service analytics.",
+        image: "https://img.youtube.com/vi/pVtSPaqrBLw/hqdefault.jpg",
+        skills: ["Text Preprocessing", "Vectorization", "Random Forest", "Naive Bayes", "Feature Engineering"],
+        difficulty: "Advanced",
+        videoId: "pVtSPaqrBLw"
       }
     ],
     outcomes: [
