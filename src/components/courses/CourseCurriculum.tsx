@@ -112,7 +112,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     // Removed duplicate 'Data Analytics and Generative AI Course' key to fix error
     ' Data Engineering Course': { courseFee: 58500, registration: 10000, emi: 6601, months: 9 },
     'Generative AI Course': { courseFee: 69000, registration: 30000, emi: 3768, months: 12 },
-    'AI for Product Managers': { courseFee: 29000, registration: 30000, emi: 17110, months: 12 },
+    'AI for Product Managers': { courseFee: 29000, registration: 30000, emi: 14500, months: 12 },
     'AI and Machine Learning Course': { courseFee: 39000, registration: 11000, emi: 3780, months: 12 },
     'Data science course (Pay after Placement)': { courseFee: 135000, registration: 10000, emi: 17110, months: 12 },
 
@@ -338,7 +338,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                                   </div>
 
                                   {
-                                    course.title == "AI for Product Managers" ? <p className="text-xs text-gray-500">Pay in 2 installment* (including GST)</p> :
+                                    course.title == "AI for Product Managers" ? <p className="text-xs text-gray-500">Pay in 2 installment* (plus GST)</p> :
 
                                       <p className="text-xs text-gray-500">For {details.months} months* (including GST)</p>
                                   }

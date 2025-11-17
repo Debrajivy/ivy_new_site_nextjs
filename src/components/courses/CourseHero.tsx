@@ -335,8 +335,12 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <Clock size={16} className="mr-2" />
 
                 {/* <span>{courseHours[course.title] || "225 Hours"}</span> */}
-                <span>{course.title === "AI and Machine Learning Course" ? "32 Hours" : "225 Hours"}</span>
-              </div>
+                {course.title === "AI and Machine Learning Course"
+                  ? "32 Hours"
+                  : course.title === "AI for Product Managers"
+                    ? "24 Hours"
+                    : "225 Hours"
+                }              </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Star size={16} className="mr-2" />
                 <span> {course.title === "AI for Product Managers"
@@ -373,7 +377,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     course.title ===
                     "Data Analytics Course" ||
                     course.title === "Data Analytics and Generative AI Course" ||
-                    course.title === "AI for Product Managers" || course.title === "Generative AI Course" || course.title ==="AI and Machine Learning Course" 
+                    course.title === "AI for Product Managers" || course.title === "Generative AI Course" || course.title === "AI and Machine Learning Course"
                     ? "Ivy Professional School Certification"
                     : ""}
               </div>
@@ -640,7 +644,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm"
                   >
                     <span className="text-[#1a98cb] font-medium">
-                      Next batch starting on 25 Oct, 2025
+                      Next batch starting on 25 Nov, 2025
                     </span>
                     <div className="flex items-center gap-1">
                       <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>

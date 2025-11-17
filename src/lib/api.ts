@@ -1,3 +1,5 @@
+import { Figma } from "lucide-react";
+
 // Mock API functions to simulate data fetching
 export interface Course {
   id: string;
@@ -2088,8 +2090,7 @@ const courses: Course[] = [
     reviewCount: 20,
     isFeatured: true,
     slug: "ai-product-manager-course",
-    longDescription: "This product management training course, created with senior AI and product leaders, equips you with the skills to build and ship AI-powered products end-to-end. You’ll be mentored by top practitioners, apply learning to real use-cases, and network with PMs and AI leads across industries.\n\n The curriculum of this product manager course with placement is structured into key sections, covering AI Problem Discovery & UX, Opportunity Sizing & Feasibility, Prompt/Model Design (LLMs, RAG, agents), Experimentation & Metrics, Roadmapping & Stakeholder Management, and Responsible AI Delivery.\n\n This is one of best course in product management that has hands-on AI+PM programs, it will teach you to scope the right AI bets, design human-in-the-loop workflows, and lead cross-functional teams. You’ll use tools PMs rely on—Figma, Productboard/Jira, Amplitude/Mixpanel, LaunchDarkly/Optimizely, Retool/Airtable—alongside ChatGPT/Claude/Gemini and no-/low-code orchestration (Promptflow/Flowise). You’ll also work on 20+ real-world product labs, building confidence to handle live AI features in this product management courses online.\n\n This 6-week product manager training online program is ideal for PMs upskilling for AI or professionals transitioning into product. Whether shaping consumer experiences or internal copilots, this course gives you the practical tools to excel in an product management certification role."
-    , instructors: [
+    longDescription: "This AI for Product Manager course, created with senior AI and product leaders, equips you with the skills to build and ship AI-powered products end-to-end. You’ll be mentored by top practitioners, apply learning to real use-cases, and network with PMs and AI leads across industries.\n\nThe curriculum of this product manager course with placement is structured into key sections, covering AI Problem Discovery & UX, Opportunity Sizing & Feasibility, Prompt/Model Design (LLMs, RAG, agents), Experimentation & Metrics, Road mapping & Stakeholder Management, and Responsible AI Delivery.\n\nThis is one of best course in product management that has hands-on AI+PM programs, it will teach you to scope the right AI bets, design human-in-the-loop workflows, and lead cross-functional teams.\n\n Whether you’re a fresher starting your product management journey or a seasoned professional aiming to lead innovation, this 6-week online course empowers you to turn AI concepts into real product impact.", instructors: [
       {
         id: "i1",
         name: "Prateek Agrawal",
@@ -2209,47 +2210,41 @@ const courses: Course[] = [
 
       {
         id: "p1",
-        title: "Upcoming",
-        description: "Upcoming",
-        image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+        title: "How to Create Telegram AI Bot | Build a Telegram AI Bot for Financial Advisory | Step-by-Step Guide",
+        description: "",
+        image: "https://img.youtube.com/vi/Ei5rti1OiGg/0.jpg",
         skills: [],
-        difficulty: "Beginner",
+        difficulty: "Intermediate",
         isPractice: true,
-        videoId: ""
+        videoId: "Ei5rti1OiGg"
       },
-      // {
-      //   id: "p4",
-      //   title: "Superstore Sales Analysis Using Excel ",
-      //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
-      //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
-      //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
-      //   difficulty: "Beginner to Intermediate",
-      //   videoId: "KGrApiKUR4M"
-      // },
-      // {
-      //   id: "p5",
-      //   title: "Predicting Car Sales using Linear Regression in R",
-      //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
-      //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
-      //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
-      //   difficulty: "Intermediate",
-      //   videoId: "8nNgJJH7pMk"
-      // },
-      // {
-      //   id: "p6",
-      //   title: "Crime Intelligence Dashboard in Power BI",
-      //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
-      //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
-      //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
-      //   difficulty: "Intermediate",
-      //   videoId: "sVXjAIa7YBs"
-      // }
+      {
+        id: "p2",
+        title: "How to Build Agent AI | Build Agent AI Using Gen AI Tool | Detect Fake News Using Gen AI Tool",
+        description: "",
+        image: "https://img.youtube.com/vi/7E6oQRTbcLs/0.jpg",
+        skills: [],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "7E6oQRTbcLs"
+      },
+      {
+        id: "p3",
+        title: "How to Create a Bot with Gen AI | Build Tax Payer Bot with Gen AI ",
+        description: "",
+        image: "https://img.youtube.com/vi/f8Da8x8KNXE/0.jpg",
+        skills: [],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "f8Da8x8KNXE"
+      },
+      
     ],
     outcomes: [
       "Master AI-PM foundations: opportunity discovery, AI UX, prompt design, and core LLM/RAG/agent patterns to ship real features.",
       "Manage data, models & risk: assess feasibility, cost/latency, privacy, bias, and deploy guardrails with human-in-the-loop.",
       "Lead cross-functional delivery: write PRDs, define success/guardrail metrics, and align Eng/DS/Design/Legal and GTM teams.",
-      "Work with the modern toolchain: Figma, Productboard/Jira, Amplitude/Mixpanel, Segment, LaunchDarkly/Optimizely, Retool—plus ChatGPT/Claude/Gemini & no/low-code orchestration.",
+      "Work with the modern AI+PM toolchain:Figma, Productboard, Jira, Amplitude, Mixpanel, and Retool — alongside ChatGPT, Claude, Gemini, and no-/low-code AI platforms like Flowise, LangGraph, and n8n for RAG, automation, and agent orchestration",
       "Build a portfolio that hires: 20+ labs and case studies (onboarding copilot, RAG assistant, workflow automation, recommendations) plus a capstone.",
       "Get certified & supported: certificate co-signed by industry experts, 1:1 mentorship, resume reviews, and career assistance for AI PM roles."
     ],

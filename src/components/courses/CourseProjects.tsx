@@ -58,13 +58,19 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
               padding: '0 16px', // Add horizontal padding if needed
             }}
           >
-            <TabsTrigger
-              value="course-projects"
-              className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[180px] text-center bg-white shadow-sm"
-            >
-              <span className="inline sm:hidden">Showcase</span>
-              <span className="hidden sm:inline">Alumni Showcase</span>
-            </TabsTrigger>
+            {
+              course.title != "AI for Product Managers" ?
+
+                <TabsTrigger
+                  value="course-projects"
+                  className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[180px] text-center bg-white shadow-sm"
+                >
+                  <span className="inline sm:hidden">Showcase</span>
+                  <span className="hidden sm:inline">Alumni Showcase</span>
+                </TabsTrigger> : null
+
+            }
+
             <TabsTrigger
               value="practice"
               className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[180px] text-center bg-white shadow-sm"

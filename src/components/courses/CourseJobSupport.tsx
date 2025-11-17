@@ -163,6 +163,8 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
 
           <TabsContent value="placement" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+
               <Card>
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-start">
@@ -180,39 +182,50 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-start">
-                    <div className="bg-primary/10 p-3 rounded-full mr-4">
-                      <Users className="text-primary h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">Career Fairs & Networking</h3>
-                      <p className="text-gray-600">
-                        Access exclusive hiring events, industry meetups, and networking opportunities with top companies
-                        in the tech and data science fields.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              {course.title != "AI for Product Managers" ?
 
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-start">
-                    <div className="bg-primary/10 p-3 rounded-full mr-4">
-                      <Award className="text-primary h-6 w-6" />
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <Users className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Career Fairs & Networking</h3>
+                        <p className="text-gray-600">
+                          Access exclusive hiring events, industry meetups, and networking opportunities with top companies
+                          in the tech and data science fields.
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">Job Guarantee Program</h3>
-                      <p className="text-gray-600">
-                        Eligible students can opt for our job guarantee program, ensuring you land a role within 6 months
-                        of graduation or receive a full tuition refund.
-                      </p>
+                  </CardContent>
+                </Card>
+                : null
+
+
+              }
+
+              {course.title != "AI for Product Managers" ?
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <Award className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Job Guarantee Program</h3>
+                        <p className="text-gray-600">
+                          Eligible students can opt for our job guarantee program, ensuring you land a role within 6 months
+                          of graduation or receive a full tuition refund.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+                : null
+
+              }
+
 
               <Card>
                 <CardContent className="p-6 space-y-4">
@@ -307,7 +320,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                         "The Executive Certification in GenAI ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
                         course.title === "Data Science with Machine Learning & AI Certification" ?
                           "The Executive Certification in Data Science, offered in collaboration with the E&ICT Academy - IIT Guwahati, is widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
-                          course.title === " Data Engineering Course" || course.title==="Data Engineering Course in Kolkata"?
+                          course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ?
                             "Launch your cloud career with an elite certification FROM Ivy Pro School. Designed with experts from Amazon & Accenture, it proves your ability to build real-time data systems using Spark, Kafka, and AWS." :
                             course.title === "Data Science with Machine Learning & AI Certification" ?
                               "This certification demonstrates your proficiency in end-to-end data science workflows, from data cleaning to deploying ML models." :
@@ -371,7 +384,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                         "A stamp of approval from E&ICT Academy, tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
                         course.title === "Data Science with Machine Learning & AI Certification" ?
                           "A stamp of approval from an E&ICT Academy, tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
-                          course.title === " Data Engineering Course"  || course.title==="Data Engineering Course in Kolkata"?
+                          course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ?
                             "Show recruiters you're cloud-ready, with hands-on skills in AWS, GCP, and Azure. This certification validates your ability to design scalable pipelines and apply data engineering tools to real-world projects." :
                             course.title === "Data Science with Machine Learning & AI Certification" ?
                               "Validates your ability to implement machine learning algorithms and AI solutions to solve complex business problems." :
@@ -409,16 +422,16 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     src={
                       course.title === "Generative AI Course" ? Iitc :
                         course.title === "Data Science with Machine Learning & AI Certification" ? NASSCOMML :
-                          course.title === " Data Engineering Course" || course.title==="Data Engineering Course in Kolkata" ? Cdec :
+                          course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ? Cdec :
                             course.title === "Data Science with Machine Learning & AI Certification" ? NASSCOMML :
                               course.title === "Data Analytics and Generative AI Course" ? Dsvc :
                                 course.title === "Data Analytics Course" ? Davc :
                                   course.title === "Data Analytics and Generative AI Course" ? Bavc :
                                     course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
                                       course.title === "AI for Product Managers" ? Pmc :
-                                      course.title === "AI and Machine Learning Course" ? AIML :
+                                        course.title === "AI and Machine Learning Course" ? AIML :
 
-                                        course.title === "Data science course (Pay after Placement)" ? PAPC :""}
+                                          course.title === "Data science course (Pay after Placement)" ? PAPC : ""}
                     alt="Certificate"
                     style={{
                       width: '100%',
@@ -460,7 +473,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                   {[...partners].reverse().concat([...partners].reverse()).map((partner, index) => (
                     <div key={`second-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44"> {/* Added specific h, w, and flex centering for uniform logo slots */}
                       <Image
-                       height={100}
+                        height={100}
                         width={100}
                         src={partner.logo}
                         alt={`${partner.name} logo`}
@@ -485,38 +498,84 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
                   <h4 className="font-semibold text-lg">Technical Interview Preparation</h4>
-                  <ul className="space-y-2">
-                    {[
-                      'Data structure & algorithm practice sessions',
-                      'Machine learning theory deep dives',
-                      'SQL and data manipulation challenges',
-                      'System design interviews for ML/AI',
-                      'Live coding sessions with feedback'
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {
+                    course.title != "AI for Product Managers" ?
+
+                      <ul className="space-y-2">
+                        {[
+                          'Data structure & algorithm practice sessions',
+                          'Machine learning theory deep dives',
+                          'SQL and data manipulation challenges',
+                          'System design interviews for ML/AI',
+                          'Live coding sessions with feedback'
+                        ].map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      :
+
+                      <ul className="space-y-2">
+                        {[
+                          'AI strategy and opportunity mapping case discussions',
+                          'Prompt design, RAG systems, and workflow automation questions',
+                          'Product analytics and experimentation case studies',
+                          'No-/Low-code AI prototyping challenges using Flowise or LangGraph',
+                          'End-to-end AI feature design mock sessions with mentor feedback'
+                        ].map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                  }
+
+
                 </div>
 
                 <div className="space-y-3">
                   <h4 className="font-semibold text-lg">Behavioral Interview Preparation</h4>
-                  <ul className="space-y-2">
-                    {[
-                      'STAR method response preparation',
-                      'Role-specific scenario practice',
-                      'Leadership and teamwork examples',
-                      'Cultural fit assessment practice',
-                      'Detailed feedback and improvement plans'
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+
+                  {
+                    course.title != "AI for Product Managers" ?
+
+                      <ul className="space-y-2">
+                        {[
+                          'STAR method response preparation',
+                          'Role-specific scenario practice',
+                          'Leadership and teamwork examples',
+                          'Cultural fit assessment practice',
+                          'Detailed feedback and improvement plans'
+                        ].map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      :
+                      <ul className="space-y-2">
+                        {[
+                          'STAR method response training for product and leadership roles',
+                          'Scenario-based practice for AI-driven decision-making and trade-offs',
+                          'Cross-functional collaboration and stakeholder management examples',
+                          'Product ownership and ethical AI scenario evaluations',
+                          'Personalized feedback with career-specific improvement plans'
+                        ].map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+
+                  }
                 </div>
               </div>
             </div>
@@ -527,20 +586,41 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 Get 1-on-1 mentoring sessions with industry professionals who have been hiring managers at top tech companies.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="border rounded-lg p-4 text-center">
-                  <div className="font-bold text-3xl text-primary mb-2">40+</div>
-                  <p className="text-sm text-gray-600">Hours of interview preparation</p>
+              {course.title != "AI for Product Managers" ?
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="border rounded-lg p-4 text-center">
+                    <div className="font-bold text-3xl text-primary mb-2">40+</div>
+                    <p className="text-sm text-gray-600">Hours of interview preparation</p>
+                  </div>
+                  <div className="border rounded-lg p-4 text-center">
+                    <div className="font-bold text-3xl text-primary mb-2">10+</div>
+                    <p className="text-sm text-gray-600">Mock interviews with feedback</p>
+                  </div>
+                  <div className="border rounded-lg p-4 text-center">
+                    <div className="font-bold text-3xl text-primary mb-2">5+</div>
+                    <p className="text-sm text-gray-600">Industry expert mentors</p>
+                  </div>
                 </div>
-                <div className="border rounded-lg p-4 text-center">
-                  <div className="font-bold text-3xl text-primary mb-2">10+</div>
-                  <p className="text-sm text-gray-600">Mock interviews with feedback</p>
+                :
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="border rounded-lg p-4 text-center">
+                    <div className="font-bold text-3xl text-primary mb-2">20+</div>
+                    <p className="text-sm text-gray-600">Hours of interview preparation</p>
+                  </div>
+                  <div className="border rounded-lg p-4 text-center">
+                    <div className="font-bold text-3xl text-primary mb-2">5+</div>
+                    <p className="text-sm text-gray-600">Mock interviews with feedback</p>
+                  </div>
+                  <div className="border rounded-lg p-4 text-center">
+                    <div className="font-bold text-3xl text-primary mb-2">3+</div>
+                    <p className="text-sm text-gray-600">Industry expert mentors</p>
+                  </div>
                 </div>
-                <div className="border rounded-lg p-4 text-center">
-                  <div className="font-bold text-3xl text-primary mb-2">5+</div>
-                  <p className="text-sm text-gray-600">Industry expert mentors</p>
-                </div>
-              </div>
+
+
+              }
+
             </div>
           </TabsContent>
 
