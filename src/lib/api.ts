@@ -2208,8 +2208,9 @@ const courses: Course[] = [
     projects: [
 
 
+      
       {
-        id: "p1",
+        id: "p4",
         title: "How to Create Telegram AI Bot | Build a Telegram AI Bot for Financial Advisory | Step-by-Step Guide",
         description: "",
         image: "https://img.youtube.com/vi/Ei5rti1OiGg/0.jpg",
@@ -2219,7 +2220,7 @@ const courses: Course[] = [
         videoId: "Ei5rti1OiGg"
       },
       {
-        id: "p2",
+        id: "p5",
         title: "How to Build Agent AI | Build Agent AI Using Gen AI Tool | Detect Fake News Using Gen AI Tool",
         description: "",
         image: "https://img.youtube.com/vi/7E6oQRTbcLs/0.jpg",
@@ -2229,7 +2230,7 @@ const courses: Course[] = [
         videoId: "7E6oQRTbcLs"
       },
       {
-        id: "p3",
+        id: "p6",
         title: "How to Create a Bot with Gen AI | Build Tax Payer Bot with Gen AI ",
         description: "",
         image: "https://img.youtube.com/vi/f8Da8x8KNXE/0.jpg",
@@ -2246,7 +2247,7 @@ const courses: Course[] = [
       "Lead cross-functional delivery: write PRDs, define success/guardrail metrics, and align Eng/DS/Design/Legal and GTM teams.",
       "Work with the modern AI+PM toolchain:Figma, Productboard, Jira, Amplitude, Mixpanel, and Retool — alongside ChatGPT, Claude, Gemini, and no-/low-code AI platforms like Flowise, LangGraph, and n8n for RAG, automation, and agent orchestration",
       "Build a portfolio that hires: 20+ labs and case studies (onboarding copilot, RAG assistant, workflow automation, recommendations) plus a capstone.",
-      "Get certified & supported: certificate co-signed by industry experts, 1:1 mentorship, resume reviews, and career assistance for AI PM roles."
+      "Get certified & supported: certificate by Ivy, 1:1 mentorship, resume reviews, and career assistance for AI PM roles."
     ],
 
 

@@ -49,7 +49,8 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
           </p>
         </div>
 
-        <Tabs defaultValue="course-projects" className="max-w-5xl mx-auto">
+        <Tabs defaultValue={course.title === "AI for Product Managers" ? "practice" : "course-projects"}
+          className="max-w-5xl mx-auto">
           <TabsList
             className="flex w-full justify-center items-center overflow-x-auto pb-2 gap-4 no-scrollbar"
             style={{
@@ -58,18 +59,27 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
               padding: '0 16px', // Add horizontal padding if needed
             }}
           >
-            {
-              course.title != "AI for Product Managers" ?
 
-                <TabsTrigger
-                  value="course-projects"
-                  className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[180px] text-center bg-white shadow-sm"
-                >
+
+            <TabsTrigger
+              value="course-projects"
+            // className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[180px] text-center bg-white shadow-sm"
+            >
+
+              {course.title != "AI for Product Managers" ?
+                <>
+
+
                   <span className="inline sm:hidden">Showcase</span>
                   <span className="hidden sm:inline">Alumni Showcase</span>
-                </TabsTrigger> : null
 
-            }
+                </>
+                :
+                null
+
+              }
+            </TabsTrigger>
+
 
             <TabsTrigger
               value="practice"
@@ -159,38 +169,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                   ))}
                 </div>
 
-                {/* <div className="mt-8 bg-primary/5 p-4 sm:p-6 rounded-lg">
-                  <h4 className="font-bold text-lg mb-3">Project-Based Learning Benefits</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="flex items-start">
-                      <div className="bg-primary/10 p-2 rounded-full mr-3">
-                        <BarChart size={18} className="text-primary" />
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-sm">Portfolio Building</h5>
-                        <p className="text-xs text-gray-600">Create impressive portfolio pieces to show future employers</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="bg-primary/10 p-2 rounded-full mr-3">
-                        <GraduationCap size={18} className="text-primary" />
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-sm">Practical Experience</h5>
-                        <p className="text-xs text-gray-600">Apply theoretical knowledge to real-world scenarios</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="bg-primary/10 p-2 rounded-full mr-3">
-                        <Award size={18} className="text-primary" />
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-sm">Industry Recognition</h5>
-                        <p className="text-xs text-gray-600">Projects designed with input from industry experts</p>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
+
               </div>
             )}
           </TabsContent>
@@ -360,14 +339,14 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       ))}
                     </div>
 
-                    <div className="mt-8 p-4 sm:p-6 bg-gray-50 rounded-lg text-center">
+                    {/* <div className="mt-8 p-4 sm:p-6 bg-gray-50 rounded-lg text-center">
                       <p className="text-gray-700 mb-4">
                         Get a taste of our teaching methodology and project-based learning approach before committing to the full course.
                       </p>
                       <Button variant="outline">
                         Explore All Free Projects
                       </Button>
-                    </div>
+                    </div> */}
                   </div>
                 )}
               </TabsContent>
