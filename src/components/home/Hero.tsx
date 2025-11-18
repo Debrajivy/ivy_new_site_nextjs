@@ -81,10 +81,14 @@ const Hero = () => {
         "Attribute": "mx_What_is_Your_Nearest_Branch",
         "Value": formData.branch,
       },
-      // {
-      //   "Attribute": "Source",
-      //   "Value": "Organic Search",
-      // }
+      {
+        "Attribute": "Source",
+        "Value": "Organic Search",
+      },
+      {
+        "Attribute": "Source",
+        "Value": "Pay per Click Ads",
+      }
     ];
 
     try {
@@ -194,19 +198,19 @@ const Hero = () => {
             </div>
 
             {/* Description - Hidden on mobile, shown on desktop */}
-        <div className="hidden lg:block mt-6">
-  <p className="text-sm md:text-base text-gray-700">
-    Land high-paying jobs by choosing Ivy Pro's courses that are accredited by
-    <Link
-      href="/courses/data-science-and-ml-course"
-      className="font-bold"
-      style={{color:'#013a81'}}
-    >
-      &nbsp;NASSCOM, IBM, Govt. of India (MEITY)
-    </Link> 
-    that compiled as per National Occupation Standards.
-  </p>
-</div>
+            <div className="hidden lg:block mt-6">
+              <p className="text-sm md:text-base text-gray-700">
+                Land high-paying jobs by choosing Ivy Pro's courses that are accredited by
+                <Link
+                  href="/courses/data-science-and-ml-course"
+                  className="font-bold"
+                  style={{ color: '#013a81' }}
+                >
+                  &nbsp;NASSCOM, IBM, Govt. of India (MEITY)
+                </Link>
+                that compiled as per National Occupation Standards.
+              </p>
+            </div>
           </div>
 
           {/* Right Column - Form */}
