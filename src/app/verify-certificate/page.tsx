@@ -1,16 +1,17 @@
 "use client";
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { Facebook, Twitter, Linkedin, Youtube, Instagram, Mail, Phone, MapPin, Search, CheckCircle, XCircle } from 'lucide-react';
-import Navbar from '@/components/layout/Navbar';
-// --- TYPESCRIPT INTERFACES AND TYPES ---
+import Navbar from '@/components/layout/Navbar'; 
+
 
 interface StudentData {
-    id: string;
-    branch: string;
-    name: string;
-    program: string;
-    completionMonth: string;
-    level: string;
+    // These fields map to columns in your Google Sheet
+    id: string;              // Maps to the "ID" column
+    branch: string;          // Maps to the "Branch" column
+    name: string;            // Maps to the "Name" column
+    program: string;         // Maps to the "Program" column
+    completionMonth: string; // Maps to the "Completion Month" column
+    level: string;           // Maps to the "Level" column
 }
 
 type VerificationResult = {
@@ -21,15 +22,16 @@ type VerificationResult = {
     message: string;
 };
 
+// Button and other small component prop interfaces
 interface ButtonProps {
     children: React.ReactNode;
-    onClick: () => void;
+    onClick?: () => void;
     className?: string;
     disabled?: boolean;
 }
 
 interface InputProps {
-    placeholder: string;
+    placeholder?: string;
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     className?: string;
@@ -39,19 +41,19 @@ interface NavLinkProps {
     href: string;
     children: React.ReactNode;
     className?: string;
-    "aria-label"?: string; // Optional for accessibility links
+    'aria-label'?: string;
 }
 
 interface VerificationDetailProps {
     label: string;
-    value: string | undefined;
+    value?: string | number | null;
 }
 
 interface PageProps {
     navigate: (page: string) => void;
 }
 
-// --- PLACEHOLDER COMPONENTS (for single-file execution) ---
+// --- UTILITY COMPONENTS (Button and Input remain the same) ---
 
 const Button: React.FC<ButtonProps> = ({ children, onClick, className = '', disabled = false }) => (
     <button
@@ -73,42 +75,123 @@ const Input: React.FC<InputProps> = ({ placeholder, value, onChange, className =
     />
 );
 
-// --- HARDCODED STUDENT DATA (Typed Array) ---
-const studentData: StudentData[] = [
-    { id: "IVY/05/17/1417", branch: "Kolkata", name: "Tufan Maity", program: "Big Data Analytics", completionMonth: "2018-04-18", level: "Distinction" },
-    { id: "IVY/01/17/1097", branch: "Kolkata", name: "Priyanka Srivastava", program: "Business Analytics", completionMonth: "2018-01-18", level: "Completion" },
-    { id: "IVY/04/17/1312", branch: "Delhi", name: "Swati Katyal", program: "Predictive Modelling and Analysis", completionMonth: "2018-12-17", level: "Completion" },
-    { id: "IVY/11/16/18", branch: "Kolkata", name: "Zibraan Ahmed", program: "Big Data Analytics", completionMonth: "2018-04-18", level: "Distinction" },
-    { id: "IVY/3/16/11", branch: "Kolkata", name: "Sayanti Pal", program: "Business Analytics", completionMonth: "2018-03-17", level: "Completion" },
-    { id: "IVY/07/17/1214", branch: "Kolkata", name: "Chinmoyee Dev", program: "EXCEL VBA SQL R Tableau", completionMonth: "2018-04-19", level: "Completion" },
-    { id: "IVY/05/17/1413", branch: "Kolkata", name: "Asmit Kumar", program: "EXCEL VBA SQL SAS R Tableau (2017-18)", completionMonth: "2018-02-01", level: "Completion" },
-    { id: "IVY/08/17/1626", branch: "Delhi", name: "Abhishek Sharan", program: "EXCEL VBA SQL SAS R (2017-18)", completionMonth: "2018-07-01", level: "Completion" },
-    { id: "IVY/01/17/1079", branch: "Delhi", name: "Amit Suyal", program: "EXCEL VBA SQL SAS R (2016-17)", completionMonth: "2018-02-01", level: "Completion" },
-    { id: "IVY/06/16/795", branch: "Kolkata", name: "Salma S Khatoon", program: "EXCEL VBA SQL SAS R (2016-17)", completionMonth: "2018-08-01", level: "Completion" },
-    { id: "IVY/05/18/1792", branch: "Bangalore", name: "Jerusha Samuel", program: "EXCEL VBA SQL SAS R", completionMonth: "2019-01-01", level: "Completion" }
-];
+
+// ----------------------------------------------------------------------
+// --- NEW HOOK FOR DYNAMIC DATA FETCHING ---
+// ----------------------------------------------------------------------
+
+const GOOGLE_SHEET_ID = '1ZE_0Y720GZLfGks5CxaWCvc6qszSX_5228TvWIj_BjU';
+const GID = '0'; // Assumes data is on the first sheet
+
+// Endpoint for fetching public data in JSON format (requires sheet to be published)
+const SHEET_API_URL = `https://docs.google.com/spreadsheets/d/${GOOGLE_SHEET_ID}/gviz/tq?tqx=out:json&gid=${GID}`;
 
 
-// --- VERIFY CERTIFICATE PAGE COMPONENT ---
+const useDynamicStudentData = () => {
+    const [dynamicData, setDynamicData] = useState<StudentData[] | null>(null);
+    const [isDataLoading, setIsDataLoading] = useState(true);
+    const [dataError, setDataError] = useState<string | null>(null);
+
+    // This function fetches and parses the Google Sheet JSON data.
+    const fetchStudentData = useCallback(async () => {
+        setIsDataLoading(true);
+        setDataError(null);
+        try {
+            const response = await fetch(SHEET_API_URL);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            // Google Sheets API returns a JSONP format, so we clean it up.
+            const text = await response.text();
+            const jsonText = text.substring(
+                text.indexOf('{'), 
+                text.lastIndexOf('}') + 1
+            );
+            
+            const json = JSON.parse(jsonText);
+            const rows = json.table.rows;
+            // The column headers retrieved from your file: 
+            // 0: Date of Issuance, 1: Branch, 2: Name, 3: Program, 4: ID, 5: Completion Month, 6: Month of Enrollment, 7: Email, 8: Level, 9: Status
+            
+            const parsedData: StudentData[] = rows.map((row: any) => {
+                const c = row.c; // cells array
+                
+                // Helper to safely get string value from cell object
+                const getCellString = (index: number): string => {
+                    return c[index] && c[index].v ? String(c[index].v) : '';
+                };
+                
+                // Map the spreadsheet columns to your StudentData interface
+                return {
+                    id: getCellString(4), // Column 4: ID
+                    branch: getCellString(1), // Column 1: Branch
+                    name: getCellString(2), // Column 2: Name
+                    program: getCellString(3), // Column 3: Program
+                    completionMonth: getCellString(5), // Column 5: Completion Month
+                    level: getCellString(8), // Column 8: Level
+                } as StudentData;
+            });
+
+            setDynamicData(parsedData);
+        } catch (e: any) {
+            console.error("Error fetching sheet data:", e);
+            setDataError(`Failed to load student registry data. Please ensure the Google Sheet is published to the web. Error: ${e.message}`);
+        } finally {
+            setIsDataLoading(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        fetchStudentData();
+    }, [fetchStudentData]);
+
+    return { dynamicData, isDataLoading, dataError };
+};
+
+// ----------------------------------------------------------------------
+// --- VERIFY CERTIFICATE PAGE COMPONENT (MODIFIED) ---
+// ----------------------------------------------------------------------
 
 const VerifyCertificatePage: React.FC<PageProps> = ({ navigate }) => {
     const [certificateId, setCertificateId] = useState<string>('');
     const [verificationResult, setVerificationResult] = useState<VerificationResult | null>(null);
-    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [isSearching, setIsSearching] = useState<boolean>(false);
+    
+    // --- DYNAMIC DATA INTEGRATION ---
+    const { dynamicData, isDataLoading, dataError } = useDynamicStudentData();
+
+    // Use a combined loading state: initial data fetch or certificate search
+    const isLoading = isSearching || isDataLoading;
 
     const handleSearch = () => {
+        // Handle pre-search errors (data not loaded or missing input)
+        if (dataError) {
+             setVerificationResult({ status: 'error', message: dataError });
+             return;
+        }
+
+        if (isDataLoading || !dynamicData) {
+            setVerificationResult({ status: 'error', message: 'Student data is still loading. Please wait a moment and try again.' });
+            return;
+        }
+
         if (!certificateId.trim()) {
             setVerificationResult({ status: 'error', message: 'Please enter a certificate number to search.' });
             return;
         }
 
-        setIsLoading(true);
+        setIsSearching(true);
         setVerificationResult(null);
 
-        // Simulate API call delay (using local data)
+        // Simulate API call delay (using dynamic data)
         setTimeout(() => {
             const idToSearch = certificateId.trim().toUpperCase();
-            const result = studentData.find(
+            
+            // --- DYNAMIC LOOKUP against the fetched data ---
+            const result = dynamicData.find(
+                // This checks the user's input against the spreadsheet's "ID" column
                 (student) => student.id.toUpperCase() === idToSearch
             );
 
@@ -117,7 +200,7 @@ const VerifyCertificatePage: React.FC<PageProps> = ({ navigate }) => {
             } else {
                 setVerificationResult({ status: 'not_found', message: `Certificate ID "${certificateId}" not found in our records.` });
             }
-            setIsLoading(false);
+            setIsSearching(false);
         }, 500); // 500ms delay for visual feedback
     };
 
@@ -129,6 +212,28 @@ const VerifyCertificatePage: React.FC<PageProps> = ({ navigate }) => {
     );
 
     const renderResult = () => {
+        if (dataError) {
+            return (
+                <div className="mt-8 p-6 bg-red-50 border border-red-200 rounded-xl shadow-lg text-red-700">
+                    <h3 className="text-xl font-bold mb-2">Data Loading Failed</h3>
+                    <p>{dataError}</p>
+                </div>
+            );
+        }
+
+        // Initial loading state indicator for the data registry
+        if (isDataLoading && !verificationResult) {
+             return (
+                 <div className="mt-8 p-6 bg-blue-50 border border-blue-200 rounded-xl shadow-lg text-blue-700 flex items-center justify-center">
+                     <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                     </svg>
+                     <p>Loading student registry data from Google Sheet...</p>
+                 </div>
+             );
+        }
+
         if (!verificationResult) return null;
 
         if (verificationResult.status === 'success') {
@@ -144,9 +249,9 @@ const VerifyCertificatePage: React.FC<PageProps> = ({ navigate }) => {
                         <VerificationDetail label="Certificate ID" value={data.id} />
                         <VerificationDetail label="Student Name" value={data.name} />
                         <VerificationDetail label="Program Name" value={data.program} />
+                        {/* <VerificationDetail label="Completion Date" value={data.completionMonth} /> */}
                         {/* <VerificationDetail label="Completion Status" value={data.level} /> */}
-                        <VerificationDetail label="Completion Date" value={data.completionMonth} />
-                        {/* <VerificationDetail label="Issuing Branch" value={data.branch} /> */}
+                        {/* The component already comments out Issuing Branch and Completion Status, keeping them commented for consistency. */}
                     </div>
                 </div>
             );
@@ -178,7 +283,7 @@ const VerifyCertificatePage: React.FC<PageProps> = ({ navigate }) => {
                     Verify Certificate
                 </h1>
                 <p className="text-gray-600 mb-8">
-                    Enter the unique Certificate ID (e.g., IVY/05/17/1417) to instantly validate the student's credentials against our records.
+                    Enter the unique Certificate ID  to instantly validate the student's credentials against our records.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -190,8 +295,10 @@ const VerifyCertificatePage: React.FC<PageProps> = ({ navigate }) => {
                     />
                     <Button
                         onClick={handleSearch}
-                        className="bg-[#009fda] text-white  disabled:opacity-50 flex items-center justify-center shadow-md rounded-lg"          >
-                        {isLoading ? (
+                        className="bg-[#009fda] text-white disabled:opacity-50 flex items-center justify-center shadow-md rounded-lg"
+                        disabled={isLoading} // Disabled while fetching initial data or actively searching
+                    >
+                        {(isSearching && !isDataLoading) ? ( // Only show spinner for search if data is loaded
                             <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -210,12 +317,13 @@ const VerifyCertificatePage: React.FC<PageProps> = ({ navigate }) => {
 };
 
 
-// --- FOOTER COMPONENT ---
+// ----------------------------------------------------------------------
+// --- REMAINDER OF THE APPLICATION (Footer and App components) ---
+// ----------------------------------------------------------------------
 
 const Footer: React.FC<PageProps> = ({ navigate }) => {
-    // Use a navigation handler instead of next/link
+    // ... (Footer component logic remains the same) ...
     const NavLink: React.FC<NavLinkProps> = useCallback(({ href, children, className = '' }) => {
-        // Determine if the link is external or internal (for simulation)
         const isExternal = href.startsWith('http') || href.startsWith('//') || href.startsWith('#');
         const targetPage = href.startsWith('/') ? href.substring(1) : href;
 
@@ -238,22 +346,10 @@ const Footer: React.FC<PageProps> = ({ navigate }) => {
     }, [navigate]);
 
     const officeLocations = [
-        {
-            city: "Kolkata",
-            address: "14B, Camac St (5th Floor)"
-        },
-        {
-            city: "Pune",
-            address: "Shivajinagar, Maharashtra 411016"
-        },
-        {
-            city: "Bangalore",
-            address: "George Thangaiah Complex, Kalyan Nagar, Indira Nagar 1st Stage, H Colony, Indiranagar, Bengaluru, Karnataka 560038"
-        },
-        {
-            city: "Delhi",
-            address: "Start Works, 1st Floor DCM Building Barakhamba Road"
-        }
+        { city: "Kolkata", address: "14B, Camac St (5th Floor)" },
+        { city: "Pune", address: "Shivajinagar, Maharashtra 411016" },
+        { city: "Bangalore", address: "George Thangaiah Complex, Kalyan Nagar, Indira Nagar 1st Stage, H Colony, Indiranagar, Bengaluru, Karnataka 560038" },
+        { city: "Delhi", address: "Start Works, 1st Floor DCM Building Barakhamba Road" }
     ];
 
     return (
@@ -380,13 +476,9 @@ const Footer: React.FC<PageProps> = ({ navigate }) => {
 // --- MAIN APP COMPONENT (Simulating Next.js Routing) ---
 
 const App: React.FC = () => {
-    // --- CHANGE MADE HERE ---
-    // Initial state is set to 'verify-certificate' so the app starts on the search page.
     const [currentPage, setCurrentPage] = useState<string>('verify-certificate');
 
-    // Function to simulate client-side navigation
     const navigate = useCallback((page: string) => {
-        // Basic guard against unknown pages, defaults to verify-certificate if not home
         setCurrentPage(page === 'home' ? 'home' : 'verify-certificate');
     }, []);
 
@@ -396,7 +488,6 @@ const App: React.FC = () => {
                 return <VerifyCertificatePage navigate={navigate} />;
             case 'home':
             default:
-                // Simple Home/Content Placeholder, now accessible via the main logo link
                 return (
                     <div className="min-h-screen p-8 bg-white text-gray-800">
                         <div className="max-w-4xl mx-auto py-12">
