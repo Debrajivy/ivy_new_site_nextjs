@@ -307,12 +307,12 @@ const courses: Course[] = [
         answer: "The bootcamp requires about 20-25 hours per week for 16 weeks. This includes live sessions, assignments, projects, and self-study."
       },
       {
-        question: "What kind of job support do you offer?",
+        question: "What kind of job support do you provide?",
         answer: "We provide resume reviews, interview preparation, portfolio building, and connections to our hiring partners. Our career services team works with you individually until you secure a job."
       },
       {
         question: "Can I attend part-time while working a full-time job?",
-        answer: "Yes, many of our students work full-time. We offer evening and weekend live sessions, and all sessions are recorded for those who cannot attend live."
+        answer: "Yes, many of our students work full-time. We provide evening and weekend live sessions, and all sessions are recorded for those who cannot attend live."
       }
     ]
   },
@@ -736,7 +736,7 @@ const courses: Course[] = [
       {
         id: "p1",
         title: "Build Cloud Data Pipeline Using Databricks",
-        description: "This video offers an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+        description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
         image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
         skills: ["Apache ", "Big Data", "Azure"],
         difficulty: "Advanced",
@@ -2008,7 +2008,7 @@ const courses: Course[] = [
       {
         id: "p1",
         title: "Build Cloud Data Pipeline Using Databricks",
-        description: "This video offers an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+        description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
         image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
         skills: ["Apache ", "Big Data", "Azure"],
         difficulty: "Advanced",
@@ -2902,7 +2902,7 @@ const courses: Course[] = [
       {
         id: "p1",
         title: "Build Cloud Data Pipeline Using Databricks",
-        description: "This video offers an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+        description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
         image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
         skills: ["Apache ", "Big Data", "Azure"],
         difficulty: "Advanced",

@@ -236,7 +236,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     <div>
                       <h3 className="text-xl font-bold mb-2">Salary Negotiation Support</h3>
                       <p className="text-gray-600">
-                        Get guidance on evaluating job offers, negotiating compensation packages, and understanding
+                        Get guidance on evaluating job opportunities, negotiating compensation packages, and understanding
                         industry salary benchmarks for your role and experience level.
                       </p>
                     </div>
@@ -319,7 +319,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       {course.title === "Generative AI Course" ?
                         "The Executive Certification in GenAI ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
                         course.title === "Data Science with Machine Learning & AI Certification" ?
-                          "The Executive Certification in Data Science, offered in collaboration with the E&ICT Academy - IIT Guwahati, is widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
+                          "The Executive Certification in Data Science, in collaboration with the E&ICT Academy - IIT Guwahati, is widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
                           course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ?
                             "Launch your cloud career with an elite certification FROM Ivy Pro School. Designed with experts from Amazon & Accenture, it proves your ability to build real-time data systems using Spark, Kafka, and AWS." :
                             course.title === "Data Science with Machine Learning & AI Certification" ?
@@ -676,7 +676,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     </div>
                     <div>
                       <div className="flex justify-between text-sm mb-1">
-                        <span>Job Offer Rate</span>
+                        <span>Job Success Ratio</span>
                         <span className="font-medium">65%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">

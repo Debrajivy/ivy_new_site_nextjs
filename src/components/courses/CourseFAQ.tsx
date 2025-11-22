@@ -38,7 +38,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     faqs: [
       {
         question: "What is the duration of the AI Product Manager course?",
-        answer: "The course runs for 6–8 weeks with 25–30 hours of live and recorded sessions, offering flexible weekday, weekend, and fast-track options for working professionals.",
+        answer: "The course runs for 6–8 weeks with 25–30 hours of live and recorded sessions, providing flexible weekday, weekend, and fast-track options for working professionals.",
         category: "program"
       },
       {
@@ -148,7 +148,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What salary growth can I expect after this course?",
-        answer: "AI-savvy project managers command higher salaries than traditional PMs, with many companies offering premium pay for AI-enabled leadership skills.",
+        answer: "AI-savvy project managers command higher salaries than traditional PMs, with many companies providing premium pay for AI-enabled leadership skills.",
         category: "job and career"
       },
       {
@@ -207,7 +207,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "projects"
       },
       {
-        question: "Does Ivy offer placement support after the course?",
+        question: "Does Ivy provide placement support after the course?",
         answer: "Yes. Ivy Professional School provides product manager course with placement assistance, including resume building, interview preparation, mock interviews, and job referrals.",
         category: "placement"
       },
@@ -228,7 +228,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Will I get continued placement support in the future?",
-        answer: "Yes. Ivy offers lifetime career and placement support, so you can access guidance, referrals, and interview prep even after years of completing the course.",
+        answer: "Yes. Ivy provides lifetime career and placement support, so you can access guidance, referrals, and interview prep even after years of completing the course.",
         category: "placement"
       },
       {
@@ -303,7 +303,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What makes this program unique?",
-        answer: "It offers Generative AI mastery, IT certification, and production-level model deployment.",
+        answer: "It provides Generative AI mastery, IT certification, and production-level model deployment.",
         category: "program"
       },
       {
@@ -387,7 +387,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "job and career"
       },
       {
-        question: "What is the average salary offered?",
+        question: "What is the average salary provide?",
         answer: "4-5 LPA is the average for freshers. Experienced professionals may earn more.",
         category: "job and career"
       },
@@ -408,7 +408,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Will I be connected to recruiters?",
-        answer: "Yes, Ivy offers recruiter access and job fairs.",
+        answer: "Yes, Ivy provides recruiter access and job fairs.",
         category: "job and career"
       },
       {
@@ -483,7 +483,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Is placement assistance lifetime?",
-        answer: "Yes, Ivy offers lifetime job and career support.",
+        answer: "Yes, Ivy provides lifetime job and career support.",
         category: "placement"
       },
       {
@@ -673,7 +673,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "job and career"
       },
       {
-        question: "Does Ivy offer job placement assistance?",
+        question: "Does Ivy provides job placement assistance?",
         answer: "Yes, including end-to-end placement assistance and career coaching.",
         category: "job and career"
       },
@@ -768,18 +768,18 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "placement"
       },
       {
-        question: "Does Ivy offer networking opportunities?",
+        question: "Does Ivy provides networking opportunities?",
         answer: "Yes, through valuable job fairs, meetups, and alumni events.",
         category: "placement"
       },
       {
         question: "Is placement support available after course completion?",
-        answer: "Yes, lifetime placement assistance is offered.",
+        answer: "Yes, lifetime placement assistance is provided.",
         category: "placement"
       },
       {
-        question: "Does Ivy offer salary negotiation help?",
-        answer: "Yes, Ivy provides offer evaluation and negotiation guidance.",
+        question: "Does Ivy provide salary negotiation help?",
+        answer: "Yes, Ivy provides evaluation and negotiation guidance.",
         category: "placement"
       },
       {
@@ -949,7 +949,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "job and career"
       },
       {
-        question: "Does Ivy offer job placement assistance?",
+        question: "Does Ivy provide job placement assistance?",
         answer: "Yes, including end-to-end placement assistance and career coaching.",
         category: "job and career"
       },
@@ -1044,18 +1044,18 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "placement"
       },
       {
-        question: "Does Ivy offer networking opportunities?",
+        question: "Does Ivy provides networking opportunities?",
         answer: "Yes, through valuable job fairs, meetups, and alumni events.",
         category: "placement"
       },
       {
         question: "Is placement support available after course completion?",
-        answer: "Yes, lifetime placement assistance is offered.",
+        answer: "Yes, lifetime placement assistance is provided.",
         category: "placement"
       },
       {
-        question: "Does Ivy offer salary negotiation help?",
-        answer: "Yes, Ivy provides offer evaluation and negotiation guidance.",
+        question: "Does Ivy provide salary negotiation help?",
+        answer: "Yes, Ivy provides evaluation and negotiation guidance.",
         category: "placement"
       },
       {
@@ -1226,7 +1226,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Is placement assistance provided?",
-        answer: "Yes, Ivy offers full career support including job fairs and referrals.",
+        answer: "Yes, Ivy provides full career support including job fairs and referrals.",
         category: "job and career"
       },
       {
@@ -1320,7 +1320,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "placement"
       },
       {
-        question: "Do you offer interview preparation?",
+        question: "Do you provide interview preparation?",
         answer: "Yes, mock interviews and personalized coaching are part of the career support.",
         category: "placement"
       },
@@ -1330,8 +1330,8 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "placement"
       },
       {
-        question: "Do you help with offer negotiations?",
-        answer: "Yes, support is offered to assess and negotiate offers.",
+        question: "Do you provide salary negotiations?",
+        answer: "Yes, support is provided to assess and negotiate salary.",
         category: "placement"
       },
       {
@@ -1385,7 +1385,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "support"
       },
       {
-        question: "Do you offer PrepAI support for interviews?",
+        question: "Do you provide PrepAI support for interviews?",
         answer: "Yes, PrepAI includes resume review, mock interviews, and skill assessments.",
         category: "support"
       },
@@ -1435,7 +1435,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       { question: "What job roles can I pursue after the course?", answer: "Roles like Business Analyst, Data Analyst, MIS Analyst, and Research Analyst.", category: "job-and-career" },
       { question: "Does Ivy provide placement assistance?", answer: "Yes, with resume building, interview prep, and job referrals.", category: "job-and-career" },
       { question: "Is there a job guarantee option?", answer: "Yes, eligible students can opt for a 6-month job guarantee.", category: "job-and-career" },
-      { question: "What is the average salary offered?", answer: "Around ₹12 LPA for full-time roles, depending on profile and experience.", category: "job-and-career" },
+      { question: "What is the average salary?", answer: "Around ₹12 LPA for full-time roles, depending on profile and experience.", category: "job-and-career" },
       { question: "Is the job switcher-friendly?", answer: "Yes, the course is designed to support domain switchers.", category: "job-and-career" },
       { question: "Will I get mock interview support?", answer: "Yes, through Prepal and mentor interactions.", category: "job-and-career" },
       { question: "Do I get certified after completing the course?", answer: "Yes, by an IBM certificate co-branded with NASSCOM is awarded.", category: "certification" },
@@ -1450,9 +1450,9 @@ const courseData: { [key: string]: CourseFAQData } = {
       { question: "Can I use projects in my portfolio?", answer: "Yes, they are meant to showcase your practical skills.", category: "projects" },
       { question: "Who are the placement partners?", answer: "Companies like Amazon, IBM, EY, PwC, Deloitte, KPMG, and more.", category: "placement" },
       { question: "Is lifetime placement support available?", answer: "Yes, Ivy provides lifelong career support.", category: "placement" },
-      { question: "Are resume and LinkedIn reviews offered?", answer: "Yes, Ivy offers standard placement process.", category: "placement" },
+      { question: "Are resume and LinkedIn reviews?", answer: "Yes, Ivy provides standard placement process.", category: "placement" },
       { question: "Can I get help with senior or freelance roles?", answer: "Yes, placement services also include mentor opportunities.", category: "placement" },
-      { question: "Will I be supported in salary negotiations?", answer: "Yes, Ivy provides expert advice and offer evaluations.", category: "placement" },
+      { question: "Will I be supported in salary negotiations?", answer: "Yes, Ivy provides expert advice and salary evaluations.", category: "placement" },
       { question: "Is job fair participation included?", answer: "Yes, learners are invited to hiring events and job fairs.", category: "placement" },
       { question: "Which industries hire business analytics professionals?", answer: "Finance, marketing, IT, e-commerce, retail, and consulting.", category: "opportunities" },
       { question: "Is this course useful for career switches?", answer: "Yes, it helps learners transition into analytics roles.", category: "opportunities" },
@@ -1462,7 +1462,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       { question: "Is this course helpful for MBA or M.Sc. students?", answer: "Yes, it strengthens analytical decision-making and quantitative skills.", category: "opportunities" },
       { question: "What kind of mentorship is provided?", answer: "Yes, including one-on-one sessions with industry experts.", category: "support" },
       { question: "Do I get access to Prepal career support?", answer: "Yes, for mock interviews, resume prep, and assessments.", category: "support" },
-      { question: "Is technical support included?", answer: "Yes, Ivy offers full academic and tech support.", category: "support" },
+      { question: "Is technical support included?", answer: "Yes, Ivy provides full academic and tech support.", category: "support" },
       { question: "Can I interact with peers and alumni?", answer: "Yes, via community channels and networking events.", category: "support" },
       { question: "Is support available post-course?", answer: "Yes, including job support, mentoring, and project guidance.", category: "support" }
     ]
@@ -1502,7 +1502,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "program"
       },
       {
-        question: "What content does this course offer?",
+        question: "What content does this course provide?",
         answer: "You'll learn data science, data story telling, and about 50+ real-world projects.",
         category: "program"
       },
@@ -1677,7 +1677,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "placement"
       },
       {
-        question: "Are resume and LinkedIn reviews offered?",
+        question: "Are resume and LinkedIn reviews provided?",
         answer: "Yes, a dedicated executive mentoring expert for resume reviews is provided.",
         category: "placement"
       },
@@ -1687,8 +1687,8 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "placement"
       },
       {
-        question: "Is support offered for salary negotiation?",
-        answer: "Yes, including guidance on offers and benchmarking.",
+        question: "Is support provided for salary negotiation?",
+        answer: "Yes, including guidance on provides and benchmarking.",
         category: "placement"
       },
       {
@@ -1878,12 +1878,12 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What salary can I expect after this course?",
-        answer: "Average salary offered is 12 LPA, depending on background and role.",
+        answer: "Average salary provided is 12 LPA, depending on background and role.",
         category: "job and career"
       },
       {
         question: "Will I get help with salary negotiation?",
-        answer: "Yes, Ivy provides support in offer evaluation and salary negotiation.",
+        answer: "Yes, Ivy provides support in provide evaluation and salary negotiation.",
         category: "job and career"
       },
       {
@@ -1962,7 +1962,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "placement"
       },
       {
-        question: "Does Ivy offer lifetime placement assistance?",
+        question: "Does Ivy provide lifetime placement assistance?",
         answer: "Yes, you can access placement services anytime.",
         category: "placement"
       },
@@ -2023,7 +2023,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Is there technical support if I face issues?",
-        answer: "Yes, Ivy’s team offers full tech and learning support.",
+        answer: "Yes, Ivy’s team provides full tech and learning support.",
         category: "support"
       },
       {
@@ -2033,7 +2033,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Is PrepAI integrated for learning support?",
-        answer: "Yes, PrepAI offers mock interviews, career coaching, and assessments.",
+        answer: "Yes, PrepAI provides mock interviews, career coaching, and assessments.",
         category: "support"
       }
     ]

@@ -36,7 +36,7 @@ const AIFeatures = () => {
           </h2>
           {/* Updated Subheading */}
           <p className="text-white/80 max-w-3xl mx-auto">
-            PrepAI, powered by Ivy Pro School, that offers role-based diagnosis, detailed feedback, lesson plans, AI interviews, an AI career coach, and connections with real recruiters—all in one place.          </p>
+            PrepAI, powered by Ivy Pro School, that provides role-based diagnosis, detailed feedback, lesson plans, AI interviews, an AI career coach, and connections with real recruiters—all in one place.          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -11,16 +11,16 @@ import { HelpCircle } from 'lucide-react';
 const FAQ = () => {
   const faqs = [
     {
-      question: "What courses does Ivy Professional School offer?",
-      answer: "Being a leading data science institute, Ivy Professional School offers a wide range of courses in GenAI, Data Science, Data Engineering, Data Visualization, Business Analytics, Machine Learning, and more, helping you learn skills and gain experiences that lead to a high-income salary and a rewarding career."
+      question: "What courses does Ivy Professional School provide?",
+      answer: "Being a leading data science institute, Ivy Professional School provides a wide range of courses in GenAI, Data Science, Data Engineering, Data Visualization, Business Analytics, Machine Learning, and more, helping you learn skills and gain experiences that lead to a high-income salary and a rewarding career."
     },
     {
       question: "Are online classes available?",
-      answer: "Yes, we offer both online and in-person classes. From data science certification courses to data engineering certification courses, all of our classes are live, with real-time instruction from our expert educators. These classes are held every weekend. Currently, our in-person classes are available only in Kolkata."
+      answer: "Yes, we provide both online and in-person classes. From data science certification courses to data engineering certification courses, all of our classes are live, with real-time instruction from our expert educators. These classes are held every weekend. Currently, our in-person classes are available only in Kolkata."
     },
     {
       question: "How do I get admission, and what are the fees?",
-      answer: "We at Ivy Professional School welcome everyone, from freshers to working professionals. There are no specific admission requirements. We offer a variety of courses in GenAI, Data Science, Data Engineering, Data Analytics, Data Visualization, etc., to meet your needs and the fees vary by course. Explore our course pages or call 7676882222 for details."
+      answer: "We at Ivy Professional School welcome everyone, from freshers to working professionals. There are no specific admission requirements. We provide a variety of courses in GenAI, Data Science, Data Engineering, Data Analytics, Data Visualization, etc., to meet your needs and the fees vary by course. Explore our course pages or call 7676882222 for details."
     },
     {
       question: "Can working professionals attend the courses?",
