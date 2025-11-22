@@ -604,7 +604,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Are there any trial labs before enrolling?",
-        answer: "Yes, you can join two free classes before enrollment.",
+        answer: "Yes, you can join two demo classes before enrollment.",
         category: "program"
       },
       {
@@ -880,7 +880,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Are there any trial labs before enrolling?",
-        answer: "Yes, you can join two free classes before enrollment.",
+        answer: "Yes, you can join two demo classes before enrollment.",
         category: "program"
       },
       {
@@ -1419,7 +1419,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       { question: "What tools and technologies are taught?", answer: "Excel, SQL, Python, R, Tableau, and Excel VBA are included.", category: "program" },
       { question: "Is this course delivered online?", answer: "Yes, the course is fully online with live sessions and recorded access.", category: "program" },
       { question: "What is the learning format?", answer: "You’ll learn via instructor-led classes, projects, and self-paced resources.", category: "program" },
-      { question: "Are trial classes available?", answer: "Yes, you can join two free trial sessions before enrollment.", category: "program" },
+      { question: "Are trial classes available?", answer: "Yes, you can join two demo trial sessions before enrollment.", category: "program" },
       { question: "Who is this course for?", answer: "MBA students, engineers, B.Sc., M.Sc. grads, professionals in banking/IT, and students from math, stats, econ, and commerce.", category: "program" },
       { question: "Do I need coding experience?", answer: "No, prior coding experience is not required.", category: "eligibility" },
       { question: "Is this course suitable for college students?", answer: "Yes, especially for final-year or third-year students.", category: "eligibility" },
@@ -1943,7 +1943,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "Can I try sample projects before enrolling?",
-        answer: "Yes, you can access trial projects for free.",
+        answer: "Yes, you can access trial projects for no cost.",
         category: "projects"
       },
       {
@@ -2027,7 +2027,7 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "support"
       },
       {
-        question: "Can I attend free classes after course enrollment?",
+        question: "Can I attend demo classes after course enrollment?",
         answer: "Yes, sample classes are available after enrollment.",
         category: "support"
       },

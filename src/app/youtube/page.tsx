@@ -165,7 +165,7 @@ const Youtube = () => {
               <h1 className="text-4xl font-bold">Ivy School YouTube Channel</h1>
             </div>
             <p className="text-xl text-center max-w-3xl mx-auto mb-8">
-              Free tutorials, success stories, and insights about data science, data engineering, and AI
+              Tutorials, success stories, and insights about data science, data engineering, and AI
             </p>
             <div className="flex justify-center">
               <Button className="bg-red-600 hover:bg-red-700" size="lg" asChild>

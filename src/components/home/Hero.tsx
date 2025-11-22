@@ -218,7 +218,7 @@ const Hero = () => {
             <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-6 w-full h-full flex flex-col">
               <div className="text-center mb-6">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-                  Join Two Classes for <span className="text-[#1a98cb]">FREE</span>
+                  Join Two Classes for <span className="text-[#1a98cb]">No Cost</span>
                 </h2>
                 <p className="text-gray-600 text-sm md:text-base">
                   Learn with Experts & Industry Leaders from IIT & IIM

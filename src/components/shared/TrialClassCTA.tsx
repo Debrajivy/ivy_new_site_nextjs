@@ -18,7 +18,7 @@ const TrialClassCTA = ({ variant = 'default', className = '' }: TrialClassCTAPro
             <Calendar className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold text-lg">Try First 2 Classes Free</h3>
+            <h3 className="font-semibold text-lg">Try First 2 Classes No Cost</h3>
             <p className="text-gray-600 text-sm">Experience our teaching methodology firsthand</p>
           </div>
           <Button className="ml-auto whitespace-nowrap" asChild>
@@ -35,7 +35,7 @@ const TrialClassCTA = ({ variant = 'default', className = '' }: TrialClassCTAPro
         <Calendar className="h-5 w-5 text-primary mr-2" />
         <span className="mr-2 font-medium">New students:</span>
         <Link href="/register-trial" className="text-primary font-medium hover:underline flex items-center">
-          Try First 2 Classes Free <ChevronRight className="h-4 w-4 ml-1" />
+          Try First 2 Classes at No Cost <ChevronRight className="h-4 w-4 ml-1" />
         </Link>
       </div>
     );
@@ -50,12 +50,12 @@ const TrialClassCTA = ({ variant = 'default', className = '' }: TrialClassCTAPro
             <h3 className="font-bold text-xl">Try Before You Commit</h3>
           </div>
           <p className="text-gray-600">
-            Experience the Ivy difference with two free trial classes. No obligations, just quality learning.
+            Experience the Ivy difference with two trial classes. No obligations, just quality learning.
           </p>
         </div>
         
         <Button size="lg" className="bg-ivy-blue-dominant" asChild>
-          <Link href="/register-trial">Register for Free Trial Classes</Link>
+          <Link href="/register-trial">Register for No Cost Trial Classes</Link>
         </Button>
       </div>
     </div>

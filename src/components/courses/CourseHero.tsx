@@ -519,7 +519,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               <div className="text-center mb-6">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                   Join Two Classes for{" "}
-                  <span className="text-[#1a98cb]">FREE</span>
+                  <span className="text-[#1a98cb]">No Cost</span>
                 </h2>
                 <p className="text-gray-600 text-sm md:text-base">
                   Learn with Experts & Industry Leaders from IIT & IIM

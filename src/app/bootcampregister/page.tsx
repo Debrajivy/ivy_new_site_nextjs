@@ -269,7 +269,7 @@ const BootcampRegister = () => {
                   desc: "Concepts explained step-by-step with live walkthroughs anyone can follow.",
                 },
                 {
-                  title: "Free Certification",
+                  title: "Zero cost Certification",
                   desc: "Validate your skillset with a certificate to add to your resume.",
                 },
                 {

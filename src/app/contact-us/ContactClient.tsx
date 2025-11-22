@@ -153,12 +153,12 @@ const ContactClient = () => {
                 </div>
 
                 <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-4">Try Our Free Classes</h3>
+                  <h3 className="text-xl font-semibold mb-4">Try Our Demo Classes with No Cost</h3>
                   <p className="mb-4">
-                    Experience our teaching methodology firsthand. Register for two free trial classes and explore our
+                    Experience our teaching methodology firsthand. Register for two trial classes and explore our
                     learning environment.
                   </p>
-                  {/* <Button className="bg-ivy-blue">Register for Free Classes</Button> */}
+                  {/* <Button className="bg-ivy-blue">Register for trial Classes</Button> */}
                 </div>
               </div>
             </div>

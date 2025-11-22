@@ -36,7 +36,7 @@ const linkData: LinkData[] = [
   { "anchorText": "data science course python", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "data science course noida", "hyperlink": "Noida Micro Page" },
   { "anchorText": "data science course for beginners", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
-  { "anchorText": "data science course online free", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
+  { "anchorText": "data science course online", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "data science course gurgaon", "hyperlink": "Gurgaon Micro Page" },
   { "anchorText": "data science course details", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" },
   { "anchorText": "data science online classes", "hyperlink": "https://ivyproschool.com/courses/data-science-and-ml-course" }

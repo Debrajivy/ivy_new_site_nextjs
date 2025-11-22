@@ -194,7 +194,7 @@ const CourseSubNavigation = () => {
                 </button>
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Join Two Classes for <span style={{ color: '#1a98cb' }}>FREE</span>
+                    Join Two Classes for <span style={{ color: '#1a98cb' }}>No Cost</span>
                   </h2>
                   <p className="text-gray-600 mb-4" style={{ fontSize: 14 }}>
                     Learn with Experts & Industry Leaders from IIT & IIM

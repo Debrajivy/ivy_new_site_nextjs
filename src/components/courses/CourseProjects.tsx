@@ -258,7 +258,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         Get a taste of our teaching methodology and project-based learning approach before committing to the full course.
                       </p>
                       <Button variant="outline">
-                        Explore All Free Projects
+                        Explore All Projects
                       </Button>
                     </div> */}
                   </div>
@@ -344,7 +344,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         Get a taste of our teaching methodology and project-based learning approach before committing to the full course.
                       </p>
                       <Button variant="outline">
-                        Explore All Free Projects
+                        Explore All Projects
                       </Button>
                     </div> */}
                   </div>
@@ -427,7 +427,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                     Get a taste of our teaching methodology and project-based learning approach before committing to the full course.
                   </p>
                   <Button variant="outline">
-                    Explore All Free Projects
+                    Explore All Projects
                   </Button>
                 </div>
               </div>

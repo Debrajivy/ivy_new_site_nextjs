@@ -173,7 +173,7 @@ const aiTopics: AITopic[] = [
     difficulty: "Intermediate",
     status: "Rising",
     icon: Code,
-    shortDescription: "Free, customizable AI models you can run yourself",
+    shortDescription: "Customizable AI models you can run yourself",
     whatIsIt:
       "Open source models like Llama, Mistral, and Phi are powerful AI models you can download, modify, and run on your own hardware without paying API fees.",
     whyItMatters:
@@ -258,7 +258,7 @@ const aiTopics: AITopic[] = [
     whatIsIt:
       "Voice AI includes speech-to-text (transcription), text-to-speech (voice generation), and voice cloning. It's what powers Siri, Alexa, and AI voice assistants.",
     whyItMatters:
-      "Voice is the most natural interface for humans. As voice AI improves, it's enabling hands-free computing, accessibility tools, and more natural human-AI interaction.",
+      "Voice is the most natural interface for humans. As voice AI improves, it's enabling hands-off computing, accessibility tools, and more natural human-AI interaction.",
     howToLearn: [
       "Start with Whisper (OpenAI's speech recognition model)",
       "Learn about audio processing and spectrograms",

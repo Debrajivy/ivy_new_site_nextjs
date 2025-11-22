@@ -487,7 +487,7 @@ const App: React.FC = () => {
                                           <nav className="breadcrumbs">
                                             <Link href="/">Home</Link>
                                             <span>/</span>
-                                            <Link href="/bootcamp">Join a free data & AI webinar</Link>
+                                            <Link href="/bootcamp">Join our data & AI webinar</Link>
                                             {/* Removed broken course link due to missing 'course' variable */}
                                           </nav>
                                         </Badge>
@@ -495,14 +495,14 @@ const App: React.FC = () => {
                                 Unlock Your Potential with <span className="text-yellow-300">Expert</span>
                             </h1>
                             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto lg:mx-0 animate-fade-in-left opacity-90">
-                                Join our free masterclasses, designed by industry experts from IIT & IIM to give you an unparalleled edge in your career journey.
+                                Join our masterclasses, designed by industry experts from IIT & IIM to give you an unparalleled edge in your career journey.
                             </p>
 
                             {/* Next Upcoming Bootcamp Details */}
                             {nextUpcomingBootcamp ? (
                                 <div className="mb-12 animate-fade-in-left text-left lg:text-left">
                                     <h2 className="text-3xl font-bold text-yellow-200 mb-4">
-                                        Excel & AI Agent Free Certification Bootcamp: {nextUpcomingBootcamp.name}
+                                        Excel & AI Agent No Cost Certification Bootcamp: {nextUpcomingBootcamp.name}
                                     </h2>
                                     <div className="flex items-center text-blue-100 text-lg mb-2">
                                         <CalendarDays className="w-6 h-6 mr-2 text-yellow-300" />
