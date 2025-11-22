@@ -130,9 +130,8 @@ const CourseSubNavigation = () => {
     <>
       {/* Desktop Sub-navigation (unchanged) */}
       <nav
-        className={`w-full bg-[#006dd9] text-white py-3 shadow-md transition-all duration-300 z-40 ${
-          isSubNavSticky ? 'fixed left-0 animate-slideDown' : 'relative'
-        } hidden lg:block`}
+        className={`w-full bg-[#006dd9] text-white py-3 shadow-md transition-all duration-300 z-40 ${isSubNavSticky ? 'fixed left-0 animate-slideDown' : 'relative'
+          } hidden lg:block`}
         style={isSubNavSticky ? { top: `${NAVBAR_HEIGHT}px` } : {}}
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
@@ -285,9 +284,9 @@ const CourseSubNavigation = () => {
           >
             <X size={20} />
           </Button>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Limited Time Offer!</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Limited Time Opportunity!</h3>
           <p className="text-gray-700 mb-4">
-            Don't miss out! Enroll now and get special discounts on our popular courses.
+            Don’t miss out! Enroll now and get special pricing  on our popular courses.
           </p>
           <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" onClick={handleClick}>
             Enroll Now
