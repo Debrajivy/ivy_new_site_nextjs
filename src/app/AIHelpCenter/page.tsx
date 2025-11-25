@@ -427,7 +427,7 @@ export default function AILearningHub() {
           <Card className="p-6">
             <div className="space-y-4">
               {/* Search */}
-              <div className="relative">
+              {/* <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
                   type="text"
@@ -436,7 +436,7 @@ export default function AILearningHub() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
-              </div>
+              </div> */}
 
               {/* Filters */}
               <div className="flex flex-col sm:flex-row gap-4">
