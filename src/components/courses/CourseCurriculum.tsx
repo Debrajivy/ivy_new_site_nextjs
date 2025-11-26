@@ -106,15 +106,15 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
 
   const pricingDetails: Record<string, { courseFee: number; registration: number; emi: number; months: number }> = {
-    'Data Analytics Course': { courseFee: 42000, registration: 10000, emi: 4421, months: 9 },
-    'Data Analytics and Generative AI Course': { courseFee: 41000, registration: 10000, emi: 2604, months: 9 },
-    'Data Science with Machine Learning & AI Certification': { courseFee: 56000, registration: 10000, emi: 5571, months: 9 },
+    'Data Analytics Course': { courseFee: 42000, registration: 10000, emi: 3556, months: 9 },
+    'Data Analytics and Generative AI Course': { courseFee: 41000, registration: 10000, emi: 3445, months: 9 },
+    'Data Science with Machine Learning & AI Certification': { courseFee: 56000, registration: 10000, emi: 5111, months: 9 },
     // Removed duplicate 'Data Analytics and Generative AI Course' key to fix error
-    ' Data Engineering Course': { courseFee: 58500, registration: 10000, emi: 6601, months: 9 },
-    'Generative AI Course': { courseFee: 69000, registration: 30000, emi: 3768, months: 12 },
-    'AI for Product Managers': { courseFee: 29000, registration: 30000, emi: 14500, months: 12 },
-    'AI and Machine Learning Course': { courseFee: 39000, registration: 11000, emi: 3780, months: 12 },
-    'Data science course (Pay after Placement)': { courseFee: 135000, registration: 10000, emi: 17110, months: 12 },
+    ' Data Engineering Course': { courseFee: 58500, registration: 10000, emi: 5389, months: 9 },
+    'Generative AI Course': { courseFee: 69000, registration: 10000, emi: 6556, months: 9 },
+    'AI for Product Managers': { courseFee: 29000, registration: 10000, emi: 9500, months: 2 },
+    'AI and Machine Learning Course': { courseFee: 39000, registration: 10000, emi: 3223, months: 9 },
+    'Data science course (Pay after Placement)': { courseFee: 135000, registration: 10000, emi: 13890, months: 9 },
 
   };
 
@@ -340,7 +340,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                                   {
                                     course.title == "AI for Product Managers" ? <p className="text-xs text-gray-500">Pay in 2 installment* (plus GST)</p> :
 
-                                      <p className="text-xs text-gray-500">For {details.months} months* (including GST)</p>
+                                      <p className="text-xs text-gray-500">For {details.months} months* (excluding GST)</p>
                                   }
 
 
