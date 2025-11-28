@@ -96,48 +96,88 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     setSubmitMessage("Submitting your details...");
 
     // ✅ keep your full payload
+    // const payload = [
+    //   {
+    //     Attribute: "EmailAddress",
+    //     Value: formData.email,
+    //   },
+    //   {
+    //     Attribute: "FirstName",
+    //     Value: formData.name,
+    //   },
+    //   {
+    //     Attribute: "Phone",
+    //     Value: formData.phone,
+    //   },
+    //   {
+    //     Attribute: "mx_Citywise",
+    //     Value: formData.city,
+    //   },
+    //   {
+    //     Attribute: "mx_Program",
+    //     Value: formData.program,
+    //   },
+    //   {
+    //     Attribute: "mx_What_is_Your_Nearest_Branch",
+    //     Value: formData.branch,
+    //   },
+    //   {
+    //     Attribute: "Source",
+    //     Value: "Organic Search",
+    //   },
+    //   {
+    //     Attribute: "mx_Course",
+    //     Value: sourceCampaignValue
+    //   },
+    //   {
+    //     Attribute: "SourceMedium",
+    //     Value: "Google"
+    //   },
+    //   {
+    //     Attribute: "Source",
+    //     Value: "Pay per Click Ads",
+    //   }
+    // ];
+
+
     const payload = [
-      {
-        Attribute: "EmailAddress",
-        Value: formData.email,
-      },
-      {
-        Attribute: "FirstName",
-        Value: formData.name,
-      },
-      {
-        Attribute: "Phone",
-        Value: formData.phone,
-      },
-      {
-        Attribute: "mx_Citywise",
-        Value: formData.city,
-      },
-      {
-        Attribute: "mx_Program",
-        Value: formData.program,
-      },
-      {
-        Attribute: "mx_What_is_Your_Nearest_Branch",
-        Value: formData.branch,
-      },
-      {
-        Attribute: "Source",
-        Value: "Organic Search",
-      },
-      {
-        Attribute: "mx_Course",
-        Value: sourceCampaignValue
-      },
-      {
-        Attribute: "SourceMedium",
-        Value: "Google"
-      },
-      {
-        Attribute: "Source",
-        Value: "Pay per Click Ads",
-      }
-    ];
+  {
+    Attribute: "EmailAddress",
+    Value: formData.email,
+  },
+  {
+    Attribute: "FirstName",
+    Value: formData.name,
+  },
+  {
+    Attribute: "Phone",
+    Value: formData.phone,
+  },
+  {
+    Attribute: "mx_Citywise",
+    Value: formData.city,
+  },
+  {
+    Attribute: "mx_Program",
+    Value: formData.program,
+  },
+  {
+    Attribute: "mx_What_is_Your_Nearest_Branch",
+    Value: formData.branch,
+  },
+  {
+    Attribute: "Source",
+    Value: "Organic Search",  // ⬅️ Only one Source attribute
+  },
+  {
+    Attribute: "mx_Course",
+    Value: sourceCampaignValue
+  },
+  {
+    Attribute: "SourceMedium",
+    Value: "Google"
+  }
+];
 
     try {
       const response = await fetch(API_URL, {

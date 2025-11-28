@@ -88,13 +88,7 @@ const IVY_COURSES: Course[] = [
     keywords: ['business analytics', 'sql', 'statistics', 'excel', 'business intelligence', 'decision making'],
     link: '/courses/data-analytics-and-generative-ai-course',
   },
-  {
-    id: 'cloud-de-iitg',
-    name: 'Cloud Data Engineering Course with IIT Guwahati',
-    description: 'An advanced program in cloud data engineering, focusing on scalable data solutions with IIT Guwahati expertise.',
-    keywords: ['cloud', 'data engineering', 'advanced', 'iit guwahati', 'big data', 'distributed systems'],
-    link: '/courses/iit-data-engineering-course',
-  },
+  
 ];
 
 
