@@ -309,9 +309,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   course.title === "Data science course (Pay after Placement)" ? (
                   <Image
 
-                    width={150}
-                    height={80}
-                    className="h-20 w-auto object-contain"
+                    width={170}
+                    height={120}
+                    className="h-32 w-auto object-contain"
                     src={NASSCOMNEW}
                     alt="NASSCOM Certification"
                   />
@@ -355,7 +355,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     : course.title === "Generative AI Course"
                       ? "1220 students"
                       : course.title === "Data Science with Machine Learning & AI Certification"
-                        ? "1136 students"
+                        ? "1440 students"
                         : course.title === " Data Engineering Course"
                           ? "862 students"
                           : course.title === "Data Science with Machine Learning & AI Certification"
@@ -379,7 +379,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
                 {/* <span>{courseHours[course.title] || "225 Hours"}</span> */}
                 {course.title === "AI and Machine Learning Course"
-                  ? "32 Hours"
+                  ? "32 Hours":
+                  course.title === "Data Science with Machine Learning & AI Certification"
+                    ? "232 Hours"
                   : course.title === "AI for Product Managers"
                     ? "24 Hours"
                     : "225 Hours"
