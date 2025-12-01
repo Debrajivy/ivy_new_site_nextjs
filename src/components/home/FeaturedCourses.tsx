@@ -127,7 +127,7 @@ const featuredCourses: Course[] = [
     keyFeatures: [
       "In-depth ML algorithms",
       "Deep learning with TensorFlow/PyTorch",
-      "Data visualization with Power BI"
+      "Data visualization with Tableau"
     ]
   },
   {
@@ -215,7 +215,7 @@ const featuredCourses: Course[] = [
     keyFeatures: [
       "In-depth ML algorithms",
       "Deep learning with TensorFlow/PyTorch",
-      "Data visualization with Power BI"
+      "Data visualization with Tableau"
     ]
   },
 
