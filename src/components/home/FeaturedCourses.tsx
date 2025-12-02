@@ -23,7 +23,7 @@ import CDEI from "@/assests/CDEI.webp";
 import DSPAP from "@/assests/DSPAP.webp";
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import DSMAI from "@/assests/DSM&AI.webp";
+import DSMAI from "@/assests/ML.webp";
 import AIML from "@/assests/AI&ML.webp";
 interface Course {
   id: string;
