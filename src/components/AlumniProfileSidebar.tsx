@@ -96,7 +96,6 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
         // Here you would typically send the data to your backend
         setShowForm(false);
         onClose(); // Close the sidebar after submission

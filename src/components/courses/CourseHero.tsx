@@ -25,7 +25,6 @@ interface CourseHeroProps {
 
 const CourseHero = ({ course }: CourseHeroProps) => {
 
-  console.log("course insight", course)
   const router = useRouter(); // ⬅️ add this inside component
 
   const [formData, setFormData] = useState({
@@ -57,11 +56,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
   };
 
   useEffect(() => {
-    console.log('Environment Variables:', {
-      API_HOST: process.env.NEXT_PUBLIC_LEAD_SQUARED_API_HOST,
-      ACCESS_KEY: process.env.NEXT_PUBLIC_LEAD_SQUARED_ACCESS_KEY,
-      SECRET_KEY: process.env.NEXT_PUBLIC_LEAD_SQUARED_SECRET_KEY,
-    });
+   
   }, []);
 
   let sourceCampaignValue = "";
@@ -188,7 +183,6 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
       if (response.ok) {
         const result = await response.json();
-        console.log("LeadSquared API Response:", result);
 
         if (result && result.Status === "Success") {
           setSubmitStatus("success");

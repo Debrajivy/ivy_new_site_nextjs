@@ -13,7 +13,6 @@ const ContactClient = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission - would connect to backend in real application
-    console.log("Form submitted")
   }
   const officeLocations = [
     {

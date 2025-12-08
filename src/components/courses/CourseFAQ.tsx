@@ -14,7 +14,6 @@ interface CourseHeroProps {
   course: Course;
 }
 
-// console.log("title", course.title)
 // Map course titles to their specific FAQs and categories
 type Category = { id: string; name: string };
 type FAQ = { question: string; answer: string; category: string };
@@ -2203,11 +2202,9 @@ const defaultData = {
 
 const CourseFAQ = ({ course }: CourseHeroProps) => {
 
-  console.log("title", course.title);
 
   const data = courseData[course.title] || defaultData;
 
-  console.log("data", data);
 
   const categories = data.categories;
   const faqs = data.faqs;

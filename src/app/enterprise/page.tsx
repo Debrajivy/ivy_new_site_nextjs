@@ -164,7 +164,6 @@ const Enterprise = () => {
 
       // Even with no-cors, you can't read the response. 
       // The script will work if there are no network errors.
-      console.log('Form submitted successfully!');
       setStatusMessage('🎉 Your message has been sent successfully!');
       setFormData({
         name: '',

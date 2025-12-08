@@ -100,7 +100,6 @@ const Hero = () => {
 
       if (response.ok) {
         const result = await response.json();
-        console.log("LeadSquared API Response:", result);
 
         if (result && result.Status === "Success") {
           setSubmitStatus('success');

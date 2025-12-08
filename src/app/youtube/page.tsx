@@ -148,7 +148,6 @@ const Youtube = () => {
 
   // Function to handle video click - in a real app, this would navigate to a video player page
   const handleVideoClick = (videoId: string) => {
-    console.log(`Opening video with ID: ${videoId}`);
     // In a real implementation, this would navigate to a video detail page
     // history.push(`/youtube/video/${videoId}`);
   };
