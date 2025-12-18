@@ -536,11 +536,11 @@ const Navbar = () => {
                     Enterprise
                   </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
+                {/* <NavigationMenuItem>
                   <Link href="/verify-certificate" className="flex items-center px-3 py-2 text-sm font-medium">
                     Verify Certificate
                   </Link>
-                </NavigationMenuItem>
+                </NavigationMenuItem> */}
                 {/* <NavigationMenuItem>
                   <a style={{ fontSize: 14 }} href="https://ivyproschool.com/blog" >
                     Blog
