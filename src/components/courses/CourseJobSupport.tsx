@@ -245,51 +245,51 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
               </Card>
             </div>
 
-<div style={{
-  backgroundColor: '#ffffff',
-  padding: '30px 20px',
-  boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1)', // Main container has light 3D look
-  borderRadius: '20px',
-  margin: '40px',
-  maxWidth: '1200px',
-  marginInline: 'auto'
-}}>
-  <h2 style={{
-    textAlign: 'center',
-    fontSize: '24px',
-    fontWeight: 'bold',
-    marginBottom: '30px',
-    color: '#2a2a2a'
-  }}>
-    Will I get a certificate after the course?
-  </h2>
+            <div style={{
+              backgroundColor: '#ffffff',
+              padding: '30px 20px',
+              boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1)', // Main container has light 3D look
+              borderRadius: '20px',
+              margin: '40px',
+              maxWidth: '1200px',
+              marginInline: 'auto'
+            }}>
+              <h2 style={{
+                textAlign: 'center',
+                fontSize: '24px',
+                fontWeight: 'bold',
+                marginBottom: '30px',
+                color: '#2a2a2a'
+              }}>
+                Will I get a certificate after the course?
+              </h2>
 
-  <div style={{
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    gap: '40px',
-    alignItems: 'stretch'
-  }}>
-    {/* Left Column: Description Boxes */}
-    <div style={{
-      flex: '1 1 500px',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '24px',
-      justifyContent: 'space-between'
-    }}>
-      <div style={{
-        backgroundColor: 'white',
-        color: 'black',
-        borderRadius: '16px',
-        padding: '24px',
-        display: 'flex',
-        gap: '12px',
-        alignItems: 'flex-start',
-        border: '1px solid #87CEEB',
-        position: 'relative',
-        boxShadow: `
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                gap: '40px',
+                alignItems: 'stretch'
+              }}>
+                {/* Left Column: Description Boxes */}
+                <div style={{
+                  flex: '1 1 500px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '24px',
+                  justifyContent: 'space-between'
+                }}>
+                  <div style={{
+                    backgroundColor: 'white',
+                    color: 'black',
+                    borderRadius: '16px',
+                    padding: '24px',
+                    display: 'flex',
+                    gap: '12px',
+                    alignItems: 'flex-start',
+                    border: '1px solid #87CEEB',
+                    position: 'relative',
+                    boxShadow: `
           0 0 0 1px rgba(135, 206, 235, 0.3),
           2px 2px 0 0 rgba(135, 206, 235, 0.2),
           4px 4px 8px 0 rgba(135, 206, 235, 0.3),
@@ -297,51 +297,62 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
           inset -2px -2px 4px rgba(0,0,0,0.05),
           inset 2px 2px 4px rgba(255,255,255,0.5)
         `,
-        transform: 'perspective(500px) rotateX(1deg)',
-        transition: 'all 0.3s ease'
-      }}>
-        <div style={{
-          filter: 'drop-shadow(1px 1px 1px rgba(0,0,0,0.2)) drop-shadow(2px 2px 3px rgba(135, 206, 235, 0.4))',
-          transform: 'translateZ(8px)',
-          transition: 'all 0.3s ease'
-        }}>
-          <div className="bg-primary/10 p-2 rounded-full">
-            <GraduationCap size={18} className="text-primary" />
-          </div>
-        </div>
-        <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0, textShadow: '1px 1px 1px rgba(135, 206, 235, 0.2)' }}>
-          {course.title === "Generative AI Course" ?
-            "The Executive Certification in GenAI ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
-            course.title === "Data Science with Machine Learning & AI Certification" ?
-              "The Executive Certification in Data Science, in collaboration with the E&ICT Academy - IIT Guwahati, is widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
-              course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ?
-                "Launch your cloud career with an elite certification FROM Ivy Pro School. Designed with experts from Amazon & Accenture, it proves your ability to build real-time data systems using Spark, Kafka, and AWS." :
-                course.title === "Data Analytics and Generative AI Course" ?
-                  "Earn Ivy’s Data Science with Visualization certificate and prove your command over Excel, SQL, Python, Tableau & Power BI. Backed by 1:1 mentoring, this certification blends dashboarding, predictive modeling & automation into job-ready expertise." :
-                  course.title === "Data Analytics Course" ?
-                    "This dual-focus certification covers both analytical techniques and visualization best practices for comprehensive data storytelling." :
-                    course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
-                      "The Executive Certification in Cloud Data Engineering with IIT Guwahati combines academic rigor with industry-relevant cloud technologies." :
-                      course.title === "AI for Product Managers" ?
-                        "This product management certification empowers product managers to lead AI-driven transformations, equipping you with future-ready skills for high-impact roles across industries." :
-                        course.title === "Data science course (Pay after Placement)" ?
-                          "This certification demonstrates your proficiency in end-to-end data science workflows, from data cleaning to deploying ML models." :
-                          null
-          }
-        </p>
-      </div>
+                    transform: 'perspective(500px) rotateX(1deg)',
+                    transition: 'all 0.3s ease'
+                  }}>
+                    <div style={{
+                      filter: 'drop-shadow(1px 1px 1px rgba(0,0,0,0.2)) drop-shadow(2px 2px 3px rgba(135, 206, 235, 0.4))',
+                      transform: 'translateZ(8px)',
+                      transition: 'all 0.3s ease'
+                    }}>
+                      <div className="bg-primary/10 p-2 rounded-full">
+                        <GraduationCap size={18} className="text-primary" />
+                      </div>
+                    </div>
+                    <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0, textShadow: '1px 1px 1px rgba(135, 206, 235, 0.2)' }}>
+                      {course.title === "Generative AI Course" ?
+                        "The Executive Certification in GenAI ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
+                        course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
+                          "The Executive Certification in Data Science, widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
+                          course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ?
+                            "Launch your cloud career with an elite certification FROM Ivy Pro School. Designed with experts from Amazon & Accenture, it proves your ability to build real-time data systems using Spark, Kafka, and AWS." :
+                            course.title === "Data Engineering Course in Delhi" ?
+                              "Upon successful completion, learners receive a professional certification from Ivy Professional School. The certification validates job-ready data engineering skills and enhances employability."
+                              :
+                              course.title === "Data Engineering Course in Bangalore" ?
+                              "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens job profiles":
+                             course.title === "Data Engineering Course in Mumbai"?
+                             "Upon successful completion, learners receive a professional certification from Ivy Professional School, validating industry-relevant data engineering skills.":
+                             course.title === "Data Engineering Course in Pune"?
+                             "Upon successful completion, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and enhances employability.":
+                             course.title ==="Data Engineering Course in Chennai"?
+                             "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens employability.":
+                             course.title === "Data Analytics and Generative AI Course" ?
+                                "Earn Ivy’s Data Science with Visualization certificate and prove your command over Excel, SQL, Python, Tableau & Power BI. Backed by 1:1 mentoring, this certification blends dashboarding, predictive modeling & automation into job-ready expertise." :
+                                course.title === "Data Analytics Course" ?
+                                  "This dual-focus certification covers both analytical techniques and visualization best practices for comprehensive data storytelling." :
+                                  course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
+                                    "The Executive Certification in Cloud Data Engineering with IIT Guwahati combines academic rigor with industry-relevant cloud technologies." :
+                                    course.title === "AI for Product Managers" ?
+                                      "This product management certification empowers product managers to lead AI-driven transformations, equipping you with future-ready skills for high-impact roles across industries." :
+                                      course.title === "Data science course (Pay after Placement)" ?
+                                        "This certification demonstrates your proficiency in end-to-end data science workflows, from data cleaning to deploying ML models." :
+                                        null
+                      }
+                    </p>
+                  </div>
 
-      <div style={{
-        backgroundColor: 'white',
-        color: 'black',
-        borderRadius: '16px',
-        padding: '24px',
-        display: 'flex',
-        gap: '12px',
-        alignItems: 'flex-start',
-        border: '1px solid #87CEEB',
-        position: 'relative',
-        boxShadow: `
+                  <div style={{
+                    backgroundColor: 'white',
+                    color: 'black',
+                    borderRadius: '16px',
+                    padding: '24px',
+                    display: 'flex',
+                    gap: '12px',
+                    alignItems: 'flex-start',
+                    border: '1px solid #87CEEB',
+                    position: 'relative',
+                    boxShadow: `
           0 0 0 1px rgba(135, 206, 235, 0.3),
           2px 2px 0 0 rgba(135, 206, 235, 0.2),
           4px 4px 8px 0 rgba(135, 206, 235, 0.3),
@@ -349,81 +360,93 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
           inset -2px -2px 4px rgba(0,0,0,0.05),
           inset 2px 2px 4px rgba(255,255,255,0.5)
         `,
-        transform: 'perspective(500px) rotateX(1deg)',
-        transition: 'all 0.3s ease'
-      }}>
-        <div style={{
-          filter: 'drop-shadow(1px 1px 1px rgba(0,0,0,0.2)) drop-shadow(2px 2px 3px rgba(135, 206, 235, 0.4))',
-          transform: 'translateZ(8px)',
-          transition: 'all 0.3s ease'
-        }}>
-          <div className="bg-primary/10 p-2 rounded-full">
-            <Award size={18} className="text-primary" />
-          </div>
-        </div>
-        <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
-          {course.title === "Generative AI Course" || course.title === "Data Science with Machine Learning & AI Certification" ?
-            "A stamp of approval from E&ICT Academy, tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
-            course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ?
-              "Show recruiters you're cloud-ready, with hands-on skills in AWS, GCP, and Azure. This certification validates your ability to design scalable pipelines and apply data engineering tools to real-world projects." :
-              course.title === "Data Analytics and Generative AI Course" ?
-                "Trusted by 100+ recruiters, this certificate shows your hands-on mastery in data storytelling and analytics tools—validated through real-world projects in telecom, pharma, retail, and BFSI sectors." :
-                course.title === "AI for Product Managers" ?
-                  "By completing certifications for product management, you gain hands-on expertise in AI adoption frameworks, prompt engineering, and GenAI strategy." :
-                  "Validates your ability to implement machine learning algorithms and AI solutions to solve complex business problems."
-          }
-        </p>
-      </div>
-    </div>
+                    transform: 'perspective(500px) rotateX(1deg)',
+                    transition: 'all 0.3s ease'
+                  }}>
+                    <div style={{
+                      filter: 'drop-shadow(1px 1px 1px rgba(0,0,0,0.2)) drop-shadow(2px 2px 3px rgba(135, 206, 235, 0.4))',
+                      transform: 'translateZ(8px)',
+                      transition: 'all 0.3s ease'
+                    }}>
+                      <div className="bg-primary/10 p-2 rounded-full">
+                        <Award size={18} className="text-primary" />
+                      </div>
+                    </div>
+                    <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
+                      {(course.title === "Generative AI Course" || course.title === "Data Science with Machine Learning & AI Certification") ?
+                        "A stamp of approval from E&ICT Academy, tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
+                        course.title === "Data Science Course in Kolkata" ?
+                          "On successful completion, students receive a Data Science Certification from Ivy Professional School, validating their skills in analytics, machine learning, and AI. This certification strengthens resumes and improves employability in competitive job markets." :
+                          course.title === "Data Science with Machine Learning & AI Course in Delhi" ?
+                            "Students receive a Data Science Certification from Ivy Professional School upon successful completion, validating their expertise in analytics, machine learning, and AI." :
+                            course.title === "Data Science with Machine Learning & AI Course in Pune" ?
+                              "Upon successful completion, students receive a Data Science Certification from Ivy Professional School, validating their skills in analytics, machine learning, and AI." :
+                              course.title === "Data Science with Machine Learning & AI Course in Chennai" ?
+                                "On successful completion, students receive a Data Science Certification from Ivy Professional School, validating their skills in analytics, machine learning, and AI." :
+                                course.title === "Data Science with Machine Learning & AI Course in Bangalore" ?
+                                  "Upon successful completion of the program, learners receive a Data Science Certification from Ivy Professional School. This certification validates your skills in data analysis, machine learning, and applied AI, making your profile more credible in the Bangalore job market." :
+                                  course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
+                                    "Upon successful completion, learners receive a Data Science Certification from Ivy Professional School, validating their expertise in data analysis, machine learning, and applied AI—highly valued by employers in Mumbai’s corporate and financial sectors." :
+                                    (course.title === "Data Engineering Course" || course.title === "Data Engineering Course in Kolkata") ?
+                                      "Show recruiters you're cloud-ready, with hands-on skills in AWS, GCP, and Azure. This certification validates your ability to design scalable pipelines and apply data engineering tools to real-world projects." :
+                                      course.title === "Data Analytics and Generative AI Course" ?
+                                        "Trusted by 100+ recruiters, this certificate shows your hands-on mastery in data storytelling and analytics tools—validated through real-world projects in telecom, pharma, retail, and BFSI sectors." :
+                                        course.title === "AI for Product Managers" ?
+                                          "By completing certifications for product management, you gain hands-on expertise in AI adoption frameworks, prompt engineering, and GenAI strategy." :
+                                          "Validates your ability to implement machine learning algorithms and AI solutions to solve complex business problems."
+                      }
+                    </p>
+                  </div>
+                </div>
 
-    {/* Right Column: Image and CTA Button */}
-    <div style={{
-      flex: '1 1 300px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      gap: '24px'
-    }}>
-      <Image
-        src={
-          course.title === "Generative AI Course" ? Iitc :
-            course.title === "Data Science with Machine Learning & AI Certification" ? NASSCOMML :
-              course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ? Cdec :
-                course.title === "Data Analytics and Generative AI Course" ? Dsvc :
-                  course.title === "Data Analytics Course" ? Davc :
-                    course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
-                      course.title === "AI for Product Managers" ? Pmc :
-                        course.title === "AI and Machine Learning Course" ? AIML :
-                          course.title === "Data science course (Pay after Placement)" ? PAPC : ""
-        }
-        alt="Certificate"
-        style={{
-          width: '100%',
-          height: 'auto',
-          objectFit: 'contain',
-          borderRadius: '12px',
-          boxShadow: '0 6px 20px rgba(0, 0, 0, 0.1)',
-        }}
-      />
-      
-      {/* Corrected CTA Button using Tailwind to avoid Server Error */}
-      <a 
-        href="/verify-certificate"
-        className="w-full py-4 text-white text-lg font-semibold rounded-lg text-center transition-all duration-200"
-        style={{
-          backgroundColor: '#00adef',
-          boxShadow: '0 4px 14px 0 rgba(0, 173, 239, 0.39)',
-          display: 'block'
-        }}
-        // Using CSS hover via Tailwind classes for server compatibility
-        onMouseEnter={undefined} 
-      >
-        Verify Certificate
-      </a>
-    </div>
-  </div>
-</div>
-           
+                {/* Right Column: Image and CTA Button */}
+                <div style={{
+                  flex: '1 1 300px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '24px'
+                }}>
+                  <Image
+                    src={
+                      course.title === "Generative AI Course" ? Iitc :
+                        course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"  ||course.title ==="Data Engineering Course in Delhi"  || course.title ==="Data Engineering Course in Bangalore" || course.title ==="Data Engineering Course in Mumbai" || course.title === "Data Engineering Course in Pune"  || course.title === "Data Engineering Course in Chennai" ? NASSCOMML :
+                          course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ? Cdec :
+                            course.title === "Data Analytics and Generative AI Course" ? Dsvc :
+                              course.title === "Data Analytics Course" ? Davc :
+                                course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
+                                  course.title === "AI for Product Managers" ? Pmc :
+                                    course.title === "AI and Machine Learning Course" ? AIML :
+                                      course.title === "Data science course (Pay after Placement)" ? PAPC : ""
+                    }
+                    alt="Certificate"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      objectFit: 'contain',
+                      borderRadius: '12px',
+                      boxShadow: '0 6px 20px rgba(0, 0, 0, 0.1)',
+                    }}
+                  />
+
+                  {/* Corrected CTA Button using Tailwind to avoid Server Error */}
+                  <a
+                    href="/verify-certificate"
+                    className="w-full py-4 text-white text-lg font-semibold rounded-lg text-center transition-all duration-200"
+                    style={{
+                      backgroundColor: '#00adef',
+                      boxShadow: '0 4px 14px 0 rgba(0, 173, 239, 0.39)',
+                      display: 'block'
+                    }}
+                    // Using CSS hover via Tailwind classes for server compatibility
+                    onMouseEnter={undefined}
+                  >
+                    Verify Certificate
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div>
               <h3 className="text-2xl font-bold mb-4 text-center">Who are Ivy Pro School's hiring partners and where can I get placed?</h3>
 

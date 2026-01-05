@@ -447,7 +447,7 @@ const Footer: React.FC<PageProps> = ({ navigate }) => {
                     <div className="flex flex-col md:flex-row justify-between items-center text-center space-y-4 md:space-y-0 text-xs">
                         {/* Left: Course Link */}
                         <div className="order-2 md:order-1">
-                            <NavLink href="/courses/data-engineering-course-in-kolkata" className="text-gray-400 hover:text-white">
+                            <NavLink href="/courses/data-engineering-course-kolkata" className="text-gray-400 hover:text-white">
                                 Data Engineering Course in Kolkata
                             </NavLink>
                         </div>

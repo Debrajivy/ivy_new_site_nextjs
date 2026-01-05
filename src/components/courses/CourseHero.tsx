@@ -314,7 +314,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   course.title ===
                   "Data Analytics Course" ||
                   course.title === "Data Analytics and Generative AI Course" || course.title === "Generative AI Course" ||
-                  course.title === "AI for Product Managers" || course.title === "AI and Machine Learning Course" || course.title === "Data Engineering Course in Kolkata" ? (
+                  course.title === "AI for Product Managers" || course.title === "AI and Machine Learning Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Science Course in Kolkata" ? (
                   <Image
 
                     width={150}
@@ -323,16 +323,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     src={ivy}
                     alt="ivy"
                   />
-                ) : (
-                  <Image
-
-                    width={150}
-                    height={50}
-                    className="h-10 w-auto object-contain"
-                    src={E}
-                    alt="E & ICT"
-                  />
-                )}
+                ) : null}
               </div>
             </div>
 

@@ -1606,7 +1606,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                           </div>
                         </TabsContent>
                         :
-                        course.title === " Data Engineering Course" || course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
+                        course.title === " Data Engineering Course" || course.title === "Cloud Data Engineering Course with IIT Guwahati" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Mumbai" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Chennai" ?
                           <TabsContent value="capstone">
                             <div className="mb-8">
                               <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-2 sm:gap-0">

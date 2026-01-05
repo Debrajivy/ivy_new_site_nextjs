@@ -1,26 +1,21 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { MessageCircle, HelpCircle, Phone } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { Course } from '@/lib/api';
 
-interface FAQItem {
-  question: string;
-  answer: string;
-  category: string;
-}
 interface CourseHeroProps {
   course: Course;
 }
 
-// Map course titles to their specific FAQs and categories
 type Category = { id: string; name: string };
 type FAQ = { question: string; answer: string; category: string };
 type CourseFAQData = {
   categories: Category[];
   faqs: FAQ[];
 };
+
 const courseData: { [key: string]: CourseFAQData } = {
   "AI for Product Managers": {
     categories: [
@@ -562,7 +557,561 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
- 
+
+
+  "Data Science Course in Kolkata": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-science", name: "Data Science" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in the Data Science course in Kolkata?",
+        answer: "This Data Science course in Kolkata is ideal for fresh graduates, working professionals, IT engineers, analysts, and career switchers who want to build a strong career in data science, machine learning, and AI.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior coding or programming experience to join this course?",
+        answer: "No prior coding experience is mandatory. The course starts from the basics of Python and statistics, making it suitable for beginners while still being valuable for experienced professionals.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Science course in Kolkata?",
+        answer: "The course duration typically ranges from 6 to 11 months, depending on the learning mode (weekday/weekend) and specialization track chosen.",
+        category: "program"
+      },
+      {
+        question: "Is this Data Science course in Kolkata suitable for working professionals?",
+        answer: "Yes, the course is designed with flexible schedules, including weekend and evening batches, making it convenient for working professionals in Kolkata.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies will I learn during the course?",
+        answer: "You will learn Python, SQL, Machine Learning, Deep Learning, Artificial Intelligence, Data Visualization (Tableau/Power BI), Statistics, and real-world industry tools used by data scientists.",
+        category: "data-science"
+      },
+      {
+        question: "Are there real-world projects included in the course?",
+        answer: "Yes, learners work on multiple real-world projects and a capstone project based on industry use cases to gain hands-on experience and practical exposure.",
+        category: "projects"
+      },
+      {
+        question: "Does the Data Science course in Kolkata provide placement assistance?",
+        answer: "Yes, comprehensive placement support is provided, including resume building, mock interviews, career mentoring, and access to hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What kind of job roles can I apply for after completing this course?",
+        answer: "After completing the course, you can apply for roles such as Data Scientist, Data Analyst, Machine Learning Engineer, Business Analyst, and AI Engineer.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after course completion?",
+        answer: "Yes, upon successful completion, you will receive a recognized Data Science certification from Ivy Professional School, validating your skills and industry readiness.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by employers in Kolkata and India?",
+        answer: "Yes, the certification is widely recognized by employers across Kolkata and major Indian cities, helping learners enhance credibility and job prospects.",
+        category: "certification"
+      },
+      {
+        question: "What is the mode of learning available for this course in Kolkata?",
+        answer: "The course is available in instructor-led classroom training, live online sessions, and hybrid learning formats.",
+        category: "program"
+      },
+      {
+        question: "Are there any eligibility criteria for enrolling in the course?",
+        answer: "A basic understanding of mathematics and logical reasoning is recommended. Graduates from engineering, science, commerce, or management backgrounds can enroll.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get doubt-clearing and mentorship support?",
+        answer: "Yes, learners receive continuous mentorship, doubt-clearing sessions, one-on-one guidance, and academic support throughout the course.",
+        category: "support"
+      },
+      {
+        question: "How is this Data Science course in Kolkata different from others?",
+        answer: "This course focuses on practical learning, industry-aligned curriculum, experienced faculty, hands-on projects, and strong placement support, making it career-oriented rather than theory-heavy.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for career transition into data science?",
+        answer: "Absolutely. The course is structured to help professionals from non-technical and technical backgrounds successfully transition into data science roles.",
+        category: "opportunities"
+      }
+    ]
+  },
+
+
+  "Data Science with Machine Learning & AI Course in Delhi": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-science", name: "Data Science" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who can enroll in the Data Science course in Delhi?",
+        answer: "The Data Science course in Delhi is suitable for fresh graduates, working professionals, IT professionals, engineers, analysts, and individuals looking to transition into data science, machine learning, and AI roles.",
+        category: "eligibility"
+      },
+      {
+        question: "Is prior programming knowledge required for this course?",
+        answer: "No, prior programming experience is not mandatory. The course begins with Python fundamentals and core statistics, making it beginner-friendly while still advanced enough for experienced learners.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Science course in Delhi?",
+        answer: "The course duration generally ranges between 6 to 11 months, depending on the batch type (weekday or weekend) and learning mode selected.",
+        category: "program"
+      },
+      {
+        question: "Is this Data Science course in Delhi suitable for working professionals?",
+        answer: "Yes, the course is designed with flexible schedules, including weekend and evening batches, allowing working professionals in Delhi to learn without disrupting their jobs.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in the course?",
+        answer: "You will learn Python, SQL, Statistics, Machine Learning, Deep Learning, Artificial Intelligence, Data Visualization tools like Tableau or Power BI, and industry-relevant frameworks.",
+        category: "data-science"
+      },
+      {
+        question: "Are live projects included in the Data Science course?",
+        answer: "Yes, the course includes multiple hands-on projects and a comprehensive capstone project based on real-world industry use cases to build practical skills.",
+        category: "projects"
+      },
+      {
+        question: "Does the Data Science course in Delhi offer placement assistance?",
+        answer: "Yes, learners receive dedicated placement support, including resume preparation, mock interviews, career guidance, and access to a network of hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What career roles can I apply for after completing this course?",
+        answer: "After completion, you can apply for roles such as Data Scientist, Data Analyst, Machine Learning Engineer, Business Analyst, AI Engineer, and Data Engineer (entry-level).",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after completing the course?",
+        answer: "Yes, upon successful completion, you will receive an industry-recognized Data Science certification from Ivy Professional School.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by companies in Delhi and across India?",
+        answer: "Yes, the certification is well-recognized by recruiters across Delhi NCR and major cities in India, adding credibility to your profile.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available for the Data Science course in Delhi?",
+        answer: "The course is available in classroom training, live online instructor-led sessions, and hybrid learning formats.",
+        category: "program"
+      },
+      {
+        question: "What is the eligibility criteria for enrolling in the course?",
+        answer: "Graduates from engineering, science, commerce, or management backgrounds can enroll. Basic mathematical understanding and logical reasoning skills are recommended.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship and doubt-clearing support during the course?",
+        answer: "Yes, learners receive continuous mentorship, regular doubt-clearing sessions, one-on-one academic support, and guidance from experienced faculty.",
+        category: "support"
+      },
+      {
+        question: "How is this Data Science course in Delhi different from other institutes?",
+        answer: "The course focuses on industry-aligned curriculum, practical learning, real-world projects, expert trainers, and structured placement support rather than purely theoretical teaching.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for a complete career switch into data science?",
+        answer: "Yes, the course is specifically designed to help both technical and non-technical professionals successfully transition into data science and AI-driven roles.",
+        category: "opportunities"
+      }
+    ]
+  },
+
+
+
+  "Data Science with Machine Learning & AI Course in Pune": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-science", name: "Data Science" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in the Data Science Course in Pune?",
+        answer: "The Data Science Course in Pune is ideal for fresh graduates, working professionals, IT engineers, analysts, and career switchers aiming to build a career in data science, machine learning, and artificial intelligence.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior coding experience to join the Data Science course in Pune?",
+        answer: "No prior programming experience is required. The course starts with Python basics and foundational statistics, making it suitable for beginners as well as experienced professionals.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Science Course in Pune?",
+        answer: "The course duration typically ranges from 6 to 11 months, depending on the learning mode (weekday or weekend batches) and specialization track.",
+        category: "program"
+      },
+      {
+        question: "Is the Data Science course in Pune suitable for working professionals?",
+        answer: "Yes, the course offers flexible learning options, including weekend and evening batches, making it convenient for working professionals in Pune.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "You will learn Python, SQL, Statistics, Machine Learning, Deep Learning, Artificial Intelligence, Data Visualization tools (Tableau/Power BI), and industry-relevant frameworks.",
+        category: "data-science"
+      },
+      {
+        question: "Are real-world projects included in the Data Science course?",
+        answer: "Yes, the course includes multiple hands-on projects and an industry-focused capstone project to help learners gain practical, job-ready experience.",
+        category: "projects"
+      },
+      {
+        question: "Does the Data Science Course in Pune provide placement assistance?",
+        answer: "Yes, comprehensive placement support is provided, including resume building, mock interviews, career mentoring, and access to hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What job roles can I apply for after completing the course?",
+        answer: "After completion, learners can apply for roles such as Data Scientist, Data Analyst, Machine Learning Engineer, Business Analyst, and AI Engineer.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after completing the Data Science course?",
+        answer: "Yes, learners receive an industry-recognized Data Science certification from Ivy Professional School upon successful completion.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by companies in Pune and across India?",
+        answer: "Yes, the certification is widely recognized by employers in Pune, Mumbai, Bangalore, and other major tech hubs across India.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available for the Data Science course in Pune?",
+        answer: "The course is available in classroom training, live instructor-led online sessions, and hybrid learning formats.",
+        category: "program"
+      },
+      {
+        question: "What is the eligibility criteria for enrolling in this course?",
+        answer: "Graduates from engineering, science, commerce, or management backgrounds can enroll. A basic understanding of mathematics and logical reasoning is recommended.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship and doubt-clearing support during the course?",
+        answer: "Yes, learners receive continuous mentorship, regular doubt-clearing sessions, and one-on-one academic guidance throughout the program.",
+        category: "support"
+      },
+      {
+        question: "How is this Data Science Course in Pune different from other institutes?",
+        answer: "The course focuses on industry-aligned curriculum, hands-on learning, real-world projects, experienced faculty, and structured placement support rather than purely theoretical teaching.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for a career switch into data science?",
+        answer: "Absolutely. The course is designed to help both technical and non-technical professionals successfully transition into data science and AI-driven careers.",
+        category: "opportunities"
+      }
+    ]
+  },
+
+
+
+
+  "Data Science with Machine Learning & AI Course in Bangalore": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-science", name: "Data Science" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Is this Data Science course suitable for beginners in Bangalore?",
+        answer: "Yes, the program starts with fundamentals, making it suitable for beginners as well as professionals transitioning into data science.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need a programming background to join?",
+        answer: "Basic programming knowledge is helpful but not mandatory. Python and coding fundamentals are taught from scratch.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Science Course in Bangalore?",
+        answer: "The course duration is designed to balance depth and flexibility, typically ranging from 6 to 11 months depending on the batch type.",
+        category: "program"
+      },
+      {
+        question: "Is the Data Science course in Bangalore suitable for working professionals?",
+        answer: "Yes, with flexible weekend and evening batches, the course is specifically tailored for the busy schedules of Bangalore's working professionals.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "The curriculum covers Python, SQL, Statistics, Machine Learning, Deep Learning, AI, and Data Visualization tools like Tableau and Power BI.",
+        category: "data-science"
+      },
+      {
+        question: "Will I work on real-world projects?",
+        answer: "Yes, the course includes multiple hands-on projects and a capstone aligned with industry use cases to ensure practical exposure.",
+        category: "projects"
+      },
+      {
+        question: "Does Ivy Professional School provide placement assistance in Bangalore?",
+        answer: "Yes, we provide 100% placement assistance, including resume building, mock interviews, and connections with Bangalore's top tech recruiters.",
+        category: "placement"
+      },
+      {
+        question: "What career roles can I target after completion?",
+        answer: "Graduates can pursue roles such as Data Scientist, Data Analyst, Machine Learning Engineer, and Business Analyst.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after completing the course?",
+        answer: "Yes, you will receive an industry-recognized Data Science certification from Ivy Professional School upon successful completion.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by top tech companies in Bangalore?",
+        answer: "Yes, the certification is highly valued by MNCs, startups, and tech giants across Bangalore and India's Silicon Valley.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available for this course in Bangalore?",
+        answer: "The course is available in classroom training, live online instructor-led sessions, and hybrid formats.",
+        category: "program"
+      },
+      {
+        question: "What is the eligibility criteria for enrolling in Bangalore?",
+        answer: "Graduates or final-year students from Engineering, Science, Commerce, or Management backgrounds are eligible to apply.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship and doubt-clearing support?",
+        answer: "Yes, you will have access to 1:1 mentorship, dedicated doubt-clearing sessions, and academic support from industry experts.",
+        category: "support"
+      },
+      {
+        question: "How is this Data Science course in Bangalore different from others?",
+        answer: "Our focus on hands-on practical learning, elite faculty from IITs/IIMs, and a strong network of hiring partners sets us apart.",
+        category: "program"
+      },
+      {
+        question: "Can I switch my career to Data Science if I am from a non-technical background?",
+        answer: "Absolutely. The course is designed to guide non-technical professionals through a structured path into high-growth AI and Data roles.",
+        category: "opportunities"
+      }
+    ]
+  },
+
+"Data Science with Machine Learning & AI Course in Chennai": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-science", name: "Data Science" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in a data science course in Chennai?",
+        answer: "Graduates, IT professionals, engineers, and career switchers interested in analytics and AI can enroll in this program.",
+        category: "eligibility"
+      },
+      {
+        question: "Is prior coding experience required?",
+        answer: "No, the data science course in Chennai starts with programming fundamentals and gradually progresses to advanced concepts.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Science course in Chennai?",
+        answer: "The course duration typically ranges from 6 to 11 months, depending on the chosen learning path and batch schedule (weekday or weekend).",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for working professionals in Chennai?",
+        answer: "Yes, the program offers flexible scheduling including weekend sessions and live online classes to accommodate working professionals.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "You will master Python, SQL, Machine Learning algorithms, Deep Learning, AI, and Data Visualization tools like Power BI and Tableau.",
+        category: "data-science"
+      },
+      {
+        question: "Are real-world projects included in the curriculum?",
+        answer: "Yes, the course features multiple industry-specific projects and a final capstone project based on real-world datasets.",
+        category: "projects"
+      },
+      {
+        question: "Does Ivy Professional School provide placement support?",
+        answer: "Yes, comprehensive career guidance and placement assistance are provided to help learners enter data science roles.",
+        category: "placement"
+      },
+      {
+        question: "What job roles can I pursue after completing the course?",
+        answer: "Learners can pursue roles such as Data Analyst, Business Analyst, Junior Data Scientist, and Analytics Associate.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after the course?",
+        answer: "Yes, you will receive a professional Data Science certification from Ivy Professional School upon successful completion of the course and projects.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by recruiters in Chennai?",
+        answer: "Yes, Ivy’s certification is highly respected by top MNCs and startups across Chennai’s IT and manufacturing hubs.",
+        category: "certification"
+      },
+      {
+        question: "What are the available learning modes in Chennai?",
+        answer: "You can choose between instructor-led classroom training, live online sessions, or a hybrid learning model.",
+        category: "program"
+      },
+      {
+        question: "What are the eligibility criteria for this course?",
+        answer: "Graduates from any stream (Science, Commerce, Engineering, or Management) with basic logical reasoning skills can apply.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get doubt-clearing and mentorship support?",
+        answer: "Yes, we provide 1:1 mentorship sessions, regular doubt-clearing classes, and academic support from industry experts.",
+        category: "support"
+      },
+      {
+        question: "How is this course different from other data science programs?",
+        answer: "This program focuses on production-level deployment, hands-on tool mastery, and personalized career coaching rather than just theory.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for non-technical career switchers?",
+        answer: "Absolutely. The curriculum is designed to hand-hold non-technical learners through the basics of data handling and coding.",
+        category: "opportunities"
+      }
+    ]
+  },
+
+  "Data Science with Machine Learning & AI Course in Mumbai": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-science", name: "Data Science" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in the Data Science course in Mumbai?",
+        answer: "This course is ideal for fresh graduates, working professionals, IT engineers, and career switchers in Mumbai looking to build expertise in analytics, ML, and AI.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior programming experience?",
+        answer: "No prior coding experience is required. Python is taught from the basics, making it accessible for beginners and non-programmers.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Science Course in Mumbai?",
+        answer: "The duration is optimized to balance conceptual depth, practical exposure, and flexibility, typically ranging from 6 to 11 months.",
+        category: "program"
+      },
+      {
+        question: "Is the Data Science course in Mumbai suitable for working professionals?",
+        answer: "Yes, the course is designed with flexible schedules, including weekend and evening batches, suitable for working professionals.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "You will master Python, SQL, Statistics, Machine Learning, Deep Learning, AI, and Data Visualization tools like Tableau or Power BI.",
+        category: "data-science"
+      },
+      {
+        question: "Are real-world projects included in the course?",
+        answer: "Yes, learners work on multiple industry-relevant projects and a comprehensive capstone project based on real-world datasets.",
+        category: "projects"
+      },
+      {
+        question: "Does Ivy Professional School provide placement assistance in Mumbai?",
+        answer: "Yes, we provide extensive placement support, including resume reviews, mock interviews, and access to our 400+ hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What career roles can I target after completion?",
+        answer: "Graduates can pursue roles such as Data Scientist, Data Analyst, Machine Learning Engineer, and Business Analyst.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after completing the course?",
+        answer: "Yes, upon successful completion, you will receive an industry-recognized Data Science certification from Ivy Professional School.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by employers in Mumbai?",
+        answer: "Yes, the certification is widely recognized by top banks, consulting firms, and tech companies across Mumbai and India.",
+        category: "certification"
+      },
+      {
+        question: "What are the available learning modes in Mumbai?",
+        answer: "The course is available through instructor-led classroom training, live online sessions, and hybrid learning formats.",
+        category: "program"
+      },
+      {
+        question: "What are the eligibility criteria for this program?",
+        answer: "Graduates from Engineering, Science, Commerce, or Management backgrounds are welcome. Basic math and logical skills are recommended.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship and doubt-clearing support?",
+        answer: "Yes, learners receive 1:1 mentorship, regular doubt-clearing sessions, and continuous academic support throughout the course.",
+        category: "support"
+      },
+      {
+        question: "How is this Data Science course in Mumbai different from others?",
+        answer: "We emphasize practical, hands-on tool mastery and industry-aligned curriculum taught by elite faculty from IITs and IIMs.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for a career transition into AI?",
+        answer: "Absolutely. The course is structured to bridge the gap for professionals moving from traditional roles into high-growth AI and Data roles.",
+        category: "opportunities"
+      }
+    ]
+  },
+
+
   " Data Engineering Course": {
     categories: [
       { id: "program", name: "Program" },
@@ -835,6 +1384,549 @@ const courseData: { [key: string]: CourseFAQData } = {
         question: "Is PrepAI used as a support tool?",
         answer: "Yes, PrepAI provides mock interviews, resume evaluation, and skill assessments.",
         category: "support"
+      }
+    ]
+  },
+"Data Engineering Course in Delhi": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-engineering", name: "Data Engineering" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in the Data Engineering Course in Delhi?",
+        answer: "Fresh graduates, working professionals, software developers, and IT professionals aiming to build or transition into data engineering roles can enroll.",
+        category: "eligibility"
+      },
+      {
+        question: "Is prior coding experience required?",
+        answer: "Basic programming knowledge is helpful, but the course starts with fundamentals and progresses to advanced concepts, making it accessible for dedicated learners.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Engineering course in Delhi?",
+        answer: "The program typically spans 6 to 9 months, depending on the learning track and batch type (weekday or weekend) you select.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for professionals working in Delhi NCR?",
+        answer: "Yes, we offer flexible weekend and evening batches specifically designed for working professionals in Delhi, Gurgaon, and Noida.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "The curriculum covers Python, SQL, NoSQL databases, Big Data tools (Hadoop, Spark), ETL pipelines, and Cloud platforms like AWS, Azure, or GCP.",
+        category: "data-engineering"
+      },
+      {
+        question: "Are there hands-on projects included?",
+        answer: "Yes, the course includes multiple real-world projects focused on building data pipelines, data warehousing, and real-time streaming architecture.",
+        category: "projects"
+      },
+      {
+        question: "Is placement assistance provided in Delhi?",
+        answer: "Yes, Ivy Professional School offers career support, resume building for tech roles, mock interviews, and placement assistance with top firms in Delhi NCR.",
+        category: "placement"
+      },
+      {
+        question: "What career opportunities are available after this course?",
+        answer: "Graduates can apply for roles such as Data Engineer, Big Data Engineer, ETL Developer, Data Architect, and Analytics Engineer.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after the course?",
+        answer: "Yes, you will receive an industry-recognized Data Engineering certification from Ivy Professional School upon successful completion.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by top companies in India?",
+        answer: "Yes, the certification is highly valued by major IT companies, analytics firms, and startups across Delhi NCR and India.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available in Delhi?",
+        answer: "We offer classroom-based training in Delhi, live online instructor-led sessions, and hybrid learning options.",
+        category: "program"
+      },
+      {
+        question: "What is the eligibility criteria for this course?",
+        answer: "Graduates from CS, IT, Engineering, or any technical/quantitative background are eligible. A logical mindset and basic math skills are recommended.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship for advanced cloud tools?",
+        answer: "Yes, learners receive one-on-one mentorship and technical guidance from industry experts specifically for cloud and big data tools.",
+        category: "support"
+      },
+      {
+        question: "How does this course differ from a general Data Science course?",
+        answer: "This course focuses on the architecture and infrastructure required to move and transform data (the 'plumbing'), while Data Science focuses on analysis and modeling.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for a career switch from testing or DBA roles?",
+        answer: "Absolutely. This course is a perfect bridge for Testers, DBAs, and Software Developers looking to move into high-demand Data Engineering roles.",
+        category: "opportunities"
+      }
+    ]
+  },
+
+  "Data Engineering Course in Bangalore": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-engineering", name: "Data Engineering" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in the Data Engineering Course in Bangalore?",
+        answer: "This course is suitable for fresh graduates, working professionals, software developers, and IT professionals looking to transition into data engineering roles in Bangalore's thriving tech sector.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior coding experience?",
+        answer: "Basic programming knowledge is helpful, but the course starts from fundamentals and gradually advances to complex concepts, including Python and SQL for data pipelines.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Engineering course in Bangalore?",
+        answer: "The program typically ranges from 6 to 11 months, depending on the track (weekday/weekend) and depth of cloud specializations selected.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for working professionals in Bangalore?",
+        answer: "Yes, the program offers flexible weekend and evening batches to accommodate the busy schedules of professionals working in Electronic City, Whitefield, and ORR.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "You will master Python, SQL, Big Data tools (Hadoop, Spark), NoSQL (MongoDB/Cassandra), Orchestration tools (Airflow), and Cloud platforms like AWS, Azure, or GCP.",
+        category: "data-engineering"
+      },
+      {
+        question: "Will I work on real-world projects?",
+        answer: "Yes, the course includes multiple hands-on projects such as building ETL pipelines, real-time data streaming with Kafka, and cloud-native data warehousing.",
+        category: "projects"
+      },
+      {
+        question: "Is placement assistance available in Bangalore?",
+        answer: "Yes, Ivy Professional School provides 100% placement assistance, including resume optimization for engineering roles, mock interviews, and connections with 500+ hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What job roles can I apply for after completing this course?",
+        answer: "You can apply for roles such as Data Engineer, Big Data Engineer, ETL Developer, Cloud Data Engineer, and Analytics Engineer.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after the course?",
+        answer: "Yes, you will receive an industry-recognized Data Engineering certification from Ivy Professional School upon successful completion of all modules and projects.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by top tech firms in Bangalore?",
+        answer: "Yes, Ivy’s certification is highly valued by MNCs, product startups, and consulting firms across Bangalore, India's Silicon Valley.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available in Bangalore?",
+        answer: "We offer instructor-led classroom training, live online sessions, and hybrid models to provide maximum learning flexibility.",
+        category: "program"
+      },
+      {
+        question: "What are the eligibility criteria for the program?",
+        answer: "Graduates from Engineering, Computer Science, IT, or any quantitative background are ideal. A logical mindset and familiarity with databases are recommended.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship for specialized cloud engineering tools?",
+        answer: "Yes, students receive 1:1 mentorship from experienced Data Engineers who provide guidance on complex cloud architectures and big data workflows.",
+        category: "support"
+      },
+      {
+        question: "How does this Data Engineering course differ from Data Science?",
+        answer: "This course focuses on building and maintaining the infrastructure and pipelines that move data (the 'how'), while Data Science focuses on analyzing that data (the 'what').",
+        category: "program"
+      },
+      {
+        question: "Can I transition from a testing or support role into Data Engineering?",
+        answer: "Absolutely. Our curriculum is designed to help professionals from QA, Support, or Database Administration backgrounds transition smoothly into high-paying engineering roles.",
+        category: "opportunities"
+      }
+    ]
+  },
+
+  "Data Engineering Course in Mumbai": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-engineering", name: "Data Engineering" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in the Data Engineering Course in Mumbai?",
+        answer: "Fresh graduates, working professionals, software developers, and IT professionals looking to transition into data engineering roles can enroll. It is ideal for those who prefer building systems and data architecture over pure statistical analysis.",
+        category: "eligibility"
+      },
+      {
+        question: "Is prior coding experience required?",
+        answer: "No prior coding experience is required. The course begins with fundamentals of Python and SQL, gradually progressing to advanced automation and big data engineering concepts.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Engineering course in Mumbai?",
+        answer: "The program typically spans 6 to 9 months, providing a balance of theoretical depth and extensive hands-on laboratory sessions.",
+        category: "program"
+      },
+      {
+        question: "Is the Data Engineering course in Mumbai suitable for working professionals?",
+        answer: "Yes, the course offers flexible learning options including weekend batches and live online sessions, making it convenient for Mumbai’s working professionals to upskill without quitting their jobs.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "You will master Python, SQL, Big Data frameworks (Hadoop, Spark), ETL tools, Data Orchestration (Airflow), and Cloud platforms like AWS, Azure, or GCP.",
+        category: "data-engineering"
+      },
+      {
+        question: "Are real-world projects included in the course?",
+        answer: "Yes, the curriculum includes multiple industry-relevant projects and a comprehensive capstone where you build end-to-end data pipelines and real-time streaming architectures.",
+        category: "projects"
+      },
+      {
+        question: "Does Ivy Professional School provide placement assistance in Mumbai?",
+        answer: "Yes, Ivy Professional School provides dedicated career support, including resume optimization, mock technical interviews, and connections with 500+ hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What job roles can I apply for after completing this course?",
+        answer: "Graduates can apply for roles such as Data Engineer, Big Data Engineer, ETL Developer, Analytics Engineer, and Data Architect.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after completing the course?",
+        answer: "Yes, you will receive an industry-recognized Data Engineering certification from Ivy Professional School upon successful completion of the program.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by recruiters in Mumbai?",
+        answer: "Yes, the certification is well-regarded by top MNCs, fintech firms, and tech startups across Mumbai and the Navi Mumbai IT hubs.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available for this course in Mumbai?",
+        answer: "The course is available in multiple formats: classroom-led training, live online instructor-led sessions, and a hybrid learning model.",
+        category: "program"
+      },
+      {
+        question: "What is the eligibility criteria for enrolling in the course?",
+        answer: "Graduates from Engineering, Science, Commerce, or Management backgrounds are eligible. A basic logical mindset and an interest in problem-solving are recommended.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship and doubt-clearing support?",
+        answer: "Yes, students receive 1:1 mentorship from industry experts, regular doubt-clearing sessions, and lifetime access to learning materials and recorded sessions.",
+        category: "support"
+      },
+      {
+        question: "How is Data Engineering different from a Data Science course?",
+        answer: "Data Engineering focuses on the 'plumbing'—building the infrastructure and pipelines to move and transform data—whereas Data Science focuses on analyzing that data to find patterns and insights.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for a career switch from a non-IT background?",
+        answer: "Absolutely. The structured curriculum is designed to hand-hold career switchers through the technical basics before moving into complex big data and cloud engineering.",
+        category: "opportunities"
+      }
+    ]
+  },
+
+  "Data Engineering Course in Kolkata": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-engineering", name: "Data Engineering" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Is this Data Engineering Course in Kolkata suitable for freshers?",
+        answer: "Yes, the course starts with fundamentals and gradually advances to industry-level concepts, making it ideal for both freshers and professionals.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need coding experience?",
+        answer: "Basic programming knowledge is helpful but not mandatory. The course covers Python and SQL from a data engineering perspective.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Engineering course in Kolkata?",
+        answer: "The program typically spans 6 to 9 months, depending on the intensity of the track and whether you choose weekday or weekend batches.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for working IT professionals?",
+        answer: "Yes, it is highly recommended for software engineers and database admins looking to upscale. Flexible weekend batches are available in Kolkata.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "You will learn Python, SQL, Big Data frameworks (Hadoop, Spark), ETL tools, Cloud platforms (AWS/Azure/GCP), and Data Warehousing concepts.",
+        category: "data-engineering"
+      },
+      {
+        question: "Are there hands-on projects included?",
+        answer: "Yes, you will work on building end-to-end data pipelines, real-time data streaming projects, and cloud-based data architecture projects.",
+        category: "projects"
+      },
+      {
+        question: "Is placement assistance available in Kolkata?",
+        answer: "Yes, career support, resume building for engineering roles, and mock technical interviews are an integral part of the program.",
+        category: "placement"
+      },
+      {
+        question: "What career roles can I pursue after this course?",
+        answer: "Graduates can apply for roles such as Data Engineer, Big Data Engineer, ETL Developer, Data Architect, and Analytics Engineer.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification upon completion?",
+        answer: "Yes, you will receive an industry-recognized Data Engineering certification from Ivy Professional School.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by Kolkata-based IT firms?",
+        answer: "Yes, it is recognized by major IT hubs in Sector V and Rajarhat, as well as top tech firms across India.",
+        category: "certification"
+      },
+      {
+        question: "What are the learning modes available for this course?",
+        answer: "You can choose from classroom sessions in Kolkata, live online instructor-led training, or a hybrid model.",
+        category: "program"
+      },
+      {
+        question: "What is the eligibility criteria for Data Engineering?",
+        answer: "Graduates from CS, IT, Engineering, or any quantitative background with a logical mindset are eligible to join.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship for cloud-based engineering tools?",
+        answer: "Yes, you will receive 1:1 mentorship and hands-on guidance for setting up and managing cloud data environments.",
+        category: "support"
+      },
+      {
+        question: "How is Data Engineering different from the Data Science course?",
+        answer: "While Data Science focuses on modeling and insights, this course focuses on the infrastructure, plumbing, and processing of large-scale data.",
+        category: "program"
+      },
+      {
+        question: "Can I transition from a non-IT background to Data Engineering?",
+        answer: "Yes, though it is more technical, our structured curriculum and preparatory modules help non-IT students build the necessary foundation.",
+        category: "opportunities"
+      }
+    ]
+  },
+  "Data Engineering Course in Pune": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-engineering", name: "Data Engineering" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in the Data Engineering Course in Pune?",
+        answer: "Fresh graduates, working professionals, software developers, and IT professionals looking to transition into data engineering roles can enroll. It is specifically designed for those who want to build and manage large-scale data systems.",
+        category: "eligibility"
+      },
+      {
+        question: "Is prior coding experience required?",
+        answer: "Basic programming knowledge is helpful, but not mandatory. The course begins with fundamentals of Python and SQL, gradually advancing to complex big data and automation topics.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Engineering course in Pune?",
+        answer: "The program typically spans 6 to 9 months, providing a balance of theoretical depth and extensive hands-on laboratory sessions to ensure industry readiness.",
+        category: "program"
+      },
+      {
+        question: "Is the Data Engineering course in Pune suitable for working professionals?",
+        answer: "Yes, the course offers flexible learning options, including weekend batches and live online sessions, specifically tailored for Pune's busy IT workforce.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "You will master Python, SQL, Big Data frameworks (Hadoop, Spark), ETL tools, Data Orchestration (Apache Airflow), and Cloud platforms like AWS, Azure, or GCP.",
+        category: "data-engineering"
+      },
+      {
+        question: "Are real-world projects included in the course?",
+        answer: "Yes, learners work on multiple industry-relevant projects and a comprehensive capstone where you build end-to-end data pipelines and real-time streaming architectures.",
+        category: "projects"
+      },
+      {
+        question: "Is placement assistance available in Pune?",
+        answer: "Yes, Ivy Professional School provides career support, including resume optimization, mock technical interviews, and placement assistance with our network of 500+ hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What job roles can I apply for after completing this course?",
+        answer: "Graduates can apply for roles such as Data Engineer, Big Data Engineer, ETL Developer, Analytics Engineer, and Data Architect.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after completing the course?",
+        answer: "Yes, upon successful completion, you will receive an industry-recognized Data Engineering certification from Ivy Professional School.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by IT companies in Pune?",
+        answer: "Yes, the certification is highly valued by top MNCs, global capability centers (GCCs), and tech startups across Pune's Hinjewadi and Magarpatta IT hubs.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available for this course in Pune?",
+        answer: "The course is available through instructor-led classroom training, live online instructor-led sessions, and hybrid learning formats.",
+        category: "program"
+      },
+      {
+        question: "What is the eligibility criteria for enrolling in the course?",
+        answer: "Graduates from Engineering, Science, Commerce, or Management backgrounds are eligible. A basic logical mindset and an interest in data infrastructure are recommended.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship and doubt-clearing support?",
+        answer: "Yes, students receive 1:1 mentorship from industry experts, regular doubt-clearing sessions, and lifetime access to course recordings and materials.",
+        category: "support"
+      },
+      {
+        question: "How is Data Engineering different from a Data Science course?",
+        answer: "Data Engineering focuses on building and maintaining the infrastructure (pipelines) that moves data, whereas Data Science focuses on analyzing that data to find patterns and insights.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for a career switch into Cloud Engineering?",
+        answer: "Absolutely. The course includes dedicated modules on Cloud (Azure/AWS), making it an excellent path for anyone looking to transition into Cloud Data Engineering roles.",
+        category: "opportunities"
+      }
+    ]
+  },
+  "Data Engineering Course in Chennai": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-engineering", name: "Data Engineering" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in the Data Engineering Course in Chennai?",
+        answer: "Fresh graduates, working professionals, software developers, and IT professionals aiming to transition into data engineering roles can enroll. It is a perfect fit for those who enjoy backend systems and data architecture.",
+        category: "eligibility"
+      },
+      {
+        question: "Is prior coding experience required?",
+        answer: "Basic programming knowledge is helpful, but the course starts from fundamentals and gradually advances to complex concepts like building ETL pipelines and managing Big Data clusters.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Engineering course in Chennai?",
+        answer: "The program typically spans 6 to 9 months, depending on the learning pace and whether you opt for intensive weekday sessions or weekend batches.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for working professionals in Chennai?",
+        answer: "Yes, we offer flexible weekend and evening batches specifically for the convenience of IT professionals working in OMR, Siruseri, and DLF IT Park.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies are covered in this course?",
+        answer: "The curriculum includes Python, SQL, Hadoop, Apache Spark, Kafka, NoSQL databases, and Cloud-native engineering tools on AWS, Azure, or GCP.",
+        category: "data-engineering"
+      },
+      {
+        question: "Are there hands-on projects included?",
+        answer: "Yes, you will work on 10+ industry-aligned projects, including building real-time data streaming pipelines and architecting cloud data warehouses.",
+        category: "projects"
+      },
+      {
+        question: "Is placement assistance available in Chennai?",
+        answer: "Yes, Ivy Professional School provides dedicated career support, including resume building, mock technical interviews, and placement assistance with 500+ hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What job roles can I apply for after completing this course?",
+        answer: "Graduates can apply for roles such as Data Engineer, Big Data Engineer, ETL Developer, Data Architect, and Analytics Engineer.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after the course?",
+        answer: "Yes, upon successful completion, you will receive an industry-recognized Data Engineering certification from Ivy Professional School.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by top recruiters in Chennai?",
+        answer: "Yes, the certification is well-recognized by Chennai-based tech giants, SaaS companies, and global analytics firms.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available in Chennai?",
+        answer: "We provide instructor-led classroom sessions, live online instructor-led training, and a hybrid learning model.",
+        category: "program"
+      },
+      {
+        question: "What is the eligibility criteria for this course?",
+        answer: "Graduates from Engineering, Computer Science, IT, or any quantitative background are eligible. A logical mindset and familiarity with databases are beneficial.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get mentorship for cloud-based engineering?",
+        answer: "Yes, learners receive 1:1 mentorship from industry experts to help them navigate complex cloud architectures and big data workflows.",
+        category: "support"
+      },
+      {
+        question: "How is Data Engineering different from a Data Science course?",
+        answer: "Data Engineering is about the infrastructure and 'plumbing' that moves and cleans data, while Data Science is about analyzing that data for insights and predictions.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for a career switch from testing or support roles?",
+        answer: "Absolutely. This course is designed to help professionals from QA, Support, or DBA backgrounds transition smoothly into high-paying engineering roles.",
+        category: "opportunities"
       }
     ]
   },
@@ -2037,150 +3129,140 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
- "Generative AI Course": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "data-science", name: "Data Science" },
-    { id: "job and career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "support", name: "Support" }
-  ],
-  faqs: [
-    {
-      question: "What is this program about?",
-      answer:
-        "The Executive Certification in Generative AI (IIT Guwahati + Ivy Pro School) is a comprehensive, application-driven program that helps learners design, build, and deploy AI-powered applications using OpenAI, DALL·E, Whisper, and LangChain. It blends programming, GenAI, deep learning, and multimodal integration through 4 levels of learning and real-world projects.",
-      category: "program"
-    },
-    {
-      question: "What are the key learning stages?",
-      answer:
-        "The program includes three certification levels:\n\n1) GenAI App Builder – Foundation Certificate\n   - Python Programming, Data Processing, Intro to Generative AI, OpenAI APIs\n   - Hands-on: Text generation projects\n\n2) Advanced GenAI and Machine Learning\n   - Deep Learning, Chatbot creation (ChatPal AI), LangChain, SocioGenie AI\n   - Hands-on: LLM-powered chatbot development, AI content automation\n\n3) Advanced AI Integration & Multimodal Applications\n   - DALL·E, Whisper, ChatGPT, multimodal model fusion, VoiceMate AI, Newsify AI\n   - Hands-on: Voice assistants, image generation, news summarization, unified multimodal AI assistant",
-      category: "program"
-    },
-    {
-      question: "What is the duration of the program?",
-      answer:
-        "The course runs for 6 months, combining live interactive classes, hands-on labs, and capstone projects after every module.",
-      category: "program"
-    },
-    {
-      question: "Is the program industry-oriented?",
-      answer:
-        "Yes. Each module includes practical assignments and project deployment using APIs, LangChain pipelines, and cloud services — preparing you for immediate job relevance.",
-      category: "program"
-    },
-    {
-      question: "Who is eligible for the GenAI program?",
-      answer:
-        "Professionals, students, or tech enthusiasts with a background or interest in AI, programming, data, or digital innovation.",
-      category: "eligibility"
-    },
-    {
-      question: "Are programming skills required?",
-      answer:
-        "Basic Python knowledge is helpful but not mandatory. The Foundation Certificate starts from Python setup, libraries (NumPy, Pandas), and control structures.",
-      category: "eligibility"
-    },
-    {
-      question: "Can non-engineers join?",
-      answer:
-        "Yes. The program includes guided labs and mentorship to help non-tech learners become proficient in applied AI development.",
-      category: "eligibility"
-    },
-    {
-      question: "How does this program connect with Data Science?",
-      answer:
-        "While Data Science analyzes data, this course emphasizes generating text, images, and audio from data using models like GPT, DALL·E, and Whisper. You’ll also learn to automate analytics workflows using AI.",
-      category: "data-science"
-    },
-    {
-      question: "Will I learn Machine Learning fundamentals?",
-      answer:
-        "Yes. The Advanced GenAI & ML stage covers:\n\n- Linear Models, Decision Trees, k-NN\n- Classification & Regression\n- Deep Learning (MLP, CNN, RNN, LSTM, GRU)\n\nHands-on ML projects integrated with GenAI workflows.",
-      category: "data-science"
-    },
-    {
-      question: "What job roles can I target?",
-      answer:
-        "Graduates transition to roles like:\n\n- GenAI Engineer / AI Application Developer\n- AI Product Specialist / Automation Lead\n- Prompt Engineer / Chatbot Architect\n- Voice & Image AI Developer",
-      category: "job and career"
-    },
-    {
-      question: "How does the course prepare me for real-world projects?",
-      answer:
-        "Every stage has a capstone project, including:\n\n- ChatPal AI (Chatbot)\n- SocioGenie AI (Social Media Automation)\n- ResumeGen AI\n- EcommImageCraft AI\n- VoiceMate AI\n- Newsify AI\n- Unified Multimodal Assistant (final capstone)\n\nThese projects simulate business-level challenges.",
-      category: "job and career"
-    },
-    {
-      question: "What certification will I receive?",
-      answer:
-        "Upon completion, you’ll earn an Executive Certification in Generative AI jointly from IIT Guwahati and Ivy Professional School. Interim certifications are also provided after each module.",
-      category: "certification"
-    },
-    {
-      question: "How is evaluation done?",
-      answer:
-        "Assessments are based on hands-on projects, assignments, and mentor reviews, not written exams.",
-      category: "certification"
-    },
-    {
-      question: "What types of projects will I complete?",
-      answer:
-        "Foundation Level: Text generation using OpenAI APIs\nIntermediate Level: Chatbots, Social Media AI automation (LangChain, LLMs)\nAdvanced Level: Image generation (DALL·E), Voice recognition (Whisper), and multimodal systems combining text, voice, and image AI.\nEach project is mentored and graded.",
-      category: "projects"
-    },
-    {
-      question: "Is there a final capstone project?",
-      answer:
-        "Yes — “Unified Multimodal AI Assistant,” integrating ChatGPT, DALL·E, and Whisper for real-world applications.",
-      category: "projects"
-    },
-    {
-      question: "Do I get placement assistance?",
-      answer:
-        "Yes. Ivy provides:\n\n- 1:1 Career Counseling\n- Resume & Portfolio Building (GitHub, Projects)\n- Mock Interviews\n- Job Referrals to top AI and Data firms",
-      category: "placement"
-    },
-    {
-      question: "Which companies hire Ivy AI learners?",
-      answer:
-        "Our alumni work at EY, PwC, TCS, KPMG, Accenture, Amazon, and Wipro, across Data, AI, and Automation roles.",
-      category: "placement"
-    },
-    {
-      question: "What kind of learning support will I get?",
-      answer:
-        "Live interactive classes\nDedicated mentor support for projects\nLifetime access to recordings and materials\nDiscussion forums & community channels",
-      category: "support"
-    },
-    {
-      question: "What if I miss a session?",
-      answer:
-        "You can watch recordings anytime and rejoin a later batch at no extra cost.",
-      category: "support"
-    },
-    {
-      question: "Will there be post-course support?",
-      answer:
-        "Yes. Ivy alumni receive lifetime access to course updates, GenAI tool upgrades, and continued mentor support.",
-      category: "support"
-    }
-  ]
-}
-
-
-
-
-
-
-
-
-
-
+  "Generative AI Course": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-science", name: "Data Science" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "What is this program about?",
+        answer:
+          "The Executive Certification in Generative AI (IIT Guwahati + Ivy Pro School) is a comprehensive, application-driven program that helps learners design, build, and deploy AI-powered applications using OpenAI, DALL·E, Whisper, and LangChain. It blends programming, GenAI, deep learning, and multimodal integration through 4 levels of learning and real-world projects.",
+        category: "program"
+      },
+      {
+        question: "What are the key learning stages?",
+        answer:
+          "The program includes three certification levels:\n\n1) GenAI App Builder – Foundation Certificate\n   - Python Programming, Data Processing, Intro to Generative AI, OpenAI APIs\n   - Hands-on: Text generation projects\n\n2) Advanced GenAI and Machine Learning\n   - Deep Learning, Chatbot creation (ChatPal AI), LangChain, SocioGenie AI\n   - Hands-on: LLM-powered chatbot development, AI content automation\n\n3) Advanced AI Integration & Multimodal Applications\n   - DALL·E, Whisper, ChatGPT, multimodal model fusion, VoiceMate AI, Newsify AI\n   - Hands-on: Voice assistants, image generation, news summarization, unified multimodal AI assistant",
+        category: "program"
+      },
+      {
+        question: "What is the duration of the program?",
+        answer:
+          "The course runs for 6 months, combining live interactive classes, hands-on labs, and capstone projects after every module.",
+        category: "program"
+      },
+      {
+        question: "Is the program industry-oriented?",
+        answer:
+          "Yes. Each module includes practical assignments and project deployment using APIs, LangChain pipelines, and cloud services — preparing you for immediate job relevance.",
+        category: "program"
+      },
+      {
+        question: "Who is eligible for the GenAI program?",
+        answer:
+          "Professionals, students, or tech enthusiasts with a background or interest in AI, programming, data, or digital innovation.",
+        category: "eligibility"
+      },
+      {
+        question: "Are programming skills required?",
+        answer:
+          "Basic Python knowledge is helpful but not mandatory. The Foundation Certificate starts from Python setup, libraries (NumPy, Pandas), and control structures.",
+        category: "eligibility"
+      },
+      {
+        question: "Can non-engineers join?",
+        answer:
+          "Yes. The program includes guided labs and mentorship to help non-tech learners become proficient in applied AI development.",
+        category: "eligibility"
+      },
+      {
+        question: "How does this program connect with Data Science?",
+        answer:
+          "While Data Science analyzes data, this course emphasizes generating text, images, and audio from data using models like GPT, DALL·E, and Whisper. You’ll also learn to automate analytics workflows using AI.",
+        category: "data-science"
+      },
+      {
+        question: "Will I learn Machine Learning fundamentals?",
+        answer:
+          "Yes. The Advanced GenAI & ML stage covers:\n\n- Linear Models, Decision Trees, k-NN\n- Classification & Regression\n- Deep Learning (MLP, CNN, RNN, LSTM, GRU)\n\nHands-on ML projects integrated with GenAI workflows.",
+        category: "data-science"
+      },
+      {
+        question: "What job roles can I target?",
+        answer:
+          "Graduates transition to roles like:\n\n- GenAI Engineer / AI Application Developer\n- AI Product Specialist / Automation Lead\n- Prompt Engineer / Chatbot Architect\n- Voice & Image AI Developer",
+        category: "job and career"
+      },
+      {
+        question: "How does the course prepare me for real-world projects?",
+        answer:
+          "Every stage has a capstone project, including:\n\n- ChatPal AI (Chatbot)\n- SocioGenie AI (Social Media Automation)\n- ResumeGen AI\n- EcommImageCraft AI\n- VoiceMate AI\n- Newsify AI\n- Unified Multimodal Assistant (final capstone)\n\nThese projects simulate business-level challenges.",
+        category: "job and career"
+      },
+      {
+        question: "What certification will I receive?",
+        answer:
+          "Upon completion, you’ll earn an Executive Certification in Generative AI jointly from IIT Guwahati and Ivy Professional School. Interim certifications are also provided after each module.",
+        category: "certification"
+      },
+      {
+        question: "How is evaluation done?",
+        answer:
+          "Assessments are based on hands-on projects, assignments, and mentor reviews, not written exams.",
+        category: "certification"
+      },
+      {
+        question: "What types of projects will I complete?",
+        answer:
+          "Foundation Level: Text generation using OpenAI APIs\nIntermediate Level: Chatbots, Social Media AI automation (LangChain, LLMs)\nAdvanced Level: Image generation (DALL·E), Voice recognition (Whisper), and multimodal systems combining text, voice, and image AI.\nEach project is mentored and graded.",
+        category: "projects"
+      },
+      {
+        question: "Is there a final capstone project?",
+        answer:
+          "Yes — “Unified Multimodal AI Assistant,” integrating ChatGPT, DALL·E, and Whisper for real-world applications.",
+        category: "projects"
+      },
+      {
+        question: "Do I get placement assistance?",
+        answer:
+          "Yes. Ivy provides:\n\n- 1:1 Career Counseling\n- Resume & Portfolio Building (GitHub, Projects)\n- Mock Interviews\n- Job Referrals to top AI and Data firms",
+        category: "placement"
+      },
+      {
+        question: "Which companies hire Ivy AI learners?",
+        answer:
+          "Our alumni work at EY, PwC, TCS, KPMG, Accenture, Amazon, and Wipro, across Data, AI, and Automation roles.",
+        category: "placement"
+      },
+      {
+        question: "What kind of learning support will I get?",
+        answer:
+          "Live interactive classes\nDedicated mentor support for projects\nLifetime access to recordings and materials\nDiscussion forums & community channels",
+        category: "support"
+      },
+      {
+        question: "What if I miss a session?",
+        answer:
+          "You can watch recordings anytime and rejoin a later batch at no extra cost.",
+        category: "support"
+      },
+      {
+        question: "Will there be post-course support?",
+        answer:
+          "Yes. Ivy alumni receive lifetime access to course updates, GenAI tool upgrades, and continued mentor support.",
+        category: "support"
+      }
+    ]
+  }
 };
 
 const defaultData = {
@@ -2200,157 +3282,166 @@ const defaultData = {
   ]
 };
 
+
 const CourseFAQ = ({ course }: CourseHeroProps) => {
-
-
-  const data = courseData[course.title] || defaultData;
-
-
-  const categories = data.categories;
-  const faqs = data.faqs;
-
+  const data = useMemo(() => courseData[course.title] || defaultData, [course.title]);
   const [activeFilter, setActiveFilter] = useState<string>('program');
   const [isMobile, setIsMobile] = useState(false);
-  const [showNumber, setShowNumber] = useState(false);
 
   useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
-    };
+    const checkIfMobile = () => setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
     checkIfMobile();
     window.addEventListener("resize", checkIfMobile);
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
 
-  const handleClick = () => {
-    if (isMobile) {
-      window.location.href = "tel:7676882222";
-    } else {
-      setShowNumber(true);
-      const timer = setTimeout(() => {
-        setShowNumber(false);
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  };
-
-  const AnimatedPhoneButton = () => {
-    const [isMobile, setIsMobile] = useState(false);
-    const [showNumber, setShowNumber] = useState(false);
-
-    useEffect(() => {
-      const checkIfMobile = () => {
-        setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
-      };
-      checkIfMobile();
-      window.addEventListener("resize", checkIfMobile);
-      return () => window.removeEventListener("resize", checkIfMobile);
-    }, []);
-
-    const handleClick = () => {
-      if (isMobile) {
-        window.location.href = "tel:7676882222";
-      } else {
-        setShowNumber(!showNumber);
+  // SEO/AEO: Generate JSON-LD Schema for ALL FAQs in this course
+  const faqSchema = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": data.faqs.map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.answer
       }
-    };
+    }))
+  }), [data]);
 
-    return (
-      <div className="relative inline-block">
-        <Button className="flex items-center" onClick={handleClick}>
-          <MessageCircle size={18} className="mr-2" />
-          Schedule a Call
-        </Button>
-        {showNumber && !isMobile && (
-          <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-2 z-50 animate-fade-in">
-            <div className="text-center whitespace-nowrap">
-              <span className="text-sm font-medium text-gray-700">Call us at</span>
-              <div className="text font-bold text-[#009fda]">
-                7676882222
-              </div>
-            </div>
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-white"></div>
-          </div>
-        )}
-      </div>
-    );
-  };
-
-  const filteredFaqs = activeFilter === 'all'
-    ? faqs
-    : faqs.filter(faq => faq.category === activeFilter);
+  const filteredFaqs = data.faqs.filter(faq => faq.category === activeFilter);
 
   return (
-    <section style={{ marginTop: -90 }} className="py-5 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What I need to know more about Ivy’s support, fees, and projects?</h2>
-            <p className="text-gray-600">
-              Everything you need to know about the course and enrollment
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="w-full md:w-1/4">
-              <div className="bg-white rounded-lg shadow-md p-4 sticky top-4">
-                <h3 className="font-semibold text-lg mb-4 text-gray-800">Categories</h3>
-                <nav className="space-y-2">
-                  {categories.map(category => (
-                    <button
-                      key={category.id}
-                      onClick={() => setActiveFilter(category.id)}
-                      className={`w-full text-left px-4 py-2 rounded-md transition-colors ${activeFilter === category.id
-                        ? 'bg-indigo-50 text-indigo-700 font-medium'
-                        : 'text-gray-600 hover:bg-gray-100'
-                        }`}
-                    >
-                      {category.name}
-                    </button>
-                  ))}
-                </nav>
-              </div>
+    <>
+      {/* AEO Injection: This script makes your FAQs visible to AI Search Engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      <section id="faq-section" className="py-12 bg-gray-50 mt-[-90px]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+
+              {
+                course.title === "Data Science Course in Kolkata" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Science Course in Kolkata</span>
+                  </h2>
+                ) : course.title === "Data Engineering Course in Kolkata" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Kolkata</span>
+                  </h2>
+                ) :
+                course.title === "Data Engineering Course in Bangalore" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Bangalore</span>
+                  </h2>
+                )
+                
+                : course.title === "Data Science with Machine Learning & AI Course in Delhi" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Science Course in Delhi</span>
+                  </h2>
+                ) : course.title === "Data Science with Machine Learning & AI Course in Pune" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Science Course in Pune</span>
+                  </h2>
+                ) : course.title === "Data Science with Machine Learning & AI Course in Chennai" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Chennai</span>
+                  </h2>
+                )
+                  : course.title === "Data Science with Machine Learning & AI Course in Bangalore" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Bangalore</span>
+                    </h2>
+                  )
+                  : course.title === "Data Science with Machine Learning & AI Course in Mumbai" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
+                    </h2>
+                  )
+
+
+                    : (
+                      /* DEFAULT FALLBACK - If no matches above */
+                      <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                        What I need to know more about Ivy’s support, fees, and projects?                  </h2>
+                    )
+              }
+
+              <p className="text-gray-600">
+                Everything you need to know about the course and enrollment              </p>
             </div>
-            <div className="w-full md:w-3/4">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="p-6 border-b">
-                  <h3 className="text-xl font-semibold text-gray-800 capitalize">
-                    {activeFilter.replace('-', ' ')}
-                  </h3>
+
+            <div className="flex flex-col md:flex-row gap-8">
+              {/* Category Sidebar */}
+              <aside className="w-full md:w-1/4">
+                <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sticky top-24">
+                  <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-gray-500">Categories</h3>
+                  <nav className="space-y-1">
+                    {data.categories.map(category => (
+                      <button
+                        key={category.id}
+                        onClick={() => setActiveFilter(category.id)}
+                        className={`w-full text-left px-4 py-2.5 rounded-md text-sm transition-all ${activeFilter === category.id
+                          ? 'bg-blue-600 text-white font-semibold shadow-md'
+                          : 'text-gray-600 hover:bg-gray-100'
+                          }`}
+                      >
+                        {category.name}
+                      </button>
+                    ))}
+                  </nav>
                 </div>
-                <Accordion type="single" collapsible className="w-full">
-                  {filteredFaqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                      <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left">
-                        <div className="flex items-center">
-                          <span>{faq.question}</span>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-4">
-                        <p className="text-gray-700">{faq.answer}</p>
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
-              {showNumber && !isMobile && (
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-50 animate-fade-in">
-                  <div className="text-center">
-                    <p className="text-gray-700 font-medium">Call us at:</p>
-                    <a href="tel:7676882222" className="text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors">
-                      7676882222
-                    </a>
+              </aside>
+
+              {/* FAQ Accordion */}
+              <div className="w-full md:w-3/4">
+                <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                  <div className="p-6 border-b bg-white">
+                    <h3 className="text-xl font-bold text-gray-800 capitalize">
+                      {activeFilter.replace('-', ' ')} FAQs
+                    </h3>
                   </div>
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
+
+                  <Accordion type="single" collapsible className="w-full">
+                    {filteredFaqs.map((faq, index) => (
+                      <AccordionItem key={index} value={`item-${index}`} className="border-b last:border-0">
+                        <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left transition-all">
+                          {/* SEO: Using h3 or span with weight for question clarity */}
+                          <span className="text-base font-semibold text-gray-900 pr-4">{faq.question}</span>
+                        </AccordionTrigger>
+                        <AccordionContent className="px-6 pb-6 text-gray-700 leading-relaxed">
+                          {faq.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
                 </div>
-              )}
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <AnimatedPhoneButton />
+
+                {/* Call to Action Section */}
+                <div className="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div>
+                    <h4 className="text-lg font-bold text-blue-900">Still have questions?</h4>
+                    <p className="text-blue-700 text-sm">Speak directly with our career counselors in Kolkata.</p>
+                  </div>
+                  <Button
+                    onClick={() => isMobile ? window.location.href = "tel:7676882222" : alert("Call us at 7676882222")}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8"
+                  >
+                    <MessageCircle size={18} className="mr-2" />
+                    Schedule a Consultation
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

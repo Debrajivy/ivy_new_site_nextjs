@@ -2744,7 +2744,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Kolkata",
-    description: "Master data engineering and big data analytics with tools like Hadoop, Spark, Kafka, Hive, etc., to become a certified data engineer and get a guaranteed placement.",
+    description: "The Data Engineering Course in Kolkata is a comprehensive, job-oriented program focused on designing, building, and maintaining scalable data systems used by modern enterprises. This course emphasizes practical implementation of data pipelines, big data frameworks, cloud platforms, and distributed processing systems.In Kolkata’s evolving tech ecosystem, organizations increasingly require professionals who can manage high-volume, high-velocity, and high-variety data. This program prepares learners to handle real-world data challenges using tools such as SQL, Python, Hadoop, Spark, and cloud-based data platforms",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -2752,7 +2752,13 @@ const courses: Course[] = [
     rating: 4.7,
     reviewCount: 20,
     isFeatured: true,
-    slug: "data-engineering-course-in-kolkata",
+    slug: "data-engineering-course-kolkata",
+    metaData: {
+      title: "Data Engineering Course in Kolkata | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Engineering Course in Kolkata with real-world projects, industry tools, expert mentors & career support. Enroll now!",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
     longDescription: "Ready to build a high-paying career in tech? Enroll in Ivy Pro School's Data Engineering Course in Kolkata, a NASSCOM Certified program trusted by 6,000+ professionals. Designed for career changers and IT professionals alike, our curriculum equips you with job-ready skills using real-world projects and tools like Python, SQL, Hadoop, Spark, and cloud platforms.\n\n "
     , instructors: [
       {
@@ -2958,16 +2964,3486 @@ const courses: Course[] = [
       // }
     ],
     outcomes: [
-      "Build scalable data pipelines using tools like Hadoop, Spark, Kafka, and Hive",
-      "Manage structured and unstructured data with MySQL, MongoDB, and real-time processing systems",
-      "Implement big data solutions on the cloud using Azure, AWS, and GCP platforms",
-      "Solve complex business problems with 30+ case studies and 10+ industry-aligned capstone projects",
-      "Prepare for top certifications like AWS and GCP with guided mentoring and hands-on labs",
-      "Get lifetime access to recordings and 1:1 expert mentorship to support your learning and job prep"
+      "Build distributed data processing systems using Hadoop and Apache Spark",
+      "Implement real-time and batch data processing architectures",
+      "Gain hands-on exposure to cloud data platforms and modern data warehouses",
+      "Optimize data storage, performance, and data quality for enterprise use cases",
+      "Develop industry-ready skills aligned with Data Engineer roles in Kolkata and India",
+      "Design and implement scalable ETL and ELT data pipelines",
+      "Work with relational and NoSQL databases for structured and unstructured data",
+      "Apply Python and SQL for data transformation and automation",
+      "Build distributed data processing systems using Hadoop and Apache Spark"
     ],
 
 
   },
+
+
+
+   {
+    id: '11',
+    title: "Data Engineering Course in Delhi",
+    description: "The Data Engineering Course in Delhi provides comprehensive training on building scalable, reliable, and high-performance data pipelines. The course focuses on real-world data engineering workflows, enabling learners to work with structured and unstructured data at scale. With Delhi witnessing rapid adoption of data-driven decision-making across sectors such as BFSI, consulting, e-governance, and IT services, this course aligns closely with current industry requirements. Learners gain exposure to batch and real-time data processing, cloud-based data architectures, and distributed computing systems.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1098,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 20,
+    isFeatured: true,
+    slug: "data-engineering-course-delhi",
+    metaData: {
+      title: "Data Engineering Course in Delhi | Ivy Professional School",
+      description: "Enroll in Ivy Professional School’s Data Engineering Course in Delhi with hands-on projects, big data tools, cloud training & career support.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    longDescription: "A Data Engineering course in Delhi is the ultimate gateway to mastering the high-performance data pipelines driving the 2025 AI revolution. This specialized training focuses on technical architecture using Python, SQL, Spark, and Cloud to ensure data is clean and accessible at scale. \n\n Delhi-NCR has emerged as a premier hub for these roles, with Noida and Gurgaon seeing massive annual growth in job listings across Global Capability Centers. By specializing in this recession-proof field, you bridge the talent gap in sectors like BFSI and retail where demand currently far exceeds supply. "
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        "id": "m2",
+        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
+          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
+          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
+          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
+          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
+          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
+          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
+          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
+          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
+          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
+          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+        ]
+      },
+
+      {
+        "id": "m3",
+        "title": "Hadoop Framework & Architecture",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+        ]
+      },
+      {
+        "id": "m4",
+        "title": "Apache Spark Architecture & Programming",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
+          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
+          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
+          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
+          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
+          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
+          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m5",
+        "title": "MongoDB for Developers & Admins",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
+          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
+          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
+          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m6",
+        "title": "Apache Kafka Basics",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
+          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
+          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Apache Hive for Data Warehousing",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
+          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
+          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
+          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
+          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
+          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+        ]
+      },
+      ,
+
+
+
+
+
+    ]
+    ,
+    projects: [
+      {
+        id: "p1",
+        title: "Build Cloud Data Pipeline Using Databricks",
+        description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+        image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
+        skills: ["Apache ", "Big Data", "Azure"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "aNja1KSqczo"
+      },
+      {
+        id: "p2",
+        title: "How to Create End-to-End ETL Pipeline",
+        description: "Dive deep into practical data solutions using Azure by setting up a complete data pipeline, from storing CSV files in Azure Blob Storage to efficiently transferring data into SQL databases.",
+        image: "https://img.youtube.com/vi/yYbU_Bihvdc/0.jpg",
+        skills: ["Virtual Machines ", "Azure", "SQL"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "yYbU_Bihvdc"
+      },
+      {
+        id: "p3",
+        title: "Data Engineering Career Roadmap 2025",
+        description: "Get comprehensive roadmap for anyone looking to start or grow their career in Data Engineering in 2025. You'll understand the real-world data pipeline, in-demand tools (SQL, Python, Spark, Docker, Cloud).",
+        image: "https://img.youtube.com/vi/QbI60IMgO_g/0.jpg",
+        skills: ["SQL", "Python", "Spark", "Docker", "Cloud"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "QbI60IMgO_g"
+      },
+      // {
+      //   id: "p4",
+      //   title: "Superstore Sales Analysis Using Excel ",
+      //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
+      //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+      //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
+      //   difficulty: "Beginner to Intermediate",
+      //   videoId: "KGrApiKUR4M"
+      // },
+      // {
+      //   id: "p5",
+      //   title: "Predicting Car Sales using Linear Regression in R",
+      //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
+      //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
+      //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
+      //   difficulty: "Intermediate",
+      //   videoId: "8nNgJJH7pMk"
+      // },
+      // {
+      //   id: "p6",
+      //   title: "Crime Intelligence Dashboard in Power BI",
+      //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
+      //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
+      //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
+      //   difficulty: "Intermediate",
+      //   videoId: "sVXjAIa7YBs"
+      // }
+    ],
+    outcomes: [
+      "Understand the end-to-end data engineering lifecycle",
+      "Design and implement ETL and ELT data pipelines",
+      "Work with SQL and Python for data transformation and automation",
+      "Manage relational and NoSQL databases efficiently",
+      "Build distributed data processing systems using Hadoop and Apache Spark",
+      "Implement batch and real-time data processing solutions",
+      "Work with cloud-based data platforms and data warehouses",
+      "Ensure data quality, scalability, and performance",
+      "Prepare for Data Engineer roles in Delhi’s competitive job market"
+    ],
+
+
+  },
+
+
+  {
+    id: '11',
+    title: "Data Engineering Course in Bangalore",
+    description: "The Data Engineering Course in Bangalore by Ivy Professional School is designed for professionals and fresh graduates who want to build a strong career in data engineering and big data technologies. Known as the Silicon Valley of India, Bangalore offers immense opportunities for data engineers, and this program is crafted to meet the hiring demands of top tech companies.This course focuses on building scalable data pipelines, managing large datasets, and working with modern data engineering tools used across industries such as IT services, product companies, fintech, and startups.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1098,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 20,
+    isFeatured: true,
+    slug: "data-engineering-course-bangalore",
+    metaData: {
+      title: "Data Engineering Course in Bangalore | Ivy Professional School",
+      description: "Enroll in Ivy Professional School’s Data Engineering Course in Bangalore with hands-on projects, cloud tools, expert mentors & career support.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Bangalore by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    longDescription: "The Data Engineering Course in Bangalore provides end-to-end training on designing, building, and maintaining enterprise-grade data infrastructure. The program combines strong theoretical foundations with extensive hands-on practice to ensure learners are job-ready. \n\n With Bangalore hosting global technology companies and data-driven startups, this course aligns with real-world use cases and industry workflows. Learners gain exposure to batch and real-time data processing, cloud-based data platforms, and distributed systems that power modern analytics and AI applications. "
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        "id": "m2",
+        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
+          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
+          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
+          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
+          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
+          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
+          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
+          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
+          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
+          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
+          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+        ]
+      },
+
+      {
+        "id": "m3",
+        "title": "Hadoop Framework & Architecture",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+        ]
+      },
+      {
+        "id": "m4",
+        "title": "Apache Spark Architecture & Programming",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
+          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
+          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
+          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
+          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
+          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
+          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m5",
+        "title": "MongoDB for Developers & Admins",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
+          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
+          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
+          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m6",
+        "title": "Apache Kafka Basics",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
+          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
+          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Apache Hive for Data Warehousing",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
+          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
+          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
+          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
+          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
+          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+        ]
+      },
+      ,
+
+
+
+
+
+    ]
+    ,
+    projects: [
+      {
+        id: "p1",
+        title: "Build Cloud Data Pipeline Using Databricks",
+        description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+        image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
+        skills: ["Apache ", "Big Data", "Azure"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "aNja1KSqczo"
+      },
+      {
+        id: "p2",
+        title: "How to Create End-to-End ETL Pipeline",
+        description: "Dive deep into practical data solutions using Azure by setting up a complete data pipeline, from storing CSV files in Azure Blob Storage to efficiently transferring data into SQL databases.",
+        image: "https://img.youtube.com/vi/yYbU_Bihvdc/0.jpg",
+        skills: ["Virtual Machines ", "Azure", "SQL"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "yYbU_Bihvdc"
+      },
+      {
+        id: "p3",
+        title: "Data Engineering Career Roadmap 2025",
+        description: "Get comprehensive roadmap for anyone looking to start or grow their career in Data Engineering in 2025. You'll understand the real-world data pipeline, in-demand tools (SQL, Python, Spark, Docker, Cloud).",
+        image: "https://img.youtube.com/vi/QbI60IMgO_g/0.jpg",
+        skills: ["SQL", "Python", "Spark", "Docker", "Cloud"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "QbI60IMgO_g"
+      },
+      // {
+      //   id: "p4",
+      //   title: "Superstore Sales Analysis Using Excel ",
+      //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
+      //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+      //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
+      //   difficulty: "Beginner to Intermediate",
+      //   videoId: "KGrApiKUR4M"
+      // },
+      // {
+      //   id: "p5",
+      //   title: "Predicting Car Sales using Linear Regression in R",
+      //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
+      //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
+      //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
+      //   difficulty: "Intermediate",
+      //   videoId: "8nNgJJH7pMk"
+      // },
+      // {
+      //   id: "p6",
+      //   title: "Crime Intelligence Dashboard in Power BI",
+      //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
+      //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
+      //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
+      //   difficulty: "Intermediate",
+      //   videoId: "sVXjAIa7YBs"
+      // }
+    ],
+    outcomes: [
+      "Design and implement robust ETL and ELT data pipelines",
+      "Work with SQL, Python, and data transformation techniques",
+      "Build and optimize big data systems using Hadoop and Apache Spark",
+      "Implement batch and real-time data processing frameworks",
+      "Prepare for Data Engineer roles in Bangalore’s competitive job market",
+      "Ensure data quality, scalability, and performance in production systems",
+      
+    ],
+
+
+  },
+  {
+    id: '11',
+    title: "Data Engineering Course in Mumbai",
+    description: "The Data Engineering Course in Mumbai by Ivy Professional School is designed to prepare learners for high-demand data engineering roles across BFSI, consulting, media, e-commerce, and technology sectors. As India’s financial capital, Mumbai offers vast opportunities for data engineers skilled in building scalable, secure, and high-performance data systems.This program equips students with practical expertise in data pipelines, big data frameworks, and cloud-based data platforms used by leading enterprises.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1098,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 20,
+    isFeatured: true,
+    slug: "data-engineering-course-mumbai",
+    metaData: {
+      title: "Data Engineering Course in Mumbai | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Engineering Course in Mumbai with hands-on projects, big data & cloud tools, expert mentors, and career support.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Mumbai by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    longDescription: "The Data Engineering Course in Mumbai offers end-to-end training on designing, building, and managing enterprise-grade data infrastructure. The curriculum blends strong fundamentals with hands-on implementation to ensure learners are job-ready. \n\n With Mumbai hosting major banks, financial institutions, consulting firms, and large enterprises, the course emphasizes real-world use cases such as transactional data processing, analytics pipelines, and cloud data warehousing. Learners gain exposure to batch and real-time data processing, distributed systems, and modern data architectures. \n\n The program is delivered through instructor-led sessions, practical labs, and industry-aligned case studies, making it suitable for both freshers and working professionals in Mumbai."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        "id": "m2",
+        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
+          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
+          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
+          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
+          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
+          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
+          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
+          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
+          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
+          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
+          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+        ]
+      },
+
+      {
+        "id": "m3",
+        "title": "Hadoop Framework & Architecture",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+        ]
+      },
+      {
+        "id": "m4",
+        "title": "Apache Spark Architecture & Programming",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
+          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
+          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
+          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
+          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
+          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
+          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m5",
+        "title": "MongoDB for Developers & Admins",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
+          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
+          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
+          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m6",
+        "title": "Apache Kafka Basics",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
+          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
+          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Apache Hive for Data Warehousing",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
+          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
+          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
+          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
+          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
+          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+        ]
+      },
+      ,
+
+
+
+
+
+    ]
+    ,
+    projects: [
+      {
+        id: "p1",
+        title: "Build Cloud Data Pipeline Using Databricks",
+        description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+        image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
+        skills: ["Apache ", "Big Data", "Azure"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "aNja1KSqczo"
+      },
+      {
+        id: "p2",
+        title: "How to Create End-to-End ETL Pipeline",
+        description: "Dive deep into practical data solutions using Azure by setting up a complete data pipeline, from storing CSV files in Azure Blob Storage to efficiently transferring data into SQL databases.",
+        image: "https://img.youtube.com/vi/yYbU_Bihvdc/0.jpg",
+        skills: ["Virtual Machines ", "Azure", "SQL"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "yYbU_Bihvdc"
+      },
+      {
+        id: "p3",
+        title: "Data Engineering Career Roadmap 2025",
+        description: "Get comprehensive roadmap for anyone looking to start or grow their career in Data Engineering in 2025. You'll understand the real-world data pipeline, in-demand tools (SQL, Python, Spark, Docker, Cloud).",
+        image: "https://img.youtube.com/vi/QbI60IMgO_g/0.jpg",
+        skills: ["SQL", "Python", "Spark", "Docker", "Cloud"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "QbI60IMgO_g"
+      },
+      // {
+      //   id: "p4",
+      //   title: "Superstore Sales Analysis Using Excel ",
+      //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
+      //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+      //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
+      //   difficulty: "Beginner to Intermediate",
+      //   videoId: "KGrApiKUR4M"
+      // },
+      // {
+      //   id: "p5",
+      //   title: "Predicting Car Sales using Linear Regression in R",
+      //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
+      //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
+      //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
+      //   difficulty: "Intermediate",
+      //   videoId: "8nNgJJH7pMk"
+      // },
+      // {
+      //   id: "p6",
+      //   title: "Crime Intelligence Dashboard in Power BI",
+      //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
+      //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
+      //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
+      //   difficulty: "Intermediate",
+      //   videoId: "sVXjAIa7YBs"
+      // }
+    ],
+    outcomes: [
+      "Understand the complete data engineering lifecycle",
+      "Design and implement ETL and ELT data pipelines",
+      "Use SQL and Python for data processing and automation",
+      "Work with relational and NoSQL databases",
+      "Build distributed data systems using Hadoop and Apache Spark",
+      "Implement batch and real-time data processing frameworks",
+      
+    ],
+
+
+  },
+
+  {
+    id: '11',
+    title: "Data Engineering Course in Pune",
+    description: "The Data Engineering Course in Pune by Ivy Professional School is designed to help learners build industry-ready skills in data engineering, big data technologies, and modern data platforms. Pune is a fast-growing IT and analytics hub with strong presence of software companies, startups, and global delivery centers, creating high demand for skilled data engineers. This program focuses on practical, job-oriented training that prepares students to design, develop, and manage scalable data pipelines used by modern organizations.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1098,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 20,
+    isFeatured: true,
+    slug: "data-engineering-course-pune",
+    metaData: {
+      title: "Data Engineering Course in Pune | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Engineering Course in Pune with hands-on projects, big data & cloud tools, expert mentors, and career support.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Pune by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    longDescription: "The Data Engineering Course in Pune provides comprehensive training on building reliable, scalable, and high-performance data infrastructure. The course combines strong foundational concepts with hands-on implementation of real-world data engineering workflows. \n\n With Pune hosting leading IT services firms, product companies, and analytics-driven startups, the course emphasizes practical use cases such as data warehousing, cloud-based data platforms, and distributed data processing systems. Learners gain exposure to both batch and real-time data processing architectures that support analytics and AI initiatives. \n\n The program is delivered through instructor-led sessions, practical labs, and industry-aligned case studies, making it suitable for freshers as well as working professionals in Pune."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        "id": "m2",
+        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
+          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
+          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
+          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
+          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
+          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
+          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
+          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
+          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
+          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
+          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+        ]
+      },
+
+      {
+        "id": "m3",
+        "title": "Hadoop Framework & Architecture",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+        ]
+      },
+      {
+        "id": "m4",
+        "title": "Apache Spark Architecture & Programming",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
+          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
+          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
+          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
+          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
+          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
+          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m5",
+        "title": "MongoDB for Developers & Admins",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
+          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
+          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
+          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m6",
+        "title": "Apache Kafka Basics",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
+          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
+          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Apache Hive for Data Warehousing",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
+          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
+          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
+          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
+          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
+          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+        ]
+      },
+      ,
+
+
+
+
+
+    ]
+    ,
+    projects: [
+      {
+        id: "p1",
+        title: "Build Cloud Data Pipeline Using Databricks",
+        description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+        image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
+        skills: ["Apache ", "Big Data", "Azure"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "aNja1KSqczo"
+      },
+      {
+        id: "p2",
+        title: "How to Create End-to-End ETL Pipeline",
+        description: "Dive deep into practical data solutions using Azure by setting up a complete data pipeline, from storing CSV files in Azure Blob Storage to efficiently transferring data into SQL databases.",
+        image: "https://img.youtube.com/vi/yYbU_Bihvdc/0.jpg",
+        skills: ["Virtual Machines ", "Azure", "SQL"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "yYbU_Bihvdc"
+      },
+      {
+        id: "p3",
+        title: "Data Engineering Career Roadmap 2025",
+        description: "Get comprehensive roadmap for anyone looking to start or grow their career in Data Engineering in 2025. You'll understand the real-world data pipeline, in-demand tools (SQL, Python, Spark, Docker, Cloud).",
+        image: "https://img.youtube.com/vi/QbI60IMgO_g/0.jpg",
+        skills: ["SQL", "Python", "Spark", "Docker", "Cloud"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "QbI60IMgO_g"
+      },
+      // {
+      //   id: "p4",
+      //   title: "Superstore Sales Analysis Using Excel ",
+      //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
+      //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+      //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
+      //   difficulty: "Beginner to Intermediate",
+      //   videoId: "KGrApiKUR4M"
+      // },
+      // {
+      //   id: "p5",
+      //   title: "Predicting Car Sales using Linear Regression in R",
+      //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
+      //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
+      //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
+      //   difficulty: "Intermediate",
+      //   videoId: "8nNgJJH7pMk"
+      // },
+      // {
+      //   id: "p6",
+      //   title: "Crime Intelligence Dashboard in Power BI",
+      //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
+      //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
+      //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
+      //   difficulty: "Intermediate",
+      //   videoId: "sVXjAIa7YBs"
+      // }
+    ],
+    outcomes: [
+      "Understand the complete data engineering lifecycle",
+      "Design and implement ETL and ELT data pipelines",
+      "Use SQL and Python for data processing and automation",
+      "Work with relational and NoSQL databases",
+      "Build distributed data processing systems using Hadoop and Apache Spark",
+      "Implement batch and real-time data processing frameworks",
+      
+    ],
+
+
+  },
+
+  {
+    id: '11',
+    title: "Data Engineering Course in Chennai",
+    description: "The Data Engineering Course in Chennai by Ivy Professional School is designed for learners who want to build a strong career in data engineering and big data technologies. Chennai is a major hub for IT services, SaaS companies, manufacturing analytics, and global delivery centers, making it an ideal city for aspiring data engineers. This program equips students with industry-relevant skills to design, develop, and manage scalable data pipelines and data platforms used by modern enterprises.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1098,
+    duration: "6 weeks",
+    rating: 4.7,
+    reviewCount: 20,
+    isFeatured: true,
+    slug: "data-engineering-course-chennai",
+    metaData: {
+      title: "Data Engineering Course in Chennai | Ivy Professional School",
+      description: "Enroll in Ivy Professional School’s Data Engineering Course in Chennai with hands-on projects, big data & cloud tools, expert mentors, and career support.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Chennai by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    longDescription: "The Data Engineering Course in Chennai offers end-to-end training on building robust, scalable, and high-performance data infrastructure. The course focuses on real-world data engineering workflows, combining strong theoretical foundations with hands-on practical implementation. \n\n With Chennai hosting leading IT services firms, global technology centers, and analytics-driven organizations, the course emphasizes practical use cases such as enterprise data pipelines, cloud data warehousing, and distributed data processing. Learners gain exposure to both batch and real-time data processing systems that support analytics and AI applications."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        "id": "m2",
+        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
+          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
+          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
+          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
+          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
+          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
+          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
+          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
+          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
+          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
+          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+        ]
+      },
+
+      {
+        "id": "m3",
+        "title": "Hadoop Framework & Architecture",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
+          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
+          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
+          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+        ]
+      },
+      {
+        "id": "m4",
+        "title": "Apache Spark Architecture & Programming",
+        "duration": "8 hrs",
+        "topics": [
+          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
+          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
+          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
+          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
+          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
+          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
+          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
+          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m5",
+        "title": "MongoDB for Developers & Admins",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
+          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
+          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
+          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+        ]
+      }
+      ,
+      {
+        "id": "m6",
+        "title": "Apache Kafka Basics",
+        "duration": "2 hrs",
+        "topics": [
+          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
+          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
+          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
+          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Apache Hive for Data Warehousing",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
+          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
+          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
+          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
+          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
+          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
+          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
+          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+        ]
+      },
+      ,
+
+
+
+
+
+    ]
+    ,
+    projects: [
+      {
+        id: "p1",
+        title: "Build Cloud Data Pipeline Using Databricks",
+        description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+        image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
+        skills: ["Apache ", "Big Data", "Azure"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "aNja1KSqczo"
+      },
+      {
+        id: "p2",
+        title: "How to Create End-to-End ETL Pipeline",
+        description: "Dive deep into practical data solutions using Azure by setting up a complete data pipeline, from storing CSV files in Azure Blob Storage to efficiently transferring data into SQL databases.",
+        image: "https://img.youtube.com/vi/yYbU_Bihvdc/0.jpg",
+        skills: ["Virtual Machines ", "Azure", "SQL"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "yYbU_Bihvdc"
+      },
+      {
+        id: "p3",
+        title: "Data Engineering Career Roadmap 2025",
+        description: "Get comprehensive roadmap for anyone looking to start or grow their career in Data Engineering in 2025. You'll understand the real-world data pipeline, in-demand tools (SQL, Python, Spark, Docker, Cloud).",
+        image: "https://img.youtube.com/vi/QbI60IMgO_g/0.jpg",
+        skills: ["SQL", "Python", "Spark", "Docker", "Cloud"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "QbI60IMgO_g"
+      },
+      // {
+      //   id: "p4",
+      //   title: "Superstore Sales Analysis Using Excel ",
+      //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
+      //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+      //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
+      //   difficulty: "Beginner to Intermediate",
+      //   videoId: "KGrApiKUR4M"
+      // },
+      // {
+      //   id: "p5",
+      //   title: "Predicting Car Sales using Linear Regression in R",
+      //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
+      //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
+      //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
+      //   difficulty: "Intermediate",
+      //   videoId: "8nNgJJH7pMk"
+      // },
+      // {
+      //   id: "p6",
+      //   title: "Crime Intelligence Dashboard in Power BI",
+      //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
+      //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
+      //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
+      //   difficulty: "Intermediate",
+      //   videoId: "sVXjAIa7YBs"
+      // }
+    ],
+    outcomes: [
+      "Understand the complete data engineering lifecycle from ingestion to analytics-ready data",
+      "Design and implement ETL and ELT data pipelines",
+      "Work with relational and NoSQL databases",
+      "Build distributed data processing systems using Hadoop and Apache Spark",
+      "Implement batch and real-time data processing frameworks",
+      "Prepare for Data Engineer roles in Chennai’s competitive job market",
+      
+    ],
+
+
+  },
+
+
+  {
+    id: '12',
+    title: "Data Science with Machine Learning & AI Course in Kolkata",
+    description: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training. \n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Science Course in Kolkata | Ivy Professional School",
+      description: "Enroll in the Data Science Course in Kolkata by Ivy Professional School. Learn Machine Learning & AI with real projects, expert mentors, and strong placement support.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-science-course-kolkata",
+    longDescription: "The Data Science Course in Kolkata is a comprehensive, industry-aligned program covering statistics, Python, Machine Learning, AI, SQL, visualization tools, and real-world business problem solving.\n\n The course is structured to take learners from foundational concepts to advanced applications through hands-on labs, case studies, and capstone projects.Whether you are a fresher, IT professional, or working in domains like finance, marketing, or operations, this Kolkata-based data science program enables a smooth transition into analytics and AI-driven roles."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Apply statistical analysis to real-world datasets",
+      "Write efficient Python code for data analysis and modeling",
+      "Build and evaluate Machine Learning models",
+      "Work with structured and unstructured data",
+      "Perform data visualization and storytelling for business insights",
+      "Understand AI concepts and practical use cases",
+      "Deploy end-to-end data science projects"
+    ],
+
+
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advanced Excel",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
+          { id: "t2", title: "Data Analysis", duration: "" },
+          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
+          { id: "t4", title: "Data Visualization", duration: "" },
+          { id: "t5", title: "Data Cleaning", duration: "" },
+          { id: "t6", title: "Dashboarding", duration: "" },
+          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        // ]
+      },
+
+
+      {
+        id: "m2",
+        title: "MySQL",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Database Management", duration: "" },
+          { id: "t2", title: "SQL Queries", duration: "" },
+          { id: "t3", title: "Data Retrieval", duration: "" },
+          { id: "t4", title: "Database Design", duration: "" },
+          { id: "t5", title: "Performance Optimization", duration: "" },
+          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        // ]
+      },
+
+      {
+        id: "m3",
+        title: " Tableau",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
+          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
+          { id: "t3", title: "Data Connection and Blending", duration: "" },
+          { id: "t4", title: "Calculations and Expressions", duration: "" },
+          { id: "t5", title: "Chart Types", duration: "" },
+          { id: "t6", title: "Parameters", duration: "" },
+          { id: "t7", title: "Dashboard Actions", duration: "" },
+          { id: "t8", title: "Story and Tableau Prep", duration: "" },
+          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Business Statistics",
+        duration: "8 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        // ]
+        topics: [
+          { id: "t1", title: "Probability Distributions", duration: "" },
+          { id: "t2", title: "EDA", duration: "" },
+          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
+          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
+          { id: "t5", title: "Data Preprocessing", duration: "" },
+          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "R",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
+        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
+        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
+        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
+        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
+        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
+        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
+        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
+        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
+        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
+        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
+          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
+          { id: "t4", title: "Statistical Analysis", duration: "" },
+          { id: "t5", title: "Predictive Modeling in R", duration: "" },
+          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
+          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+        ]
+
+      }
+
+      ,
+
+      {
+        id: "m6",
+        title: "Python",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
+          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
+          { id: "t4", title: "ML Fundamentals", duration: "" },
+          { id: "t5", title: "Predictive Modeling", duration: "" },
+          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
+          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        ]
+
+      }
+      ,
+      {
+        id: "m7",
+        title: "ML, DL & AI",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
+        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
+        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
+        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
+        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
+        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
+        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
+        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
+        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
+        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
+        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
+        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
+        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
+        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Predictive Modeling", duration: "" },
+          { id: "t2", title: "Clustering", duration: "" },
+          { id: "t3", title: "Decision Trees", duration: "" },
+          { id: "t4", title: "Ensemble Techniques", duration: "" },
+          { id: "t5", title: "Optimization", duration: "" },
+          { id: "t6", title: "NLP", duration: "" },
+          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
+          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        ]
+
+      }
+
+
+      // ,
+
+      // {
+      //   id: "m8",
+      //   title: "Statistics",
+      //   duration: "8 hrs",
+      //   topics: [
+      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
+      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
+      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
+      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
+      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
+      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
+      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
+      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
+      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
+      //   ]
+      // }
+
+      // ,
+      // {
+      //   "id": "m9",
+      //   "title": "Excel VBA Automation",
+      //   "duration": "26 hrs",
+      //   "topics": [
+      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
+      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
+      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
+      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
+      //   ]
+      // }
+
+
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "Steps to Make a Career in AI & Data",
+        description: "Explore pathways to start and grow a career in AI and Data. Learn about essential skills, tools, career opportunities, and how AI is impacting various industries through this expert Q&A session.",
+        image: "https://img.youtube.com/vi/OoCffZ4VaJE/0.jpg",
+        skills: ["AI Career Path", "AI Tools", "AI Research", "AI & Web Development", "Chatbots"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "OoCffZ4VaJE"
+      },
+      {
+        id: "p2",
+        title: "Using AI Visuals in Power BI Dashboards",
+        description: "Learn to create AI-powered visuals in Power BI, including Key Influencer, Decomposition Tree, Q&A, and Smart Narrative. Explore current AI trends and integrate ChatGPT for enhanced insights",
+        image: "https://img.youtube.com/vi/ftTTrchGVbA/0.jpg",
+        skills: ["Key Influencer Visual", "Decomposition Tree", "Smart Narrative", "AI Trends"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "ftTTrchGVbA"
+      },
+      {
+        id: "p3",
+        title: "Python Prediction Model for Real Estate",
+        description: "Build a real estate price prediction model using Python and machine learning. Learn data preprocessing, regression techniques, and model building with practical insights from a real-world case study.",
+        image: "https://img.youtube.com/vi/TipOU1HPrxA/0.jpg",
+        skills: ["Regression Models", "Data Preprocessing", "Linear Regression", "Random Forest", "Neural Networks"],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "TipOU1HPrxA"
+      },
+      {
+        id: "p4",
+        title: "OYO Business Analysis with SQL",
+        description: "Learn how to perform business analysis using SQL with a real-world case study on OYO’s room sales. Cover data cleaning, SQL queries, business KPIs, and practical data-driven decision-making.",
+        image: "https://img.youtube.com/vi/ee7TajNEUrI/0.jpg",
+        skills: ["GROUP BY", "ARIMA Model", "Window Functions ", "CTE", "Data Cleaning"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "ee7TajNEUrI"
+      },
+      {
+        id: "p5",
+        title: "Predicting Computer Prices with Python",
+        description: "Build a predictive model for computer prices using Python. Learn data cleaning, regression modeling, and key Python libraries through this industry case study by an IvyPro student.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["Feature Engineering,", "Linear Regression", "Random Forest", "Scikit-learn", "Regression Metrics"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      },
+      {
+        id: "p6",
+        title: "ANOVA Using R - Bakery Case Study",
+        description: "Analyze how display factors affect product demand using Two-way ANOVA and Tukey’s Test in R. Learn statistical hypothesis testing through this practical bakery case study.",
+        image: "https://img.youtube.com/vi/UhO4y3a9yxQ/0.jpg",
+        skills: ["Data Loading", "Data Manipulation", "Two-way ANOVA", "Hypothesis Testing", "Statistical Modeling"],
+        difficulty: "Intermediate",
+        videoId: "UhO4y3a9yxQ"
+      }
+    ],
+
+
+
+
+
+
+
+
+
+
+  },
+
+
+  {
+    id: '13',
+    title: "Data Science with Machine Learning & AI Course in Delhi",
+    description: "If you are searching for a job-oriented data science course in Delhi, Ivy Professional School offers a comprehensive, industry-relevant program designed to help learners build strong foundations in analytics, machine learning, and artificial intelligence. As one of India’s largest professional and corporate hubs, Delhi NCR hosts a wide range of opportunities across IT services, consulting, fintech, and analytics-driven organizations. This course equips learners with practical, in-demand data science skills aligned with real business needs.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Science Course in Delhi | Ivy Professional School",
+      description: "Enroll in Ivy Professional School’s Data Science Course in Delhi with hands-on projects, expert mentorship, and career-focused analytics training.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-science-course-delhi",
+    longDescription: "The Data Science Course in Delhi is a structured, hands-on training program that covers the complete data science workflow—from data understanding and preprocessing to advanced machine learning and AI applications. \n\n Designed by experienced industry practitioners, the curriculum emphasizes practical problem-solving, business use cases, and tool-based learning rather than just theory. Learners gain exposure to real-world datasets and case studies commonly encountered in analytics roles. /n/n This data science course in Delhi is suitable for graduates, working professionals, and career switchers who want to move into data-driven roles with guided mentorship and career support."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Build a solid foundation in statistics and mathematics for data science",
+      "Analyze and process data using Python, Pandas, NumPy, and SQL",
+      "Perform exploratory data analysis and generate actionable insights",
+      "Design, train, and evaluate machine learning models",
+      "Apply supervised and unsupervised learning techniques effectively",
+      "Work on real-world datasets and industry-oriented case studies",
+      "Communicate data-driven insights clearly to business stakeholders"
+    ],
+
+
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advanced Excel",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
+          { id: "t2", title: "Data Analysis", duration: "" },
+          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
+          { id: "t4", title: "Data Visualization", duration: "" },
+          { id: "t5", title: "Data Cleaning", duration: "" },
+          { id: "t6", title: "Dashboarding", duration: "" },
+          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        // ]
+      },
+
+
+      {
+        id: "m2",
+        title: "MySQL",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Database Management", duration: "" },
+          { id: "t2", title: "SQL Queries", duration: "" },
+          { id: "t3", title: "Data Retrieval", duration: "" },
+          { id: "t4", title: "Database Design", duration: "" },
+          { id: "t5", title: "Performance Optimization", duration: "" },
+          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        // ]
+      },
+
+      {
+        id: "m3",
+        title: " Tableau",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
+          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
+          { id: "t3", title: "Data Connection and Blending", duration: "" },
+          { id: "t4", title: "Calculations and Expressions", duration: "" },
+          { id: "t5", title: "Chart Types", duration: "" },
+          { id: "t6", title: "Parameters", duration: "" },
+          { id: "t7", title: "Dashboard Actions", duration: "" },
+          { id: "t8", title: "Story and Tableau Prep", duration: "" },
+          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Business Statistics",
+        duration: "8 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        // ]
+        topics: [
+          { id: "t1", title: "Probability Distributions", duration: "" },
+          { id: "t2", title: "EDA", duration: "" },
+          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
+          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
+          { id: "t5", title: "Data Preprocessing", duration: "" },
+          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "R",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
+        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
+        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
+        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
+        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
+        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
+        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
+        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
+        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
+        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
+        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
+          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
+          { id: "t4", title: "Statistical Analysis", duration: "" },
+          { id: "t5", title: "Predictive Modeling in R", duration: "" },
+          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
+          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+        ]
+
+      }
+
+      ,
+
+      {
+        id: "m6",
+        title: "Python",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
+          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
+          { id: "t4", title: "ML Fundamentals", duration: "" },
+          { id: "t5", title: "Predictive Modeling", duration: "" },
+          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
+          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        ]
+
+      }
+      ,
+      {
+        id: "m7",
+        title: "ML, DL & AI",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
+        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
+        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
+        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
+        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
+        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
+        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
+        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
+        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
+        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
+        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
+        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
+        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
+        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Predictive Modeling", duration: "" },
+          { id: "t2", title: "Clustering", duration: "" },
+          { id: "t3", title: "Decision Trees", duration: "" },
+          { id: "t4", title: "Ensemble Techniques", duration: "" },
+          { id: "t5", title: "Optimization", duration: "" },
+          { id: "t6", title: "NLP", duration: "" },
+          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
+          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        ]
+
+      }
+
+
+      // ,
+
+      // {
+      //   id: "m8",
+      //   title: "Statistics",
+      //   duration: "8 hrs",
+      //   topics: [
+      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
+      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
+      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
+      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
+      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
+      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
+      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
+      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
+      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
+      //   ]
+      // }
+
+      // ,
+      // {
+      //   "id": "m9",
+      //   "title": "Excel VBA Automation",
+      //   "duration": "26 hrs",
+      //   "topics": [
+      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
+      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
+      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
+      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
+      //   ]
+      // }
+
+
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "Steps to Make a Career in AI & Data",
+        description: "Explore pathways to start and grow a career in AI and Data. Learn about essential skills, tools, career opportunities, and how AI is impacting various industries through this expert Q&A session.",
+        image: "https://img.youtube.com/vi/OoCffZ4VaJE/0.jpg",
+        skills: ["AI Career Path", "AI Tools", "AI Research", "AI & Web Development", "Chatbots"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "OoCffZ4VaJE"
+      },
+      {
+        id: "p2",
+        title: "Using AI Visuals in Power BI Dashboards",
+        description: "Learn to create AI-powered visuals in Power BI, including Key Influencer, Decomposition Tree, Q&A, and Smart Narrative. Explore current AI trends and integrate ChatGPT for enhanced insights",
+        image: "https://img.youtube.com/vi/ftTTrchGVbA/0.jpg",
+        skills: ["Key Influencer Visual", "Decomposition Tree", "Smart Narrative", "AI Trends"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "ftTTrchGVbA"
+      },
+      {
+        id: "p3",
+        title: "Python Prediction Model for Real Estate",
+        description: "Build a real estate price prediction model using Python and machine learning. Learn data preprocessing, regression techniques, and model building with practical insights from a real-world case study.",
+        image: "https://img.youtube.com/vi/TipOU1HPrxA/0.jpg",
+        skills: ["Regression Models", "Data Preprocessing", "Linear Regression", "Random Forest", "Neural Networks"],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "TipOU1HPrxA"
+      },
+      {
+        id: "p4",
+        title: "OYO Business Analysis with SQL",
+        description: "Learn how to perform business analysis using SQL with a real-world case study on OYO’s room sales. Cover data cleaning, SQL queries, business KPIs, and practical data-driven decision-making.",
+        image: "https://img.youtube.com/vi/ee7TajNEUrI/0.jpg",
+        skills: ["GROUP BY", "ARIMA Model", "Window Functions ", "CTE", "Data Cleaning"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "ee7TajNEUrI"
+      },
+      {
+        id: "p5",
+        title: "Predicting Computer Prices with Python",
+        description: "Build a predictive model for computer prices using Python. Learn data cleaning, regression modeling, and key Python libraries through this industry case study by an IvyPro student.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["Feature Engineering,", "Linear Regression", "Random Forest", "Scikit-learn", "Regression Metrics"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      },
+      {
+        id: "p6",
+        title: "ANOVA Using R - Bakery Case Study",
+        description: "Analyze how display factors affect product demand using Two-way ANOVA and Tukey’s Test in R. Learn statistical hypothesis testing through this practical bakery case study.",
+        image: "https://img.youtube.com/vi/UhO4y3a9yxQ/0.jpg",
+        skills: ["Data Loading", "Data Manipulation", "Two-way ANOVA", "Hypothesis Testing", "Statistical Modeling"],
+        difficulty: "Intermediate",
+        videoId: "UhO4y3a9yxQ"
+      }
+    ],
+
+
+
+
+
+
+
+
+
+
+  },
+
+
+   {
+    id: '14',
+    title: "Data Science with Machine Learning & AI Course in Pune",
+    description: "If you are looking for a career-focused data science course in Pune, Ivy Professional School offers a comprehensive program designed to help learners master analytics, machine learning, and artificial intelligence with real-world relevance. Pune is widely recognized as one of India’s leading IT and technology hubs, hosting global IT firms, startups, and analytics-driven organizations. This program is ideal for learners who want to build data science expertise aligned with Pune’s thriving tech ecosystem.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Science Course in Pune | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Science Course in Pune with hands-on projects, expert mentors, and industry-focused analytics training.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-science-course-pune",
+    longDescription: "The Data Science Course in Pune is a practical, industry-oriented training program that covers the complete data science lifecycle—from data understanding and preprocessing to predictive modeling, machine learning, and AI-based solutions. \n\n Built with strong industry inputs, the course emphasizes hands-on learning, real business problems, and tools commonly used in analytics and data science roles. Learners work with real datasets and case studies that simulate challenges faced by data professionals in the industry. \n\n This data science course in Pune is suitable for fresh graduates, IT professionals, engineers, and working professionals who want to transition into data-driven roles with structured mentorship and career support."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Develop a solid understanding of statistics and mathematics for data science",
+      "Analyze and manipulate data using Python, Pandas, NumPy, and SQL",
+      "Perform exploratory data analysis to uncover patterns and insights",
+      "Build, evaluate, and optimize machine learning models",
+      "Apply supervised and unsupervised learning techniques to real problems",
+      "Work with real-world datasets and industry-driven use cases",
+      "Present data-driven insights effectively to business and technical teams"
+    ],
+
+
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advanced Excel",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
+          { id: "t2", title: "Data Analysis", duration: "" },
+          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
+          { id: "t4", title: "Data Visualization", duration: "" },
+          { id: "t5", title: "Data Cleaning", duration: "" },
+          { id: "t6", title: "Dashboarding", duration: "" },
+          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        // ]
+      },
+
+
+      {
+        id: "m2",
+        title: "MySQL",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Database Management", duration: "" },
+          { id: "t2", title: "SQL Queries", duration: "" },
+          { id: "t3", title: "Data Retrieval", duration: "" },
+          { id: "t4", title: "Database Design", duration: "" },
+          { id: "t5", title: "Performance Optimization", duration: "" },
+          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        // ]
+      },
+
+      {
+        id: "m3",
+        title: " Tableau",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
+          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
+          { id: "t3", title: "Data Connection and Blending", duration: "" },
+          { id: "t4", title: "Calculations and Expressions", duration: "" },
+          { id: "t5", title: "Chart Types", duration: "" },
+          { id: "t6", title: "Parameters", duration: "" },
+          { id: "t7", title: "Dashboard Actions", duration: "" },
+          { id: "t8", title: "Story and Tableau Prep", duration: "" },
+          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Business Statistics",
+        duration: "8 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        // ]
+        topics: [
+          { id: "t1", title: "Probability Distributions", duration: "" },
+          { id: "t2", title: "EDA", duration: "" },
+          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
+          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
+          { id: "t5", title: "Data Preprocessing", duration: "" },
+          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "R",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
+        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
+        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
+        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
+        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
+        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
+        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
+        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
+        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
+        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
+        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
+          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
+          { id: "t4", title: "Statistical Analysis", duration: "" },
+          { id: "t5", title: "Predictive Modeling in R", duration: "" },
+          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
+          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+        ]
+
+      }
+
+      ,
+
+      {
+        id: "m6",
+        title: "Python",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
+          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
+          { id: "t4", title: "ML Fundamentals", duration: "" },
+          { id: "t5", title: "Predictive Modeling", duration: "" },
+          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
+          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        ]
+
+      }
+      ,
+      {
+        id: "m7",
+        title: "ML, DL & AI",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
+        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
+        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
+        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
+        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
+        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
+        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
+        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
+        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
+        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
+        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
+        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
+        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
+        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Predictive Modeling", duration: "" },
+          { id: "t2", title: "Clustering", duration: "" },
+          { id: "t3", title: "Decision Trees", duration: "" },
+          { id: "t4", title: "Ensemble Techniques", duration: "" },
+          { id: "t5", title: "Optimization", duration: "" },
+          { id: "t6", title: "NLP", duration: "" },
+          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
+          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        ]
+
+      }
+
+
+      // ,
+
+      // {
+      //   id: "m8",
+      //   title: "Statistics",
+      //   duration: "8 hrs",
+      //   topics: [
+      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
+      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
+      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
+      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
+      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
+      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
+      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
+      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
+      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
+      //   ]
+      // }
+
+      // ,
+      // {
+      //   "id": "m9",
+      //   "title": "Excel VBA Automation",
+      //   "duration": "26 hrs",
+      //   "topics": [
+      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
+      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
+      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
+      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
+      //   ]
+      // }
+
+
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "Steps to Make a Career in AI & Data",
+        description: "Explore pathways to start and grow a career in AI and Data. Learn about essential skills, tools, career opportunities, and how AI is impacting various industries through this expert Q&A session.",
+        image: "https://img.youtube.com/vi/OoCffZ4VaJE/0.jpg",
+        skills: ["AI Career Path", "AI Tools", "AI Research", "AI & Web Development", "Chatbots"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "OoCffZ4VaJE"
+      },
+      {
+        id: "p2",
+        title: "Using AI Visuals in Power BI Dashboards",
+        description: "Learn to create AI-powered visuals in Power BI, including Key Influencer, Decomposition Tree, Q&A, and Smart Narrative. Explore current AI trends and integrate ChatGPT for enhanced insights",
+        image: "https://img.youtube.com/vi/ftTTrchGVbA/0.jpg",
+        skills: ["Key Influencer Visual", "Decomposition Tree", "Smart Narrative", "AI Trends"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "ftTTrchGVbA"
+      },
+      {
+        id: "p3",
+        title: "Python Prediction Model for Real Estate",
+        description: "Build a real estate price prediction model using Python and machine learning. Learn data preprocessing, regression techniques, and model building with practical insights from a real-world case study.",
+        image: "https://img.youtube.com/vi/TipOU1HPrxA/0.jpg",
+        skills: ["Regression Models", "Data Preprocessing", "Linear Regression", "Random Forest", "Neural Networks"],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "TipOU1HPrxA"
+      },
+      {
+        id: "p4",
+        title: "OYO Business Analysis with SQL",
+        description: "Learn how to perform business analysis using SQL with a real-world case study on OYO’s room sales. Cover data cleaning, SQL queries, business KPIs, and practical data-driven decision-making.",
+        image: "https://img.youtube.com/vi/ee7TajNEUrI/0.jpg",
+        skills: ["GROUP BY", "ARIMA Model", "Window Functions ", "CTE", "Data Cleaning"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "ee7TajNEUrI"
+      },
+      {
+        id: "p5",
+        title: "Predicting Computer Prices with Python",
+        description: "Build a predictive model for computer prices using Python. Learn data cleaning, regression modeling, and key Python libraries through this industry case study by an IvyPro student.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["Feature Engineering,", "Linear Regression", "Random Forest", "Scikit-learn", "Regression Metrics"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      },
+      {
+        id: "p6",
+        title: "ANOVA Using R - Bakery Case Study",
+        description: "Analyze how display factors affect product demand using Two-way ANOVA and Tukey’s Test in R. Learn statistical hypothesis testing through this practical bakery case study.",
+        image: "https://img.youtube.com/vi/UhO4y3a9yxQ/0.jpg",
+        skills: ["Data Loading", "Data Manipulation", "Two-way ANOVA", "Hypothesis Testing", "Statistical Modeling"],
+        difficulty: "Intermediate",
+        videoId: "UhO4y3a9yxQ"
+      }
+    ],
+
+
+
+
+
+
+
+
+
+
+  },
+
+
+   {
+    id: '15',
+    title: "Data Science with Machine Learning & AI Course in Chennai",
+    description: "If you are searching for a career-driven data science course in Chennai, Ivy Professional School offers a comprehensive program designed to help learners gain in-demand skills in analytics, machine learning, and artificial intelligence.Chennai is a major hub for IT services, manufacturing analytics, fintech, and enterprise technology, making it an excellent city to build a long-term career in data science. This program prepares learners to meet industry expectations through practical learning and real-world exposure",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Science Course in Chennai | Ivy Professional School",
+      description: "Enroll in Ivy Professional School’s Data Science Course in Chennai with hands-on projects, expert mentors, and industry-ready analytics training.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-science-course-chennai",
+    longDescription: "The Data Science Course in Chennai is a hands-on, industry-aligned program that covers the complete data science lifecycle—from data collection and preprocessing to predictive modeling, machine learning, and AI-based solutions. \n\n Designed with inputs from industry professionals, the curriculum focuses on practical problem-solving, business use cases, and tools widely used in data science and analytics roles. Learners work on real datasets and case studies that reflect challenges faced by organizations across industries. \n\n This data science course in Chennai is ideal for graduates, IT professionals, engineers, and working professionals who want to transition into data-driven roles with structured mentorship and career support."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Build a strong foundation in statistics and mathematics for data science",
+      "Analyze, clean, and manipulate data using Python, Pandas, NumPy, and SQL",
+      "Perform exploratory data analysis to uncover insights and trends",
+      "Design, train, and evaluate machine learning models",
+      "Apply supervised and unsupervised learning techniques effectively",
+      "Work with real-world datasets and industry-focused case studies",
+      "Communicate data-driven insights clearly to technical and business stakeholders"
+   
+    ],
+
+
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advanced Excel",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
+          { id: "t2", title: "Data Analysis", duration: "" },
+          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
+          { id: "t4", title: "Data Visualization", duration: "" },
+          { id: "t5", title: "Data Cleaning", duration: "" },
+          { id: "t6", title: "Dashboarding", duration: "" },
+          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        // ]
+      },
+
+
+      {
+        id: "m2",
+        title: "MySQL",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Database Management", duration: "" },
+          { id: "t2", title: "SQL Queries", duration: "" },
+          { id: "t3", title: "Data Retrieval", duration: "" },
+          { id: "t4", title: "Database Design", duration: "" },
+          { id: "t5", title: "Performance Optimization", duration: "" },
+          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        // ]
+      },
+
+      {
+        id: "m3",
+        title: " Tableau",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
+          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
+          { id: "t3", title: "Data Connection and Blending", duration: "" },
+          { id: "t4", title: "Calculations and Expressions", duration: "" },
+          { id: "t5", title: "Chart Types", duration: "" },
+          { id: "t6", title: "Parameters", duration: "" },
+          { id: "t7", title: "Dashboard Actions", duration: "" },
+          { id: "t8", title: "Story and Tableau Prep", duration: "" },
+          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Business Statistics",
+        duration: "8 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        // ]
+        topics: [
+          { id: "t1", title: "Probability Distributions", duration: "" },
+          { id: "t2", title: "EDA", duration: "" },
+          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
+          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
+          { id: "t5", title: "Data Preprocessing", duration: "" },
+          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "R",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
+        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
+        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
+        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
+        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
+        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
+        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
+        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
+        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
+        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
+        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
+          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
+          { id: "t4", title: "Statistical Analysis", duration: "" },
+          { id: "t5", title: "Predictive Modeling in R", duration: "" },
+          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
+          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+        ]
+
+      }
+
+      ,
+
+      {
+        id: "m6",
+        title: "Python",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
+          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
+          { id: "t4", title: "ML Fundamentals", duration: "" },
+          { id: "t5", title: "Predictive Modeling", duration: "" },
+          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
+          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        ]
+
+      }
+      ,
+      {
+        id: "m7",
+        title: "ML, DL & AI",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
+        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
+        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
+        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
+        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
+        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
+        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
+        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
+        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
+        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
+        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
+        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
+        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
+        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Predictive Modeling", duration: "" },
+          { id: "t2", title: "Clustering", duration: "" },
+          { id: "t3", title: "Decision Trees", duration: "" },
+          { id: "t4", title: "Ensemble Techniques", duration: "" },
+          { id: "t5", title: "Optimization", duration: "" },
+          { id: "t6", title: "NLP", duration: "" },
+          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
+          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        ]
+
+      }
+
+
+      // ,
+
+      // {
+      //   id: "m8",
+      //   title: "Statistics",
+      //   duration: "8 hrs",
+      //   topics: [
+      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
+      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
+      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
+      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
+      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
+      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
+      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
+      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
+      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
+      //   ]
+      // }
+
+      // ,
+      // {
+      //   "id": "m9",
+      //   "title": "Excel VBA Automation",
+      //   "duration": "26 hrs",
+      //   "topics": [
+      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
+      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
+      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
+      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
+      //   ]
+      // }
+
+
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "Steps to Make a Career in AI & Data",
+        description: "Explore pathways to start and grow a career in AI and Data. Learn about essential skills, tools, career opportunities, and how AI is impacting various industries through this expert Q&A session.",
+        image: "https://img.youtube.com/vi/OoCffZ4VaJE/0.jpg",
+        skills: ["AI Career Path", "AI Tools", "AI Research", "AI & Web Development", "Chatbots"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "OoCffZ4VaJE"
+      },
+      {
+        id: "p2",
+        title: "Using AI Visuals in Power BI Dashboards",
+        description: "Learn to create AI-powered visuals in Power BI, including Key Influencer, Decomposition Tree, Q&A, and Smart Narrative. Explore current AI trends and integrate ChatGPT for enhanced insights",
+        image: "https://img.youtube.com/vi/ftTTrchGVbA/0.jpg",
+        skills: ["Key Influencer Visual", "Decomposition Tree", "Smart Narrative", "AI Trends"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "ftTTrchGVbA"
+      },
+      {
+        id: "p3",
+        title: "Python Prediction Model for Real Estate",
+        description: "Build a real estate price prediction model using Python and machine learning. Learn data preprocessing, regression techniques, and model building with practical insights from a real-world case study.",
+        image: "https://img.youtube.com/vi/TipOU1HPrxA/0.jpg",
+        skills: ["Regression Models", "Data Preprocessing", "Linear Regression", "Random Forest", "Neural Networks"],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "TipOU1HPrxA"
+      },
+      {
+        id: "p4",
+        title: "OYO Business Analysis with SQL",
+        description: "Learn how to perform business analysis using SQL with a real-world case study on OYO’s room sales. Cover data cleaning, SQL queries, business KPIs, and practical data-driven decision-making.",
+        image: "https://img.youtube.com/vi/ee7TajNEUrI/0.jpg",
+        skills: ["GROUP BY", "ARIMA Model", "Window Functions ", "CTE", "Data Cleaning"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "ee7TajNEUrI"
+      },
+      {
+        id: "p5",
+        title: "Predicting Computer Prices with Python",
+        description: "Build a predictive model for computer prices using Python. Learn data cleaning, regression modeling, and key Python libraries through this industry case study by an IvyPro student.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["Feature Engineering,", "Linear Regression", "Random Forest", "Scikit-learn", "Regression Metrics"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      },
+      {
+        id: "p6",
+        title: "ANOVA Using R - Bakery Case Study",
+        description: "Analyze how display factors affect product demand using Two-way ANOVA and Tukey’s Test in R. Learn statistical hypothesis testing through this practical bakery case study.",
+        image: "https://img.youtube.com/vi/UhO4y3a9yxQ/0.jpg",
+        skills: ["Data Loading", "Data Manipulation", "Two-way ANOVA", "Hypothesis Testing", "Statistical Modeling"],
+        difficulty: "Intermediate",
+        videoId: "UhO4y3a9yxQ"
+      }
+    ],
+
+
+
+
+
+
+
+
+
+
+  },
+
+   {
+    id: '16',
+    title: "Data Science with Machine Learning & AI Course in Bangalore",
+    description: "Bangalore, often referred to as the Silicon Valley of India, is home to some of the world’s leading technology companies and startups. The Data Science with Machine Learning & AI Course in Bangalore by Ivy Professional School is designed to help aspiring professionals and working executives build future-ready careers in data-driven roles.This industry-aligned data science course blends statistics, programming, machine learning, and AI with hands-on projects and real-world case studies. Whether you are a fresher, IT professional, or domain expert looking to upskill, our Bangalore data science program prepares you for high-growth roles such as Data Scientist, Machine Learning Engineer, and Data Analyst.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Science Course in Bangalore | Ivy Professional School",
+      description: "Enroll in Ivy Professional School’s Data Science Course in Bangalore with Machine Learning & AI. Real projects, expert mentors, and career support.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-science-course-bangalore",
+    longDescription: "Bangalore’s tech ecosystem demands professionals who can convert raw data into actionable insights. Ivy Professional School bridges this skill gap through a structured, practical, and career-focused learning approach. \n\n Learn from industry experts with real-world data science experience. \n\n Curriculum aligned with current industry tools and hiring needs. \n\n Hands-on exposure to live projects and case studies. \n\n Flexible learning options suitable for working professionals in Bangalore. \n\n Strong career support with interview preparation and guidance."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Fundamentals of Statistics and Probability for Data Science",
+      "Python programming for data analysis and visualization",
+      "Data wrangling and exploratory data analysis using Pandas and NumPy",
+      "Machine Learning algorithms including regression, classification, and clustering",
+      "Model evaluation, validation, and optimization techniques",
+      "Working with real-world datasets and business problems",
+      "Communicating insights through dashboards and visual storytelling",
+      "Introduction to Artificial Intelligence concepts"
+   
+    ],
+
+
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advanced Excel",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
+          { id: "t2", title: "Data Analysis", duration: "" },
+          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
+          { id: "t4", title: "Data Visualization", duration: "" },
+          { id: "t5", title: "Data Cleaning", duration: "" },
+          { id: "t6", title: "Dashboarding", duration: "" },
+          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        // ]
+      },
+
+
+      {
+        id: "m2",
+        title: "MySQL",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Database Management", duration: "" },
+          { id: "t2", title: "SQL Queries", duration: "" },
+          { id: "t3", title: "Data Retrieval", duration: "" },
+          { id: "t4", title: "Database Design", duration: "" },
+          { id: "t5", title: "Performance Optimization", duration: "" },
+          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        // ]
+      },
+
+      {
+        id: "m3",
+        title: " Tableau",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
+          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
+          { id: "t3", title: "Data Connection and Blending", duration: "" },
+          { id: "t4", title: "Calculations and Expressions", duration: "" },
+          { id: "t5", title: "Chart Types", duration: "" },
+          { id: "t6", title: "Parameters", duration: "" },
+          { id: "t7", title: "Dashboard Actions", duration: "" },
+          { id: "t8", title: "Story and Tableau Prep", duration: "" },
+          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Business Statistics",
+        duration: "8 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        // ]
+        topics: [
+          { id: "t1", title: "Probability Distributions", duration: "" },
+          { id: "t2", title: "EDA", duration: "" },
+          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
+          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
+          { id: "t5", title: "Data Preprocessing", duration: "" },
+          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "R",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
+        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
+        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
+        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
+        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
+        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
+        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
+        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
+        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
+        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
+        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
+          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
+          { id: "t4", title: "Statistical Analysis", duration: "" },
+          { id: "t5", title: "Predictive Modeling in R", duration: "" },
+          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
+          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+        ]
+
+      }
+
+      ,
+
+      {
+        id: "m6",
+        title: "Python",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
+          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
+          { id: "t4", title: "ML Fundamentals", duration: "" },
+          { id: "t5", title: "Predictive Modeling", duration: "" },
+          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
+          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        ]
+
+      }
+      ,
+      {
+        id: "m7",
+        title: "ML, DL & AI",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
+        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
+        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
+        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
+        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
+        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
+        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
+        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
+        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
+        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
+        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
+        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
+        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
+        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Predictive Modeling", duration: "" },
+          { id: "t2", title: "Clustering", duration: "" },
+          { id: "t3", title: "Decision Trees", duration: "" },
+          { id: "t4", title: "Ensemble Techniques", duration: "" },
+          { id: "t5", title: "Optimization", duration: "" },
+          { id: "t6", title: "NLP", duration: "" },
+          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
+          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        ]
+
+      }
+
+
+      // ,
+
+      // {
+      //   id: "m8",
+      //   title: "Statistics",
+      //   duration: "8 hrs",
+      //   topics: [
+      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
+      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
+      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
+      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
+      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
+      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
+      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
+      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
+      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
+      //   ]
+      // }
+
+      // ,
+      // {
+      //   "id": "m9",
+      //   "title": "Excel VBA Automation",
+      //   "duration": "26 hrs",
+      //   "topics": [
+      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
+      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
+      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
+      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
+      //   ]
+      // }
+
+
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "Steps to Make a Career in AI & Data",
+        description: "Explore pathways to start and grow a career in AI and Data. Learn about essential skills, tools, career opportunities, and how AI is impacting various industries through this expert Q&A session.",
+        image: "https://img.youtube.com/vi/OoCffZ4VaJE/0.jpg",
+        skills: ["AI Career Path", "AI Tools", "AI Research", "AI & Web Development", "Chatbots"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "OoCffZ4VaJE"
+      },
+      {
+        id: "p2",
+        title: "Using AI Visuals in Power BI Dashboards",
+        description: "Learn to create AI-powered visuals in Power BI, including Key Influencer, Decomposition Tree, Q&A, and Smart Narrative. Explore current AI trends and integrate ChatGPT for enhanced insights",
+        image: "https://img.youtube.com/vi/ftTTrchGVbA/0.jpg",
+        skills: ["Key Influencer Visual", "Decomposition Tree", "Smart Narrative", "AI Trends"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "ftTTrchGVbA"
+      },
+      {
+        id: "p3",
+        title: "Python Prediction Model for Real Estate",
+        description: "Build a real estate price prediction model using Python and machine learning. Learn data preprocessing, regression techniques, and model building with practical insights from a real-world case study.",
+        image: "https://img.youtube.com/vi/TipOU1HPrxA/0.jpg",
+        skills: ["Regression Models", "Data Preprocessing", "Linear Regression", "Random Forest", "Neural Networks"],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "TipOU1HPrxA"
+      },
+      {
+        id: "p4",
+        title: "OYO Business Analysis with SQL",
+        description: "Learn how to perform business analysis using SQL with a real-world case study on OYO’s room sales. Cover data cleaning, SQL queries, business KPIs, and practical data-driven decision-making.",
+        image: "https://img.youtube.com/vi/ee7TajNEUrI/0.jpg",
+        skills: ["GROUP BY", "ARIMA Model", "Window Functions ", "CTE", "Data Cleaning"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "ee7TajNEUrI"
+      },
+      {
+        id: "p5",
+        title: "Predicting Computer Prices with Python",
+        description: "Build a predictive model for computer prices using Python. Learn data cleaning, regression modeling, and key Python libraries through this industry case study by an IvyPro student.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["Feature Engineering,", "Linear Regression", "Random Forest", "Scikit-learn", "Regression Metrics"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      },
+      {
+        id: "p6",
+        title: "ANOVA Using R - Bakery Case Study",
+        description: "Analyze how display factors affect product demand using Two-way ANOVA and Tukey’s Test in R. Learn statistical hypothesis testing through this practical bakery case study.",
+        image: "https://img.youtube.com/vi/UhO4y3a9yxQ/0.jpg",
+        skills: ["Data Loading", "Data Manipulation", "Two-way ANOVA", "Hypothesis Testing", "Statistical Modeling"],
+        difficulty: "Intermediate",
+        videoId: "UhO4y3a9yxQ"
+      }
+    ],
+
+
+
+
+
+
+
+
+
+
+  },
+
+
+  {
+    id: '17',
+    title: "Data Science with Machine Learning & AI Course in Mumbai",
+    description: "Mumbai is India’s financial capital and a major hub for BFSI, media, e-commerce, consulting, and technology-driven enterprises. The Data Science with Machine Learning & AI Course in Mumbai by Ivy Professional School is designed to help learners build industry-ready data science skills aligned with the needs of Mumbai’s fast-paced, data-driven business ecosystem. This comprehensive data science program integrates statistics, Python programming, machine learning, and AI with hands-on projects and real-world case studies. Whether you are a graduate, working professional, or domain expert looking to transition into analytics, this Mumbai-focused data science course prepares you for high-growth roles across industries",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Science Course in Mumbai | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Science Course in Mumbai with Machine Learning & AI. Industry projects, expert mentors, and career-focused learning.",
+      bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-science-course-mumbai",
+    longDescription: "Mumbai’s competitive corporate environment demands data professionals who can deliver insights that drive strategic and financial decisions. Ivy Professional School emphasizes practical learning and business-oriented analytics.\n\n Faculty with real-world industry and analytics experience. \n\n Career guidance, resume building, and interview preparation support. \n\n Curriculum aligned with finance, consulting, and enterprise analytics use cases. \n\n Strong focus on hands-on projects and applied learning. \n\n Flexible schedules suitable for working professionals in Mumbai. \n\n Career guidance, resume building, and interview preparation support"
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Strong foundation in statistics and probability for data analysis",
+      "Python programming for data manipulation and visualization",
+      "Data cleaning, preprocessing, and feature engineering techniques",
+      "Exploratory Data Analysis (EDA) for business and financial insights",
+      "Core machine learning algorithms and their practical applications",
+      "Model evaluation, tuning, and optimization methods",
+      "Introduction to Artificial Intelligence fundamentals",
+      "Applying data science solutions to real-world corporate and financial problems"
+   
+    ],
+
+
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advanced Excel",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
+          { id: "t2", title: "Data Analysis", duration: "" },
+          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
+          { id: "t4", title: "Data Visualization", duration: "" },
+          { id: "t5", title: "Data Cleaning", duration: "" },
+          { id: "t6", title: "Dashboarding", duration: "" },
+          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        // ]
+      },
+
+
+      {
+        id: "m2",
+        title: "MySQL",
+        duration: "32 hrs",
+        topics: [
+          { id: "t1", title: "Database Management", duration: "" },
+          { id: "t2", title: "SQL Queries", duration: "" },
+          { id: "t3", title: "Data Retrieval", duration: "" },
+          { id: "t4", title: "Database Design", duration: "" },
+          { id: "t5", title: "Performance Optimization", duration: "" },
+          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
+        ]
+
+        // topics: [
+        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        // ]
+      },
+
+      {
+        id: "m3",
+        title: " Tableau",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
+          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
+          { id: "t3", title: "Data Connection and Blending", duration: "" },
+          { id: "t4", title: "Calculations and Expressions", duration: "" },
+          { id: "t5", title: "Chart Types", duration: "" },
+          { id: "t6", title: "Parameters", duration: "" },
+          { id: "t7", title: "Dashboard Actions", duration: "" },
+          { id: "t8", title: "Story and Tableau Prep", duration: "" },
+          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Business Statistics",
+        duration: "8 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        // ]
+        topics: [
+          { id: "t1", title: "Probability Distributions", duration: "" },
+          { id: "t2", title: "EDA", duration: "" },
+          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
+          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
+          { id: "t5", title: "Data Preprocessing", duration: "" },
+          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        ]
+
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "R",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
+        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
+        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
+        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
+        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
+        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
+        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
+        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
+        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
+        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
+        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
+          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
+          { id: "t4", title: "Statistical Analysis", duration: "" },
+          { id: "t5", title: "Predictive Modeling in R", duration: "" },
+          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
+          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+        ]
+
+      }
+
+      ,
+
+      {
+        id: "m6",
+        title: "Python",
+        duration: "40 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Basics to Advanced", duration: "" },
+          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
+          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
+          { id: "t4", title: "ML Fundamentals", duration: "" },
+          { id: "t5", title: "Predictive Modeling", duration: "" },
+          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
+          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        ]
+
+      }
+      ,
+      {
+        id: "m7",
+        title: "ML, DL & AI",
+        duration: "28 hrs",
+        // topics: [
+        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
+        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
+        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
+        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
+        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
+        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
+        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
+        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
+        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
+        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
+        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
+        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
+        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
+        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
+        // ]
+        topics: [
+          { id: "t1", title: "Predictive Modeling", duration: "" },
+          { id: "t2", title: "Clustering", duration: "" },
+          { id: "t3", title: "Decision Trees", duration: "" },
+          { id: "t4", title: "Ensemble Techniques", duration: "" },
+          { id: "t5", title: "Optimization", duration: "" },
+          { id: "t6", title: "NLP", duration: "" },
+          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
+          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        ]
+
+      }
+
+
+      // ,
+
+      // {
+      //   id: "m8",
+      //   title: "Statistics",
+      //   duration: "8 hrs",
+      //   topics: [
+      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
+      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
+      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
+      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
+      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
+      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
+      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
+      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
+      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
+      //   ]
+      // }
+
+      // ,
+      // {
+      //   "id": "m9",
+      //   "title": "Excel VBA Automation",
+      //   "duration": "26 hrs",
+      //   "topics": [
+      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
+      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
+      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
+      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
+      //   ]
+      // }
+
+
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "Steps to Make a Career in AI & Data",
+        description: "Explore pathways to start and grow a career in AI and Data. Learn about essential skills, tools, career opportunities, and how AI is impacting various industries through this expert Q&A session.",
+        image: "https://img.youtube.com/vi/OoCffZ4VaJE/0.jpg",
+        skills: ["AI Career Path", "AI Tools", "AI Research", "AI & Web Development", "Chatbots"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "OoCffZ4VaJE"
+      },
+      {
+        id: "p2",
+        title: "Using AI Visuals in Power BI Dashboards",
+        description: "Learn to create AI-powered visuals in Power BI, including Key Influencer, Decomposition Tree, Q&A, and Smart Narrative. Explore current AI trends and integrate ChatGPT for enhanced insights",
+        image: "https://img.youtube.com/vi/ftTTrchGVbA/0.jpg",
+        skills: ["Key Influencer Visual", "Decomposition Tree", "Smart Narrative", "AI Trends"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "ftTTrchGVbA"
+      },
+      {
+        id: "p3",
+        title: "Python Prediction Model for Real Estate",
+        description: "Build a real estate price prediction model using Python and machine learning. Learn data preprocessing, regression techniques, and model building with practical insights from a real-world case study.",
+        image: "https://img.youtube.com/vi/TipOU1HPrxA/0.jpg",
+        skills: ["Regression Models", "Data Preprocessing", "Linear Regression", "Random Forest", "Neural Networks"],
+        difficulty: "Intermediate",
+        isPractice: true,
+        videoId: "TipOU1HPrxA"
+      },
+      {
+        id: "p4",
+        title: "OYO Business Analysis with SQL",
+        description: "Learn how to perform business analysis using SQL with a real-world case study on OYO’s room sales. Cover data cleaning, SQL queries, business KPIs, and practical data-driven decision-making.",
+        image: "https://img.youtube.com/vi/ee7TajNEUrI/0.jpg",
+        skills: ["GROUP BY", "ARIMA Model", "Window Functions ", "CTE", "Data Cleaning"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "ee7TajNEUrI"
+      },
+      {
+        id: "p5",
+        title: "Predicting Computer Prices with Python",
+        description: "Build a predictive model for computer prices using Python. Learn data cleaning, regression modeling, and key Python libraries through this industry case study by an IvyPro student.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["Feature Engineering,", "Linear Regression", "Random Forest", "Scikit-learn", "Regression Metrics"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      },
+      {
+        id: "p6",
+        title: "ANOVA Using R - Bakery Case Study",
+        description: "Analyze how display factors affect product demand using Two-way ANOVA and Tukey’s Test in R. Learn statistical hypothesis testing through this practical bakery case study.",
+        image: "https://img.youtube.com/vi/UhO4y3a9yxQ/0.jpg",
+        skills: ["Data Loading", "Data Manipulation", "Two-way ANOVA", "Hypothesis Testing", "Statistical Modeling"],
+        difficulty: "Intermediate",
+        videoId: "UhO4y3a9yxQ"
+      }
+    ],
+
+
+
+
+
+
+
+
+
+
+  },
+
+
+
+  
 
 ];
 

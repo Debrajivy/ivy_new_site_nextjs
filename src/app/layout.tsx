@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     "IBM",
     "MEITY",
   ],
+  // ADDED GOOGLE SITE VERIFICATION HERE
+  verification: {
+    google: "5DI8S_HoObJNVtsYs8s9vhGls8HL93FvxJdZYSPo_G4",
+  },
   openGraph: {
     title: "Ivy Professional School: #1 GenAI & Data Science Institute",
     description:
@@ -143,19 +147,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
-        {/* GTM noscript and Facebook noscript blocks are typically placed 
-            as the first elements INSIDE the <body>. They remain commented out here 
-            as they were in your original code, but are essential for GTM/Pixel tracking when JavaScript is disabled.
-        */}
-
         {children}
 
-        {/* LeadSquared Tracking: Placed at the end of the body for optimal loading and execution timing */}
+        {/* LeadSquared Tracking */}
         <script type="text/javascript" src="https://web.mxradon.com/t/Tracker.js"></script>
         <script type="text/javascript">
           pidTracker('18802');
         </script>
-
       </body>
     </html>
   );
