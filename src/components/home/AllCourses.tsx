@@ -193,24 +193,7 @@ const featuredCourses: Course[] = [
       "Predictive modeling for business"
     ]
   },
-  {
-    id: '8',
-    title: "Cloud Data Engineering Course with IIT Guwahati",
-    description: "Image processing and recognition with deep learning",
-    image: CDEI,
-    category: "Cloud Data Engineering", // Another mismatch. Title is "Cloud Data Engineering" but description points to "Computer Vision". I'll keep it as is.
-    students: 445,
-    duration: "8 months",
-    rating: 4.7,
-    reviewCount: 189,
-    isFeatured: true,
-    slug: "iit-data-engineering-course",
-    keyFeatures: [
-      "30+ real-life projects",
-      "Live doubt-clearing sessions",
-      "Learn industry focused tools i.e. Azure, Hive, MongoDB, Spark, Kafka & Hadoop"
-    ]
-  },
+  
   {
     id: '10',
     title: "Data science course (Pay after Placement)",

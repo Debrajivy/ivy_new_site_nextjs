@@ -202,7 +202,7 @@ const Footer = () => {
 
               {/* Example Category: Data Science by City */}
               <div className="flex flex-col space-y-3">
-                <h4 className="text-white text-l font-bold uppercase tracking-wider">Data Science Courses</h4>
+                <h4 className="text-white text-xs font-bold uppercase tracking-wider">Data Science Courses</h4>
                 <ul className="space-y-2 text-gray-400 text-xs">
                   <li><Link href="/courses/data-science-course-kolkata" className="hover:text-blue-400 transition-colors">  Data Science with Machine Learning & AI Course in Kolkata</Link></li>
                   <li><Link href="/courses/data-science-course-delhi" className="hover:text-blue-400 transition-colors">  Data Science with Machine Learning & AI Course in Delhi </Link>    </li>
@@ -224,16 +224,19 @@ const Footer = () => {
 
                 </ul>
               </div>
-              {/* <div className="flex flex-col space-y-3">
+              <div className="flex flex-col space-y-3">
                 <h4 className="text-white text-xs font-bold uppercase tracking-wider">Data Analytics Courses</h4>
                 <ul className="space-y-2 text-gray-400 text-xs">
-                  <li><Link href="/courses/data-engineering-course-kolkata" className="hover:text-blue-400 transition-colors"> Data Engineering Course in Kolkata</Link></li>
-                  <li><Link href="/courses/data-engineering-course-delhi" className="hover:text-blue-400 transition-colors"> Data Engineering Course in Delhi</Link></li>
-                  <li><Link href="/courses/data-engineering-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Engineering Course in Bangalore</Link></li>
+                  <li><Link href="/courses/data-analytics-course-kolkata" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Kolkata</Link></li>
+                  <li><Link href="/courses/data-analytics-course-delhi" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Delhi</Link></li>
+                  <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Bangalore</Link></li>
+                  {/* <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Mumbai</Link></li>
+                  <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Pune</Link></li>
+                  <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Chennai</Link></li> */}
            
 
                 </ul>
-              </div> */}
+              </div>
 
               {/* Repeat for other categories like 'Engineering', 'Big Data', 'Certifications' */}
               {/* This allows you to scale to 40+ links without it looking cluttered */}

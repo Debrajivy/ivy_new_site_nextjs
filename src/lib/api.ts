@@ -6442,6 +6442,719 @@ const courses: Course[] = [
   },
 
 
+   {
+    id: '18',
+    title: "Data Analytics Course in Kolkata",
+    description: "The Data Analytics Course in Kolkata by Ivy Professional School is designed to help students and professionals build strong analytical skills required to make data-driven business decisions. With Kolkata emerging as a growing hub for analytics, BFSI, consulting, and IT services, the demand for skilled data analysts is steadily increasing.This program focuses on practical data analysis skills using industry-standard tools and real business datasets, preparing learners for entry-level to mid-level data analytics roles.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Analytics Course in Kolkata | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Analytics Course in Kolkata with real-world projects, Python, SQL, Power BI & career support. Enroll now!",
+      bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-analytics-course-kolkata",
+    longDescription: "The Data Analytics Course in Kolkata provides end-to-end training on collecting, cleaning, analyzing, and visualizing data to generate meaningful business insights. The course is structured to build strong foundations in data analytics concepts while emphasizing hands-on implementation. \n\n Learners are trained to work with structured datasets, perform exploratory data analysis, create dashboards, and communicate insights effectively to stakeholders. The program aligns with real-world analytics use cases across industries such as banking, retail, healthcare, e-commerce, and consulting. \n\n Delivered through instructor-led sessions, hands-on labs, and case studies, this course is suitable for freshers, graduates, and working professionals in Kolkata."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Understand the data analytics lifecycle from data collection to insight generation",
+      "Work with Excel, SQL, and Python for data analysis",
+      "Perform data cleaning, preprocessing, and exploratory data analysis (EDA)",
+      "Apply statistical concepts for business analysis",
+      "Create interactive dashboards using Power BI / Tableau",
+      "Prepare for Data Analyst roles in Kolkata’s job market"
+    ],
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advance Excel",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        ]
+      },
+
+      {
+        id: "m2",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      },
+
+      {
+        id: "m3",
+        title: "Data Visualization Using Tableau",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Data Visualization Using Power BI",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        ]
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "Python for Data Science",
+        duration: "36 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        ]
+      }
+      ,
+      {
+        id: "m6",
+        title: "Excel VBA Automation",
+        duration: "26 hrs",
+        topics: [
+          { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
+          { id: "t2", title: "Programming Concepts (Variables, Loops, Conditions)", duration: "8.25 hrs" },
+          { id: "t3", title: "Analysis Using VBA (Data Cleaning, PivotTables)", duration: "6.75 hrs" },
+          { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
+        ]
+      }
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "How To Choose Ideal Residence Using SQL",
+        description: "Master SQL for real estate data analysis. Learn how to use SELECT statements, create databases, and import/export data, while performing calculations and reporting in SQL.",
+        image: "https://img.youtube.com/vi/hzxawPxuks8/0.jpg",
+        skills: ["SQL ", "SELECT", "CREATE DATABASE", "MySQL Connections", "MySQL Connections", "Data Export", "Excel to MySQL", "CSV Conversion", "SQL LIMIT", "SQL COUNT", "SQL COUNT", "Data Summarization", "Reporting in SQL"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "hzxawPxuks8"
+      },
+      {
+        id: "p2",
+        title: "Power BI Live Case Study | Web Analytics",
+        description: "Learn to create a Power BI dashboard from scratch. Explore website click analysis, data visualization techniques, filters, fields, and Power Query transformations in Power BI.",
+        image: "https://img.youtube.com/vi/-XUN_3Hama0/0.jpg",
+        skills: ["Power BI", "Power Query", "Data Transformation", "Filters", "Fields in Power BI", "Power BI Cards", "Power BI Charts", "Bar Charts", "Slicers", "Data Visualization", "Power BI Dashboard", "Date Handling in Power BI"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "-XUN_3Hama0"
+      },
+      {
+        id: "p3",
+        title: "Tableau Live Case | WPL Dataset | Identify the Strategies used in WPL Auctions",
+        description: "Analyze the Women's Premier League (WPL) auction strategies using Tableau. Learn to create interactive dashboards and visualize key data points for team performance insights.",
+        image: "https://img.youtube.com/vi/THyEuZ0xHC8/0.jpg",
+        skills: ["Tableau", "Tableau Dashboard", "Tableau Drag and Drop", "Tableau Sheets", "Data Source in Tableau", "Tableau Live and Extract", "Tableau Stories", "Tableau Filters", "Tableau Visualizations", "Tableau Functions", "Tableau Headers"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "THyEuZ0xHC8"
+      },
+      {
+        id: "p4",
+        title: "Analyze Sales of Smartphones on Amazon",
+        description: "Analyze smartphone sales data using Excel. Learn to create dashboards, perform quarterly revenue analysis, and uncover insights using key Excel functions.",
+        image: "https://img.youtube.com/vi/oWy7ZkS3axE/0.jpg",
+        skills: ["Excel Dashboards", "PivotTables", "PivotCharts", " VLOOKUP", "SUMIF", "Data Validation", "Conditional Formatting", "Excel Formulas", " Data Analysis", "Revenue Analysis", "Excel Charts"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "oWy7ZkS3axE"
+      },
+      {
+        id: "p5",
+        title: "AirBNB Business Case Study - Tableau Dashboarding",
+        description: "Analyze AirBNB business data and create insightful visualizations using Tableau. Learn key techniques for dashboarding, filtering, and data presentation to drive business decisions.",
+        image: "https://img.youtube.com/vi/4cx9_OSv4Fo/0.jpg",
+        skills: ["Tableau", "Tableau Dashboarding", "Tableau Dashboarding", "Filters", "Tableau Calculations", "Interactive Dashboards", "Data Connections", "Data Blending", "Tableau Filters"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "4cx9_OSv4Fo"
+      },
+      {
+        id: "p6",
+        title: "Analyzing Netflix Originals & IMDB Scores",
+        description: "Analyze Netflix Originals data with SQL, utilizing Window Functions, CTEs, and various SQL queries to explore trends and uncover insights in the dataset.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["SQL Queries", "Window Functions", "Common Table Expressions (CTEs)", "Date Functions", "JOINs", "GROUP BY", "HAVING", "ORDER BY", "String Functions", "SQL Aggregates"],
+        difficulty: "Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      }
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ]
+
+  },
+
+
+   {
+    id: '19',
+    title: "Data Analytics Course in Delhi",
+    description: "Gain hands-on skills in data analytics, master tools like Python and Power BI, build real-world projects, and become a certified, job-ready analyst in 8-10 months.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Analytics Course in Delhi | Ivy Professional School",
+      description: "Learn Data Analytics in Delhi with Ivy Professional School - Python, SQL, Excel, Power BI. Includes projects & placement help.",
+      bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-analytics-course-delhi",
+    longDescription: "Our comprehensive Data Analytics Course in Delhi equips you with essential skills needed to analyze large datasets, build dashboards, and derive actionable insights. The program combines theory with hands‑on labs, case studies, and real client projects to strengthen your analytical thinking and technical proficiency. \n\n What Makes This Course UniqueIndustry‑Driven Curriculum: Updated regularly based on employer needs.\nExpert Faculty: Instructors with real analytics industry experience.\nHands‑On Projects: Apply skills on live business datasets.\nPlacement Support: Resume building, interview prep & hiring connections. \n\n Whether you’re a beginner with zero experience or an IT professional looking to switch careers, this course will help you build a solid foundation and a competitive edge in today’s data‑driven market. Expert Faculty: Instructors with real analytics industry experience. Hands‑On Projects: Apply skills on live business datasets.Placement Support: Resume building, interview prep & hiring connections.Whether you’re a beginner with zero experience or an IT professional looking to switch careers, this course will help you build a solid foundation and a competitive edge in today’s data‑driven market."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Work with Python for data analytics (Pandas, NumPy)",
+      "Build SQL queries for data extraction & relational databases",
+      "Design interactive dashboards in Tableau & Power BI",
+      "Understand key statistical concepts for analytics",
+      "Clean, analyze, and visualize real data from business cases",
+      "Build a professional portfolio"
+    ],
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advance Excel",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        ]
+      },
+
+      {
+        id: "m2",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      },
+
+      {
+        id: "m3",
+        title: "Data Visualization Using Tableau",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Data Visualization Using Power BI",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        ]
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "Python for Data Science",
+        duration: "36 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        ]
+      }
+      ,
+      {
+        id: "m6",
+        title: "Excel VBA Automation",
+        duration: "26 hrs",
+        topics: [
+          { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
+          { id: "t2", title: "Programming Concepts (Variables, Loops, Conditions)", duration: "8.25 hrs" },
+          { id: "t3", title: "Analysis Using VBA (Data Cleaning, PivotTables)", duration: "6.75 hrs" },
+          { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
+        ]
+      }
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "How To Choose Ideal Residence Using SQL",
+        description: "Master SQL for real estate data analysis. Learn how to use SELECT statements, create databases, and import/export data, while performing calculations and reporting in SQL.",
+        image: "https://img.youtube.com/vi/hzxawPxuks8/0.jpg",
+        skills: ["SQL ", "SELECT", "CREATE DATABASE", "MySQL Connections", "MySQL Connections", "Data Export", "Excel to MySQL", "CSV Conversion", "SQL LIMIT", "SQL COUNT", "SQL COUNT", "Data Summarization", "Reporting in SQL"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "hzxawPxuks8"
+      },
+      {
+        id: "p2",
+        title: "Power BI Live Case Study | Web Analytics",
+        description: "Learn to create a Power BI dashboard from scratch. Explore website click analysis, data visualization techniques, filters, fields, and Power Query transformations in Power BI.",
+        image: "https://img.youtube.com/vi/-XUN_3Hama0/0.jpg",
+        skills: ["Power BI", "Power Query", "Data Transformation", "Filters", "Fields in Power BI", "Power BI Cards", "Power BI Charts", "Bar Charts", "Slicers", "Data Visualization", "Power BI Dashboard", "Date Handling in Power BI"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "-XUN_3Hama0"
+      },
+      {
+        id: "p3",
+        title: "Tableau Live Case | WPL Dataset | Identify the Strategies used in WPL Auctions",
+        description: "Analyze the Women's Premier League (WPL) auction strategies using Tableau. Learn to create interactive dashboards and visualize key data points for team performance insights.",
+        image: "https://img.youtube.com/vi/THyEuZ0xHC8/0.jpg",
+        skills: ["Tableau", "Tableau Dashboard", "Tableau Drag and Drop", "Tableau Sheets", "Data Source in Tableau", "Tableau Live and Extract", "Tableau Stories", "Tableau Filters", "Tableau Visualizations", "Tableau Functions", "Tableau Headers"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "THyEuZ0xHC8"
+      },
+      {
+        id: "p4",
+        title: "Analyze Sales of Smartphones on Amazon",
+        description: "Analyze smartphone sales data using Excel. Learn to create dashboards, perform quarterly revenue analysis, and uncover insights using key Excel functions.",
+        image: "https://img.youtube.com/vi/oWy7ZkS3axE/0.jpg",
+        skills: ["Excel Dashboards", "PivotTables", "PivotCharts", " VLOOKUP", "SUMIF", "Data Validation", "Conditional Formatting", "Excel Formulas", " Data Analysis", "Revenue Analysis", "Excel Charts"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "oWy7ZkS3axE"
+      },
+      {
+        id: "p5",
+        title: "AirBNB Business Case Study - Tableau Dashboarding",
+        description: "Analyze AirBNB business data and create insightful visualizations using Tableau. Learn key techniques for dashboarding, filtering, and data presentation to drive business decisions.",
+        image: "https://img.youtube.com/vi/4cx9_OSv4Fo/0.jpg",
+        skills: ["Tableau", "Tableau Dashboarding", "Tableau Dashboarding", "Filters", "Tableau Calculations", "Interactive Dashboards", "Data Connections", "Data Blending", "Tableau Filters"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "4cx9_OSv4Fo"
+      },
+      {
+        id: "p6",
+        title: "Analyzing Netflix Originals & IMDB Scores",
+        description: "Analyze Netflix Originals data with SQL, utilizing Window Functions, CTEs, and various SQL queries to explore trends and uncover insights in the dataset.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["SQL Queries", "Window Functions", "Common Table Expressions (CTEs)", "Date Functions", "JOINs", "GROUP BY", "HAVING", "ORDER BY", "String Functions", "SQL Aggregates"],
+        difficulty: "Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      }
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ]
+
+  },
+
+  {
+    id: '20',
+    title: "Data Analytics Course in Bangalore",
+    description: "The Data Analytics Course in Bangalore by Ivy Professional School is designed for students and professionals aiming to build strong analytical skills for data-driven decision-making. As India’s Silicon Valley, Bangalore hosts leading IT firms, startups, product companies, and global analytics teams, creating massive demand for skilled data analysts. This program focuses on practical analytics skills using industry-standard tools and real business datasets, preparing learners for high-growth data analytics roles.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Analytics Course in Bangalore | Ivy Professional School",
+      description: "Enroll in Ivy Professional School’s Data Analytics Course in Bangalore with hands-on projects, Python, SQL, Power BI & career support.",
+      bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-analytics-course-bangalore",
+    longDescription: "The Data Analytics Course in Bangalore provides end-to-end training on collecting, cleaning, analyzing, and visualizing data to generate actionable business insights. The course builds a strong foundation in analytics concepts while emphasizing hands-on implementation. \n\n Learners gain exposure to real-world analytics use cases across industries such as IT services, e-commerce, fintech, healthcare, and consulting. The program covers data analysis workflows used by modern organizations to support business strategy and operational decisions. \n\n Delivered through instructor-led sessions, hands-on labs, and industry-aligned case studies, this course is suitable for freshers, graduates, and working professionals in Bangalore."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Understand the data analytics lifecycle from data collection to insight generation",
+      "Work with Excel, SQL, and Python for data analysis",
+      "Perform data cleaning, preprocessing, and exploratory data analysis (EDA)",
+      "Work with Excel, SQL, and Python for data analysis",
+      "Perform data cleaning, preprocessing, and exploratory data analysis (EDA)",
+      "Apply statistical concepts for business decision-making"
+    ],
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advance Excel",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        ]
+      },
+
+      {
+        id: "m2",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      },
+
+      {
+        id: "m3",
+        title: "Data Visualization Using Tableau",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Data Visualization Using Power BI",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        ]
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "Python for Data Science",
+        duration: "36 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        ]
+      }
+      ,
+      {
+        id: "m6",
+        title: "Excel VBA Automation",
+        duration: "26 hrs",
+        topics: [
+          { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
+          { id: "t2", title: "Programming Concepts (Variables, Loops, Conditions)", duration: "8.25 hrs" },
+          { id: "t3", title: "Analysis Using VBA (Data Cleaning, PivotTables)", duration: "6.75 hrs" },
+          { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
+        ]
+      }
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "How To Choose Ideal Residence Using SQL",
+        description: "Master SQL for real estate data analysis. Learn how to use SELECT statements, create databases, and import/export data, while performing calculations and reporting in SQL.",
+        image: "https://img.youtube.com/vi/hzxawPxuks8/0.jpg",
+        skills: ["SQL ", "SELECT", "CREATE DATABASE", "MySQL Connections", "MySQL Connections", "Data Export", "Excel to MySQL", "CSV Conversion", "SQL LIMIT", "SQL COUNT", "SQL COUNT", "Data Summarization", "Reporting in SQL"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "hzxawPxuks8"
+      },
+      {
+        id: "p2",
+        title: "Power BI Live Case Study | Web Analytics",
+        description: "Learn to create a Power BI dashboard from scratch. Explore website click analysis, data visualization techniques, filters, fields, and Power Query transformations in Power BI.",
+        image: "https://img.youtube.com/vi/-XUN_3Hama0/0.jpg",
+        skills: ["Power BI", "Power Query", "Data Transformation", "Filters", "Fields in Power BI", "Power BI Cards", "Power BI Charts", "Bar Charts", "Slicers", "Data Visualization", "Power BI Dashboard", "Date Handling in Power BI"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "-XUN_3Hama0"
+      },
+      {
+        id: "p3",
+        title: "Tableau Live Case | WPL Dataset | Identify the Strategies used in WPL Auctions",
+        description: "Analyze the Women's Premier League (WPL) auction strategies using Tableau. Learn to create interactive dashboards and visualize key data points for team performance insights.",
+        image: "https://img.youtube.com/vi/THyEuZ0xHC8/0.jpg",
+        skills: ["Tableau", "Tableau Dashboard", "Tableau Drag and Drop", "Tableau Sheets", "Data Source in Tableau", "Tableau Live and Extract", "Tableau Stories", "Tableau Filters", "Tableau Visualizations", "Tableau Functions", "Tableau Headers"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "THyEuZ0xHC8"
+      },
+      {
+        id: "p4",
+        title: "Analyze Sales of Smartphones on Amazon",
+        description: "Analyze smartphone sales data using Excel. Learn to create dashboards, perform quarterly revenue analysis, and uncover insights using key Excel functions.",
+        image: "https://img.youtube.com/vi/oWy7ZkS3axE/0.jpg",
+        skills: ["Excel Dashboards", "PivotTables", "PivotCharts", " VLOOKUP", "SUMIF", "Data Validation", "Conditional Formatting", "Excel Formulas", " Data Analysis", "Revenue Analysis", "Excel Charts"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "oWy7ZkS3axE"
+      },
+      {
+        id: "p5",
+        title: "AirBNB Business Case Study - Tableau Dashboarding",
+        description: "Analyze AirBNB business data and create insightful visualizations using Tableau. Learn key techniques for dashboarding, filtering, and data presentation to drive business decisions.",
+        image: "https://img.youtube.com/vi/4cx9_OSv4Fo/0.jpg",
+        skills: ["Tableau", "Tableau Dashboarding", "Tableau Dashboarding", "Filters", "Tableau Calculations", "Interactive Dashboards", "Data Connections", "Data Blending", "Tableau Filters"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "4cx9_OSv4Fo"
+      },
+      {
+        id: "p6",
+        title: "Analyzing Netflix Originals & IMDB Scores",
+        description: "Analyze Netflix Originals data with SQL, utilizing Window Functions, CTEs, and various SQL queries to explore trends and uncover insights in the dataset.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["SQL Queries", "Window Functions", "Common Table Expressions (CTEs)", "Date Functions", "JOINs", "GROUP BY", "HAVING", "ORDER BY", "String Functions", "SQL Aggregates"],
+        difficulty: "Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      }
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ]
+
+  },
+
+
 
   
 

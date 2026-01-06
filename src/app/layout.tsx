@@ -89,6 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-981187918"
+          
           strategy="afterInteractive"
         />
         <Script

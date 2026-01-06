@@ -559,7 +559,7 @@ const courseData: { [key: string]: CourseFAQData } = {
   },
 
 
-  "Data Science Course in Kolkata": {
+  "Data Science with Machine Learning & AI Course in Kolkata": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -1930,6 +1930,291 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
+
+"Data Analytics Course in Kolkata": {
+  categories: [
+    { id: "program", name: "Program" },
+    { id: "eligibility", name: "Eligibility" },
+      { id: "data-analytics", name: "Data Analytics" },
+    { id: "job and career", name: "Job And Career" },
+    { id: "certification", name: "Certification" },
+    { id: "projects", name: "Projects" },
+    { id: "placement", name: "Placement" },
+    { id: "opportunities", name: "Opportunities" },
+    { id: "support", name: "Support" }
+  ],
+  faqs: [
+    {
+      question: "Who can join the Data Analytics course in Kolkata?",
+      answer: "This course is suitable for graduates, working professionals, commerce and management students, engineers, and individuals in Kolkata looking to build practical data analytics and reporting skills.",
+      category: "eligibility"
+    },
+    {
+      question: "Is this course appropriate for beginners with no analytics experience?",
+      answer: "Yes. The learning journey starts with foundational concepts and gradually progresses to applied analytics, making it accessible for beginners as well as professionals.",
+      category: "eligibility"
+    },
+    {
+      question: "What is the course duration for the Data Analytics program in Kolkata?",
+      answer: "The program usually takes 6 to 8 months to complete, depending on the selected batch, learning format, and pace of project work.",
+      category: "program"
+    },
+    {
+      question: "Are there flexible batch options available for learners in Kolkata?",
+      answer: "Yes. The course offers weekday, weekend, and evening batches to suit students and working professionals in Kolkata.",
+      category: "program"
+    },
+    {
+      question: "What analytics tools and techniques are included in the syllabus?",
+      answer: "Learners are trained in Excel, SQL, Python for analytics, Power BI or Tableau for dashboards, and statistical techniques used in business analytics.",
+      category: "data-science"
+    },
+    {
+      question: "Does the program emphasize practical learning?",
+      answer: "Yes. The curriculum includes hands-on assignments, data analysis projects, and a capstone project based on real-world business scenarios.",
+      category: "projects"
+    },
+    {
+      question: "Is career or placement support provided after course completion?",
+      answer: "Yes. Learners receive placement support including resume preparation, interview guidance, mock interviews, and career mentoring.",
+      category: "placement"
+    },
+    {
+      question: "Which career paths can I explore after completing the course?",
+      answer: "After completion, learners can pursue roles such as Data Analyst, Business Analyst, MIS Executive, Reporting Analyst, and entry-level analytics positions.",
+      category: "job and career"
+    },
+    {
+      question: "Will I receive a certificate after finishing the Data Analytics course?",
+      answer: "Yes. A Data Analytics certification from Ivy Professional School is awarded upon successful completion of the course and project requirements.",
+      category: "certification"
+    },
+    {
+      question: "How does this certification help in the job market?",
+      answer: "The certification demonstrates hands-on analytics skills and project exposure, making it valuable for employers in Kolkata and across India.",
+      category: "certification"
+    },
+    {
+      question: "What learning formats are available for this course in Kolkata?",
+      answer: "Learners can choose between classroom training, live online instructor-led sessions, or a hybrid learning model.",
+      category: "program"
+    },
+    {
+      question: "Are there any mandatory eligibility or academic requirements?",
+      answer: "There are no mandatory academic prerequisites. Learners from engineering, commerce, science, management, and non-technical backgrounds can enroll.",
+      category: "eligibility"
+    },
+    {
+      question: "What type of academic support is offered during the program?",
+      answer: "Learners receive ongoing support through doubt-clearing sessions, mentor guidance, feedback on assignments, and structured academic assistance.",
+      category: "support"
+    },
+    {
+      question: "Why choose this Data Analytics course in Kolkata?",
+      answer: "The course focuses on applied analytics, business-relevant use cases, guided mentorship, and career readiness rather than only theoretical learning.",
+      category: "data-analytics"
+    },
+    {
+      question: "Why choose this Data Analytics course in Kolkata?",
+      answer: "The course focuses on applied analytics, business-relevant use cases, guided mentorship, and career readiness rather than only theoretical learning.",
+      category: "program"
+    },
+    {
+      question: "Can this course support a transition into analytics roles?",
+      answer: "Yes. The program is designed to help learners from diverse backgrounds build analytics capabilities and transition into data-focused roles.",
+      category: "opportunities"
+    }
+  ]
+},
+
+"Data Analytics Course in Delhi": {
+  categories: [
+    { id: "program", name: "Program" },
+    { id: "eligibility", name: "Eligibility" },
+    { id: "data-analytics", name: "Data Analytics" },
+    { id: "job and career", name: "Job And Career" },
+    { id: "certification", name: "Certification" },
+    { id: "projects", name: "Projects" },
+    { id: "placement", name: "Placement" },
+    { id: "opportunities", name: "Opportunities" },
+    { id: "support", name: "Support" }
+  ],
+  faqs: [
+    {
+      question: "Who should enroll in the Data Analytics course in Delhi?",
+      answer: "This Data Analytics course in Delhi is ideal for fresh graduates, working professionals, IT engineers, analysts, and career switchers who want to build a strong foundation in data analytics, business intelligence, and data-driven decision-making.",
+      category: "eligibility"
+    },
+    {
+      question: "Do I need prior coding or programming experience to join this course?",
+      answer: "No prior coding experience is mandatory. The course starts from the basics of Python, SQL, and statistics, making it suitable for beginners while still adding value for experienced professionals.",
+      category: "eligibility"
+    },
+    {
+      question: "What is the duration of the Data Analytics course in Delhi?",
+      answer: "The course duration typically ranges from 6 to 8 months, depending on the learning mode (weekday or weekend) and batch structure.",
+      category: "program"
+    },
+    {
+      question: "Is this Data Analytics course in Delhi suitable for working professionals?",
+      answer: "Yes, the course is designed with flexible schedules, including weekend and evening batches, making it convenient for working professionals in Delhi.",
+      category: "program"
+    },
+    {
+      question: "What tools and technologies will I learn during the course?",
+      answer: "You will learn Excel, SQL, Python, Power BI or Tableau, statistics, data visualization, and analytics techniques used by data analysts across industries.",
+      category: "data-analytics"
+    },
+    {
+      question: "What tools and technologies will I learn during the course?",
+      answer: "You will learn Excel, SQL, Python, Power BI or Tableau, statistics, data visualization, and analytics techniques used by data analysts across industries.",
+      category: "data-science"
+    },
+    {
+      question: "Are there real-world projects included in the course?",
+      answer: "Yes, learners work on multiple real-world, industry-aligned projects and a capstone project to gain hands-on experience and practical exposure.",
+      category: "projects"
+    },
+    {
+      question: "Does the Data Analytics course in Delhi provide placement assistance?",
+      answer: "Yes, comprehensive placement support is provided, including resume building, mock interviews, career mentoring, and access to hiring partners.",
+      category: "placement"
+    },
+    {
+      question: "What kind of job roles can I apply for after completing this course?",
+      answer: "After completing the course, you can apply for roles such as Data Analyst, Business Analyst, MIS Analyst, Reporting Analyst, and Junior Data Scientist.",
+      category: "job and career"
+    },
+    {
+      question: "Will I receive a certification after course completion?",
+      answer: "Yes, upon successful completion, you will receive a recognized Data Analytics certification from Ivy Professional School, validating your skills and job readiness.",
+      category: "certification"
+    },
+    {
+      question: "Is the certification recognized by employers in Delhi and across India?",
+      answer: "Yes, the certification is recognized by employers across Delhi NCR and major Indian cities, helping learners improve credibility and job prospects.",
+      category: "certification"
+    },
+    {
+      question: "What learning modes are available for this Data Analytics course in Delhi?",
+      answer: "The course is available through instructor-led classroom training, live online sessions, and hybrid learning formats.",
+      category: "program"
+    },
+    {
+      question: "Are there any eligibility criteria for enrolling in the course?",
+      answer: "A basic understanding of mathematics and logical reasoning is recommended. Graduates from engineering, science, commerce, or management backgrounds can enroll.",
+      category: "eligibility"
+    },
+    {
+      question: "Will I get doubt-clearing and mentorship support during the course?",
+      answer: "Yes, learners receive continuous mentorship, regular doubt-clearing sessions, one-on-one guidance, and academic support throughout the program.",
+      category: "support"
+    },
+    {
+      question: "How is this Data Analytics course in Delhi different from others?",
+      answer: "This course focuses on practical, job-oriented learning with industry-aligned curriculum, experienced faculty, hands-on projects, and strong placement support.",
+      category: "program"
+    },
+    {
+      question: "Is this course suitable for a career transition into data analytics?",
+      answer: "Yes, the course is structured to help both technical and non-technical professionals successfully transition into data analytics roles.",
+      category: "opportunities"
+    }
+  ]
+},
+
+"Data Analytics Course in Bangalore": {
+  categories: [
+    { id: "program", name: "Program" },
+    { id: "eligibility", name: "Eligibility" },
+    { id: "data-analytics", name: "Data Analytics" },
+    { id: "job and career", name: "Job And Career" },
+    { id: "certification", name: "Certification" },
+    { id: "projects", name: "Projects" },
+    { id: "placement", name: "Placement" },
+    { id: "opportunities", name: "Opportunities" },
+    { id: "support", name: "Support" }
+  ],
+  faqs: [
+    {
+      question: "Who should consider the Data Analytics course in Bangalore?",
+      answer: "This course is ideal for graduates, software professionals, startup employees, engineers, and working professionals in Bangalore aiming to build strong analytics and data-driven decision-making skills.",
+      category: "eligibility"
+    },
+    {
+      question: "Is this Data Analytics course suitable for non-programmers?",
+      answer: "Yes. The course begins with fundamentals and does not assume prior programming knowledge, making it suitable for learners from non-coding backgrounds.",
+      category: "eligibility"
+    },
+    {
+      question: "What is the expected duration of the Data Analytics course in Bangalore?",
+      answer: "The program is designed to be completed within 6 to 8 months, depending on learning pace, batch schedule, and project submissions.",
+      category: "program"
+    },
+    {
+      question: "Can professionals working in Bangalore attend this course?",
+      answer: "Yes. The course offers flexible learning schedules including weekend and evening batches, suitable for professionals working in tech and non-tech roles.",
+      category: "program"
+    },
+    {
+      question: "Which tools and analytics techniques are covered?",
+      answer: "Learners gain hands-on experience with Excel, SQL, Python for analytics, Power BI or Tableau, and core statistical techniques used in data analysis.",
+      category: "data-analytics"
+    },
+    {
+      question: "Are industry-relevant projects part of the curriculum?",
+      answer: "Yes. The course includes guided assignments, practical projects, and a capstone project aligned with real business and analytics scenarios.",
+      category: "projects"
+    },
+    {
+      question: "Does the course offer placement or career guidance?",
+      answer: "Yes. Learners receive career support through resume building, mock interviews, interview preparation, and guidance on analytics career paths.",
+      category: "placement"
+    },
+    {
+      question: "What job roles can I target after completing the course?",
+      answer: "Graduates of the program can apply for roles such as Data Analyst, Business Analyst, Reporting Analyst, MIS Analyst, and entry-level analytics roles.",
+      category: "job and career"
+    },
+    {
+      question: "Is certification provided after completing the course?",
+      answer: "Yes. Learners receive a Data Analytics certification from Ivy Professional School after successful completion of the program.",
+      category: "certification"
+    },
+    {
+      question: "How relevant is this certification for Bangalore’s job market?",
+      answer: "The certification is valued by employers across Bangalore’s tech and business ecosystem as it reflects practical analytics skills and project experience.",
+      category: "certification"
+    },
+    {
+      question: "What learning modes are available for this course?",
+      answer: "Learners can choose between classroom sessions, live online instructor-led training, or a hybrid learning format.",
+      category: "program"
+    },
+    {
+      question: "Is there any minimum qualification required to enroll?",
+      answer: "There are no strict qualification requirements. Graduates from engineering, science, commerce, management, and other disciplines are welcome.",
+      category: "eligibility"
+    },
+    {
+      question: "What kind of academic support is available during the course?",
+      answer: "Learners receive continuous academic support through doubt-clearing sessions, mentor interactions, structured feedback, and guided learning.",
+      category: "support"
+    },
+    {
+      question: "Why choose this Data Analytics course in Bangalore?",
+      answer: "The course focuses on practical analytics skills, business-oriented projects, structured mentorship, and career readiness aligned with industry needs.",
+      category: "program"
+    },
+    {
+      question: "Can this course help in transitioning to analytics roles?",
+      answer: "Yes. The learning pathway is designed to help learners from diverse backgrounds transition into data analytics roles with confidence.",
+      category: "opportunities"
+    }
+  ]
+},
+ 
+
 
   "Cloud Data Engineering Course with IIT Guwahati": {
     categories: [
@@ -3325,7 +3610,7 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
             <div className="text-center mb-12">
 
               {
-                course.title === "Data Science Course in Kolkata" ? (
+                course.title === "Data Science with Machine Learning & AI Course in Kolkata" ? (
                   <h2 className="text-3xl font-bold mb-4 text-gray-900">
                     Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Science Course in Kolkata</span>
                   </h2>
@@ -3338,8 +3623,43 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
                   <h2 className="text-3xl font-bold mb-4 text-gray-900">
                     Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Bangalore</span>
                   </h2>
-                )
-                
+                ):
+                course.title === "Data Engineering Course in Mumbai" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Mumbai</span>
+                  </h2>
+                ) :
+                course.title === "Data Engineering Course in Pune" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Pune</span>
+                  </h2>
+                ):
+                course.title === "Data Engineering Course in Delhi" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Delhi</span>
+                  </h2>
+                ) :
+                course.title === "Data Engineering Course in Chennai" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Chennai</span>
+                  </h2>
+                ):
+                course.title === "Data Analytics Course in Kolkata" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics Course in Kolkata</span>
+                  </h2>
+                ) :
+                course.title === "Data Analytics Course in Delhi" ? (
+                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics Course in Delhi</span>
+                  </h2>
+                ) 
+                 : course.title === "Data Analytics Course in Bangalore" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Bangalore</span>
+                    </h2>
+                  )
+              
                 : course.title === "Data Science with Machine Learning & AI Course in Delhi" ? (
                   <h2 className="text-3xl font-bold mb-4 text-gray-900">
                     Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Science Course in Delhi</span>
@@ -3363,6 +3683,7 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
                       Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
                     </h2>
                   )
+                 
 
 
                     : (
