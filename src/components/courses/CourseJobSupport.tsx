@@ -55,6 +55,8 @@ import Iitc from "../../assests/Iitc.jpg";
 import PAPC from "../../assests/PAPC.jpeg";
 import AIML from "../../assests/AIML.webp";
 import NASSCOMML from "../../assests/NASSCOMML.webp";
+import genaicertificate from "../../assests/genaicertificate.png";
+
 import Image from 'next/image';
 interface CourseJobSupportProps {
   course: Course;
@@ -329,7 +331,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                              "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens employability.":
                              course.title === "Data Analytics and Generative AI Course" ?
                                 "Earn Ivy’s Data Science with Visualization certificate and prove your command over Excel, SQL, Python, Tableau & Power BI. Backed by 1:1 mentoring, this certification blends dashboarding, predictive modeling & automation into job-ready expertise." :
-                                course.title === "Data Analytics Course" || course.title === "Data Analytics Course in Kolkata" || course.title === "Data Analytics Course in Delhi" || course.title === "Data Analytics Course in Bangalore" ?
+                                course.title === "Data Analytics Course" || course.title === "Data Analytics Course in Kolkata" || course.title === "Data Analytics Course in Delhi" || course.title === "Data Analytics Course in Bangalore" || course.title === "Data Analytics Course in Mumbai" ?
                                  "This dual-focus certification covers both analytical techniques and visualization best practices for comprehensive data storytelling." :
                                   course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
                                     "The Executive Certification in Cloud Data Engineering with IIT Guwahati combines academic rigor with industry-relevant cloud technologies." :
@@ -413,11 +415,11 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 }}>
                   <Image
                     src={
-                      course.title === "Generative AI Course" ? Iitc :
+                      course.title === "Generative AI Course" ? genaicertificate :
                         course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"  ||course.title ==="Data Engineering Course in Delhi"  || course.title ==="Data Engineering Course in Bangalore" || course.title ==="Data Engineering Course in Mumbai" || course.title === "Data Engineering Course in Pune"  || course.title === "Data Engineering Course in Chennai" ? NASSCOMML :
                           course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ? Cdec :
                             course.title === "Data Analytics and Generative AI Course" ? Dsvc :
-                              course.title === "Data Analytics Course" || course.title === "Data Analytics Course in Kolkata" || course.title === "Data Analytics Course in Delhi" || course.title === "Data Analytics Course in Bangalore" ? Davc :
+                              course.title === "Data Analytics Course" || course.title === "Data Analytics Course in Kolkata" || course.title === "Data Analytics Course in Delhi" || course.title === "Data Analytics Course in Bangalore" || course.title === "Data Analytics Course in Mumbai" ?  Davc :
                                 course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
                                   course.title === "AI for Product Managers" ? Pmc :
                                     course.title === "AI and Machine Learning Course" ? AIML :

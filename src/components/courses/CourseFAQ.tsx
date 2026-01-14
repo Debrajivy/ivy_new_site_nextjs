@@ -2123,6 +2123,97 @@ const courseData: { [key: string]: CourseFAQData } = {
   ]
 },
 
+"Data Analytics Course in Mumbai": {
+  categories: [
+    { id: "program", name: "Program" },
+    { id: "eligibility", name: "Eligibility" },
+    { id: "data-analytics", name: "Data Analytics" },
+    { id: "job and career", name: "Job And Career" },
+    { id: "certification", name: "Certification" },
+    { id: "projects", name: "Projects" },
+    { id: "placement", name: "Placement" },
+    { id: "opportunities", name: "Opportunities" },
+    { id: "support", name: "Support" }
+  ],
+  faqs: [
+    {
+      question: "Who is this Data Analytics course in Mumbai designed for?",
+      answer: "The program is designed for graduates, early-career professionals, domain experts from finance, operations or sales, and professionals looking to move into analytics-driven roles using data and dashboards.",
+      category: "eligibility"
+    },
+    {
+      question: "Is this course beginner-friendly or meant for experienced professionals?",
+      answer: "The course is structured to support complete beginners as well as professionals. Concepts are taught from first principles and gradually move towards applied analytics and business use cases.",
+      category: "eligibility"
+    },
+    {
+      question: "How long does it take to complete the Data Analytics course in Mumbai?",
+      answer: "Most learners complete the program within 6 to 8 months, depending on batch type, pace of learning, and project involvement.",
+      category: "program"
+    },
+    {
+      question: "Can working professionals manage this course alongside their job?",
+      answer: "Yes. The course offers flexible scheduling options such as weekend and after-work batches, making it manageable for professionals working in Mumbai.",
+      category: "program"
+    },
+    {
+      question: "Which analytics tools and skills are covered in the curriculum?",
+      answer: "The curriculum covers Excel for analysis, SQL for data querying, Python for analytics, Power BI or Tableau for visualization, and core statistical concepts required for data-driven decisions.",
+      category: "data-analytics"
+    },
+    {
+      question: "What kind of practical exposure does the course offer?",
+      answer: "Learners work on hands-on assignments, business case–based projects, and a capstone project that mirrors real analytics problems faced by companies.",
+      category: "projects"
+    },
+    {
+      question: "Is placement or career support included in the program?",
+      answer: "Yes. The course includes structured career support such as resume optimization, interview preparation, mock interviews, and guidance on analytics career paths.",
+      category: "placement"
+    },
+    {
+      question: "What roles does this course prepare me for?",
+      answer: "The program prepares learners for roles like Data Analyst, Business Analyst, Reporting Analyst, MIS Analyst, and entry-level analytics roles across domains.",
+      category: "job and career"
+    },
+    {
+      question: "Do I receive a certificate after completing the course?",
+      answer: "Yes. Learners receive a Data Analytics certificate from Ivy Professional School upon successful completion of coursework and projects.",
+      category: "certification"
+    },
+    {
+      question: "How valuable is this certification in the job market?",
+      answer: "The certification is valued by employers across Mumbai and other major cities as it reflects practical analytics skills and project-based learning.",
+      category: "certification"
+    },
+    {
+      question: "What learning formats are available for Mumbai learners?",
+      answer: "Learners can choose between classroom sessions, live online instructor-led training, or a hybrid model depending on convenience.",
+      category: "program"
+    },
+    {
+      question: "Is there any specific educational background required to enroll?",
+      answer: "There are no strict educational prerequisites. Graduates from engineering, commerce, management, science, and even non-technical backgrounds can enroll.",
+      category: "eligibility"
+    },
+    {
+      question: "What kind of academic and learning support is provided?",
+      answer: "Students receive regular doubt-solving sessions, mentor guidance, structured feedback on projects, and continuous academic support throughout the course.",
+      category: "support"
+    },
+    {
+      question: "What sets this Data Analytics course in Mumbai apart from others?",
+      answer: "The program focuses on applied analytics, real business scenarios, strong mentoring, and career readiness rather than just tool-based training.",
+      category: "program"
+    },
+    {
+      question: "Is this course suitable for switching careers into analytics?",
+      answer: "Yes. The learning path is designed to help professionals from non-analytics roles gradually build skills and transition into analytics-focused careers.",
+      category: "opportunities"
+    }
+  ]
+},
+
 "Data Analytics Course in Bangalore": {
   categories: [
     { id: "program", name: "Program" },
@@ -3679,6 +3770,11 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
                     </h2>
                   )
                   : course.title === "Data Science with Machine Learning & AI Course in Mumbai" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
+                    </h2>
+                  )
+                  : course.title === "Data Analytics Course in Mumbai" ? (
                     <h2 className="text-3xl font-bold mb-4 text-gray-900">
                       Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
                     </h2>

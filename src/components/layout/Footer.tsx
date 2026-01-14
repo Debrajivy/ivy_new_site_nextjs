@@ -230,9 +230,22 @@ const Footer = () => {
                   <li><Link href="/courses/data-analytics-course-kolkata" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Kolkata</Link></li>
                   <li><Link href="/courses/data-analytics-course-delhi" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Delhi</Link></li>
                   <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Bangalore</Link></li>
-                  {/* <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Mumbai</Link></li>
+                  <li><Link href="/courses/data-analytics-course-mumbai" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Mumbai</Link></li>
                   <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Pune</Link></li>
-                  <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Chennai</Link></li> */}
+                  <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics Course in Chennai</Link></li>
+           
+
+                </ul>
+              </div>
+              <div className="flex flex-col space-y-3">
+                <h4 className="text-white text-xs font-bold uppercase tracking-wider">Gen AI Courses</h4>
+                <ul className="space-y-2 text-gray-400 text-xs">
+                  <li><Link href="/courses/data-analytics-course-kolkata" className="hover:text-blue-400 transition-colors"> Gen AI Course in Kolkata</Link></li>
+                  <li><Link href="/courses/data-analytics-course-delhi" className="hover:text-blue-400 transition-colors"> Gen AI Course in Delhi</Link></li>
+                  {/* <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Gen AI Course in Bangalore</Link></li> */}
+                  {/* <li><Link href="/courses/data-analytics-course-mumbai" className="hover:text-blue-400 transition-colors"> Gen AI Course in Mumbai</Link></li>
+                  <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Gen AI Course in Pune</Link></li>
+                  <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Gen AI Course in Chennai</Link></li> */}
            
 
                 </ul>

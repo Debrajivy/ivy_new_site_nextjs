@@ -73,6 +73,8 @@
   }
 }
 
+
+
 .animate-scroll-left {
   animation: scroll-left 50s linear infinite; /* Adjust duration as needed */
 }

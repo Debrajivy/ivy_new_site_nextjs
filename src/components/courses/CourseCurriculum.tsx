@@ -125,6 +125,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     'Data Analytics Course in Kolkata': { courseFee: 42000, registration: 10000, emi: 3556, months: 9 },
     'Data Analytics Course in Delhi': { courseFee: 42000, registration: 10000, emi: 3556, months: 9 },
     'Data Analytics Course in Bangalore': { courseFee: 42000, registration: 10000, emi: 3556, months: 9 },
+    'Data Analytics Course in Mumbai': { courseFee: 42000, registration: 10000, emi: 3556, months: 9 },
     'Generative AI Course': { courseFee: 69000, registration: 10000, emi: 6556, months: 9 },
     'AI for Product Managers': { courseFee: 29000, registration: 10000, emi: 9500, months: 2 },
     'AI and Machine Learning Course': { courseFee: 39000, registration: 10000, emi: 3223, months: 9 },
