@@ -1,593 +1,917 @@
-"use client"
-
-import type React from "react"
-import { useState, useMemo } from "react"
-import Navbar from "@/components/layout/Navbar"
-import Footer from "@/components/helpcenter/Footer";
-import FooterMain from "@/components/layout/Footer";
-import { useRouter } from "next/navigation";
-
+"use client";
+import React, { useState, useEffect } from 'react';
 import {
-  Sparkles,
-  Search,
-  TrendingUp,
-  Bot,
-  Brain,
-  Code,
-  Globe,
-  Shield,
-  Zap,
-  BookOpen,
-  Users,
+  FileStack,
+  Database,
+  AlertCircle,
   ArrowRight,
-  Filter,
-} from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+  Code,
+  Play,
+  Clock,
+  Calendar,
+  ChevronRight,
+  Terminal,
+  Layers,
+  BookOpen,
+  Cpu,
+  BarChart3,
+  Server,
+  Briefcase,
+  ShieldCheck,
+  Zap,
+  Layout,
+  MessageSquare,
+  Search,
+  FileText,
+  Star,
+  Table,
+  Image as ImageIcon
+} from 'lucide-react';
+import Navbar from "@/components/layout/Navbar"
+import FooterMain from "@/components/layout/Footer";
+import data from './AIHelpCenter.json';
 
-// ============================================
-// TYPE DEFINITIONS - What each topic contains
-// ============================================
+// Icon mapping
+const iconMap: Record<string, React.ReactNode> = {
+  "Code": <Code />,
+  "Database": <Database />,
+  "AlertCircle": <AlertCircle />,
+  "ArrowRight": <ArrowRight />,
+  "Play": <Play />,
+  "Clock": <Clock />,
+  "Calendar": <Calendar />,
+  "ChevronRight": <ChevronRight />,
+  "Terminal": <Terminal />,
+  "Layers": <Layers />,
+  "BookOpen": <BookOpen />,
+  "Cpu": <Cpu />,
+  "BarChart3": <BarChart3 />,
+  "Server": <Server />,
+  "Briefcase": <Briefcase />,
+  "ShieldCheck": <ShieldCheck />,
+  "Zap": <Zap />,
+  "Layout": <Layout />,
+  "MessageSquare": <MessageSquare />,
+  "Search": <Search />,
+  "FileText": <FileText />,
+  "FileStack": <FileStack />,
+  "Star": <Star />,
+  "Table": <Table />,
+  "ImageIcon": <ImageIcon />
+};
 
-type TopicCategory = "llms" | "ai-agents" | "tools" | "ethics" | "computer-vision" | "audio-ai"
-type DifficultyLevel = "Beginner" | "Intermediate" | "Advanced"
-type TrendStatus = "Hot" | "Rising" | "Stable"
+// Helper function to add backlinks to text
+const addBacklinks = (text: string) => {
+  if (!text) return '';
+  return text
+    .replace(/modern business/g, '<a href="https://blog.ivyproschool.com/decoding-business-analytics-vs-business-intelligence/" class="text-[#013a81] font-semibold underline decoration-indigo-200 underline-offset-4 hover:text-indigo-600 transition-colors">modern business</a>')
+    .replace(/Python/g, '<a href="https://blog.ivyproschool.com/decoding-business-analytics-vs-business-intelligence/" class="text-[#013a81] font-semibold underline decoration-indigo-200 underline-offset-4 hover:text-indigo-600 transition-colors">Python</a>')
+    .replace(/pandas library/g, '<a href="https://blog.ivyproschool.com/top-9-reasons-to-learn-python-to-become-data-scientist-ai-expert/" class="text-[#013a81] font-semibold underline decoration-indigo-200 underline-offset-4 hover:text-indigo-600 transition-colors">pandas library</a>')
+    .replace(/for data analysis/g, '<a href="https://ivyproschool.com/courses/data-analytics-and-generative-ai-course" class="text-[#013a81] font-semibold underline decoration-indigo-200 underline-offset-4 hover:text-indigo-600 transition-colors">for data analysis</a>')
+    .replace(/data engineering pipelines/g, '<a href="https://ivyproschool.com/courses/data-engineering-course" class="text-[#013a81] font-semibold underline decoration-indigo-200 underline-offset-4 hover:text-indigo-600 transition-colors">data engineering pipelines</a>');
+};
 
-interface AITopic {
-  id: number
-  title: string
-  slug: string
-  category: TopicCategory
-  difficulty: DifficultyLevel
-  status: TrendStatus
-  icon: React.ElementType
-  shortDescription: string
-  whatIsIt: string
-  whyItMatters: string
-  howToLearn: string[]
-  keyTools: string[]
-  resources: { name: string; url: string }[]
-  estimatedLearningTime: string
-}
+// Helper function to highlight Python code
+const highlightPythonCode = (code: string) => {
+  if (!code) return '';
+  const escaped = code
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 
-// ============================================
-// AI TOPICS DATA - Real trending AI topics students should know
-// ============================================
+  return escaped
+    .replace(
+      /\b(import|from|as|def|class|return|if|elif|else|for|while|in|try|except|with)\b/g,
+      '<span class="text-purple-400">$1</span>'
+    )
+    .replace(
+      /\b(pd|read_csv|DataFrame|True|False|None|concat|fillna|to_csv|glob)\b/g,
+      '<span class="text-blue-400">$1</span>'
+    )
+    .replace(
+      /('[^']*'|"[^"]*")/g,
+      '<span class="text-green-400">$1</span>'
+    )
+    .replace(
+      /^#.*$/gm,
+      '<span class="text-gray-400 italic">$&</span>'
+    );
+};
 
-const aiTopics: AITopic[] = [
-  {
-    id: 1,
-    title: "Perplexity AI & RAG Systems",
-    slug: "perplexity-ai-rag-systems",
-    category: "tools",
-    difficulty: "Intermediate",
-    status: "Hot",
-    icon: Search,
-    shortDescription: "AI-powered search that combines real-time web data with language models",
-    whatIsIt:
-      "Perplexity uses Retrieval-Augmented Generation (RAG) to search the internet in real-time and provide accurate, cited answers. Unlike traditional chatbots, it fetches current information before generating responses.",
-    whyItMatters:
-      "RAG is revolutionizing how AI accesses information. Instead of relying only on training data, AI can now search and cite sources like a research assistant, making it more accurate and trustworthy.",
-    howToLearn: [
-      "Start by using Perplexity.ai to understand how it differs from ChatGPT",
-      "Learn the basics of vector databases (stores information for quick retrieval)",
-      "Study how embeddings work (converting text into numbers AI can search)",
-      "Build a simple RAG system using LangChain or LlamaIndex",
-      "Practice creating a mini search engine that answers questions from your documents",
-    ],
-    keyTools: ["Perplexity AI", "LangChain", "Pinecone", "Weaviate", "OpenAI Embeddings"],
-    resources: [
-      { name: "Perplexity AI Official Site", url: "https://perplexity.ai" },
-      { name: "LangChain RAG Tutorial", url: "https://python.langchain.com/docs/tutorials/rag/" },
-    ],
-    estimatedLearningTime: "2-3 weeks",
-  },
-  {
-    id: 2,
-    title: "AI Agents & Autonomous Systems",
-    slug: "ai-agents-autonomous-systems",
-    category: "ai-agents",
-    difficulty: "Advanced",
-    status: "Hot",
-    icon: Bot,
-    shortDescription: "AI that can plan, execute tasks, and make decisions independently",
-    whatIsIt:
-      "AI Agents are systems that can break down complex tasks, use tools, make decisions, and work towards goals with minimal human input. Think of them as AI assistants that can actually DO things, not just chat.",
-    whyItMatters:
-      "This is the future of AI - systems that can write code, conduct research, manage projects, and solve problems end-to-end. Companies are building agents that can replace entire workflows.",
-    howToLearn: [
-      "Understand the difference between chatbots and agents (agents take action)",
-      "Learn about ReAct (Reasoning + Acting) framework",
-      "Study tool-calling and function-calling in LLMs",
-      "Build a simple agent that can search the web and summarize findings",
-      "Explore AutoGPT, BabyAGI, and LangGraph for agent frameworks",
-    ],
-    keyTools: ["AutoGPT", "LangGraph", "CrewAI", "OpenAI Assistants API", "Anthropic Claude"],
-    resources: [
-      { name: "LangGraph Documentation", url: "https://langchain-ai.github.io/langgraph/" },
-      { name: "OpenAI Assistants Guide", url: "https://platform.openai.com/docs/assistants/overview" },
-    ],
-    estimatedLearningTime: "4-6 weeks",
-  },
-  {
-    id: 3,
-    title: "Large Language Models (LLMs)",
-    slug: "large-language-models",
-    category: "llms",
-    difficulty: "Beginner",
-    status: "Stable",
-    icon: Brain,
-    shortDescription: "The foundation models powering ChatGPT, Claude, and modern AI",
-    whatIsIt:
-      "LLMs are massive neural networks trained on huge amounts of text data. They learn patterns in language and can generate human-like text, answer questions, write code, and more.",
-    whyItMatters:
-      "LLMs are the backbone of the AI revolution. Understanding how they work helps you use them effectively and build applications on top of them.",
-    howToLearn: [
-      "Start with the basics: What is a neural network?",
-      "Learn about transformers (the architecture behind LLMs)",
-      "Understand tokens, context windows, and temperature settings",
-      "Practice prompt engineering - how to ask AI for better results",
-      "Experiment with different models: GPT-4, Claude, Llama, Mistral",
-    ],
-    keyTools: ["ChatGPT", "Claude", "Llama 3", "Mistral", "Gemini"],
-    resources: [
-      { name: "Intro to LLMs by Andrej Karpathy", url: "https://www.youtube.com/watch?v=zjkBMFhNj_g" },
-      { name: "OpenAI Prompt Engineering Guide", url: "https://platform.openai.com/docs/guides/prompt-engineering" },
-    ],
-    estimatedLearningTime: "2-3 weeks",
-  },
-  {
-    id: 4,
-    title: "Prompt Engineering & Optimization",
-    slug: "prompt-engineering-optimization",
-    category: "llms",
-    difficulty: "Beginner",
-    status: "Rising",
-    icon: Zap,
-    shortDescription: "The art and science of getting better results from AI models",
-    whatIsIt:
-      "Prompt engineering is about crafting the right instructions to get AI to produce exactly what you need. It's like learning the language AI understands best.",
-    whyItMatters:
-      "Good prompts can make the difference between useless and amazing AI outputs. This skill is in high demand and improves everything you build with AI.",
-    howToLearn: [
-      "Learn the basic prompt patterns: instruction, few-shot, chain-of-thought",
-      "Practice with different AI models to see how they respond",
-      "Study prompt libraries and successful examples",
-      "Experiment with system prompts and role-playing",
-      "Learn about prompt injection and safety considerations",
-    ],
-    keyTools: ["ChatGPT", "Claude", "PromptBase", "LangChain PromptTemplates"],
-    resources: [
-      { name: "Prompt Engineering Guide", url: "https://www.promptingguide.ai/" },
-      { name: "OpenAI Best Practices", url: "https://platform.openai.com/docs/guides/prompt-engineering" },
-    ],
-    estimatedLearningTime: "1-2 weeks",
-  },
-  {
-    id: 5,
-    title: "Open Source AI Models",
-    slug: "open-source-ai-models",
-    category: "llms",
-    difficulty: "Intermediate",
-    status: "Rising",
-    icon: Code,
-    shortDescription: "Customizable AI models you can run yourself",
-    whatIsIt:
-      "Open source models like Llama, Mistral, and Phi are powerful AI models you can download, modify, and run on your own hardware without paying API fees.",
-    whyItMatters:
-      "Open source democratizes AI. You can customize models for specific tasks, ensure data privacy, and avoid ongoing costs. Many companies prefer this for sensitive applications.",
-    howToLearn: [
-      "Start with Hugging Face - the GitHub of AI models",
-      "Learn how to download and run models locally using Ollama",
-      "Understand model quantization (making models smaller and faster)",
-      "Practice fine-tuning a small model on your own data",
-      "Explore model evaluation and benchmarking",
-    ],
-    keyTools: ["Hugging Face", "Ollama", "LM Studio", "Llama 3", "Mistral"],
-    resources: [
-      { name: "Hugging Face Hub", url: "https://huggingface.co/models" },
-      { name: "Ollama Documentation", url: "https://ollama.ai/" },
-    ],
-    estimatedLearningTime: "3-4 weeks",
-  },
-  {
-    id: 6,
-    title: "AI Ethics & Safety",
-    slug: "ai-ethics-safety",
-    category: "ethics",
-    difficulty: "Beginner",
-    status: "Rising",
-    icon: Shield,
-    shortDescription: "Understanding responsible AI development and deployment",
-    whatIsIt:
-      "AI Ethics covers bias, fairness, privacy, transparency, and the societal impact of AI systems. It's about building AI that helps humanity without causing harm.",
-    whyItMatters:
-      "As AI becomes more powerful, ethical considerations become critical. Understanding these issues makes you a more responsible developer and helps prevent harmful applications.",
-    howToLearn: [
-      "Study real-world AI failures and their consequences",
-      "Learn about bias in training data and how it affects outputs",
-      "Understand privacy concerns with AI (data collection, model training)",
-      "Explore AI safety research and alignment problems",
-      "Follow current AI policy and regulation developments",
-    ],
-    keyTools: ["AI Incident Database", "Fairlearn", "IBM AI Fairness 360"],
-    resources: [
-      { name: "AI Ethics Guidelines", url: "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" },
-      { name: "AI Incident Database", url: "https://incidentdatabase.ai/" },
-    ],
-    estimatedLearningTime: "2-3 weeks",
-  },
-  {
-    id: 7,
-    title: "Multimodal AI (Vision + Language)",
-    slug: "multimodal-ai-vision-language",
-    category: "computer-vision",
-    difficulty: "Advanced",
-    status: "Hot",
-    icon: Globe,
-    shortDescription: "AI that understands both images and text together",
-    whatIsIt:
-      "Multimodal AI can process and generate multiple types of data - text, images, audio, video. Models like GPT-4 Vision can analyze images and answer questions about them.",
-    whyItMatters:
-      "The real world is multimodal. AI that can understand images, read text, and hear audio is far more useful than text-only systems. This is powering everything from medical diagnosis to autonomous vehicles.",
-    howToLearn: [
-      "Start with image classification basics using pre-trained models",
-      "Learn about CLIP (Contrastive Language-Image Pre-training)",
-      "Experiment with GPT-4 Vision or Claude 3 for image understanding",
-      "Study image generation models like DALL-E and Stable Diffusion",
-      "Explore video understanding and generation",
-    ],
-    keyTools: ["GPT-4 Vision", "CLIP", "Stable Diffusion", "Midjourney", "Segment Anything"],
-    resources: [
-      { name: "OpenAI Vision Guide", url: "https://platform.openai.com/docs/guides/vision" },
-      { name: "Hugging Face Vision Models", url: "https://huggingface.co/models?pipeline_tag=image-classification" },
-    ],
-    estimatedLearningTime: "4-5 weeks",
-  },
-  {
-    id: 8,
-    title: "Voice AI & Speech Recognition",
-    slug: "voice-ai-speech-recognition",
-    category: "audio-ai",
-    difficulty: "Intermediate",
-    status: "Rising",
-    icon: Sparkles,
-    shortDescription: "AI that can understand and generate human speech",
-    whatIsIt:
-      "Voice AI includes speech-to-text (transcription), text-to-speech (voice generation), and voice cloning. It's what powers Siri, Alexa, and AI voice assistants.",
-    whyItMatters:
-      "Voice is the most natural interface for humans. As voice AI improves, it's enabling hands-off computing, accessibility tools, and more natural human-AI interaction.",
-    howToLearn: [
-      "Start with Whisper (OpenAI's speech recognition model)",
-      "Learn about audio processing and spectrograms",
-      "Experiment with text-to-speech APIs (ElevenLabs, OpenAI TTS)",
-      "Study voice cloning technology and its applications",
-      "Build a simple voice assistant using existing APIs",
-    ],
-    keyTools: ["Whisper", "ElevenLabs", "OpenAI TTS", "Google Speech-to-Text"],
-    resources: [
-      { name: "OpenAI Whisper", url: "https://github.com/openai/whisper" },
-      { name: "ElevenLabs Documentation", url: "https://elevenlabs.io/docs" },
-    ],
-    estimatedLearningTime: "3-4 weeks",
-  },
-]
+// Helper function to highlight GenAI/LLM code
+const highlightGenAICode = (code: string) => {
+  if (!code) return '';
+  const escaped = code
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 
-// ============================================
-// HELPER COMPONENTS
-// ============================================
+  return escaped
+    .replace(
+      /\b(import|from|as|def|class|return|if|elif|else|for|while|in|try|except|with|async|await)\b/g,
+      '<span class="text-purple-400">$1</span>'
+    )
+    .replace(
+      /\b(openai|langchain|llama_index|transformers|torch|numpy|pandas|RAG|FineTuning|retrieval|generation|embedding|vector|Llama|huggingface|retriever|chain|pipeline|TrainingArguments|Trainer)\b/gi,
+      '<span class="text-blue-400">$1</span>'
+    )
+    .replace(
+      /('[^']*'|"[^"]*")/g,
+      '<span class="text-green-400">$1</span>'
+    )
+    .replace(
+      /^#.*$/gm,
+      '<span class="text-gray-400 italic">$&</span>'
+    );
+};
 
-// Badge color mapping for visual consistency
-const categoryColors: Record<TopicCategory, string> = {
-  "llms": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-  "ai-agents": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-  "tools": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-  "ethics": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
-  "computer-vision": "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
-  "audio-ai": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
-}
+const App = () => {
+  const [view, setView] = useState('landing');
+  const [activeCategory, setActiveCategory] = useState('');
+  const [activeSubcategory, setActiveSubcategory] = useState('');
+  const [activeTopic, setActiveTopic] = useState('');
+  const [activeSection, setActiveSection] = useState('intro');
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [showReviewPrompt, setShowReviewPrompt] = useState(false);
+  const [reviewPromptShown, setReviewPromptShown] = useState(false);
 
-const difficultyColors: Record<DifficultyLevel, string> = {
-  Beginner: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-  Intermediate: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
-  Advanced: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-}
-
-// ============================================
-// TOPIC CARD - Shows brief overview of each AI topic
-// ============================================
-
-function TopicCard({ topic }: { topic: AITopic }) {
-  const router = useRouter()
-  const Icon = topic.icon
-
-  const handleLearnMore = () => {
-    router.push(`/ai/${topic.category}/${topic.slug}`)
-  }
-
-  const handleCardClick = (e: React.MouseEvent) => {
-    // Only navigate if the click is not on the Learn More button
-    if (!(e.target as HTMLElement).closest('button')) {
-      handleLearnMore()
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(id);
     }
+  };
+
+  const handleCategoryClick = (categoryId: string) => {
+    setActiveCategory(categoryId);
+    if ((data.categories as Record<string, any>)[categoryId]?.subcategories) {
+      setView('category');
+    } else {
+      setView('topic-list');
+    }
+  };
+
+  const handleSubcategoryClick = (subcategoryId: string) => {
+    setActiveSubcategory(subcategoryId);
+    setView('subcategory');
+  };
+
+  const handleTopicClick = (topicId: string) => {
+    setActiveTopic(topicId);
+    setView('topic');
+    setScrollProgress(0);
+    setReviewPromptShown(false);
+    setShowReviewPrompt(false);
+  };
+
+  const handleBackToLanding = () => {
+    setView('landing');
+    setActiveCategory('');
+    setActiveSubcategory('');
+    setActiveTopic('');
+  };
+
+  const handleBackToCategory = () => {
+    setView('category');
+    setActiveSubcategory('');
+    setActiveTopic('');
+  };
+
+  const handleBackToSubcategory = () => {
+    setView('subcategory');
+    setActiveTopic('');
+  };
+
+  const openReviewPage = () => {
+    window.open('https://www.google.com/search?q=ivy+professional+school&rlz=1C1ONGR_enIN1115IN1115&oq=&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7Mg0IARAuGK8BGMcBGIAEMgcIAhAAGIAEMhAIAxAuGIMBGLEDGIAEGOUEMgcIBBAAGIAEMgYIBRBFGDwyBggGEEUYQTIGCAcQRRg80gEIMzA0N2owajeoAgiwAgHxBRMMy4WLy7978QUTDMuFi8u_ew&sourceid=chrome&ie=UTF-8#lrd=0x3a02771797fccdc1:0xca64261fceaf2af6,3,,,', '_blank');
+    setShowReviewPrompt(false);
+  };
+
+  useEffect(() => {
+    if (view !== 'topic') return;
+
+    const calculateScrollProgress = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight - windowHeight;
+      const scrolled = window.scrollY;
+      
+      if (documentHeight > 0) {
+        const progress = (scrolled / documentHeight) * 100;
+        setScrollProgress(Math.min(100, Math.max(0, progress)));
+        
+        if (progress >= 95 && !reviewPromptShown) {
+          setShowReviewPrompt(true);
+          setReviewPromptShown(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', calculateScrollProgress);
+    calculateScrollProgress();
+
+    return () => {
+      window.removeEventListener('scroll', calculateScrollProgress);
+    };
+  }, [view, reviewPromptShown]);
+
+  const renderBreadcrumbs = () => {
+    const breadcrumbs = [];
+
+    if (view !== 'landing') {
+      breadcrumbs.push(
+        <button key="home" onClick={handleBackToLanding} className="hover:text-indigo-600 transition-colors">
+          Home
+        </button>
+      );
+    }
+
+    if (view === 'category' || view === 'subcategory' || view === 'topic-list' || view === 'topic') {
+      breadcrumbs.push(
+        <ChevronRight key="arrow1" size={14} />,
+        <button key="category" onClick={() => handleCategoryClick(activeCategory)} className="hover:text-indigo-600 transition-colors">
+          {(data.categories as Record<string, any>)[activeCategory]?.title}
+        </button>
+      );
+    }
+
+    if (view === 'subcategory' || view === 'topic') {
+      breadcrumbs.push(
+        <ChevronRight key="arrow2" size={14} />,
+        <button key="subcategory" onClick={() => handleSubcategoryClick(activeSubcategory)} className="hover:text-indigo-600 transition-colors">
+          {(data.categories as Record<string, any>)[activeCategory]?.subcategories?.[activeSubcategory]?.title}
+        </button>
+      );
+    }
+
+    if (view === 'topic') {
+      breadcrumbs.push(
+        <ChevronRight key="arrow3" size={14} />,
+        <span key="topic" className="text-indigo-600 font-medium">
+          {activeTopic === 'merge-csv-files' ? 'Merging CSV Files' : 
+           activeTopic === 'rag-vs-finetuning' ? 'RAG vs Fine-Tuning' : 'Tutorial'}
+        </span>
+      );
+    }
+
+    return breadcrumbs;
+  };
+
+  const renderTopicContent = () => {
+    const topic = (data.categories as any)[activeCategory]?.subcategories?.[activeSubcategory]?.topics?.find((t: any) => t.id === activeTopic);
+    if (!topic) return null;
+
+    const content = topic.content;
+
+    return (
+      <article className="lg:col-span-3">
+        <div className="rounded-[2.5rem] bg-white p-8 shadow-sm ring-1 ring-slate-200 md:p-14">
+          {/* Introduction Section */}
+          <section id="intro" className="max-w-none mb-16">
+            {content.sections?.find((s: any) => s.id === 'intro')?.content?.map((item: any, idx: number) => (
+              <div key={idx}>
+                {item.type === 'paragraph' && item.hasBar && (
+                  <div className="relative pl-6 mb-8">
+                    <div className="absolute left-0 top-1.5 w-1.5 h-8 bg-indigo-600 rounded-full"></div>
+                    <p className="text-xl leading-relaxed text-slate-600" dangerouslySetInnerHTML={{ 
+                      __html: addBacklinks(item.text)
+                    }} />
+                  </div>
+                )}
+                {item.type === 'paragraph' && !item.hasBar && (
+                  <p className="text-xl leading-relaxed text-slate-600 mb-8" dangerouslySetInnerHTML={{ 
+                    __html: addBacklinks(item.text)
+                  }} />
+                )}
+              </div>
+            ))}
+          </section>
+
+          {/* Table of Contents for GenAI */}
+          {content.sections?.find((s: any) => s.type === 'toc') && (
+            <div className="my-16 rounded-2xl bg-slate-50 p-8 border border-slate-200">
+              <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <BookOpen size={20} /> {content.sections.find((s: any) => s.type === 'toc')?.title}
+              </h3>
+              <ul className="space-y-2 text-slate-700">
+                {content.sections.find((s: any) => s.type === 'toc')?.content?.map((item: string, idx: number) => (
+                  <li key={idx} className="flex items-center gap-2">
+                    <ChevronRight size={16} className="text-indigo-500" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Analogy Section */}
+          {content.sections?.find((s: any) => s.type === 'analogy') && (
+            <div className="my-16 rounded-[2rem] bg-indigo-600 p-10 text-white shadow-2xl shadow-indigo-200">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="rounded-2xl bg-white/20 p-3">
+                  {iconMap[content.sections.find((s: any) => s.type === 'analogy')?.icon || 'Layers']}
+                </div>
+                <h3 className="text-3xl font-bold">{content.sections.find((s: any) => s.type === 'analogy')?.title}</h3>
+              </div>
+              <p className="text-xl leading-relaxed text-indigo-50 mb-8">
+                {content.sections.find((s: any) => s.type === 'analogy')?.content?.main}
+              </p>
+              <div className="grid gap-6 md:grid-cols-2">
+                {content.sections.find((s: any) => s.type === 'analogy')?.content?.cards?.map((card: any, idx: number) => (
+                  <div key={idx} className={`rounded-2xl ${idx === 1 ? 'bg-indigo-500 border-white/20 shadow-lg' : 'bg-indigo-700/50 border-white/10'} border p-6`}>
+                    <h4 className="font-black uppercase text-xs tracking-widest text-indigo-300 mb-3">{card.title}</h4>
+                    <p className="text-indigo-50 font-medium">{card.content}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Content Sections */}
+          {content.sections?.filter((s: any) => !['intro', 'toc', 'analogy'].includes(s.type || s.id)).map((section: any) => (
+            <section key={section.id} id={section.id} className="mt-20">
+              {section.phase && (
+                <div className="mb-8">
+                  <div className="inline-flex items-center gap-3 rounded-full bg-slate-100 px-4 py-1.5 text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">
+                    {section.phase}
+                  </div>
+                  <h2 className="text-3xl font-bold text-slate-900">{section.title}</h2>
+                </div>
+              )}
+              {!section.phase && (
+                <h2 className="text-3xl font-bold text-slate-900 mb-6">{section.title}</h2>
+              )}
+
+              {section.content?.map((item: any, idx: number) => {
+                if (item.type === 'paragraph') {
+                  return <p key={idx} className="text-lg leading-relaxed text-slate-600 mb-8" dangerouslySetInnerHTML={{ 
+                    __html: addBacklinks(item.text)
+                  }} />;
+                }
+                if (item.type === 'subtitle') {
+                  return <h3 key={idx} className="text-2xl font-bold text-slate-800 mb-4 mt-12">{item.text}</h3>;
+                }
+                if (item.type === 'code') {
+                  const borderColors: Record<string, string> = {
+                    'indigo': 'border-indigo-500',
+                    'emerald': 'border-emerald-500',
+                    'blue': 'border-blue-500',
+                    'purple': 'border-purple-500'
+                  };
+                  const borderClass = borderColors[item.borderColor] || 'border-indigo-500';
+                  
+                  return (
+                    <div key={idx} className={`my-8 overflow-hidden rounded-2xl bg-black font-mono text-sm shadow-xl border-l-[6px] ${borderClass}`}>
+                      <div className="bg-gray-900 px-6 py-3 border-b border-gray-800 flex justify-between items-center">
+                        <span className="text-gray-400 text-xs font-medium">{item.title}</span>
+                        <Terminal size={14} className="text-gray-500" />
+                      </div>
+                      <pre className="p-8 leading-8 overflow-x-auto text-gray-100" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+                        <code dangerouslySetInnerHTML={{ 
+                          __html: activeCategory === 'genai-llm' ? highlightGenAICode(item.code) : highlightPythonCode(item.code)
+                        }} />
+                      </pre>
+                    </div>
+                  );
+                }
+                if (item.type === 'explanation') {
+                  const colorMap: Record<string, { border: string, bg: string, text: string }> = {
+                    'indigo': { border: 'border-indigo-50', bg: 'bg-indigo-50/30', text: 'text-indigo-700' },
+                    'emerald': { border: 'border-emerald-50', bg: 'bg-emerald-50/30', text: 'text-emerald-700' },
+                    'blue': { border: 'border-blue-50', bg: 'bg-blue-50/30', text: 'text-blue-700' },
+                    'purple': { border: 'border-purple-50', bg: 'bg-purple-50/30', text: 'text-purple-700' }
+                  };
+                  const color = colorMap[item.borderColor] || colorMap.indigo;
+                  
+                  return (
+                    <div key={idx} className={`my-8 rounded-2xl border-2 p-8 ${color.border} ${color.bg}`}>
+                      <h4 className="flex items-center gap-2 text-xs font-black uppercase tracking-widest mb-6" style={{ color: color.text }}>
+                        <Search size={16} /> {item.title}
+                      </h4>
+                      <div className="space-y-4">
+                        {item.content.split('\n\n').map((paragraph: string, pIdx: number) => (
+                          <p key={pIdx} className="text-slate-700 leading-relaxed italic">
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                      {item.note && (
+                        <p className="mt-4 text-slate-700 font-medium">{item.note}</p>
+                      )}
+                    </div>
+                  );
+                }
+                if (item.type === 'quote') {
+                  return (
+                    <p key={idx} className="text-lg leading-relaxed text-slate-600 mb-8 italic border-l-4 border-purple-200 pl-6">
+                      {item.text}
+                    </p>
+                  );
+                }
+                if (item.type === 'table') {
+                  return (
+                    <div key={idx} className="my-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+                      <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex justify-between items-center">
+                        <div className="flex items-center gap-2">
+                          <Table size={16} className="text-indigo-600" />
+                          <span className="text-sm font-semibold text-slate-700">{item.title}</span>
+                        </div>
+                        <span className="text-xs text-slate-500">Comparison Table</span>
+                      </div>
+                      <div className="overflow-x-auto">
+                        <table className="w-full">
+                          <thead>
+                            <tr className="bg-slate-100">
+                              {item.headers?.map((header: string, hIdx: number) => (
+                                <th key={hIdx} className="px-6 py-3 text-left text-xs font-semibold text-slate-700 uppercase tracking-wider border-b border-slate-200">
+                                  {header}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-slate-200">
+                            {item.rows?.map((row: any[], rIdx: number) => (
+                              <tr key={rIdx} className={rIdx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                                {row.map((cell: string, cIdx: number) => (
+                                  <td key={cIdx} className="px-6 py-4 text-sm text-slate-700 border-r border-slate-200 last:border-r-0">
+                                    {cell}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  );
+                }
+                if (item.type === 'image') {
+                  return (
+                    <div key={idx} className="my-8">
+                      <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-lg">
+                        <div className="flex items-center gap-2 mb-4">
+                          <ImageIcon size={16} className="text-indigo-600" />
+                          <span className="text-sm font-semibold text-slate-700">{item.title}</span>
+                        </div>
+                        <div className="aspect-video rounded-lg overflow-hidden bg-slate-100">
+                          <iframe
+                            src={item.url}
+                            className="w-full h-full border-0"
+                            title={item.title}
+                            allow="autoplay"
+                          />
+                        </div>
+                        {item.caption && (
+                          <p className="mt-3 text-sm text-slate-600 text-center">{item.caption}</p>
+                        )}
+                      </div>
+                    </div>
+                  );
+                }
+                return null;
+              })}
+            </section>
+          ))}
+
+          {/* Troubleshooting Section */}
+          {content.troubleshooting && (
+            <section id="troubleshooting" className="mt-24 border-t border-slate-100 pt-20">
+              <div className="mb-12">
+                <h2 className="text-4xl font-black text-slate-900 mb-4">{content.troubleshooting.title}</h2>
+                <p className="text-xl text-slate-500">{content.troubleshooting.subtitle}</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {content.troubleshooting.cards?.map((card: any, idx: number) => {
+                  const colorMap: Record<string, { border: string, shadow: string, bg: string, text: string }> = {
+                    'red': { border: 'border-red-50', shadow: 'shadow-red-50/50', bg: 'bg-red-100', text: 'text-red-600' },
+                    'amber': { border: 'border-amber-50', shadow: 'shadow-amber-50/50', bg: 'bg-amber-100', text: 'text-amber-600' },
+                    'indigo': { border: 'border-indigo-50', shadow: 'shadow-indigo-50/50', bg: 'bg-indigo-100', text: 'text-indigo-600' }
+                  };
+                  const color = colorMap[card.color] || colorMap.indigo;
+                  
+                  return (
+                    <div key={idx} className={`rounded-3xl border-2 ${color.border} bg-white p-8 shadow-xl ${color.shadow} hover:-translate-y-2 transition-transform`}>
+                      <div className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl ${color.bg}`}>
+                        {iconMap[card.icon]}
+                      </div>
+                      <h4 className="text-xl font-bold text-slate-900 mb-4">{card.title}</h4>
+                      <p className="text-slate-600 leading-relaxed">{card.content}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {/* Conclusion Section */}
+          {content.conclusion && (
+            <section className="mt-24 space-y-10">
+              <div className="rounded-[2.5rem] bg-slate-950 p-12 text-white">
+                <h2 className="text-4xl font-bold mb-6">{content.conclusion.title}</h2>
+                <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
+                  <p dangerouslySetInnerHTML={{ 
+                    __html: addBacklinks(content.conclusion.content)
+                  }} />
+                </div>
+              </div>
+
+              {content.conclusion.checklist && (
+                <div className="rounded-3xl border-4 border-indigo-600 p-10">
+                  <h3 className="text-3xl font-black text-slate-900 mb-8 uppercase tracking-tighter">Summary Checklist</h3>
+                  <div className="space-y-6">
+                    {content.conclusion.checklist.map((step: any, idx: number) => (
+                      <div key={idx} className="flex items-center gap-4 group">
+                        <div className="h-8 w-8 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold group-hover:scale-110 transition-transform">✓</div>
+                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-2">
+                          <span className="font-black text-slate-900 min-w-[100px]">{step.item}:</span>
+                          <span className="text-indigo-600 font-mono text-sm bg-indigo-50 px-3 py-1 rounded-lg">{step.text}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {content.conclusion.finalNote && (
+                <p className="text-xl font-medium text-slate-600 pt-10 text-center italic">
+                  {content.conclusion.finalNote}
+                </p>
+              )}
+
+              {content.conclusion.finalParagraph && (
+                <p className="text-lg text-slate-500 text-center leading-relaxed max-w-2xl mx-auto">
+                  {content.conclusion.finalParagraph}
+                </p>
+              )}
+            </section>
+          )}
+
+          {/* CTA Section */}
+          {content.cta && (
+            <div className="mt-20 flex flex-col items-center justify-center rounded-[3rem] bg-indigo-600 py-16 px-10 text-center text-white shadow-2xl">
+              <h2 className="text-4xl font-bold mb-6">{content.cta.title}</h2>
+              <p className="text-indigo-100 text-lg mb-10 max-w-xl">{content.cta.content}</p>
+              <button className="rounded-full bg-white px-10 py-5 text-lg font-black text-indigo-600 shadow-xl hover:scale-105 active:scale-95 transition-all">
+                {content.cta.buttonText}
+              </button>
+            </div>
+          )}
+        </div>
+      </article>
+    );
+  };
+
+  // Category View
+  if (view === 'category') {
+    const category = (data.categories as Record<string, any>)[activeCategory];
+    const subcategories = category.subcategories || {};
+
+    return (
+      <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+        <Navbar />
+        <div className="mx-auto max-w-7xl px-6 pt-6">
+          <nav className="flex items-center gap-2 text-sm font-medium text-slate-500 mb-8">
+            {renderBreadcrumbs()}
+          </nav>
+        </div>
+
+        <header className="px-6 pt-8 pb-12 text-center max-w-4xl mx-auto">
+          <div className={`${category.color} mb-6 inline-flex h-20 w-20 items-center justify-center rounded-3xl text-white shadow-xl`}>
+            {iconMap[category.icon]}
+          </div>
+          <h1 className="text-4xl font-black tracking-tight text-slate-900 mb-4">{category.title}</h1>
+          <p className="text-xl text-slate-600 mb-8">{category.description}</p>
+          <p className="text-lg text-slate-500 font-medium">{category.count}</p>
+        </header>
+
+        <main className="mx-auto max-w-7xl px-6 pb-24">
+          {Object.keys(subcategories).length > 0 ? (
+            <>
+              <h2 className="text-2xl font-bold text-slate-900 mb-8">Subcategories</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {Object.entries(subcategories).map(([id, subcat]: [string, any]) => (
+                  <div
+                    key={id}
+                    onClick={() => handleSubcategoryClick(id)}
+                    className="group relative overflow-hidden rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+                  >
+                    <div className={`${subcat.color} mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg`}>
+                      {iconMap[subcat.icon]}
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                      {subcat.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-slate-500 font-medium">{subcat.count}</p>
+                    <div className="mt-4 flex items-center gap-2 text-sm text-indigo-600 font-medium">
+                      <span>Explore topics</span>
+                      <ArrowRight size={16} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-xl text-slate-600">No subcategories available yet.</p>
+            </div>
+          )}
+        </main>
+        <FooterMain />
+      </div>
+    );
   }
 
-  return (
-    <Card
-      className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group hover:-translate-y-1"
-      onClick={handleCardClick}
-    >
-      <CardHeader>
-        <div className="flex items-start justify-between mb-2">
-          <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-            <Icon className="w-6 h-6 text-primary" />
-          </div>
-          {topic.status === "Hot" && (
-            <Badge variant="destructive" className="gap-1">
-              <TrendingUp className="w-3 h-3" />
-              Hot
-            </Badge>
-          )}
-          {topic.status === "Rising" && (
-            <Badge variant="secondary" className="gap-1">
-              <ArrowRight className="w-3 h-3" />
-              Rising
-            </Badge>
-          )}
+  // Subcategory View
+  if (view === 'subcategory') {
+    const category = (data.categories as Record<string, any>)[activeCategory];
+    const subcategory = category?.subcategories?.[activeSubcategory];
+    const topics = subcategory?.topics || [];
+
+    return (
+      <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+        <Navbar />
+        <div className="mx-auto max-w-7xl px-6 pt-6">
+          <nav className="flex items-center gap-2 text-sm font-medium text-slate-500 mb-8">
+            {renderBreadcrumbs()}
+          </nav>
         </div>
-        <CardTitle className="text-lg leading-tight">{topic.title}</CardTitle>
-        <CardDescription className="line-clamp-2">{topic.shortDescription}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="flex flex-wrap gap-2 mb-4">
-          <Badge className={categoryColors[topic.category]}>
-            {topic.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-          </Badge>
-          <Badge className={difficultyColors[topic.difficulty]}>{topic.difficulty}</Badge>
-        </div>
-        <div className="flex items-center justify-between text-sm text-muted-foreground">
-          <span className="flex items-center gap-1">
-            <BookOpen className="w-4 h-4" />
-            {topic.estimatedLearningTime}
-          </span>
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            className="text-primary font-medium group-hover:underline"
-            onClick={handleLearnMore}
-          >
-            Learn more →
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
 
-// ============================================
-// MAIN PAGE COMPONENT
-// ============================================
-
-export default function AILearningHub() {
-  const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState<TopicCategory | "all">("all")
-  const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel | "all">("all")
-
-  // Filter topics based on search and filters
-  const filteredTopics = useMemo(() => {
-    return aiTopics.filter((topic) => {
-      const matchesSearch =
-        topic.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        topic.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        topic.category.toLowerCase().includes(searchQuery.toLowerCase())
-
-      const matchesCategory = selectedCategory === "all" || topic.category === selectedCategory
-      const matchesDifficulty = selectedDifficulty === "all" || topic.difficulty === selectedDifficulty
-
-      return matchesSearch && matchesCategory && matchesDifficulty
-    })
-  }, [searchQuery, selectedCategory, selectedDifficulty])
-
-  const categories: (TopicCategory | "all")[] = [
-    "all",
-    "llms",
-    "ai-agents",
-    "tools",
-    "computer-vision",
-    "audio-ai",
-    "ethics",
-  ]
-  
-  const difficulties: (DifficultyLevel | "all")[] = ["all", "Beginner", "Intermediate", "Advanced"]
-
-  return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-
-      <main>
-        {/* Hero Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Your AI Learning Journey Starts Here</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
-            Master the <span className="text-primary">Trending AI Topics</span> Everyone's Talking About
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 text-pretty">
-            From Perplexity's RAG systems to autonomous AI agents - learn the technologies shaping the future. 
-            Clear explanations, step-by-step guides, and resources curated for students.
-          </p>
-        </section>
-
-        {/* Search and Filters */}
-        <section id="trending" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <Card className="p-6">
-            <div className="space-y-4">
-              {/* Search */}
-              {/* <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input
-                  type="text"
-                  placeholder="Search AI topics, tools, or concepts..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10"
-                />
-              </div> */}
-
-              {/* Filters */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex-1">
-                  <label className="text-sm font-medium mb-2 block">Category</label>
-                  <div className="flex flex-wrap gap-2">
-                    {categories.map((category) => (
-                      <Button
-                        key={category}
-                        variant={selectedCategory === category ? "default" : "outline"}
-                        size="sm"
-                        onClick={() => setSelectedCategory(category)}
-                      >
-                        {category === "all" ? "All" : category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <label className="text-sm font-medium mb-2 block">Difficulty</label>
-                  <div className="flex flex-wrap gap-2">
-                    {difficulties.map((difficulty) => (
-                      <Button
-                        key={difficulty}
-                        variant={selectedDifficulty === difficulty ? "default" : "outline"}
-                        size="sm"
-                        onClick={() => setSelectedDifficulty(difficulty)}
-                      >
-                        {difficulty === "all" ? "All" : difficulty}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Results count */}
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Filter className="w-4 h-4" />
-                <span>
-                  Showing {filteredTopics.length} of {aiTopics.length} topics
-                </span>
-              </div>
+        <header className="px-6 pt-8 pb-12 max-w-4xl mx-auto">
+          <div className="flex items-center gap-4 mb-6">
+            <div className={`${category.color} h-16 w-16 flex items-center justify-center rounded-3xl text-white shadow-xl`}>
+              {iconMap[category.icon]}
             </div>
-          </Card>
-        </section>
-
-        {/* Topics Grid */}
-        <section id="categories" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          {filteredTopics.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTopics.map((topic) => (
-                <TopicCard key={topic.id} topic={topic} />
-              ))}
+            <div className={`${subcategory.color} h-16 w-16 flex items-center justify-center rounded-3xl text-white shadow-xl`}>
+              {iconMap[subcategory.icon]}
             </div>
+          </div>
+          <h1 className="text-4xl font-black tracking-tight text-slate-900 mb-4">{subcategory.title}</h1>
+          <p className="text-xl text-slate-600 mb-8">Tutorials and guides for {subcategory.title.toLowerCase()}</p>
+          <p className="text-lg text-slate-500 font-medium">{subcategory.count}</p>
+        </header>
+
+        <main className="mx-auto max-w-7xl px-6 pb-24">
+          {topics.length > 0 ? (
+            <>
+              <h2 className="text-2xl font-bold text-slate-900 mb-8">Tutorials</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {topics.map((topic: any, idx: number) => (
+                  <div
+                    key={idx}
+                    onClick={() => handleTopicClick(topic.id)}
+                    className="group relative overflow-hidden rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+                  >
+                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-slate-700">
+                      <FileText />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-2">
+                      {topic.title}
+                    </h3>
+                    <p className="text-sm text-slate-500 mb-4">{topic.description}</p>
+                    <div className="flex items-center justify-between text-sm text-slate-400">
+                      <span className="flex items-center gap-1">
+                        <Clock size={14} />
+                        {topic.duration}
+                      </span>
+                      <span>{topic.date}</span>
+                    </div>
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ChevronRight size={20} className="text-indigo-400" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
           ) : (
-            <Card className="p-12 text-center">
-              <div className="flex flex-col items-center gap-4">
-                <div className="p-4 bg-muted rounded-full">
-                  <Search className="w-8 h-8 text-muted-foreground" />
+            <div className="text-center py-12">
+              <p className="text-xl text-slate-600">No tutorials available yet.</p>
+            </div>
+          )}
+        </main>
+        <FooterMain />
+      </div>
+    );
+  }
+
+  // Topic List View
+  if (view === 'topic-list') {
+    const category = (data.categories as Record<string, any>)[activeCategory];
+
+    return (
+      <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+        <Navbar />
+        <div className="mx-auto max-w-7xl px-6 pt-6">
+          <nav className="flex items-center gap-2 text-sm font-medium text-slate-500 mb-8">
+            {renderBreadcrumbs()}
+          </nav>
+        </div>
+
+        <header className="px-6 pt-8 pb-12 text-center max-w-4xl mx-auto">
+          <div className={`${category.color} mb-6 inline-flex h-20 w-20 items-center justify-center rounded-3xl text-white shadow-xl`}>
+            {iconMap[category.icon]}
+          </div>
+          <h1 className="text-4xl font-black tracking-tight text-slate-900 mb-4">{category.title}</h1>
+          <p className="text-xl text-slate-600 mb-8">{category.description}</p>
+          <p className="text-lg text-slate-500 font-medium">{category.count}</p>
+        </header>
+
+        <main className="mx-auto max-w-7xl px-6 pb-24">
+          <div className="text-center py-12">
+            <p className="text-xl text-slate-600">Tutorials coming soon for {category.title}.</p>
+          </div>
+        </main>
+        <FooterMain />
+      </div>
+    );
+  }
+
+  // Topic View (Tutorial)
+  if (view === 'topic') {
+    const topic = (data.categories as Record<string, any>)[activeCategory]?.subcategories?.[activeSubcategory]?.topics?.find((t: any) => t.id === activeTopic);
+    if (!topic) return null;
+
+    return (
+      <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-700">
+        <Navbar />
+        <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-slate-200">
+          <div 
+            className="h-full bg-gradient-to-r from-indigo-500 to-purple-600 transition-all duration-300"
+            style={{ width: `${scrollProgress}%` }}
+          ></div>
+        </div>
+
+        {showReviewPrompt && (
+          <div className="fixed top-20 right-6 z-50 max-w-sm animate-fade-in">
+            <div className="bg-white rounded-2xl shadow-2xl p-6 border border-indigo-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-10 w-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center">
+                  <Star className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">No topics found</h3>
-                  <p className="text-muted-foreground">
-                    Try adjusting your search or filters to find what you're looking for.
-                  </p>
+                  <h3 className="font-bold text-slate-900">Enjoying this tutorial?</h3>
+                  <p className="text-sm text-slate-600">Share your feedback!</p>
                 </div>
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setSearchQuery("")
-                    setSelectedCategory("all")
-                    setSelectedDifficulty("all")
-                  }}
+              </div>
+              <p className="text-slate-700 mb-4 text-sm">
+                You've completed {Math.round(scrollProgress)}% of this tutorial. Help others by sharing your experience with Ivy Professional School.
+              </p>
+              <div className="flex gap-3">
+                <button
+                  onClick={openReviewPage}
+                  className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-3 rounded-xl hover:opacity-90 transition-opacity"
                 >
-                  Clear all filters
-                </Button>
+                  Write a Review
+                </button>
+                <button
+                  onClick={() => setShowReviewPrompt(false)}
+                  className="px-4 py-3 text-slate-600 hover:text-slate-900 font-medium"
+                >
+                  Maybe Later
+                </button>
               </div>
-            </Card>
-          )}
-        </section>
+            </div>
+          </div>
+        )}
 
-        {/* How to Use This Hub */}
-        <section id="learn" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <Card className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="p-3 bg-primary rounded-lg">
-                <BookOpen className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold mb-2">How to Use This Learning Hub</h2>
-                <p className="text-muted-foreground">Follow these steps to maximize your AI learning journey</p>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="space-y-2">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                  1
-                </div>
-                <h3 className="font-semibold">Browse & Discover</h3>
-                <p className="text-sm text-muted-foreground">
-                  Explore trending AI topics. Use filters to find topics matching your skill level.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                  2
-                </div>
-                <h3 className="font-semibold">Learn Step-by-Step</h3>
-                <p className="text-sm text-muted-foreground">
-                  Click any topic to see detailed explanations, learning paths, and resources.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                  3
-                </div>
-                <h3 className="font-semibold">Practice & Build</h3>
-                <p className="text-sm text-muted-foreground">
-                  Use the recommended tools and resources to build real projects and gain hands-on experience.
-                </p>
-              </div>
-            </div>
-          </Card>
-        </section>
+        <div className="mx-auto max-w-7xl px-6 pt-8">
+          <nav className="flex items-center gap-2 text-sm font-medium text-slate-500 mb-6">
+            {renderBreadcrumbs()}
+          </nav>
+        </div>
 
-        {/* Community CTA */}
-        <section id="community" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{marginBottom:40}}>
-          <Card className="p-8 text-center bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-0">
-            <Users className="w-12 h-12 mx-auto mb-4" />
-            <h2 className="text-3xl font-bold mb-4">Join the AI Learning Community</h2>
-            <p className="text-lg mb-6 max-w-2xl mx-auto opacity-90">
-              Connect with other students, share your projects, ask questions, and stay updated on the latest AI trends.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
-                Join Discord Community
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              >
-                Submit a Topic
-              </Button>
+        <header className="bg-white px-6 pt-6 pb-16">
+          <div className="mx-auto max-w-7xl">
+            <h1 className="mb-8 max-w-4xl text-4xl font-extrabold leading-[1.15] text-slate-900 md:text-6xl">
+              {topic.content.hero.title}
+            </h1>
+            <div className="flex flex-wrap items-center gap-6 border-t border-slate-100 pt-8 text-sm font-medium text-slate-500">
+              <div className="flex items-center gap-2">
+                <div className="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold">
+                  {topic.content.hero.author?.charAt(0) || 'AI'}
+                </div>
+                <span>By <span className="text-slate-900">{topic.content.hero.author}</span></span>
+              </div>
+              <div className="flex items-center gap-2 border-l border-slate-200 pl-6">
+                <Calendar size={16} />
+                <span>{topic.content.hero.date}</span>
+              </div>
+              <div className="flex items-center gap-2 border-l border-slate-200 pl-6">
+                <Clock size={16} />
+                <span>{topic.content.hero.readTime}</span>
+              </div>
             </div>
-          </Card>
-        </section>
+          </div>
+        </header>
+
+        {topic.content.video?.youtubeId && (
+          <div className="mx-auto -mt-8 max-w-5xl px-6">
+            <div className="group relative aspect-video overflow-hidden rounded-3xl bg-slate-900 shadow-2xl">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={`https://www.youtube.com/embed/${topic.content.video.youtubeId}?autoplay=1&mute=1&loop=1&playlist=${topic.content.video.youtubeId}&controls=1`}
+                title={topic.content.video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                <div className="absolute bottom-8 left-8">
+                  <span className="mb-2 block text-xs font-bold uppercase tracking-[0.2em] text-indigo-400">
+                    Interactive Lesson
+                  </span>
+                  <h3 className="text-2xl font-bold text-white">{topic.content.video.title}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <main className="mx-auto mt-16 max-w-7xl px-6 pb-24">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
+            {renderTopicContent()}
+
+            <aside className="lg:col-span-1">
+              <div className="sticky top-24 space-y-8">
+                <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
+                  <h4 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-6">Roadmap</h4>
+                  <div className="flex flex-col gap-4">
+                    {data.navigation.toc.map((link: any) => (
+                      <button
+                        key={link.id}
+                        onClick={() => scrollTo(link.id)}
+                        className={`text-left text-sm font-bold transition-all border-l-4 pl-4 ${activeSection === link.id
+                          ? 'text-indigo-600 border-indigo-600'
+                          : 'text-slate-400 border-transparent hover:text-slate-600'
+                          }`}
+                      >
+                        {link.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-8 rounded-2xl shadow-xl text-white text-center">
+                  <h3 className="font-bold text-xl mb-2">{data.navigation.sidebarLinks.title}</h3>
+                  <p className="text-sm text-blue-100 mb-6">{data.navigation.sidebarLinks.content}</p>
+                  <button style={{ marginTop: 10 }} className="w-full bg-white text-blue-700 font-bold py-3 rounded-xl hover:bg-blue-50">
+                    {data.navigation.sidebarLinks.buttonText}
+                  </button>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </main>
+        <FooterMain />
+      </div>
+    );
+  }
+
+  // Landing View
+  return (
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+      <Navbar />
+      <header className="px-6 pt-16 pb-12 text-center max-w-4xl mx-auto">
+        <h1 className="text-5xl font-black tracking-tight text-slate-900 mb-6">What would you like to learn today?</h1>
+        <p className="text-xl text-slate-600">Browse our comprehensive library of AI and data science tutorials</p>
+      </header>
+
+      <main className="mx-auto max-w-7xl px-6 pb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {Object.entries(data.categories).map(([id, cat]: [string, any]) => (
+            <div
+              key={id}
+              onClick={() => handleCategoryClick(id)}
+              className={`group relative overflow-hidden rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-xl hover:-translate-y-1 cursor-pointer`}
+            >
+              <div className={`${cat.color} mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg`}>
+                {iconMap[cat.icon]}
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">{cat.title}</h3>
+              <p className="mt-1 text-sm text-slate-500 font-medium">{cat.count}</p>
+              {id === "python-basics" && (
+                <div className="mt-4 flex items-center gap-2 rounded-xl bg-indigo-50 p-3">
+                  <div className="h-2 w-2 animate-pulse rounded-full bg-indigo-500"></div>
+                  <span className="text-xs font-bold text-indigo-700">Latest: Merging CSV Files</span>
+                  <ArrowRight size={12} className="ml-auto text-indigo-400" />
+                </div>
+              )}
+              {id === "genai-llm" && (
+                <div className="mt-4 flex items-center gap-2 rounded-xl bg-purple-50 p-3">
+                  <div className="h-2 w-2 animate-pulse rounded-full bg-purple-500"></div>
+                  <span className="text-xs font-bold text-purple-700">New: RAG vs Fine-Tuning</span>
+                  <ArrowRight size={12} className="ml-auto text-purple-400" />
+                </div>
+              )}
+              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <ChevronRight size={20} className="text-slate-300" />
+              </div>
+            </div>
+          ))}
+        </div>
       </main>
-
-      {/* <Footer /> */}
       <FooterMain />
     </div>
-  )
-}
+  );
+};
+
+export default App;
