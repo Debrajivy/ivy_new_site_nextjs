@@ -322,13 +322,647 @@
         }
       }
     },
-    "visualization": {
-      "title": "Visualization",
-      "icon": "BarChart3",
-      "color": "bg-pink-500",
-      "count": "5 Guides",
-      "description": "Create compelling data visualizations"
-    },
+    
+  "visualization": {
+    "title": "Visualization",
+    "icon": "BarChart3",
+    "color": "bg-pink-500",
+    "count": "6 Guides",
+    "description": "Create compelling data visualizations",
+    "subcategories": {
+      "tableau": {
+        "title": "Tableau",
+        "icon": "BarChart3",
+        "color": "bg-pink-400",
+        "count": "3 Tutorials",
+        "topics": [
+          {
+            "id": "dual-axis-charts",
+            "title": "How to Create Dual-Axis Charts in Tableau: Complete Guide",
+            "description": "Master dual-axis charts for business decision-making",
+            "duration": "12 min read",
+            "date": "March 15, 2024",
+            "content": {
+              "hero": {
+                "title": "How to Create Dual-Axis Charts in Tableau: Complete Guide",
+                "author": "Tableau Expert",
+                "date": "March 15, 2024",
+                "readTime": "12 min read"
+              },
+              "video": {
+                "youtubeId": "zQ2jYVqTqR4",
+                "title": "Dual-Axis Charts in Tableau - Visual Guide"
+              },
+              "sections": [
+                {
+                  "id": "intro",
+                  "title": "Introduction",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If you work with business data long enough, a stakeholder will eventually ask: \"Can we see both numbers together on one chart?\" This exact question is why dual-axis charts in Tableau exist.",
+                      "hasBar": true
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This guide assumes zero prior knowledge and gradually takes you to expert-level Tableau usage, covering not just how to create a dual-axis chart, but when, why, and when not to use it in real business dashboards."
+                    }
+                  ]
+                },
+                {
+                  "id": "what-is",
+                  "title": "What Is a Dual-Axis Chart in Tableau?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "A dual-axis chart is a visualization where two different measures share the same X-axis (time, category, region) but have separate Y-axes, layered in a single view."
+                    },
+                    {
+                      "type": "subtitle",
+                      "text": "Key Components"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "One measure appears on the left Y-axis",
+                        "The second measure appears on the right Y-axis",
+                        "Both measures coexist on the same chart"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "importance",
+                  "title": "Why Are Dual-Axis Charts Important for Business Decision-Making?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Dual-axis charts are decision tools, not visual decoration. They help leaders answer questions like:"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "Are we growing profitably?",
+                        "Is higher productivity affecting quality?",
+                        "Is marketing driving meaningful conversions?",
+                        "Is operational efficiency improving as teams scale?"
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Business leaders want: one view, one story, one actionable insight. A well-designed dual-axis chart compresses cause-and-effect relationships into a single visual narrative."
+                    }
+                  ]
+                },
+                {
+                  "id": "when-to-use",
+                  "title": "When Should You Use a Dual-Axis Chart in Tableau?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "You should use a dual-axis chart only when all of the following are true:"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Criteria for Using Dual-Axis Charts",
+                      "headers": ["Criteria", "Example", "Valid?"],
+                      "rows": [
+                        ["Metrics are logically related", "Sales & Profit Margin", "✓"],
+                        ["Share same X-axis", "Monthly timeline", "✓"],
+                        ["Units are different", "₹ vs %", "✓"],
+                        ["Goal is trend comparison", "Compare movement patterns", "✓"]
+                      ]
+                    },
+                    {
+                      "type": "subtitle",
+                      "text": "Real Business Examples"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "Monthly Sales vs Profit Margin",
+                        "Daily Orders vs Average Delivery Time",
+                        "Machine Output vs Defect Rate",
+                        "Headcount vs Revenue per Employee"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "when-not-to-use",
+                  "title": "When Should You Avoid Using a Dual-Axis Chart?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Dual-axis charts should not be used when:"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Anti-Patterns to Avoid",
+                      "headers": ["Situation", "Example", "Why to Avoid"],
+                      "rows": [
+                        ["Unrelated metrics", "Sales vs Employee Happiness", "False correlation"],
+                        ["Manipulated axes", "Scaled to look good", "Misleading"],
+                        ["Hiding poor results", "Hidden scale adjustments", "Unethical"],
+                        ["Non-data-literate audience", "Complex for beginners", "Confusing"]
+                      ]
+                    },
+                    {
+                      "type": "warning",
+                      "title": "Warning",
+                      "content": "A misleading dual-axis chart damages trust faster than incorrect data."
+                    }
+                  ]
+                },
+                {
+                  "id": "core-concepts",
+                  "title": "Core Tableau Concepts You Must Understand",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Before creating a dual-axis chart, you must understand three fundamentals:"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "Dimensions: These form the X-axis (Date, Month, Category, Region)",
+                        "Measures: These form the Y-axes (Sales, Profit, Quantity, Rates)",
+                        "Marks: These control how data is shown (Bar, Line, Area, Circle)"
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "A dual-axis chart simply means two measures, two axes, one shared dimension."
+                    }
+                  ]
+                },
+                {
+                  "id": "basic-chart",
+                  "title": "How Do You Create a Basic Chart in Tableau?",
+                  "phase": "Step 1: Foundation",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Start with a simple chart:"
+                    },
+                    {
+                      "type": "code",
+                      "title": "Basic Chart Setup",
+                      "language": "tableau",
+                      "code": "1. Drag a time-based dimension (Order Date) to Columns\n2. Drag a measure (Sales) to Rows\n\nResult: Basic line chart showing sales over time",
+                      "borderColor": "pink"
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This creates your base visualization, which will later become the foundation for the dual-axis chart."
+                    }
+                  ]
+                },
+                {
+                  "id": "add-second-measure",
+                  "title": "How Do You Add a Second Measure?",
+                  "phase": "Step 2: Add Companion Metric",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "To introduce the second metric:"
+                    },
+                    {
+                      "type": "code",
+                      "title": "Add Second Measure",
+                      "language": "tableau",
+                      "code": "Drag the second measure (Profit) to Rows\n\nTableau displays two separate charts stacked vertically.\nAt this stage, this is NOT a dual-axis chart.",
+                      "borderColor": "pink"
+                    }
+                  ]
+                },
+                {
+                  "id": "convert-dual-axis",
+                  "title": "How Do You Convert to Dual-Axis Chart?",
+                  "phase": "Step 3: The Magic Transformation",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "To convert the view into a dual-axis chart:"
+                    },
+                    {
+                      "type": "code",
+                      "title": "Dual-Axis Activation",
+                      "language": "tableau",
+                      "code": "1. Right-click on the second Y-axis\n2. Select 'Dual Axis'\n\nTableau now layers both measures in a single view and displays:\n- A left Y-axis\n- A right Y-axis\n- Separate Marks cards for each measure",
+                      "borderColor": "pink"
+                    }
+                  ]
+                },
+                {
+                  "id": "synchronize-axes",
+                  "title": "Should You Synchronize Axes?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "You should synchronize axes only when both measures use the same unit."
+                    },
+                    {
+                      "type": "table",
+                      "title": "Synchronization Decision Guide",
+                      "headers": ["Situation", "Units", "Synchronize?"],
+                      "rows": [
+                        ["Sales & Profit", "Both in ₹", "✓ Yes"],
+                        ["Sales (₹) & Margin (%)", "₹ vs %", "✗ No"],
+                        ["Quantity & Units", "Count vs Count", "✓ Yes"],
+                        ["Time & Percentage", "Days vs %", "✗ No"]
+                      ]
+                    },
+                    {
+                      "type": "warning",
+                      "title": "Critical Warning",
+                      "content": "Synchronizing mismatched units creates misleading visuals and should be avoided."
+                    }
+                  ]
+                },
+                {
+                  "id": "mark-types",
+                  "title": "How Do You Choose the Right Mark Types?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "The choice of marks determines readability. Best practice combinations include:"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Recommended Mark Combinations",
+                      "headers": ["Primary Metric", "Secondary Metric", "Visual Style", "Use Case"],
+                      "rows": [
+                        ["Sales (Volume)", "Profit Margin", "Bars + Line", "Revenue vs Efficiency"],
+                        ["Orders", "Avg Delivery Time", "Area + Line", "Volume vs Speed"],
+                        ["Website Traffic", "Conversion Rate", "Line + Circle", "Volume vs Quality"],
+                        ["Production Output", "Defect Rate", "Bars + Line", "Quantity vs Quality"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "A common business pattern is: Volume-based metric as Bars, Efficiency-based metric as Line. This visually separates magnitude from performance quality."
+                    }
+                  ]
+                },
+                {
+                  "id": "formatting",
+                  "title": "How Should You Format Dual-Axis Charts for Clarity?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Formatting determines whether a dual-axis chart builds trust or confusion."
+                    },
+                    {
+                      "type": "checklist",
+                      "items": [
+                        { "checked": true, "text": "Clearly label both Y-axes" },
+                        { "checked": true, "text": "Always include units (₹, %, days)" },
+                        { "checked": true, "text": "Use distinct but restrained colors" },
+                        { "checked": true, "text": "Customize tooltips for each measure" }
+                      ]
+                    },
+                    {
+                      "type": "warning",
+                      "title": "Remember",
+                      "content": "A dual-axis chart without clear labels is functionally useless."
+                    }
+                  ]
+                },
+                {
+                  "id": "sales-profit-analysis",
+                  "title": "Sales vs Profit Margin Analysis",
+                  "phase": "Business Application 1",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "This chart answers the question: Are we growing profitably?"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Pattern Recognition Guide",
+                      "headers": ["Sales Trend", "Margin Trend", "Business Insight", "Action Required"],
+                      "rows": [
+                        ["↑ Increasing", "↓ Decreasing", "Excessive discounting", "Review pricing strategy"],
+                        ["→ Stable", "↑ Increasing", "Cost optimization", "Scale successful practices"],
+                        ["↑ Increasing", "↑ Increasing", "Healthy growth", "Continue current strategy"],
+                        ["↓ Decreasing", "↓ Decreasing", "Market pressure", "Strategic review needed"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This insight often drives pricing, discount, and incentive decisions."
+                    }
+                  ]
+                },
+                {
+                  "id": "marketing-effectiveness",
+                  "title": "Marketing: Traffic vs Conversion Rate",
+                  "phase": "Business Application 2",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "This chart answers: Is marketing driving quality traffic?"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Marketing Insights Matrix",
+                      "headers": ["Traffic", "Conversion", "Insight", "Team Action"],
+                      "rows": [
+                        ["↑ Spikes", "↓ Drops", "Poor targeting", "Refine audience segmentation"],
+                        ["→ Stable", "↑ Rises", "Funnel improvement", "Optimize landing pages"],
+                        ["↑ Increases", "↑ Increases", "Effective campaigns", "Increase budget"],
+                        ["↓ Declines", "→ Stable", "Channel fatigue", "Explore new channels"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This is a critical view for growth and product teams."
+                    }
+                  ]
+                },
+                {
+                  "id": "manufacturing-quality",
+                  "title": "Manufacturing: Output vs Defect Rate",
+                  "phase": "Business Application 3",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "This chart answers: Is higher output hurting quality?"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Quality Control Patterns",
+                      "headers": ["Output", "Defects", "Diagnosis", "Corrective Action"],
+                      "rows": [
+                        ["↑ Up", "↑ Up", "Process stress", "Reduce speed, add QC checkpoints"],
+                        ["↑ Up", "↓ Down", "Process maturity", "Document best practices"],
+                        ["↓ Down", "↑ Up", "Systemic failure", "Root cause analysis"],
+                        ["→ Stable", "↓ Down", "Continuous improvement", "Share learnings"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "These patterns often trigger audits and root-cause analysis."
+                    }
+                  ]
+                },
+                {
+                  "id": "hr-productivity",
+                  "title": "HR Analytics: Headcount vs Revenue per Employee",
+                  "phase": "Business Application 4",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "This chart answers: Is hiring improving efficiency?"
+                    },
+                    {
+                      "type": "table",
+                      "title": "HR Productivity Analysis",
+                      "headers": ["Headcount", "Revenue/Employee", "Interpretation", "Strategic Decision"],
+                      "rows": [
+                        ["↑ Increasing", "↓ Decreasing", "Over-hiring", "Freeze hiring, training focus"],
+                        ["→ Stable", "↑ Increasing", "Productivity gains", "Reward programs, automation"],
+                        ["↓ Decreasing", "↑ Increasing", "Right-sizing", "Continue optimization"],
+                        ["↑ Increasing", "↑ Increasing", "Scalable growth", "Strategic expansion"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This view directly influences hiring plans and automation decisions."
+                    }
+                  ]
+                },
+                {
+                  "id": "calculated-fields",
+                  "title": "How to Use Calculated Fields",
+                  "phase": "Advanced Technique 1",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Advanced users rely on calculated fields rather than raw data."
+                    },
+                    {
+                      "type": "code",
+                      "title": "Profit Margin Calculation",
+                      "language": "tableau",
+                      "code": "// CALCULATED FIELD: Profit Margin\nSUM([Profit]) / SUM([Sales])\n\n// FORMAT AS PERCENTAGE\nNumber Format: Percentage (1 decimal)\n\n// ADVANTAGES:\n// - Correct aggregation\n// - Consistent logic\n// - Reduced reporting errors",
+                      "borderColor": "purple"
+                    }
+                  ]
+                },
+                {
+                  "id": "reference-lines",
+                  "title": "How Reference Lines Improve Charts",
+                  "phase": "Advanced Technique 2",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Reference lines add business context such as targets, SLAs, or compliance thresholds."
+                    },
+                    {
+                      "type": "code",
+                      "title": "Adding Reference Lines",
+                      "language": "tableau",
+                      "code": "// ADD REFERENCE LINE\nRight-click Y-axis → Add Reference Line\n\n// TYPES:\nLine: Constant value (e.g., 20% margin target)\nBand: Range (e.g., 15-25% acceptable range)\nDistribution: Statistical (e.g., average, median)\n\n// WITHOUT BENCHMARKS, TRENDS LACK MEANING",
+                      "borderColor": "blue"
+                    }
+                  ]
+                },
+                {
+                  "id": "parameters",
+                  "title": "How Parameters Make Charts Interactive",
+                  "phase": "Advanced Technique 3",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Parameters allow users to switch metrics dynamically without cluttering the dashboard."
+                    },
+                    {
+                      "type": "code",
+                      "title": "Dynamic Metric Selection",
+                      "language": "tableau",
+                      "code": "// CREATE PARAMETER\nParameter Name: [Select Secondary Metric]\nData Type: String\nList Values:\n- Profit Margin\n- Conversion Rate\n- Defect Rate\n- Revenue per Employee\n\n// USE IN CALCULATION\nCASE [Select Secondary Metric]\n  WHEN \"Profit Margin\" THEN SUM([Profit])/SUM([Sales])\n  WHEN \"Conversion Rate\" THEN SUM([Conversions])/SUM([Visits])\n  ...\nEND",
+                      "borderColor": "amber"
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This transforms a static chart into an analytical tool."
+                    }
+                  ]
+                },
+                {
+                  "id": "decision-guide",
+                  "title": "Dual-Axis vs Separate Charts",
+                  "content": [
+                    {
+                      "type": "table",
+                      "title": "Architecture Decision Matrix",
+                      "headers": ["Situation", "Use Dual-Axis", "Use Separate Charts", "Rationale"],
+                      "rows": [
+                        ["Relationship analysis", "✓ Yes", "✗ No", "Understanding connection is primary goal"],
+                        ["Detailed inspection", "✗ No", "✓ Yes", "Each metric needs individual focus"],
+                        ["Executive summary", "✓ Yes", "✗ No", "High-level relationship view"],
+                        ["Technical deep dive", "✗ No", "✓ Yes", "Precision over synthesis"],
+                        ["Dashboard space limited", "✓ Carefully", "✓ If possible", "Dual-axis saves space but risks clarity"]
+                      ]
+                    },
+                    {
+                      "type": "warning",
+                      "title": "Dashboard Design Warning",
+                      "content": "A dashboard overloaded with dual-axis charts is a warning sign of poor information architecture."
+                    }
+                  ]
+                },
+                {
+                  "id": "misinterpretations",
+                  "title": "Common Executive Misinterpretations",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Executives may incorrectly assume:"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "Both axes are comparable (they're often not)",
+                        "Line crossings imply correlation (correlation ≠ causation)",
+                        "The right axis is secondary (both are equally important)",
+                        "Scale differences indicate problems (sometimes they're just different units)"
+                      ]
+                    },
+                    {
+                      "type": "subtitle",
+                      "text": "Prevention Strategies"
+                    },
+                    {
+                      "type": "checklist",
+                      "items": [
+                        { "checked": true, "text": "Explicit axis labeling with units" },
+                        { "checked": true, "text": "Annotations explaining relationships" },
+                        { "checked": true, "text": "Short explanatory captions" },
+                        { "checked": true, "text": "Pre-meeting walkthrough for complex charts" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "pre-publish-checklist",
+                  "title": "Pre-Publication Checklist",
+                  "phase": "Quality Assurance",
+                  "content": [
+                    {
+                      "type": "checklist",
+                      "items": [
+                        { "checked": true, "text": "Metrics are logically related" },
+                        { "checked": true, "text": "Axes are clearly labeled with units" },
+                        { "checked": true, "text": "Scales are not manipulated" },
+                        { "checked": true, "text": "Business question is obvious" },
+                        { "checked": true, "text": "Chart can survive boardroom challenge" },
+                        { "checked": true, "text": "Color scheme is accessible (colorblind friendly)" },
+                        { "checked": true, "text": "Tooltips provide useful information" }
+                      ]
+                    },
+                    {
+                      "type": "quote",
+                      "text": "If your chart doesn't pass this checklist, redesign it. A flawed visualization is worse than no visualization."
+                    }
+                  ]
+                },
+                {
+                  "id": "power-vs-risk",
+                  "title": "The Power vs Risk Balance",
+                  "content": [
+                    {
+                      "type": "analogy",
+                      "title": "The Surgeon's Scalpel Analogy",
+                      "icon": "Scissors",
+                      "color": "red",
+                      "content": {
+                        "main": "Dual-axis charts are like surgical instruments in the hands of a data analyst.",
+                        "cards": [
+                          {
+                            "title": "In Expert Hands:",
+                            "content": "Reveal hidden relationships, reduce cognitive load, drive better decisions",
+                            "color": "emerald-600"
+                          },
+                          {
+                            "title": "In Novice Hands:",
+                            "content": "Mislead stakeholders, manipulate perception, destroy credibility",
+                            "color": "red-600"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Dual-axis charts are like sharp tools. Used correctly, they reveal hidden relationships, reduce cognitive load, and drive better decisions. Used poorly, they mislead stakeholders, manipulate perception, and destroy credibility. Master them responsibly."
+                    }
+                  ]
+                }
+              ],
+              "troubleshooting": {
+                "title": "Common Tableau Dual-Axis Issues",
+                "subtitle": "Solutions to frequent problems encountered when creating dual-axis charts",
+                "cards": [
+                  {
+                    "title": "Misaligned Axes",
+                    "icon": "AlignLeft",
+                    "color": "amber",
+                    "content": "Right-click axis → Synchronize Axis. Only use when metrics share same unit of measure."
+                  },
+                  {
+                    "title": "Overlapping Marks",
+                    "icon": "Layers",
+                    "color": "pink",
+                    "content": "Adjust transparency in Marks card. Use different mark types (bars + lines work well together)."
+                  },
+                  {
+                    "title": "Unreadable Tooltips",
+                    "icon": "MessageCircle",
+                    "color": "blue",
+                    "content": "Customize tooltips separately for each measure. Include units and clear descriptions."
+                  },
+                  {
+                    "title": "Color Confusion",
+                    "icon": "Palette",
+                    "color": "purple",
+                    "content": "Use colorblind-friendly palettes. Ensure sufficient contrast between series."
+                  },
+                  {
+                    "title": "Performance Issues",
+                    "icon": "Gauge",
+                    "color": "red",
+                    "content": "Limit data volume. Use extracts instead of live connections. Simplify calculations."
+                  }
+                ]
+              },
+              "conclusion": {
+                "title": "Mastering Dual-Axis Charts",
+                "content": "You have now completed a comprehensive guide to creating dual-axis charts in Tableau. From basic setup to advanced techniques, you've learned not just how to create these charts, but when, why, and when not to use them.",
+                "checklist": [
+                  { "item": "Start Simple", "text": "Master basic charts before attempting dual-axis" },
+                  { "item": "Validate Relationship", "text": "Ensure metrics are logically connected" },
+                  { "item": "Format Professionally", "text": "Clear labels, appropriate colors, useful tooltips" },
+                  { "item": "Test Interpretations", "text": "Verify stakeholders understand the chart correctly" },
+                  { "item": "Have Backup", "text": "Keep single-chart versions available" },
+                  { "item": "Document Decisions", "text": "Note why dual-axis was chosen over alternatives" }
+                ],
+                "finalNote": "Remember: The goal is insight, not just visualization. If a dual-axis chart doesn't make the business story clearer, use a different approach.",
+                "finalParagraph": "By following this comprehensive guide, you'll be able to create dual-axis charts that not only look professional but also drive meaningful business decisions. Start with simple applications, gather feedback, and gradually tackle more complex analytical challenges."
+              },
+              "cta": {
+                "title": "Ready to Master Tableau Visualization?",
+                "content": "Download our Tableau dual-axis chart template with sample datasets and step-by-step exercises.",
+                "buttonText": "GET TABLEAU TEMPLATE PACK"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+,
     "sql-db": {
       "title": "SQL & DB",
       "icon": "Database",
