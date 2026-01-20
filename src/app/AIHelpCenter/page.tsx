@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   FileStack,
+  GraduationCap,
   Database,
   AlertCircle,
   ArrowRight,
@@ -32,13 +33,17 @@ import {
   AlignLeft,
   MessageCircle,
   Palette,
-  Gauge
+  Gauge,
+  Linkedin
 } from 'lucide-react';
 import Navbar from "@/components/layout/Navbar"
 import FooterMain from "@/components/layout/Footer";
 import data from './AIHelpCenter.json';
-import Image from 'next/image'; // Use next/image if using Next.js, otherwise use <img />
-import ivy from '@/assests/ivy.png'; // Update path to your Ivy icon image
+import Image from 'next/image';
+import ivy from '@/assests/ivy.png';
+// Import faculty images
+import PrateekAgarwal from "@/assests/pratilk.webp";
+import eeshani from "@/assests/eeshani.webp";
 // Import chart components
 import {
   BarChart,
@@ -88,7 +93,8 @@ const iconMap: Record<string, React.ReactNode> = {
   "AlignLeft": <AlignLeft />,
   "MessageCircle": <MessageCircle />,
   "Palette": <Palette />,
-  "Gauge": <Gauge />
+  "Gauge": <Gauge />,
+  "Linkedin": <Linkedin />
 };
 
 // Theme Colors
@@ -473,6 +479,119 @@ const Note = ({ title, content }: { title: string; content: string }) => (
   </div>
 );
 
+// Authority Box Component for Prateek and Eeshani
+const AuthorityBox = () => (
+  <div className="sticky top-6 bg-gradient-to-br from-blue-50 to-indigo-50 p-4 sm:p-5 rounded-2xl shadow-lg border border-blue-100">
+    <div className="text-center mb-4">
+      <h3 className="font-bold text-gray-900 text-base sm:text-lg flex items-center justify-center gap-2">
+        <ShieldCheck className="h-5 w-5 text-blue-600" />
+        Industry Authority
+      </h3>
+      <p className="text-gray-600 text-xs mt-1">
+        These tutorials are authored by Ivy Pro School founders
+      </p>
+    </div>
+
+    <div className="space-y-4">
+      {/* Prateek Agarwal Card */}
+      <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+        <div className="flex items-center gap-3">
+          <div className="relative">
+            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-blue-200">
+              <Image
+                src={PrateekAgarwal}
+                alt="Prateek Agarwal"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-1 -right-1 bg-blue-600 rounded-full p-1">
+              <Star className="h-3 w-3 text-white" />
+            </div>
+          </div>
+          <div className="flex-1 min-w-0">
+            <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agarwal</h4>
+            <p className="text-gray-600 text-xs truncate">Founder, Ivy Pro School</p>
+            <div className="flex items-center gap-1 mt-1">
+              <div className="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
+              <span className="text-xs text-gray-500">16+ years experience</span>
+            </div>
+          </div>
+          <a 
+            href="https://www.linkedin.com/in/prateekagrawal" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex-shrink-0 bg-blue-50 hover:bg-blue-100 p-2 rounded-lg transition-colors"
+            title="View LinkedIn Profile"
+          >
+            <Linkedin className="h-5 w-5 text-blue-600" />
+          </a>
+        </div>
+        <div className="mt-3 pt-3 border-t border-gray-100">
+          <p className="text-gray-700 text-xs">
+            Worked with 50+ global firms, trained students from IIT KGP, IIM Kolkata, IIT Delhi
+          </p>
+        </div>
+      </div>
+
+      {/* Eeshani Agrawal Card */}
+      <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+        <div className="flex items-center gap-3">
+          <div className="relative">
+            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-orange-200">
+              <Image
+                src={eeshani}
+                alt="Eeshani Agrawal"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-1 -right-1 bg-orange-500 rounded-full p-1">
+              <Star className="h-3 w-3 text-white" />
+            </div>
+          </div>
+          <div className="flex-1 min-w-0">
+            <h4 className="font-bold text-gray-900 text-sm truncate">Eeshani Agrawal</h4>
+            <p className="text-gray-600 text-xs truncate">Co-Founder, Ivy Pro School</p>
+            <div className="flex items-center gap-1 mt-1">
+              <div className="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
+              <span className="text-xs text-gray-500">16+ years experience</span>
+            </div>
+          </div>
+          <a 
+            href="https://www.linkedin.com/in/eeshani-agrawal-b674045" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex-shrink-0 bg-orange-50 hover:bg-orange-100 p-2 rounded-lg transition-colors"
+            title="View LinkedIn Profile"
+          >
+            <Linkedin className="h-5 w-5 text-blue-600" />
+          </a>
+        </div>
+        <div className="mt-3 pt-3 border-t border-gray-100">
+          <p className="text-gray-700 text-xs">
+            Trained 9,000+ professionals across Top IITs, IIMs, and ISI
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="mt-4 pt-4 border-t border-blue-100">
+      <div className="flex items-center justify-between text-xs text-gray-600">
+        <div className="flex items-center gap-2">
+          <Briefcase className="h-4 w-4 text-blue-500" />
+          <span>Industry Experts</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <GraduationCap className="h-4 w-4 text-blue-500" />
+          <span>16+ Years Each</span>
+        </div>
+      </div>
+      <p className="text-xs text-center text-gray-500 mt-3 italic">
+        All content reviewed by Ivy's expert faculty team
+      </p>
+    </div>
+  </div>
+);
+
 const App = () => {
   const [view, setView] = useState('landing');
   const [activeCategory, setActiveCategory] = useState('');
@@ -532,7 +651,7 @@ const App = () => {
   };
 
   const openReviewPage = () => {
-    window.open('https://www.google.com/search?q=ivy+professional+school&rlz=1C1ONGR_enIN1115IN1115&oq=&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7Mg0IARAuGK8BGMcBGIAEMgcIAhAAGIAEMhAIAxAuGIMBGLEDGIAEGOUEMgcIBBAAGIAEMgYIBRBFGDwyBggGEEUYQTIGCAcQRRg80gEIMzA0N2owajeoAgiwAgHxBRMMy4WLy7978QUTDMuFi8u_ew&sourceid=chrome&ie=UTF-8#lrd=0x3a02771797fccdc1:0xca64261fceaf2af6,3,,,', '_blank');
+    window.open('https://www.google.com/search?q=ivy+professional+school&rlz=1C1ONGR_enIN1115IN1115&oq=&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7Mg0IARAuGK8BGMcBGIAEMgcIAhAAGIAEMhAIAxAuGIMBGLEDGIAEGOUEMgcIBBAAGIAEMgYIBRBFGDwyBggGEEUYQTIGCAcQRRg80gEIMzA0N2owajeoAgiwAgHxBRMMy4WLy7978QUTMMy4WLy_ew&sourceid=chrome&ie=UTF-8#lrd=0x3a02771797fccdc1:0xca64261fceaf2af6,3,,,', '_blank');
     setShowReviewPrompt(false);
   };
 
@@ -1303,6 +1422,7 @@ const App = () => {
 
             <aside className="lg:col-span-1">
               <div className="sticky top-24 space-y-6 sm:space-y-8">
+                {/* Roadmap Section */}
                 <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-gray-200">
                   <h4 className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-4 sm:mb-6">Roadmap</h4>
                   <div className="flex flex-col gap-2 sm:gap-4">
@@ -1363,64 +1483,63 @@ const App = () => {
                   </div>
                 </div>
 
+                {/* Authority Box - Shows Prateek and Eeshani */}
+                <AuthorityBox />
 
+                {/* Advanced Courses Section */}
+                <div className="sticky top-6 bg-gradient-to-br p-4 sm:p-5 rounded-3xl shadow-2xl text-white"
+                  style={{ background: `linear-gradient(135deg, ${themeColors.primary}, ${themeColors.darkBlue})` }}>
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="font-extrabold text-lg sm:text-xl leading-tight">
+                      Advanced Courses
+                    </h3>
+                    <p className="text-blue-100 text-[11px] opacity-70 mt-1">
+                      Fast-track your career with Ivy
+                    </p>
+                  </div>
 
-                {/* Grid Container */}
-               <div className="sticky top-6 bg-gradient-to-br p-4 sm:p-5 rounded-3xl shadow-2xl text-white"
-  style={{ background: `linear-gradient(135deg, ${themeColors.primary}, ${themeColors.darkBlue})` }}>
-  
-  <div className="text-center mb-6">
-    <h3 className="font-extrabold text-lg sm:text-xl leading-tight">
-      Advanced Courses
-    </h3>
-    <p className="text-blue-100 text-[11px] opacity-70 mt-1">
-      Fast-track your career with Ivy
-    </p>
-  </div>
+                  <div className="flex flex-col gap-2">
+                    {[
+                      { name: "AI Product Manager", link: "/courses/ai-product-manager-course" },
+                      { name: "Data Science & ML", link: "/courses/data-science-and-ml-course" },
+                      { name: "Data Engineering", link: "/courses/data-engineering-course" },
+                      { name: "Data Analytics", link: "/courses/data-analytics-course" },
+                      { name: "Data Analytics & Gen AI", link: "/courses/data-analytics-and-generative-ai-course" },
+                      { name: "Generative AI", link: "/courses/iit-generative-ai-course" },
+                      { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
+                      { name: "Data Science (Pay after placement)", link: "/courses/no-upfront-fees-data-science-and-ml-course" },
+                    ].map((course, index) => (
+                      <a
+                        key={index}
+                        href={course.link}
+                        className="group flex items-center justify-between w-full p-2 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-xl"
+                      >
+                        <div className="flex items-center gap-4 min-w-0">
+                          <div className="w-12 h-10 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                            <Image
+                              src={ivy}
+                              alt="Ivy Logo"
+                              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                            />
+                          </div>
 
-  <div className="flex flex-col gap-2">
-    {[
-      { name: "AI Product Manager", link: "/courses/ai-product-manager-course" },
-      { name: "Data Science & ML", link: "/courses/data-science-and-ml-course" },
-      { name: "Data Engineering", link: "/courses/data-engineering-course" },
-      { name: "Data Analytics", link: "/courses/data-analytics-course" },
-      { name: "Data Analytics & Gen AI", link: "/courses/data-analytics-and-generative-ai-course" },
-      { name: "Generative AI", link: "/courses/iit-generative-ai-course" },
-      { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
-      { name: "Data Science (Pay after placement)", link: "/courses/no-upfront-fees-data-science-and-ml-course" },
-    ].map((course, index) => (
-      <a
-        key={index}
-        href={course.link}
-        className="group flex items-center justify-between w-full p-2 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-xl"
-      >
-        <div className="flex items-center gap-4 min-w-0">
-          {/* LOGO: No border, no background, full width/height */}
-          <div className="w-12 h-10 flex-shrink-0 flex items-center justify-center overflow-hidden">
-            <Image
-              src={ivy}
-              alt="Ivy Logo"
-              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
-            />
-          </div>
+                          <span className="text-[13px] sm:text-[14px] font-bold leading-tight text-white group-hover:text-[#003366] transition-colors duration-300">
+                            {course.name}
+                          </span>
+                        </div>
 
-          <span className="text-[13px] sm:text-[14px] font-bold leading-tight text-white group-hover:text-[#003366] transition-colors duration-300">
-            {course.name}
-          </span>
-        </div>
-
-        {/* ARROW: Simple and clean */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-4 w-4 flex-shrink-0 opacity-40 group-hover:opacity-100 group-hover:text-[#003366] transition-all"
-          fill="none" viewBox="0 0 24 24" stroke="currentColor"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="9 5l7 7-7 7" />
-        </svg>
-      </a>
-    ))}
-  </div>
-</div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 flex-shrink-0 opacity-40 group-hover:opacity-100 group-hover:text-[#003366] transition-all"
+                          fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </aside>
           </div>
