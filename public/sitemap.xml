@@ -9,14 +9,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- about -->
-  <url>
-    <loc>https://ivyproschool.com/about</loc>
-    <lastmod>2025-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
   <!-- Categories Page -->
   <url>
     <loc>https://ivyproschool.com/categories</loc>
