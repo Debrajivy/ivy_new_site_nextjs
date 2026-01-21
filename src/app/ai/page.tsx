@@ -24,7 +24,7 @@ export default function HomePage() {
             Learn everything about Large Language Models, AI Agents, Prompt Engineering, and more. Structured learning
             paths designed for everyone.
           </p>
-          <Link href="/aihelpcenter">
+          <Link href="/AIHelpCenter">
             <Button size="lg" className="gap-2">
               Explore Topics <ArrowRight className="w-4 h-4" />
             </Button>
@@ -82,7 +82,7 @@ export default function HomePage() {
           <p className="text-lg text-muted-foreground mb-8">
             Choose a topic and begin learning today. No prerequisites needed!
           </p>
-          <Link href="/aihelpcenter">
+          <Link href="/AIHelpCenter">
             <Button size="lg">Browse All Topics</Button>
           </Link>
         </section>

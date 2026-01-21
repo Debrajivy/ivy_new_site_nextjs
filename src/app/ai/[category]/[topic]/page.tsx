@@ -420,7 +420,7 @@ export default function TopicDetailPage({ params }: PageProps) {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Navigation */}
         <div className="mb-8">
-          <Link href="/aihelpcenter">
+          <Link href="/AIHelpCenter">
             <Button variant="ghost" className="gap-2">
               <ArrowLeft className="w-4 h-4" />
               Back to All Topics
@@ -428,7 +428,7 @@ export default function TopicDetailPage({ params }: PageProps) {
           </Link>
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground mt-4 ml-2">
-            <Link href="/aihelpcenter" className="hover:text-foreground transition-colors">
+            <Link href="/AIHelpCenter" className="hover:text-foreground transition-colors">
               Help Center
             </Link>
             <span>/</span>

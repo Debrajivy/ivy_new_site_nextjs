@@ -35,17 +35,17 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/aihelpcenter" className="hover:text-foreground transition-colors">
+                <Link href="/AIHelpCenter" className="hover:text-foreground transition-colors">
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link href="/aihelpcenter" className="hover:text-foreground transition-colors">
+                <Link href="/AIHelpCenter" className="hover:text-foreground transition-colors">
                   Tutorials
                 </Link>
               </li>
               <li>
-                <Link href="/aihelpcenter" className="hover:text-foreground transition-colors">
+                <Link href="/AIHelpCenter" className="hover:text-foreground transition-colors">
                   Community
                 </Link>
               </li>
