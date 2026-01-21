@@ -515,7 +515,7 @@ const Navbar = () => {
                         Explore the Future of Data, Gen AI, Analytics & Career Growth with Ivy's Insights
                       </ListItem>
                       <ListItem
-                        href="/AIHelpCenter"
+                        href="/aihelpcenter"
                         title="AI Help Center"
                         className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02] h-full"
                       >

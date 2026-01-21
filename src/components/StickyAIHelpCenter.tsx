@@ -44,7 +44,7 @@ const StickyAIHelpCenter: React.FC = () => {
       document.getElementById('blink-animation-style')?.remove();
     };
   }, []);
-  const helpCenterPath = "/AIHelpCenter";
+  const helpCenterPath = "/aihelpcenter";
 
   return (
     <div className="fixed bottom-4 right-4 z-50" >

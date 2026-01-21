@@ -100,7 +100,7 @@ export default function CategoryPage({ params }: PageProps) {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Navigation */}
         <div className="mb-8">
-          <Link href="/AIHelpCenter">
+          <Link href="/aihelpcenter">
             <Button variant="ghost" className="gap-2">
               <ArrowLeft className="w-4 h-4" />
               Back to All Topics
