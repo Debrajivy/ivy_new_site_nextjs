@@ -1507,7 +1507,7 @@ const courses: Course[] = [
 
       {
         id: "m5",
-        title: "Python Predictive Modelling &amp; Basic Machine learning",
+        title: "Python Predictive Modelling & Basic Machine learning",
         duration: "42 hrs",
        topics: [
           { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
