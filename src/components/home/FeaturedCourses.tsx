@@ -150,7 +150,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '6',
-    title: "Data Analytics Course",
+    title: "Data Analytics With Visualization",
     description: "Learn Excel, Python, SQL, Tableau, Power BI and VBA for data analysis",
     image: DA,
     category: "Analytics",
@@ -268,7 +268,7 @@ const CourseCard = ({ course }: { course: Course }) => {
               return <Badge className="absolute top-3 right-3 badge-business">Best Choice</Badge>;
             case "Data Analytics and Generative AI Course":
               return <Badge className="absolute top-3 right-3 badge-deeplearning">Popular</Badge>;
-            case "Data Analytics Course":
+            case "Data Analytics With Visualization":
               return <Badge className="absolute top-3 right-3 badge-dataeng">Best Choice</Badge>;
             case "Data Analytics and Generative AI Course":
               return <Badge className="absolute top-3 right-3 badge-analytics">Featured </Badge>;

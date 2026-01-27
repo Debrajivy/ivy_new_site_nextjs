@@ -76,7 +76,7 @@ const IVY_COURSES: Course[] = [
   },
   {
     id: 'data-analytics-viz',
-    name: 'Data Analytics Course',
+    name: 'Data Analytics With Visualization',
     description: 'Combine core data analytics principles with powerful data visualization techniques for insightful reporting.',
     keywords: ['data analytics', 'data visualization', 'sql', 'excel', 'tableau', 'business intelligence'],
     link: '/courses/data-analytics-course',

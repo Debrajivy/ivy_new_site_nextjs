@@ -15,7 +15,7 @@ const getAboutCourseTitle = (courseTitle: string) => {
     " Data Engineering Course",
     "Data Science with Machine Learning & AI Certification",
     "Data Analytics and Generative AI Course",
-    "Data Analytics Course",
+    "Data Analytics With Visualization",
     "Data Analytics and Generative AI Course",
     "Cloud Data Engineering Course with IIT Guwahati",
     "AI for Product Managers"
@@ -35,7 +35,7 @@ const getAboutWhatYouWillLearn = (whatYouWillLearn: string) => {
     " Data Engineering Course",
     "Data Science with Machine Learning & AI Certification",
     "Data Analytics and Generative AI Course",
-    "Data Analytics Course",
+    "Data Analytics With Visualization",
     "Data Analytics and Generative AI Course",
     "Cloud Data Engineering Course with IIT Guwahati",
   ];

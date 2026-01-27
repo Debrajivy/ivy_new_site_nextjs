@@ -1263,7 +1263,7 @@ const courses: Course[] = [
 
       {
         id: "m3",
-        title: "Data Visualization Using Tableau",
+        title: "Data Visualization Using Tableau (Addon module with extra charges)",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
@@ -1376,13 +1376,13 @@ const courses: Course[] = [
   },
   {
     id: '6',
-    title: "Data Analytics Course",
+    title: "Data Analytics With Visualization",
     description: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Best Data Analytics Course Online with Placement Support",
+      title: "Best Data Analytics With Visualization Online with Placement Support",
       description: "Join 4.8/5 rated Data Analytics course with 230 hours of live training, 50+ assignments, 30+ case studies, & 10+ industry projects. IBM Certified.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
@@ -1468,7 +1468,7 @@ const courses: Course[] = [
 
       {
         id: "m3",
-        title: "Data Visualization Using Tableau",
+        title: "Data Visualization Using Tableau (Addon module with extra charges)",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
@@ -1528,13 +1528,14 @@ const courses: Course[] = [
       ,
       {
         id: "m6",
-        title: "Excel VBA Automation",
-        duration: "26 hrs",
+        title: "4 Months PrepAI",
+        duration: "120 days",
         topics: [
-          { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
-          { id: "t2", title: "Programming Concepts (Variables, Loops, Conditions)", duration: "8.25 hrs" },
-          { id: "t3", title: "Analysis Using VBA (Data Cleaning, PivotTables)", duration: "6.75 hrs" },
-          { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
+          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
+          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
+          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
+          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
+          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
         ]
       }
     ],
@@ -2336,7 +2337,7 @@ const courses: Course[] = [
 
       {
         id: "m3",
-        title: "Data Visualization Using Tableau",
+        title: "Data Visualization Using Tableau (Addon module with extra charges)",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
@@ -6444,14 +6445,14 @@ const courses: Course[] = [
 
    {
     id: '18',
-    title: "Data Analytics Course in Kolkata",
-    description: "The Data Analytics Course in Kolkata by Ivy Professional School is designed to help students and professionals build strong analytical skills required to make data-driven business decisions. With Kolkata emerging as a growing hub for analytics, BFSI, consulting, and IT services, the demand for skilled data analysts is steadily increasing.This program focuses on practical data analysis skills using industry-standard tools and real business datasets, preparing learners for entry-level to mid-level data analytics roles.",
+    title: "Data Analytics With Visualization in Kolkata",
+    description: "The Data Analytics With Visualization in Kolkata by Ivy Professional School is designed to help students and professionals build strong analytical skills required to make data-driven business decisions. With Kolkata emerging as a growing hub for analytics, BFSI, consulting, and IT services, the demand for skilled data analysts is steadily increasing.This program focuses on practical data analysis skills using industry-standard tools and real business datasets, preparing learners for entry-level to mid-level data analytics roles.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics Course in Kolkata | Ivy Professional School",
-      description: "Join Ivy Professional School’s Data Analytics Course in Kolkata with real-world projects, Python, SQL, Power BI & career support. Enroll now!",
+      title: "Data Analytics With Visualization in Kolkata | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Analytics With Visualization in Kolkata with real-world projects, Python, SQL, Power BI & career support. Enroll now!",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
     },
@@ -6460,7 +6461,7 @@ const courses: Course[] = [
     reviewCount: 298,
     isFeatured: true,
     slug: "data-analytics-course-kolkata",
-    longDescription: "The Data Analytics Course in Kolkata provides end-to-end training on collecting, cleaning, analyzing, and visualizing data to generate meaningful business insights. The course is structured to build strong foundations in data analytics concepts while emphasizing hands-on implementation. \n\n Learners are trained to work with structured datasets, perform exploratory data analysis, create dashboards, and communicate insights effectively to stakeholders. The program aligns with real-world analytics use cases across industries such as banking, retail, healthcare, e-commerce, and consulting. \n\n Delivered through instructor-led sessions, hands-on labs, and case studies, this course is suitable for freshers, graduates, and working professionals in Kolkata."
+    longDescription: "The Data Analytics With Visualization in Kolkata provides end-to-end training on collecting, cleaning, analyzing, and visualizing data to generate meaningful business insights. The course is structured to build strong foundations in data analytics concepts while emphasizing hands-on implementation. \n\n Learners are trained to work with structured datasets, perform exploratory data analysis, create dashboards, and communicate insights effectively to stakeholders. The program aligns with real-world analytics use cases across industries such as banking, retail, healthcare, e-commerce, and consulting. \n\n Delivered through instructor-led sessions, hands-on labs, and case studies, this course is suitable for freshers, graduates, and working professionals in Kolkata."
     , instructors: [
       {
         id: "i1",
@@ -6537,7 +6538,7 @@ const courses: Course[] = [
 
       {
         id: "m3",
-        title: "Data Visualization Using Tableau",
+        title: "Data Visualization Using Tableau (Addon module with extra charges)",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
@@ -6597,13 +6598,14 @@ const courses: Course[] = [
       ,
       {
         id: "m6",
-        title: "Excel VBA Automation",
-        duration: "26 hrs",
+        title: "4 Months PrepAI",
+        duration: "120 days",
         topics: [
-          { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
-          { id: "t2", title: "Programming Concepts (Variables, Loops, Conditions)", duration: "8.25 hrs" },
-          { id: "t3", title: "Analysis Using VBA (Data Cleaning, PivotTables)", duration: "6.75 hrs" },
-          { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
+          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
+          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
+          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
+          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
+          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
         ]
       }
     ],
@@ -6682,13 +6684,13 @@ const courses: Course[] = [
 
    {
     id: '19',
-    title: "Data Analytics Course in Delhi",
+    title: "Data Analytics With Visualization in Delhi",
     description: "Gain hands-on skills in data analytics, master tools like Python and Power BI, build real-world projects, and become a certified, job-ready analyst in 8-10 months.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics Course in Delhi | Ivy Professional School",
+      title: "Data Analytics With Visualization in Delhi | Ivy Professional School",
       description: "Learn Data Analytics in Delhi with Ivy Professional School - Python, SQL, Excel, Power BI. Includes projects & placement help.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
@@ -6698,7 +6700,7 @@ const courses: Course[] = [
     reviewCount: 298,
     isFeatured: true,
     slug: "data-analytics-course-delhi",
-    longDescription: "Our comprehensive Data Analytics Course in Delhi equips you with essential skills needed to analyze large datasets, build dashboards, and derive actionable insights. The program combines theory with hands‑on labs, case studies, and real client projects to strengthen your analytical thinking and technical proficiency. \n\n What Makes This Course UniqueIndustry‑Driven Curriculum: Updated regularly based on employer needs.\nExpert Faculty: Instructors with real analytics industry experience.\nHands‑On Projects: Apply skills on live business datasets.\nPlacement Support: Resume building, interview prep & hiring connections. \n\n Whether you’re a beginner with zero experience or an IT professional looking to switch careers, this course will help you build a solid foundation and a competitive edge in today’s data‑driven market. Expert Faculty: Instructors with real analytics industry experience. Hands‑On Projects: Apply skills on live business datasets.Placement Support: Resume building, interview prep & hiring connections.Whether you’re a beginner with zero experience or an IT professional looking to switch careers, this course will help you build a solid foundation and a competitive edge in today’s data‑driven market."
+    longDescription: "Our comprehensive Data Analytics With Visualization in Delhi equips you with essential skills needed to analyze large datasets, build dashboards, and derive actionable insights. The program combines theory with hands‑on labs, case studies, and real client projects to strengthen your analytical thinking and technical proficiency. \n\n What Makes This Course UniqueIndustry‑Driven Curriculum: Updated regularly based on employer needs.\nExpert Faculty: Instructors with real analytics industry experience.\nHands‑On Projects: Apply skills on live business datasets.\nPlacement Support: Resume building, interview prep & hiring connections. \n\n Whether you’re a beginner with zero experience or an IT professional looking to switch careers, this course will help you build a solid foundation and a competitive edge in today’s data‑driven market. Expert Faculty: Instructors with real analytics industry experience. Hands‑On Projects: Apply skills on live business datasets.Placement Support: Resume building, interview prep & hiring connections.Whether you’re a beginner with zero experience or an IT professional looking to switch careers, this course will help you build a solid foundation and a competitive edge in today’s data‑driven market."
     , instructors: [
       {
         id: "i1",
@@ -6775,7 +6777,7 @@ const courses: Course[] = [
 
       {
         id: "m3",
-        title: "Data Visualization Using Tableau",
+        title: "Data Visualization Using Tableau (Addon module with extra charges)",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
@@ -6833,15 +6835,16 @@ const courses: Course[] = [
         ]
       }
       ,
-      {
+     {
         id: "m6",
-        title: "Excel VBA Automation",
-        duration: "26 hrs",
+        title: "4 Months PrepAI",
+        duration: "120 days",
         topics: [
-          { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
-          { id: "t2", title: "Programming Concepts (Variables, Loops, Conditions)", duration: "8.25 hrs" },
-          { id: "t3", title: "Analysis Using VBA (Data Cleaning, PivotTables)", duration: "6.75 hrs" },
-          { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
+          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
+          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
+          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
+          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
+          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
         ]
       }
     ],
@@ -6919,14 +6922,14 @@ const courses: Course[] = [
 
   {
     id: '20',
-    title: "Data Analytics Course in Bangalore",
-    description: "The Data Analytics Course in Bangalore by Ivy Professional School is designed for students and professionals aiming to build strong analytical skills for data-driven decision-making. As India’s Silicon Valley, Bangalore hosts leading IT firms, startups, product companies, and global analytics teams, creating massive demand for skilled data analysts. This program focuses on practical analytics skills using industry-standard tools and real business datasets, preparing learners for high-growth data analytics roles.",
+    title: "Data Analytics With Visualization in Bangalore",
+    description: "The Data Analytics With Visualization in Bangalore by Ivy Professional School is designed for students and professionals aiming to build strong analytical skills for data-driven decision-making. As India’s Silicon Valley, Bangalore hosts leading IT firms, startups, product companies, and global analytics teams, creating massive demand for skilled data analysts. This program focuses on practical analytics skills using industry-standard tools and real business datasets, preparing learners for high-growth data analytics roles.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics Course in Bangalore | Ivy Professional School",
-      description: "Enroll in Ivy Professional School’s Data Analytics Course in Bangalore with hands-on projects, Python, SQL, Power BI & career support.",
+      title: "Data Analytics With Visualization in Bangalore | Ivy Professional School",
+      description: "Enroll in Ivy Professional School’s Data Analytics With Visualization in Bangalore with hands-on projects, Python, SQL, Power BI & career support.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
     },
@@ -6935,7 +6938,7 @@ const courses: Course[] = [
     reviewCount: 298,
     isFeatured: true,
     slug: "data-analytics-course-bangalore",
-    longDescription: "The Data Analytics Course in Bangalore provides end-to-end training on collecting, cleaning, analyzing, and visualizing data to generate actionable business insights. The course builds a strong foundation in analytics concepts while emphasizing hands-on implementation. \n\n Learners gain exposure to real-world analytics use cases across industries such as IT services, e-commerce, fintech, healthcare, and consulting. The program covers data analysis workflows used by modern organizations to support business strategy and operational decisions. \n\n Delivered through instructor-led sessions, hands-on labs, and industry-aligned case studies, this course is suitable for freshers, graduates, and working professionals in Bangalore."
+    longDescription: "The Data Analytics With Visualization in Bangalore provides end-to-end training on collecting, cleaning, analyzing, and visualizing data to generate actionable business insights. The course builds a strong foundation in analytics concepts while emphasizing hands-on implementation. \n\n Learners gain exposure to real-world analytics use cases across industries such as IT services, e-commerce, fintech, healthcare, and consulting. The program covers data analysis workflows used by modern organizations to support business strategy and operational decisions. \n\n Delivered through instructor-led sessions, hands-on labs, and industry-aligned case studies, this course is suitable for freshers, graduates, and working professionals in Bangalore."
     , instructors: [
       {
         id: "i1",
@@ -7012,7 +7015,7 @@ const courses: Course[] = [
 
       {
         id: "m3",
-        title: "Data Visualization Using Tableau",
+        title: "Data Visualization Using Tableau (Addon module with extra charges)",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
@@ -7070,15 +7073,16 @@ const courses: Course[] = [
         ]
       }
       ,
-      {
+     {
         id: "m6",
-        title: "Excel VBA Automation",
-        duration: "26 hrs",
+        title: "4 Months PrepAI",
+        duration: "120 days",
         topics: [
-          { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
-          { id: "t2", title: "Programming Concepts (Variables, Loops, Conditions)", duration: "8.25 hrs" },
-          { id: "t3", title: "Analysis Using VBA (Data Cleaning, PivotTables)", duration: "6.75 hrs" },
-          { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
+          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
+          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
+          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
+          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
+          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
         ]
       }
     ],
@@ -7156,14 +7160,14 @@ const courses: Course[] = [
 
   {
     id: '20',
-    title: "Data Analytics Course in Mumbai",
+    title: "Data Analytics With Visualization in Mumbai",
     description: " Gain practical data analytics skills with Ivy Professional School in Mumbai. Learn Python, SQL, Power BI & Excel. Build real projects & get job-ready.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics Course in Mumbai | Ivy Professional School",
-      description: "Join Ivy Professional School’s Data Analytics Course in Mumbai - Learn top tools with hands-on projects & career support.",
+      title: "Data Analytics With Visualization in Mumbai | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Analytics With Visualization in Mumbai - Learn top tools with hands-on projects & career support.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
     },
@@ -7172,7 +7176,7 @@ const courses: Course[] = [
     reviewCount: 298,
     isFeatured: true,
     slug: "data-analytics-course-mumbai",
-    longDescription: "Our Data Analytics Course in Mumbai equips you with the analytical mindset and technical proficiency required to drive data‑driven decisions across industries. Over weeks of structured modules, you’ll learn to clean, analyze, model, visualize, and interpret data using industry‑standard tools. Whether you’re starting fresh or transitioning careers, this training bridges the gap from theory to practice. \n\n You’ll gain hands‑on experience with:Python for Data Analysis SQL and Databases Excel & Advanced Analytics Data Visualization with Tableau & Power BI. Statistics & Predictive Modelling"
+    longDescription: "Our Data Analytics With Visualization in Mumbai equips you with the analytical mindset and technical proficiency required to drive data‑driven decisions across industries. Over weeks of structured modules, you’ll learn to clean, analyze, model, visualize, and interpret data using industry‑standard tools. Whether you’re starting fresh or transitioning careers, this training bridges the gap from theory to practice. \n\n You’ll gain hands‑on experience with:Python for Data Analysis SQL and Databases Excel & Advanced Analytics Data Visualization with Tableau & Power BI. Statistics & Predictive Modelling"
     , instructors: [
       {
         id: "i1",
@@ -7249,7 +7253,7 @@ const courses: Course[] = [
 
       {
         id: "m3",
-        title: "Data Visualization Using Tableau",
+        title: "Data Visualization Using Tableau (Addon module with extra charges)",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
@@ -7309,13 +7313,14 @@ const courses: Course[] = [
       ,
       {
         id: "m6",
-        title: "Excel VBA Automation",
-        duration: "26 hrs",
+        title: "4 Months PrepAI",
+        duration: "120 days",
         topics: [
-          { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
-          { id: "t2", title: "Programming Concepts (Variables, Loops, Conditions)", duration: "8.25 hrs" },
-          { id: "t3", title: "Analysis Using VBA (Data Cleaning, PivotTables)", duration: "6.75 hrs" },
-          { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
+          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
+          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
+          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
+          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
+          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
         ]
       }
     ],

@@ -74,7 +74,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     sourceCampaignValue = "Data Engineering";
   } else if (course.title === "Data Analytics and Generative AI Course") {
     sourceCampaignValue = "Business Analytics Certification";
-  } else if (course.title === "Data Analytics Course") {
+  } else if (course.title === "Data Analytics With Visualization") {
     sourceCampaignValue = "Data Analytics and Visualization (Tableau & Power BI)";
   } else if (course.title === "Data science course (Pay after Placement)") {
     sourceCampaignValue = "ISA";
@@ -225,7 +225,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
   const courseHours: Record<string, string> = {
     "Data Science with Machine Learning & AI Certification": "260 Hours",
     "AI for Product Managers": "180 Hours",
-    "Data Analytics Course": "195 Hours",
+    "Data Analytics With Visualization": "195 Hours",
     " Data Engineering Course": "120 Hours",
     "Cloud Data Engineering Course with IIT Guwahati": "120 Hours",
     "Data Analytics and Generative AI Course": "185 Hours",
@@ -310,7 +310,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     alt="NASSCOM Certification"
                   />
                 ) : course.title === " Data Engineering Course" || course.title === "Generative AI Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" || 
-                  course.title === "Data Analytics Course" || course.title ==="Data Analytics Course in Kolkata" || course.title === "Data Analytics Course in Delhi" || course.title === "Data Analytics Course in Pune" || course.title === "Data Analytics Course in Chennai" || course.title === "Data Analytics Course in Bangalore" || course.title === "Data Analytics Course in Mumbai" ||
+                  course.title === "Data Analytics With Visualization" || course.title ==="Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ||
                   course.title === "Generative AI Course" ||
                   course.title === "AI for Product Managers" || course.title === "AI and Machine Learning Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" ? (
                   <Image
@@ -345,7 +345,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             ? "1158 students"
                             : course.title === "Data Analytics and Generative AI Course"
                               ? "855 students"
-                              : course.title === "Data Analytics Course" || course.title === "Data Analytics Course in Kolkata" || course.title === "Data Analytics Course in Delhi" || course.title === "Data Analytics Course in Pune" || course.title === "Data Analytics Course in Chennai" || course.title === "Data Analytics Course in Bangalore" || course.title === "Data Analytics Course in Mumbai"
+                              : course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
                                 ? "967 students"
                                 : course.title === "Data Analytics and Generative AI Course"
                                   ? "25,090 students"
@@ -383,7 +383,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                            "4.8 (324 reviews)"
                           : course.title === "Data Analytics and Generative AI Course"
                             ? "4.7 (212 reviews)"
-                            : course.title === "Data Analytics Course" || course.title ==="Data Analytics Course in Kolkata" || course.title === "Data Analytics Course in Delhi" || course.title === "Data Analytics Course in Pune" || course.title === "Data Analytics Course in Chennai" || course.title === "Data Analytics Course in Bangalore" || course.title === "Data Analytics Course in Mumbai"
+                            : course.title === "Data Analytics With Visualization" || course.title ==="Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
                               ? "4.6 (286 reviews)"
                               : course.title === "Data Analytics and Generative AI Course"
                                 ? "4.8 (6983 reviews)"
@@ -404,7 +404,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai"||
                       course.title === "Data Analytics and Generative AI Course" ||
                       course.title ===
-                      "Data Analytics Course" || course.title ==="Data Analytics Course in Kolkata" || course.title === "Data Analytics Course in Delhi" || course.title === "Data Analytics Course in Pune" || course.title === "Data Analytics Course in Chennai" || course.title === "Data Analytics Course in Bangalore" || course.title === "Data Analytics Course in Mumbai"||
+                      "Data Analytics With Visualization" || course.title ==="Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"||
                     course.title === "Data Analytics and Generative AI Course" ||
                     course.title === "AI for Product Managers" || course.title === "Generative AI Course" || course.title === "AI and Machine Learning Course"
                     ? "Ivy Professional School Certification"
@@ -484,7 +484,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       "https://drive.google.com/file/d/15dM1mZal1HjDpJYYj2z0MB41bJf7egi2/preview";
                   } else if (
                     course.title ===
-                    "Data Analytics Course" || course.title ==="Data Analytics Course in Kolkata" || course.title === "Data Analytics Course in Delhi" || course.title === "Data Analytics Course in Pune" || course.title === "Data Analytics Course in Chennai" || course.title === "Data Analytics Course in Bangalore" || course.title === "Data Analytics Course in Mumbai"
+                    "Data Analytics With Visualization" || course.title ==="Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/13LLhT-UYWyEtwOHa5ycbVoOGkgLAw3pr/preview";

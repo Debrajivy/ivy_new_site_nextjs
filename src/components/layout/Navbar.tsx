@@ -69,7 +69,7 @@ const courseCategories = {
   ],
   "Data Analytics": [
     {
-      title: "Data Analytics Course",
+      title: "Data Analytics With Visualization",
       href: "/courses/data-analytics-course",
       description: "8-month program to build strong analytical, statistical, and visualization skills for data-driven decision-making.",
       image: DA,
@@ -161,7 +161,7 @@ const allCourses = [
     image: DV,
   },
   {
-    title: "Data Analytics Course",
+    title: "Data Analytics With Visualization",
     href: "/courses/data-analytics-course",
     description: "Learn Hadoop, Spark, and big data processing frameworks",
     image: DA,

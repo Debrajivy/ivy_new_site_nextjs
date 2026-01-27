@@ -1931,7 +1931,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
-"Data Analytics Course in Kolkata": {
+"Data Analytics With Visualization in Kolkata": {
   categories: [
     { id: "program", name: "Program" },
     { id: "eligibility", name: "Eligibility" },
@@ -2027,7 +2027,7 @@ const courseData: { [key: string]: CourseFAQData } = {
   ]
 },
 
-"Data Analytics Course in Delhi": {
+"Data Analytics With Visualization in Delhi": {
   categories: [
     { id: "program", name: "Program" },
     { id: "eligibility", name: "Eligibility" },
@@ -2123,7 +2123,7 @@ const courseData: { [key: string]: CourseFAQData } = {
   ]
 },
 
-"Data Analytics Course in Mumbai": {
+"Data Analytics With Visualization in Mumbai": {
   categories: [
     { id: "program", name: "Program" },
     { id: "eligibility", name: "Eligibility" },
@@ -2214,7 +2214,7 @@ const courseData: { [key: string]: CourseFAQData } = {
   ]
 },
 
-"Data Analytics Course in Bangalore": {
+"Data Analytics With Visualization in Bangalore": {
   categories: [
     { id: "program", name: "Program" },
     { id: "eligibility", name: "Eligibility" },
@@ -2583,7 +2583,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
-  "Data Analytics Course": {
+  "Data Analytics With Visualization": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -2597,7 +2597,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ],
     faqs: [
       {
-        question: "What is the duration of the Data Analytics Course?",
+        question: "What is the duration of the Data Analytics With Visualization?",
         answer: "The course spans 225 hours across 14 weeks and includes live sessions, projects, and hands-on practice.",
         category: "program"
       },
@@ -3735,17 +3735,17 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
                     Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Chennai</span>
                   </h2>
                 ):
-                course.title === "Data Analytics Course in Kolkata" ? (
+                course.title === "Data Analytics With Visualization in Kolkata" ? (
                   <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics Course in Kolkata</span>
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics With Visualization in Kolkata</span>
                   </h2>
                 ) :
-                course.title === "Data Analytics Course in Delhi" ? (
+                course.title === "Data Analytics With Visualization in Delhi" ? (
                   <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics Course in Delhi</span>
+                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics With Visualization in Delhi</span>
                   </h2>
                 ) 
-                 : course.title === "Data Analytics Course in Bangalore" ? (
+                 : course.title === "Data Analytics With Visualization in Bangalore" ? (
                     <h2 className="text-3xl font-bold mb-4 text-gray-900">
                       Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Bangalore</span>
                     </h2>
@@ -3774,7 +3774,7 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
                       Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
                     </h2>
                   )
-                  : course.title === "Data Analytics Course in Mumbai" ? (
+                  : course.title === "Data Analytics With Visualization in Mumbai" ? (
                     <h2 className="text-3xl font-bold mb-4 text-gray-900">
                       Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
                     </h2>

@@ -128,7 +128,7 @@ When unsure or information is unavailable, politely refer to human counsellors.
 🔗 Course Name Format
 Always format course recommendations as:
 Course Name in bold black – Click here (blue hyperlink).
-Example: Data Analytics Course – Click here
+Example: Data Analytics With Visualization – Click here
 
 📍 Course Directory (Name + Link)
 
@@ -140,7 +140,7 @@ Cloud Data Engineering Course with IIT Guwahati – Click here
 
  Data Engineering Course – Click here
 
-Data Analytics Course – Click here
+Data Analytics With Visualization – Click here
 
 Data Analytics and Generative AI Course – Click here
 
@@ -159,12 +159,12 @@ Freshers / Students (0–1 yr)
 Arts / Non-Maths / Non-Stats background → Data Analytics and Generative AI Course – Click here
 Beginner-friendly. Tools: Excel, SQL, VBA, Tableau, Power BI.
 
-Commerce / Engineering / Science → Data Analytics Course – Click here
+Commerce / Engineering / Science → Data Analytics With Visualization – Click here
 Strong foundation for all backgrounds. Tools: Excel, SQL, Python (basic + stats), Power BI, Tableau, GenAI.
 
 Early Career (1–4 yrs)
 
-Business Roles (Finance, Marketing, HR, Ops) → Data Analytics Course – Click here
+Business Roles (Finance, Marketing, HR, Ops) → Data Analytics With Visualization – Click here
 
 IT / Software → Data Science with Machine Learning & AI Certification – Click here
 
@@ -186,7 +186,7 @@ Business Strategists → AI for Product Managers – Click here
 
 Special Note (Non-Tech Asking for AI)
 If someone from a non-tech background asks for an AI-related course, suggest:
-Data Analytics Course – Click here
+Data Analytics With Visualization – Click here
 This course starts with beginner-friendly tools and includes an optional GenAI module.
 
 🎓 Customization
