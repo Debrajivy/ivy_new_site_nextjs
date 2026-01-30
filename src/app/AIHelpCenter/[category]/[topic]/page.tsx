@@ -609,6 +609,32 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
     const [showReviewPrompt, setShowReviewPrompt] = useState(false);
     const [reviewPromptShown, setReviewPromptShown] = useState(false);
 
+    // ✅ MOVE useEffect TO HERE - RIGHT AFTER useState DECLARATIONS
+    useEffect(() => {
+        const calculateScrollProgress = () => {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+
+            if (documentHeight > 0) {
+                const progress = (scrolled / documentHeight) * 100;
+                setScrollProgress(Math.min(100, Math.max(0, progress)));
+
+                if (progress >= 95 && !reviewPromptShown) {
+                    setShowReviewPrompt(true);
+                    setReviewPromptShown(true);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', calculateScrollProgress);
+        calculateScrollProgress();
+
+        return () => {
+            window.removeEventListener('scroll', calculateScrollProgress);
+        };
+    }, [reviewPromptShown]);
+
     const category = data.categories[params.category as keyof typeof data.categories];
 
     if (!category) {
@@ -667,31 +693,6 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
         window.open('https://www.google.com/search?q=ivy+professional+school&rlz=1C1ONGR_enIN1115IN1115&oq=&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7Mg0IARAuGK8BGMcBGIAEMgcIAhAAGIAEMhAIAxAuGIMBGLEDGIAEGOUEMgcIBBAAGIAEMgYIBRBFGDwyBggGEEUYQTIGCAcQRRg80gEIMzA0N2owajeoAgiwAgHxBRMMy4WLy7978QUTMMy4WLy_ew&sourceid=chrome&ie=UTF-8#lrd=0x3a02771797fccdc1:0xca64261fceaf2af6,3,,,', '_blank');
         setShowReviewPrompt(false);
     };
-
-    useEffect(() => {
-        const calculateScrollProgress = () => {
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight - windowHeight;
-            const scrolled = window.scrollY;
-
-            if (documentHeight > 0) {
-                const progress = (scrolled / documentHeight) * 100;
-                setScrollProgress(Math.min(100, Math.max(0, progress)));
-
-                if (progress >= 95 && !reviewPromptShown) {
-                    setShowReviewPrompt(true);
-                    setReviewPromptShown(true);
-                }
-            }
-        };
-
-        window.addEventListener('scroll', calculateScrollProgress);
-        calculateScrollProgress();
-
-        return () => {
-            window.removeEventListener('scroll', calculateScrollProgress);
-        };
-    }, [reviewPromptShown]);
 
     const renderTopicContent = () => {
         const content = topicData.content;
@@ -1336,8 +1337,8 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
                                                     ? 'text-blue-600 border-blue-600'
                                                     : 'text-gray-400 border-transparent hover:text-gray-600'
                                                     }`}
-                                            >
-                                                {link.label}
+                                                >
+                                                    {link.label}
                                             </button>
                                         ))
                                     )}
