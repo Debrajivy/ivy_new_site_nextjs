@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import Link from 'next/link';
 import {
     FileStack,
@@ -340,7 +340,7 @@ const AreaLineChart = ({ data, title, areaMetric, lineMetric, areaLabel, lineLab
 const addBacklinks = (text: string) => {
     if (!text) return '';
     return text
-        .replace(/Python for data analysis/g, `<a href="https://ivyproschool.com/courses/data-analytics-and-generative-ai-course" class="text-[${themeColors.darkBlue}] font-semibold underline decoration-blue-200 underline-offset-4 hover:text-blue-600 transition-colors">Python for data analysis</a>`)
+        .replace(/Python for data analysis/g, `<a href="https://ivyproschool.com/courses/data-analytics-and-generative-ai-course" class="text-[#013a81] font-semibold underline decoration-blue-200 underline-offset-4 hover:text-blue-600 transition-colors">Python for data analysis</a>`)
         .replace(
             /data engineering pipelines/g,
             `<a 
@@ -357,8 +357,8 @@ const addBacklinks = (text: string) => {
            hover:text-[#3e69cc] hover:decoration-[#0f172a]/40 transition-colors duration-300">
     Generative AI
   </a>`
-        ).replace(/Tableau/g, `<a href="https://blog.ivyproschool.com/top-9-reasons-to-learn-python-to-become-data-scientist-ai-expert/" class="text-[${themeColors.darkBlue}] font-semibold underline decoration-orange-200 underline-offset-4 hover:text-orange-600 transition-colors">Tableau</a>`)
-        .replace(/business intelligence/g, `<a href="https://blog.ivyproschool.com/decoding-business-analytics-vs-business-intelligence/" class="text-[${themeColors.darkBlue}] font-semibold underline decoration-orange-200 underline-offset-4 hover:text-orange-600 transition-colors">business intelligence</a>`);
+        ).replace(/Tableau/g, `<a href="https://blog.ivyproschool.com/top-9-reasons-to-learn-python-to-become-data-scientist-ai-expert/" class="text-[#013a81] font-semibold underline decoration-orange-200 underline-offset-4 hover:text-orange-600 transition-colors">Tableau</a>`)
+        .replace(/business intelligence/g, `<a href="https://blog.ivyproschool.com/decoding-business-analytics-vs-business-intelligence/" class="text-[#013a81] font-semibold underline decoration-orange-200 underline-offset-4 hover:text-orange-600 transition-colors">business intelligence</a>`);
 };
 
 // Helper function to highlight Python code
@@ -513,6 +513,8 @@ const AuthorityBox = () => (
                                 src={PrateekAgarwal}
                                 alt="Prateek Agarwal"
                                 className="w-full h-full object-cover"
+                                width={56}
+                                height={56}
                             />
                         </div>
                         <div className="absolute -bottom-1 -right-1 bg-blue-600 rounded-full p-1">
@@ -553,6 +555,8 @@ const AuthorityBox = () => (
                                 src={eeshani}
                                 alt="Eeshani Agrawal"
                                 className="w-full h-full object-cover"
+                                width={56}
+                                height={56}
                             />
                         </div>
                         <div className="absolute -bottom-1 -right-1 bg-orange-500 rounded-full p-1">
@@ -603,13 +607,23 @@ const AuthorityBox = () => (
     </div>
 );
 
-const TopicPage = ({ params }: { params: { category: string; topic: string } }) => {
+interface PageProps {
+    params: Promise<{
+        category: string;
+        topic: string;
+    }>;
+}
+
+const TopicPage = ({ params }: PageProps) => {
+    // Use the use() hook to unwrap the params promise
+    const unwrappedParams = use(params);
+    const { category: categorySlug, topic: topicSlug } = unwrappedParams;
+    
     const [activeSection, setActiveSection] = useState('intro');
     const [scrollProgress, setScrollProgress] = useState(0);
     const [showReviewPrompt, setShowReviewPrompt] = useState(false);
     const [reviewPromptShown, setReviewPromptShown] = useState(false);
 
-    // ✅ MOVE useEffect TO HERE - RIGHT AFTER useState DECLARATIONS
     useEffect(() => {
         const calculateScrollProgress = () => {
             const windowHeight = window.innerHeight;
@@ -635,7 +649,7 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
         };
     }, [reviewPromptShown]);
 
-    const category = data.categories[params.category as keyof typeof data.categories];
+    const category = data.categories[categorySlug as keyof typeof data.categories];
 
     if (!category) {
         return (
@@ -658,7 +672,7 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
         for (const subcatKey in category.subcategories) {
             const subcat = category.subcategories[subcatKey as keyof typeof category.subcategories] as any;
             if ('topics' in subcat && subcat.topics) {
-                const topic = subcat.topics.find((t: any) => t.id === params.topic);
+                const topic = subcat.topics.find((t: any) => t.id === topicSlug);
                 if (topic) {
                     topicData = topic;
                     foundSubcategory = subcat;
@@ -673,7 +687,7 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
             <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-24 sm:pt-32 text-center">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-gray-900 mb-4">Topic not found</h1>
-                    <Link href={`/aihelpcenter/${params.category}`} className="text-blue-600 hover:text-blue-800 font-medium">
+                    <Link href={`/aihelpcenter/${categorySlug}`} className="text-blue-600 hover:text-blue-800 font-medium">
                         Return to {category.title}
                     </Link>
                 </div>
@@ -804,8 +818,8 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
                                             </div>
                                             <pre className="p-4 sm:p-6 md:p-8 leading-6 sm:leading-8 overflow-x-auto text-gray-100" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
                                                 <code dangerouslySetInnerHTML={{
-                                                    __html: params.category === 'genai-llm' ? highlightGenAICode(item.code) :
-                                                        params.category === 'visualization' ? highlightTableauCode(item.code) :
+                                                    __html: categorySlug === 'genai-llm' ? highlightGenAICode(item.code) :
+                                                        categorySlug === 'visualization' ? highlightTableauCode(item.code) :
                                                             highlightPythonCode(item.code)
                                                 }} />
                                             </pre>
@@ -954,7 +968,7 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
                             })}
 
                             {/* Add Chart Examples for Visualization Category */}
-                            {params.category === 'visualization' && params.topic === 'dual-axis-charts' && (
+                            {categorySlug === 'visualization' && topicSlug === 'dual-axis-charts' && (
                                 <>
                                     {section.id === 'sales-profit-analysis' && (
                                         <DualAxisChartExample
@@ -1093,7 +1107,7 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
                             Take personalized quizzes tailored to your domain, topic, and difficulty level.
                             Get detailed feedback on your strengths and weaknesses. Receive a customized
                             learning plan to improve based on your quiz performance. Join 50,000+ learners
-                            who've improved their skills with <strong><a href="https://prepai.ivyproschool.com/diagnose" target="_blank" rel="noopener noreferrer">PrepAI Diagnose</a></strong>.
+                            who've improved their skills with <strong><a href="https://prepai.ivyproschool.com/diagnose" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-yellow-300">PrepAI Diagnose</a></strong>.
                         </p>
 
                         <a
@@ -1163,13 +1177,13 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
                         Home
                     </Link>
                     <ChevronRight size={14} />
-                    <Link href={`/aihelpcenter/${params.category}`} className="hover:text-blue-600 transition-colors text-sm sm:text-base">
+                    <Link href={`/aihelpcenter/${categorySlug}`} className="hover:text-blue-600 transition-colors text-sm sm:text-base">
                         {category.title}
                     </Link>
                     <ChevronRight size={14} />
                     {foundSubcategory && (
                         <>
-                            <Link href={`/aihelpcenter/${params.category}`} className="hover:text-blue-600 transition-colors text-sm sm:text-base">
+                            <Link href={`/aihelpcenter/${categorySlug}`} className="hover:text-blue-600 transition-colors text-sm sm:text-base">
                                 {foundSubcategory.title}
                             </Link>
                             <ChevronRight size={14} />
@@ -1190,9 +1204,9 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
                         <div className="flex items-center gap-2">
                             <div className="relative">
                                 <div className="h-8 sm:h-10 w-8 sm:w-10 rounded-full overflow-hidden border-2 border-blue-200">
-                                    {params.category === 'genai-llm' ||
-                                        params.category === 'ai-strategy-pm' ||
-                                        params.category === 'mlops' ? (
+                                    {categorySlug === 'genai-llm' ||
+                                        categorySlug === 'ai-strategy-pm' ||
+                                        categorySlug === 'mlops' ? (
                                         <Image
                                             src={PrateekAgarwal}
                                             alt="Prateek Agarwal"
@@ -1217,16 +1231,16 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
                             <div>
                                 <div className="flex items-center gap-2">
                                     <span>By <span className="text-gray-900 font-semibold">
-                                        {params.category === 'genai-llm' ||
-                                            params.category === 'ai-strategy-pm' ||
-                                            params.category === 'mlops' ?
+                                        {categorySlug === 'genai-llm' ||
+                                            categorySlug === 'ai-strategy-pm' ||
+                                            categorySlug === 'mlops' ?
                                             'Prateek Agarwal' : 'Eeshani Agrawal'}
                                     </span></span>
                                     <a
                                         href={
-                                            params.category === 'genai-llm' ||
-                                                params.category === 'ai-strategy-pm' ||
-                                                params.category === 'mlops'
+                                            categorySlug === 'genai-llm' ||
+                                                categorySlug === 'ai-strategy-pm' ||
+                                                categorySlug === 'mlops'
                                                 ? "https://www.linkedin.com/in/prateekagrawal/"
                                                 : "https://www.linkedin.com/in/eeshani-agrawal-b674045/"
                                         }
@@ -1288,7 +1302,7 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
                             <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-gray-200">
                                 <h4 className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-4 sm:mb-6">Roadmap</h4>
                                 <div className="flex flex-col gap-2 sm:gap-4">
-                                    {params.category === 'visualization' && params.topic === 'dual-axis-charts' ? (
+                                    {categorySlug === 'visualization' && topicSlug === 'dual-axis-charts' ? (
                                         <>
                                             {[
                                                 { id: 'intro', label: 'Introduction' },
@@ -1337,8 +1351,8 @@ const TopicPage = ({ params }: { params: { category: string; topic: string } }) 
                                                     ? 'text-blue-600 border-blue-600'
                                                     : 'text-gray-400 border-transparent hover:text-gray-600'
                                                     }`}
-                                                >
-                                                    {link.label}
+                                            >
+                                                {link.label}
                                             </button>
                                         ))
                                     )}

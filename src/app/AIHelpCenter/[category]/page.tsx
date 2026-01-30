@@ -1,11 +1,45 @@
 "use client";
 
-import React from 'react';
+import React, { use } from 'react';
 import Link from 'next/link';
-import { ChevronRight, ArrowRight, Clock, FileText, Calendar } from 'lucide-react';
+import {
+  FileStack,
+  Database,
+  AlertCircle,
+  ArrowRight,
+  Code,
+  Play,
+  Clock,
+  Calendar,
+  ChevronRight,
+  Terminal,
+  Layers,
+  BookOpen,
+  Cpu,
+  BarChart3,
+  Server,
+  Briefcase,
+  ShieldCheck,
+  Zap,
+  Layout,
+  MessageSquare,
+  Search,
+  FileText,
+  Star,
+  Table,
+  Image as ImageIcon,
+  Check,
+  AlertTriangle,
+  Scissors,
+  AlignLeft,
+  MessageCircle,
+  Palette,
+  Gauge,
+  Linkedin
+} from 'lucide-react';
 import data from '../AIHelpCenter.json';
 
-// Icon mapping (same as before)
+// Icon mapping
 const iconMap: Record<string, React.ReactNode> = {
   "Code": <Code />,
   "Database": <Database />,
@@ -51,45 +85,16 @@ const themeColors = {
   light: '#f8fafc'
 };
 
-import {
-  FileStack,
-  GraduationCap,
-  Database,
-  AlertCircle,
-  ArrowRight as ArrowRightIcon,
-  Code,
-  Play,
-  Clock as ClockIcon,
-  Calendar as CalendarIcon,
-  ChevronRight as ChevronRightIcon,
-  Terminal,
-  Layers,
-  BookOpen,
-  Cpu,
-  BarChart3,
-  Server,
-  Briefcase,
-  ShieldCheck,
-  Zap,
-  Layout,
-  MessageSquare,
-  Search,
-  FileText as FileTextIcon,
-  Star,
-  Table,
-  Image as ImageIcon,
-  Check,
-  AlertTriangle,
-  Scissors,
-  AlignLeft,
-  MessageCircle,
-  Palette,
-  Gauge,
-  Linkedin
-} from 'lucide-react';
+interface PageProps {
+  params: Promise<{ category: string }>;
+}
 
-export default function CategoryPage({ params }: { params: { category: string } }) {
-  const category = data.categories[params.category as keyof typeof data.categories];
+export default function CategoryPage({ params }: PageProps) {
+  // Use the use() hook to unwrap the params promise
+  const unwrappedParams = use(params);
+  const { category: categorySlug } = unwrappedParams;
+  
+  const category = data.categories[categorySlug as keyof typeof data.categories];
   
   if (!category) {
     return (
@@ -138,7 +143,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
 
       <header className="px-4 sm:px-6 pt-6 sm:pt-8 pb-8 sm:pb-12 text-center max-w-4xl mx-auto">
         <div className="mb-4 sm:mb-6 inline-flex h-16 sm:h-20 w-16 sm:w-20 items-center justify-center rounded-2xl sm:rounded-3xl text-white shadow-xl" style={{ backgroundColor: themeColors.primary }}>
-          {iconMap[category.icon]}
+          {iconMap[category.icon] || <div>Icon</div>}
         </div>
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-gray-900 mb-3 sm:mb-4">{category.title}</h1>
         <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8">{category.description}</p>
@@ -153,12 +158,12 @@ export default function CategoryPage({ params }: { params: { category: string } 
               {allTopics.map((topic: any, idx: number) => (
                 <Link
                   key={idx}
-                  href={`/aihelpcenter/${params.category}/${topic.id}`}
+                  href={`/aihelpcenter/${categorySlug}/${topic.id}`}
                   className="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-gray-200 transition-all hover:shadow-lg sm:hover:shadow-xl hover:-translate-y-1 cursor-pointer block"
                 >
                   <div className="flex items-center gap-3 mb-3 sm:mb-4">
                     <div className="h-10 sm:h-12 w-10 sm:w-12 flex items-center justify-center rounded-xl sm:rounded-2xl text-white shadow-lg" style={{ backgroundColor: themeColors.primary }}>
-                      {iconMap[topic.subcategoryIcon]}
+                      {iconMap[topic.subcategoryIcon] || <div>Icon</div>}
                     </div>
                     <span className="text-xs font-medium text-gray-500 px-2 py-1 bg-gray-100 rounded-full">
                       {topic.subcategoryTitle}
