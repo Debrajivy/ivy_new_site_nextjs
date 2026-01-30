@@ -3638,7 +3638,139 @@ const courseData: { [key: string]: CourseFAQData } = {
         category: "support"
       }
     ]
-  }
+  },
+
+
+  "Generative AI Course in Kolkata": {
+  categories: [
+    { id: "program", name: "Program" },
+    { id: "eligibility", name: "Eligibility" },
+    { id: "generative-ai", name: "Generative AI" },
+    { id: "job-and-career", name: "Job And Career" },
+    { id: "certification", name: "Certification" },
+    { id: "projects", name: "Projects" },
+    { id: "placement", name: "Placement" },
+    { id: "opportunities", name: "Opportunities" },
+    { id: "support", name: "Support" },
+    { id: "job-outlook", name: "Data & AI Job Outlook" }
+  ],
+  faqs: [
+    // Program-related FAQs
+    {
+      question: "What will I learn in the Generative AI program in Kolkata?",
+      answer: "In this program, you will master advanced concepts in Generative AI, including Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Transformer models like GPT, and deep learning techniques. You'll also gain hands-on experience in text and image generation, AI model fine-tuning, and deployment strategies.",
+      category: "program"
+    },
+    {
+      question: "How is the Generative AI course in Kolkata structured?",
+      answer: "The program includes lectures, hands-on coding sessions, live projects, and a capstone project. Flexible learning options are available with weekday and weekend batches, suitable for both full-time students and working professionals.",
+      category: "program"
+    },
+    {
+      question: "Is the Generative AI course available online or offline in Kolkata?",
+      answer: "Yes, the Generative AI course in Kolkata is offered both online and offline. You can opt for instructor-led classroom sessions, live online sessions, or hybrid learning modes, based on your preference.",
+      category: "program"
+    },
+    {
+      question: "What is the duration of the Generative AI course in Kolkata?",
+      answer: "The course duration ranges from 6 to 11 months, depending on your learning pace and the mode of study chosen (weekday or weekend batch).",
+      category: "program"
+    },
+    {
+      question: "How is this Generative AI course in Kolkata different from others?",
+      answer: "This course emphasizes practical learning, with real-world projects and expert mentorship. You will also get dedicated placement support, including resume building, mock interviews, and career counseling.",
+      category: "program"
+    },
+
+
+    // --- Eligibility Section ---
+{
+  question: "What are the eligibility criteria for the Generative AI course in Kolkata?",
+  answer: "The course is open to anyone with a logical mindset. Graduates from engineering, science, commerce, or management backgrounds are eligible to enroll.",
+  category: "eligibility"
+},
+{
+  question: "Do I need coding experience to join the course?",
+  answer: "No prior coding experience is mandatory. The course starts with 'Programming Fundamentals,' covering Python basics, libraries like Pandas and NumPy, and data preprocessing to bring everyone up to speed.",
+  category: "eligibility"
+},
+
+// --- Generative AI Section ---
+{
+  question: "What tools and frameworks will I master?",
+  answer: "You will gain expertise in Python, OpenAI APIs (GPT-4), LangChain, DALL-E, Whisper, and RAG (Retrieval-Augmented Generation) frameworks. You'll also explore model deployment using Flask and Streamlit.",
+  category: "generative-ai"
+},
+
+// --- Job and Career Section ---
+{
+  question: "What job roles can I apply for after completing the course?",
+  answer: "Graduates are prepared for roles like GenAI Engineer, Prompt Engineer, AI Automation Specialist, Machine Learning Engineer, and Chatbot Architect.",
+  category: "job-and-career"
+},
+
+// --- Certification Section ---
+{
+  question: "Will I receive a recognized certification?",
+  answer: "Yes, you will earn a joint Executive Certification in Generative AI from Ivy Professional School and E&ICT Academy, IIT Guwahati. Additional certifications from IBM and NASSCOM are also provided.",
+  category: "certification"
+},
+
+// --- Projects Section ---
+{
+  question: "What real-world projects will I work on?",
+  answer: "You will complete 5+ capstone projects, including:\n1. **ChatPal AI**: A conversational chatbot using OpenAI APIs.\n2. **SocioGenie AI**: An automated social media content generation and scheduling tool.\n3. **ResumeGen AI**: An AI-powered tool for generating professional resumes.\n4. **VoiceMate AI**: A speech-to-text and text-to-speech assistant using Whisper.",
+  category: "projects"
+},
+{
+  question: "Is there a final capstone project?",
+  answer: "Yes, the program concludes with a 'Unified Multimodal AI Assistant' project that integrates text, voice, and image generation into a single deployment-ready application.",
+  category: "projects"
+},
+
+// --- Placement Section ---
+{
+  question: "Does the program provide placement assistance in Kolkata?",
+  answer: "Yes, Ivy provides lifetime placement assistance. This includes 1:1 career counseling, ATS-optimized resume building, mock interviews, and access to a network of 500+ hiring partners like PwC, EY, and Accenture.",
+  category: "placement"
+},
+{
+  question: "Which companies hire GenAI learners from Ivy in Kolkata?",
+  answer: "Our alumni are placed in top MNCs and startups in Kolkata's tech hubs (Sector V and New Town), including firms like Cognizant, Wipro, KPMG, and Amazon.",
+  category: "placement"
+},
+
+// --- Opportunities Section ---
+{
+  question: "What are the career growth opportunities in this field?",
+  answer: "Generative AI is transforming industries from healthcare to finance. Opportunities include building custom LLM solutions for enterprises, automating creative workflows, and developing AI-driven products as a founder or lead engineer.",
+  category: "opportunities"
+},
+
+// --- Support Section ---
+{
+  question: "What kind of learning support is provided?",
+  answer: "Learners get access to live interactive classes, dedicated project mentors, and 24/7 online labs. There are also 'DoubtBuster' sessions to resolve technical queries in real-time.",
+  category: "support"
+},
+{
+  question: "What happens if I miss a live session?",
+  answer: "You get lifetime access to all recorded sessions and study materials. Additionally, you have the flexibility to rejoin a future batch at no extra cost if you need to revisit specific modules.",
+  category: "support"
+},
+
+// --- Job Outlook Section ---
+{
+  question: "What is the job outlook for GenAI professionals in Kolkata (2026)?",
+  answer: "The demand for GenAI talent in Kolkata is projected to grow by 25% annually. Entry-level salaries range from ₹8-12 LPA, while experienced professionals can earn upwards of ₹25 LPA due to the specialized nature of these skills.",
+  category: "job-outlook"
+}
+
+  
+  ]
+}
+
+
 };
 
 const defaultData = {

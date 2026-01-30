@@ -312,7 +312,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       </div>
                     </div>
                     <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0, textShadow: '1px 1px 1px rgba(135, 206, 235, 0.2)' }}>
-                      {course.title === "Generative AI Course" ?
+                      {course.title === "Generative AI Course"  || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ?
                         "The Executive Certification in GenAI ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
                         course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
                           "The Executive Certification in Data Science, widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
@@ -322,24 +322,24 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                               "Upon successful completion, learners receive a professional certification from Ivy Professional School. The certification validates job-ready data engineering skills and enhances employability."
                               :
                               course.title === "Data Engineering Course in Bangalore" ?
-                              "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens job profiles":
-                             course.title === "Data Engineering Course in Mumbai"?
-                             "Upon successful completion, learners receive a professional certification from Ivy Professional School, validating industry-relevant data engineering skills.":
-                             course.title === "Data Engineering Course in Pune"?
-                             "Upon successful completion, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and enhances employability.":
-                             course.title ==="Data Engineering Course in Chennai"?
-                             "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens employability.":
-                             course.title === "Data Analytics and Generative AI Course" ?
-                                "Earn Ivy’s Data Science with Visualization certificate and prove your command over Excel, SQL, Python, Tableau & Power BI. Backed by 1:1 mentoring, this certification blends dashboarding, predictive modeling & automation into job-ready expertise." :
-                                course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ?
-                                 "This dual-focus certification covers both analytical techniques and visualization best practices for comprehensive data storytelling." :
-                                  course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
-                                    "The Executive Certification in Cloud Data Engineering with IIT Guwahati combines academic rigor with industry-relevant cloud technologies." :
-                                    course.title === "AI for Product Managers" ?
-                                      "This product management certification empowers product managers to lead AI-driven transformations, equipping you with future-ready skills for high-impact roles across industries." :
-                                      course.title === "Data science course (Pay after Placement)" ?
-                                        "This certification demonstrates your proficiency in end-to-end data science workflows, from data cleaning to deploying ML models." :
-                                        null
+                                "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens job profiles" :
+                                course.title === "Data Engineering Course in Mumbai" ?
+                                  "Upon successful completion, learners receive a professional certification from Ivy Professional School, validating industry-relevant data engineering skills." :
+                                  course.title === "Data Engineering Course in Pune" ?
+                                    "Upon successful completion, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and enhances employability." :
+                                    course.title === "Data Engineering Course in Chennai" ?
+                                      "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens employability." :
+                                      course.title === "Data Analytics and Generative AI Course" ?
+                                        "Earn Ivy’s Data Science with Visualization certificate and prove your command over Excel, SQL, Python, Tableau & Power BI. Backed by 1:1 mentoring, this certification blends dashboarding, predictive modeling & automation into job-ready expertise." :
+                                        course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ?
+                                          "This dual-focus certification covers both analytical techniques and visualization best practices for comprehensive data storytelling." :
+                                          course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
+                                            "The Executive Certification in Cloud Data Engineering with IIT Guwahati combines academic rigor with industry-relevant cloud technologies." :
+                                            course.title === "AI for Product Managers" ?
+                                              "This product management certification empowers product managers to lead AI-driven transformations, equipping you with future-ready skills for high-impact roles across industries." :
+                                              course.title === "Data science course (Pay after Placement)" ?
+                                                "This certification demonstrates your proficiency in end-to-end data science workflows, from data cleaning to deploying ML models." :
+                                                null
                       }
                     </p>
                   </div>
@@ -389,17 +389,20 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                                   "Upon successful completion of the program, learners receive a Data Science Certification from Ivy Professional School. This certification validates your skills in data analysis, machine learning, and applied AI, making your profile more credible in the Bangalore job market." :
                                   course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
                                     "Upon successful completion, learners receive a Data Science Certification from Ivy Professional School, validating their expertise in data analysis, machine learning, and applied AI—highly valued by employers in Mumbai’s corporate and financial sectors." :
-                                   course.title==="Data Analytics With Visualization in Kolkata"?
-                                   "Upon successful completion, learners receive a professional certification from Ivy Professional School, validating industry-relevant data analytics skills.":
-                                   course.title==="Data Analytics With Visualization in Bangalore"?
-                                   "Upon successful completion, learners receive a professional certification from Ivy Professional School, validating industry-relevant data analytics skills and enhancing employability.":
-                                    (course.title === "Data Engineering Course" || course.title === "Data Engineering Course in Kolkata") ?
-                                      "Show recruiters you're cloud-ready, with hands-on skills in AWS, GCP, and Azure. This certification validates your ability to design scalable pipelines and apply data engineering tools to real-world projects." :
-                                      course.title === "Data Analytics and Generative AI Course" ?
-                                        "Trusted by 100+ recruiters, this certificate shows your hands-on mastery in data storytelling and analytics tools—validated through real-world projects in telecom, pharma, retail, and BFSI sectors." :
-                                        course.title === "AI for Product Managers" ?
-                                          "By completing certifications for product management, you gain hands-on expertise in AI adoption frameworks, prompt engineering, and GenAI strategy." :
-                                          "Validates your ability to implement machine learning algorithms and AI solutions to solve complex business problems."
+                                    course.title === "Data Analytics With Visualization in Kolkata" ?
+                                      "Upon successful completion, learners receive a professional certification from Ivy Professional School, validating industry-relevant data analytics skills." :
+                                      course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Mumbai" ?
+                                        " Upon successful completion, learners receive a Generative AI Certification from Ivy Professional School, validating skills in advanced AI development and model deployment. This certification adds credibility to your resume and LinkedIn profile."
+                                        :
+                                        course.title === "Data Analytics With Visualization in Bangalore" ?
+                                          "Upon successful completion, learners receive a professional certification from Ivy Professional School, validating industry-relevant data analytics skills and enhancing employability." :
+                                          (course.title === "Data Engineering Course" || course.title === "Data Engineering Course in Kolkata") ?
+                                            "Show recruiters you're cloud-ready, with hands-on skills in AWS, GCP, and Azure. This certification validates your ability to design scalable pipelines and apply data engineering tools to real-world projects." :
+                                            course.title === "Data Analytics and Generative AI Course" ?
+                                              "Trusted by 100+ recruiters, this certificate shows your hands-on mastery in data storytelling and analytics tools—validated through real-world projects in telecom, pharma, retail, and BFSI sectors." :
+                                              course.title === "AI for Product Managers" ?
+                                                "By completing certifications for product management, you gain hands-on expertise in AI adoption frameworks, prompt engineering, and GenAI strategy." :
+                                                "Validates your ability to implement machine learning algorithms and AI solutions to solve complex business problems."
                       }
                     </p>
                   </div>
@@ -415,11 +418,11 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 }}>
                   <Image
                     src={
-                      course.title === "Generative AI Course" ? genaicertificate :
-                        course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"  ||course.title ==="Data Engineering Course in Delhi"  || course.title ==="Data Engineering Course in Bangalore" || course.title ==="Data Engineering Course in Mumbai" || course.title === "Data Engineering Course in Pune"  || course.title === "Data Engineering Course in Chennai" ? NASSCOMML :
+                      course.title === "Generative AI Course"  || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ? genaicertificate :
+                        course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" ? NASSCOMML :
                           course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ? Cdec :
                             course.title === "Data Analytics and Generative AI Course" ? Dsvc :
-                              course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ?  Davc :
+                              course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ? Davc :
                                 course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
                                   course.title === "AI for Product Managers" ? Pmc :
                                     course.title === "AI and Machine Learning Course" ? AIML :

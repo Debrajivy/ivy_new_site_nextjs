@@ -284,7 +284,7 @@
                 },
                 "conclusion": {
                   "title": "The Power of Automation",
-                  "content": "You have now completed a workflow that allows you to process hundreds of files in seconds. What we've learned—Importing, Loading, Concatenating, Cleaning, and Saving—forms the backbone of almost all data engineering pipelines.",
+                  "content": "You have now completed a workflow that allows you to process hundreds of files in seconds. What we've learned—Importing, Loading, and Concatenating—forms the backbone of almost all modern data engineering pipelines. In fact, advanced learners are now using Generative AI to automate this entire workflow.",
                   "checklist": [
                     { "item": "Library", "text": "Use import pandas as pd" },
                     { "item": "Load", "text": "Use pd.read_csv('filename.csv')" },
@@ -350,7 +350,7 @@
                 "readTime": "12 min read"
               },
               "video": {
-                "youtubeId": "zQ2jYVqTqR4",
+                "youtubeId": "U7dVFfE1wPw",
                 "title": "Dual-Axis Charts in Tableau - Visual Guide"
               },
               "sections": [
