@@ -2,28 +2,22 @@ import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["img.youtube.com"],
+    domains: ["img.youtube.com"], // ✅ allow YouTube thumbnails
   },
-  // Trailing slash issue ko handle karne ke liye (Production mein ye aksar issue karta hai)
-  trailingSlash: false, 
-  
   async redirects() {
     return [
-      // 1. WWW to Non-WWW (Keep this first, but it can sometimes conflict with hosting provider settings)
       {
         source: "/:path*",
         has: [
           { type: "host", value: "www.ivyproschool.com" },
         ],
         destination: "https://ivyproschool.com/:path*",
-        permanent: true,
+        permanent: true, // 308
       },
-
-      // 2. Specific Course Redirects (Specific rules pehle aane chahiye)
       {
         source: "/iit-data-science-course",
         destination: "/courses/iit-data-science-course",
-        permanent: true,
+        permanent: true, // 308 redirect
       },
       {
         source: "/iit-data-engineering-course",
@@ -60,18 +54,18 @@ const nextConfig: NextConfig = {
         destination: "/courses/data-visualization-course",
         permanent: true,
       },
-
-      // 3. Blog Redirects (Specific slug rule general rule se upar honi chahiye)
-      {
-        source: "/blog/:slug*",
-        destination: "https://blog.ivyproschool.com/:slug*",
-        permanent: true,
-      },
       {
         source: "/blog",
         destination: "https://blog.ivyproschool.com",
         permanent: true,
       },
+      {
+        source: "/blog/:slug*",
+        destination: "https://blog.ivyproschool.com/:slug*",
+        permanent: true,
+      },
+
+ 
     ]
   },
 }
