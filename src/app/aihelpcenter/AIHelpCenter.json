@@ -1,0 +1,1424 @@
+{
+  "categories": {
+    "python-basics": {
+      "title": "Python Basics",
+      "icon": "Code",
+      "color": "bg-blue-500",
+      "count": "12 Tutorials",
+      "description": "Master Python fundamentals for data science",
+      "subcategories": {
+        "pandas": {
+          "title": "Pandas",
+          "icon": "Database",
+          "color": "bg-blue-400",
+          "count": "5 Tutorials",
+          "topics": [
+            {
+              "id": "merge-csv-files",
+              "title": "How to Merge Multiple CSV Files into One DataFrame in Python: A Step-by-Step Tutorial",
+              "description": "Learn to combine multiple CSV files efficiently",
+              "duration": "15 min read",
+              "date": "January 13, 2024",
+              "content": {
+                "hero": {
+                  "title": "How to Merge Multiple CSV Files into One DataFrame in Python: A Step-by-Step Tutorial",
+                  "author": "Python Expert",
+                  "date": "January 13, 2024",
+                  "readTime": "15 min read"
+                },
+                "video": {
+                  "youtubeId": "0l9TPCZTvSs",
+                  "title": "Visual Guide to Pandas Concatenation"
+                },
+                "sections": [
+                  {
+                    "id": "intro",
+                    "title": "Introduction",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "In modern business and research, data is almost never a \"single file\" affair. Imagine a retail chain that generates 365 separate CSV files—one for every day of the year. Or a medical researcher receiving patient stats from ten different clinics.",
+                        "hasBar": true
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "To find trends, perform calculations, or create charts, you first need to \"stack\" these files together. This process of merging CSV files in Python, using the pandas library, is the professional standard for this task. Unlike Excel, which might lag or crash with millions of rows, Python handles massive datasets with ease. In this tutorial, we'll break down every single line of code so that even if you've never written a script before, you'll understand exactly what's happening under the hood."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "analogy",
+                    "type": "analogy",
+                    "title": "The \"Filing Cabinet\" Analogy",
+                    "icon": "Layers",
+                    "color": "indigo",
+                    "content": {
+                      "main": "Think of your computer's hard drive as a massive filing cabinet. Each CSV file is a single sheet of paper inside that cabinet.",
+                      "cards": [
+                        {
+                          "title": "The Problem:",
+                          "content": "You need to read the data as one continuous list to find the total sales for the year.",
+                          "color": "indigo-700"
+                        },
+                        {
+                          "title": "The Solution:",
+                          "content": "Python is like a robotic assistant. You tell it to go to the cabinet, grab specific sheets, and tape them together into one long scroll (the DataFrame). This scroll can then be analyzed, edited, and eventually saved back into the cabinet as a new, master sheet.",
+                          "color": "indigo-500"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "step1",
+                    "title": "Step 1: Merging Files One by One",
+                    "phase": "Phase One",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "Let's begin by loading and merging two CSV files into a single DataFrame. This is the simplest method where we explicitly load and combine each file."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Loading the Files"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "To load data from a CSV file, we use the pd.read_csv() function. This reads the contents of the CSV file and loads it into a pandas DataFrame, which is like a table or spreadsheet."
+                      },
+                      {
+                        "type": "code",
+                        "title": "load_files.py",
+                        "language": "python",
+                        "code": "import pandas as pd\n\n# Load the first CSV file\ndf1 = pd.read_csv('january_sales.csv')\n\n# Load the second CSV file\ndf2 = pd.read_csv('february_sales.csv')",
+                        "borderColor": "indigo"
+                      },
+                      {
+                        "type": "explanation",
+                        "title": "Behind the Code:",
+                        "content": "pd.read_csv('january_sales.csv'): The read_csv() function reads the contents of the CSV file and converts it into a pandas DataFrame, a table-like structure in Python. Here, df1 holds the data from January, and df2 holds the data from February.",
+                        "note": "Now, we have two DataFrames (df1 and df2) containing data from January and February."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Merging the Files"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Once the files are loaded, we can merge them into a single DataFrame using the pd.concat() function. This function stacks the data from the two DataFrames vertically."
+                      },
+                      {
+                        "type": "code",
+                        "title": "merge_files.py",
+                        "language": "python",
+                        "code": "# Concatenate the two DataFrames vertically\nmerged_df = pd.concat([df1, df2], ignore_index=True)",
+                        "borderColor": "indigo"
+                      },
+                      {
+                        "type": "explanation",
+                        "title": "Behind the Code:",
+                        "content": "pd.concat([df1, df2], ignore_index=True): The pd.concat() function concatenates (joins) the DataFrames vertically. Since we are stacking data from January and February, this ensures that the rows from both DataFrames are placed one after the other.\n\nignore_index=True: This ensures that the row numbers are reset and sequential in the merged DataFrame. If you don't use this, pandas will keep the original row numbers, which may result in duplicate index values.",
+                        "note": "Now, merged_df contains the data from both January and February, stacked one below the other."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "step2",
+                    "title": "Step 2: Handling Missing Data",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "In the merging process, there may be missing data, or \"NaN\" (Not a Number) values, especially if one CSV file has columns that the other doesn't. To handle this, we can use the fillna() method to replace any missing values."
+                      },
+                      {
+                        "type": "code",
+                        "title": "handle_missing.py",
+                        "language": "python",
+                        "code": "# Replace all NaN values with 'No Data'\nmerged_df.fillna('No Data', inplace=True)",
+                        "borderColor": "emerald"
+                      },
+                      {
+                        "type": "explanation",
+                        "title": "Behind the Code:",
+                        "content": "merged_df.fillna('No Data', inplace=True): The fillna() function is used to replace all missing (NaN) values with the string 'No Data'. This ensures that there are no empty values in the final DataFrame. The inplace=True argument tells pandas to apply the change directly to merged_df without creating a new copy.",
+                        "note": "This step ensures that any missing values are appropriately filled before we move on."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "step3",
+                    "title": "Step 3: Saving the Merged File",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "After cleaning, we save the result as a new master CSV file. This is the final step in your Python for data analysis workflow for small batches."
+                      },
+                      {
+                        "type": "code",
+                        "title": "save_file.py",
+                        "language": "python",
+                        "code": "# Save the merged DataFrame to a new CSV file\nmerged_df.to_csv('annual_report_2023.csv', index=False)",
+                        "borderColor": "blue"
+                      },
+                      {
+                        "type": "explanation",
+                        "title": "Behind the Code:",
+                        "content": "merged_df.to_csv('annual_report_2023.csv', index=False): The to_csv() function writes the DataFrame to a new CSV file.\n\nindex=False: This ensures that the row numbers (index) are not saved as a separate column in the output CSV file. We only want the data.",
+                        "note": "Now, you have successfully merged two CSV files and saved the result in a new file."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "automation",
+                    "title": "Step 4: Automating the Process for Multiple Files with glob",
+                    "phase": "Advanced Automation",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "Now, let's say you have a folder full of CSV files and you want to merge them all. Manually loading each file one by one would be tedious. That's where the glob module comes in."
+                      },
+                      {
+                        "type": "quote",
+                        "text": "The glob module helps you find files based on patterns (like *.csv for all CSV files). It saves you the trouble of manually listing each file and lets you automatically grab all the files you need."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Using glob to Find CSV Files"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "We can use glob to find all CSV files in a directory. This way, we don't have to specify each file manually."
+                      },
+                      {
+                        "type": "code",
+                        "title": "use_glob.py",
+                        "language": "python",
+                        "code": "import glob\n\n# Use glob to find all CSV files in the directory\ncsv_files = glob.glob('path/to/your/files/*.csv')",
+                        "borderColor": "purple"
+                      },
+                      {
+                        "type": "explanation",
+                        "title": "Behind the Code:",
+                        "content": "glob.glob('path/to/your/files/*.csv'): This searches for all CSV files in the specified directory (path/to/your/files/). The *.csv pattern tells glob to find every file that ends with .csv."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Loading and Merging All CSV Files"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Once we have the list of files, we can use a loop to load and merge them all."
+                      },
+                      {
+                        "type": "code",
+                        "title": "merge_all.py",
+                        "language": "python",
+                        "code": "# Load all CSV files into DataFrames\ndfs = [pd.read_csv(file) for file in csv_files]\n\n# Concatenate all DataFrames into one\nmerged_df = pd.concat(dfs, ignore_index=True)",
+                        "borderColor": "purple"
+                      },
+                      {
+                        "type": "explanation",
+                        "title": "Behind the Code:",
+                        "content": "[pd.read_csv(file) for file in csv_files]: This list comprehension reads each CSV file found by glob and loads it into a DataFrame.\n\npd.concat(dfs, ignore_index=True): This concatenates all the DataFrames in the list dfs into a single DataFrame, just like we did with two files earlier.",
+                        "note": "By using glob, we've automated the process of finding and loading all the CSV files in the folder. This is extremely useful if you have a large number of files and don't want to manually list each one."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "step5",
+                    "title": "Step 5: Data Cleaning & Handling Missing Info",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "As with the earlier approach, once we've merged the files, we can clean the data by replacing missing values."
+                      },
+                      {
+                        "type": "code",
+                        "title": "clean_data.py",
+                        "language": "python",
+                        "code": "# Replace all NaN values with 'No Data'\nmerged_df.fillna('No Data', inplace=True)",
+                        "borderColor": "emerald"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "step6",
+                    "title": "Step 6: Saving the Master File",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "Finally, after merging and cleaning, we save the master file just as we did earlier."
+                      },
+                      {
+                        "type": "code",
+                        "title": "save_master.py",
+                        "language": "python",
+                        "code": "# Save to a new CSV file\nmerged_df.to_csv('annual_report_2023.csv', index=False)",
+                        "borderColor": "blue"
+                      }
+                    ]
+                  }
+                ],
+                "troubleshooting": {
+                  "title": "Common Pitfalls: Troubleshooting Like a Pro",
+                  "subtitle": "Even for experts, things go wrong. Here are the three most common errors you'll encounter:",
+                  "cards": [
+                    {
+                      "title": "FileNotFoundError",
+                      "icon": "AlertCircle",
+                      "color": "red",
+                      "content": "Python can't find your CSV. Double-check that your script and your data files are in the exact same folder."
+                    },
+                    {
+                      "title": "Column Mismatch",
+                      "icon": "FileStack",
+                      "color": "amber",
+                      "content": "If CSV A has \"Price\" and CSV B has \"Cost\", they won't merge into one column. They must have identical headers."
+                    },
+                    {
+                      "title": "Memory Error",
+                      "icon": "Database",
+                      "color": "indigo",
+                      "content": "Trying to merge 10GB of data on a 4GB laptop? Use chunksize in your read_csv to process data in bits."
+                    }
+                  ]
+                },
+                "conclusion": {
+                  "title": "The Power of Automation",
+                  "content": "You have now completed a workflow that allows you to process hundreds of files in seconds. What we've learned—Importing, Loading, and Concatenating—forms the backbone of almost all modern data engineering pipelines. In fact, advanced learners are now using Generative AI to automate this entire workflow.",
+                  "checklist": [
+                    { "item": "Library", "text": "Use import pandas as pd" },
+                    { "item": "Load", "text": "Use pd.read_csv('filename.csv')" },
+                    { "item": "Merge", "text": "Use pd.concat([list_of_dfs], ignore_index=True)" },
+                    { "item": "Clean", "text": "Use df.fillna('Value')" },
+                    { "item": "Save", "text": "Use df.to_csv('output.csv', index=False)" }
+                  ],
+                  "finalNote": "This concludes our guide on merging CSV files in Python. Enjoy automating your data workflows!",
+                  "finalParagraph": "By first understanding how to merge files one by one, and then introducing glob to automate the process for multiple files, this guide ensures you have a solid foundation in merging data in Python."
+                },
+                "cta": {
+                  "title": "Ready to Scale Your Data Skills?",
+                  "content": "Download the complete source code and a sample dataset of 100 CSV files to practice your merging skills right now.",
+                  "buttonText": "GET THE STARTER PACK"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "machine-learning": {
+      "title": "Machine Learning",
+      "icon": "Cpu",
+      "color": "bg-purple-500",
+      "count": "8 Courses",
+      "description": "Learn ML algorithms and applications",
+      "subcategories": {
+        "supervised-learning": {
+          "title": "Supervised Learning",
+          "icon": "BarChart3",
+          "color": "bg-purple-400",
+          "count": "4 Courses",
+          "topics": []
+        }
+      }
+    },
+    
+  "visualization": {
+    "title": "Visualization",
+    "icon": "BarChart3",
+    "color": "bg-pink-500",
+    "count": "6 Guides",
+    "description": "Create compelling data visualizations",
+    "subcategories": {
+      "tableau": {
+        "title": "Tableau",
+        "icon": "BarChart3",
+        "color": "bg-pink-400",
+        "count": "3 Tutorials",
+        "topics": [
+          {
+            "id": "dual-axis-charts",
+            "title": "How to Create Dual-Axis Charts in Tableau: Complete Guide",
+            "description": "Master dual-axis charts for business decision-making",
+            "duration": "12 min read",
+            "date": "March 15, 2024",
+            "content": {
+              "hero": {
+                "title": "How to Create Dual-Axis Charts in Tableau: Complete Guide",
+                "author": "Tableau Expert",
+                "date": "March 15, 2024",
+                "readTime": "12 min read"
+              },
+              "video": {
+                "youtubeId": "U7dVFfE1wPw",
+                "title": "Dual-Axis Charts in Tableau - Visual Guide"
+              },
+              "sections": [
+                {
+                  "id": "intro",
+                  "title": "Introduction",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If you work with business data long enough, a stakeholder will eventually ask: \"Can we see both numbers together on one chart?\" This exact question is why dual-axis charts in Tableau exist.",
+                      "hasBar": true
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This guide assumes zero prior knowledge and gradually takes you to expert-level Tableau usage, covering not just how to create a dual-axis chart, but when, why, and when not to use it in real business dashboards."
+                    }
+                  ]
+                },
+                {
+                  "id": "what-is",
+                  "title": "What Is a Dual-Axis Chart in Tableau?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "A dual-axis chart is a visualization where two different measures share the same X-axis (time, category, region) but have separate Y-axes, layered in a single view."
+                    },
+                    {
+                      "type": "subtitle",
+                      "text": "Key Components"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "One measure appears on the left Y-axis",
+                        "The second measure appears on the right Y-axis",
+                        "Both measures coexist on the same chart"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "importance",
+                  "title": "Why Are Dual-Axis Charts Important for Business Decision-Making?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Dual-axis charts are decision tools, not visual decoration. They help leaders answer questions like:"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "Are we growing profitably?",
+                        "Is higher productivity affecting quality?",
+                        "Is marketing driving meaningful conversions?",
+                        "Is operational efficiency improving as teams scale?"
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Business leaders want: one view, one story, one actionable insight. A well-designed dual-axis chart compresses cause-and-effect relationships into a single visual narrative."
+                    }
+                  ]
+                },
+                {
+                  "id": "when-to-use",
+                  "title": "When Should You Use a Dual-Axis Chart in Tableau?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "You should use a dual-axis chart only when all of the following are true:"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Criteria for Using Dual-Axis Charts",
+                      "headers": ["Criteria", "Example", "Valid?"],
+                      "rows": [
+                        ["Metrics are logically related", "Sales & Profit Margin", "✓"],
+                        ["Share same X-axis", "Monthly timeline", "✓"],
+                        ["Units are different", "₹ vs %", "✓"],
+                        ["Goal is trend comparison", "Compare movement patterns", "✓"]
+                      ]
+                    },
+                    {
+                      "type": "subtitle",
+                      "text": "Real Business Examples"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "Monthly Sales vs Profit Margin",
+                        "Daily Orders vs Average Delivery Time",
+                        "Machine Output vs Defect Rate",
+                        "Headcount vs Revenue per Employee"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "when-not-to-use",
+                  "title": "When Should You Avoid Using a Dual-Axis Chart?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Dual-axis charts should not be used when:"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Anti-Patterns to Avoid",
+                      "headers": ["Situation", "Example", "Why to Avoid"],
+                      "rows": [
+                        ["Unrelated metrics", "Sales vs Employee Happiness", "False correlation"],
+                        ["Manipulated axes", "Scaled to look good", "Misleading"],
+                        ["Hiding poor results", "Hidden scale adjustments", "Unethical"],
+                        ["Non-data-literate audience", "Complex for beginners", "Confusing"]
+                      ]
+                    },
+                    {
+                      "type": "warning",
+                      "title": "Warning",
+                      "content": "A misleading dual-axis chart damages trust faster than incorrect data."
+                    }
+                  ]
+                },
+                {
+                  "id": "core-concepts",
+                  "title": "Core Tableau Concepts You Must Understand",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Before creating a dual-axis chart, you must understand three fundamentals:"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "Dimensions: These form the X-axis (Date, Month, Category, Region)",
+                        "Measures: These form the Y-axes (Sales, Profit, Quantity, Rates)",
+                        "Marks: These control how data is shown (Bar, Line, Area, Circle)"
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "A dual-axis chart simply means two measures, two axes, one shared dimension."
+                    }
+                  ]
+                },
+                {
+                  "id": "basic-chart",
+                  "title": "How Do You Create a Basic Chart in Tableau?",
+                  "phase": "Step 1: Foundation",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Start with a simple chart:"
+                    },
+                    {
+                      "type": "code",
+                      "title": "Basic Chart Setup",
+                      "language": "tableau",
+                      "code": "1. Drag a time-based dimension (Order Date) to Columns\n2. Drag a measure (Sales) to Rows\n\nResult: Basic line chart showing sales over time",
+                      "borderColor": "pink"
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This creates your base visualization, which will later become the foundation for the dual-axis chart."
+                    }
+                  ]
+                },
+                {
+                  "id": "add-second-measure",
+                  "title": "How Do You Add a Second Measure?",
+                  "phase": "Step 2: Add Companion Metric",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "To introduce the second metric:"
+                    },
+                    {
+                      "type": "code",
+                      "title": "Add Second Measure",
+                      "language": "tableau",
+                      "code": "Drag the second measure (Profit) to Rows\n\nTableau displays two separate charts stacked vertically.\nAt this stage, this is NOT a dual-axis chart.",
+                      "borderColor": "pink"
+                    }
+                  ]
+                },
+                {
+                  "id": "convert-dual-axis",
+                  "title": "How Do You Convert to Dual-Axis Chart?",
+                  "phase": "Step 3: The Magic Transformation",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "To convert the view into a dual-axis chart:"
+                    },
+                    {
+                      "type": "code",
+                      "title": "Dual-Axis Activation",
+                      "language": "tableau",
+                      "code": "1. Right-click on the second Y-axis\n2. Select 'Dual Axis'\n\nTableau now layers both measures in a single view and displays:\n- A left Y-axis\n- A right Y-axis\n- Separate Marks cards for each measure",
+                      "borderColor": "pink"
+                    }
+                  ]
+                },
+                {
+                  "id": "synchronize-axes",
+                  "title": "Should You Synchronize Axes?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "You should synchronize axes only when both measures use the same unit."
+                    },
+                    {
+                      "type": "table",
+                      "title": "Synchronization Decision Guide",
+                      "headers": ["Situation", "Units", "Synchronize?"],
+                      "rows": [
+                        ["Sales & Profit", "Both in ₹", "✓ Yes"],
+                        ["Sales (₹) & Margin (%)", "₹ vs %", "✗ No"],
+                        ["Quantity & Units", "Count vs Count", "✓ Yes"],
+                        ["Time & Percentage", "Days vs %", "✗ No"]
+                      ]
+                    },
+                    {
+                      "type": "warning",
+                      "title": "Critical Warning",
+                      "content": "Synchronizing mismatched units creates misleading visuals and should be avoided."
+                    }
+                  ]
+                },
+                {
+                  "id": "mark-types",
+                  "title": "How Do You Choose the Right Mark Types?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "The choice of marks determines readability. Best practice combinations include:"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Recommended Mark Combinations",
+                      "headers": ["Primary Metric", "Secondary Metric", "Visual Style", "Use Case"],
+                      "rows": [
+                        ["Sales (Volume)", "Profit Margin", "Bars + Line", "Revenue vs Efficiency"],
+                        ["Orders", "Avg Delivery Time", "Area + Line", "Volume vs Speed"],
+                        ["Website Traffic", "Conversion Rate", "Line + Circle", "Volume vs Quality"],
+                        ["Production Output", "Defect Rate", "Bars + Line", "Quantity vs Quality"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "A common business pattern is: Volume-based metric as Bars, Efficiency-based metric as Line. This visually separates magnitude from performance quality."
+                    }
+                  ]
+                },
+                {
+                  "id": "formatting",
+                  "title": "How Should You Format Dual-Axis Charts for Clarity?",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Formatting determines whether a dual-axis chart builds trust or confusion."
+                    },
+                    {
+                      "type": "checklist",
+                      "items": [
+                        { "checked": true, "text": "Clearly label both Y-axes" },
+                        { "checked": true, "text": "Always include units (₹, %, days)" },
+                        { "checked": true, "text": "Use distinct but restrained colors" },
+                        { "checked": true, "text": "Customize tooltips for each measure" }
+                      ]
+                    },
+                    {
+                      "type": "warning",
+                      "title": "Remember",
+                      "content": "A dual-axis chart without clear labels is functionally useless."
+                    }
+                  ]
+                },
+                {
+                  "id": "sales-profit-analysis",
+                  "title": "Sales vs Profit Margin Analysis",
+                  "phase": "Business Application 1",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "This chart answers the question: Are we growing profitably?"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Pattern Recognition Guide",
+                      "headers": ["Sales Trend", "Margin Trend", "Business Insight", "Action Required"],
+                      "rows": [
+                        ["↑ Increasing", "↓ Decreasing", "Excessive discounting", "Review pricing strategy"],
+                        ["→ Stable", "↑ Increasing", "Cost optimization", "Scale successful practices"],
+                        ["↑ Increasing", "↑ Increasing", "Healthy growth", "Continue current strategy"],
+                        ["↓ Decreasing", "↓ Decreasing", "Market pressure", "Strategic review needed"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This insight often drives pricing, discount, and incentive decisions."
+                    }
+                  ]
+                },
+                {
+                  "id": "marketing-effectiveness",
+                  "title": "Marketing: Traffic vs Conversion Rate",
+                  "phase": "Business Application 2",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "This chart answers: Is marketing driving quality traffic?"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Marketing Insights Matrix",
+                      "headers": ["Traffic", "Conversion", "Insight", "Team Action"],
+                      "rows": [
+                        ["↑ Spikes", "↓ Drops", "Poor targeting", "Refine audience segmentation"],
+                        ["→ Stable", "↑ Rises", "Funnel improvement", "Optimize landing pages"],
+                        ["↑ Increases", "↑ Increases", "Effective campaigns", "Increase budget"],
+                        ["↓ Declines", "→ Stable", "Channel fatigue", "Explore new channels"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This is a critical view for growth and product teams."
+                    }
+                  ]
+                },
+                {
+                  "id": "manufacturing-quality",
+                  "title": "Manufacturing: Output vs Defect Rate",
+                  "phase": "Business Application 3",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "This chart answers: Is higher output hurting quality?"
+                    },
+                    {
+                      "type": "table",
+                      "title": "Quality Control Patterns",
+                      "headers": ["Output", "Defects", "Diagnosis", "Corrective Action"],
+                      "rows": [
+                        ["↑ Up", "↑ Up", "Process stress", "Reduce speed, add QC checkpoints"],
+                        ["↑ Up", "↓ Down", "Process maturity", "Document best practices"],
+                        ["↓ Down", "↑ Up", "Systemic failure", "Root cause analysis"],
+                        ["→ Stable", "↓ Down", "Continuous improvement", "Share learnings"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "These patterns often trigger audits and root-cause analysis."
+                    }
+                  ]
+                },
+                {
+                  "id": "hr-productivity",
+                  "title": "HR Analytics: Headcount vs Revenue per Employee",
+                  "phase": "Business Application 4",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "This chart answers: Is hiring improving efficiency?"
+                    },
+                    {
+                      "type": "table",
+                      "title": "HR Productivity Analysis",
+                      "headers": ["Headcount", "Revenue/Employee", "Interpretation", "Strategic Decision"],
+                      "rows": [
+                        ["↑ Increasing", "↓ Decreasing", "Over-hiring", "Freeze hiring, training focus"],
+                        ["→ Stable", "↑ Increasing", "Productivity gains", "Reward programs, automation"],
+                        ["↓ Decreasing", "↑ Increasing", "Right-sizing", "Continue optimization"],
+                        ["↑ Increasing", "↑ Increasing", "Scalable growth", "Strategic expansion"]
+                      ]
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This view directly influences hiring plans and automation decisions."
+                    }
+                  ]
+                },
+                {
+                  "id": "calculated-fields",
+                  "title": "How to Use Calculated Fields",
+                  "phase": "Advanced Technique 1",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Advanced users rely on calculated fields rather than raw data."
+                    },
+                    {
+                      "type": "code",
+                      "title": "Profit Margin Calculation",
+                      "language": "tableau",
+                      "code": "// CALCULATED FIELD: Profit Margin\nSUM([Profit]) / SUM([Sales])\n\n// FORMAT AS PERCENTAGE\nNumber Format: Percentage (1 decimal)\n\n// ADVANTAGES:\n// - Correct aggregation\n// - Consistent logic\n// - Reduced reporting errors",
+                      "borderColor": "purple"
+                    }
+                  ]
+                },
+                {
+                  "id": "reference-lines",
+                  "title": "How Reference Lines Improve Charts",
+                  "phase": "Advanced Technique 2",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Reference lines add business context such as targets, SLAs, or compliance thresholds."
+                    },
+                    {
+                      "type": "code",
+                      "title": "Adding Reference Lines",
+                      "language": "tableau",
+                      "code": "// ADD REFERENCE LINE\nRight-click Y-axis → Add Reference Line\n\n// TYPES:\nLine: Constant value (e.g., 20% margin target)\nBand: Range (e.g., 15-25% acceptable range)\nDistribution: Statistical (e.g., average, median)\n\n// WITHOUT BENCHMARKS, TRENDS LACK MEANING",
+                      "borderColor": "blue"
+                    }
+                  ]
+                },
+                {
+                  "id": "parameters",
+                  "title": "How Parameters Make Charts Interactive",
+                  "phase": "Advanced Technique 3",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Parameters allow users to switch metrics dynamically without cluttering the dashboard."
+                    },
+                    {
+                      "type": "code",
+                      "title": "Dynamic Metric Selection",
+                      "language": "tableau",
+                      "code": "// CREATE PARAMETER\nParameter Name: [Select Secondary Metric]\nData Type: String\nList Values:\n- Profit Margin\n- Conversion Rate\n- Defect Rate\n- Revenue per Employee\n\n// USE IN CALCULATION\nCASE [Select Secondary Metric]\n  WHEN \"Profit Margin\" THEN SUM([Profit])/SUM([Sales])\n  WHEN \"Conversion Rate\" THEN SUM([Conversions])/SUM([Visits])\n  ...\nEND",
+                      "borderColor": "amber"
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This transforms a static chart into an analytical tool."
+                    }
+                  ]
+                },
+                {
+                  "id": "decision-guide",
+                  "title": "Dual-Axis vs Separate Charts",
+                  "content": [
+                    {
+                      "type": "table",
+                      "title": "Architecture Decision Matrix",
+                      "headers": ["Situation", "Use Dual-Axis", "Use Separate Charts", "Rationale"],
+                      "rows": [
+                        ["Relationship analysis", "✓ Yes", "✗ No", "Understanding connection is primary goal"],
+                        ["Detailed inspection", "✗ No", "✓ Yes", "Each metric needs individual focus"],
+                        ["Executive summary", "✓ Yes", "✗ No", "High-level relationship view"],
+                        ["Technical deep dive", "✗ No", "✓ Yes", "Precision over synthesis"],
+                        ["Dashboard space limited", "✓ Carefully", "✓ If possible", "Dual-axis saves space but risks clarity"]
+                      ]
+                    },
+                    {
+                      "type": "warning",
+                      "title": "Dashboard Design Warning",
+                      "content": "A dashboard overloaded with dual-axis charts is a warning sign of poor information architecture."
+                    }
+                  ]
+                },
+                {
+                  "id": "misinterpretations",
+                  "title": "Common Executive Misinterpretations",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Executives may incorrectly assume:"
+                    },
+                    {
+                      "type": "list",
+                      "items": [
+                        "Both axes are comparable (they're often not)",
+                        "Line crossings imply correlation (correlation ≠ causation)",
+                        "The right axis is secondary (both are equally important)",
+                        "Scale differences indicate problems (sometimes they're just different units)"
+                      ]
+                    },
+                    {
+                      "type": "subtitle",
+                      "text": "Prevention Strategies"
+                    },
+                    {
+                      "type": "checklist",
+                      "items": [
+                        { "checked": true, "text": "Explicit axis labeling with units" },
+                        { "checked": true, "text": "Annotations explaining relationships" },
+                        { "checked": true, "text": "Short explanatory captions" },
+                        { "checked": true, "text": "Pre-meeting walkthrough for complex charts" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "pre-publish-checklist",
+                  "title": "Pre-Publication Checklist",
+                  "phase": "Quality Assurance",
+                  "content": [
+                    {
+                      "type": "checklist",
+                      "items": [
+                        { "checked": true, "text": "Metrics are logically related" },
+                        { "checked": true, "text": "Axes are clearly labeled with units" },
+                        { "checked": true, "text": "Scales are not manipulated" },
+                        { "checked": true, "text": "Business question is obvious" },
+                        { "checked": true, "text": "Chart can survive boardroom challenge" },
+                        { "checked": true, "text": "Color scheme is accessible (colorblind friendly)" },
+                        { "checked": true, "text": "Tooltips provide useful information" }
+                      ]
+                    },
+                    {
+                      "type": "quote",
+                      "text": "If your chart doesn't pass this checklist, redesign it. A flawed visualization is worse than no visualization."
+                    }
+                  ]
+                },
+                {
+                  "id": "power-vs-risk",
+                  "title": "The Power vs Risk Balance",
+                  "content": [
+                    {
+                      "type": "analogy",
+                      "title": "The Surgeon's Scalpel Analogy",
+                      "icon": "Scissors",
+                      "color": "red",
+                      "content": {
+                        "main": "Dual-axis charts are like surgical instruments in the hands of a data analyst.",
+                        "cards": [
+                          {
+                            "title": "In Expert Hands:",
+                            "content": "Reveal hidden relationships, reduce cognitive load, drive better decisions",
+                            "color": "emerald-600"
+                          },
+                          {
+                            "title": "In Novice Hands:",
+                            "content": "Mislead stakeholders, manipulate perception, destroy credibility",
+                            "color": "red-600"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Dual-axis charts are like sharp tools. Used correctly, they reveal hidden relationships, reduce cognitive load, and drive better decisions. Used poorly, they mislead stakeholders, manipulate perception, and destroy credibility. Master them responsibly."
+                    }
+                  ]
+                }
+              ],
+              "troubleshooting": {
+                "title": "Common Tableau Dual-Axis Issues",
+                "subtitle": "Solutions to frequent problems encountered when creating dual-axis charts",
+                "cards": [
+                  {
+                    "title": "Misaligned Axes",
+                    "icon": "AlignLeft",
+                    "color": "amber",
+                    "content": "Right-click axis → Synchronize Axis. Only use when metrics share same unit of measure."
+                  },
+                  {
+                    "title": "Overlapping Marks",
+                    "icon": "Layers",
+                    "color": "pink",
+                    "content": "Adjust transparency in Marks card. Use different mark types (bars + lines work well together)."
+                  },
+                  {
+                    "title": "Unreadable Tooltips",
+                    "icon": "MessageCircle",
+                    "color": "blue",
+                    "content": "Customize tooltips separately for each measure. Include units and clear descriptions."
+                  },
+                  {
+                    "title": "Color Confusion",
+                    "icon": "Palette",
+                    "color": "purple",
+                    "content": "Use colorblind-friendly palettes. Ensure sufficient contrast between series."
+                  },
+                  {
+                    "title": "Performance Issues",
+                    "icon": "Gauge",
+                    "color": "red",
+                    "content": "Limit data volume. Use extracts instead of live connections. Simplify calculations."
+                  }
+                ]
+              },
+              "conclusion": {
+                "title": "Mastering Dual-Axis Charts",
+                "content": "You have now completed a comprehensive guide to creating dual-axis charts in Tableau. From basic setup to advanced techniques, you've learned not just how to create these charts, but when, why, and when not to use them.",
+                "checklist": [
+                  { "item": "Start Simple", "text": "Master basic charts before attempting dual-axis" },
+                  { "item": "Validate Relationship", "text": "Ensure metrics are logically connected" },
+                  { "item": "Format Professionally", "text": "Clear labels, appropriate colors, useful tooltips" },
+                  { "item": "Test Interpretations", "text": "Verify stakeholders understand the chart correctly" },
+                  { "item": "Have Backup", "text": "Keep single-chart versions available" },
+                  { "item": "Document Decisions", "text": "Note why dual-axis was chosen over alternatives" }
+                ],
+                "finalNote": "Remember: The goal is insight, not just visualization. If a dual-axis chart doesn't make the business story clearer, use a different approach.",
+                "finalParagraph": "By following this comprehensive guide, you'll be able to create dual-axis charts that not only look professional but also drive meaningful business decisions. Start with simple applications, gather feedback, and gradually tackle more complex analytical challenges."
+              },
+              "cta": {
+                "title": "Ready to Master Tableau Visualization?",
+                "content": "Download our Tableau dual-axis chart template with sample datasets and step-by-step exercises.",
+                "buttonText": "GET TABLEAU TEMPLATE PACK"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+,
+    "sql-db": {
+      "title": "SQL & DB",
+      "icon": "Database",
+      "color": "bg-orange-500",
+      "count": "10 Tutorials",
+      "description": "Database management and SQL queries"
+    },
+    "career": {
+      "title": "Career",
+      "icon": "Briefcase",
+      "color": "bg-emerald-500",
+      "count": "Pro Advice",
+      "description": "Career guidance for data professionals"
+    },
+    "genai-llm": {
+      "title": "GenAI / LLM",
+      "icon": "MessageSquare",
+      "color": "bg-indigo-600",
+      "count": "Latest Tech",
+      "description": "Generative AI and Large Language Models",
+      "subcategories": {
+        "rag-finetuning": {
+          "title": "RAG & Fine-Tuning",
+          "icon": "Cpu",
+          "color": "bg-purple-500",
+          "count": "3 Tutorials",
+          "topics": [
+            {
+              "id": "rag-vs-finetuning",
+              "title": "RAG vs Fine-Tuning Llama 2: When to Use Which?",
+              "description": "Complete guide to choosing between RAG and fine-tuning",
+              "duration": "8 min read",
+              "date": "2026",
+              "content": {
+                "hero": {
+                  "title": "RAG vs Fine-Tuning Llama 2: When to Use Which?",
+                  "author": "AI Expert",
+                  "date": "2026",
+                  "readTime": "~8 minutes"
+                },
+                "video": {
+                  "youtubeId": "nmaooEqRmMo",
+                  "title": "RAG vs Fine-Tuning Explained"
+                },
+                "sections": [
+                  {
+                    "id": "intro",
+                    "title": "Introduction",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "When building applications using Generative AI and large language models such as Llama 2, one of the most common questions is whether to use Retrieval-Augmented Generation (RAG) or fine-tuning. Both techniques are used to adapt a base model for real-world tasks, but they work in fundamentally different ways and are suited for different kinds of problems.",
+                        "hasBar": true
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "This article explains what RAG and fine-tuning mean in the context of Llama 2, how each approach works, their key differences, and when one should be preferred over the other. The goal is to help learners and practitioners make informed architectural decisions rather than relying on assumptions."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "toc",
+                    "type": "toc",
+                    "title": "Table of Contents",
+                    "content": [
+                      "What Is RAG in Llama 2?",
+                      "What Is Fine-Tuning in Llama 2?",
+                      "Key Differences Between RAG and Fine-Tuning",
+                      "How RAG Works Step by Step",
+                      "How Fine-Tuning Works Step by Step",
+                      "Real-World Use Cases of RAG",
+                      "Real-World Use Cases of Fine-Tuning",
+                      "Cost, Maintenance, and Scalability Comparison",
+                      "Can RAG and Fine-Tuning Be Used Together?",
+                      "Best Practices and Common Pitfalls",
+                      "Conclusion"
+                    ]
+                  },
+                  {
+                    "id": "comparison",
+                    "title": "Key Differences Between RAG and Fine-Tuning",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "Understanding the fundamental differences between RAG and fine-tuning is crucial for making the right architectural decisions."
+                      },
+                      {
+                        "type": "table",
+                        "title": "RAG vs Fine-Tuning Comparison",
+                        "headers": ["Aspect", "RAG", "Fine-Tuning"],
+                        "rows": [
+                          ["Model Weights", "Not changed", "Updated"],
+                          ["Data Updates", "Immediate", "Requires retraining"],
+                          ["Knowledge Source", "External documents", "Internalized patterns"],
+                          ["Hallucination Risk", "Lower", "Higher"],
+                          ["Explainability", "High", "Limited"],
+                          ["Best Use", "Dynamic knowledge", "Stable behavior"]
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "what-is-rag",
+                    "title": "What Is RAG in Llama 2?",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "Retrieval-Augmented Generation (RAG) is an approach where Llama 2 generates responses by using information retrieved from external sources at the moment a query is made. Rather than relying solely on the knowledge stored within the model's weights from its initial training, RAG enables the model to reference databases, documents, or other data sources dynamically."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "How the Process Works"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Using Python for Data Science, the RAG workflow follows a specific sequence to ground the AI's response in factual data:"
+                      },
+                      {
+                        "type": "code",
+                        "title": "RAG Implementation Example",
+                        "language": "python",
+                        "code": "from langchain.embeddings import OpenAIEmbeddings\nfrom langchain.vectorstores import Chroma\nfrom langchain.chains import RetrievalQA\nfrom langchain.llms import LlamaCpp\n\n# Load documents and create vector store\ndocuments = load_documents(\"data/\")\nembeddings = OpenAIEmbeddings()\nvectorstore = Chroma.from_documents(documents, embeddings)\n\n# Create RAG chain\nllm = LlamaCpp(model_path=\"./models/llama-2-7b-chat.gguf\")\nqa_chain = RetrievalQA.from_chain_type(\n    llm=llm,\n    retriever=vectorstore.as_retriever(),\n    chain_type=\"stuff\"\n)\n\n# Query the RAG system\nresponse = qa_chain.run(\"What is RAG?\")\nprint(response)",
+                        "borderColor": "indigo"
+                      },
+                      {
+                        "type": "image",
+                        "title": "RAG Architecture Diagram",
+                        "url": "https://drive.google.com/file/d/1AZKl-ipZMnKozS_eEGrRMXrniS9chHMf/preview",
+                        "caption": "RAG system architecture showing document retrieval and generation"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "what-is-finetuning",
+                    "title": "What Is Fine-Tuning in Llama 2?",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "Fine-tuning is the process of training Llama 2 further on a custom dataset so that the model learns specific behaviors, styles, or task patterns. Unlike RAG, fine-tuning directly modifies the internal parameters of the model."
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "In fine-tuning, the model is exposed to many examples of input–output pairs. Over time, it learns to replicate these patterns more accurately. Once fine-tuned, the model produces responses based on its updated internal knowledge, without retrieving external documents at inference time."
+                      },
+                      {
+                        "type": "code",
+                        "title": "Fine-Tuning Example",
+                        "language": "python",
+                        "code": "from transformers import LlamaForCausalLM, LlamaTokenizer, TrainingArguments, Trainer\nimport torch\n\n# Load pre-trained model and tokenizer\nmodel = LlamaForCausalLM.from_pretrained(\"meta-llama/Llama-2-7b-hf\")\ntokenizer = LlamaTokenizer.from_pretrained(\"meta-llama/Llama-2-7b-hf\")\n\n# Prepare training data\ntrain_dataset = prepare_finetuning_data(\"data/train.json\")\n\n# Training arguments\ntraining_args = TrainingArguments(\n    output_dir=\"./results\",\n    num_train_epochs=3,\n    per_device_train_batch_size=4,\n    warmup_steps=500,\n    weight_decay=0.01,\n    logging_dir=\"./logs\",\n)\n\n# Create trainer\ntrainer = Trainer(\n    model=model,\n    args=training_args,\n    train_dataset=train_dataset,\n)\n\n# Start fine-tuning\ntrainer.train()",
+                        "borderColor": "purple"
+                      },
+                      {
+                        "type": "image",
+                        "title": "Fine-Tuning Process",
+                        "url": "https://drive.google.com/file/d/1KQ1SQe0by7JBzM_LblwaL-2ycCn1gAqs/preview",
+                        "caption": "Fine-tuning workflow showing model training on custom data"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "rag-steps",
+                    "title": "How RAG Works Step by Step",
+                    "phase": "Step-by-Step Guide",
+                    "content": [
+                      {
+                        "type": "subtitle",
+                        "text": "Step 1: Prepare and Store Knowledge"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "The RAG process begins by collecting documents such as PDFs, webpages, or internal notes. These documents are split into small chunks and converted into embeddings. The embeddings are stored in a vector database for fast similarity search."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Step 2: Convert the User Query into an Embedding"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "When a user asks a question, the query is converted into an embedding so it can be compared with stored document embeddings."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Step 3: Retrieve Relevant Context"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "The vector database searches for the most similar document chunks based on the query embedding."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Step 4: Build the RAG Prompt"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "The retrieved context is injected into the prompt along with clear instructions to answer only from the provided information."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Step 5: Generate the Final Answer"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "The language model uses the retrieved context to generate a grounded and accurate response."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "finetuning-steps",
+                    "title": "How Fine-Tuning Works Step by Step",
+                    "phase": "Step-by-Step Guide",
+                    "content": [
+                      {
+                        "type": "subtitle",
+                        "text": "Step 1: Dataset Preparation"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Action: Collect \"Prompt–Response\" pairs. Goal: Create a high-quality dataset that reflects the exact behavior or tone you want Llama 2 to learn (e.g., medical summaries or professional tone)."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Step 2: Data Formatting"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Action: Convert the dataset into the specific format required by Llama 2. Goal: Ensure the model can read and process the training data correctly."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Step 3: Model Training (GPU)"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Action: Run the training process on high-performance GPUs. Goal: Update the model's internal parameters (weights) so it aligns with your provided examples."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Step 4: Evaluation"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Action: Compare the fine-tuned model against the original \"base\" model. Goal: Verify that the model performs better on your specific task before moving forward."
+                      },
+                      {
+                        "type": "subtitle",
+                        "text": "Step 5: Deployment & Inference"
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Action: Deploy the finalized model for real-world use. Goal: The model now responds in the new, specialized style it learned during training."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "rag-use-cases",
+                    "title": "Real-World Use Cases of RAG",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "RAG is commonly used in scenarios where accuracy and data freshness are critical. Internal knowledge assistants often rely on RAG to answer employee questions based on policy documents, manuals, or internal reports. Since these documents change over time, RAG allows updates without retraining the model."
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Another major use case is document-based question answering in regulated domains such as law, healthcare, and finance. In these settings, answers must be grounded in source material, and hallucinations can have serious consequences. RAG helps mitigate this risk by forcing the model to rely on retrieved evidence."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "finetuning-use-cases",
+                    "title": "Real-World Use Cases of Fine-Tuning",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "Fine-tuning is better suited for problems where the task is well defined and stable. Classification tasks such as intent detection, sentiment analysis, or routing support tickets benefit from fine-tuning because the model learns consistent mappings between inputs and outputs."
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Fine-tuning is also effective when a specific tone or response structure is required. For example, a chatbot designed to follow a brand's communication style can be fine-tuned to produce uniform responses without relying on external context."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "cost-comparison",
+                    "title": "Cost, Maintenance, and Scalability Comparison",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "From a long-term perspective, RAG systems are generally easier to maintain. Updating the underlying data does not require retraining the model, which reduces operational complexity. RAG also scales well as document collections grow."
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "Fine-tuned models, while faster at inference, require retraining whenever the desired behavior changes or when new examples are added. This increases both computational cost and maintenance effort. For learners and early-stage projects, RAG typically offers a more practical balance between performance and flexibility."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "hybrid-approach",
+                    "title": "Can RAG and Fine-Tuning Be Used Together?",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "In mature systems, RAG and fine-tuning are often combined. A common approach is to fine-tune Llama 2 for consistent response structure or tone, while using RAG to supply factual or domain-specific information at runtime."
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "This hybrid strategy allows teams to benefit from both approaches without over-relying on either one."
+                      },
+                      {
+                        "type": "code",
+                        "title": "Hybrid RAG + Fine-Tuning Example",
+                        "language": "python",
+                        "code": "# Hybrid approach combining fine-tuned model with RAG\nfrom transformers import pipeline\nfrom langchain.retrievers import VectorStoreRetriever\n\n# Load fine-tuned model\nfine_tuned_model = pipeline(\"text-generation\", model=\"./fine-tuned-llama2\")\n\n# Setup RAG retriever\nretriever = VectorStoreRetriever(vectorstore=vectorstore)\n\n# Combined function\ndef hybrid_rag_finetuning(query):\n    # Retrieve relevant context\n    context = retriever.get_relevant_documents(query)\n    \n    # Combine context with query\n    prompt = f\"Context: {context}\\n\\nQuestion: {query}\\n\\nAnswer:\"\n    \n    # Generate with fine-tuned model\n    response = fine_tuned_model(prompt, max_length=200)\n    return response",
+                        "borderColor": "blue"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "best-practices",
+                    "title": "Best Practices and Common Pitfalls",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "text": "Choosing between RAG and fine-tuning should always be driven by the nature of the problem. RAG should be preferred when information changes frequently or when responses must be traceable to source documents. Fine-tuning should be used when behavioral consistency is the primary goal."
+                      },
+                      {
+                        "type": "paragraph",
+                        "text": "A common mistake is attempting to fine-tune a model to store large volumes of factual data. This approach is inefficient and often leads to outdated responses. Another pitfall is evaluating systems based only on response fluency rather than correctness and reliability."
+                      }
+                    ]
+                  }
+                ],
+                "troubleshooting": {
+                  "title": "Common Implementation Challenges",
+                  "subtitle": "Key challenges and solutions for RAG and fine-tuning implementations",
+                  "cards": [
+                    {
+                      "title": "RAG: Poor Retrieval",
+                      "icon": "Search",
+                      "color": "amber",
+                      "content": "If retrieval quality is poor, check your chunking strategy and embedding model. Smaller chunks with overlap often work better."
+                    },
+                    {
+                      "title": "Fine-Tuning: Overfitting",
+                      "icon": "AlertCircle",
+                      "color": "red",
+                      "content": "Model memorizes training data. Use more diverse training examples, regularization, and early stopping."
+                    },
+                    {
+                      "title": "Both: High Latency",
+                      "icon": "Clock",
+                      "color": "indigo",
+                      "content": "For RAG: Optimize vector DB indexes. For fine-tuning: Use model quantization and hardware acceleration."
+                    }
+                  ]
+                },
+                "conclusion": {
+                  "title": "Conclusion",
+                  "content": "RAG and fine-tuning address different needs within the Llama 2 ecosystem. RAG focuses on enabling access to external knowledge, while fine-tuning shapes how the model behaves. Understanding this distinction helps learners and practitioners design systems that are accurate, maintainable, and scalable.",
+                  "checklist": [
+                    { "item": "Use RAG when", "text": "Information changes frequently or traceability is needed" },
+                    { "item": "Use Fine-Tuning when", "text": "Behavioral consistency is the primary requirement" },
+                    { "item": "Consider Hybrid when", "text": "You need both factual accuracy and consistent tone" },
+                    { "item": "Evaluate based on", "text": "Correctness, not just fluency" },
+                    { "item": "Start with", "text": "RAG for most real-world applications" }
+                  ],
+                  "finalNote": "For most real-world applications, starting with RAG is the safer and more flexible choice. Fine-tuning should be applied selectively when the task clearly requires it.",
+                  "finalParagraph": "By understanding the strengths and limitations of both approaches, you can build more effective and maintainable AI systems that deliver real value to users."
+                },
+                "cta": {
+                  "title": "Ready to Build Your AI System?",
+                  "content": "Download our complete RAG and fine-tuning starter kits with pre-configured examples and sample datasets.",
+                  "buttonText": "GET AI STARTER KITS"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "mlops": {
+      "title": "MLOps",
+      "icon": "Server",
+      "color": "bg-slate-700",
+      "count": "4 Systems",
+      "description": "Machine Learning Operations"
+    },
+    "data-engineering": {
+      "title": "Data Engineering",
+      "icon": "Layers",
+      "color": "bg-cyan-600",
+      "count": "Pipeline Pro",
+      "description": "Build robust data pipelines"
+    },
+    "ai-strategy-pm": {
+      "title": "AI Strategy (PM)",
+      "icon": "Zap",
+      "color": "bg-yellow-500",
+      "count": "Strategic",
+      "description": "AI strategy for product managers"
+    },
+    "ai-governance": {
+      "title": "AI Governance",
+      "icon": "ShieldCheck",
+      "color": "bg-red-500",
+      "count": "Ethics & Compliance",
+      "description": "AI ethics and governance frameworks"
+    },
+    "copilot-m365": {
+      "title": "Copilot & M365",
+      "icon": "Layout",
+      "color": "bg-sky-500",
+      "count": "Efficiency",
+      "description": "Microsoft Copilot and Office 365"
+    },
+    "microsoft-power-platforms": {
+      "title": "Microsoft Power Platforms",
+      "icon": "Zap",
+      "color": "bg-blue-700",
+      "count": "Low Code",
+      "description": "Power Platform development"
+    },
+    "data-story-telling": {
+      "title": "Data Story Telling",
+      "icon": "BookOpen",
+      "color": "bg-rose-500",
+      "count": "Communication",
+      "description": "Tell stories with data"
+    },
+    "genai-use-cases": {
+      "title": "GenAI for Different Use Cases",
+      "icon": "MessageSquare",
+      "color": "bg-violet-500",
+      "count": "Industry Specific",
+      "description": "Industry-specific GenAI applications"
+    },
+    "ai-for-product-managers": {
+      "title": "AI For Product Managers",
+      "icon": "Briefcase",
+      "color": "bg-teal-600",
+      "count": "Product Strategy",
+      "description": "AI for product management"
+    }
+  },
+  "navigation": {
+    "toc": [
+      { "id": "intro", "label": "Introduction" },
+      { "id": "step1", "label": "Step 1: Single Files" },
+      { "id": "step2", "label": "Step 2: Missing Data" },
+      { "id": "step3", "label": "Step 3: Saving Output" },
+      { "id": "automation", "label": "Step 4: Using Glob" },
+      { "id": "troubleshooting", "label": "Troubleshooting" }
+    ],
+    "sidebarLinks": {
+      "title": "Need More Help?",
+      "content": "Check out our guide on Python for data analysis for advanced users.",
+      "buttonText": "View Courses"
+    }
+  }
+}
