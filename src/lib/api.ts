@@ -1412,7 +1412,7 @@ const courses: Course[] = [
       }
     ],
     outcomes: [
-      "Analyze and manage data using Excel, SQL, Python, Power BI, and Tableau",
+      "Analyze and manage data using Excel, SQL, Python, Power BI",
       "Create compelling dashboards and visual reports for effective business storytelling",
       "Apply statistical methods and predictive modeling to draw data-driven insights",
       "Work on 10+ industry projects and 30+ case studies across sectors like finance, healthcare, and retail",
@@ -1601,15 +1601,15 @@ const courses: Course[] = [
         difficulty: "Beginner to Intermediate",
         videoId: "oWy7ZkS3axE"
       },
-      {
-        id: "p5",
-        title: "AirBNB Business Case Study - Tableau Dashboarding",
-        description: "Analyze AirBNB business data and create insightful visualizations using Tableau. Learn key techniques for dashboarding, filtering, and data presentation to drive business decisions.",
-        image: "https://img.youtube.com/vi/4cx9_OSv4Fo/0.jpg",
-        skills: ["Tableau", "Tableau Dashboarding", "Tableau Dashboarding", "Filters", "Tableau Calculations", "Interactive Dashboards", "Data Connections", "Data Blending", "Tableau Filters"],
-        difficulty: "Beginner to Intermediate",
-        videoId: "4cx9_OSv4Fo"
-      },
+      // {
+      //   id: "p5",
+      //   title: "AirBNB Business Case Study - Tableau Dashboarding",
+      //   description: "Analyze AirBNB business data and create insightful visualizations using Tableau. Learn key techniques for dashboarding, filtering, and data presentation to drive business decisions.",
+      //   image: "https://img.youtube.com/vi/4cx9_OSv4Fo/0.jpg",
+      //   skills: ["Tableau", "Tableau Dashboarding", "Tableau Dashboarding", "Filters", "Tableau Calculations", "Interactive Dashboards", "Data Connections", "Data Blending", "Tableau Filters"],
+      //   difficulty: "Beginner to Intermediate",
+      //   videoId: "4cx9_OSv4Fo"
+      // },
       {
         id: "p6",
         title: "Analyzing Netflix Originals & IMDB Scores",
@@ -7417,6 +7417,245 @@ const courses: Course[] = [
 
   },
 
+   {
+    id: '20',
+    title: "Data Analytics With Visualization in Pune",
+    description: "  Start your journey in analytics with Ivy Professional School’s Pune-based program. Learn industry-relevant tools and techniques, build real projects, and gain job-focused training to thrive in data roles.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Analytics With Visualization in Mumbai | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Analytics With Visualization in Mumbai - Learn top tools with hands-on projects & career support.",
+      bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-analytics-course-pune",
+    longDescription: "Ivy Professional School’s Data Analytics Course in Pune is crafted to help aspiring analysts and professionals build a strong foundation in data interpretation, business intelligence, and analytical modeling. \n\n With Pune emerging as a major hub for IT, finance, and consulting, the need for skilled data analysts continues to grow. Our course combines foundational learning with advanced practical exposure to ensure you're ready for real-world challenges. \n\n The course emphasizes hands-on experience by covering Python for data transformation and automation, SQL for extracting insights from structured databases, Excel for applied business analytics, Tableau and Power BI for dashboarding and visualization, and statistics and predictive modelling for data-driven decision-making."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Build a portfolio of analytics projects that reflect real business challenges and solutions.",
+      "Solve business case problems using data analysis and predictive models.",
+      "Design and publish business dashboards using Tableau and Power BI.",
+      "Use Python libraries such as Pandas and Matplotlib to clean and visualize large datasets.",
+      "Write and optimize SQL queries to retrieve and manipulate data from relational databases.",
+      "Understand key analytics principles like data structures, sampling techniques, probability, and descriptive statistics.",
+      
+    ],
+    curriculum: [
+      {
+        id: "m1",
+        title: "Advance Excel",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
+          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
+          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
+          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
+          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
+          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
+          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
+          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
+          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
+          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
+          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
+          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
+          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
+          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
+          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
+          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
+          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
+          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
+          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
+          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        ]
+      },
+
+      {
+        id: "m2",
+        title: "SQL Queries & Relational Database Management",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+        ]
+      },
+
+      {
+        id: "m3",
+        title: "Data Visualization Using Tableau (Addon module with extra charges)",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
+          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
+          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
+          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
+          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
+          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
+          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
+          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
+          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
+          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
+          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
+          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
+          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        id: "m4",
+        title: "Data Visualization Using Power BI",
+        duration: "28 hrs",
+        topics: [
+          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+        ]
+      }
+      ,
+
+      {
+        id: "m5",
+        title: "Python for Data Science",
+        duration: "36 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
+          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
+          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
+          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
+          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
+          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
+          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
+          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
+          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
+          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
+          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
+          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
+          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+        ]
+      }
+      ,
+      {
+        id: "m6",
+        title: "4 Months PrepAI",
+        duration: "120 days",
+        topics: [
+          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
+          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
+          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
+          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
+          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
+        ]
+      }
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "How To Choose Ideal Residence Using SQL",
+        description: "Master SQL for real estate data analysis. Learn how to use SELECT statements, create databases, and import/export data, while performing calculations and reporting in SQL.",
+        image: "https://img.youtube.com/vi/hzxawPxuks8/0.jpg",
+        skills: ["SQL ", "SELECT", "CREATE DATABASE", "MySQL Connections", "MySQL Connections", "Data Export", "Excel to MySQL", "CSV Conversion", "SQL LIMIT", "SQL COUNT", "SQL COUNT", "Data Summarization", "Reporting in SQL"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "hzxawPxuks8"
+      },
+      {
+        id: "p2",
+        title: "Power BI Live Case Study | Web Analytics",
+        description: "Learn to create a Power BI dashboard from scratch. Explore website click analysis, data visualization techniques, filters, fields, and Power Query transformations in Power BI.",
+        image: "https://img.youtube.com/vi/-XUN_3Hama0/0.jpg",
+        skills: ["Power BI", "Power Query", "Data Transformation", "Filters", "Fields in Power BI", "Power BI Cards", "Power BI Charts", "Bar Charts", "Slicers", "Data Visualization", "Power BI Dashboard", "Date Handling in Power BI"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "-XUN_3Hama0"
+      },
+      {
+        id: "p3",
+        title: "Tableau Live Case | WPL Dataset | Identify the Strategies used in WPL Auctions",
+        description: "Analyze the Women's Premier League (WPL) auction strategies using Tableau. Learn to create interactive dashboards and visualize key data points for team performance insights.",
+        image: "https://img.youtube.com/vi/THyEuZ0xHC8/0.jpg",
+        skills: ["Tableau", "Tableau Dashboard", "Tableau Drag and Drop", "Tableau Sheets", "Data Source in Tableau", "Tableau Live and Extract", "Tableau Stories", "Tableau Filters", "Tableau Visualizations", "Tableau Functions", "Tableau Headers"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "THyEuZ0xHC8"
+      },
+      {
+        id: "p4",
+        title: "Analyze Sales of Smartphones on Amazon",
+        description: "Analyze smartphone sales data using Excel. Learn to create dashboards, perform quarterly revenue analysis, and uncover insights using key Excel functions.",
+        image: "https://img.youtube.com/vi/oWy7ZkS3axE/0.jpg",
+        skills: ["Excel Dashboards", "PivotTables", "PivotCharts", " VLOOKUP", "SUMIF", "Data Validation", "Conditional Formatting", "Excel Formulas", " Data Analysis", "Revenue Analysis", "Excel Charts"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "oWy7ZkS3axE"
+      },
+      {
+        id: "p5",
+        title: "AirBNB Business Case Study - Tableau Dashboarding",
+        description: "Analyze AirBNB business data and create insightful visualizations using Tableau. Learn key techniques for dashboarding, filtering, and data presentation to drive business decisions.",
+        image: "https://img.youtube.com/vi/4cx9_OSv4Fo/0.jpg",
+        skills: ["Tableau", "Tableau Dashboarding", "Tableau Dashboarding", "Filters", "Tableau Calculations", "Interactive Dashboards", "Data Connections", "Data Blending", "Tableau Filters"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "4cx9_OSv4Fo"
+      },
+      {
+        id: "p6",
+        title: "Analyzing Netflix Originals & IMDB Scores",
+        description: "Analyze Netflix Originals data with SQL, utilizing Window Functions, CTEs, and various SQL queries to explore trends and uncover insights in the dataset.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["SQL Queries", "Window Functions", "Common Table Expressions (CTEs)", "Date Functions", "JOINs", "GROUP BY", "HAVING", "ORDER BY", "String Functions", "SQL Aggregates"],
+        difficulty: "Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      }
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ]
+
+  },
+
     {
     id: '21',
     title: "Generative AI Course in Kolkata",
@@ -7444,6 +7683,226 @@ const courses: Course[] = [
       "Work with Transformer models such as GPT for text generation",
       "Implement VAEs for structured data modeling",
       "Build and train GANs for creative tasks like image generation"
+    ],
+    prerequisites: [
+      "Familiarity with basic digital tools and online platforms.",
+      "Understanding of high-school level algebra and statistics.",
+      "No prior programming experience is needed.",
+      "Bachelor’s degree or diploma in a STEM or quantitative field.",
+      "Logical thinking and willingness to learn through projects."
+    ],
+    curriculum: [
+      {
+        id: "m1",
+        title: "GenAI App Builder - Foundation Certificate Program",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
+          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
+          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
+          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
+          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
+          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
+          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
+          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+        ]
+      },
+      {
+        id: "m2",
+        title: "Advanced GenAI and Machine Learning",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
+          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
+          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
+          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
+          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
+          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
+          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+        ]
+      },
+      {
+        id: "m3",
+        title: "Advanced AI Integration and Multimodal Applications",
+        duration: "30 hrs",
+        topics: [
+          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
+          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
+          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
+          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
+          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
+          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
+          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
+          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
+          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+        ]
+      },
+      {
+        id: "m4",
+        title: "Mastering Multimodal Fusion and GenAI Frameworks",
+        duration: "14 hrs",
+        topics: [
+          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
+          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
+          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
+          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
+          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
+          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+        ]
+      }
+    ]
+
+
+    ,
+
+
+
+    projects: [
+      {
+        id: "p1",
+        title: "Employee Attrition Prediction",
+        description: "Use machine learning techniques to predict which employees are likely to leave the organization",
+        image: "https://img.youtube.com/vi/NmW1EVedEts/0.jpg",
+        skills: ["Classification Models", "Data Preprocessing", "Feature Importance", "Model Evaluation"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "NmW1EVedEts"
+      },
+      {
+        id: "p2",
+        title: "Fraud Call Detection using Audio Data",
+        description: "Use audio data and neural networks to detect fraudulent calls by analyzing voice patterns and embeddings with deep learning techniques",
+        image: "https://img.youtube.com/vi/CeDUuCYfxrs/0.jpg",
+        skills: ["Audio Preprocessing", "Feature Extraction with Librosa", "Neural Network Modeling", "Model Evaluation using TensorFlow"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "CeDUuCYfxrs"
+      },
+      {
+        id: "p3",
+        title: "Sentiment Analysis with ChatGPT and Python",
+        description: "Learn the fundamentals of ChatGPT, sentiment analysis, and how to apply NLP techniques on tweet data using Python for real-world insights",
+        image: "https://img.youtube.com/vi/uHSAvl03yf4/0.jpg",
+        skills: ["Sentiment Analysis Model", "Bag of Words", "WordCloud Visualization", "Comparison with AI Tools like ChatGPT and Alexa"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "uHSAvl03yf4"
+      },
+      {
+        id: "p4",
+        title: "How to use GenAI in Google Sheet 2024 | AI in Google Sheet (Quick Method) | Beginner to Advance",
+        description: "Learn how to set up and use GenAI in Google Sheets for data analysis and automation. The video covers easy setup, practical examples, and advanced features for better decision-making, with troubleshooting tips.",
+        image: "https://img.youtube.com/vi/EC1jT0pWxM4/0.jpg",
+        skills: ["GenAI", "Google Sheets", "Data Analysis", " AI Integration", "Templates"],
+        difficulty: "Beginner to Advanced",
+        videoId: "EC1jT0pWxM4"
+      },
+      {
+        id: "p5",
+        title: "Build your First GenAI Powered Chatbot with Python | Generative AI | IvyProSchool",
+        description: "Learn to build your first GenAI-powered chatbot using Python and Generative AI. This video covers chatbot creation, Python implementation, and real-world applications of AI in conversational interfaces.",
+        image: "https://img.youtube.com/vi/v-jQx1acyLQ/0.jpg",
+        skills: ["GenAI", "Python", "Chatbot", "Generative AI", "AI Development"],
+        difficulty: "Beginner to Advanced",
+        videoId: "v-jQx1acyLQ"
+      },
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ],
+    instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University.",
+        isDirector: true
+
+      }
+    ],
+    aiFeatures: [
+      {
+        id: "ai1",
+        title: "AI Learning Assistant",
+        description: "Get personalized help and explanations for complex topics 24/7",
+        icon: "bot"
+      },
+      {
+        id: "ai2",
+        title: "Intelligent Progress Tracking",
+        description: "Our AI analyzes your learning pattern and suggests optimal study schedules",
+        icon: "activity"
+      },
+      {
+        id: "ai3",
+        title: "Automated Code Review",
+        description: "Get instant feedback on your coding assignments with suggestions for improvement",
+        icon: "code"
+      }
+    ],
+    faq: [
+      {
+        question: "Do I need prior coding experience?",
+        answer: "No, this bootcamp is designed to take you from zero to job-ready. We start with the basics of Python programming and gradually build up to advanced concepts."
+      },
+      {
+        question: "What is the time commitment?",
+        answer: "The bootcamp requires about 20-25 hours per week for 16 weeks. This includes live sessions, assignments, projects, and self-study."
+      },
+      {
+        question: "What kind of job support do you provide?",
+        answer: "We provide resume reviews, interview preparation, portfolio building, and connections to our hiring partners. Our career services team works with you individually until you secure a job."
+      },
+      {
+        question: "Can I attend part-time while working a full-time job?",
+        answer: "Yes, many of our students work full-time. We provide evening and weekend live sessions, and all sessions are recorded for those who cannot attend live."
+      }
+    ]
+  },
+
+
+   {
+    id: '21',
+    title: "Generative AI Course in Delhi",
+    description: "Looking to upskill in the most in-demand AI technologies? The Generative AI Course in Delhi by Ivy Professional School is crafted for professionals, students, and tech enthusiasts aiming to become proficient in advanced AI techniques like GANs, VAEs, and Transformer-based models like GPT. With Delhi emerging as a prominent tech and innovation hub, this program offers hands-on learning, expert mentorship, and placement-focused training to help you build generative AI solutions that power the future of automation, creativity, and intelligence.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Data Science",
+    students: 5876,
+    metaData: {
+      title: "Generative AI Course with IIT Guwahati: #1 GenAI Course ",
+      description: "Join IIT Guwahati Certified Generative AI course and become job-ready in 18 weeks. Build 15+ GenAI apps on cloud. Get IBM & NASSCOM certified",
+      bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
+
+    },
+    duration: "225 Hours",
+    rating: 4.9,
+    reviewCount: 5567,
+    isFeatured: true,
+    slug: "generative-ai-course-delhi",
+    longDescription: "  The Generative AI Course in Delhi is a specialized, hands-on training program focused on the design, development, and deployment of generative artificial intelligence models. Learners explore deep learning foundations and progress into specialized tools such as GANs (Generative Adversarial Networks), VAEs (Variational Autoencoders), and Large Language Models (LLMs) such as GPT and BERT. \n\n  Ideal for working professionals, developers, and data science enthusiasts, this Delhi-based course bridges theory and practice, preparing you for real-world AI development roles through practical labs, live projects, and capstone assignments"
+    , outcomes: [
+      "Build and train GANs for image and content generation",
+      "Implement VAEs for data modeling and reconstruction",
+      "Understand and use Transformer models like GPT for NLP tasks",
+      "Fine-tune LLMs using Hugging Face Transformers",
+      "Develop and deploy AI models as APIs and web apps",
+      "Understand ethical considerations in generative AI",
+      "Complete real-world generative AI projects from scratch"
     ],
     prerequisites: [
       "Familiarity with basic digital tools and online platforms.",

@@ -357,8 +357,8 @@ const addBacklinks = (text: string) => {
            hover:text-[#3e69cc] hover:decoration-[#0f172a]/40 transition-colors duration-300">
     Generative AI
   </a>`
-        ).replace(/Tableau/g, `<a href="https://blog.ivyproschool.com/top-9-reasons-to-learn-python-to-become-data-scientist-ai-expert/" class="text-[#013a81] font-semibold underline decoration-orange-200 underline-offset-4 hover:text-orange-600 transition-colors">Tableau</a>`)
-        .replace(/business intelligence/g, `<a href="https://blog.ivyproschool.com/decoding-business-analytics-vs-business-intelligence/" class="text-[#013a81] font-semibold underline decoration-orange-200 underline-offset-4 hover:text-orange-600 transition-colors">business intelligence</a>`);
+        )
+        .replace(/expert-level Tableau usage/g, `<a href=" https://ivyproschool.com/courses/data-science-and-ml-course" class="text-[#013a81] font-semibold underline decoration-orange-200 underline-offset-4 hover:text-orange-600 transition-colors">expert-level Tableau usage</a>`);
 };
 
 // Helper function to highlight Python code

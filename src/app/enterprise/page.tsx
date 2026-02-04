@@ -199,7 +199,6 @@ const expertiseData = [
     gradient: "from-cyan-600 via-teal-700 to-emerald-900",
     shadow: "shadow-cyan-900/50"
   },
-
   {
     id: '06',
     title: "PROFESSIONAL PERFORMANCE",
@@ -370,7 +369,6 @@ const faqData = [
 const clientLogos = [
   { id: 1, name: 'Honeywell', logo: Honeywell.src, alt: 'Honeywell logo' },
   { id: 2, name: 'ITC Infotech', logo: ITCInfotech.src, alt: 'ITC Infotech logo' },
-
   { id: 5, name: 'HSBC', logo: HSBC.src, alt: 'HSBC logo' },
   { id: 6, name: 'Genpact', logo: Genpact.src, alt: 'Genpact logo' },
   { id: 7, name: 'Atlas Copco', logo: AtlasCopco.src, alt: 'Atlas Copco logo' },
@@ -558,32 +556,31 @@ const Enterprise = () => {
             <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-blue-900 rounded-full blur-[120px]"></div>
           </div>
 
-          <div className="container mx-auto px-4 sm:px-6 py-12 md:py-24 relative z-10">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-
+          <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-24 relative z-10">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               {/* Left Column - Sophisticated Typography */}
-              <div className="space-y-8">
+              <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
                 <div className="inline-flex items-center gap-3 bg-blue-500/10 border border-blue-500/20 backdrop-blur-md px-4 py-2 rounded-full">
                   <Trophy className="h-4 w-4 text-blue-400" />
                   <span className="text-xs font-bold tracking-[0.2em] uppercase text-blue-200">Established 2007</span>
                 </div>
 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tighter">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tighter">
                   BUILD <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">CAPABILITY</span>
                   <span className="block mt-2">DRIVE IMPACT</span>
-                  <span className="block text-3xl md:text-4xl font-light text-slate-400 mt-4 tracking-normal italic">Future-Proof Your Talent</span>
+                  <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-slate-400 mt-2 lg:mt-4 tracking-normal italic">Future-Proof Your Talent</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl border-l-2 border-blue-600 pl-6">
+                <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl border-l-2 border-blue-600 pl-4 sm:pl-6">
                   Custom, ROI-focused corporate training in <span className="text-white font-semibold">GenAI, Data, and Leadership</span> for global enterprises.
                 </p>
 
                 {/* Action Buttons with Micro-interactions */}
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-3">
                   <Button
                     size="lg"
                     variant="outline"
-                    className="group bg-white/5 border-slate-700 text-white hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 rounded-xl px-8"
+                    className="group bg-white/5 border-slate-700 text-white hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 rounded-xl px-4 sm:px-6 lg:px-8 text-sm sm:text-base"
                     onClick={() => scrollToSection('why-choose-section')}
                   >
                     <Star className="mr-2 h-4 w-4 group-hover:fill-current" />
@@ -591,7 +588,7 @@ const Enterprise = () => {
                   </Button>
                   <Button
                     size="lg"
-                    className="bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] rounded-xl px-8"
+                    className="bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] rounded-xl px-4 sm:px-6 lg:px-8 text-sm sm:text-base"
                     onClick={() => scrollToSection('our-expertise')}
                   >
                     <Brain className="mr-2 h-4 w-4" />
@@ -599,52 +596,52 @@ const Enterprise = () => {
                   </Button>
                   <Button
                     size="lg"
-                    className="bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] rounded-xl px-8"
+                    className="bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] rounded-xl px-4 sm:px-6 lg:px-8 text-sm sm:text-base"
                     onClick={() => scrollToSection('case-studies-section')}
                   >
                     <Brain className="mr-2 h-4 w-4" />
-                    View Casestudies                  </Button>
+                    View Casestudies
+                  </Button>
                 </div>
 
                 {/* Client Logos - Subtle Glassmorphism */}
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">
+                <div className="mt-6 lg:mt-8">
+                  <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 sm:mb-6">
                     Strategic Training Partner To
                   </p>
 
                   <div className="relative">
                     <div ref={logoContainerRef} className="flex overflow-hidden">
-                      <div className="flex animate-scroll whitespace-nowrap gap-12 items-center">
-
+                      <div className="flex whitespace-nowrap gap-8 sm:gap-12 items-center">
                         {clientLogos.map((logo) => (
                           <div
                             key={logo.id}
-                            className="relative h-14 w-28 opacity-80 hover:opacity-100 transition-opacity"
+                            className="relative h-10 w-20 sm:h-12 sm:w-24 lg:h-14 lg:w-28 opacity-80 hover:opacity-100 transition-opacity flex-shrink-0"
                           >
                             <Image
                               src={logo.logo}
                               alt={logo.alt}
                               fill
                               className="object-contain"
+                              sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
                             />
                           </div>
                         ))}
-
                         {/* Duplicate for infinite loop */}
                         {clientLogos.map((logo) => (
                           <div
                             key={`${logo.id}-dup`}
-                            className="relative h-14 w-28 opacity-80 hover:opacity-100 transition-opacity"
+                            className="relative h-10 w-20 sm:h-12 sm:w-24 lg:h-14 lg:w-28 opacity-80 hover:opacity-100 transition-opacity flex-shrink-0"
                           >
                             <Image
                               src={logo.logo}
                               alt={logo.alt}
                               fill
                               className="object-contain"
+                              sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
                             />
                           </div>
                         ))}
-
                       </div>
                     </div>
                   </div>
@@ -652,22 +649,22 @@ const Enterprise = () => {
               </div>
 
               {/* Right Column - The "Masterclass" Form Design */}
-              <div className="relative">
+              <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
                 {/* Decorative Glow */}
-                <div className="absolute -inset-4 bg-blue-500/10 rounded-[2.5rem] blur-2xl"></div>
+                <div className="absolute -inset-2 sm:-inset-4 bg-blue-500/10 rounded-2xl sm:rounded-[2.5rem] blur-xl sm:blur-2xl"></div>
 
-                <div className="relative bg-[#0f172a] border border-slate-800 rounded-3xl shadow-2xl overflow-hidden">
-
+                <div className="relative bg-[#0f172a] border border-slate-800 rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl overflow-hidden">
                   {/* PROFESSIONAL VIDEO SECTION - Styled as a Hero Feature */}
-                  <div className="relative group/video h-52 md:h-64 bg-black">
+                  <div className="relative group/video h-40 sm:h-48 md:h-52 lg:h-64 bg-black">
                     <iframe
                       className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover/video:opacity-100 transition-opacity"
                       src="https://www.youtube.com/embed/iBVByzbsvNQ?autoplay=1&mute=1&loop=1&playlist=iBVByzbsvNQ&controls=0&modestbranding=1&rel=0&iv_load_policy=3"
                       allow="autoplay; encrypted-media"
+                      title="Ivy Pro School Experience"
                     ></iframe>
                     {/* Video Overlays */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-black/40"></div>
-                    <div className="absolute top-4 left-4 flex items-center gap-2">
+                    <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex items-center gap-2">
                       <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
@@ -677,18 +674,18 @@ const Enterprise = () => {
                   </div>
 
                   {/* Form Area */}
-                  <div className="p-8">
-                    <div className="mb-8">
-                      <h2 className="text-2xl font-bold text-white tracking-tight">Enterprise Solutions</h2>
-                      <p className="text-slate-400 text-sm mt-1">Book a strategy call with our senior advisors.</p>
+                  <div className="p-4 sm:p-6 lg:p-8">
+                    <div className="mb-6 lg:mb-8">
+                      <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">Enterprise Solutions</h2>
+                      <p className="text-slate-400 text-xs sm:text-sm mt-1">Book a strategy call with our senior advisors.</p>
                     </div>
 
-                    <form onSubmit={handleHeroFormSubmit} className="space-y-5">
-                      <div className="grid grid-cols-2 gap-4">
+                    <form onSubmit={handleHeroFormSubmit} className="space-y-4 sm:space-y-5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         <div className="space-y-1.5">
-                          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Full Name</label>
+                          <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Full Name</label>
                           <Input
-                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl"
+                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm sm:text-base"
                             placeholder="John Doe"
                             value={heroFormData.name}
                             onChange={(e) => setHeroFormData({ ...heroFormData, name: e.target.value })}
@@ -696,10 +693,10 @@ const Enterprise = () => {
                           />
                         </div>
                         <div className="space-y-1.5">
-                          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Work Email</label>
+                          <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Work Email</label>
                           <Input
                             type="email"
-                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl"
+                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm sm:text-base"
                             placeholder="john@enterprise.com"
                             value={heroFormData.email}
                             onChange={(e) => setHeroFormData({ ...heroFormData, email: e.target.value })}
@@ -709,9 +706,9 @@ const Enterprise = () => {
                       </div>
 
                       <div className="space-y-1.5">
-                        <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Company / Organization</label>
+                        <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Company / Organization</label>
                         <Input
-                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl"
+                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm sm:text-base"
                           placeholder="e.g. Fortune 500 Co."
                           value={heroFormData.company}
                           onChange={(e) => setHeroFormData({ ...heroFormData, company: e.target.value })}
@@ -720,9 +717,9 @@ const Enterprise = () => {
                       </div>
 
                       <div className="space-y-1.5">
-                        <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Training Requirements</label>
+                        <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Training Requirements</label>
                         <Textarea
-                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl resize-none"
+                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl resize-none text-sm sm:text-base"
                           placeholder="How can we help your team?"
                           rows={3}
                           value={heroFormData.message}
@@ -733,7 +730,7 @@ const Enterprise = () => {
 
                       <Button
                         type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-500 py-7 text-md font-bold rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/20 group"
+                        className="w-full bg-blue-600 hover:bg-blue-500 py-5 sm:py-6 lg:py-7 text-sm sm:text-base font-bold rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/20 group"
                         disabled={isHeroSubmitting}
                       >
                         {isHeroSubmitting ? (
@@ -743,13 +740,13 @@ const Enterprise = () => {
                           </span>
                         ) : (
                           <span className="flex items-center justify-center gap-2">
-                            <Calendar className="h-5 w-5 opacity-70" />
+                            <Calendar className="h-4 w-4 sm:h-5 sm:w-5 opacity-70" />
                             Secure Free Consultation
                           </span>
                         )}
                       </Button>
 
-                      <p className="text-[10px] text-center text-slate-500 uppercase tracking-[0.15em]">
+                      <p className="text-[9px] sm:text-[10px] text-center text-slate-500 uppercase tracking-[0.15em]">
                         Strictly Confidential • Response in &lt; 24h
                       </p>
                     </form>
@@ -760,21 +757,19 @@ const Enterprise = () => {
           </div>
         </section>
 
-
-        
         {/* CASE STUDIES SECTION */}
-        <section id="case-studies-section" className="py-20 bg-white">
+        <section id="case-studies-section" className="py-12 sm:py-16 lg:py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
                 Enterprise Case Studies
               </h2>
-              <p className="text-slate-600">
+              <p className="text-sm sm:text-base text-slate-600">
                 Real-world examples of how we've helped organizations transform their workforce and achieve measurable business impact.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {caseStudies.map((caseStudy) => (
                 <div
                   key={caseStudy.id}
@@ -784,33 +779,33 @@ const Enterprise = () => {
                     <img
                       src={caseStudy.image}
                       alt={caseStudy.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-blue-600 text-white">
+                    <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                      <Badge className="bg-blue-600 text-white text-xs">
                         {caseStudy.businessType}
                       </Badge>
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-700 transition-colors">
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3 group-hover:text-blue-700 transition-colors">
                       {caseStudy.title}
                     </h3>
 
-                    <p className="text-slate-600 mb-4 text-sm">
+                    <p className="text-sm text-slate-600 mb-3 sm:mb-4">
                       {caseStudy.subtitle}
                     </p>
 
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
+                    <div className="mb-4 sm:mb-6">
+                      <h4 className="font-semibold text-slate-900 mb-2 flex items-center gap-2 text-sm sm:text-base">
                         <TargetIcon className="h-4 w-4 text-green-600" />
                         Key Impacts:
                       </h4>
-                      <ul className="space-y-2">
+                      <ul className="space-y-1.5 sm:space-y-2">
                         {caseStudy.impact.map((item, index) => (
-                          <li key={index} className="flex items-start gap-2 text-sm">
-                            <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <li key={index} className="flex items-start gap-2 text-xs sm:text-sm">
+                            <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mt-0.5 flex-shrink-0" />
                             <span className="text-slate-700">{item}</span>
                           </li>
                         ))}
@@ -819,25 +814,25 @@ const Enterprise = () => {
 
                     <Link
                       href={`/casestudies#${caseStudy.id}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-sm group/link"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-xs sm:text-sm group/link"
                     >
                       Read full case study
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4 group-hover/link:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="text-center mt-12">
+            <div className="text-center mt-8 sm:mt-12">
               <Button
                 size="lg"
                 variant="outline"
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8"
+                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-6 sm:px-8 text-sm sm:text-base"
                 asChild
               >
                 <Link href="/casestudies">
-                  <ExternalLink className="mr-2 h-5 w-5" />
+                  <ExternalLink className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   View All Case Studies
                 </Link>
               </Button>
@@ -845,60 +840,55 @@ const Enterprise = () => {
           </div>
         </section>
 
-
-          {/* WHY ENTERPRISES CHOOSE IVY PRO SCHOOL */}
-        <section id="why-choose-section" className="py-20 bg-slate-50">
+        {/* WHY ENTERPRISES CHOOSE IVY PRO SCHOOL */}
+        <section id="why-choose-section" className="py-12 sm:py-16 lg:py-20 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
                   Why Enterprises Choose Ivy Pro School?
                 </h2>
-                <p className="text-slate-600 max-w-3xl mx-auto">
+                <p className="text-sm sm:text-base text-slate-600 max-w-3xl mx-auto">
                   Ivy Professional School is a top-ranked Data & AI professional education provider and corporate training partner, focused on measurable business impact since 2007.
                 </p>
               </div>
 
               {/* Four Key Value Pillars */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {/* Pillar 1 */}
                 <Collapsible open={openPillar === 'pillar1'} onOpenChange={(open) => open && setOpenPillar('pillar1')}>
                   <CollapsibleTrigger className="w-full">
-                    <div className="bg-white rounded-xl p-6 border border-slate-200 hover:border-blue-300 transition-colors cursor-pointer">
+                    <div className="bg-white rounded-xl p-4 sm:p-6 border border-slate-200 hover:border-blue-300 transition-colors cursor-pointer">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
-                            <span className="font-bold">1</span>
+                        <div className="flex items-center gap-3 sm:gap-4">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+                            <span className="font-bold text-sm sm:text-base">1</span>
                           </div>
                           <div>
-                            <h3 className="text-xl font-bold text-slate-900">Proven track record</h3>
-                            <p className="text-slate-600">Trusted by industry leaders since 2007</p>
+                            <h3 className="text-lg sm:text-xl font-bold text-slate-900">Proven track record</h3>
+                            <p className="text-sm text-slate-600">Trusted by industry leaders since 2007</p>
                           </div>
                         </div>
                         {openPillar === 'pillar1' ? (
-                          <ChevronUp className="h-5 w-5 text-slate-400" />
+                          <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
                         ) : (
-                          <ChevronDown className="h-5 w-5 text-slate-400" />
+                          <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
                         )}
                       </div>
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <div className="bg-white/80 rounded-b-xl border border-t-0 border-slate-200 p-6">
-                      <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                    <div className="bg-white/80 rounded-b-xl border border-t-0 border-slate-200 p-4 sm:p-6">
+                      <ul className="space-y-2 sm:space-y-3">
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">{alumniCount.toLocaleString()}+ alumni</span> working across {firmsCount}+ organizations
                           </span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">ISO 9001 certified</span> professional education provider, ranked among the top Data & AI schools in India
                           </span>
                         </li>
@@ -910,43 +900,43 @@ const Enterprise = () => {
                 {/* Pillar 2 */}
                 <Collapsible open={openPillar === 'pillar2'} onOpenChange={(open) => open && setOpenPillar('pillar2')}>
                   <CollapsibleTrigger className="w-full">
-                    <div className="bg-white rounded-xl p-6 border border-slate-200 hover:border-blue-300 transition-colors cursor-pointer">
+                    <div className="bg-white rounded-xl p-4 sm:p-6 border border-slate-200 hover:border-blue-300 transition-colors cursor-pointer">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
-                            <span className="font-bold">2</span>
+                        <div className="flex items-center gap-3 sm:gap-4">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
+                            <span className="font-bold text-sm sm:text-base">2</span>
                           </div>
                           <div>
-                            <h3 className="text-xl font-bold text-slate-900">Business-aligned, not tool-aligned</h3>
-                            <p className="text-slate-600">Customized solutions for your specific needs</p>
+                            <h3 className="text-lg sm:text-xl font-bold text-slate-900">Business-aligned, not tool-aligned</h3>
+                            <p className="text-sm text-slate-600">Customized solutions for your specific needs</p>
                           </div>
                         </div>
                         {openPillar === 'pillar2' ? (
-                          <ChevronUp className="h-5 w-5 text-slate-400" />
+                          <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
                         ) : (
-                          <ChevronDown className="h-5 w-5 text-slate-400" />
+                          <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
                         )}
                       </div>
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <div className="bg-white/80 rounded-b-xl border border-t-0 border-slate-200 p-6">
-                      <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                    <div className="bg-white/80 rounded-b-xl border border-t-0 border-slate-200 p-4 sm:p-6">
+                      <ul className="space-y-2 sm:space-y-3">
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">Programs customized</span> to your industry, functions and roles (Finance, HR, Sales, Ops, Tech)
                           </span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">Client-specific case studies</span> built on your data and workflows
                           </span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">Trainers are experienced problem-solvers</span> and delivery leaders, not just academic instructors
                           </span>
                         </li>
@@ -958,43 +948,43 @@ const Enterprise = () => {
                 {/* Pillar 3 */}
                 <Collapsible open={openPillar === 'pillar3'} onOpenChange={(open) => open && setOpenPillar('pillar3')}>
                   <CollapsibleTrigger className="w-full">
-                    <div className="bg-white rounded-xl p-6 border border-slate-200 hover:border-blue-300 transition-colors cursor-pointer">
+                    <div className="bg-white rounded-xl p-4 sm:p-6 border border-slate-200 hover:border-blue-300 transition-colors cursor-pointer">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600">
-                            <span className="font-bold">3</span>
+                        <div className="flex items-center gap-3 sm:gap-4">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600">
+                            <span className="font-bold text-sm sm:text-base">3</span>
                           </div>
                           <div>
-                            <h3 className="text-xl font-bold text-slate-900">Measurable, documented results</h3>
-                            <p className="text-slate-600">Tangible ROI and business impact</p>
+                            <h3 className="text-lg sm:text-xl font-bold text-slate-900">Measurable, documented results</h3>
+                            <p className="text-sm text-slate-600">Tangible ROI and business impact</p>
                           </div>
                         </div>
                         {openPillar === 'pillar3' ? (
-                          <ChevronUp className="h-5 w-5 text-slate-400" />
+                          <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
                         ) : (
-                          <ChevronDown className="h-5 w-5 text-slate-400" />
+                          <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
                         )}
                       </div>
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <div className="bg-white/80 rounded-b-xl border border-t-0 border-slate-200 p-6">
-                      <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                    <div className="bg-white/80 rounded-b-xl border border-t-0 border-slate-200 p-4 sm:p-6">
+                      <ul className="space-y-2 sm:space-y-3">
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">40–60% average efficiency gain</span> across large analyst and business teams
                           </span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">$8M in documented savings</span> through AI and automation initiatives at scale
                           </span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">30+ high-value AI and GenAI use cases</span> implemented per enterprise engagement
                           </span>
                         </li>
@@ -1006,43 +996,43 @@ const Enterprise = () => {
                 {/* Pillar 4 */}
                 <Collapsible open={openPillar === 'pillar4'} onOpenChange={(open) => open && setOpenPillar('pillar4')}>
                   <CollapsibleTrigger className="w-full">
-                    <div className="bg-white rounded-xl p-6 border border-slate-200 hover:border-blue-300 transition-colors cursor-pointer">
+                    <div className="bg-white rounded-xl p-4 sm:p-6 border border-slate-200 hover:border-blue-300 transition-colors cursor-pointer">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600">
-                            <span className="font-bold">4</span>
+                        <div className="flex items-center gap-3 sm:gap-4">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600">
+                            <span className="font-bold text-sm sm:text-base">4</span>
                           </div>
                           <div>
-                            <h3 className="text-xl font-bold text-slate-900">Full ecosystem, not one-off workshops</h3>
-                            <p className="text-slate-600">End-to-end learning solutions</p>
+                            <h3 className="text-lg sm:text-xl font-bold text-slate-900">Full ecosystem, not one-off workshops</h3>
+                            <p className="text-sm text-slate-600">End-to-end learning solutions</p>
                           </div>
                         </div>
                         {openPillar === 'pillar4' ? (
-                          <ChevronUp className="h-5 w-5 text-slate-400" />
+                          <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
                         ) : (
-                          <ChevronDown className="h-5 w-5 text-slate-400" />
+                          <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400" />
                         )}
                       </div>
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <div className="bg-white/80 rounded-b-xl border border-t-0 border-slate-200 p-6">
-                      <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                    <div className="bg-white/80 rounded-b-xl border border-t-0 border-slate-200 p-4 sm:p-6">
+                      <ul className="space-y-2 sm:space-y-3">
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">AI-led assessment platform</span> to benchmark skills and personalize learning paths
                           </span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">Cloud LMS, AI Tutor and structured learning journeys</span>
                           </span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>
+                        <li className="flex items-start gap-2 sm:gap-3">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base">
                             <span className="font-semibold">Dedicated Project Deans and post-training handholding</span> to ensure adoption and ROI
                           </span>
                         </li>
@@ -1053,13 +1043,13 @@ const Enterprise = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="text-center mt-12">
+              <div className="text-center mt-8 sm:mt-12">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 px-8"
+                  className="bg-blue-600 hover:bg-blue-700 px-6 sm:px-8 text-sm sm:text-base"
                   onClick={() => setIsContactModalOpen(true)}
                 >
-                  <Calendar className="mr-2 h-5 w-5" />
+                  <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Schedule Your Free Consultation
                 </Button>
               </div>
@@ -1067,59 +1057,31 @@ const Enterprise = () => {
           </div>
         </section>
 
+        <section id="our-expertise" className="bg-slate-950 py-12 sm:py-16 lg:py-20 text-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-6 sm:mb-8 lg:mb-10">Our Expertise</h2>
 
-        <section id="our-expertise" className="bg-slate-950 py-20 text-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-4xl font-extrabold mb-10">Our Expertise</h2>
-
-            {/* SQUEEZE → EXPAND STRIP */}
-            <div className="flex h-[520px] w-full gap-4">
+            {/* SQUEEZE → EXPAND STRIP - Responsive version */}
+            <div className="hidden lg:flex h-[520px] w-full gap-4">
               {expertiseData.map((card, i) => (
                 <div
                   key={i}
-                  className="
-                group relative flex-1 rounded-2xl overflow-hidden
-                transition-all duration-700 ease-[cubic-bezier(.4,0,.2,1)]
-                hover:flex-[4]
-              "
+                  className="group relative flex-1 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(.4,0,.2,1)] hover:flex-[4]"
                 >
-                  {/* BACKGROUND */}
                   <div className={`absolute inset-0 bg-gradient-to-b ${card.gradient}`} />
                   <div className="absolute inset-0 bg-black/35" />
-
-                  {/* CONTENT */}
                   <div className="relative z-10 h-full p-6 flex flex-col">
-                    {/* TOP */}
                     <div>
                       {card.icon}
                       <h3 className="mt-4 text-xl font-bold tracking-wide">
                         {card.title}
                       </h3>
-
-                      {/* DESCRIPTION */}
                       {card.description && (
-                        <p
-                          className="
-                        mt-4 text-sm text-white/80
-                        opacity-0 translate-y-4
-                        transition-all duration-500
-                        group-hover:opacity-100 group-hover:translate-y-0
-                        max-w-sm
-                      "
-                        >
+                        <p className="mt-4 text-sm text-white/80 opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 max-w-sm">
                           {card.description}
                         </p>
                       )}
-
-                      {/* TOPICS */}
-                      <ul
-                        className="
-                      mt-6 space-y-2 text-sm
-                      opacity-0 translate-y-6
-                      transition-all duration-500 delay-100
-                      group-hover:opacity-100 group-hover:translate-y-0
-                    "
-                      >
+                      <ul className="mt-6 space-y-2 text-sm opacity-0 translate-y-6 transition-all duration-500 delay-100 group-hover:opacity-100 group-hover:translate-y-0">
                         {card.topics.map((topic, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/70" />
@@ -1128,8 +1090,6 @@ const Enterprise = () => {
                         ))}
                       </ul>
                     </div>
-
-                    {/* BOTTOM */}
                     <div className="mt-auto flex items-end justify-between">
                       <div>
                         <div className="text-4xl font-black">{card.id}</div>
@@ -1142,42 +1102,80 @@ const Enterprise = () => {
                 </div>
               ))}
             </div>
+
+            {/* Mobile/Tablet version - Stack vertically */}
+            <div className="lg:hidden space-y-4">
+              {expertiseData.map((card, i) => (
+                <div
+                  key={i}
+                  className="group relative rounded-2xl overflow-hidden border border-slate-700"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-b ${card.gradient}`} />
+                  <div className="absolute inset-0 bg-black/35" />
+                  <div className="relative z-10 p-6">
+                    <div className="flex items-start gap-4">
+                      {card.icon}
+                      <div className="flex-1">
+                        <h3 className="text-lg font-bold tracking-wide">
+                          {card.title}
+                        </h3>
+                        <p className="mt-2 text-sm text-white/80">
+                          {card.description}
+                        </p>
+                        <ul className="mt-4 space-y-2 text-sm">
+                          {card.topics.slice(0, 3).map((topic, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/70" />
+                              <span className="text-white/90">{topic}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-white/10">
+                      <div className="flex items-center justify-between">
+                        <div className="text-2xl font-black">{card.id}</div>
+                        <ChevronDown className="h-5 w-5 text-white/50 group-hover:rotate-180 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-      
-
         {/* L&D CHALLENGES SECTION */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-12 sm:py-16 lg:py-20 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
                 Common L&D Challenges We Solve
               </h2>
-              <p className="text-slate-600">
+              <p className="text-sm sm:text-base text-slate-600">
                 Every challenge is an opportunity. Here's how we help L&D managers transform obstacles into measurable successes.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {ldChallenges.map((challenge, index) => {
                 const Icon = challenge.icon;
                 return (
-                  <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-slate-200">
+                  <div key={index} className="bg-white rounded-xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow border border-slate-200">
                     <div className="flex flex-col h-full">
                       <div className="mb-4">
-                        <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 mb-4">
-                          <Icon className="h-6 w-6" />
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 mb-3 sm:mb-4">
+                          <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                         </div>
-                        <h3 className="text-xl font-bold text-slate-900 mb-2">{challenge.title}</h3>
-                        <p className="text-slate-600 mb-4">{challenge.description}</p>
+                        <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">{challenge.title}</h3>
+                        <p className="text-sm text-slate-600 mb-3 sm:mb-4">{challenge.description}</p>
                       </div>
-                      <div className="mt-auto pt-4 border-t border-slate-100">
-                        <div className="flex items-center gap-2 text-sm text-blue-600 font-semibold">
-                          <ArrowRight className="h-4 w-4" />
+                      <div className="mt-auto pt-3 sm:pt-4 border-t border-slate-100">
+                        <div className="flex items-center gap-2 text-xs sm:text-sm text-blue-600 font-semibold">
+                          <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
                           <span>Our Solution:</span>
                         </div>
-                        <p className="text-slate-700 mt-1">{challenge.solution}</p>
+                        <p className="text-sm text-slate-700 mt-1">{challenge.solution}</p>
                       </div>
                     </div>
                   </div>
@@ -1188,44 +1186,44 @@ const Enterprise = () => {
         </section>
 
         {/* SUCCESS PATHWAY */}
-        <section className="py-20 bg-white">
+        <section className="py-12 sm:py-16 lg:py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
                 Your 4-Step Success Pathway
               </h2>
-              <p className="text-slate-600">
+              <p className="text-sm sm:text-base text-slate-600">
                 A structured approach to ensure measurable results at every stage of your team's transformation.
               </p>
             </div>
 
             <div className="relative">
-              {/* Timeline line */}
+              {/* Timeline line - hidden on mobile, visible on desktop */}
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 hidden lg:block"></div>
 
-              <div className="space-y-12 lg:space-y-0">
+              <div className="space-y-8 lg:space-y-0">
                 {successPathway.map((step, index) => (
                   <div
                     key={step.step}
                     className={`relative lg:flex lg:items-center lg:gap-12 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
                   >
                     {/* Step Circle */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg z-10">
+                    <div className="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-base sm:text-lg lg:text-lg z-10">
                       {step.step}
                     </div>
 
                     {/* Content */}
-                    <div className={`lg:w-5/12 ${index % 2 === 0 ? 'lg:text-right lg:pr-12' : 'lg:pl-12'} pt-20 lg:pt-0`}>
-                      <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+                    <div className={`lg:w-5/12 ${index % 2 === 0 ? 'lg:text-right lg:pr-12' : 'lg:pl-12'} pt-12 lg:pt-0 ml-12 sm:ml-14 lg:ml-0`}>
+                      <div className="bg-slate-50 rounded-xl p-4 sm:p-6 border border-slate-200">
                         <div className="flex items-center gap-2 mb-2">
-                          <Clock4 className="h-4 w-4 text-blue-600" />
-                          <span className="text-sm font-semibold text-blue-600">{step.duration}</span>
+                          <Clock4 className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600" />
+                          <span className="text-xs sm:text-sm font-semibold text-blue-600">{step.duration}</span>
                         </div>
-                        <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
-                        <p className="text-slate-600 mb-4">{step.description}</p>
+                        <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
+                        <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">{step.description}</p>
                         <div className="bg-white rounded-lg p-3 border border-slate-200">
-                          <p className="text-sm font-semibold text-slate-900">Deliverable:</p>
-                          <p className="text-blue-600">{step.outcome}</p>
+                          <p className="text-xs sm:text-sm font-semibold text-slate-900">Deliverable:</p>
+                          <p className="text-blue-600 text-sm sm:text-base">{step.outcome}</p>
                         </div>
                       </div>
                     </div>
@@ -1237,24 +1235,24 @@ const Enterprise = () => {
         </section>
 
         {/* IMPACT DASHBOARD - Enhanced for L&D */}
-        <section id="impact-dashboard" className="bg-slate-50 py-20">
+        <section id="impact-dashboard" className="bg-slate-50 py-12 sm:py-16 lg:py-20">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
                 Real Impact for L&D Managers
               </h2>
-              <p className="text-slate-600">
+              <p className="text-sm sm:text-base text-slate-600">
                 See how fellow L&D professionals achieved measurable success and earned recognition for their training initiatives.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
               {/* Client Selector with L&D Focus */}
               <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
                 <div className="p-4 bg-blue-900 text-white font-semibold">
                   <div className="flex items-center gap-2">
                     <Users2 className="h-4 w-4" />
-                    <span>L&D Success Stories</span>
+                    <span className="text-sm sm:text-base">L&D Success Stories</span>
                   </div>
                 </div>
                 <div className="divide-y divide-slate-100">
@@ -1262,27 +1260,27 @@ const Enterprise = () => {
                     <button
                       key={client.id}
                       onClick={() => setActiveClient(client.id)}
-                      className={`w-full text-left p-4 hover:bg-slate-50 border-b border-slate-100 transition flex justify-between items-center group ${client.id === activeClient ? 'bg-blue-50 border-l-4 border-l-blue-600' : ''
+                      className={`w-full text-left p-3 sm:p-4 hover:bg-slate-50 border-b border-slate-100 transition flex justify-between items-center group ${client.id === activeClient ? 'bg-blue-50 border-l-4 border-l-blue-600' : ''
                         }`}
                     >
-                      <div>
-                        <div className="font-bold text-slate-800 group-hover:text-blue-700">
+                      <div className="flex-1">
+                        <div className="font-bold text-slate-800 group-hover:text-blue-700 text-sm sm:text-base">
                           {client.name}
                         </div>
                         <div className="text-xs text-slate-500">{client.industry}</div>
-                        <div className="flex gap-2 mt-1">
+                        <div className="flex flex-wrap gap-1 sm:gap-2 mt-1">
                           {client.keyMetrics.slice(0, 2).map((metric, idx) => (
-                            <span key={idx} className="text-xs bg-slate-100 px-2 py-1 rounded">
+                            <span key={idx} className="text-xs bg-slate-100 px-2 py-0.5 sm:py-1 rounded">
                               {metric.label}: {metric.value}
                             </span>
                           ))}
                         </div>
                       </div>
-                      <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-blue-500" />
+                      <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-blue-500 ml-2" />
                     </button>
                   ))}
                 </div>
-                <div className="p-6 mt-auto bg-blue-50">
+                <div className="p-4 sm:p-6 mt-auto bg-blue-50">
                   <div className="flex items-start gap-2 mb-2">
                     <Award className="h-4 w-4 text-blue-600 mt-1" />
                     <p className="text-sm text-blue-800 font-semibold">L&D Achievement:</p>
@@ -1297,19 +1295,19 @@ const Enterprise = () => {
               </div>
 
               {/* Enhanced Visualization Area */}
-              <div className="lg:col-span-2 bg-white rounded-xl shadow-md p-6 sm:p-8">
-                <div className="flex justify-between items-start mb-6">
-                  <div>
+              <div className="lg:col-span-2 bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 sm:mb-6">
+                  <div className="mb-4 sm:mb-0">
                     <div className="flex items-center gap-2 mb-2">
                       <BadgeCheck className="h-5 w-5 text-blue-600" />
-                      <h3 className="text-2xl font-bold text-slate-800">
+                      <h3 className="text-xl sm:text-2xl font-bold text-slate-800">
                         {activeClientData.name} - L&D Transformation
                       </h3>
                     </div>
-                    <p className="text-slate-500">{activeClientData.desc}</p>
+                    <p className="text-sm sm:text-base text-slate-500">{activeClientData.desc}</p>
                   </div>
                   <div
-                    className="px-4 py-2 rounded-lg font-bold text-xl"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-bold text-lg sm:text-xl self-start"
                     style={{ backgroundColor: `${activeClientData.color}20`, color: activeClientData.color }}
                   >
                     {activeClientData.metric}
@@ -1317,7 +1315,7 @@ const Enterprise = () => {
                 </div>
 
                 {/* Chart Container */}
-                <div className="h-64 w-full mb-8">
+                <div className="h-48 sm:h-56 lg:h-64 w-full mb-6 sm:mb-8">
                   {activeClientData.chartType === 'line' ? (
                     <Line
                       data={{
@@ -1368,11 +1366,11 @@ const Enterprise = () => {
                 </div>
 
                 {/* Key Metrics Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                   {activeClientData.keyMetrics.map((metric, index) => (
-                    <div key={index} className="bg-slate-50 p-4 rounded-lg border border-slate-200">
-                      <div className="text-sm text-slate-500">{metric.label}</div>
-                      <div className="font-bold text-2xl text-slate-800 mt-1">{metric.value}</div>
+                    <div key={index} className="bg-slate-50 p-3 sm:p-4 rounded-lg border border-slate-200">
+                      <div className="text-xs sm:text-sm text-slate-500">{metric.label}</div>
+                      <div className="font-bold text-xl sm:text-2xl text-slate-800 mt-1">{metric.value}</div>
                     </div>
                   ))}
                 </div>
@@ -1382,14 +1380,14 @@ const Enterprise = () => {
         </section>
 
         {/* ENHANCED FAQ */}
-        <section className="bg-slate-50 py-20">
+        <section className="bg-slate-50 py-12 sm:py-16 lg:py-20">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
                   Questions from Fellow L&D Managers
                 </h2>
-                <p className="text-slate-600">
+                <p className="text-sm sm:text-base text-slate-600">
                   Get answers to the most common questions about implementing effective AI and data training.
                 </p>
               </div>
@@ -1397,10 +1395,10 @@ const Enterprise = () => {
               <Accordion type="single" collapsible className="w-full">
                 {faqData.map((item, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="text-lg font-semibold text-slate-800 hover:text-blue-600">
+                    <AccordionTrigger className="text-base sm:text-lg font-semibold text-slate-800 hover:text-blue-600 text-left">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-slate-600 leading-relaxed">
+                    <AccordionContent className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -1411,41 +1409,41 @@ const Enterprise = () => {
         </section>
 
         {/* CONTACT CTA SECTION */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+        <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
                 Ready to Transform Your Team?
               </h2>
 
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg lg:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
                 Get a free consultation and custom training blueprint for your organization
               </p>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <TargetIcon className="h-8 w-8 mx-auto mb-3" />
-                  <h4 className="font-bold mb-2">Custom Assessment</h4>
-                  <p className="text-blue-200 text-sm">Identify skill gaps and opportunities</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6">
+                  <TargetIcon className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 sm:mb-3" />
+                  <h4 className="font-bold mb-2 text-sm sm:text-base">Custom Assessment</h4>
+                  <p className="text-blue-200 text-xs sm:text-sm">Identify skill gaps and opportunities</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <FileText className="h-8 w-8 mx-auto mb-3" />
-                  <h4 className="font-bold mb-2">Tailored Blueprint</h4>
-                  <p className="text-blue-200 text-sm">Customized learning path for your team</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6">
+                  <FileText className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 sm:mb-3" />
+                  <h4 className="font-bold mb-2 text-sm sm:text-base">Tailored Blueprint</h4>
+                  <p className="text-blue-200 text-xs sm:text-sm">Customized learning path for your team</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <DollarSign className="h-8 w-8 mx-auto mb-3" />
-                  <h4 className="font-bold mb-2">ROI Projection</h4>
-                  <p className="text-blue-200 text-sm">Clear business impact metrics</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6">
+                  <DollarSign className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 sm:mb-3" />
+                  <h4 className="font-bold mb-2 text-sm sm:text-base">ROI Projection</h4>
+                  <p className="text-blue-200 text-xs sm:text-sm">Clear business impact metrics</p>
                 </div>
               </div>
 
               <Button
                 size="lg"
-                className="bg-white text-blue-900 hover:bg-blue-100 px-8 text-lg"
+                className="bg-white text-blue-900 hover:bg-blue-100 px-6 sm:px-8 text-sm sm:text-base lg:text-lg"
                 onClick={() => setIsContactModalOpen(true)}
               >
-                <Calendar className="mr-2 h-5 w-5" />
+                <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Schedule Free Consultation
               </Button>
             </div>
@@ -1454,41 +1452,41 @@ const Enterprise = () => {
 
         {/* ENHANCED CONTACT MODAL */}
         <Dialog open={isContactModalOpen} onOpenChange={setIsContactModalOpen}>
-          <DialogContent className="sm:max-w-[800px] rounded-lg">
-            <div className="grid md:grid-cols-2 gap-8 p-6">
+          <DialogContent className="sm:max-w-[800px] rounded-lg max-h-[90vh] overflow-y-auto">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-8 p-4 sm:p-6">
               {/* Left Column - Info */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Trophy className="h-8 w-8 text-white" />
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 sm:p-6">
+                <div className="text-center mb-4 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <Trophy className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
                     Ivy Pro School Enterprise
                   </h3>
-                  <p className="text-blue-600 font-semibold">Since 2007</p>
-                  <p className="text-slate-600 text-sm mt-2">Top-ranked Data & AI training partner</p>
+                  <p className="text-blue-600 font-semibold text-sm sm:text-base">Since 2007</p>
+                  <p className="text-slate-600 text-xs sm:text-sm mt-2">Top-ranked Data & AI training partner</p>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <BadgeCheck className="h-5 w-5 text-blue-600" />
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <BadgeCheck className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
                     <div>
-                      <p className="font-semibold text-slate-900">What to Expect:</p>
-                      <p className="text-sm text-slate-600">Free 60-minute strategy session</p>
+                      <p className="font-semibold text-slate-900 text-sm sm:text-base">What to Expect:</p>
+                      <p className="text-xs sm:text-sm text-slate-600">Free 60-minute strategy session</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <TargetIcon className="h-5 w-5 text-blue-600" />
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <TargetIcon className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
                     <div>
-                      <p className="font-semibold text-slate-900">You'll Receive:</p>
-                      <p className="text-sm text-slate-600">Custom training blueprint</p>
+                      <p className="font-semibold text-slate-900 text-sm sm:text-base">You'll Receive:</p>
+                      <p className="text-xs sm:text-sm text-slate-600">Custom training blueprint</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Users2 className="h-5 w-5 text-blue-600" />
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <Users2 className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
                     <div>
-                      <p className="font-semibold text-slate-900">Global Reach:</p>
-                      <p className="text-sm text-slate-600">India, US, Europe, Australia, Singapore</p>
+                      <p className="font-semibold text-slate-900 text-sm sm:text-base">Global Reach:</p>
+                      <p className="text-xs sm:text-sm text-slate-600">India, US, Europe, Australia, Singapore</p>
                     </div>
                   </div>
                 </div>
@@ -1496,42 +1494,42 @@ const Enterprise = () => {
 
               {/* Right Column - Form */}
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-6">Get Your Free Consultation</h2>
-                <form onSubmit={(e) => { e.preventDefault(); setIsContactModalOpen(false); }} className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6">Get Your Free Consultation</h2>
+                <form onSubmit={(e) => { e.preventDefault(); setIsContactModalOpen(false); }} className="space-y-3 sm:space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-1">Name</label>
-                      <Input placeholder="Your name" className="w-full" />
+                      <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-1">Name</label>
+                      <Input placeholder="Your name" className="w-full text-sm sm:text-base" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-1">Role</label>
-                      <Input placeholder="e.g., L&D Manager" className="w-full" />
+                      <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-1">Role</label>
+                      <Input placeholder="e.g., L&D Manager" className="w-full text-sm sm:text-base" />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Company</label>
-                    <Input placeholder="Your company" className="w-full" />
+                    <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-1">Company</label>
+                    <Input placeholder="Your company" className="w-full text-sm sm:text-base" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Email</label>
-                    <Input type="email" placeholder="Your work email" className="w-full" />
+                    <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-1">Email</label>
+                    <Input type="email" placeholder="Your work email" className="w-full text-sm sm:text-base" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Team Size</label>
-                    <Input placeholder="Number of team members" className="w-full" />
+                    <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-1">Team Size</label>
+                    <Input placeholder="Number of team members" className="w-full text-sm sm:text-base" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">
+                    <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-1">
                       Training Interest
                     </label>
                     <Textarea
                       placeholder="Which programs are you interested in? (GenAI, Analytics, Data Science, Leadership)"
                       rows={3}
-                      className="w-full"
+                      className="w-full text-sm sm:text-base"
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
-                    <Calendar className="mr-2 h-4 w-4" />
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-sm sm:text-base">
+                    <Calendar className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                     Schedule Free Consultation
                   </Button>
                 </form>
