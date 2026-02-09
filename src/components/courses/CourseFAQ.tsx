@@ -4036,6 +4036,185 @@ const courseData: { [key: string]: CourseFAQData } = {
     }
   ]
 }
+,
+"Generative AI Course in Bangalore": {
+  categories: [
+    { id: "program", name: "Program" },
+    { id: "eligibility", name: "Eligibility" },
+    { id: "generative-ai", name: "Generative AI" },
+    { id: "job-and-career", name: "Job And Career" },
+    { id: "certification", name: "Certification" },
+    { id: "projects", name: "Projects" },
+    { id: "placement", name: "Placement" },
+    { id: "opportunities", name: "Opportunities" },
+    { id: "support", name: "Support" },
+    { id: "job-outlook", name: "Data & AI Job Outlook" }
+  ],
+  faqs: [
+    // Program-related FAQs
+    {
+      question: "What does the Generative AI program in Bangalore cover?",
+      answer: "This program covers cutting-edge techniques in Generative AI, including advanced deep learning methods, GANs, VAEs, and Transformer models like GPT. Students will work on AI-driven creative tasks such as text generation, image creation, and video synthesis, preparing them for high-demand AI roles.",
+      category: "program"
+    },
+    {
+      question: "What is the format of the Generative AI course in Bangalore?",
+      answer: "The course is a blend of theoretical lessons and hands-on practical sessions. You will engage with live projects, attend industry workshops, and complete a final capstone project. Flexibility is offered through weekday and weekend batches, making it ideal for both students and professionals.",
+      category: "program"
+    },
+    {
+      question: "Can I take the Generative AI course online in Bangalore?",
+      answer: "Yes, the course is available in both classroom and online formats. You can attend live online classes or join our interactive classroom sessions in Bangalore, whichever suits your learning preferences.",
+      category: "program"
+    },
+    {
+      question: "How long is the Generative AI course in Bangalore?",
+      answer: "The course typically lasts between 6 and 10 months. Depending on the pace you set, it can be completed in a more intensive full-time format or a flexible part-time format.",
+      category: "program"
+    },
+    {
+      question: "What makes this Generative AI course in Bangalore stand out?",
+      answer: "This course focuses on practical AI applications, teaching students to build and deploy generative models using industry-standard tools. With personalized mentorship, hands-on projects, and a focus on real-world problem-solving, this program equips you for AI careers in leading companies.",
+      category: "program"
+    },
+
+    // Eligibility-related FAQs
+    {
+      question: "What are the prerequisites for joining the Generative AI course in Bangalore?",
+      answer: "The course is suitable for individuals with a basic understanding of programming and mathematics. A background in computer science, engineering, or a related field is helpful but not mandatory.",
+      category: "eligibility"
+    },
+    {
+      question: "Do I need prior AI experience to enroll in this course?",
+      answer: "No, the course is designed to start with fundamental concepts and progress to advanced AI techniques. It’s perfect for beginners as well as those looking to transition into AI from other fields.",
+      category: "eligibility"
+    },
+    {
+      question: "Can someone with no technical background join the Generative AI course?",
+      answer: "Yes, the course is structured to accommodate non-technical professionals as well. With a focus on practical skills and a hands-on approach, you’ll be guided through the basics of programming and AI concepts.",
+      category: "eligibility"
+    },
+    {
+      question: "Is there any age limit for enrollment in the Generative AI course in Bangalore?",
+      answer: "There is no age restriction. This course is open to anyone who is enthusiastic about learning Generative AI and has the determination to succeed in the field.",
+      category: "eligibility"
+    },
+    {
+      question: "Do I need a degree in computer science to join the Generative AI course?",
+      answer: "No, a computer science degree is not required. The course welcomes individuals from diverse academic backgrounds as long as they possess a logical mindset and a desire to learn.",
+      category: "eligibility"
+    },
+
+    // Generative AI-related FAQs
+    {
+      question: "What tools and technologies will I learn in the Generative AI course in Bangalore?",
+      answer: "You will gain proficiency in Python, TensorFlow, PyTorch, and libraries used for building Generative AI models like GANs, VAEs, and GPT. You will also learn tools for cloud deployment and data preprocessing.",
+      category: "generative-ai"
+    },
+    {
+      question: "What role does deep learning play in Generative AI?",
+      answer: "Deep learning is the backbone of Generative AI. You will learn to train and optimize models that can generate realistic text, images, and other forms of content based on data-driven input.",
+      category: "generative-ai"
+    },
+    {
+      question: "What kind of certification will I receive after completing the course?",
+      answer: "Upon completion, you will receive a certification from Ivy Professional School, which will validate your expertise in Generative AI and help you stand out to employers in AI-driven industries.",
+      category: "generative-ai"
+    },
+    {
+      question: "How does the course incorporate real-world applications of Generative AI?",
+      answer: "You’ll work on hands-on projects that simulate real-world scenarios. This includes tasks like generating creative content, fine-tuning AI models, and deploying solutions to real business challenges.",
+      category: "generative-ai"
+    },
+    {
+      question: "Will I be able to create a portfolio of Generative AI projects?",
+      answer: "Yes, throughout the course, you will work on several projects, including a final capstone project, which can be showcased in your portfolio to demonstrate your skills to potential employers.",
+      category: "generative-ai"
+    },
+
+    // Job and Career-related FAQs
+    {
+      question: "What career opportunities are available after completing the Generative AI course?",
+      answer: "Upon completing the course, you can apply for roles such as Generative AI Engineer, Machine Learning Specialist, AI Developer, Data Scientist, and more. The skills learned are highly in demand across industries like technology, media, healthcare, and finance.",
+      category: "job-and-career"
+    },
+    {
+      question: "What is the job market for Generative AI professionals in Bangalore?",
+      answer: "Bangalore, being the tech hub of India, has a thriving job market for Generative AI professionals. Companies in IT, media, e-commerce, and healthcare are actively seeking professionals skilled in AI and machine learning.",
+      category: "job-and-career"
+    },
+    {
+      question: "What are the salary expectations for Generative AI professionals in Bangalore?",
+      answer: "Salaries for Generative AI professionals in Bangalore can range from ₹12 lakhs annually for entry-level positions to ₹30 lakhs or more for senior roles, depending on experience and expertise.",
+      category: "job-and-career"
+    },
+    {
+      question: "Can I pursue a career in Generative AI without prior experience in the field?",
+      answer: "Yes, the course is structured to cater to both beginners and career switchers. You’ll gain practical, hands-on experience in the tools and techniques necessary for a career in Generative AI.",
+      category: "job-and-career"
+    },
+    {
+      question: "Does the course offer job placement support?",
+      answer: "Yes, we provide job placement assistance, including interview coaching, resume building, and direct access to our network of hiring partners in Bangalore’s AI industry.",
+      category: "job-and-career"
+    },
+
+    // Certification-related FAQs
+    {
+      question: "Will I receive a certificate after completing the Generative AI course?",
+      answer: "Yes, successful completion of the course will earn you a certificate from Ivy Professional School, which will validate your skills in Generative AI.",
+      category: "certification"
+    },
+    {
+      question: "Is the certification recognized by employers?",
+      answer: "Yes, our certification is widely respected by employers across India and abroad, especially in the AI, tech, and digital transformation sectors.",
+      category: "certification"
+    },
+    {
+      question: "How can I use this certification to enhance my career?",
+      answer: "You can showcase the certification on professional networks like LinkedIn and include it in your resume to increase your chances of getting hired for Generative AI roles.",
+      category: "certification"
+    },
+    {
+      question: "Are there additional certifications offered by the course?",
+      answer: "Yes, students can pursue additional industry-recognized certifications from platforms like Google and Microsoft to further enhance their AI expertise.",
+      category: "certification"
+    },
+    {
+      question: "Can I display my certification on LinkedIn?",
+      answer: "Yes, you can proudly display your Ivy Professional School certification on LinkedIn, your resume, and other platforms to highlight your new skills.",
+      category: "certification"
+    },
+
+    // Job Outlook-related FAQs
+    {
+      question: "What is the job outlook for Generative AI professionals in Bangalore?",
+      answer: "Bangalore is a key hub for AI and machine learning talent in India. With an increasing demand for AI-driven solutions, job growth in this field is expected to rise by 25% annually, offering numerous career opportunities for skilled professionals.",
+      category: "job-outlook"
+    },
+    {
+      question: "What skills are in demand for Generative AI roles in Bangalore?",
+      answer: "Skills in Python, machine learning, TensorFlow, PyTorch, deep learning, and cloud computing platforms like AWS and Azure are in high demand. Proficiency in NLP and AI model deployment is also valuable.",
+      category: "job-outlook"
+    },
+    {
+      question: "Which industries are hiring Generative AI professionals in Bangalore?",
+      answer: "Generative AI professionals are being hired by top companies in IT, e-commerce, media, healthcare, and fintech, all of which are investing heavily in AI-driven solutions.",
+      category: "job-outlook"
+    },
+    {
+      question: "What is the average salary for a Generative AI professional in Bangalore?",
+      answer: "The average salary for a Generative AI professional in Bangalore ranges from ₹12 lakhs per year for entry-level positions to upwards of ₹30 lakhs annually for experienced professionals.",
+      category: "job-outlook"
+    },
+    {
+      question: "What are the career growth opportunities in Generative AI in Bangalore?",
+      answer: "Career growth in Generative AI is strong, with opportunities to move into leadership roles such as AI Architect, Chief Data Scientist, or Director of AI, particularly as AI adoption continues to grow in Bangalore’s tech ecosystem.",
+      category: "job-outlook"
+    }
+  ]
+}
+
 
 
 
