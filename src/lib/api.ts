@@ -7425,7 +7425,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics With Visualization in Mumbai | Ivy Professional School",
+      title: "Data Analytics Course in Pune | Ivy Professional School",
       description: "Join Ivy Professional School’s Data Analytics With Visualization in Mumbai - Learn top tools with hands-on projects & career support.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
@@ -7664,8 +7664,8 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Course with IIT Guwahati: #1 GenAI Course ",
-      description: "Join IIT Guwahati Certified Generative AI course and become job-ready in 18 weeks. Build 15+ GenAI apps on cloud. Get IBM & NASSCOM certified",
+      title: "Generative AI Course in Kolkata | Ivy Professional School",
+      description: "JEnroll in the Generative AI Course in Kolkata by Ivy Professional School. Learn to build GPT models, GANs, and deploy real-world AI projects with expert guidance.",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
@@ -7884,8 +7884,8 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Course with IIT Guwahati: #1 GenAI Course ",
-      description: "Join IIT Guwahati Certified Generative AI course and become job-ready in 18 weeks. Build 15+ GenAI apps on cloud. Get IBM & NASSCOM certified",
+      title: "Generative AI Course in Bangalore | Ivy Professional School",
+      description: "Enroll in Ivy Professional School’s Generative AI Course in Bangalore. Master AI tools, build real-world projects & get certified with 100% placement support.",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
@@ -8102,8 +8102,8 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Course with IIT Guwahati: #1 GenAI Course ",
-      description: "Join IIT Guwahati Certified Generative AI course and become job-ready in 18 weeks. Build 15+ GenAI apps on cloud. Get IBM & NASSCOM certified",
+      title: "Generative AI Course in Delhi | Ivy Professional School",
+      description: "Join the Generative AI Course in Delhi by Ivy Professional School. Master GPT, GANs, and LLMs with real-world projects, expert mentors, and job support.",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
@@ -8312,9 +8312,663 @@ const courses: Course[] = [
       }
     ]
   },
+ {
+    id: '21',
+    title: "Generative AI Course in Mumbai",
+    description: "Looking to build advanced artificial intelligence skills that stand out in today’s tech landscape? The Generative AI Course in Mumbai from Ivy Professional School is tailored for professionals, students, and innovators who want to master generative AI techniques such as GANs, VAEs, and Transformer‑based models like GPT.\n\n  In Mumbai, one of India’s leading centers for technology and business innovation, this program provides project‑based learning, expert mentorship, and placement‑oriented training that equips you to create intelligent AI solutions for real‑world challenges.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Data Science",
+    students: 5876,
+    metaData: {
+      title: "Generative AI Course in Mumbai | Ivy Professional School",
+      description: "Join Ivy Professional School’s Generative AI Course in Mumbai. Gain hands‑on experience with AI tools, build projects, get certified, and access placement support.",
+      bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
+
+    },
+    duration: "225 Hours",
+    rating: 4.9,
+    reviewCount: 5567,
+    isFeatured: true,
+    slug: "generative-ai-course-mumbai",
+    longDescription: " The Generative AI Course in Mumbai by Ivy Professional School is an advanced training program designed to help learners gain practical, job‑ready expertise in generative artificial intelligence. Through a blend of theoretical instruction and hands‑on projects, you will develop the technical foundation and creative problem‑solving skills needed to build generative models that power applications in content creation, automation, simulation, personalization, and more. \n\n Mumbai’s thriving technology and business ecosystem make it an ideal location for upskilling. Whether you are seeking a new career path or aiming to advance in your current role, this course will prepare you with industry‑aligned knowledge and practical experience."
+    , outcomes: [
+      "Understand core concepts of artificial intelligence, machine learning, and deep learning.",
+      "Develop proficiency in Python as the primary language for AI development.",
+      "Build and train Generative Adversarial Networks (GANs) for image synthesis and creative AI applications.",
+      "Implement Variational Autoencoders (VAEs) for data representation and generation.",
+      "Use TensorFlow and PyTorch to implement neural networks.",
+      "Work with Scikit‑Learn for classical machine learning tasks.",
+      "Create text generation, image creation, and AI automation projects.",
+      "Learn how to deploy AI models using cloud platforms such as AWS, Azure, and Google Cloud."
+    ],
+    prerequisites: [
+      "Familiarity with basic digital tools and online platforms.",
+      "Understanding of high-school level algebra and statistics.",
+      "No prior programming experience is needed.",
+      "Bachelor’s degree or diploma in a STEM or quantitative field.",
+      "Logical thinking and willingness to learn through projects."
+    ],
+    curriculum: [
+      {
+        id: "m1",
+        title: "GenAI App Builder - Foundation Certificate Program",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
+          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
+          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
+          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
+          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
+          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
+          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
+          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+        ]
+      },
+      {
+        id: "m2",
+        title: "Advanced GenAI and Machine Learning",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
+          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
+          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
+          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
+          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
+          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
+          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+        ]
+      },
+      {
+        id: "m3",
+        title: "Advanced AI Integration and Multimodal Applications",
+        duration: "30 hrs",
+        topics: [
+          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
+          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
+          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
+          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
+          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
+          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
+          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
+          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
+          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+        ]
+      },
+      {
+        id: "m4",
+        title: "Mastering Multimodal Fusion and GenAI Frameworks",
+        duration: "14 hrs",
+        topics: [
+          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
+          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
+          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
+          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
+          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
+          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+        ]
+      }
+    ]
+
+
+    ,
 
 
 
+    projects: [
+      {
+        id: "p1",
+        title: "Employee Attrition Prediction",
+        description: "Use machine learning techniques to predict which employees are likely to leave the organization",
+        image: "https://img.youtube.com/vi/NmW1EVedEts/0.jpg",
+        skills: ["Classification Models", "Data Preprocessing", "Feature Importance", "Model Evaluation"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "NmW1EVedEts"
+      },
+      {
+        id: "p2",
+        title: "Fraud Call Detection using Audio Data",
+        description: "Use audio data and neural networks to detect fraudulent calls by analyzing voice patterns and embeddings with deep learning techniques",
+        image: "https://img.youtube.com/vi/CeDUuCYfxrs/0.jpg",
+        skills: ["Audio Preprocessing", "Feature Extraction with Librosa", "Neural Network Modeling", "Model Evaluation using TensorFlow"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "CeDUuCYfxrs"
+      },
+      {
+        id: "p3",
+        title: "Sentiment Analysis with ChatGPT and Python",
+        description: "Learn the fundamentals of ChatGPT, sentiment analysis, and how to apply NLP techniques on tweet data using Python for real-world insights",
+        image: "https://img.youtube.com/vi/uHSAvl03yf4/0.jpg",
+        skills: ["Sentiment Analysis Model", "Bag of Words", "WordCloud Visualization", "Comparison with AI Tools like ChatGPT and Alexa"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "uHSAvl03yf4"
+      },
+      {
+        id: "p4",
+        title: "How to use GenAI in Google Sheet 2024 | AI in Google Sheet (Quick Method) | Beginner to Advance",
+        description: "Learn how to set up and use GenAI in Google Sheets for data analysis and automation. The video covers easy setup, practical examples, and advanced features for better decision-making, with troubleshooting tips.",
+        image: "https://img.youtube.com/vi/EC1jT0pWxM4/0.jpg",
+        skills: ["GenAI", "Google Sheets", "Data Analysis", " AI Integration", "Templates"],
+        difficulty: "Beginner to Advanced",
+        videoId: "EC1jT0pWxM4"
+      },
+      {
+        id: "p5",
+        title: "Build your First GenAI Powered Chatbot with Python | Generative AI | IvyProSchool",
+        description: "Learn to build your first GenAI-powered chatbot using Python and Generative AI. This video covers chatbot creation, Python implementation, and real-world applications of AI in conversational interfaces.",
+        image: "https://img.youtube.com/vi/v-jQx1acyLQ/0.jpg",
+        skills: ["GenAI", "Python", "Chatbot", "Generative AI", "AI Development"],
+        difficulty: "Beginner to Advanced",
+        videoId: "v-jQx1acyLQ"
+      },
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ],
+    instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University.",
+        isDirector: true
+
+      }
+    ],
+    aiFeatures: [
+      {
+        id: "ai1",
+        title: "AI Learning Assistant",
+        description: "Get personalized help and explanations for complex topics 24/7",
+        icon: "bot"
+      },
+      {
+        id: "ai2",
+        title: "Intelligent Progress Tracking",
+        description: "Our AI analyzes your learning pattern and suggests optimal study schedules",
+        icon: "activity"
+      },
+      {
+        id: "ai3",
+        title: "Automated Code Review",
+        description: "Get instant feedback on your coding assignments with suggestions for improvement",
+        icon: "code"
+      }
+    ],
+    faq: [
+      {
+        question: "Do I need prior coding experience?",
+        answer: "No, this bootcamp is designed to take you from zero to job-ready. We start with the basics of Python programming and gradually build up to advanced concepts."
+      },
+      {
+        question: "What is the time commitment?",
+        answer: "The bootcamp requires about 20-25 hours per week for 16 weeks. This includes live sessions, assignments, projects, and self-study."
+      },
+      {
+        question: "What kind of job support do you provide?",
+        answer: "We provide resume reviews, interview preparation, portfolio building, and connections to our hiring partners. Our career services team works with you individually until you secure a job."
+      },
+      {
+        question: "Can I attend part-time while working a full-time job?",
+        answer: "Yes, many of our students work full-time. We provide evening and weekend live sessions, and all sessions are recorded for those who cannot attend live."
+      }
+    ]
+  },
+{
+    id: '21',
+    title: "Generative AI Course in Pune",
+    description: "Looking to level up your AI skills and build expertise in generative models? The Generative AI Course in Pune from Ivy Professional School is designed for professionals, students, and tech enthusiasts who want to master the art of AI-driven content generation. Learn to work with advanced models like GANs, VAEs, and Transformer-based models such as GPT.In Pune, a city known for its thriving tech ecosystem, this program combines project-based learning, expert mentorship, and industry-aligned training to prepare you for real-world AI challenges.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Data Science",
+    students: 5876,
+    metaData: {
+      title: "Generative AI Course in Pune | Ivy Professional School",
+      description: "Join Ivy Professional School's Generative AI Course in Pune. Build AI models and enhance your career with hands-on training and expert mentorship.",
+      bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
+
+    },
+    duration: "225 Hours",
+    rating: 4.9,
+    reviewCount: 5567,
+    isFeatured: true,
+    slug: "generative-ai-course-pune",
+    longDescription: " The Generative AI Course in Pune is a comprehensive program aimed at equipping you with both theoretical knowledge and practical skills in generative AI. You’ll learn how to design and implement generative models for tasks like text generation, image synthesis, and automation. \n\n Through hands-on experience, you will gain proficiency in the latest AI tools and frameworks, preparing you to apply your skills in industries ranging from content creation to personalized AI solutions. \n\n Pune, with its growing tech industry and startup culture, provides the perfect environment for learning and growing your AI expertise."
+    , outcomes: [
+      "Understand the core concepts of AI, deep learning, and machine learning.",
+      "Learn Python and its libraries for AI development.",
+      "Gain expertise in building Generative Adversarial Networks (GANs) for tasks like image synthesis and creative AI applications.",
+      "Learn how to implement Variational Autoencoders (VAEs) for efficient data representation and generation.",
+      "Work with powerful tools like TensorFlow, PyTorch, and Hugging Face Transformers.",
+      "Gain hands-on experience with Scikit-Learn for traditional machine learning tasks.",
+      "Create AI projects focused on text generation, image creation, and AI-powered automation.",
+      "Learn to deploy and integrate AI models on cloud service"
+    ],
+    prerequisites: [
+      "Familiarity with basic digital tools and online platforms.",
+      "Understanding of high-school level algebra and statistics.",
+      "No prior programming experience is needed.",
+      "Bachelor’s degree or diploma in a STEM or quantitative field.",
+      "Logical thinking and willingness to learn through projects."
+    ],
+    curriculum: [
+      {
+        id: "m1",
+        title: "GenAI App Builder - Foundation Certificate Program",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
+          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
+          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
+          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
+          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
+          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
+          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
+          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+        ]
+      },
+      {
+        id: "m2",
+        title: "Advanced GenAI and Machine Learning",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
+          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
+          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
+          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
+          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
+          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
+          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+        ]
+      },
+      {
+        id: "m3",
+        title: "Advanced AI Integration and Multimodal Applications",
+        duration: "30 hrs",
+        topics: [
+          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
+          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
+          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
+          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
+          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
+          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
+          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
+          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
+          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+        ]
+      },
+      {
+        id: "m4",
+        title: "Mastering Multimodal Fusion and GenAI Frameworks",
+        duration: "14 hrs",
+        topics: [
+          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
+          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
+          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
+          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
+          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
+          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+        ]
+      }
+    ]
+
+
+    ,
+
+
+
+    projects: [
+      {
+        id: "p1",
+        title: "Employee Attrition Prediction",
+        description: "Use machine learning techniques to predict which employees are likely to leave the organization",
+        image: "https://img.youtube.com/vi/NmW1EVedEts/0.jpg",
+        skills: ["Classification Models", "Data Preprocessing", "Feature Importance", "Model Evaluation"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "NmW1EVedEts"
+      },
+      {
+        id: "p2",
+        title: "Fraud Call Detection using Audio Data",
+        description: "Use audio data and neural networks to detect fraudulent calls by analyzing voice patterns and embeddings with deep learning techniques",
+        image: "https://img.youtube.com/vi/CeDUuCYfxrs/0.jpg",
+        skills: ["Audio Preprocessing", "Feature Extraction with Librosa", "Neural Network Modeling", "Model Evaluation using TensorFlow"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "CeDUuCYfxrs"
+      },
+      {
+        id: "p3",
+        title: "Sentiment Analysis with ChatGPT and Python",
+        description: "Learn the fundamentals of ChatGPT, sentiment analysis, and how to apply NLP techniques on tweet data using Python for real-world insights",
+        image: "https://img.youtube.com/vi/uHSAvl03yf4/0.jpg",
+        skills: ["Sentiment Analysis Model", "Bag of Words", "WordCloud Visualization", "Comparison with AI Tools like ChatGPT and Alexa"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "uHSAvl03yf4"
+      },
+      {
+        id: "p4",
+        title: "How to use GenAI in Google Sheet 2024 | AI in Google Sheet (Quick Method) | Beginner to Advance",
+        description: "Learn how to set up and use GenAI in Google Sheets for data analysis and automation. The video covers easy setup, practical examples, and advanced features for better decision-making, with troubleshooting tips.",
+        image: "https://img.youtube.com/vi/EC1jT0pWxM4/0.jpg",
+        skills: ["GenAI", "Google Sheets", "Data Analysis", " AI Integration", "Templates"],
+        difficulty: "Beginner to Advanced",
+        videoId: "EC1jT0pWxM4"
+      },
+      {
+        id: "p5",
+        title: "Build your First GenAI Powered Chatbot with Python | Generative AI | IvyProSchool",
+        description: "Learn to build your first GenAI-powered chatbot using Python and Generative AI. This video covers chatbot creation, Python implementation, and real-world applications of AI in conversational interfaces.",
+        image: "https://img.youtube.com/vi/v-jQx1acyLQ/0.jpg",
+        skills: ["GenAI", "Python", "Chatbot", "Generative AI", "AI Development"],
+        difficulty: "Beginner to Advanced",
+        videoId: "v-jQx1acyLQ"
+      },
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ],
+    instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University.",
+        isDirector: true
+
+      }
+    ],
+    aiFeatures: [
+      {
+        id: "ai1",
+        title: "AI Learning Assistant",
+        description: "Get personalized help and explanations for complex topics 24/7",
+        icon: "bot"
+      },
+      {
+        id: "ai2",
+        title: "Intelligent Progress Tracking",
+        description: "Our AI analyzes your learning pattern and suggests optimal study schedules",
+        icon: "activity"
+      },
+      {
+        id: "ai3",
+        title: "Automated Code Review",
+        description: "Get instant feedback on your coding assignments with suggestions for improvement",
+        icon: "code"
+      }
+    ],
+    faq: [
+      {
+        question: "Do I need prior coding experience?",
+        answer: "No, this bootcamp is designed to take you from zero to job-ready. We start with the basics of Python programming and gradually build up to advanced concepts."
+      },
+      {
+        question: "What is the time commitment?",
+        answer: "The bootcamp requires about 20-25 hours per week for 16 weeks. This includes live sessions, assignments, projects, and self-study."
+      },
+      {
+        question: "What kind of job support do you provide?",
+        answer: "We provide resume reviews, interview preparation, portfolio building, and connections to our hiring partners. Our career services team works with you individually until you secure a job."
+      },
+      {
+        question: "Can I attend part-time while working a full-time job?",
+        answer: "Yes, many of our students work full-time. We provide evening and weekend live sessions, and all sessions are recorded for those who cannot attend live."
+      }
+    ]
+  },
+
+{
+    id: '21',
+    title: "Generative AI Course in Chennai",
+    description: "The Generative AI Course in Chennai is a comprehensive program aimed at equipping you with both theoretical knowledge and practical skills in generative AI. If you're aiming to advance your career in artificial intelligence, the Generative AI Course in Chennai by Ivy Professional School is the perfect opportunity. Whether you're a professional, a student, or an innovator, this course equips you with advanced skills to master generative models such as GANs, VAEs, and GPT-based architectures. Chennai, a fast-growing tech hub, provides the ideal environment for you to learn and build real-world AI applications that are changing industries.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Data Science",
+    students: 5876,
+    metaData: {
+      title: "Generative AI Course in Chennai | Ivy Professional School",
+      description: "Enroll in the Generative AI Course in Chennai at Ivy Professional School. Gain practical AI skills with expert guidance and real-world projects.",
+      bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
+
+    },
+    duration: "225 Hours",
+    rating: 4.9,
+    reviewCount: 5567,
+    isFeatured: true,
+    slug: "generative-ai-course-chennai",
+    longDescription: " This Generative AI Course is designed to provide an in-depth understanding of AI-driven content generation. Through a combination of theoretical insights and practical projects, you will learn to build and implement AI models used in content creation, automation, and more. With hands-on experience using the latest tools and technologies, you will be prepared to apply your skills in real-world scenarios, whether you're transitioning to a new career or advancing in your current one. \n\n Chennai, a center for innovation and technology, is the ideal place to gain expertise in this rapidly evolving field."
+    , outcomes: [
+      "Gain a solid understanding of AI, deep learning, and machine learning fundamentals.",
+      "Learn to work with Python and implement machine learning algorithms.",
+      "Explore Variational Autoencoders (VAEs) for effective data generation and representation.",
+      "Use TensorFlow and PyTorch for implementing and deploying models.",
+      "Work with libraries like Scikit-Learn and Hugging Face Transformers for real-world AI development.",
+      "Learn how to deploy AI models on cloud platforms and integrate them into production environments.",
+      "Understand the ethical implications of generative AI, including data bias and responsible deployment.",
+    ],
+    prerequisites: [
+      "Familiarity with basic digital tools and online platforms.",
+      "Understanding of high-school level algebra and statistics.",
+      "No prior programming experience is needed.",
+      "Bachelor’s degree or diploma in a STEM or quantitative field.",
+      "Logical thinking and willingness to learn through projects."
+    ],
+    curriculum: [
+      {
+        id: "m1",
+        title: "GenAI App Builder - Foundation Certificate Program",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
+          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
+          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
+          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
+          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
+          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
+          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
+          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+        ]
+      },
+      {
+        id: "m2",
+        title: "Advanced GenAI and Machine Learning",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
+          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
+          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
+          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
+          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
+          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
+          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+        ]
+      },
+      {
+        id: "m3",
+        title: "Advanced AI Integration and Multimodal Applications",
+        duration: "30 hrs",
+        topics: [
+          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
+          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
+          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
+          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
+          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
+          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
+          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
+          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
+          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+        ]
+      },
+      {
+        id: "m4",
+        title: "Mastering Multimodal Fusion and GenAI Frameworks",
+        duration: "14 hrs",
+        topics: [
+          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
+          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
+          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
+          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
+          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
+          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+        ]
+      }
+    ]
+
+
+    ,
+
+
+
+    projects: [
+      {
+        id: "p1",
+        title: "Employee Attrition Prediction",
+        description: "Use machine learning techniques to predict which employees are likely to leave the organization",
+        image: "https://img.youtube.com/vi/NmW1EVedEts/0.jpg",
+        skills: ["Classification Models", "Data Preprocessing", "Feature Importance", "Model Evaluation"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "NmW1EVedEts"
+      },
+      {
+        id: "p2",
+        title: "Fraud Call Detection using Audio Data",
+        description: "Use audio data and neural networks to detect fraudulent calls by analyzing voice patterns and embeddings with deep learning techniques",
+        image: "https://img.youtube.com/vi/CeDUuCYfxrs/0.jpg",
+        skills: ["Audio Preprocessing", "Feature Extraction with Librosa", "Neural Network Modeling", "Model Evaluation using TensorFlow"],
+        difficulty: "Advanced",
+        isPractice: true,
+        videoId: "CeDUuCYfxrs"
+      },
+      {
+        id: "p3",
+        title: "Sentiment Analysis with ChatGPT and Python",
+        description: "Learn the fundamentals of ChatGPT, sentiment analysis, and how to apply NLP techniques on tweet data using Python for real-world insights",
+        image: "https://img.youtube.com/vi/uHSAvl03yf4/0.jpg",
+        skills: ["Sentiment Analysis Model", "Bag of Words", "WordCloud Visualization", "Comparison with AI Tools like ChatGPT and Alexa"],
+        difficulty: "Intermediate to Advanced",
+        isPractice: true,
+        videoId: "uHSAvl03yf4"
+      },
+      {
+        id: "p4",
+        title: "How to use GenAI in Google Sheet 2024 | AI in Google Sheet (Quick Method) | Beginner to Advance",
+        description: "Learn how to set up and use GenAI in Google Sheets for data analysis and automation. The video covers easy setup, practical examples, and advanced features for better decision-making, with troubleshooting tips.",
+        image: "https://img.youtube.com/vi/EC1jT0pWxM4/0.jpg",
+        skills: ["GenAI", "Google Sheets", "Data Analysis", " AI Integration", "Templates"],
+        difficulty: "Beginner to Advanced",
+        videoId: "EC1jT0pWxM4"
+      },
+      {
+        id: "p5",
+        title: "Build your First GenAI Powered Chatbot with Python | Generative AI | IvyProSchool",
+        description: "Learn to build your first GenAI-powered chatbot using Python and Generative AI. This video covers chatbot creation, Python implementation, and real-world applications of AI in conversational interfaces.",
+        image: "https://img.youtube.com/vi/v-jQx1acyLQ/0.jpg",
+        skills: ["GenAI", "Python", "Chatbot", "Generative AI", "AI Development"],
+        difficulty: "Beginner to Advanced",
+        videoId: "v-jQx1acyLQ"
+      },
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ],
+    instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University.",
+        isDirector: true
+
+      }
+    ],
+    aiFeatures: [
+      {
+        id: "ai1",
+        title: "AI Learning Assistant",
+        description: "Get personalized help and explanations for complex topics 24/7",
+        icon: "bot"
+      },
+      {
+        id: "ai2",
+        title: "Intelligent Progress Tracking",
+        description: "Our AI analyzes your learning pattern and suggests optimal study schedules",
+        icon: "activity"
+      },
+      {
+        id: "ai3",
+        title: "Automated Code Review",
+        description: "Get instant feedback on your coding assignments with suggestions for improvement",
+        icon: "code"
+      }
+    ],
+    faq: [
+      {
+        question: "Do I need prior coding experience?",
+        answer: "No, this bootcamp is designed to take you from zero to job-ready. We start with the basics of Python programming and gradually build up to advanced concepts."
+      },
+      {
+        question: "What is the time commitment?",
+        answer: "The bootcamp requires about 20-25 hours per week for 16 weeks. This includes live sessions, assignments, projects, and self-study."
+      },
+      {
+        question: "What kind of job support do you provide?",
+        answer: "We provide resume reviews, interview preparation, portfolio building, and connections to our hiring partners. Our career services team works with you individually until you secure a job."
+      },
+      {
+        question: "Can I attend part-time while working a full-time job?",
+        answer: "Yes, many of our students work full-time. We provide evening and weekend live sessions, and all sessions are recorded for those who cannot attend live."
+      }
+    ]
+  },
   
 
 ];

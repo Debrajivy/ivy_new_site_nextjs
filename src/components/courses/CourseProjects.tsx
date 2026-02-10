@@ -806,7 +806,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                 </TabsContent>
                 :
 
-                course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata"  || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Bangalore" ?
+                course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata"  || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Bangalore"  || course.title === "Generative AI Course in Mumbai" || course.title === "Generative AI Course in Pune" ||  course.title === "Generative AI Course in Chennai"?
 
                   <TabsContent value="capstone">
                     <div className="mb-8">

@@ -243,6 +243,9 @@ const Footer = () => {
                   <li><Link href="/courses/generative-ai-course-kolkata" className="hover:text-blue-400 transition-colors"> Gen AI Course in Kolkata</Link></li>
                   <li><Link href="/courses/generative-ai-course-delhi" className="hover:text-blue-400 transition-colors"> Gen AI Course in Delhi</Link></li>
                   <li><Link href="/courses/generative-ai-course-bangalore" className="hover:text-blue-400 transition-colors"> Gen AI Course in Bangalore</Link></li>
+                  <li><Link href="/courses/generative-ai-course-mumbai" className="hover:text-blue-400 transition-colors"> Gen AI Course in Mumbai</Link></li>
+                  <li><Link href="/courses/generative-ai-course-pune" className="hover:text-blue-400 transition-colors"> Gen AI Course in Pune</Link></li>
+                  <li><Link href="/courses/generative-ai-course-chennai" className="hover:text-blue-400 transition-colors"> Gen AI Course in Chennai</Link></li>
                  
            
 

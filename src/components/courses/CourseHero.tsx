@@ -17,6 +17,9 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import NASSCOMNEW from "@/assests/NASSCOMNEW.webp";
+import PritiJha from "@/assests/alumni/PritiJha.webp";
+import PranabKumarPaul from "@/assests/alumni/PranabKumarPaul.webp";
+import AnishBanerjee from "@/assests/alumni/AnishBanerjee.webp";
 
 interface CourseHeroProps {
   course: Course;
@@ -56,7 +59,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
   };
 
   useEffect(() => {
-   
+
   }, []);
 
   let sourceCampaignValue = "";
@@ -136,43 +139,43 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
 
     const payload = [
-  {
-    Attribute: "EmailAddress",
-    Value: formData.email,
-  },
-  {
-    Attribute: "FirstName",
-    Value: formData.name,
-  },
-  {
-    Attribute: "Phone",
-    Value: formData.phone,
-  },
-  {
-    Attribute: "mx_Citywise",
-    Value: formData.city,
-  },
-  {
-    Attribute: "mx_Program",
-    Value: formData.program,
-  },
-  {
-    Attribute: "mx_What_is_Your_Nearest_Branch",
-    Value: formData.branch,
-  },
-  {
-    Attribute: "Source",
-    Value: "Organic Search",  // ⬅️ Only one Source attribute
-  },
-  {
-    Attribute: "mx_Course",
-    Value: sourceCampaignValue
-  },
-  {
-    Attribute: "SourceMedium",
-    Value: "Google"
-  }
-];
+      {
+        Attribute: "EmailAddress",
+        Value: formData.email,
+      },
+      {
+        Attribute: "FirstName",
+        Value: formData.name,
+      },
+      {
+        Attribute: "Phone",
+        Value: formData.phone,
+      },
+      {
+        Attribute: "mx_Citywise",
+        Value: formData.city,
+      },
+      {
+        Attribute: "mx_Program",
+        Value: formData.program,
+      },
+      {
+        Attribute: "mx_What_is_Your_Nearest_Branch",
+        Value: formData.branch,
+      },
+      {
+        Attribute: "Source",
+        Value: "Organic Search",  // ⬅️ Only one Source attribute
+      },
+      {
+        Attribute: "mx_Course",
+        Value: sourceCampaignValue
+      },
+      {
+        Attribute: "SourceMedium",
+        Value: "Google"
+      }
+    ];
 
     try {
       const response = await fetch(API_URL, {
@@ -236,7 +239,11 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
   // usage
 
-
+  const dataScienceAlumni = [
+    { name: "Priti Jha", studentImg: PritiJha, companyLogo: amazon },
+    { name: "Pranab Kumar Paul", studentImg: PranabKumarPaul, companyLogo: ibm },
+    { name: "Anish Banerjee", studentImg: AnishBanerjee, companyLogo: pwc },
+  ];
   // Determine if it's the specific IIT Guwahati course
   const isIITGuwahatiCourse =
     course.title === "Data Science with Machine Learning & AI Certification" ||
@@ -253,8 +260,6 @@ const CourseHero = ({ course }: CourseHeroProps) => {
       style={{ marginTop: -30 }}
       className="py-10 text-white bg-gradient-to-r from-ivy-blue to-ivy-orange"
     >
-
-
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -309,8 +314,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     src={NASSCOMNEW}
                     alt="NASSCOM Certification"
                   />
-                ) : course.title === " Data Engineering Course" || course.title === "Generative AI Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" || 
-                  course.title === "Data Analytics With Visualization" || course.title ==="Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ||
+                ) : course.title === " Data Engineering Course" || course.title === "Generative AI Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" ||
+                  course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ||
                   course.title === "Generative AI Course" ||
                   course.title === "AI for Product Managers" || course.title === "AI and Machine Learning Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" ? (
                   <Image
@@ -335,9 +340,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <span>
                   {course.title === "AI for Product Managers"
                     ? "720 students"
-                    : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi"
+                    : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
                       ? "1220 students"
-                      : course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" 
+                      : course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
                         ? "1440 students"
                         : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai"
                           ? "862 students"
@@ -362,28 +367,28 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
                 {/* <span>{courseHours[course.title] || "225 Hours"}</span> */}
                 {course.title === "AI and Machine Learning Course"
-                  ? "32 Hours":
+                  ? "32 Hours" :
                   course.title === "Data Science with Machine Learning & AI Certification"
                     ? "232 Hours"
-                  : course.title === "AI for Product Managers"
-                    ? "24 Hours"
-                    : "225 Hours"
+                    : course.title === "AI for Product Managers"
+                      ? "24 Hours"
+                      : "225 Hours"
                 }              </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Star size={16} className="mr-2" />
                 <span> {course.title === "AI for Product Managers"
                   ? "4.7 (195 reviews)"
-                  : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi"
+                  : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
                     ? "4.9 (209 reviews)"
                     : course.title === "Data Science with Machine Learning & AI Certification"
                       ? "4.8 (230 reviews)"
                       : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai"
                         ? "4.7 (198 reviews)"
                         : course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
-                           "4.8 (324 reviews)"
+                          "4.8 (324 reviews)"
                           : course.title === "Data Analytics and Generative AI Course"
                             ? "4.7 (212 reviews)"
-                            : course.title === "Data Analytics With Visualization" || course.title ==="Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
+                            : course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
                               ? "4.6 (286 reviews)"
                               : course.title === "Data Analytics and Generative AI Course"
                                 ? "4.8 (6983 reviews)"
@@ -401,14 +406,14 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   ? "NASSCOM Certification"
                   : course.title === "Data science course (Pay after Placement)"
                     ? "NASSCOM Certification"
-                    : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai"||
+                    : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" ||
                       course.title === "Data Analytics and Generative AI Course" ||
                       course.title ===
-                      "Data Analytics With Visualization" || course.title ==="Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"||
-                    course.title === "Data Analytics and Generative AI Course" ||
-                    course.title === "AI for Product Managers" || course.title === "Generative AI Course" || course.title==="Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" || course.title === "AI and Machine Learning Course" 
-                    ? "Ivy Professional School Certification"
-                    : ""}
+                      "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ||
+                      course.title === "Data Analytics and Generative AI Course" ||
+                      course.title === "AI for Product Managers" || course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" || course.title === "AI and Machine Learning Course"
+                      ? "Ivy Professional School Certification"
+                      : ""}
               </div>
             </div>
 
@@ -458,6 +463,92 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               )}
             </div>
 
+
+            {/* <div className="space-y-4 overflow-hidden py-4">
+              <div className="text-white text-base font-semibold px-2">
+                Find our Alumni at
+              </div>
+
+              {course.title === "Data Science with Machine Learning & AI Certification" ? (
+                <div className="relative flex overflow-hidden bg-white/10 backdrop-blur-md rounded-2xl py-8 border border-white/20">
+                  <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .alumni-scroll-container {
+          display: flex;
+          animation: marquee 25s linear infinite;
+          gap: 2.5rem;
+        }
+        .alumni-scroll-container:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+                  <div className="alumni-scroll-container whitespace-nowrap items-center">
+                    {[...dataScienceAlumni, ...dataScienceAlumni].map((alumni, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-5 bg-white p-4 px-8 rounded-2xl shadow-xl border border-gray-100"
+                        style={{ minWidth: 'max-content' }}
+                      >
+                        <div className="relative">
+                          <Image
+                            src={alumni.studentImg}
+                            alt={alumni.name}
+                            width={80}
+                            height={80}
+                            className="rounded-full object-cover border-4 border-[#75a082]/20 shadow-md"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <span className="text-gray-900 text-lg font-extrabold leading-tight">
+                            {alumni.name}
+                          </span>
+                          <div className="flex items-center gap-2">
+                            <span className="bg-[#75a082]/10 text-[#75a082] text-[10px] font-bold px-2 py-0.5 rounded-md uppercase">
+                              Data Science
+                            </span>
+                            <span className="text-gray-400 text-xs font-medium italic">at</span>
+                          </div>
+                        </div>
+
+                        <div className="pl-4 border-l-2 border-gray-100 flex items-center">
+                          <Image
+                            src={alumni.companyLogo}
+                            alt="Company Logo"
+                            width={110}
+                            height={45}
+                            className="object-contain h-10 w-auto"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className={`flex items-center ${course.title === "Generative AI Course" || course.title === "Cloud Data Engineering Course with IIT Guwahati"
+                  ? "bg-white/40"
+                  : "bg-[#75a082]/40"
+                  } rounded-full px-4 py-2 w-fit mx-auto sm:mx-0`}>
+                  <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                    {partners.map((partner) => (
+                      <div key={partner.name} className="flex items-center">
+                        <Image
+                          width={150}
+                          height={50}
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="object-contain h-10 sm:h-12 w-auto max-w-[100px] sm:max-w-[120px]"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div> */}
             <div className="flex flex-wrap items-center gap-4">
               <Button
                 variant="outline"
@@ -473,7 +564,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1cT9-gqqqifm-HvBE81WDsql0FxQIs8hP/preview";
                   } else if (
-                    course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" 
+                    course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1a1gYATYn33yUVxWXZOdp5aGjFkYXCCk4/preview";
@@ -484,7 +575,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       "https://drive.google.com/file/d/15dM1mZal1HjDpJYYj2z0MB41bJf7egi2/preview";
                   } else if (
                     course.title ===
-                    "Data Analytics With Visualization" || course.title ==="Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
+                    "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
                   ) {
                     syllabusUrl =
                       "https://drive.google.com/file/d/13LLhT-UYWyEtwOHa5ycbVoOGkgLAw3pr/preview";
@@ -516,7 +607,6 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       "https://drive.google.com/file/d/1p4d84pQ8c-HmIYD7fUH16HNPkmfQzN7r/preview";
                   }
 
-                  //city specific
                   else if (course.title === "Data Engineering Course in Kolkata") {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/preview";

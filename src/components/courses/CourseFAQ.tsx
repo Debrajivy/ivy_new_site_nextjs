@@ -4008,6 +4008,54 @@ const courseData: { [key: string]: CourseFAQData } = {
       category: "certification"
     },
 
+    // Projects-related FAQs
+    {
+      question: "What real-world projects will I work on during the Generative AI course in Delhi?",
+      answer: "You will work on 20+ real-life projects, including building GenAI-powered chatbots with Python, fine-tuning LLMs with LangChain, and image generation using Stable Diffusion. These projects are designed to build a professional portfolio that attracts top tech firms in Delhi.",
+      category: "projects"
+    },
+    {
+      question: "Is there a capstone project included in the curriculum?",
+      answer: "Yes, the course includes an industry-relevant capstone project where you apply advanced AI Integration and Multimodal Applications to solve a complex business challenge, mentored by experts from top analytics firms.",
+      category: "projects"
+    },
+
+    // Placement-related FAQs
+    {
+      question: "What kind of placement support does Ivy Professional School provide in Delhi?",
+      answer: "Our dedicated placement team works with over 500+ hiring partners. We offer a Job Placement Program that includes resume optimization, salary negotiation support, and access to exclusive career fairs in the Delhi-NCR region.",
+      category: "placement"
+    },
+    {
+      question: "Is there a job guarantee with the Generative AI course?",
+      answer: "Eligible students can opt for our job guarantee program, which ensures you land a role within 6 months of graduation or receive a full tuition refund, providing peace of mind for your career transition.",
+      category: "placement"
+    },
+
+    // Opportunities-related FAQs
+    {
+      question: "What are the career opportunities for Generative AI experts in Delhi in 2026?",
+      answer: "Delhi has emerged as a hub for AI innovation. Opportunities range from roles like AI Prompt Engineer and Agentic AI Developer to specialized positions in healthcare, finance, and US-based AI startups operating from Delhi tech parks.",
+      category: "opportunities"
+    },
+    {
+      question: "Can I find freelance or remote AI opportunities through this course?",
+      answer: "Yes, the course covers building and deploying AI models as APIs and web apps, enabling you to take on global freelance projects in automation, AI voiceovers, and custom LLM development.",
+      category: "opportunities"
+    },
+
+    // Support-related FAQs
+    {
+      question: "What support is available for doubt clearing and technical issues?",
+      answer: "We offer live doubt-clearing sessions and 24/7 access to teaching assistants. Our Delhi campus near Barakhamba Road and South Ex also provides in-person mentorship from approachable experts like Pratik Sir and Eshani Mam.",
+      category: "support"
+    },
+    {
+      question: "Will I have access to the learning materials after the course ends?",
+      answer: "Yes, you get lifetime access to all course recordings, multimedia resources, and our internal community forum to stay updated with the rapidly evolving Generative AI landscape.",
+      category: "support"
+    },
+
     // Job Outlook-related FAQs
     {
       question: "What is the job outlook for Generative AI professionals in Delhi?",
@@ -4186,6 +4234,54 @@ const courseData: { [key: string]: CourseFAQData } = {
       category: "certification"
     },
 
+    // Projects-related FAQs (New/SEO Optimized)
+    {
+      question: "What real-world projects are included in the Bangalore Generative AI course?",
+      answer: "Students work on 10+ industry-standard projects including RAG-powered Enterprise Assistants, Multimodal AI Chatbots (Text+Image), and Fine-tuning LLMs using LangChain and Pinecone. These projects focus on solving actual business problems faced by Bangalore-based tech startups.",
+      category: "projects"
+    },
+    {
+      question: "Will I complete a Capstone Project for my portfolio?",
+      answer: "Yes, the course features a production-grade Capstone project. You will build and deploy a complete AI Agent or a Custom Diffusion model, documenting the architecture from scratch to showcase your engineering skills to recruiters in Silicon Valley of India.",
+      category: "projects"
+    },
+
+    // Placement-related FAQs (New/SEO Optimized)
+    {
+      question: "How does placement assistance work in Bangalore?",
+      answer: "We offer 100% placement support with a focus on the Bangalore market. This includes mock interviews with AI leads from top MNCs, exclusive hiring drives in Koramangala and Manyata Tech Park, and personalized resume reviews to highlight your GenAI expertise.",
+      category: "placement"
+    },
+    {
+      question: "Which companies hire from Ivy Pro School in Bangalore?",
+      answer: "Our alumni work at top-tier firms and unicorn startups across Bangalore, including companies like Accenture, Genpact, MakeMyTrip, and niche AI research labs. We connect you directly with hiring managers seeking GenAI engineers and LLM specialists.",
+      category: "placement"
+    },
+
+    // Opportunities-related FAQs (New/SEO Optimized)
+    {
+      question: "What job roles are available for GenAI graduates in Bangalore?",
+      answer: "Bangalore offers the highest density of AI roles in 2026. You can apply for titles like GenAI Application Developer, Agentic AI Engineer, Prompt/RAG Specialist, and MLOps Engineer at global R&D centers located in Whitefield and Electronic City.",
+      category: "opportunities"
+    },
+    {
+      question: "Are there remote or freelance opportunities in this field?",
+      answer: "Absolutely. Generative AI is highly suited for remote work. You will learn to build AI agents and automated content pipelines, enabling you to take on global freelance projects or work for US-based startups while living in Bangalore.",
+      category: "opportunities"
+    },
+
+    // Support-related FAQs (New/SEO Optimized)
+    {
+      question: "What student support services do you provide?",
+      answer: "We provide 24/7 access to our dedicated Slack community and LMS. For Bangalore students, we also offer face-to-face doubt-clearing sessions at our local center and 1-on-1 mentorship with industry professionals working in the local AI ecosystem.",
+      category: "support"
+    },
+    {
+      question: "Will I have access to GPU resources for training models?",
+      answer: "Yes, we provide cloud-based GPU access for your practical labs and projects, ensuring you can train large-scale transformer models and diffusion networks without needing high-end local hardware.",
+      category: "support"
+    },
+
     // Job Outlook-related FAQs
     {
       question: "What is the job outlook for Generative AI professionals in Bangalore?",
@@ -4213,7 +4309,641 @@ const courseData: { [key: string]: CourseFAQData } = {
       category: "job-outlook"
     }
   ]
+},
+
+"Generative AI Course in Mumbai": {
+  categories: [
+    { id: "program", name: "Program" },
+    { id: "eligibility", name: "Eligibility" },
+    { id: "generative-ai", name: "Generative AI" },
+    { id: "job-and-career", name: "Job And Career" },
+    { id: "certification", name: "Certification" },
+    { id: "projects", name: "Projects" },
+    { id: "placement", name: "Placement" },
+    { id: "opportunities", name: "Opportunities" },
+    { id: "support", name: "Support" },
+    { id: "job-outlook", name: "Data & AI Job Outlook" }
+  ],
+  faqs: [
+    // Program-related FAQs
+    {
+      question: "What skills will I gain from the Generative AI course in Mumbai?",
+      answer: "This course will help you develop a deep understanding of advanced Generative AI techniques like GANs, VAEs, and Transformer models such as GPT. You will gain the skills to create innovative AI solutions for text and image generation, and dive into deep learning, model fine-tuning, and deployment.",
+      category: "program"
+    },
+    {
+      question: "How is the course structured in Mumbai?",
+      answer: "The course is divided into interactive lectures, practical coding sessions, and real-world projects. You will also work on a capstone project that simulates actual industry challenges. We offer both weekday and weekend schedules to accommodate students and professionals alike.",
+      category: "program"
+    },
+    {
+      question: "Can I attend the Generative AI course in Mumbai online or offline?",
+      answer: "Yes, you can choose between in-person classes in Mumbai or live online sessions. Hybrid learning is also available for added flexibility, so you can switch between the formats based on your convenience.",
+      category: "program"
+    },
+    {
+      question: "How long will it take to complete the Generative AI course in Mumbai?",
+      answer: "The duration of the course ranges from 6 to 10 months depending on your learning pace and chosen batch schedule. You can select the format that best fits your availability.",
+      category: "program"
+    },
+    {
+      question: "What makes the Generative AI course in Mumbai different from others?",
+      answer: "Our program combines in-depth theory with hands-on experience, ensuring you can apply what you learn to solve real-world problems. The course also emphasizes practical skills, with expert mentorship and placement support throughout.",
+      category: "program"
+    },
+
+    // Eligibility-related FAQs
+    {
+      question: "Who can enroll in the Generative AI course in Mumbai?",
+      answer: "The course is suitable for anyone with basic knowledge of programming and math. Graduates from engineering, computer science, or related fields can join, and it's also open to career switchers from non-technical backgrounds.",
+      category: "eligibility"
+    },
+    {
+      question: "Do I need coding experience to take the course?",
+      answer: "Prior programming experience is not mandatory. The course starts from the basics of Python programming and gradually covers more advanced AI topics, making it ideal for beginners.",
+      category: "eligibility"
+    },
+    {
+      question: "Can professionals without a technical background enroll in the Generative AI course?",
+      answer: "Yes, this course is designed to be accessible to individuals from non-technical backgrounds. With a focus on practical applications and step-by-step learning, it’s a great option for professionals looking to pivot into AI.",
+      category: "eligibility"
+    },
+    {
+      question: "Is there an age limit to join the Generative AI course in Mumbai?",
+      answer: "No, there is no age limit. The course is open to anyone passionate about AI and willing to learn, regardless of age.",
+      category: "eligibility"
+    },
+    {
+      question: "Do I need a degree in computer science to join the course?",
+      answer: "No, a computer science degree is not required. As long as you have a strong grasp of logic and basic math, you will find the course accessible and valuable.",
+      category: "eligibility"
+    },
+
+    // Generative AI-related FAQs
+    {
+      question: "What technologies will I learn during the Generative AI course in Mumbai?",
+      answer: "You'll learn tools and technologies such as Python, TensorFlow, PyTorch, and libraries essential for building Generative AI models. The course also covers model deployment and cloud computing platforms like AWS.",
+      category: "generative-ai"
+    },
+    {
+      question: "How important is deep learning in the Generative AI course?",
+      answer: "Deep learning is crucial to Generative AI. The course covers how to use neural networks and deep learning architectures to train models for generating text, images, and other creative outputs.",
+      category: "generative-ai"
+    },
+    {
+      question: "Will I receive a certificate upon completion of the course?",
+      answer: "Yes, you will receive a certificate from Ivy Professional School upon successfully completing the course. This certificate is recognized by employers and will validate your expertise in Generative AI.",
+      category: "generative-ai"
+    },
+    {
+      question: "Does the course include real-world project experience?",
+      answer: "Yes, the course includes hands-on projects and a capstone project where you will work on real business problems. You'll apply Generative AI techniques to practical challenges in various industries.",
+      category: "generative-ai"
+    },
+    {
+      question: "How will the course help me build a portfolio of Generative AI work?",
+      answer: "Throughout the course, you’ll create multiple projects, including a capstone project, that you can showcase in your portfolio to demonstrate your skills and increase your employability.",
+      category: "generative-ai"
+    },
+
+    // Job and Career-related FAQs
+    {
+      question: "What job roles can I pursue after completing the Generative AI course?",
+      answer: "Upon completing the course, you can apply for roles such as AI Engineer, Generative AI Developer, Machine Learning Engineer, Data Scientist, and AI Researcher.",
+      category: "job-and-career"
+    },
+    {
+      question: "How is the job market for Generative AI professionals in Mumbai?",
+      answer: "The job market in Mumbai is vibrant, with significant demand for Generative AI professionals across industries like technology, media, finance, and healthcare. Companies are increasingly integrating AI into their operations, leading to a surge in job opportunities.",
+      category: "job-and-career"
+    },
+    {
+      question: "What is the salary range for Generative AI professionals in Mumbai?",
+      answer: "Generative AI professionals in Mumbai can expect competitive salaries. Entry-level roles typically start at ₹10-15 lakhs per annum, while experienced professionals can earn ₹30 lakhs or more.",
+      category: "job-and-career"
+    },
+    {
+      question: "Can I switch careers to Generative AI after completing the course?",
+      answer: "Yes, the course is designed for career switchers. By the end of the program, you'll have the skills necessary to transition into a Generative AI career, even if you come from a non-technical background.",
+      category: "job-and-career"
+    },
+    {
+      question: "Do you offer job placement assistance?",
+      answer: "Yes, we provide job placement assistance, including resume reviews, mock interviews, and connections to hiring companies in Mumbai’s AI sector.",
+      category: "job-and-career"
+    },
+
+    // Certification-related FAQs
+    {
+      question: "Will I receive a certification after completing the Generative AI course?",
+      answer: "Yes, after successfully completing the course, you will receive a certification from Ivy Professional School, recognized by industry leaders and employers.",
+      category: "certification"
+    },
+    {
+      question: "Is the certification industry-recognized?",
+      answer: "Yes, Ivy Professional School’s certification is well-regarded by employers in the tech, AI, and data science industries, helping you stand out in the competitive job market.",
+      category: "certification"
+    },
+    {
+      question: "How can I use this certification to enhance my career?",
+      answer: "The certification will serve as a powerful addition to your resume and LinkedIn profile, demonstrating your expertise in Generative AI and boosting your job prospects in the AI field.",
+      category: "certification"
+    },
+    {
+      question: "Are there any additional certifications offered alongside the course?",
+      answer: "Yes, students are encouraged to pursue additional certifications from platforms like Google, Microsoft, or Coursera to further validate their skills and increase their industry credibility.",
+      category: "certification"
+    },
+    {
+      question: "Can I add the certification to my professional profiles?",
+      answer: "Yes, the certification can be added to your LinkedIn profile, resume, and other professional platforms to highlight your new skills in Generative AI.",
+      category: "certification"
+    },
+
+    // Projects-related FAQs (Mumbai-Specific & SEO Updated)
+    {
+      question: "What kind of Generative AI projects are included in the Mumbai course?",
+      answer: "You will build 10+ industry-relevant projects including AI-powered Financial Fraud Detectors for Mumbai's fintech sector, Multimodal Content Creators for media agencies, and RAG-based Legal Assistants for corporate firms in BKC. These projects utilize LangChain, Vector DBs, and OpenAI APIs.",
+      category: "projects"
+    },
+    {
+      question: "Will the projects focus on local Mumbai industries?",
+      answer: "Yes. Our curriculum is tailored to Mumbai’s dominance in Finance and Media. Projects include automating stock market sentiment analysis and building custom Stable Diffusion pipelines for digital marketing and production houses based in Andheri and Powai.",
+      category: "projects"
+    },
+
+    // Placement-related FAQs (Mumbai-Specific & SEO Updated)
+    {
+      question: "How does the placement support benefit Mumbai-based students?",
+      answer: "We offer 100% placement support through exclusive hiring drives in major Mumbai business districts like Bandra-Kurla Complex (BKC) and Andheri East. Our career cell connects you with top-tier firms including Jio, TCS, and boutique AI startups in Navi Mumbai.",
+      category: "placement"
+    },
+    {
+      question: "Are there specific mock interviews for Mumbai companies?",
+      answer: "Absolutely. We conduct domain-specific mock interviews that mirror the technical and behavioral rounds of leading Mumbai-based companies, ensuring you are prepared for roles in Banking, Fintech, and Entertainment-tech.",
+      category: "placement"
+    },
+
+    // Opportunities-related FAQs (Mumbai-Specific & SEO Updated)
+    {
+      question: "What job opportunities exist for GenAI experts in Mumbai in 2026?",
+      answer: "Mumbai is a booming hub for 'Agentic AI' and 'LLM Engineering' roles. Graduates can find high-paying opportunities as AI Solutions Architects, Prompt Architects, and AI Artists at global consulting firms and creative studios throughout Greater Mumbai and Thane.",
+      category: "opportunities"
+    },
+    {
+      question: "Can I find freelance AI work in Mumbai after this course?",
+      answer: "Yes. The course teaches you to build production-grade AI applications. Mumbai’s massive freelance market for content automation and custom AI tool development offers numerous high-ticket projects for skilled Generative AI developers.",
+      category: "opportunities"
+    },
+
+    // Support-related FAQs (Mumbai-Specific & SEO Updated)
+    {
+      question: "What student support is available for the Mumbai Generative AI course?",
+      answer: "We provide 24/7 technical support via our dedicated community forums. For Mumbai classroom students, we offer on-site lab access and face-to-face mentorship. Online students get live screen-sharing support to debug complex neural network code in real-time.",
+      category: "support"
+    },
+    {
+      question: "Do you provide infrastructure support like GPU access?",
+      answer: "Yes. Since training Generative models requires significant compute, we provide cloud-based GPU access for all students, ensuring you can train GANs and Transformers without investing in expensive hardware.",
+      category: "support"
+    },
+
+    // Job Outlook-related FAQs
+    {
+      question: "What is the job outlook for Generative AI professionals in Mumbai?",
+      answer: "Mumbai offers excellent career prospects for Generative AI professionals, with the demand for skilled talent growing at an accelerated rate. The job market is expected to expand by over 20% annually as more companies adopt AI technologies.",
+      category: "job-outlook"
+    },
+    {
+      question: "What are the key skills in demand for Generative AI roles in Mumbai?",
+      answer: "Key skills in demand include Python, deep learning, TensorFlow, PyTorch, GANs, VAEs, NLP, and model deployment. Expertise in cloud platforms like AWS and Azure is also highly sought after.",
+      category: "job-outlook"
+    },
+    {
+      question: "Which industries are hiring Generative AI professionals in Mumbai?",
+      answer: "Generative AI professionals are being sought after by industries such as technology, media, finance, healthcare, and e-commerce. Companies are utilizing AI to enhance their products, services, and customer experiences.",
+      category: "job-outlook"
+    },
+    {
+      question: "What is the average salary for a Generative AI professional in Mumbai?",
+      answer: "The average salary for a Generative AI professional in Mumbai ranges from ₹12 lakhs per annum for entry-level positions to ₹30 lakhs or more for senior-level roles.",
+      category: "job-outlook"
+    },
+    {
+      question: "What are the career growth prospects for Generative AI professionals in Mumbai?",
+      answer: "Generative AI professionals in Mumbai have strong career growth prospects, with opportunities for leadership roles such as AI Architect, Chief Data Scientist, and Director of AI as demand for AI expertise continues to grow.",
+      category: "job-outlook"
+    }
+  ]
+},
+
+"Generative AI Course in Pune": {
+  categories: [
+    { id: "program", name: "Program" },
+    { id: "eligibility", name: "Eligibility" },
+    { id: "generative-ai", name: "Generative AI" },
+    { id: "job-and-career", name: "Job And Career" },
+    { id: "certification", name: "Certification" },
+    { id: "projects", name: "Projects" },
+    { id: "placement", name: "Placement" },
+    { id: "opportunities", name: "Opportunities" },
+    { id: "support", name: "Support" },
+    { id: "job-outlook", name: "Data & AI Job Outlook" }
+  ],
+
+  faqs: [
+
+    /* ================= PROGRAM ================= */
+    {
+      question: "What does the Generative AI course in Pune cover?",
+      answer: "In this course, you will explore advanced Generative AI techniques such as GANs, VAEs, diffusion models, and Transformer-based architectures like GPT. You’ll work on real-world applications including text generation, image synthesis, chatbots, and AI-powered automation with hands-on projects.",
+      category: "program"
+    },
+    {
+      question: "How is the Generative AI course structured in Pune?",
+      answer: "The program follows a structured learning path including live instructor-led sessions, hands-on labs, real-time assignments, and an industry-aligned capstone project. Both weekday and weekend batches are available.",
+      category: "program"
+    },
+    {
+      question: "Can I take the Generative AI course online or offline in Pune?",
+      answer: "Yes, learners can choose between classroom training in Pune, live online sessions, or a hybrid learning model for maximum flexibility.",
+      category: "program"
+    },
+    {
+      question: "How long is the Generative AI course in Pune?",
+      answer: "The course duration ranges from 6 to 10 months depending on your learning pace and batch selection.",
+      category: "program"
+    },
+    {
+      question: "What makes this Generative AI course in Pune unique?",
+      answer: "The course emphasizes real-world GenAI use cases, production-ready projects, expert mentorship, and strong career support aligned with current industry demands.",
+      category: "program"
+    },
+
+    /* ================= ELIGIBILITY ================= */
+    {
+      question: "Who is eligible for the Generative AI course in Pune?",
+      answer: "Graduates, working professionals, and career switchers with basic logical thinking and interest in AI are eligible. Prior technical background is helpful but not mandatory.",
+      category: "eligibility"
+    },
+    {
+      question: "Do I need prior coding experience?",
+      answer: "No. The course starts with Python fundamentals and gradually advances to deep learning and Generative AI concepts.",
+      category: "eligibility"
+    },
+    {
+      question: "Can non-technical professionals enroll?",
+      answer: "Yes. This program is designed to support learners from non-technical backgrounds with structured foundational training.",
+      category: "eligibility"
+    },
+    {
+      question: "Is there an age limit?",
+      answer: "No age limit. Anyone passionate about Generative AI can enroll.",
+      category: "eligibility"
+    },
+    {
+      question: "Is a computer science degree required?",
+      answer: "No. Practical skills and applied learning are the focus of this course.",
+      category: "eligibility"
+    },
+
+    /* ================= GENERATIVE AI ================= */
+    {
+      question: "Which tools are covered in the Generative AI course?",
+      answer: "You will learn Python, PyTorch, TensorFlow, Hugging Face, LangChain, OpenAI APIs, diffusion models, vector databases, and cloud deployment.",
+      category: "generative-ai"
+    },
+    {
+      question: "Does the course focus on real-world GenAI use cases?",
+      answer: "Yes. You will build chatbots, AI copilots, recommendation systems, image generators, and enterprise GenAI solutions.",
+      category: "generative-ai"
+    },
+    {
+      question: "Will I receive a certification?",
+      answer: "Yes. You will receive an industry-recognized certification from Ivy Professional School upon completion.",
+      category: "generative-ai"
+    },
+
+    /* ================= JOB & CAREER ================= */
+    {
+      question: "What jobs can I apply for after this course?",
+      answer: "You can apply for roles such as Generative AI Engineer, Machine Learning Engineer, AI Developer, Data Scientist, and AI Consultant.",
+      category: "job-and-career"
+    },
+    {
+      question: "What salary can I expect in Pune?",
+      answer: "Entry-level salaries start around ₹8–10 LPA, while experienced GenAI professionals earn ₹25–35 LPA depending on skillset and domain.",
+      category: "job-and-career"
+    },
+    {
+      question: "Does the course help with career transition?",
+      answer: "Yes. The curriculum and career support are designed specifically for career switchers.",
+      category: "job-and-career"
+    },
+
+    /* ================= PROJECTS ================= */
+    {
+      question: "What projects will I work on during the Generative AI course?",
+      answer: "You will work on real-world projects including GenAI chatbots, AI content generators, document intelligence systems, image generation using diffusion models, and LLM-powered applications.",
+      category: "projects"
+    },
+    {
+      question: "Is there a capstone project in the course?",
+      answer: "Yes. The capstone project is industry-aligned and designed to solve real business problems using Generative AI technologies.",
+      category: "projects"
+    },
+    {
+      question: "Are projects aligned with current industry needs?",
+      answer: "Absolutely. Projects are updated regularly based on 2025 GenAI hiring trends and enterprise use cases.",
+      category: "projects"
+    },
+
+    /* ================= PLACEMENT ================= */
+    {
+      question: "Does the Generative AI course provide placement assistance?",
+      answer: "Yes. Ivy Professional School offers structured placement assistance including resume building, interview prep, mock interviews, and hiring partner referrals.",
+      category: "placement"
+    },
+    {
+      question: "Which companies hire Generative AI professionals from Pune?",
+      answer: "Hiring partners include IT services companies, AI startups, SaaS firms, fintech, healthcare, and global MNCs hiring for GenAI roles.",
+      category: "placement"
+    },
+    {
+      question: "Is placement support available after course completion?",
+      answer: "Yes. Placement support continues even after course completion until you secure a relevant role.",
+      category: "placement"
+    },
+
+    /* ================= OPPORTUNITIES ================= */
+    {
+      question: "What opportunities open up after learning Generative AI?",
+      answer: "You can work on AI product development, enterprise automation, GenAI research, freelance AI consulting, and startup innovation projects.",
+      category: "opportunities"
+    },
+    {
+      question: "Can I work on global GenAI projects?",
+      answer: "Yes. GenAI skills are globally in demand, enabling remote and international opportunities.",
+      category: "opportunities"
+    },
+
+    /* ================= SUPPORT ================= */
+    {
+      question: "What kind of learning support is provided?",
+      answer: "You receive mentor support, doubt-clearing sessions, recorded lectures, dedicated Slack/WhatsApp groups, and one-on-one guidance.",
+      category: "support"
+    },
+    {
+      question: "Is there career and interview support?",
+      answer: "Yes. Dedicated career mentors help with resume reviews, LinkedIn optimization, mock interviews, and job strategy.",
+      category: "support"
+    },
+
+    /* ================= JOB OUTLOOK ================= */
+    {
+      question: "What is the job outlook for Generative AI professionals in Pune?",
+      answer: "The demand for Generative AI professionals in Pune is growing at over 25% annually due to enterprise AI adoption and GenAI-led transformation in 2025.",
+      category: "job-outlook"
+    },
+    {
+      question: "Which industries are hiring GenAI talent?",
+      answer: "IT, SaaS, fintech, healthcare, e-commerce, media, and manufacturing sectors are actively hiring GenAI professionals.",
+      category: "job-outlook"
+    },
+       // Certification-related FAQs
+    {
+      question: "Will I receive a certification after completing the Generative AI course?",
+      answer: "Yes, after successfully completing the course, you will receive a certification from Ivy Professional School, recognized by industry leaders and employers.",
+      category: "certification"
+    },
+    {
+      question: "Is the certification industry-recognized?",
+      answer: "Yes, Ivy Professional School’s certification is well-regarded by employers in the tech, AI, and data science industries, helping you stand out in the competitive job market.",
+      category: "certification"
+    },
+    {
+      question: "How can I use this certification to enhance my career?",
+      answer: "The certification will serve as a powerful addition to your resume and LinkedIn profile, demonstrating your expertise in Generative AI and boosting your job prospects in the AI field.",
+      category: "certification"
+    },
+    {
+      question: "Are there any additional certifications offered alongside the course?",
+      answer: "Yes, students are encouraged to pursue additional certifications from platforms like Google, Microsoft, or Coursera to further validate their skills and increase their industry credibility.",
+      category: "certification"
+    },
+    {
+      question: "Can I add the certification to my professional profiles?",
+      answer: "Yes, the certification can be added to your LinkedIn profile, resume, and other professional platforms to highlight your new skills in Generative AI.",
+      category: "certification"
+    },
+  ]
+},
+
+"Generative AI Course in Chennai": {
+  categories: [
+    { id: "program", name: "Program" },
+    { id: "eligibility", name: "Eligibility" },
+    { id: "generative-ai", name: "Generative AI" },
+    { id: "job-and-career", name: "Job And Career" },
+    { id: "certification", name: "Certification" },
+    { id: "projects", name: "Projects" },
+    { id: "placement", name: "Placement" },
+    { id: "opportunities", name: "Opportunities" },
+    { id: "support", name: "Support" },
+    { id: "job-outlook", name: "Data & AI Job Outlook" }
+  ],
+
+  faqs: [
+       // Certification-related FAQs
+    {
+      question: "Will I receive a certification after completing the Generative AI course?",
+      answer: "Yes, after successfully completing the course, you will receive a certification from Ivy Professional School, recognized by industry leaders and employers.",
+      category: "certification"
+    },
+    {
+      question: "Is the certification industry-recognized?",
+      answer: "Yes, Ivy Professional School’s certification is well-regarded by employers in the tech, AI, and data science industries, helping you stand out in the competitive job market.",
+      category: "certification"
+    },
+    {
+      question: "How can I use this certification to enhance my career?",
+      answer: "The certification will serve as a powerful addition to your resume and LinkedIn profile, demonstrating your expertise in Generative AI and boosting your job prospects in the AI field.",
+      category: "certification"
+    },
+    {
+      question: "Are there any additional certifications offered alongside the course?",
+      answer: "Yes, students are encouraged to pursue additional certifications from platforms like Google, Microsoft, or Coursera to further validate their skills and increase their industry credibility.",
+      category: "certification"
+    },
+    {
+      question: "Can I add the certification to my professional profiles?",
+      answer: "Yes, the certification can be added to your LinkedIn profile, resume, and other professional platforms to highlight your new skills in Generative AI.",
+      category: "certification"
+    },
+
+    /* ================= PROGRAM ================= */
+    {
+      question: "What will I learn in the Generative AI course in Chennai?",
+      answer: "You will learn core and advanced Generative AI concepts including GANs, VAEs, diffusion models, large language models (LLMs), and transformer architectures. The course focuses on building real-world AI applications such as chatbots, content generators, and AI automation systems.",
+      category: "program"
+    },
+    {
+      question: "How is the Generative AI course in Chennai structured?",
+      answer: "The course includes instructor-led sessions, hands-on coding labs, live industry projects, and a capstone project. Learners can choose weekday or weekend batches based on availability.",
+      category: "program"
+    },
+    {
+      question: "Is the Generative AI course available online or offline in Chennai?",
+      answer: "Yes. You can attend classroom training in Chennai, join live online sessions, or opt for a hybrid learning model.",
+      category: "program"
+    },
+    {
+      question: "What is the duration of the Generative AI course in Chennai?",
+      answer: "The course duration ranges from 6 to 10 months depending on the learning pace and batch selection.",
+      category: "program"
+    },
+    {
+      question: "Why choose this Generative AI course in Chennai?",
+      answer: "This program emphasizes hands-on learning, real-world GenAI use cases, expert mentorship, and strong career guidance aligned with current industry requirements.",
+      category: "program"
+    },
+
+    /* ================= ELIGIBILITY ================= */
+    {
+      question: "Who can enroll in the Generative AI course in Chennai?",
+      answer: "Graduates, working professionals, and career switchers from both technical and non-technical backgrounds can enroll. Basic logical thinking and interest in AI are sufficient.",
+      category: "eligibility"
+    },
+    {
+      question: "Is prior coding experience required?",
+      answer: "No. The course begins with Python fundamentals and gradually progresses to advanced AI concepts.",
+      category: "eligibility"
+    },
+    {
+      question: "Can non-technical professionals join this course?",
+      answer: "Yes. The curriculum is designed to support non-technical learners through structured foundational training.",
+      category: "eligibility"
+    },
+    {
+      question: "Is there an age limit?",
+      answer: "No age limit applies. Anyone interested in learning Generative AI can enroll.",
+      category: "eligibility"
+    },
+    {
+      question: "Do I need a computer science degree?",
+      answer: "No. The course focuses on practical skills rather than academic background.",
+      category: "eligibility"
+    },
+
+    /* ================= GENERATIVE AI ================= */
+    {
+      question: "Which tools are covered in the Generative AI course?",
+      answer: "You will work with Python, PyTorch, TensorFlow, Hugging Face, LangChain, OpenAI APIs, vector databases, and cloud platforms for deployment.",
+      category: "generative-ai"
+    },
+    {
+      question: "Is the course focused on practical GenAI applications?",
+      answer: "Yes. The program emphasizes real-world use cases such as AI copilots, document intelligence, recommendation systems, and content generation.",
+      category: "generative-ai"
+    },
+    {
+      question: "Will I receive a Generative AI certification?",
+      answer: "Yes. You will receive an industry-recognized certification from Ivy Professional School.",
+      category: "generative-ai"
+    },
+
+    /* ================= JOB & CAREER ================= */
+    {
+      question: "What roles can I apply for after completing the course?",
+      answer: "You can apply for roles such as Generative AI Engineer, Machine Learning Engineer, AI Developer, Data Scientist, and AI Consultant.",
+      category: "job-and-career"
+    },
+    {
+      question: "What salary can I expect in Chennai?",
+      answer: "Entry-level salaries typically range from ₹8–10 LPA, while experienced GenAI professionals can earn ₹25–35 LPA.",
+      category: "job-and-career"
+    },
+    {
+      question: "Is this course suitable for career switching?",
+      answer: "Yes. The course is structured to support professionals transitioning into AI roles.",
+      category: "job-and-career"
+    },
+
+    /* ================= PROJECTS ================= */
+    {
+      question: "What projects are included in the Generative AI course in Chennai?",
+      answer: "You will work on projects such as GenAI chatbots, AI content generators, document summarization systems, image generation using diffusion models, and LLM-powered applications.",
+      category: "projects"
+    },
+    {
+      question: "Is there a capstone project?",
+      answer: "Yes. The capstone project focuses on solving real business problems using Generative AI technologies.",
+      category: "projects"
+    },
+    {
+      question: "Are projects aligned with current industry trends?",
+      answer: "Yes. Projects are regularly updated based on 2025 GenAI hiring trends and enterprise requirements.",
+      category: "projects"
+    },
+
+    /* ================= PLACEMENT ================= */
+    {
+      question: "Does the Generative AI course provide placement assistance in Chennai?",
+      answer: "Yes. Ivy Professional School offers resume building, interview preparation, mock interviews, and access to hiring partners.",
+      category: "placement"
+    },
+    {
+      question: "Which companies hire Generative AI professionals in Chennai?",
+      answer: "Hiring companies include IT services firms, AI startups, SaaS companies, fintech, healthcare organizations, and global MNCs.",
+      category: "placement"
+    },
+    {
+      question: "How long does placement support last?",
+      answer: "Placement support continues even after course completion until you secure a relevant role.",
+      category: "placement"
+    },
+
+    /* ================= OPPORTUNITIES ================= */
+    {
+      question: "What opportunities are available after learning Generative AI?",
+      answer: "You can work on enterprise AI solutions, GenAI product development, freelance AI consulting, global remote roles, and startup innovation projects.",
+      category: "opportunities"
+    },
+    {
+      question: "Are international or remote opportunities available?",
+      answer: "Yes. Generative AI skills are globally in demand, enabling remote and international career opportunities.",
+      category: "opportunities"
+    },
+
+    /* ================= SUPPORT ================= */
+    {
+      question: "What learning support is provided during the course?",
+      answer: "You receive mentor support, doubt-clearing sessions, recorded lectures, peer discussion groups, and one-on-one guidance.",
+      category: "support"
+    },
+    {
+      question: "Is career and interview support included?",
+      answer: "Yes. Dedicated career mentors assist with resume reviews, LinkedIn optimization, and mock interviews.",
+      category: "support"
+    },
+
+    /* ================= JOB OUTLOOK ================= */
+    {
+      question: "What is the job outlook for Generative AI professionals in Chennai?",
+      answer: "The demand for Generative AI professionals in Chennai is growing at over 25% annually due to enterprise AI adoption and GenAI-led digital transformation.",
+      category: "job-outlook"
+    },
+    {
+      question: "Which industries are hiring GenAI professionals?",
+      answer: "IT, SaaS, healthcare, fintech, e-commerce, manufacturing, and media industries are actively hiring GenAI talent.",
+      category: "job-outlook"
+    }
+  ]
 }
+
+
+
+
 
 
 
@@ -4330,6 +5060,11 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
                       Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Bangalore</span>
                     </h2>
                   )
+                  : course.title === "Data Analytics With Visualization in Pune" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Pune</span>
+                    </h2>
+                  )
               
                 : course.title === "Data Science with Machine Learning & AI Course in Delhi" ? (
                   <h2 className="text-3xl font-bold mb-4 text-gray-900">
@@ -4354,12 +5089,36 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
                       Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
                     </h2>
                   )
-                  : course.title === "Data Analytics With Visualization in Mumbai" ? (
+                  : course.title === "Generative AI Course in Kolkata" ? (
                     <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Kolkata</span>
                     </h2>
                   )
-                 
+                  : course.title === "Generative AI Course in Delhi" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Delhi</span>
+                    </h2>
+                  )
+                  : course.title === "Generative AI Course in Bangalore" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Bangalore</span>
+                    </h2>
+                  )
+                  : course.title === "Generative AI Course in Mumbai" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Mumbai</span>
+                    </h2>
+                  )
+                  : course.title === "Generative AI Course in Pune" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Pune</span>
+                    </h2>
+                  )
+                  : course.title === "Generative AI Course in Chennai" ? (
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Chennai</span>
+                    </h2>
+                  )
 
 
                     : (
