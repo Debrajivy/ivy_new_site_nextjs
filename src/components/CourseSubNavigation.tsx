@@ -261,7 +261,7 @@ const CourseSubNavigation = () => {
                   </Button>
                   <div className="flex items-center justify-center gap-2 pt-2">
                     <p className="text-sm font-semibold text-center">
-                      <span style={{ color: '#1a98cb' }}>Next batch starting on 14th Feb, 2026 &nbsp;</span>
+                      Next batch starting on 21st Feb, Power BI, 28th Feb SQL, 7th March Advanced Excel
                       <span className="inline-block w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                       <span className="text-red-600">&nbsp;Limited seats left!</span>
                     </p>

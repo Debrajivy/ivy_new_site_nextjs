@@ -478,50 +478,50 @@ const CourseHero = ({ course }: CourseHeroProps) => {
         }
         .alumni-scroll-container {
           display: flex;
-          animation: marquee 25s linear infinite;
-          gap: 2.5rem;
+          animation: marquee 30s linear infinite;
+          gap: 2rem;
         }
         .alumni-scroll-container:hover {
           animation-play-state: paused;
         }
       `}</style>
 
-                  <div className="alumni-scroll-container whitespace-nowrap items-center">
+                  <div className="alumni-scroll-container whitespace-nowrap items-center px-4">
                     {[...dataScienceAlumni, ...dataScienceAlumni].map((alumni, index) => (
                       <div
                         key={index}
-                        className="flex items-center gap-5 bg-white p-4 px-8 rounded-2xl shadow-xl border border-gray-100"
+                        className="flex items-center gap-5 bg-white p-4 px-7 rounded-2xl shadow-xl border border-gray-100 transition-transform duration-300 hover:scale-105"
                         style={{ minWidth: 'max-content' }}
                       >
                         <div className="relative">
                           <Image
                             src={alumni.studentImg}
                             alt={alumni.name}
-                            width={80}
-                            height={80}
-                            className="rounded-full object-cover border-4 border-[#75a082]/20 shadow-md"
+                            width={65}
+                            height={65}
+                            className="rounded-full object-cover border-2 border-[#75a082]/20 shadow-sm"
                           />
                         </div>
 
                         <div className="flex flex-col gap-1">
-                          <span className="text-gray-900 text-lg font-extrabold leading-tight">
+                          <span className="text-slate-900 text-lg font-bold leading-tight">
                             {alumni.name}
                           </span>
                           <div className="flex items-center gap-2">
-                            <span className="bg-[#75a082]/10 text-[#75a082] text-[10px] font-bold px-2 py-0.5 rounded-md uppercase">
+                            <span className="bg-[#75a082]/10 text-[#75a082] text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">
                               Data Science
                             </span>
                             <span className="text-gray-400 text-xs font-medium italic">at</span>
                           </div>
                         </div>
 
-                        <div className="pl-4 border-l-2 border-gray-100 flex items-center">
+                        <div className="pl-5 border-l-2 border-gray-50 flex items-center min-w-[100px] justify-center">
                           <Image
                             src={alumni.companyLogo}
                             alt="Company Logo"
                             width={110}
                             height={45}
-                            className="object-contain h-10 w-auto"
+                            className="object-contain h-9 w-auto"
                           />
                         </div>
                       </div>
@@ -530,18 +530,18 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 </div>
               ) : (
                 <div className={`flex items-center ${course.title === "Generative AI Course" || course.title === "Cloud Data Engineering Course with IIT Guwahati"
-                  ? "bg-white/40"
+                  ? "bg-white/30 backdrop-blur-md"
                   : "bg-[#75a082]/40"
-                  } rounded-full px-4 py-2 w-fit mx-auto sm:mx-0`}>
-                  <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                  } rounded-full px-6 py-3 w-fit mx-auto sm:mx-0 border border-white/10`}>
+                  <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
                     {partners.map((partner) => (
-                      <div key={partner.name} className="flex items-center">
+                      <div key={partner.name} className="flex items-center transition-transform hover:scale-110">
                         <Image
                           width={150}
                           height={50}
                           src={partner.logo}
                           alt={`${partner.name} logo`}
-                          className="object-contain h-10 sm:h-12 w-auto max-w-[100px] sm:max-w-[120px]"
+                          className="object-contain h-9 sm:h-11 w-auto max-w-[100px] sm:max-w-[120px]"
                         />
                       </div>
                     ))}
@@ -549,6 +549,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 </div>
               )}
             </div> */}
+
+
+
             <div className="flex flex-wrap items-center gap-4">
               <Button
                 variant="outline"
@@ -763,7 +766,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm"
                   >
                     <span className="text-[#1a98cb] font-medium">
-                      Next batch starting on 14th Feb, 2026
+                      Next batch starting on 21st Feb, Power BI, 28th Feb SQL, 7th March Advanced Excel
+
                     </span>
                     <div className="flex items-center gap-1">
                       <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
