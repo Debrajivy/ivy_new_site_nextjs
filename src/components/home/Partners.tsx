@@ -136,6 +136,7 @@ const Partners = () => {
                     src={item.logo}
                     alt={`${item.description} logo`}
                     className="h-32 w-32 object-contain" // Increased size to h-32 w-32
+                    loading="lazy"
                   />
                 </div>
 
@@ -168,6 +169,7 @@ const Partners = () => {
                   src={partner.logo}
                   alt={`${partner.name} logo`}
                   className="h-14 sm:h-16 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
+                  loading="lazy"
                 />
               </div>
             ))}

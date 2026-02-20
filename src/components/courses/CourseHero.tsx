@@ -307,7 +307,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 {course.title === "Data Science with Machine Learning & AI Certification" ||
                   course.title === "Data science course (Pay after Placement)" ? (
                   <Image
-
+                    loading="lazy"
                     width={170}
                     height={120}
                     className="h-32 w-auto object-contain"
@@ -319,7 +319,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   course.title === "Generative AI Course" ||
                   course.title === "AI for Product Managers" || course.title === "AI and Machine Learning Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" ? (
                   <Image
-
+                    loading="lazy"
                     width={150}
                     height={50}
                     className="h-20 w-auto object-contain"
@@ -432,7 +432,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     {partners.map((partner) => (
                       <div key={partner.name} className="flex items-center">
                         <Image
-
+                          loading="lazy"
                           width={150}
                           height={50}
                           src={partner.logo}
@@ -449,7 +449,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     {partners.map((partner) => (
                       <div key={partner.name} className="flex items-center">
                         <Image
-
+                          loading="lazy"
                           width={150}
                           height={50}
                           src={partner.logo}

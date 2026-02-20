@@ -54,7 +54,7 @@ const MicroLinkFAQ: React.FC<MicroLinkFAQProps> = ({ course }) => {
   return (
     <div className="bg-[#121212] text-white font-sans p-6 w-full mx-auto rounded-none shadow-none md:p-12">
       <div className="border-b border-[#2a2a2a] pb-4 mb-4">
-        <h1 className="text-xl font-bold">People Also Search For</h1>
+        <h2 className="text-xl font-bold">People Also Search For</h2>
       </div>
       <div className="bg-[#1e1e1e] p-4 rounded-md">
         <div className="flex justify-between items-center cursor-pointer" onClick={toggleOpen}>

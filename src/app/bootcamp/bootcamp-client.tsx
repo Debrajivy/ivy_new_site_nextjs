@@ -219,6 +219,7 @@ const BootcampClient: React.FC<BootcampClientProps> = ({ bootcamps }) => {
                         <Image
                           src={nextUpcomingBootcamp.facultyProfilePic || "/placeholder.svg"}
                           alt={nextUpcomingBootcamp.facultyName}
+                          loading="lazy"
 
                           className="rounded-full border-4 border-yellow-300 object-cover shadow-lg"
                           onError={(e) => {

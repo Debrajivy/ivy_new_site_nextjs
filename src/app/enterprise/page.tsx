@@ -624,6 +624,7 @@ const Enterprise = () => {
                               fill
                               className="object-contain"
                               sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
+                              loading="lazy"
                             />
                           </div>
                         ))}
@@ -636,6 +637,7 @@ const Enterprise = () => {
                             <Image
                               src={logo.logo}
                               alt={logo.alt}
+                              loading="lazy"
                               fill
                               className="object-contain"
                               sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"

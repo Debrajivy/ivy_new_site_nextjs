@@ -183,6 +183,7 @@ const Alumni = () => {
               <div key={index} className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-lg transition-all flex flex-col group">
                 <div className="flex items-center gap-4 mb-6">
                   <Image
+                    loading="lazy"
                     src={alumni.image || Placeholder}
                     alt={alumni.name}
                     width={64} height={64}
@@ -198,13 +199,13 @@ const Alumni = () => {
                 <div className="bg-gray-50 rounded-xl p-4 flex items-center justify-between gap-2 mb-6">
                   <div className="text-center flex-1">
                     <p className="text-[10px] font-bold text-gray-400 uppercase mb-2">Previous</p>
-                    <Image src={alumni.previousCompany.company} alt="Prev" width={50} height={30} className="mx-auto object-contain h-8" />
+                    <Image loading="lazy" src={alumni.previousCompany.company} alt="Prev" width={50} height={30} className="mx-auto object-contain h-8" />
                     <p className="text-[10px] mt-1 text-gray-500 truncate">{alumni.previousCompany.role}</p>
                   </div>
                   <ArrowRight className="w-5 text-gray-300 flex-shrink-0" />
                   <div className="text-center flex-1">
                     <p className="text-[10px] font-bold text-[#009fda] uppercase mb-2">Current</p>
-                    <Image src={alumni.currentCompany.company} alt="Curr" width={50} height={30} className="mx-auto object-contain h-8" />
+                    <Image loading="lazy" src={alumni.currentCompany.company} alt="Curr" width={50} height={30} className="mx-auto object-contain h-8" />
                     <p className="text-[10px] mt-1 text-gray-900 font-bold truncate">{alumni.currentCompany.role}</p>
                   </div>
                 </div>
@@ -266,12 +267,12 @@ const Alumni = () => {
               ))}
             </div>
 
-            <div style={{marginTop:30}}>
+            <div style={{ marginTop: 30 }}>
               <h4 className="text-lg font-bold text-blue-900">Still have questions?</h4>
-              <p style={{marginTop:10}} className="text-blue-700 text-sm">Speak directly with our career counselors in Kolkata.</p>
+              <p style={{ marginTop: 10 }} className="text-blue-700 text-sm">Speak directly with our career counselors in Kolkata.</p>
             </div>
             <Button
-            style={{marginTop:10}}
+              style={{ marginTop: 10 }}
               onClick={() => isMobile ? window.location.href = "tel:7676882222" : alert("Call us at 7676882222")}
               className="bg-blue-600 hover:bg-blue-700 text-white px-8"
             >

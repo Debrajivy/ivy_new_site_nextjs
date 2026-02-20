@@ -154,6 +154,7 @@ const CareerProgressionDisplay = ({ progression }: { progression: CareerProgress
             <div className="flex items-center justify-center h-12 w-full">
               {progression.previous.logo ? (
                 <Image
+                loading="lazy"
                   width={128} // Adjusted width to 128px
                   height={64} // Adjusted height to 64px
                   src={progression.previous.logo}
@@ -182,6 +183,7 @@ const CareerProgressionDisplay = ({ progression }: { progression: CareerProgress
           <div className="rounded-lg p-2 shadow-sm w-full flex flex-col items-center justify-center"> {/* Removed 'border' class, changed p-3 to p-2 for minor internal padding */}
             <div className="flex items-center justify-center  h-12 w-full">
               <Image
+              loading="lazy"
                 width={128} // Adjusted width to 128px
                 height={64} // Adjusted height to 64px
                 src={progression.current.logo || "/placeholder.svg"}
@@ -206,6 +208,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
         {/* Rating */}
         <div className="flex mb-4 justify-center items-center">
           <Image
+          loading="lazy"
             width={16} // Adjusted width to 16px
             height={16} // Adjusted height to 16px 
             src={Google} alt="Google" className="h-4 w-4 mr-2" />
@@ -238,6 +241,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
             alt={testimonial.name}
             className="h-16 w-16 rounded-full mr-4 object-cover border-2"
             style={{ borderColor: "#1a98cb" }}
+            loading="lazy"
           />
           {testimonial.linkedinUrl && (
             <a

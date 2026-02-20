@@ -312,7 +312,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       </div>
                     </div>
                     <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0, textShadow: '1px 1px 1px rgba(135, 206, 235, 0.2)' }}>
-                      {course.title === "Generative AI Course"  || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ?
+                      {course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ?
                         "The Executive Certification in GenAI ensures quality and comprehensiveness of content coverage as well as ample credibility in the Data Engineering field." :
                         course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
                           "The Executive Certification in Data Science, widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
@@ -418,11 +418,11 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 }}>
                   <Image
                     src={
-                      course.title === "Generative AI Course"  || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ? genaicertificate :
+                      course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ? genaicertificate :
                         course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" ? NASSCOMML :
                           course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ? Cdec :
                             course.title === "Data Analytics and Generative AI Course" ? Dsvc :
-                              course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"  || course.title === "Data Analytics With Visualization in Pune"? Davc :
+                              course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Pune" ? Davc :
                                 course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
                                   course.title === "AI for Product Managers" ? Pmc :
                                     course.title === "AI and Machine Learning Course" ? AIML :
@@ -435,6 +435,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       objectFit: 'contain',
                       borderRadius: '12px',
                       boxShadow: '0 6px 20px rgba(0, 0, 0, 0.1)',
+
                     }}
                   />
 
@@ -471,6 +472,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                         src={partner.logo}
                         alt={`${partner.name} logo`}
                         className="max-h-full max-w-full object-contain transition-all hover:opacity-90"
+                        loading="lazy"
                       />
                     </div>
                   ))}
@@ -484,6 +486,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                   {[...partners].reverse().concat([...partners].reverse()).map((partner, index) => (
                     <div key={`second-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44"> {/* Added specific h, w, and flex centering for uniform logo slots */}
                       <Image
+                        loading="lazy"
                         height={100}
                         width={100}
                         src={partner.logo}

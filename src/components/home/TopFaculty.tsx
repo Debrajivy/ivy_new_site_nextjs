@@ -98,6 +98,7 @@ const TopFaculty = () => {
                             src={member.image} 
                             alt={member.name} 
                             className="w-24 h-24 object-cover"
+                            loading="lazy"
                           />
                         </div>
                         <h3 className="font-bold text-lg text-center">{member.name}</h3>
@@ -143,6 +144,7 @@ const TopFaculty = () => {
                           src={member.image} 
                           alt={member.name} 
                           className="w-24 h-24 object-cover"
+                          loading="lazy"
                         />
                       </div>
                       <h3 className="font-bold text-lg text-center">{member.name}</h3>

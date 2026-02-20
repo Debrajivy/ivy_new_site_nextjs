@@ -251,6 +251,7 @@ const CourseCard = ({ course }: { course: Course }) => {
           src={course.image}
           alt={course.title}
           className="w-full h-auto max-h-60 object-cover rounded-t-lg"
+          loading="lazy"
         />
 
         <Badge className="absolute top-3 left-3 bg-primary">{course.category}</Badge>

@@ -188,6 +188,7 @@ const BootcampRegister = () => {
                     src={Eeshani}
                     alt="Eeshani Agrawal"
                     className="w-32 h-32 rounded-full object-cover border-4 border-blue-200 shadow-md"
+                    loading="lazy"
                   />
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-1">
@@ -224,6 +225,7 @@ const BootcampRegister = () => {
                     src={Pratik}
                     alt="Prateek Agrawal"
                     className="w-32 h-32 rounded-full object-cover border-4 border-teal-200 shadow-md"
+                    loading="lazy"
                   />
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-1">

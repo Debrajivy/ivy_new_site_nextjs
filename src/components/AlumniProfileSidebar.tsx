@@ -9,17 +9,17 @@ import Image from 'next/image';
 type Imgish = string | import("next/image").StaticImageData;
 
 interface AlumniData {
-  name: string;
-  title: string;
-  location: string;
-  rating: number;
-  image: Imgish;
-  linkedin?: string;
-  previousCompany: { company: Imgish; role: string };
-  currentCompany: { company: Imgish; role: string };
-  university?: string;
-  degree?: string;
-  workExperiencePreScaler?: string;
+    name: string;
+    title: string;
+    location: string;
+    rating: number;
+    image: Imgish;
+    linkedin?: string;
+    previousCompany: { company: Imgish; role: string };
+    currentCompany: { company: Imgish; role: string };
+    university?: string;
+    degree?: string;
+    workExperiencePreScaler?: string;
 }
 
 interface AlumniProfileSidebarProps {
@@ -102,7 +102,7 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
     };
 
     return (
-        <div style={{marginBottom:80}} className={`fixed inset-0 z-50 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
+        <div style={{ marginBottom: 80 }} className={`fixed inset-0 z-50 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
 
@@ -141,6 +141,7 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                                         src={alumnus.image}
                                         alt={alumnus.name}
                                         className="w-24 h-24 rounded-full object-cover border-4 border-gray-200 shadow-md"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div>
@@ -190,6 +191,7 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                                 <div className="text-center w-1/3">
                                     <p className="text-lg font-semibold text-gray-700 mb-2">Pre Ivy Pro</p>
                                     <Image
+                                        loading="lazy"
                                         width={80}
                                         height={80}
                                         src={alumnus.previousCompany.company}
@@ -202,6 +204,7 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                                 <div className="text-center w-1/3">
                                     <p className="text-lg font-semibold text-gray-700 mb-2">Post Ivy Pro</p>
                                     <Image
+                                        loading="lazy"
                                         width={80}
                                         height={80}
                                         src={alumnus.currentCompany.company}
@@ -222,22 +225,22 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                                     We'll match you with an alumni based on your availability and career goals.
                                 </p>
                                 <div className="flex justify-center items-center -space-x-2 mb-4">
-                                    <Image 
+                                    <Image
                                         width={32}
                                         height={32}
-                                    src={AanchalBhatia} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
-                                    <Image 
+                                        src={AanchalBhatia} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white"  loading="lazy"/>
+                                    <Image
                                         width={32}
                                         height={32}
-                                    src={LahariSaha} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
-                                    <Image 
+                                        src={LahariSaha} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" loading="lazy" />
+                                    <Image
                                         width={32}
                                         height={32}
-                                    src={NavinPatle} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
-                                    <Image 
+                                        src={NavinPatle} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" loading="lazy"/>
+                                    <Image
                                         width={32}
                                         height={32}
-                                    src={SankhadiptyaPaul} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" />
+                                        src={SankhadiptyaPaul} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white" loading="lazy" />
                                 </div>
                                 <p className="text-sm mb-6">+1380 Learners have connected with alumni</p>
                                 <button
@@ -259,7 +262,7 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                     ) : (
                         <div className="space-y-6">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">Take your career to the next level now!</h2>
-                            
+
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 {/* Full Name */}
                                 <div>
@@ -350,7 +353,7 @@ const AlumniProfileSidebar: React.FC<AlumniProfileSidebarProps> = ({ isOpen, onC
                                 </div>
 
                                 {/* Submit Button */}
-                                <div style={{marginBottom:40}}>
+                                <div style={{ marginBottom: 40 }}>
                                     <button
                                         type="submit"
                                         className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors"

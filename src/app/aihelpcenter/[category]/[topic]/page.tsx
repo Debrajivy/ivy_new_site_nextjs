@@ -515,6 +515,7 @@ const AuthorityBox = () => (
                                 className="w-full h-full object-cover"
                                 width={56}
                                 height={56}
+                                loading="lazy"
                             />
                         </div>
                         <div className="absolute -bottom-1 -right-1 bg-blue-600 rounded-full p-1">
@@ -557,6 +558,7 @@ const AuthorityBox = () => (
                                 className="w-full h-full object-cover"
                                 width={56}
                                 height={56}
+                                loading="lazy"
                             />
                         </div>
                         <div className="absolute -bottom-1 -right-1 bg-orange-500 rounded-full p-1">
@@ -1213,6 +1215,7 @@ const TopicPage = ({ params }: PageProps) => {
                                             className="w-full h-full object-cover"
                                             width={40}
                                             height={40}
+                                            loading="lazy"
                                         />
                                     ) : (
                                         <Image
@@ -1221,6 +1224,7 @@ const TopicPage = ({ params }: PageProps) => {
                                             className="w-full h-full object-cover"
                                             width={40}
                                             height={40}
+                                            loading="lazy"
                                         />
                                     )}
                                 </div>
@@ -1394,6 +1398,7 @@ const TopicPage = ({ params }: PageProps) => {
                                             <div className="flex items-center gap-4 min-w-0">
                                                 <div className="w-12 h-10 flex-shrink-0 flex items-center justify-center overflow-hidden">
                                                     <Image
+                                                    loading="lazy"
                                                         src={ivy}
                                                         alt="Ivy Logo"
                                                         className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"

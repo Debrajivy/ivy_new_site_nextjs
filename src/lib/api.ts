@@ -107,8 +107,8 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Course with IIT Guwahati: #1 GenAI Course ",
-      description: "Join IIT Guwahati Certified Generative AI course and become job-ready in 18 weeks. Build 15+ GenAI apps on cloud. Get IBM & NASSCOM certified",
+      title: "IIT Guwahati GenAI Course | ChatGPT, LLM Training | 1220 Students | 4.8★ ",
+      description: "IIT Guwahati GenAI certification. Master ChatGPT, LLMs, build AI apps. 20+ projects. 1,220 students. Pay After Placement. 4.8★. Apply for 18-week program!",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
@@ -800,9 +800,9 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "NASSCOM Certified Data Science Course with ML & GenAI. 4.8/5",
-      description: "Enroll in Ivy Pro's Data Science Course with ML & GenAI. Get fee rebate from Govt. Classroom & live online classes. 30+ hands-on projects and placement support.",
-      bio: "Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and land promising jobs for data scientist, analyst, or ML engineer roles."
+      title: "Data Science Course | NASSCOM & IIT Certified | Pay After Placement | 4.8★ Ivy",
+      description: "Data Science with IIT faculty. Python, SQL, ML, AI, Tableau. Pay After Placement. 32,500 students enrolled. 4.8★ rating. Placements at Amazon, IBM. Apply now!",
+      bio: "Data Science with IIT faculty. Python, SQL, ML, AI, Tableau. Pay After Placement. 32,500 students enrolled. 4.8★ rating. Placements at Amazon, IBM. Apply now!"
 
     },
     duration: "14 weeks",

@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 // --- METADATA & SCHEMA DATA ---
 
 export const metadata: Metadata = {
-  title: "Ivy Professional School: #1 GenAI & Data Science Institute",
+  title: "#1 Data Science & GenAI Institute | IIT Certified | Pay After Placement | Ivy",
   description:
     "Join Ivy Pro's GenAI & Data Science Courses. 4.9/5 Rated since 2008. Partners: IIT Guwahati, NASSCOM, IBM. 32500+ Alumni in 500+ firms. 40+ Fortune 500 Clients",
   authors: [{ name: "Ivy Professional School" }],
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     google: "5DI8S_HoObJNVtsYs8s9vhGls8HL93FvxJdZYSPo_G4",
   },
   openGraph: {
-    title: "Ivy Professional School: #1 GenAI & Data Science Institute",
+    title: "#1 Data Science & GenAI Institute | IIT Certified | Pay After Placement | Ivy",
     description:
-      "Join Ivy Pro's GenAI & Data Science Courses. 4.9/5 Rated since 2007. Partners: IIT Guwahati, NASSCOM, IBM. 32500+ Alumni in 500+ firms. 40+ Fortune 500 Clients",
+      "JLearn Data Science, GenAI & AI from IIT-certified instructors. Pay After Placement. 4.8★ (1300+ reviews). Placements at Amazon, IBM, Deloitte. Kolkata & Bangalore. Apply Now!",
     url: "https://ivyproschool.com/",
     type: "website",
     siteName: "Ivy Professional School",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ivy Professional School: #1 GenAI & Data Science Institute",
+    title: "#1 Data Science & GenAI Institute | IIT Certified | Pay After Placement | Ivy",
     description:
-      "Join Ivy Pro's GenAI & Data Science Courses. 4.9/5 Rated since 2007. Partners: IIT Guwahati, NASSCOM, IBM. 32500+ Alumni in 500+ firms. 40+ Fortune 500 Clients",
+      "JLearn Data Science, GenAI & AI from IIT-certified instructors. Pay After Placement. 4.8★ (1300+ reviews). Placements at Amazon, IBM, Deloitte. Kolkata & Bangalore. Apply Now!",
     site: "@IvyProSchool",
     images: ["https://ivyproschool.com/assets/logo.webp"],
   },
@@ -64,7 +64,7 @@ const schemaData = {
     "https://www.instagram.com/ivyproschool",
   ],
   description:
-    "Join Ivy Pro's GenAI & Data Science Courses. 4.9/5 Rated since 2007. Partners: IIT Guwahati, NASSCOM, IBM. 32500+ Alumni in 500+ firms. 40+ Fortune 500 Clients",
+    "JLearn Data Science, GenAI & AI from IIT-certified instructors. Pay After Placement. 4.8★ (1300+ reviews). Placements at Amazon, IBM, Deloitte. Kolkata & Bangalore. Apply Now!",
   foundingDate: "2008",
   address: {
     "@type": "PostalAddress",

@@ -113,6 +113,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                     <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-all h-full flex flex-col">
                       <div className="h-48 overflow-hidden">
                         <Image
+                        loading="lazy"
                           width={400}
                           height={200}
                           src={project.image}
@@ -194,6 +195,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-all h-full flex flex-col">
                           <div className="h-48 overflow-hidden">
                             <Image
+                            loading="lazy"
                               width={400}
                               height={200}
                               src={project.image}
@@ -280,6 +282,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-all h-full flex flex-col">
                           <div className="h-48 overflow-hidden">
                             <Image
+                            loading="lazy"
                               width={400}
                               height={200}
                               src={project.image}
@@ -455,6 +458,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       {/* Image Container - Responsive Solution */}
                       <div className="relative w-full aspect-video bg-gray-100 flex items-center justify-center p-4">
                         <Image
+                        loading="lazy"
                           width={400}
                           height={200}
                           src={sp}
@@ -526,6 +530,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       {/* Image Container - Responsive Solution */}
                       <div className="relative w-full aspect-video bg-gray-100 flex items-center justify-center p-4">
                         <Image
+                        loading="lazy"
                           width={400}
                           height={200}
                           src={me1}
@@ -615,6 +620,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                         <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                           <Image
+                          loading="lazy"
                             width={400}
                             height={200}
                             src={Hs}
@@ -684,6 +690,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                       <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                         <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                           <Image
+                          loading="lazy"
                             width={400}
                             height={200}
                             src={Cpa}
@@ -822,6 +829,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                           <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                             <Image
+                            loading="lazy"
                               width={400}
                               height={200}
                               src={Hs}
@@ -890,6 +898,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                         <Card className="overflow-hidden hover:shadow-lg transition-all h-full">
                           <div className="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
                             <Image
+                            loading="lazy"
                               width={400}
                               height={200}
                               src={Cpa}
@@ -1031,6 +1040,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                 src={Ts}
                                 alt="Healthcare ML Project"
                                 className="w-full h-full object-cover"
+                                loading="lazy"
                               />
                             </div>
                             <CardContent className="pt-6">
@@ -1099,6 +1109,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                 src={oC}
                                 alt="Financial ML Project"
                                 className="w-full h-full object-cover"
+                                loading="lazy"
                               />
                             </div>
                             <CardContent className="pt-6">
@@ -1234,6 +1245,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                   src={Ecommerce}
                                   alt="Healthcare ML Project"
                                   className="w-full h-full object-cover"
+                                  loading="lazy"
                                 />
                               </div>
                               <CardContent className="pt-6">
@@ -1303,6 +1315,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                   src={Consumer}
                                   alt="Financial ML Project"
                                   className="w-full h-full object-cover"
+                                  loading="lazy"
                                 />
                               </div>
                               <CardContent className="pt-6">
@@ -1431,6 +1444,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                     src={Msd}
                                     alt="Healthcare ML Project"
                                     className="w-full h-full object-cover"
+                                    loading="lazy"
                                   />
                                 </div>
                                 <CardContent className="pt-6">
@@ -1499,6 +1513,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                     src={Ki}
                                     alt="Financial ML Project"
                                     className="w-full h-full object-cover"
+                                    loading="lazy"
                                   />
                                 </div>
                                 <CardContent className="pt-6">
@@ -1626,6 +1641,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                       src={Ar}
                                       alt="Healthcare ML Project"
                                       className="w-full h-full object-cover"
+                                      loading="lazy"
                                     />
                                   </div>
                                   <CardContent className="pt-6">
@@ -1698,6 +1714,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                       src={Cb}
                                       alt="Financial ML Project"
                                       className="w-full h-full object-cover"
+                                      loading="lazy"
                                     />
                                   </div>
                                   <CardContent className="pt-6">
@@ -1832,6 +1849,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                         src={AIC1}
                                         alt="Healthcare ML Project"
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
                                       />
                                     </div>
                                     <CardContent className="pt-6">
@@ -1904,6 +1922,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                         src={AIC2}
                                         alt="Financial ML Project"
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
                                       />
                                     </div>
                                     <CardContent className="pt-6">
@@ -2040,6 +2059,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                           src={Hs}
                                           alt="Healthcare ML Project"
                                           className="w-full h-full object-cover"
+                                          loading="lazy"
                                         />
                                       </div>
                                       <CardContent className="pt-6">
@@ -2109,6 +2129,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                                           src={""}
                                           alt="Financial ML Project"
                                           className="w-full h-full object-cover"
+                                          loading="lazy"
                                         />
                                       </div>
                                       <CardContent className="pt-6">

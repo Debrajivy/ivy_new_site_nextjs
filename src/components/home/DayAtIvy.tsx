@@ -65,6 +65,7 @@ const DayAtIvy = () => {
                 src={event.image}
                 alt={event.title}
                 className="w-full h-auto object-contain"
+                loading="lazy"
               />
               <div className="absolute top-2 right-2 bg-white/90 text-primary text-xs font-medium px-2 py-1 rounded">
                 {event.tag}

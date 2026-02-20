@@ -127,7 +127,7 @@ const CareerProgressionDisplay = ({ progression }: { progression: CareerProgress
     return (
         <div className="p-4 rounded-lg mb-4" style={{ background: "linear-gradient(to right, #1a98cb20, #f7ac2c20)" }}>
             <div className="flex items-center justify-between">
-             
+
                 {/* Current Company */}
                 <div className="flex-1 flex items-center justify-center flex-col text-center mx-2">
                     <div
@@ -150,6 +150,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
                 {/* Rating */}
                 <div className="flex mb-4 justify-center items-center">
                     <Image
+                        loading="lazy"
                         width={16} // Adjusted width to 16px
                         height={16} // Adjusted height to 16px 
                         src={Google} alt="Google" className="h-4 w-4 mr-2" />
@@ -168,6 +169,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
                 {/* Student Profile */}
                 <div className="flex items-center mb-4 relative"> {/* Added relative for positioning LinkedIn icon */}
                     <Image
+                        loading="lazy"
                         width={64} // Adjusted width to 64px
                         height={64} // Adjusted height to 64px
                         src={testimonial.image || "/placeholder.svg"}

@@ -49,7 +49,7 @@ export async function generateMetadata(
         images: [course.image],
       },
       alternates: {
-        canonical: `https://ivyprofessionalschool.com/courses/${slug}`,
+        canonical: `https://ivyproschool.com/courses/${slug}`,
       },
     }
   } catch {
