@@ -37,7 +37,7 @@ import {
     Gauge,
     Linkedin
 } from 'lucide-react';
-import data from '../../AIHelpCenter.json';
+import { data } from '../../lib/data';
 import Image from 'next/image';
 import ivy from '@/assests/ivy.png';
 // Import faculty images
@@ -744,10 +744,19 @@ const TopicPage = ({ params }: PageProps) => {
                                 <BookOpen size={20} /> {content.sections.find((s: any) => s.type === 'toc')?.title}
                             </h3>
                             <ul className="space-y-1 sm:space-y-2 text-gray-700 text-sm sm:text-base">
-                                {content.sections.find((s: any) => s.type === 'toc')?.content?.map((item: string, idx: number) => (
+                                {content.sections.find((s: any) => s.type === 'toc')?.content?.map((item: any, idx: number) => (
                                     <li key={idx} className="flex items-center gap-2">
                                         <ChevronRight size={16} style={{ color: themeColors.primary }} />
-                                        <span>{item}</span>
+                                        {typeof item === 'object' && item.id ? (
+                                            <button
+                                                onClick={() => scrollTo(item.id)}
+                                                className="text-left hover:text-blue-600 hover:underline transition-colors"
+                                            >
+                                                {item.label}
+                                            </button>
+                                        ) : (
+                                            <span>{item}</span>
+                                        )}
                                     </li>
                                 ))}
                             </ul>
@@ -1306,60 +1315,18 @@ const TopicPage = ({ params }: PageProps) => {
                             <div className="rounded-xl sm:rounded-2xl lg:rounded-3xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-gray-200">
                                 <h4 className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-4 sm:mb-6">Roadmap</h4>
                                 <div className="flex flex-col gap-2 sm:gap-4">
-                                    {categorySlug === 'visualization' && topicSlug === 'dual-axis-charts' ? (
-                                        <>
-                                            {[
-                                                { id: 'intro', label: 'Introduction' },
-                                                { id: 'what-is', label: 'What is Dual-Axis?' },
-                                                { id: 'importance', label: 'Business Importance' },
-                                                { id: 'when-to-use', label: 'When to Use' },
-                                                { id: 'when-not-to-use', label: 'When to Avoid' },
-                                                { id: 'core-concepts', label: 'Core Concepts' },
-                                                { id: 'basic-chart', label: 'Basic Chart Setup' },
-                                                { id: 'add-second-measure', label: 'Add Second Measure' },
-                                                { id: 'convert-dual-axis', label: 'Convert to Dual-Axis' },
-                                                { id: 'synchronize-axes', label: 'Axis Synchronization' },
-                                                { id: 'mark-types', label: 'Mark Types' },
-                                                { id: 'formatting', label: 'Formatting' },
-                                                { id: 'sales-profit-analysis', label: 'Sales Analysis' },
-                                                { id: 'marketing-effectiveness', label: 'Marketing' },
-                                                { id: 'manufacturing-quality', label: 'Manufacturing' },
-                                                { id: 'hr-productivity', label: 'HR Analytics' },
-                                                { id: 'calculated-fields', label: 'Calculated Fields' },
-                                                { id: 'reference-lines', label: 'Reference Lines' },
-                                                { id: 'parameters', label: 'Parameters' },
-                                                { id: 'decision-guide', label: 'Decision Guide' },
-                                                { id: 'misinterpretations', label: 'Common Issues' },
-                                                { id: 'pre-publish-checklist', label: 'Pre-Publish Checklist' },
-                                                { id: 'power-vs-risk', label: 'Power vs Risk' },
-                                                { id: 'troubleshooting', label: 'Troubleshooting' }
-                                            ].map((link) => (
-                                                <button
-                                                    key={link.id}
-                                                    onClick={() => scrollTo(link.id)}
-                                                    className={`text-left text-xs sm:text-sm font-bold transition-all border-l-2 sm:border-l-4 pl-2 sm:pl-4 ${activeSection === link.id
-                                                        ? 'text-blue-600 border-blue-600'
-                                                        : 'text-gray-400 border-transparent hover:text-gray-600'
-                                                        }`}
-                                                >
-                                                    {link.label}
-                                                </button>
-                                            ))}
-                                        </>
-                                    ) : (
-                                        data.navigation.toc.map((link: any) => (
-                                            <button
-                                                key={link.id}
-                                                onClick={() => scrollTo(link.id)}
-                                                className={`text-left text-xs sm:text-sm font-bold transition-all border-l-2 sm:border-l-4 pl-2 sm:pl-4 ${activeSection === link.id
-                                                    ? 'text-blue-600 border-blue-600'
-                                                    : 'text-gray-400 border-transparent hover:text-gray-600'
-                                                    }`}
-                                            >
-                                                {link.label}
-                                            </button>
-                                        ))
-                                    )}
+                                    {topicData?.content?.sections?.filter((s: any) => s.id && s.title && s.type !== 'toc').map((section: any) => (
+                                        <button
+                                            key={section.id}
+                                            onClick={() => scrollTo(section.id)}
+                                            className={`text-left text-xs sm:text-sm font-bold transition-all border-l-2 sm:border-l-4 pl-2 sm:pl-4 ${activeSection === section.id
+                                                ? 'text-blue-600 border-blue-600'
+                                                : 'text-gray-400 border-transparent hover:text-gray-600'
+                                                }`}
+                                        >
+                                            {section.title}
+                                        </button>
+                                    ))}
                                 </div>
                             </div>
 

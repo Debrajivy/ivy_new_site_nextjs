@@ -37,7 +37,7 @@ import {
   Gauge,
   Linkedin
 } from 'lucide-react';
-import data from './AIHelpCenter.json';
+import { data } from './lib/data';
 
 // Icon mapping
 const iconMap: Record<string, React.ReactNode> = {
@@ -106,25 +106,11 @@ const AIHelpCenterLanding = () => {
               </div>
               <h3 className="text-base sm:text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{cat.title}</h3>
               <p className="mt-1 text-xs sm:text-sm text-gray-500 font-medium">{cat.count}</p>
-              {id === "python-basics" && (
+              {(cat as any).latestTopic && (
                 <div className="mt-3 sm:mt-4 flex items-center gap-2 rounded-lg sm:rounded-xl bg-blue-50 p-2 sm:p-3">
                   <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 animate-pulse rounded-full" style={{ backgroundColor: themeColors.primary }}></div>
-                  <span className="text-xs font-bold text-blue-700">Latest: Merging CSV Files</span>
+                  <span className="text-xs font-bold text-blue-700">Latest: {(cat as any).latestTopic.title}</span>
                   <ArrowRight size={12} className="ml-auto text-blue-400" />
-                </div>
-              )}
-              {id === "genai-llm" && (
-                <div className="mt-3 sm:mt-4 flex items-center gap-2 rounded-lg sm:rounded-xl bg-purple-50 p-2 sm:p-3">
-                  <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 animate-pulse rounded-full" style={{ backgroundColor: themeColors.primary }}></div>
-                  <span className="text-xs font-bold text-purple-700">New: RAG vs Fine-Tuning</span>
-                  <ArrowRight size={12} className="ml-auto text-purple-400" />
-                </div>
-              )}
-              {id === "visualization" && (
-                <div className="mt-3 sm:mt-4 flex items-center gap-2 rounded-lg sm:rounded-xl bg-orange-50 p-2 sm:p-3">
-                  <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 animate-pulse rounded-full" style={{ backgroundColor: themeColors.secondary }}></div>
-                  <span className="text-xs font-bold text-orange-700">Featured: Dual-Axis Charts</span>
-                  <ArrowRight size={12} className="ml-auto text-orange-400" />
                 </div>
               )}
               <div className="absolute top-3 sm:top-4 right-3 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">

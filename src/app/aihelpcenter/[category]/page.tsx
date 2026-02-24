@@ -37,7 +37,7 @@ import {
   Gauge,
   Linkedin
 } from 'lucide-react';
-import data from '../AIHelpCenter.json';
+import { data } from '../lib/data';
 
 // Icon mapping
 const iconMap: Record<string, React.ReactNode> = {

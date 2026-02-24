@@ -1,0 +1,14 @@
+{
+  "title": "Machine Learning",
+  "icon": "Cpu",
+  "color": "bg-purple-500",
+  "description": "Learn ML algorithms and applications",
+  "subcategories": {
+    "supervised-learning": {
+      "title": "Supervised Learning",
+      "icon": "BarChart3",
+      "color": "bg-purple-400",
+      "topics": []
+    }
+  }
+}
