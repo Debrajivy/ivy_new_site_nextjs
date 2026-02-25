@@ -420,6 +420,10 @@
               "date": "February 23, 2026",
               "readTime": "15 min read"
             },
+            "video": {
+              "youtubeId": "4fechXifoOg",
+              "title": "RAG vs Fine-Tuning Explained"
+            },
             "sections": [
               {
                 "id": "intro",
