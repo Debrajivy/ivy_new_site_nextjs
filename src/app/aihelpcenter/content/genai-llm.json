@@ -11,6 +11,7 @@
       "topics": [
         {
           "id": "rag-vs-finetuning",
+          "metaTitle": "RAG vs Fine-Tuning Explained | GenAI Comparison Guide",
           "title": "RAG vs Fine-Tuning Llama 2: When to Use Which?",
           "description": "Complete guide to choosing between RAG and fine-tuning",
           "duration": "8 min read",
@@ -409,6 +410,7 @@
       "topics": [
         {
           "id": "how-llms-generate-insights",
+          "metaTitle": "How LLMs Generate Insights | Understanding Large Language Models",
           "title": "Using LLMs to Generate High-Impact Business Insights",
           "description": "Use LLMs to transform data into high-impact actionable business insights.",
           "duration": "15 min read",

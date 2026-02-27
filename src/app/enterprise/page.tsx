@@ -134,116 +134,101 @@ const expertiseData = [
   {
     id: '01',
     title: "GENAI & AI SOLUTIONS",
-    icon: <Sparkles className="h-6 w-6 mb-4 text-purple-200" />,
-    description: "Cutting-edge AI capabilities for leaders, technical experts, and domain professionals.",
+    Icon: Sparkles,
+    iconClass: "text-purple-300",
+    description: "From strategy to production-scale AI adoption.",
     topics: [
-      "GenAI for Leaders",
-      "GenAI for All",
-      "Machine Learning",
-      "Applied GenAI for Business Teams",
-      "Agentic AI: Strategy & ROI",
-      "Large Language Models",
-      "Ethical Considerations and Responsible AI",
-      "Predictive Maintenance using GenAI"
+      "GenAI for Leaders, Business Teams, and Enterprise Functions",
+      "Large Language Models, Agentic AI, and Applied GenAI",
+      "AI strategy, ROI frameworks, and operating models",
+      "Ethical AI, governance, and responsible deployment",
+      "Industry use cases including predictive maintenance and automation",
     ],
     gradient: "from-purple-700 via-violet-800 to-indigo-900",
-    shadow: "shadow-purple-900/50"
   },
   {
     id: '02',
     title: "LEADERSHIP & STRATEGY",
-    icon: <Users2 className="h-6 w-6 mb-4 text-amber-200" />,
-    description: "Empowering organizations with strategic vision and corporate excellence.",
+    Icon: Users2,
+    iconClass: "text-amber-300",
+    description: "Building future-ready leaders and execution capability.",
     topics: [
-      "Vision Strategy",
-      "Strategic Leadership",
-      "Corporate Excellence",
-      "Outbound Team Empowerment",
-      "Agile Thinking & Problem Solving",
-      "Goal Setting & Achievement"
+      "Vision and enterprise strategy",
+      "Strategic and agile leadership",
+      "Corporate excellence and goal-driven execution",
+      "High-performance outbound and cross-functional teams",
+      "Problem-solving and decision-making at scale",
     ],
     gradient: "from-amber-600 via-orange-700 to-yellow-900",
-    shadow: "shadow-amber-900/50"
   },
   {
     id: '03',
     title: "DATA SCIENCE & ANALYTICS",
-    icon: <BarChart3 className="h-6 w-6 mb-4 text-blue-200" />,
-    description: "Transforming raw data into actionable business intelligence.",
+    Icon: BarChart3,
+    iconClass: "text-blue-300",
+    description: "Turning data into measurable business outcomes.",
     topics: [
-      "Predictive Analytics using R / SAS / Python / SPSS",
-      "Advanced Statistical Analysis and Interpretation",
-      "Statistical Models (Time Series, Decision Tree, Neural Network, etc.)",
-      "Text Mining",
-      "Retail Analytics",
-      "Marketing Analytics"
+      "Predictive and advanced analytics using Python, R, SAS, SPSS",
+      "Statistical modeling including time series, ML, and neural networks",
+      "Text mining and unstructured data analysis",
+      "Domain analytics across retail, marketing, and operations",
     ],
     gradient: "from-blue-600 via-blue-700 to-slate-900",
-    shadow: "shadow-blue-900/50"
   },
   {
     id: '04',
     title: "DATA ENGINEERING & CLOUD",
-    icon: <Brain className="h-6 w-6 mb-4 text-cyan-200" />,
-    description: "Building robust infrastructure for big data and cloud computing.",
+    Icon: Database,
+    iconClass: "text-cyan-300",
+    description: "Enterprise-grade data platforms and analytics infrastructure.",
     topics: [
-      "Big Data Overview using Hadoop",
-      "PySpark",
-      "AWS & Cloud Computing of Big Data",
-      "Scala",
-      "Microsoft Business Intelligence Suite",
-      "Tableau",
-      "QlickView",
-      "Dashboarding using Advanced Excel and VBA"
+      "Big data architectures using Hadoop, Spark, and PySpark",
+      "Cloud data platforms on AWS and Microsoft ecosystems",
+      "Data pipelines using Scala and modern BI stacks",
+      "Enterprise dashboards using Power BI, Tableau, Qlik, and Excel",
     ],
     gradient: "from-cyan-600 via-teal-700 to-emerald-900",
-    shadow: "shadow-cyan-900/50"
   },
   {
-    id: '06',
+    id: '05',
     title: "PROFESSIONAL PERFORMANCE",
-    icon: <Briefcase className="h-6 w-6 mb-4 text-slate-200" />,
-    description: "Enhancing individual skills and organizational productivity tools.",
+    Icon: Briefcase,
+    iconClass: "text-slate-300",
+    description: "Productivity, communication, and execution excellence.",
     topics: [
-      "Power Automate",
-      "Power Query",
-      "Power Pivot",
-      "Power BI",
-      "Negotiation Skills",
-      "Professional English",
-      "Voice Training",
-      "Email Etiquette"
+      "Power Platform tools including Power BI, Automate, Query, and Pivot",
+      "Business communication, professional English, and email etiquette",
+      "Negotiation, voice training, and executive presence",
     ],
     gradient: "from-slate-600 via-gray-700 to-zinc-900",
-    shadow: "shadow-slate-900/50"
-  }
+  },
 ];
 
 // L&D Challenges Data
 const ldChallenges = [
   {
     title: 'Skills Gap in AI & Data',
-    description: 'Teams lack foundational knowledge in data analytics and AI concepts',
+    description: 'Teams lack foundational capability in analytics and AI, making it hard to compete in a data-driven world',
     icon: Brain,
-    solution: 'Structured GenAI and Data Science bootcamps with hands-on projects'
+    solution: 'Structured GenAI and Data Science bootcamps with hands-on, role-aligned projects'
   },
   {
     title: 'Low Training ROI',
-    description: 'Difficulty measuring impact of training investments',
+    description: 'Impact of learning investments is hard to measure — programs end without clear business outcomes',
     icon: TargetIcon,
-    solution: 'Custom KPIs and reporting dashboards that track business outcomes'
+    solution: 'Custom KPIs and outcome dashboards mapped to business metrics'
   },
   {
     title: 'Adoption Challenges',
-    description: 'Trained employees struggle to apply learning on the job',
+    description: 'Learning does not translate into on-the-job execution — teams revert to old habits after training',
     icon: TrendingUp,
-    solution: 'Post-training coaching and on-the-job reinforcement programs'
+    solution: 'Post-training coaching, project guidance, and in-role reinforcement over 90+ days'
   },
   {
     title: 'Budget Constraints',
-    description: 'Need effective training without massive upfront investment',
+    description: 'Need impact without large upfront investments — ROI must be clear before committing',
     icon: DollarSign,
-    solution: 'Flexible programs with clear ROI and performance-based pricing'
+    solution: 'Flexible engagement models with clear ROI and performance-linked pricing'
   }
 ];
 
@@ -340,28 +325,28 @@ const clientData = [
 // FAQ Data
 const faqData = [
   {
-    q: 'How do you ensure training adoption beyond the classroom?',
-    a: 'We use a multi-layered approach: on-the-job coaching, reinforcement through projects, dedicated Project Deans, and measurable adoption metrics tracked through our LMS. Post-training support is included for 90+ days.'
+    q: 'How do you ensure AI training adoption in enterprises?',
+    a: 'Adoption is built into the program design. We combine project-based learning, on-the-job application, dedicated Project Deans, and adoption metrics tracked through our LMS. Every engagement includes structured reinforcement and 90+ days of post-training support to ensure learning translates into execution.'
   },
   {
-    q: 'Can you customize the curriculum for our specific industry?',
-    a: 'Absolutely. We work with your team to customize case studies, projects, and examples to match your industry, business challenges, and functional areas (Finance, Sales, Operations, HR, etc.).'
+    q: 'Can the curriculum be customized for our industry and functions?',
+    a: 'Yes. Programs are tailored to your industry, business model, and functional areas such as Finance, Sales, Operations, HR, and Technology. Case studies and projects are aligned with your real workflows and business challenges.'
   },
   {
-    q: 'What ROI can we expect from the training?',
-    a: 'Our clients typically see 40-60% efficiency gains within 3-6 months, with documented savings averaging $500K-$2M+ depending on scale. We set clear KPIs and track impact throughout the program.'
+    q: 'What ROI can enterprises expect from AI and data upskilling?',
+    a: 'Clients typically report 40–60% efficiency gains within 3–6 months. Documented savings range from $500K to $2M+ depending on scale and implementation. Clear KPIs are defined upfront and impact is tracked throughout the engagement.'
   },
   {
     q: 'How long does it take to see measurable results?',
-    a: 'Quick wins appear within 4-8 weeks. Significant organizational impact is typically visible within 3-6 months, with sustained benefits compounding over time.'
+    a: 'Initial improvements are visible within 4–8 weeks. Broader organizational impact typically emerges within 3–6 months, with sustained gains as adoption scales across teams.'
   },
   {
-    q: 'Do you provide ongoing support after the program?',
-    a: 'Yes. We include 90+ days of post-training support with dedicated Project Deans, reinforcement sessions, and adoption tracking to ensure lasting impact.'
+    q: 'Do you provide post-program support?',
+    a: 'Yes. Engagements include 90+ days of structured post-training support, including project mentoring, reinforcement sessions, and adoption tracking to ensure long-term impact.'
   },
   {
-    q: 'What delivery formats do you offer?',
-    a: 'We offer hybrid solutions: instructor-led workshops, online self-paced learning, cohort-based programs, one-on-one coaching, and blended approaches customized to your needs.'
+    q: 'What delivery formats are available for enterprise programs?',
+    a: 'Programs are delivered through blended models including instructor-led workshops, cohort-based training, online modules, one-on-one coaching, and hybrid formats tailored to enterprise needs.'
   }
 ];
 
@@ -412,6 +397,7 @@ const Enterprise = () => {
   const [savingsCount, setSavingsCount] = useState(0);
   const [activeSection, setActiveSection] = useState('overview');
   const [openPillar, setOpenPillar] = useState<string>('pillar1');
+  const [activeExpertise, setActiveExpertise] = useState<number>(0);
   const logoContainerRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -549,7 +535,7 @@ const Enterprise = () => {
 
       <main className="min-h-screen">
         {/* HERO SECTION - Updated with 3 buttons and contact form */}
-        <section className="relative bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#020617] text-white overflow-hidden min-h-[90vh] flex items-center">
+        <section className="relative bg-gradient-to-br from-[#0a1a5f] via-[#1c2b4e] to-[#040a22] text-white overflow-hidden min-h-[90vh] flex items-center">
           {/* Abstract Background Elements for Depth */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
             <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-600 rounded-full blur-[120px]"></div>
@@ -566,13 +552,17 @@ const Enterprise = () => {
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tighter">
-                  BUILD <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">CAPABILITY</span>
-                  <span className="block mt-2">DRIVE IMPACT</span>
-                  <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light text-slate-400 mt-2 lg:mt-4 tracking-normal italic">Future-Proof Your Talent</span>
+                  Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">AI & GenAI</span>
+                  <span className="block mt-2">Upskilling for</span>
+                  <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400">Real Business Adoption</span>
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl border-l-2 border-blue-600 pl-4 sm:pl-6">
-                  Custom, ROI-focused corporate training in <span className="text-white font-semibold">GenAI, Data, and Leadership</span> for global enterprises.
+                  We help enterprise teams move from <span className="text-white font-semibold">AI awareness to practical, role-based adoption</span> across sales, operations, analytics, and leadership teams.
+                </p>
+
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-xl italic">
+                  Delivered across multiple enterprise teams with a focus on measurable productivity and decision-making outcomes.
                 </p>
 
                 {/* Action Buttons with Micro-interactions */}
@@ -606,8 +596,11 @@ const Enterprise = () => {
 
                 {/* Client Logos - Subtle Glassmorphism */}
                 <div className="mt-6 lg:mt-8">
-                  <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 sm:mb-6">
-                    Strategic Training Partner To
+                  <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">
+                    Enterprise AI Enablement Across Global Organizations
+                  </p>
+                  <p className="text-xs text-slate-600 mb-4 sm:mb-5">
+                    Partnered with enterprise teams to drive practical adoption of Data, AI & GenAI across real business functions.
                   </p>
 
                   <div className="relative">
@@ -759,8 +752,52 @@ const Enterprise = () => {
           </div>
         </section>
 
+        {/* ENTERPRISE OVERVIEW SECTION */}
+        <section className="py-12 sm:py-16 lg:py-20 bg-white">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div className="space-y-5">
+                  <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-4 py-1.5 rounded-full">
+                    <Building className="h-4 w-4 text-blue-600" />
+                    <span className="text-xs font-bold tracking-widest uppercase text-blue-700">Enterprise Solutions</span>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
+                    Bridging the Gap Between <span className="text-blue-600">AI Access and Real Business Impact</span>
+                  </h2>
+                  <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+                    Most enterprises today have access to powerful data and AI tools, but struggle to turn them into real business impact. Teams often attend training programs, yet adoption remains low because learning is not aligned to day-to-day roles, workflows, or decision-making needs.
+                  </p>
+                  <p className="text-base text-slate-600 leading-relaxed">
+                    Ivy Professional School helps enterprises bridge this gap through <strong>role-based training programs in Data, AI, and Generative AI</strong>. Our enterprise programs are designed around real business use cases, functional responsibilities, and the practical skills teams need to apply AI confidently in their work.
+                  </p>
+                  <p className="text-base text-slate-600 leading-relaxed">
+                    Instead of generic courses, we work closely with organizations to tailor learning paths for different teams — leadership, analytics, sales, operations, and technology. The focus is on measurable outcomes like improved productivity, better decision-making, and sustained adoption of AI across the organization.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { icon: <Target className="h-5 w-5 text-blue-600" />, title: 'Role-Based Learning', desc: 'Tailored paths for each function — leadership, sales, analytics, ops, and tech' },
+                    { icon: <TrendingUp className="h-5 w-5 text-green-600" />, title: 'Measurable Outcomes', desc: 'KPIs tracked throughout — productivity gains, AI adoption rates, decision speed' },
+                    { icon: <Users2 className="h-5 w-5 text-purple-600" />, title: 'Real Use Cases', desc: 'Projects aligned to your actual business workflows and challenges' },
+                    { icon: <Zap className="h-5 w-5 text-amber-600" />, title: 'Sustained Adoption', desc: '90+ days of post-training support to ensure lasting on-the-job impact' },
+                  ].map((item, i) => (
+                    <div key={i} className="bg-slate-50 rounded-xl p-4 sm:p-5 border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all">
+                      <div className="w-9 h-9 rounded-lg bg-white shadow-sm flex items-center justify-center mb-3">
+                        {item.icon}
+                      </div>
+                      <h4 className="font-bold text-slate-900 mb-1 text-sm sm:text-base">{item.title}</h4>
+                      <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CASE STUDIES SECTION */}
-        <section id="case-studies-section" className="py-12 sm:py-16 lg:py-20 bg-white">
+        <section id="case-studies-section" className="py-12 sm:py-16 lg:py-20 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
@@ -839,6 +876,162 @@ const Enterprise = () => {
                 </Link>
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* INDUSTRIES WE TRANSFORM */}
+        <section className="relative bg-gradient-to-br from-[#0a1a5f] via-[#1c2b4e] to-[#040a22] text-white overflow-hidden min-h-[90vh] flex items-center">
+          {/* Decorative background orbs */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute top-[-15%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-700/10 blur-[120px]" />
+            <div className="absolute bottom-[-15%] right-[-10%] w-[45%] h-[45%] rounded-full bg-indigo-700/10 blur-[120px]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[30%] rounded-full bg-cyan-900/10 blur-[100px]" />
+            {/* Grid pattern */}
+            <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage: 'linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            {/* Section Header */}
+            <div className="text-center mb-12 lg:mb-16">
+              <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full mb-5">
+                <Globe2 className="h-3.5 w-3.5 text-blue-400" />
+                <span className="text-xs font-bold tracking-widest uppercase text-blue-300">Enterprise Reach</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+                Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Transform</span>
+              </h2>
+              <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">
+                Deep domain expertise across six major industry verticals — with role-aligned programs built around your sector&apos;s real challenges.
+              </p>
+            </div>
+
+            {/* Industry Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+              {[
+                {
+                  icon: Building,
+                  label: 'Industrial & Manufacturing',
+                  accent: 'from-orange-500/20 to-amber-600/10',
+                  border: 'border-orange-500/20 hover:border-orange-400/40',
+                  iconBg: 'bg-orange-500/15',
+                  iconColor: 'text-orange-400',
+                  dot: 'bg-orange-400',
+                  clients: ['Honeywell', 'Atlas Copco', 'Tata Steel', 'MSP'],
+                  highlights: [
+                    'Enterprise-Wide Data Analytics, Data Science & AI Training',
+                    '"Gurukul" — Centralized L&D Ecosystem for Plant Teams',
+                    '1,200+ Honeywell employees trained; 240 hrs saved weekly',
+                  ],
+                  stat: '2,500+ employees upskilled at Tata Steel',
+                },
+                {
+                  icon: Shield,
+                  label: 'BFSI & Banking',
+                  accent: 'from-cyan-500/20 to-blue-600/10',
+                  border: 'border-cyan-500/20 hover:border-cyan-400/40',
+                  iconBg: 'bg-cyan-500/15',
+                  iconColor: 'text-cyan-400',
+                  dot: 'bg-cyan-400',
+                  clients: ['HSBC',  'Bandhan Bank'],
+                  highlights: [
+                    'Data Science for Credit Risk & Fraud Detection',
+                    'Financial Analytics & Compliance Reporting with AI',
+                    'Customer Intelligence & Predictive Modelling Programs',
+                  ],
+                  stat: '5 BFSI institutions trained across India & UK',
+                },
+                
+                {
+                  icon: Cpu,
+                  label: 'IT & Professional Services',
+                  accent: 'from-violet-500/20 to-purple-600/10',
+                  border: 'border-violet-500/20 hover:border-violet-400/40',
+                  iconBg: 'bg-violet-500/15',
+                  iconColor: 'text-violet-400',
+                  dot: 'bg-violet-400',
+                  clients: ['Cognizant', 'Capgemini', 'Accenture', 'Genpact', 'PwC', 'ITC Infotech'],
+                  highlights: [
+                    'GenAI, Agentic AI & LLMs for Delivery & Engineering Teams',
+                    'Data Engineering with Hadoop, Spark, AWS & Azure',
+                    'Advanced Analytics using Python, R, SAS & Power BI',
+                  ],
+                  stat: '6 global IT & consulting firms partnered',
+                },
+                
+               
+              ].map((industry, idx) => {
+                const Icon = industry.icon;
+                return (
+                  <div
+                    key={idx}
+                    className={`group relative rounded-2xl border ${industry.border} bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300 overflow-hidden`}
+                  >
+                    {/* Card gradient accent */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${industry.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`} />
+
+                    <div className="relative z-10 p-5 sm:p-6">
+                      {/* Header */}
+                      <div className="flex items-start justify-between mb-4">
+                        <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${industry.iconBg} flex items-center justify-center flex-shrink-0`}>
+                          <Icon className={`h-5 w-5 sm:h-6 sm:w-6 ${industry.iconColor}`} />
+                        </div>
+                        <div className={`w-2 h-2 rounded-full ${industry.dot} mt-1`} />
+                      </div>
+
+                      <h3 className="text-base sm:text-lg font-bold text-white mb-1 leading-snug">{industry.label}</h3>
+
+                      {/* Stat badge */}
+                      <p className={`text-xs font-semibold ${industry.iconColor} mb-3`}>{industry.stat}</p>
+
+                      {/* Highlights */}
+                      <ul className="space-y-1.5 mb-4">
+                        {industry.highlights.map((h, i) => (
+                          <li key={i} className="flex items-center gap-2">
+                            <div className={`w-1 h-1 rounded-full ${industry.dot} flex-shrink-0`} />
+                            <span className="text-xs text-white/60">{h}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Clients */}
+                      <div className="pt-3 border-t border-white/[0.07]">
+                        <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-1.5">Key Clients</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {industry.clients.map((c, i) => (
+                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-white/[0.06] text-white/50 border border-white/[0.08]">{c}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Bottom global stats strip */}
+       <div className="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 border border-white/[0.07] rounded-2xl p-6 sm:p-10 bg-white/[0.02]">
+  {[
+    { value: '500+', label: 'Companies Trained', icon: Building },
+    { value: '6', label: 'Industry Verticals', icon: Globe2 },
+    { value: '17+', label: 'Years of Excellence', sub: '(est. 2007)', icon: MapPin },
+  ].map((stat, i) => {
+    const Icon = stat.icon;
+    return (
+      <div key={i} className="flex flex-col items-center text-center">
+        <div className="flex justify-center mb-3">
+          <Icon className="h-6 w-6 text-blue-400/60" />
+        </div>
+        <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tabular-nums tracking-tight">
+          {stat.value}
+        </div>
+        <div className="text-[10px] sm:text-xs text-slate-500 mt-2 uppercase tracking-[0.2em] font-medium">
+          {stat.label}
+          {stat.sub && <span className="block opacity-70 mt-1">{stat.sub}</span>}
+        </div>
+      </div>
+    );
+  })}
+</div>
           </div>
         </section>
 
@@ -1059,91 +1252,167 @@ const Enterprise = () => {
           </div>
         </section>
 
-        <section id="our-expertise" className="bg-slate-950 py-12 sm:py-16 lg:py-20 text-white overflow-hidden">
+        <section id="our-expertise" className="bg-[#07101f] py-16 sm:py-20 lg:py-28 text-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-6 sm:mb-8 lg:mb-10">Our Expertise</h2>
 
-            {/* SQUEEZE → EXPAND STRIP - Responsive version */}
-            <div className="hidden lg:flex h-[520px] w-full gap-4">
-              {expertiseData.map((card, i) => (
-                <div
-                  key={i}
-                  className="group relative flex-1 rounded-2xl overflow-hidden transition-all duration-700 ease-[cubic-bezier(.4,0,.2,1)] hover:flex-[4]"
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-b ${card.gradient}`} />
-                  <div className="absolute inset-0 bg-black/35" />
-                  <div className="relative z-10 h-full p-6 flex flex-col">
-                    <div>
-                      {card.icon}
-                      <h3 className="mt-4 text-xl font-bold tracking-wide">
-                        {card.title}
-                      </h3>
-                      {card.description && (
-                        <p className="mt-4 text-sm text-white/80 opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 max-w-sm">
-                          {card.description}
-                        </p>
-                      )}
-                      <ul className="mt-6 space-y-2 text-sm opacity-0 translate-y-6 transition-all duration-500 delay-100 group-hover:opacity-100 group-hover:translate-y-0">
-                        {card.topics.map((topic, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/70" />
-                            <span className="text-white/90">{topic}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mt-auto flex items-end justify-between">
-                      <div>
-                        <div className="text-4xl font-black">{card.id}</div>
-                        <div className="text-xs uppercase tracking-widest opacity-80">
-                          {card.title}
+            {/* Section Header */}
+            <div className="mb-10 lg:mb-14">
+              <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full mb-4">
+                <Sparkles className="h-3.5 w-3.5 text-blue-400" />
+                <span className="text-xs font-bold tracking-widest uppercase text-blue-300">Capability Areas</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Our Expertise</h2>
+              <p className="text-slate-400 mt-3 text-sm sm:text-base max-w-xl">
+                End-to-end capability building across AI, data, leadership, and performance
+              </p>
+            </div>
+
+            {/* ── DESKTOP: Left nav tabs + Right content panel ── */}
+            <div className="hidden lg:grid lg:grid-cols-[280px_1fr] xl:grid-cols-[310px_1fr] gap-4 xl:gap-6 items-start">
+
+              {/* Left: Tab list */}
+              <div className="space-y-1.5">
+                {expertiseData.map((item, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setActiveExpertise(i)}
+                      className={`w-full text-left rounded-2xl px-5 py-4 flex items-center gap-4 transition-all duration-300 group border ${
+                        activeExpertise === i
+                          ? 'bg-white/[0.07] border-white/15 shadow-xl shadow-black/20'
+                          : 'border-transparent hover:border-white/8 hover:bg-white/[0.04]'
+                      }`}
+                    >
+                      <span className={`text-3xl font-black leading-none tabular-nums transition-all duration-300 ${
+                        activeExpertise === i ? 'text-blue-400' : 'text-white/15 group-hover:text-white/28'
+                      }`}>
+                        {item.id}
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <div className={`text-xs font-black tracking-widest uppercase truncate transition-colors duration-300 ${
+                          activeExpertise === i ? 'text-white' : 'text-white/35 group-hover:text-white/60'
+                        }`}>
+                          {item.title}
                         </div>
+                        <div className={`text-xs mt-0.5 leading-snug line-clamp-1 transition-colors duration-300 ${
+                          activeExpertise === i ? 'text-white/55' : 'text-white/20 group-hover:text-white/38'
+                        }`}>
+                          {item.description}
+                        </div>
+                      </div>
+                      {activeExpertise === i && (
+                        <ChevronRight className="h-4 w-4 text-blue-400 flex-shrink-0" />
+                      )}
+                    </button>
+                ))}
+              </div>
+
+              {/* Right: Content panel */}
+              {(() => {
+                const active = expertiseData[Math.max(0, activeExpertise)];
+                const Icon = active.Icon;
+                return (
+                  <div className="relative rounded-3xl overflow-hidden min-h-[440px]">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${active.gradient}`} />
+                    <div className="absolute inset-0 bg-black/40" />
+                    {/* Decorative orbs */}
+                    <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/5 blur-3xl pointer-events-none" />
+                    <div className="absolute -bottom-20 -left-20 w-56 h-56 rounded-full bg-white/5 blur-3xl pointer-events-none" />
+
+                    <div className="relative z-10 p-8 xl:p-10">
+                      {/* Card header */}
+                      <div className="flex items-start justify-between mb-8 gap-4">
+                        <div>
+                          <p className="text-white/35 text-[10px] uppercase tracking-[0.2em] font-bold mb-2">
+                            Expertise · {active.id}
+                          </p>
+                          <h3 className="text-2xl xl:text-3xl font-extrabold text-white leading-tight">
+                            {active.title}
+                          </h3>
+                          <p className="text-white/65 text-base mt-2">{active.description}</p>
+                        </div>
+                        <div className="w-14 h-14 xl:w-16 xl:h-16 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center flex-shrink-0">
+                          <Icon className={`h-7 w-7 xl:h-8 xl:w-8 ${active.iconClass}`} />
+                        </div>
+                      </div>
+
+                      {/* Topics grid */}
+                      <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
+                        {active.topics.map((topic, idx) => (
+                          <div key={idx} className="flex items-start gap-3 bg-white/[0.06] hover:bg-white/[0.1] border border-white/8 rounded-xl px-4 py-3 transition-colors">
+                            <div className="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <Check className="h-3 w-3 text-white" />
+                            </div>
+                            <span className="text-sm text-white/85 leading-relaxed">{topic}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })()}
             </div>
 
-            {/* Mobile/Tablet version - Stack vertically */}
-            <div className="lg:hidden space-y-4">
-              {expertiseData.map((card, i) => (
-                <div
-                  key={i}
-                  className="group relative rounded-2xl overflow-hidden border border-slate-700"
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-b ${card.gradient}`} />
-                  <div className="absolute inset-0 bg-black/35" />
-                  <div className="relative z-10 p-6">
-                    <div className="flex items-start gap-4">
-                      {card.icon}
-                      <div className="flex-1">
-                        <h3 className="text-lg font-bold tracking-wide">
-                          {card.title}
-                        </h3>
-                        <p className="mt-2 text-sm text-white/80">
-                          {card.description}
-                        </p>
-                        <ul className="mt-4 space-y-2 text-sm">
-                          {card.topics.slice(0, 3).map((topic, idx) => (
-                            <li key={idx} className="flex items-start gap-2">
-                              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/70" />
-                              <span className="text-white/90">{topic}</span>
+            {/* ── MOBILE / TABLET: Accordion ── */}
+            <div className="lg:hidden space-y-2">
+              {expertiseData.map((item, i) => {
+                const Icon = item.Icon;
+                const isOpen = activeExpertise === i;
+                return (
+                  <div
+                    key={i}
+                    className={`rounded-2xl border overflow-hidden transition-all duration-300 ${
+                      isOpen ? 'border-white/20' : 'border-white/[0.06]'
+                    }`}
+                  >
+                    {/* Accordion header */}
+                    <button
+                      onClick={() => setActiveExpertise(isOpen ? -1 : i)}
+                      className={`w-full text-left flex items-center gap-3 sm:gap-4 px-4 py-4 sm:px-5 sm:py-5 transition-colors ${
+                        isOpen ? `bg-gradient-to-r ${item.gradient}` : 'bg-white/[0.03] hover:bg-white/[0.06]'
+                      }`}
+                    >
+                      <span className={`text-2xl sm:text-3xl font-black leading-none tabular-nums flex-shrink-0 ${
+                        isOpen ? 'text-white/50' : 'text-white/15'
+                      }`}>
+                        {item.id}
+                      </span>
+                      <div className="flex-1 min-w-0 text-left">
+                        <div className="font-bold text-sm sm:text-base text-white">{item.title}</div>
+                        <div className="text-xs text-white/45 mt-0.5 line-clamp-1">{item.description}</div>
+                      </div>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
+                        isOpen ? 'bg-white/15' : 'bg-white/5'
+                      }`}>
+                        <ChevronDown className={`h-4 w-4 text-white/60 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                      </div>
+                    </button>
+
+                    {/* Accordion body */}
+                    {isOpen && (
+                      <div className="bg-white/[0.03] border-t border-white/8 px-4 py-5 sm:px-5">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                            <Icon className={`h-5 w-5 ${item.iconClass}`} />
+                          </div>
+                          <p className="text-sm text-white/60 italic">{item.description}</p>
+                        </div>
+                        <ul className="space-y-2.5">
+                          {item.topics.map((topic, idx) => (
+                            <li key={idx} className="flex items-start gap-3">
+                              <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check className="h-3 w-3 text-white/70" />
+                              </div>
+                              <span className="text-sm text-white/80 leading-relaxed">{topic}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                    </div>
-                    <div className="mt-4 pt-4 border-t border-white/10">
-                      <div className="flex items-center justify-between">
-                        <div className="text-2xl font-black">{card.id}</div>
-                        <ChevronDown className="h-5 w-5 text-white/50 group-hover:rotate-180 transition-transform" />
-                      </div>
-                    </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
+
           </div>
         </section>
 
@@ -1155,7 +1424,7 @@ const Enterprise = () => {
                 Common L&D Challenges We Solve
               </h2>
               <p className="text-sm sm:text-base text-slate-600">
-                Every challenge is an opportunity. Here's how we help L&D managers transform obstacles into measurable successes.
+                Turning learning obstacles into measurable business outcomes — here's how we solve what L&D leaders face most.
               </p>
             </div>
 
@@ -1387,10 +1656,10 @@ const Enterprise = () => {
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
-                  Questions from Fellow L&D Managers
+                  Questions from L&D Leaders
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600">
-                  Get answers to the most common questions about implementing effective AI and data training.
+                  Clear answers to the most common concerns about enterprise AI and data upskilling.
                 </p>
               </div>
 
@@ -1415,11 +1684,11 @@ const Enterprise = () => {
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
-                Ready to Transform Your Team?
+                Start Your Enterprise GenAI & Data Upskilling Journey
               </h2>
 
               <p className="text-base sm:text-lg lg:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                Get a free consultation and custom training blueprint for your organization
+                Book a strategic consultation to assess AI readiness, define capability gaps, and build a measurable upskilling roadmap.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">

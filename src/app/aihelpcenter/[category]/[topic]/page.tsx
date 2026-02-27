@@ -96,6 +96,7 @@ const iconMap: Record<string, React.ReactNode> = {
     "Linkedin": <Linkedin />
 };
 
+
 // Theme Colors
 const themeColors = {
     primary: '#009fda',

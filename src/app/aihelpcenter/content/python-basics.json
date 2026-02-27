@@ -11,6 +11,7 @@
       "topics": [
         {
           "id": "merge-csv-files",
+          "metaTitle": "Merge CSV Files in Python | Step-by-Step Guide",
           "title": "How to Merge Multiple CSV Files into One DataFrame in Python: A Step-by-Step Tutorial",
           "description": "Learn to combine multiple CSV files efficiently",
           "duration": "15 min read",
@@ -322,6 +323,7 @@
       "topics": [
         {
           "id": "excel-automation-openpyxl",
+          "metaTitle": "Excel Automation in Python Using OpenPyXL | Tutorial",
           "title": "Automating Excel Reports Using Python and OpenPyXL: From Manual Drudgery to One-Click Reports",
           "description": "Transform repetitive Excel tasks into automated workflows with Python",
           "duration": "18 min read",
