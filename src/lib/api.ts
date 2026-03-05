@@ -107,7 +107,7 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "IIT Guwahati GenAI Course | ChatGPT, LLM Training | 1220 Students | 4.8★ ",
+      title: "Generative AI Certification Course | Ivy Professional School ",
       description: "IIT Guwahati GenAI certification. Master ChatGPT, LLMs, build AI apps. 20+ projects. 1,220 students. Pay After Placement. 4.8★. Apply for 18-week program!",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
