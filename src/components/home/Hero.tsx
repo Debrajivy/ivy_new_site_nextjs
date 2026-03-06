@@ -328,7 +328,7 @@ const Hero = () => {
                   )}
 
                   <div style={{ marginTop: 10 }} className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm">
-                      Next batch starting on 21st Feb, Power BI, 28th Feb SQL, 7th March Advanced Excel
+                      New batches for Power BI, SQL, and Advanced Excel begin on 7th and 21st March, 2026.
                     <div className="flex items-center gap-1">
                       <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                       <span className="text-red-600 font-medium">Limited seats left!</span>

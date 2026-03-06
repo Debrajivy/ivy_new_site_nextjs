@@ -766,7 +766,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm"
                   >
                     <span className="text-[#1a98cb] font-medium">
-                      Next batch starting on 21st Feb, Power BI, 28th Feb SQL, 7th March Advanced Excel
+                      New batches for Power BI, SQL, and Advanced Excel begin on 7th and 21st March, 2026.
 
                     </span>
                     <div className="flex items-center gap-1">
