@@ -261,7 +261,7 @@ const CourseSubNavigation = () => {
                   </Button>
                   <div className="flex items-center justify-center gap-2 pt-2">
                     <p className="text-sm font-semibold text-center">
-                      New batches for Power BI, SQL, and Advanced Excel begin on 7th and 21st March, 2026.
+                      New batch starting 7th and 21st March, 2026
                       <span className="inline-block w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                       <span className="text-red-600">&nbsp;Limited seats left!</span>
                     </p>
