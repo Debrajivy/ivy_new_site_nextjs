@@ -19,6 +19,7 @@ export async function generateMetadata(
       return {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         title: (found as any).metaTitle ?? `${found.title} | Ivy Pro School`,
+        description: found.description,
       };
     }
   }
