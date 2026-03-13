@@ -11,8 +11,8 @@
       "topics": [
         {
           "id": "merge-csv-files",
-          "metaTitle": "Merge CSV Files in Python | Step-by-Step Guide",
-          "title": "Merge CSV Files in Python | Step‑by‑Step Tutorial",
+          "metaTitle": "Merge CSV Files in Python | Step‑by‑Step Tutorial",
+          "title": "How to Merge Multiple CSV Files into One DataFrame in Python: A Step-by-Step Tutorial",
           "description": "Learn how to merge multiple CSV files into a single DataFrame in Python using pandas. Step‑by‑step tutorial with code examples for data analysts and beginners.",
           "duration": "15 min read",
           "date": "January 13, 2026",
