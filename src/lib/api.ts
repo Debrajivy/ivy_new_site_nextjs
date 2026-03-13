@@ -7879,7 +7879,7 @@ const courses: Course[] = [
    {
     id: '21',
     title: "Generative AI Course in Bangalore",
-    description: "Looking to upskill in the most in-demand AI technologies? The Generative AI Course in Delhi by Ivy Professional School is crafted for professionals, students, and tech enthusiasts aiming to become proficient in advanced AI techniques like GANs, VAEs, and Transformer-based models like GPT. With Delhi emerging as a prominent tech and innovation hub, this program offers hands-on learning, expert mentorship, and placement-focused training to help you build generative AI solutions that power the future of automation, creativity, and intelligence.",
+    description: "Become a Generative AI expert in Bangalore. Learn GPT, LLM fine-tuning, AI apps, and multimodal AI with hands-on projects and certification.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
@@ -8097,7 +8097,7 @@ const courses: Course[] = [
    {
     id: '21',
     title: "Generative AI Course in Delhi",
-    description: "Looking to upskill in the most in-demand AI technologies? The Generative AI Course in Delhi by Ivy Professional School is crafted for professionals, students, and tech enthusiasts aiming to become proficient in advanced AI techniques like GANs, VAEs, and Transformer-based models like GPT. With Delhi emerging as a prominent tech and innovation hub, this program offers hands-on learning, expert mentorship, and placement-focused training to help you build generative AI solutions that power the future of automation, creativity, and intelligence.",
+    description: "Master Generative AI in Delhi. Build GPT apps, LLM projects, and multimodal AI solutions with expert mentorship and industry-recognized certification.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,

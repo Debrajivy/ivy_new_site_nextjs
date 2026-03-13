@@ -4,6 +4,450 @@
   "color": "bg-pink-500",
   "description": "Create compelling data visualizations",
   "subcategories": {
+    "power-bi": {
+      "title": "Power BI",
+      "icon": "BarChart3",
+      "color": "bg-amber-500",
+      "topics": [
+        {
+          "id": "yoy-growth-powerbi-dax",
+          "metaTitle": "Year-over-Year Growth in Power BI DAX: Complete Beginner's Guide (2025) | Ivy Professional School",
+          "title": "How to Calculate Year-over-Year Growth in Power BI Using DAX",
+          "description": "Master YoY calculations in Power BI with step-by-step DAX formulas. Perfect for beginners and data analysts.",
+          "duration": "12 min read",
+          "date": "March 6, 2026",
+          "content": {
+            "hero": {
+              "title": "How to Calculate Year-over-Year Growth in Power BI Using DAX",
+              "author": "Power BI Expert",
+              "date": "March 6, 2026",
+              "readTime": "12 min read"
+            },
+            "sections": [
+              {
+                "id": "what-is-yoy",
+                "title": "What is Year-over-Year (YoY) Growth?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "<strong>Year-over-Year (YoY) growth</strong> measures how a metric (like revenue, sales, or profit) has changed compared to the same period in the previous year. It is one of the most widely used business performance indicators because it removes the effect of seasonality.",
+                    "hasBar": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The formula in plain English:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "YoY Formula",
+                    "language": "dax",
+                    "code": "YoY Growth % = (This Year Value - Last Year Value) / Last Year Value * 100\n\nExample: (96L - 80L) / 80L * 100 = 20% Growth",
+                    "borderColor": "amber"
+                  }
+                ]
+              },
+              {
+                "id": "why-powerbi",
+                "title": "Why Calculate YoY in Power BI?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Power BI's DAX (Data Analysis Expressions) language includes powerful <strong>time intelligence functions</strong> that automate YoY calculations across your entire dataset — with no manual filtering required. Here's why business analysts love it:"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Dynamic: Automatically updates as new data flows in",
+                      "Interactive: Works with slicers and filters instantly",
+                      "Visual: Integrates seamlessly with line charts, bar charts, and KPI cards",
+                      "Fast: Calculates across millions of rows in seconds"
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "icon": "💡",
+                    "title": "Who needs this?",
+                    "content": "Sales analysts, finance teams, marketing managers, operations leads — anyone who needs to track performance trends over time in a business dashboard."
+                  }
+                ]
+              },
+              {
+                "id": "prerequisites",
+                "title": "Prerequisites: Setting Up Your Date Table",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Before writing any DAX formula, you <strong>must have a proper Date Table</strong> in your Power BI model. Time intelligence functions won't work without one. Here's how to create it in 3 steps:"
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Open Power BI Desktop and click New Table in the Modeling tab",
+                        "description": "This creates a calculated table using DAX. You'll type the formula directly into the formula bar."
+                      },
+                      {
+                        "title": "Paste this DAX formula to generate a complete Date Table",
+                        "description": "This creates a continuous calendar from 2020 to 2025 with Year, Quarter, Month, and Day columns."
+                      },
+                      {
+                        "title": "Mark it as the official Date Table",
+                        "description": "Right-click the table → Mark as Date Table → select the Date column. This activates all time intelligence functions."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — Date Table",
+                    "language": "dax",
+                    "code": "DateTable =\nADDCOLUMNS(\n    CALENDAR(DATE(2020,1,1), DATE(2025,12,31)),\n    \"Year\",        YEAR([Date]),\n    \"MonthNumber\", MONTH([Date]),\n    \"MonthName\",   FORMAT([Date], \"MMMM\"),\n    \"Quarter\",     \"Q\" & QUARTER([Date]),\n    \"WeekDay\",     FORMAT([Date], \"dddd\")\n)",
+                    "borderColor": "blue"
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "✅",
+                    "title": "Pro Tip:",
+                    "content": "Your Date Table must be continuous (no gaps). Use CALENDAR() or CALENDARAUTO() — never manually type dates. Also ensure the Date column is set to Date data type, not Text."
+                  }
+                ]
+              },
+              {
+                "id": "method1",
+                "title": "Method 1: SAMEPERIODLASTYEAR (Easiest for Beginners)",
+                "phase": "Method 1",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "SAMEPERIODLASTYEAR is the most beginner-friendly time intelligence function in DAX. It shifts the entire date context back exactly one year, so you can compare current and previous year values effortlessly."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step-by-Step: Create the YoY Measure"
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Create a base measure for Total Sales",
+                        "description": "Go to Modeling → New Measure. Type this formula in the formula bar and press Enter."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — Base Measure",
+                    "language": "dax",
+                    "code": "Total Sales = SUM(SalesData[Revenue])",
+                    "borderColor": "blue"
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Create the Previous Year Sales measure",
+                        "description": "Create a new measure named PY Sales. This uses CALCULATE to override the date filter context with last year's dates."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — SAMEPERIODLASTYEAR",
+                    "language": "dax",
+                    "code": "PY Sales =\nCALCULATE(\n    [Total Sales],\n    SAMEPERIODLASTYEAR(DateTable[Date])\n)",
+                    "borderColor": "blue"
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "icon": "🧠",
+                    "title": "How it works:",
+                    "content": "SAMEPERIODLASTYEAR takes whatever time period is currently visible (e.g., Jan–Mar 2024) and returns the same period from the prior year (Jan–Mar 2023). CALCULATE then evaluates Total Sales within that shifted context."
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Create the YoY Growth % measure",
+                        "description": "Now combine both measures to calculate the actual growth percentage. The IF check prevents division-by-zero errors when prior year data is missing."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — YoY Growth %",
+                    "language": "dax",
+                    "code": "YoY Growth % =\nVAR CY = [Total Sales]\nVAR PY = [PY Sales]\nRETURN\n    IF(\n        PY <> 0 && PY <> BLANK(),\n        DIVIDE(CY - PY, PY),\n        BLANK()\n    )",
+                    "borderColor": "amber"
+                  }
+                ]
+              },
+              {
+                "id": "method2",
+                "title": "Method 2: DATEADD Function (More Flexible)",
+                "phase": "Method 2",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "DATEADD lets you shift dates by any interval — days, months, quarters, or years. It's more powerful than SAMEPERIODLASTYEAR because you can use it for quarter-over-quarter or month-over-month comparisons too."
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — DATEADD (Previous Year)",
+                    "language": "dax",
+                    "code": "PY Sales (DATEADD) =\nCALCULATE(\n    [Total Sales],\n    DATEADD(DateTable[Date], -1, YEAR)\n)\n\n-- To get previous QUARTER instead:\nPQ Sales = CALCULATE([Total Sales], DATEADD(DateTable[Date], -1, QUARTER))\n\n-- To get previous MONTH:\nPM Sales = CALCULATE([Total Sales], DATEADD(DateTable[Date], -1, MONTH))",
+                    "borderColor": "blue"
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "warn",
+                    "icon": "⚠️",
+                    "title": "Important:",
+                    "content": "DATEADD with -1 YEAR behaves identically to SAMEPERIODLASTYEAR for most scenarios. Use DATEADD when you need intervals other than one year, or when working with partial periods."
+                  }
+                ]
+              },
+              {
+                "id": "method3",
+                "title": "Method 3: PREVIOUSYEAR Function",
+                "phase": "Method 3",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "PREVIOUSYEAR returns all dates in the entire preceding year, regardless of the current selection. It's best used when you want the <strong>full previous calendar year</strong> total."
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — PREVIOUSYEAR",
+                    "language": "dax",
+                    "code": "PY Sales (PREVIOUSYEAR) =\nCALCULATE(\n    [Total Sales],\n    PREVIOUSYEAR(DateTable[Date])\n)\n\n-- For a fiscal year ending on 31 March:\nFY Previous Year =\nCALCULATE(\n    [Total Sales],\n    PREVIOUSYEAR(DateTable[Date], \"03-31\")\n)",
+                    "borderColor": "blue"
+                  }
+                ]
+              },
+              {
+                "id": "yoy-percent",
+                "title": "Calculating YoY Growth Percentage (Best Practice)",
+                "phase": "Best Practice",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Here is the production-ready, error-safe DAX measure for YoY Growth % that handles all edge cases:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — Production-Ready YoY %",
+                    "language": "dax",
+                    "code": "YoY Growth % =\nVAR CurrentYearSales  = [Total Sales]\nVAR PreviousYearSales =\n    CALCULATE(\n        [Total Sales],\n        SAMEPERIODLASTYEAR(DateTable[Date])\n    )\nRETURN\n    IF(\n        AND(PreviousYearSales <> 0, NOT(ISBLANK(PreviousYearSales))),\n        DIVIDE(\n            CurrentYearSales - PreviousYearSales,\n            PreviousYearSales\n        ),\n        BLANK()\n    )",
+                    "borderColor": "amber"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "After creating the measure, format it as <strong>Percentage</strong>:"
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Select the measure in the Fields pane",
+                        "description": "Click on YoY Growth % in the Fields panel on the right side of Power BI Desktop."
+                      },
+                      {
+                        "title": "Go to Measure Tools → Format → Percentage",
+                        "description": "In the top ribbon, under Measure Tools, change the format dropdown from General to Percentage. Set decimal places to 1 or 2."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "visualize",
+                "title": "Visualizing YoY Growth in a Chart",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "A <strong>Clustered Bar Chart</strong> or <strong>Line and Clustered Column Chart</strong> works best for YoY comparisons. Here's a preview of what your final output should look like:"
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "How to Build This in Power BI"
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Insert a Line and Clustered Column Chart visual",
+                        "description": "From the Visualizations pane, click the Line and Clustered Column Chart icon."
+                      },
+                      {
+                        "title": "Set X-axis to Month Name from your Date Table",
+                        "description": "Drag DateTable[MonthName] to the X-axis well. Make sure it's sorted by MonthNumber, not alphabetically."
+                      },
+                      {
+                        "title": "Add Column Values and Line Value",
+                        "description": "Drag Total Sales and PY Sales to Column Y-axis. Drag YoY Growth % to Line Y-axis."
+                      },
+                      {
+                        "title": "Add a Year slicer",
+                        "description": "Insert a Slicer visual and drag DateTable[Year] into it. This lets users dynamically select which year pair to compare."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "comparison",
+                "title": "Comparing All Three Methods",
+                "content": [
+                  {
+                    "type": "table",
+                    "title": "Comparison of DAX YoY Methods",
+                    "headers": ["Function", "Best For", "Works With Partial Periods?", "Fiscal Year Support?", "Difficulty"],
+                    "rows": [
+                      ["SAMEPERIODLASTYEAR", "YoY — same period", "Yes", "Limited", "Easiest"],
+                      ["DATEADD(-1, YEAR)", "YoY, QoQ, MoM", "Yes", "Yes", "Easy"],
+                      ["PREVIOUSYEAR", "Full prior year total", "Returns full year", "Yes (date param)", "Easy"],
+                      ["VAR with CALCULATE", "Complex logic, error handling", "Yes", "Yes", "Intermediate"]
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "<strong>Our recommendation for beginners:</strong> Start with SAMEPERIODLASTYEAR. Once comfortable, migrate to the VAR-based pattern for production dashboards as it gives you full control over error handling and readability."
+                  }
+                ]
+              },
+              {
+                "id": "tips",
+                "title": "Pro Tips and Common Mistakes",
+                "content": [
+                  {
+                    "type": "subtitle",
+                    "text": "Best Practices"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Always use DIVIDE() instead of the / operator — it handles divide-by-zero gracefully",
+                      "Use VAR blocks for readability and to avoid recalculating measures multiple times",
+                      "Format your YoY measure as Percentage from the Measure Tools tab",
+                      "Add conditional formatting in table visuals to highlight positive (green) and negative (red) YoY values",
+                      "Always mark your Date Table using Mark as Date Table in the right-click menu"
+                    ]
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Common Mistakes to Avoid"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Mistake: Using a Date column from your fact table instead of a separate Date Table — Fix: Always create and use a dedicated Date Table with CALENDAR() or CALENDARAUTO()",
+                      "Mistake: Date Table has gaps or missing dates — Fix: Use CALENDAR() with explicit start and end dates to ensure continuity",
+                      "Mistake: YoY showing BLANK for recent months — Fix: This is expected if prior year data does not exist — use IF(ISBLANK()) to show N/A text instead",
+                      "Mistake: Comparing calendar year when business uses fiscal year — Fix: Use the year-end-date parameter in PREVIOUSYEAR or DATESYTD"
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "🏆",
+                    "title": "Bonus Tip:",
+                    "content": "Add a KPI Card visual with YoY Growth % as the value and set a target (e.g., 10%). Power BI will automatically show a green arrow (above target) or red arrow (below target) — perfect for executive dashboards!"
+                  }
+                ]
+              },
+              {
+                "id": "faq",
+                "title": "Frequently Asked Questions",
+                "content": [
+                  {
+                    "type": "faq",
+                    "items": [
+                      {
+                        "question": "What is the DAX formula for Year-over-Year growth in Power BI?",
+                        "answer": "The most common DAX formula uses SAMEPERIODLASTYEAR inside a CALCULATE function. Create a PY Sales measure with CALCULATE([Total Sales], SAMEPERIODLASTYEAR(DateTable[Date])), then calculate growth % as DIVIDE([Total Sales] - [PY Sales], [PY Sales])."
+                      },
+                      {
+                        "question": "What is the difference between SAMEPERIODLASTYEAR and PREVIOUSYEAR?",
+                        "answer": "SAMEPERIODLASTYEAR returns the same date range from the prior year — if you have Jan-Jun 2024 selected, it returns Jan-Jun 2023. PREVIOUSYEAR always returns the entire previous year (Jan 1 to Dec 31), regardless of your current selection. Use SAMEPERIODLASTYEAR for period-to-period YoY comparisons and PREVIOUSYEAR for full-year totals."
+                      },
+                      {
+                        "question": "Why is my YoY measure showing BLANK?",
+                        "answer": "This usually happens when: (1) your Date Table is not marked as a Date Table, (2) there are gaps in your Date Table, (3) there is no data for the prior year period, or (4) the relationship between your fact table and Date Table is broken. Check all four of these first."
+                      },
+                      {
+                        "question": "Can I calculate YoY for a Financial Year (April to March) in Power BI?",
+                        "answer": "Yes! Use PREVIOUSYEAR(DateTable[Date], \"03-31\") for a fiscal year ending in March, or use DATEADD with custom fiscal year columns in your Date Table. You can also use DATESYTD([Date], \"03-31\") for Year-to-Date in fiscal year context."
+                      },
+                      {
+                        "question": "Does YoY work with slicers in Power BI?",
+                        "answer": "Yes — all three methods (SAMEPERIODLASTYEAR, DATEADD, PREVIOUSYEAR) work dynamically with slicers and cross-filtering as long as your Date Table is properly set up and marked. The measure automatically adjusts based on what the user selects."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "troubleshooting": {
+              "title": "Common Power BI YoY Issues",
+              "subtitle": "Solutions to frequent problems when calculating Year-over-Year growth in Power BI",
+              "cards": [
+                {
+                  "title": "YoY Showing BLANK",
+                  "icon": "AlertCircle",
+                  "color": "amber",
+                  "content": "Check that your Date Table is marked as a Date Table, has no gaps, and has a valid relationship with your fact table."
+                },
+                {
+                  "title": "Incorrect YoY Values",
+                  "icon": "AlertTriangle",
+                  "color": "red",
+                  "content": "Ensure you are using DIVIDE() not the / operator. Check that the Date Table relationship is Many-to-One and active."
+                },
+                {
+                  "title": "Slicers Not Working",
+                  "icon": "Gauge",
+                  "color": "blue",
+                  "content": "Verify that cross-filter direction is set correctly in the relationship and the Date Table is properly marked."
+                },
+                {
+                  "title": "Fiscal Year Mismatch",
+                  "icon": "Calendar",
+                  "color": "purple",
+                  "content": "Use the year-end-date parameter in PREVIOUSYEAR or DATESYTD. Add fiscal year columns to your Date Table."
+                },
+                {
+                  "title": "Performance Issues",
+                  "icon": "Gauge",
+                  "color": "pink",
+                  "content": "Use VAR variables to avoid re-evaluating measures. Import mode is faster than DirectQuery for time intelligence."
+                }
+              ]
+            },
+            "conclusion": {
+              "title": "Mastering YoY Growth in Power BI",
+              "content": "You have now completed a comprehensive guide to calculating Year-over-Year growth in Power BI using DAX. From Date Table setup to three different methods and production-ready patterns, you are equipped to build professional-grade time intelligence dashboards.",
+              "checklist": [
+                { "item": "Set Up Date Table", "text": "Create with CALENDAR() and mark as Date Table" },
+                { "item": "Choose Your Method", "text": "SAMEPERIODLASTYEAR for beginners, VAR pattern for production" },
+                { "item": "Format Correctly", "text": "Set YoY measure format to Percentage in Measure Tools" },
+                { "item": "Handle Edge Cases", "text": "Use DIVIDE() and IF(ISBLANK()) for robust formulas" },
+                { "item": "Visualize Clearly", "text": "Line and Clustered Column Chart for YoY comparisons" },
+                { "item": "Add KPI Cards", "text": "Highlight growth vs targets for executive dashboards" }
+              ],
+              "finalNote": "Remember: The goal is actionable insight, not just a formula. If your YoY chart does not make the business story clearer, simplify the visualization.",
+              "finalParagraph": "By following this comprehensive guide, you will be able to create YoY growth dashboards that not only look professional but also drive meaningful business decisions. Start with SAMEPERIODLASTYEAR, gather feedback, and gradually tackle more complex time intelligence patterns."
+            },
+            "cta": {
+              "title": "Ready to Master Power BI?",
+              "content": "Join thousands of professionals who have transformed their careers with Ivy Professional School's hands-on Power BI and Data Analytics training programs.",
+              "buttonText": "EXPLORE POWER BI COURSE"
+            }
+          }
+        }
+      ]
+    },
     "tableau": {
       "title": "Tableau",
       "icon": "BarChart3",

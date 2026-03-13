@@ -154,8 +154,56 @@ const chartData = {
         { quarter: 'Q3', headcount: 110, revenuePerEmployee: 118000 },
         { quarter: 'Q4', headcount: 130, revenuePerEmployee: 112000 },
         { quarter: 'Q5', headcount: 145, revenuePerEmployee: 108000 }
+    ],
+
+    // YoY Monthly Revenue 2023 vs 2024
+    yoyMonthlyData: [
+        { month: 'Jan', py: 6800, cy: 8432, yoy: '+24%', pos: true },
+        { month: 'Feb', py: 7500, cy: 8925, yoy: '+19%', pos: true },
+        { month: 'Mar', py: 9200, cy: 8280, yoy: '-10%', pos: false },
+        { month: 'Apr', py: 7800, cy: 10764, yoy: '+38%', pos: true },
+        { month: 'May', py: 9800, cy: 11956, yoy: '+22%', pos: true },
+        { month: 'Jun', py: 8400, cy: 10080, yoy: '+20%', pos: true },
+        { month: 'Jul', py: 10500, cy: 12495, yoy: '+19%', pos: true },
+        { month: 'Aug', py: 9100, cy: 10738, yoy: '+18%', pos: true }
     ]
 };
+
+// YoY Bar Chart Component
+const YoYBarChart = () => (
+    <div className="my-8 rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-lg">
+        <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-2">
+                <BarChart3 size={20} style={{ color: '#0E7C7B' }} />
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800">Monthly Revenue: 2023 vs 2024 — Sample Dashboard Output</h3>
+            </div>
+            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded w-fit">YoY Comparison Chart</span>
+        </div>
+        <div className="h-56 sm:h-72">
+            <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={chartData.yoyMonthlyData} margin={{ top: 24, right: 16, left: 0, bottom: 5 }} barCategoryGap="30%">
+                    <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                    <XAxis dataKey="month" tick={{ fill: '#64748b', fontSize: 12 }} axisLine={{ stroke: '#cbd5e1' }} />
+                    <YAxis tick={{ fill: '#64748b', fontSize: 12 }} axisLine={{ stroke: '#cbd5e1' }} tickFormatter={(v) => `₹${(v/1000).toFixed(0)}k`} />
+                    <Tooltip
+                        formatter={(value: any, name: string) => [`₹${value.toLocaleString()}`, name === 'py' ? '2023 (Previous Year)' : '2024 (Current Year)']}
+                        contentStyle={{ borderRadius: 8, border: '1px solid #e5e7eb' }}
+                    />
+                    <Legend formatter={(value) => value === 'py' ? '2023 (Previous Year)' : '2024 (Current Year)'} />
+                    <Bar dataKey="py" fill="#CBD5E0" radius={[4, 4, 0, 0]} name="py" />
+                    <Bar dataKey="cy" fill="#0E7C7B" radius={[4, 4, 0, 0]} name="cy" />
+                </BarChart>
+            </ResponsiveContainer>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-3">
+            {chartData.yoyMonthlyData.map((entry, idx) => (
+                <span key={idx} className={`text-xs font-semibold px-2 py-1 rounded-full ${entry.pos ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
+                    {entry.month}: {entry.yoy}
+                </span>
+            ))}
+        </div>
+    </div>
+);
 
 // Chart Components
 const DualAxisChartExample = ({ data, title, leftMetric, rightMetric, leftLabel, rightLabel }: any) => (
@@ -441,6 +489,103 @@ const highlightGenAICode = (code: string) => {
             /^#.*$/gm,
             '<span class="text-gray-400 italic">$&</span>'
         );
+};
+
+// Helper function to highlight DAX code
+const highlightDAXCode = (code: string) => {
+    if (!code) return '';
+    const escaped = code
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+
+    return escaped
+        .replace(
+            /\b(VAR|RETURN|IF|AND|NOT|ELSE|THEN|IN)\b/g,
+            '<span class="text-purple-400">$1</span>'
+        )
+        .replace(
+            /\b(CALCULATE|SAMEPERIODLASTYEAR|DATEADD|PREVIOUSYEAR|ADDCOLUMNS|CALENDAR|DATE|YEAR|MONTH|FORMAT|QUARTER|DIVIDE|ISBLANK|BLANK|SUM|COUNT|AVERAGE|MAX|MIN|DATESYTD|CALENDARAUTO)\b/g,
+            '<span class="text-blue-400">$1</span>'
+        )
+        .replace(
+            /("[^"]*")/g,
+            '<span class="text-green-400">$1</span>'
+        )
+        .replace(
+            /^--.*$/gm,
+            '<span class="text-gray-400 italic">$&</span>'
+        )
+        .replace(
+            /\b(\d+)\b/g,
+            '<span class="text-orange-300">$1</span>'
+        );
+};
+
+// Callout Box component
+const CalloutBox = ({ variant, icon, title, content }: { variant: string; icon: string; title: string; content: string }) => {
+    const styles: Record<string, { bg: string; border: string; iconBg: string }> = {
+        tip:  { bg: 'bg-emerald-50', border: 'border-emerald-400', iconBg: 'bg-emerald-100' },
+        info: { bg: 'bg-blue-50',    border: 'border-blue-400',    iconBg: 'bg-blue-100'    },
+        warn: { bg: 'bg-amber-50',   border: 'border-amber-400',   iconBg: 'bg-amber-100'   },
+    };
+    const s = styles[variant] || styles.info;
+    return (
+        <div className={`my-6 flex gap-4 rounded-xl border-l-4 ${s.border} ${s.bg} p-4 sm:p-5`}>
+            <div className={`flex-shrink-0 flex h-9 w-9 items-center justify-center rounded-full ${s.iconBg} text-lg`}>
+                {icon}
+            </div>
+            <div>
+                <p className="text-sm sm:text-base text-gray-800">
+                    <strong>{title}</strong> {content}
+                </p>
+            </div>
+        </div>
+    );
+};
+
+// Steps Block component
+const StepsBlock = ({ items }: { items: { title: string; description: string }[] }) => (
+    <div className="my-6 space-y-3">
+        {items.map((item, idx) => (
+            <div key={idx} className="flex gap-4 rounded-xl border border-gray-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex-shrink-0 h-10 w-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ backgroundColor: '#0B1F3A', color: '#D4962A' }}>
+                    {idx + 1}
+                </div>
+                <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-1">{item.title}</h4>
+                    <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                </div>
+            </div>
+        ))}
+    </div>
+);
+
+// FAQ Accordion component
+const FAQAccordion = ({ items }: { items: { question: string; answer: string }[] }) => {
+    const [openIdx, setOpenIdx] = React.useState<number | null>(null);
+    return (
+        <div className="my-6 space-y-3">
+            {items.map((item, idx) => (
+                <div key={idx} className="rounded-xl border border-gray-200 bg-white overflow-hidden">
+                    <button
+                        className="w-full flex items-center justify-between px-4 sm:px-6 py-4 text-left font-semibold text-gray-900 text-sm sm:text-base hover:bg-gray-50 transition-colors"
+                        onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+                    >
+                        <span>{item.question}</span>
+                        <span className="ml-4 flex-shrink-0 text-lg" style={{ color: '#009fda' }}>
+                            {openIdx === idx ? '−' : '+'}
+                        </span>
+                    </button>
+                    {openIdx === idx && (
+                        <div className="px-4 sm:px-6 pb-4 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+                            {item.answer}
+                        </div>
+                    )}
+                </div>
+            ))}
+        </div>
+    );
 };
 
 // Checklist component
@@ -831,6 +976,7 @@ const TopicPage = ({ params }: PageProps) => {
                                             <pre className="p-4 sm:p-6 md:p-8 leading-6 sm:leading-8 overflow-x-auto text-gray-100" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
                                                 <code dangerouslySetInnerHTML={{
                                                     __html: categorySlug === 'genai-llm' ? highlightGenAICode(item.code) :
+                                                        (categorySlug === 'visualization' && topicSlug === 'yoy-growth-powerbi-dax') ? highlightDAXCode(item.code) :
                                                         categorySlug === 'visualization' ? highlightTableauCode(item.code) :
                                                             highlightPythonCode(item.code)
                                                 }} />
@@ -976,10 +1122,23 @@ const TopicPage = ({ params }: PageProps) => {
                                         </div>
                                     );
                                 }
+                                if (item.type === 'callout') {
+                                    return <CalloutBox key={idx} variant={item.variant || 'info'} icon={item.icon || '💡'} title={item.title || ''} content={item.content || ''} />;
+                                }
+                                if (item.type === 'steps') {
+                                    return <StepsBlock key={idx} items={item.items || []} />;
+                                }
+                                if (item.type === 'faq') {
+                                    return <FAQAccordion key={idx} items={item.items || []} />;
+                                }
                                 return null;
                             })}
 
                             {/* Add Chart Examples for Visualization Category */}
+                            {categorySlug === 'visualization' && topicSlug === 'yoy-growth-powerbi-dax' && section.id === 'visualize' && (
+                                <YoYBarChart />
+                            )}
+
                             {categorySlug === 'visualization' && topicSlug === 'dual-axis-charts' && (
                                 <>
                                     {section.id === 'sales-profit-analysis' && (
