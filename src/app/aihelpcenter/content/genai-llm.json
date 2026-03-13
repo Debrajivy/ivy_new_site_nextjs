@@ -456,15 +456,42 @@
                 "type": "toc",
                 "title": "Table of Contents",
                 "content": [
-                  { "id": "what-llms-mean", "label": "What LLMs Mean in a Business Analytics Context" },
-                  { "id": "why-traditional-reporting-fails", "label": "Why Traditional Reporting Often Fails to Create Impact" },
-                  { "id": "how-llms-generate-insights-practice", "label": "How LLMs Generate Business Insights in Practice" },
-                  { "id": "workflow", "label": "A Simple Workflow for LLM-Based Insight Generation" },
-                  { "id": "use-cases", "label": "Practical Use Cases Across Business Teams" },
-                  { "id": "bi-tools-example", "label": "Example: LLMs Working Alongside BI Tools" },
-                  { "id": "benefits", "label": "Benefits of Using LLMs for Business Insights" },
-                  { "id": "limitations", "label": "Limitations and Responsible Use" },
-                  { "id": "best-practices", "label": "Best Practices for Generating High-Impact Insights" }
+                  {
+                    "id": "what-llms-mean",
+                    "label": "What LLMs Mean in a Business Analytics Context"
+                  },
+                  {
+                    "id": "why-traditional-reporting-fails",
+                    "label": "Why Traditional Reporting Often Fails to Create Impact"
+                  },
+                  {
+                    "id": "how-llms-generate-insights-practice",
+                    "label": "How LLMs Generate Business Insights in Practice"
+                  },
+                  {
+                    "id": "workflow",
+                    "label": "A Simple Workflow for LLM-Based Insight Generation"
+                  },
+                  {
+                    "id": "use-cases",
+                    "label": "Practical Use Cases Across Business Teams"
+                  },
+                  {
+                    "id": "bi-tools-example",
+                    "label": "Example: LLMs Working Alongside BI Tools"
+                  },
+                  {
+                    "id": "benefits",
+                    "label": "Benefits of Using LLMs for Business Insights"
+                  },
+                  {
+                    "id": "limitations",
+                    "label": "Limitations and Responsible Use"
+                  },
+                  {
+                    "id": "best-practices",
+                    "label": "Best Practices for Generating High-Impact Insights"
+                  }
                 ]
               },
               {
@@ -484,7 +511,6 @@
                     "type": "paragraph",
                     "text": "For example, an LLM can read summarized sales data, customer segments, time trends, and operational metrics together and explain how they are connected. It can highlight unusual behavior, describe patterns in plain language, and even suggest areas that deserve deeper investigation."
                   }
-               
                 ]
               },
               {
@@ -503,12 +529,32 @@
                   {
                     "type": "table",
                     "title": "Traditional Reporting vs LLM-Augmented Reporting",
-                    "headers": ["Question", "Traditional Dashboard", "With LLM Layer"],
+                    "headers": [
+                      "Question",
+                      "Traditional Dashboard",
+                      "With LLM Layer"
+                    ],
                     "rows": [
-                      ["What happened?", "✓ Shows clearly", "✓ Shows clearly"],
-                      ["Why did it happen?", "✗ No explanation", "✓ Explains drivers"],
-                      ["Which segment is affected?", "Partial — requires manual drill-down", "✓ Highlights automatically"],
-                      ["What should we do next?", "✗ Not answered", "✓ Suggests focus areas"]
+                      [
+                        "What happened?",
+                        "✓ Shows clearly",
+                        "✓ Shows clearly"
+                      ],
+                      [
+                        "Why did it happen?",
+                        "✗ No explanation",
+                        "✓ Explains drivers"
+                      ],
+                      [
+                        "Which segment is affected?",
+                        "Partial — requires manual drill-down",
+                        "✓ Highlights automatically"
+                      ],
+                      [
+                        "What should we do next?",
+                        "✗ Not answered",
+                        "✓ Suggests focus areas"
+                      ]
                     ]
                   },
                   {
@@ -558,7 +604,6 @@
                     "type": "paragraph",
                     "text": "For example, instead of stating that sales dropped by 10%, an LLM might explain that the decline is concentrated in a specific region, tied to a particular product category, and coincides with delivery delays or pricing changes."
                   }
-                  
                 ]
               },
               {
@@ -729,12 +774,32 @@
                   {
                     "type": "table",
                     "title": "LLM Benefits at a Glance",
-                    "headers": ["Benefit", "Old Approach", "With LLMs"],
+                    "headers": [
+                      "Benefit",
+                      "Old Approach",
+                      "With LLMs"
+                    ],
                     "rows": [
-                      ["Speed", "Days of analyst back-and-forth", "Minutes per insight cycle"],
-                      ["Clarity", "Charts that need interpretation", "Plain-language explanations"],
-                      ["Focus", "React to every metric change", "Highlights what matters most"],
-                      ["Accessibility", "Requires analyst expertise", "Any team member can query"]
+                      [
+                        "Speed",
+                        "Days of analyst back-and-forth",
+                        "Minutes per insight cycle"
+                      ],
+                      [
+                        "Clarity",
+                        "Charts that need interpretation",
+                        "Plain-language explanations"
+                      ],
+                      [
+                        "Focus",
+                        "React to every metric change",
+                        "Highlights what matters most"
+                      ],
+                      [
+                        "Accessibility",
+                        "Requires analyst expertise",
+                        "Any team member can query"
+                      ]
                     ]
                   }
                 ]
@@ -755,12 +820,32 @@
                   {
                     "type": "table",
                     "title": "LLM Limitations to Be Aware Of",
-                    "headers": ["Limitation", "Risk", "Mitigation"],
+                    "headers": [
+                      "Limitation",
+                      "Risk",
+                      "Mitigation"
+                    ],
                     "rows": [
-                      ["Hallucination", "LLM may state incorrect facts confidently", "Always verify against source data"],
-                      ["Context dependency", "Output quality depends on prompt quality", "Use structured, well-defined prompts"],
-                      ["No real-time data", "LLM does not know live metrics unless provided", "Pass fresh data in every prompt"],
-                      ["No domain memory", "LLM does not remember past sessions", "Include business context in each call"]
+                      [
+                        "Hallucination",
+                        "LLM may state incorrect facts confidently",
+                        "Always verify against source data"
+                      ],
+                      [
+                        "Context dependency",
+                        "Output quality depends on prompt quality",
+                        "Use structured, well-defined prompts"
+                      ],
+                      [
+                        "No real-time data",
+                        "LLM does not know live metrics unless provided",
+                        "Pass fresh data in every prompt"
+                      ],
+                      [
+                        "No domain memory",
+                        "LLM does not remember past sessions",
+                        "Include business context in each call"
+                      ]
                     ]
                   },
                   {
@@ -831,6 +916,499 @@
               "finalNote": "They don't replace analytics — they complete it.",
               "finalParagraph": "In a world overflowing with data, the real advantage belongs to those who can turn information into insight. LLMs are becoming one of the most powerful tools to do exactly that. If you are ready to lead this change, explore a formal Data Science or AI career path today."
             }
+          }
+        }
+      ]
+    },
+    "text-to-sql": {
+      "title": "Text-to-SQL & LLM Integration",
+      "icon": "Database",
+      "color": "bg-cyan-600",
+      "topics": [
+        {
+          "id": "connecting-llms-to-sql",
+          "metaTitle": "Connecting LLMs to SQL Using Text-to-SQL Agents | GenAI Guide",
+          "title": "Connecting LLMs to SQL Using Text-to-SQL Agents",
+          "description": "A practical guide to conversational database intelligence — query any SQL database using plain English with AI-powered Text-to-SQL agents",
+          "duration": "12 min read",
+          "date": "March 13, 2026",
+          "content": {
+            "hero": {
+              "title": "Connecting LLMs to SQL Using Text-to-SQL Agents",
+              "author": "AI Expert",
+              "date": "March 13, 2026",
+              "readTime": "~12 minutes"
+            },
+            "sections": [
+              {
+                "id": "intro",
+                "title": "Introduction",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Data is often called the new oil, but in most organizations, it behaves more like crude oil locked deep underground. Businesses store massive amounts of valuable information in SQL databases, yet only a small group of technical experts can extract insights from them. Executives, managers, and operational teams depend heavily on data analysts to write SQL queries and generate reports — slowing decision-making and limiting agility.",
+                    "hasBar": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Now imagine if anyone in the organization could simply ask a question in plain English and instantly receive accurate insights from the database. No dashboards to configure. No SQL syntax to remember. No waiting for the analytics team. This is exactly what happens when Large Language Models (LLMs) are connected to SQL databases using Text-to-SQL agents."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This technology is reshaping how organizations interact with data, making analytics conversational, intuitive, and accessible to all."
+                  }
+                ]
+              },
+              {
+                "id": "toc",
+                "type": "toc",
+                "title": "Table of Contents",
+                "content": [
+                  "Understanding LLMs in Simple Terms",
+                  "Why SQL Still Powers Modern Businesses",
+                  "The Real Problem: Data Locked Behind Technical Barriers",
+                  "What is Text-to-SQL?",
+                  "What is a Text-to-SQL Agent?",
+                  "How Text-to-SQL Agents Work",
+                  "Real-World Applications Across Industries",
+                  "Benefits and Strategic Impact",
+                  "Challenges and Responsible Implementation",
+                  "How to Build a Text-to-SQL Agent",
+                  "Conclusion"
+                ]
+              },
+              {
+                "id": "understanding-llms",
+                "title": "Understanding LLMs in Simple Terms",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Large Language Models are AI systems trained on massive amounts of text data. They understand natural language and can generate meaningful responses. Because they also understand programming syntax, they can convert human language into structured commands like SQL queries."
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "icon": "💡",
+                    "title": "Key Insight:",
+                    "content": "This dual ability — understanding both human language and programming syntax — makes LLMs the perfect bridge between business users and databases."
+                  }
+                ]
+              },
+              {
+                "id": "why-sql",
+                "title": "Why SQL Still Powers Modern Businesses",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Most enterprise data is stored in SQL databases. Sales records, financial transactions, customer data, and operational metrics all live inside structured tables. SQL remains the standard way to retrieve and analyze this information. However, the traditional workflow creates friction that slows every business decision."
+                  },
+                  {
+                    "type": "analogy",
+                    "icon": "Database",
+                    "title": "Traditional vs AI-Powered Data Workflow",
+                    "content": {
+                      "main": "The way organizations access data is undergoing a fundamental transformation. The AI-powered workflow removes the analyst bottleneck entirely — making data accessible to every business user.",
+                      "cards": [
+                        {
+                          "title": "Traditional Workflow",
+                          "content": "Business user asks a question → Routes to data analyst → Analyst writes SQL query → Runs against database → Prepares a report → Business user receives insights. This introduces delays, dependency on technical teams, and limits how quickly decisions can be made."
+                        },
+                        {
+                          "title": "AI-Powered Workflow",
+                          "content": "Business user asks in plain English → Text-to-SQL agent understands the question → Automatically generates SQL in the background → Executes and delivers instant insight. SQL still powers the database — but becomes completely invisible to the user."
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "real-problem",
+                "title": "The Real Problem: Data Locked Behind Technical Barriers",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Most business questions are simple. 'What were last quarter's top-performing regions?' or 'How has churn changed over six months?' The complexity lies not in the question, but in translating it into a SQL query."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Even dashboards only answer predefined questions. When new questions arise, reporting cycles restart from scratch. This dependency slows decisions and limits organizational agility at every level."
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "warn",
+                    "icon": "⚠️",
+                    "title": "The Real Bottleneck:",
+                    "content": "The problem is not the question — it's the gap between business intent and technical execution. Text-to-SQL agents eliminate this gap by translating natural language directly into database queries."
+                  }
+                ]
+              },
+              {
+                "id": "what-is-text-to-sql",
+                "title": "What is Text-to-SQL?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Text-to-SQL is an AI-driven process where a natural language question is automatically converted into a valid SQL query. The user asks a question conversationally, and the system generates structured database commands to retrieve the required data — without any manual SQL writing."
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "✅",
+                    "title": "Example in Action:",
+                    "content": "Asking 'Show me revenue by region for last month' results in a SQL query that aggregates revenue, filters by date, and groups by region — all automatically. The user speaks naturally while the system handles all technical complexity."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Natural Language → SQL Query (Auto-Generated by Agent)",
+                    "language": "sql",
+                    "borderColor": "indigo",
+                    "code": "-- User asks: \"Show me revenue by region for last month\"\n-- Text-to-SQL Agent auto-generates:\n\nSELECT\n    region,\n    SUM(revenue)             AS total_revenue,\n    COUNT(DISTINCT order_id) AS total_orders,\n    ROUND(AVG(revenue), 2)   AS avg_order_value\nFROM sales_transactions\nWHERE\n    order_date >= DATEADD(month, -1, DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1))\n    AND order_date < DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1)\nGROUP BY region\nORDER BY total_revenue DESC;"
+                  }
+                ]
+              },
+              {
+                "id": "what-is-agent",
+                "title": "What is a Text-to-SQL Agent?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "A Text-to-SQL agent is not just a language translator — it is an intelligent, multi-layer workflow system. The user experiences a simple conversation, but beneath the surface a structured and controlled pipeline ensures secure and trustworthy results."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "The Agent Architecture — Layer by Layer"
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "User Interface",
+                        "description": "The user submits a question in natural language through a chat interface. This is the only layer the user directly touches — no SQL knowledge required."
+                      },
+                      {
+                        "title": "LLM Engine",
+                        "description": "The question is sent to the LLM Engine, which interprets the intent behind the request and maps it to the database schema — identifying relevant tables, columns, and relationships."
+                      },
+                      {
+                        "title": "Agent Logic Layer",
+                        "description": "The real intelligence lives here. This layer identifies user intent, validates the generated SQL query for correctness and safety, and retries or corrects the query if errors occur — ensuring reliability before any data is touched."
+                      },
+                      {
+                        "title": "SQL Database",
+                        "description": "Once validated, the query executes against the SQL database with read-only permissions. The actual enterprise data — sales, HR, finance, operations — lives here."
+                      },
+                      {
+                        "title": "Response Formatter",
+                        "description": "Raw database output is converted into a structured, human-readable answer and returned to the user interface — often as a formatted table, summary, or highlighted insight."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "note",
+                    "title": "Enterprise-Ready by Design",
+                    "content": "This layered architecture makes Text-to-SQL agents secure, accurate, and enterprise-ready. The user experiences a simple conversation while a controlled pipeline operates beneath the surface."
+                  }
+                ]
+              },
+              {
+                "id": "how-it-works",
+                "title": "How Text-to-SQL Agents Work",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "The process begins when a user submits a natural language question. The LLM interprets intent, references database schema metadata — table names, column relationships, data types — generates a SQL query, and passes it through validation before execution."
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Natural Language Input",
+                        "description": "User submits a business question in plain English via the chat interface."
+                      },
+                      {
+                        "title": "Intent Interpretation",
+                        "description": "The LLM analyzes the question and maps it to database schema metadata — identifying the right tables, columns, filters, and aggregations needed."
+                      },
+                      {
+                        "title": "SQL Generation",
+                        "description": "The model generates a SQL query tailored to retrieve exactly the data the user asked for."
+                      },
+                      {
+                        "title": "Validation Layer",
+                        "description": "The query passes through an automated validation check for syntax correctness, logical accuracy, and security compliance."
+                      },
+                      {
+                        "title": "Database Execution",
+                        "description": "The validated query executes on the database. Results are returned as structured data sets."
+                      },
+                      {
+                        "title": "Response Delivery",
+                        "description": "Results are formatted and delivered to the user. Some systems also generate natural language explanations or chart-ready outputs."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "real-world-applications",
+                "title": "Real-World Applications Across Industries",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Text-to-SQL agents create measurable value across every business function — from finance to HR to supply chain — by removing the technical barrier between business users and their data."
+                  },
+                  {
+                    "type": "table",
+                    "title": "Industry Applications of Text-to-SQL Agents",
+                    "headers": [
+                      "Business Function",
+                      "Sample Business Question",
+                      "Value Delivered"
+                    ],
+                    "rows": [
+                      [
+                        "Finance",
+                        "What are this quarter's profit margins vs last year?",
+                        "Instant financial comparison without analyst dependency"
+                      ],
+                      [
+                        "HR",
+                        "What is attrition rate by department over last 6 months?",
+                        "Faster workforce trend identification and proactive action"
+                      ],
+                      [
+                        "Sales",
+                        "Which regions are underperforming against target this month?",
+                        "Real-time pipeline visibility for sales managers"
+                      ],
+                      [
+                        "Operations",
+                        "What was average machine downtime last week?",
+                        "Immediate bottleneck identification in production"
+                      ],
+                      [
+                        "Marketing",
+                        "Which campaigns drove the highest conversion in Q3?",
+                        "Data-backed campaign optimization decisions"
+                      ],
+                      [
+                        "Customer Success",
+                        "How has customer churn changed over the last quarter?",
+                        "Proactive retention strategy based on live data"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "benefits",
+                "title": "Benefits and Strategic Impact",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Connecting LLMs to SQL delivers measurable benefits that directly support digital transformation, competitive advantage, and operational efficiency across the enterprise."
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Accelerates insight generation — reduces reporting cycles from days to seconds",
+                      "Democratizes data access — empowers non-technical stakeholders to query data independently",
+                      "Improves analyst productivity by eliminating repetitive, routine query work",
+                      "Enables conversational analytics as a core competitive advantage",
+                      "Aligns with digital transformation initiatives focused on AI integration and automation",
+                      "Reduces bottlenecks caused by analyst backlog and reporting queue delays",
+                      "Scales a data-driven culture across the entire organization"
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "🚀",
+                    "title": "Strategic Shift:",
+                    "content": "Conversational analytics is no longer experimental — it is becoming a core competitive advantage. Organizations deploying Text-to-SQL agents report faster decision cycles and more empowered business teams at every level."
+                  }
+                ]
+              },
+              {
+                "id": "challenges",
+                "title": "Challenges and Responsible Implementation",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Despite its potential, Text-to-SQL requires careful design and responsible implementation to ensure accuracy, security, and regulatory compliance. Organizations must plan for these challenges before going live."
+                  },
+                  {
+                    "type": "table",
+                    "title": "Key Challenges and Mitigation Strategies",
+                    "headers": [
+                      "Challenge",
+                      "Description",
+                      "Mitigation Strategy"
+                    ],
+                    "rows": [
+                      [
+                        "Complex Schemas",
+                        "Deeply nested or undocumented schemas can confuse the model",
+                        "Provide rich schema metadata with column-level descriptions and examples"
+                      ],
+                      [
+                        "Query Accuracy",
+                        "LLMs may occasionally generate logically incorrect queries",
+                        "Implement automated validation layers and test against sample queries"
+                      ],
+                      [
+                        "Data Security",
+                        "Risk of sensitive data exposure if access is unrestricted",
+                        "Use read-only database roles, query logging, and strict access controls"
+                      ],
+                      [
+                        "Hallucination Risk",
+                        "Models may generate plausible but wrong SQL statements",
+                        "Add execution testing and result validation before delivering to user"
+                      ],
+                      [
+                        "Compliance",
+                        "Regulated industries require full audit trails for data access",
+                        "Log every query, user session, and result for compliance reporting"
+                      ]
+                    ]
+                  },
+                  {
+                    "type": "warning",
+                    "title": "Security First",
+                    "content": "Always implement read-only database roles, validation layers, query logging, and strict access control before deploying Text-to-SQL agents in production. Responsible implementation ensures both accuracy and compliance with data governance policies."
+                  }
+                ]
+              },
+              {
+                "id": "how-to-build",
+                "title": "How to Build a Text-to-SQL Agent",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Organizations can build Text-to-SQL agents using either cloud-based (online) or self-hosted (offline) approaches. The right choice depends on compliance requirements, IT maturity, and long-term AI strategy."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "A. Online (Cloud-Based) Approach"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Cloud platforms such as Azure AI Foundry provide enterprise-ready environments for deploying LLMs securely with built-in compliance, monitoring, and scalability. This approach is ideal for enterprises seeking fast deployment without managing infrastructure. AWS Bedrock and Google Vertex AI follow similar principles."
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Deploy LLM in Azure AI Foundry",
+                        "description": "Select and deploy a capable LLM (e.g., GPT-4o, Phi-4) in Azure AI Foundry with enterprise security, compliance controls, and monitoring built in."
+                      },
+                      {
+                        "title": "Define SQL Execution as a Tool",
+                        "description": "Configure SQL execution as a callable tool or function that the LLM agent can invoke — keeping reasoning and execution cleanly separated for auditability."
+                      },
+                      {
+                        "title": "Provide Schema Context",
+                        "description": "Supply the model with database schema metadata — table names, column descriptions, relationships, and sample data — to guide accurate query generation."
+                      },
+                      {
+                        "title": "Generate SQL via Structured Tool Calling",
+                        "description": "The agent uses structured tool calling to generate and pass SQL queries to the execution function with full control over what runs against the database."
+                      },
+                      {
+                        "title": "Validate and Execute Against Azure SQL",
+                        "description": "Validate the generated query for syntax and logic before executing against the Azure SQL database with read-only permissions enforced."
+                      },
+                      {
+                        "title": "Return Formatted Results",
+                        "description": "The response formatter converts raw query output into structured, human-readable answers delivered to the user interface."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "code",
+                    "title": "Cloud-Based Text-to-SQL Agent (Azure AI + LangChain)",
+                    "language": "python",
+                    "borderColor": "blue",
+                    "code": "# Cloud-Based Text-to-SQL Agent — Azure AI + LangChain\nfrom langchain_openai import AzureChatOpenAI\nfrom langchain_community.utilities import SQLDatabase\nfrom langchain_community.agent_toolkits import create_sql_agent\n\n# Connect to Azure SQL Database (read-only credentials)\ndb = SQLDatabase.from_uri(\n    'mssql+pyodbc://readonly_user:pass@server/database'\n)\n\n# Initialize Azure OpenAI LLM\nllm = AzureChatOpenAI(\n    azure_deployment='gpt-4o',\n    azure_endpoint='https://your-resource.openai.azure.com/',\n    api_version='2024-02-01',\n    temperature=0\n)\n\n# Create the SQL Agent with schema context\nagent = create_sql_agent(\n    llm=llm,\n    db=db,\n    verbose=True,\n    top_k=10  # Limit rows returned for safety\n)\n\n# Ask in plain natural language\nresponse = agent.invoke(\n    'What were the top 5 regions by revenue last month?'\n)\nprint(response['output'])"
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "B. Offline (On-Premise) Approach"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "For organizations with strict compliance or data sovereignty requirements, an offline setup using locally-hosted LLMs is preferred. Open-source models are deployed using Ollama or Hugging Face. This approach offers full data control but requires managing hardware, model updates, and performance optimization."
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Deploy Model Locally via Ollama",
+                        "description": "Use Ollama to run an open-source SQL-capable LLM (e.g., CodeLlama, SQLCoder) on your local server or private cloud infrastructure."
+                      },
+                      {
+                        "title": "Connect to Internal SQL Server",
+                        "description": "Establish a secure connection to your on-premise SQL server using appropriate drivers and read-only service credentials."
+                      },
+                      {
+                        "title": "Build Schema-Aware Middleware",
+                        "description": "Develop middleware that extracts schema metadata and passes it as context to the local LLM alongside the user's question for accurate SQL generation."
+                      },
+                      {
+                        "title": "Validate and Execute Queries",
+                        "description": "Run generated queries through a validation layer before execution to catch syntax errors or potentially unsafe operations."
+                      },
+                      {
+                        "title": "Return Structured Response",
+                        "description": "Format the result set into structured, human-readable output and deliver it to the user interface — as a table, plain text, or exported report."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "code",
+                    "title": "Offline Text-to-SQL Agent (Ollama + SQLite)",
+                    "language": "python",
+                    "borderColor": "emerald",
+                    "code": "# Offline Text-to-SQL Agent — Ollama + SQLite\nimport ollama, sqlite3, json\n\nconn   = sqlite3.connect('company_data.db')\ncursor = conn.cursor()\n\ndef get_schema():\n    cursor.execute(\"SELECT name FROM sqlite_master WHERE type='table'\")\n    tables = {}\n    for (t,) in cursor.fetchall():\n        cursor.execute('PRAGMA table_info(' + t + ')')\n        tables[t] = [c[1] for c in cursor.fetchall()]\n    return json.dumps(tables, indent=2)\n\ndef generate_sql(question):\n    schema = get_schema()\n    prompt = 'Database schema: ' + schema + ' Convert this to SQL: ' + question\n    result = ollama.chat(\n        model='codellama',\n        messages=[{'role': 'user', 'content': prompt}]\n    )\n    return result['message']['content'].strip()\n\ndef ask(question):\n    sql  = generate_sql(question)\n    print('Generated SQL:', sql)\n    cursor.execute(sql)\n    cols = [d[0] for d in cursor.description]\n    return [dict(zip(cols, row)) for row in cursor.fetchall()]\n\n# Example usage\nfor row in ask('Top 5 products by revenue this quarter'):\n    print(row)"
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "icon": "🏢",
+                    "title": "Hybrid Architecture:",
+                    "content": "Many enterprises adopt a hybrid model — the LLM runs in a secure cloud environment while the database remains on-premise, connected via secure APIs. This balances AI scalability with data sovereignty requirements."
+                  }
+                ]
+              },
+              {
+                "id": "conclusion",
+                "title": "Conclusion",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Connecting LLMs to SQL using Text-to-SQL agents transforms data access from technical scripting into natural conversation. By bridging business language and structured databases, organizations unlock faster insights, empower non-technical teams, and eliminate operational bottlenecks.",
+                    "hasBar": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Whether implemented through cloud platforms like Azure AI Foundry or deployed on-premise for stricter control, Text-to-SQL agents represent a major step toward intelligent, conversational analytics."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The future of business intelligence is no longer just visual dashboards. It is conversational, accessible, and powered by AI."
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "🎯",
+                    "title": "Ready to Build?",
+                    "content": "Start with a single business question, implement the cloud-based approach with Azure AI Foundry, validate with real users, and scale from there. The journey to conversational analytics begins with one query."
+                  }
+                ]
+              }
+            ]
           }
         }
       ]
