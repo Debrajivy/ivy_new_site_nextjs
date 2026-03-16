@@ -533,68 +533,68 @@ const Enterprise = () => {
     <>
       <Navbar />
 
-      <main className="min-h-screen">
+      <main className="min-h-screen overflow-x-hidden">
         {/* HERO SECTION - Updated with 3 buttons and contact form */}
-        <section className="relative bg-gradient-to-br from-[#0a1a5f] via-[#1c2b4e] to-[#040a22] text-white overflow-hidden min-h-[90vh] flex items-center">
+        <section className="relative bg-gradient-to-br from-[#0a1a5f] via-[#1c2b4e] to-[#040a22] text-white min-h-screen sm:min-h-[90vh] flex items-start sm:items-center overflow-x-hidden">
           {/* Abstract Background Elements for Depth */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
             <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-600 rounded-full blur-[120px]"></div>
             <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-blue-900 rounded-full blur-[120px]"></div>
           </div>
 
-          <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-24 relative z-10">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-16 md:py-16 lg:py-24 relative z-10 w-full">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 lg:gap-16 items-start lg:items-center">
               {/* Left Column - Sophisticated Typography */}
-              <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
-                <div className="inline-flex items-center gap-3 bg-blue-500/10 border border-blue-500/20 backdrop-blur-md px-4 py-2 rounded-full">
-                  <Trophy className="h-4 w-4 text-blue-400" />
-                  <span className="text-xs font-bold tracking-[0.2em] uppercase text-blue-200">Established 2007</span>
+              <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-2 lg:order-1">
+                <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
+                  <Trophy className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-blue-400" />
+                  <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-blue-200">Established 2007</span>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tighter">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tighter">
                   Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">AI & GenAI</span>
-                  <span className="block mt-2">Upskilling for</span>
+                  <span className="block mt-1 sm:mt-2">Upskilling for</span>
                   <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400">Real Business Adoption</span>
                 </h1>
 
-                <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl border-l-2 border-blue-600 pl-4 sm:pl-6">
+                <p className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed border-l-2 border-blue-600 pl-3 sm:pl-4 md:pl-6">
                   We help enterprise teams move from <span className="text-white font-semibold">AI awareness to practical, role-based adoption</span> across sales, operations, analytics, and leadership teams.
                 </p>
 
-                <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-xl italic">
+                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed italic">
                   Delivered across multiple enterprise teams with a focus on measurable productivity and decision-making outcomes.
                 </p>
 
                 {/* Action Buttons with Micro-interactions */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   <Button
-                    size="lg"
+                    size="sm"
                     variant="outline"
-                    className="group bg-white/5 border-slate-700 text-white hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 rounded-xl px-4 sm:px-6 lg:px-8 text-sm sm:text-base"
+                    className="group bg-white/5 border-slate-700 text-white hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 rounded-xl px-3 sm:px-6 lg:px-8 text-xs sm:text-sm"
                     onClick={() => scrollToSection('why-choose-section')}
                   >
-                    <Star className="mr-2 h-4 w-4 group-hover:fill-current" />
+                    <Star className="mr-1.5 h-3.5 w-3.5 group-hover:fill-current" />
                     Why Ivy
                   </Button>
                   <Button
-                    size="lg"
-                    className="bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] rounded-xl px-4 sm:px-6 lg:px-8 text-sm sm:text-base"
+                    size="sm"
+                    className="bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] rounded-xl px-3 sm:px-6 lg:px-8 text-xs sm:text-sm"
                     onClick={() => scrollToSection('our-expertise')}
                   >
-                    <Brain className="mr-2 h-4 w-4" />
+                    <Brain className="mr-1.5 h-3.5 w-3.5" />
                     Our Expertise
                   </Button>
                   <Button
-                    size="lg"
-                    className="bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] rounded-xl px-4 sm:px-6 lg:px-8 text-sm sm:text-base"
+                    size="sm"
+                    className="bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] rounded-xl px-3 sm:px-6 lg:px-8 text-xs sm:text-sm"
                     onClick={() => scrollToSection('case-studies-section')}
                   >
-                    <Brain className="mr-2 h-4 w-4" />
+                    <Brain className="mr-1.5 h-3.5 w-3.5" />
                     View Casestudies
                   </Button>
                 </div>
 
-                {/* Client Logos - Subtle Glassmorphism */}
+                {/* Client Logos - Fixed scrolling on mobile */}
                 <div className="mt-6 lg:mt-8">
                   <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">
                     Enterprise AI Enablement Across Global Organizations
@@ -603,20 +603,21 @@ const Enterprise = () => {
                     Partnered with enterprise teams to drive practical adoption of Data, AI & GenAI across real business functions.
                   </p>
 
-                  <div className="relative">
-                    <div ref={logoContainerRef} className="flex overflow-hidden">
-                      <div className="flex whitespace-nowrap gap-8 sm:gap-12 items-center">
+                  <div className="relative overflow-hidden w-full">
+                    <div ref={logoContainerRef} className="flex overflow-hidden w-full">
+                      <div className="flex animate-scroll whitespace-nowrap gap-6 sm:gap-8 md:gap-12 items-center">
+                        {/* First set */}
                         {clientLogos.map((logo) => (
                           <div
                             key={logo.id}
-                            className="relative h-10 w-20 sm:h-12 sm:w-24 lg:h-14 lg:w-28 opacity-80 hover:opacity-100 transition-opacity flex-shrink-0"
+                            className="relative h-8 w-16 sm:h-10 sm:w-20 md:h-12 md:w-24 lg:h-14 lg:w-28 opacity-80 hover:opacity-100 transition-opacity flex-shrink-0"
                           >
                             <Image
                               src={logo.logo}
                               alt={logo.alt}
                               fill
                               className="object-contain"
-                              sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
+                              sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 112px"
                               loading="lazy"
                             />
                           </div>
@@ -625,7 +626,7 @@ const Enterprise = () => {
                         {clientLogos.map((logo) => (
                           <div
                             key={`${logo.id}-dup`}
-                            className="relative h-10 w-20 sm:h-12 sm:w-24 lg:h-14 lg:w-28 opacity-80 hover:opacity-100 transition-opacity flex-shrink-0"
+                            className="relative h-8 w-16 sm:h-10 sm:w-20 md:h-12 md:w-24 lg:h-14 lg:w-28 opacity-80 hover:opacity-100 transition-opacity flex-shrink-0"
                           >
                             <Image
                               src={logo.logo}
@@ -633,7 +634,7 @@ const Enterprise = () => {
                               loading="lazy"
                               fill
                               className="object-contain"
-                              sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 112px"
+                              sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 112px"
                             />
                           </div>
                         ))}
@@ -643,23 +644,24 @@ const Enterprise = () => {
                 </div>
               </div>
 
-              {/* Right Column - The "Masterclass" Form Design */}
-              <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
-                {/* Decorative Glow */}
-                <div className="absolute -inset-2 sm:-inset-4 bg-blue-500/10 rounded-2xl sm:rounded-[2.5rem] blur-xl sm:blur-2xl"></div>
+              {/* Right Column - Separated Video and Form for Mobile */}
+              <div className="relative order-1 lg:order-2 mb-6 lg:mb-0 w-full max-w-full">
+                {/* Decorative Glow - Only visible on desktop */}
+                <div className="absolute -inset-2 sm:-inset-4 bg-blue-500/10 rounded-2xl sm:rounded-[2.5rem] blur-xl sm:blur-2xl hidden lg:block"></div>
 
-                <div className="relative bg-[#0f172a] border border-slate-800 rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl overflow-hidden">
-                  {/* PROFESSIONAL VIDEO SECTION - Styled as a Hero Feature */}
-                  <div className="relative group/video h-40 sm:h-48 md:h-52 lg:h-64 bg-black">
+                {/* Mobile Layout: Video and Form Separate */}
+                <div className="lg:hidden space-y-4">
+                  {/* Video Section - Mobile */}
+                  <div className="relative group/video h-48 bg-black rounded-2xl overflow-hidden border border-slate-800">
                     <iframe
-                      className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover/video:opacity-100 transition-opacity"
+                      className="absolute inset-0 w-full h-full opacity-80 group-hover/video:opacity-100 transition-opacity"
                       src="https://www.youtube.com/embed/iBVByzbsvNQ?autoplay=1&mute=1&loop=1&playlist=iBVByzbsvNQ&controls=0&modestbranding=1&rel=0&iv_load_policy=3"
                       allow="autoplay; encrypted-media"
+                      allowFullScreen
                       title="Ivy Pro School Experience"
                     ></iframe>
-                    {/* Video Overlays */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-black/40"></div>
-                    <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex items-center gap-2">
+                    <div className="absolute top-3 left-3 flex items-center gap-2">
                       <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
@@ -668,19 +670,119 @@ const Enterprise = () => {
                     </div>
                   </div>
 
-                  {/* Form Area */}
-                  <div className="p-4 sm:p-6 lg:p-8">
-                    <div className="mb-6 lg:mb-8">
-                      <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">Enterprise Solutions</h2>
-                      <p className="text-slate-400 text-xs sm:text-sm mt-1">Book a strategy call with our senior advisors.</p>
+                  {/* Form Section - Mobile - FIXED BUTTON TEXT */}
+                  <div className="bg-[#0f172a] border border-slate-800 rounded-2xl shadow-xl overflow-hidden">
+                    <div className="p-4">
+                      <div className="mb-4">
+                        <h2 className="text-lg font-bold text-white tracking-tight">Enterprise Solutions</h2>
+                        <p className="text-slate-400 text-xs mt-0.5">Book a strategy call with our senior advisors.</p>
+                      </div>
+
+                      <form onSubmit={handleHeroFormSubmit} className="space-y-3">
+                        <div className="space-y-1">
+                          <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Full Name</label>
+                          <Input
+                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm w-full h-10"
+                            placeholder="John Doe"
+                            value={heroFormData.name}
+                            onChange={(e) => setHeroFormData({ ...heroFormData, name: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <div className="space-y-1">
+                          <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Work Email</label>
+                          <Input
+                            type="email"
+                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm w-full h-10"
+                            placeholder="john@enterprise.com"
+                            value={heroFormData.email}
+                            onChange={(e) => setHeroFormData({ ...heroFormData, email: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <div className="space-y-1">
+                          <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Company / Organization</label>
+                          <Input
+                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm w-full h-10"
+                            placeholder="e.g. Fortune 500 Co."
+                            value={heroFormData.company}
+                            onChange={(e) => setHeroFormData({ ...heroFormData, company: e.target.value })}
+                            required
+                          />
+                        </div>
+                        <div className="space-y-1">
+                          <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Training Requirements</label>
+                          <Textarea
+                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl resize-none text-sm w-full min-h-[70px]"
+                            placeholder="How can we help your team?"
+                            rows={2}
+                            value={heroFormData.message}
+                            onChange={(e) => setHeroFormData({ ...heroFormData, message: e.target.value })}
+                            required
+                          />
+                        </div>
+
+                        {/* FIXED BUTTON - With responsive text */}
+                        <Button
+                          type="submit"
+                          className="w-full bg-blue-600 hover:bg-blue-500 py-3.5 text-sm font-bold rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/20 group whitespace-normal"
+                          disabled={isHeroSubmitting}
+                        >
+                          {isHeroSubmitting ? (
+                            <span className="flex items-center gap-2 justify-center">
+                              <div className="h-4 w-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                              <span>Syncing...</span>
+                            </span>
+                          ) : (
+                            <span className="flex items-center justify-center gap-2 px-1">
+                              <Calendar className="h-4 w-4 opacity-70 flex-shrink-0" />
+                              <span className="text-xs xs:text-sm">Secure Free Consultation</span>
+                            </span>
+                          )}
+                        </Button>
+
+                        <p className="text-[8px] xs:text-[9px] text-center text-slate-500 uppercase tracking-[0.15em]">
+                          Strictly Confidential • Response in &lt; 24h
+                        </p>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop Layout: Video Inside Form (Original) */}
+                <div className="hidden lg:block relative bg-[#0f172a] border border-slate-800 rounded-3xl shadow-2xl overflow-hidden">
+                  {/* Video Section - Desktop */}
+                  <div className="relative group/video h-64 bg-black w-full">
+                    <iframe
+                      className="absolute inset-0 w-full h-full opacity-80 group-hover/video:opacity-100 transition-opacity"
+                      src="https://www.youtube.com/embed/iBVByzbsvNQ?autoplay=1&mute=1&loop=1&playlist=iBVByzbsvNQ&controls=0&modestbranding=1&rel=0&iv_load_policy=3"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                      title="Ivy Pro School Experience"
+                    ></iframe>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-black/40"></div>
+                    <div className="absolute top-4 left-4 flex items-center gap-2">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                      </span>
+                      <span className="text-[10px] font-bold tracking-widest uppercase text-white/80">Experience Ivy</span>
+                    </div>
+                  </div>
+
+                  {/* Form Section - Desktop */}
+                  <div className="p-8">
+                    <div className="mb-8">
+                      <h2 className="text-2xl font-bold text-white tracking-tight">Enterprise Solutions</h2>
+                      <p className="text-slate-400 text-xs mt-1">Book a strategy call with our senior advisors.</p>
                     </div>
 
-                    <form onSubmit={handleHeroFormSubmit} className="space-y-4 sm:space-y-5">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <form onSubmit={handleHeroFormSubmit} className="space-y-4">
+                      <div className="grid grid-cols-1 gap-4">
                         <div className="space-y-1.5">
-                          <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Full Name</label>
+                          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Full Name</label>
                           <Input
-                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm sm:text-base"
+                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm w-full"
                             placeholder="John Doe"
                             value={heroFormData.name}
                             onChange={(e) => setHeroFormData({ ...heroFormData, name: e.target.value })}
@@ -688,10 +790,10 @@ const Enterprise = () => {
                           />
                         </div>
                         <div className="space-y-1.5">
-                          <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Work Email</label>
+                          <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Work Email</label>
                           <Input
                             type="email"
-                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm sm:text-base"
+                            className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm w-full"
                             placeholder="john@enterprise.com"
                             value={heroFormData.email}
                             onChange={(e) => setHeroFormData({ ...heroFormData, email: e.target.value })}
@@ -701,9 +803,9 @@ const Enterprise = () => {
                       </div>
 
                       <div className="space-y-1.5">
-                        <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Company / Organization</label>
+                        <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Company / Organization</label>
                         <Input
-                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm sm:text-base"
+                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-sm w-full"
                           placeholder="e.g. Fortune 500 Co."
                           value={heroFormData.company}
                           onChange={(e) => setHeroFormData({ ...heroFormData, company: e.target.value })}
@@ -712,9 +814,9 @@ const Enterprise = () => {
                       </div>
 
                       <div className="space-y-1.5">
-                        <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1">Training Requirements</label>
+                        <label className="text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Training Requirements</label>
                         <Textarea
-                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl resize-none text-sm sm:text-base"
+                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 focus:border-blue-500 rounded-xl resize-none text-sm w-full"
                           placeholder="How can we help your team?"
                           rows={3}
                           value={heroFormData.message}
@@ -725,23 +827,23 @@ const Enterprise = () => {
 
                       <Button
                         type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-500 py-5 sm:py-6 lg:py-7 text-sm sm:text-base font-bold rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/20 group"
+                        className="w-full bg-blue-600 hover:bg-blue-500 py-6 text-sm font-bold rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/20 group"
                         disabled={isHeroSubmitting}
                       >
                         {isHeroSubmitting ? (
-                          <span className="flex items-center gap-2">
+                          <span className="flex items-center gap-2 justify-center">
                             <div className="h-4 w-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                             Syncing...
                           </span>
                         ) : (
                           <span className="flex items-center justify-center gap-2">
-                            <Calendar className="h-4 w-4 sm:h-5 sm:w-5 opacity-70" />
+                            <Calendar className="h-5 w-5 opacity-70" />
                             Secure Free Consultation
                           </span>
                         )}
                       </Button>
 
-                      <p className="text-[9px] sm:text-[10px] text-center text-slate-500 uppercase tracking-[0.15em]">
+                      <p className="text-[10px] text-center text-slate-500 uppercase tracking-[0.15em]">
                         Strictly Confidential • Response in &lt; 24h
                       </p>
                     </form>
@@ -750,8 +852,43 @@ const Enterprise = () => {
               </div>
             </div>
           </div>
-        </section>
 
+          {/* Add this CSS for the logo animation and extra small screen support */}
+          <style jsx>{`
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    
+    .animate-scroll {
+      animation: scroll 30s linear infinite;
+    }
+    
+    .animate-scroll:hover {
+      animation-play-state: paused;
+    }
+    
+    @media (max-width: 640px) {
+      .animate-scroll {
+        animation: scroll 20s linear infinite;
+      }
+    }
+    
+    /* Extra small screen support */
+    @media (max-width: 380px) {
+      .xs\:text-sm {
+        font-size: 0.75rem;
+      }
+      .xs\:text-\[9px\] {
+        font-size: 8px;
+      }
+    }
+  `}</style>
+        </section>
         {/* ENTERPRISE OVERVIEW SECTION */}
         <section className="py-12 sm:py-16 lg:py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6">
@@ -880,17 +1017,17 @@ const Enterprise = () => {
         </section>
 
         {/* INDUSTRIES WE TRANSFORM */}
-        <section className="relative bg-gradient-to-br from-[#0a1a5f] via-[#1c2b4e] to-[#040a22] text-white overflow-hidden min-h-[90vh] flex items-center">
+        <section className="relative bg-gradient-to-br from-[#0a1a5f] via-[#1c2b4e] to-[#040a22] text-white py-14 sm:py-16 lg:py-20">
           {/* Decorative background orbs */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute top-[-15%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-700/10 blur-[120px]" />
             <div className="absolute bottom-[-15%] right-[-10%] w-[45%] h-[45%] rounded-full bg-indigo-700/10 blur-[120px]" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[30%] rounded-full bg-cyan-900/10 blur-[100px]" />
             {/* Grid pattern */}
-            <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage: 'linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
+            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             {/* Section Header */}
             <div className="text-center mb-12 lg:mb-16">
               <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 rounded-full mb-5">
@@ -932,7 +1069,7 @@ const Enterprise = () => {
                   iconBg: 'bg-cyan-500/15',
                   iconColor: 'text-cyan-400',
                   dot: 'bg-cyan-400',
-                  clients: ['HSBC',  'Bandhan Bank'],
+                  clients: ['HSBC', 'Bandhan Bank'],
                   highlights: [
                     'Data Science for Credit Risk & Fraud Detection',
                     'Financial Analytics & Compliance Reporting with AI',
@@ -940,7 +1077,7 @@ const Enterprise = () => {
                   ],
                   stat: '5 BFSI institutions trained across India & UK',
                 },
-                
+
                 {
                   icon: Cpu,
                   label: 'IT & Professional Services',
@@ -957,8 +1094,8 @@ const Enterprise = () => {
                   ],
                   stat: '6 global IT & consulting firms partnered',
                 },
-                
-               
+
+
               ].map((industry, idx) => {
                 const Icon = industry.icon;
                 return (
@@ -1009,29 +1146,29 @@ const Enterprise = () => {
             </div>
 
             {/* Bottom global stats strip */}
-       <div className="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 border border-white/[0.07] rounded-2xl p-6 sm:p-10 bg-white/[0.02]">
-  {[
-    { value: '500+', label: 'Companies Trained', icon: Building },
-    { value: '6', label: 'Industry Verticals', icon: Globe2 },
-    { value: '17+', label: 'Years of Excellence', sub: '(est. 2007)', icon: MapPin },
-  ].map((stat, i) => {
-    const Icon = stat.icon;
-    return (
-      <div key={i} className="flex flex-col items-center text-center">
-        <div className="flex justify-center mb-3">
-          <Icon className="h-6 w-6 text-blue-400/60" />
-        </div>
-        <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tabular-nums tracking-tight">
-          {stat.value}
-        </div>
-        <div className="text-[10px] sm:text-xs text-slate-500 mt-2 uppercase tracking-[0.2em] font-medium">
-          {stat.label}
-          {stat.sub && <span className="block opacity-70 mt-1">{stat.sub}</span>}
-        </div>
-      </div>
-    );
-  })}
-</div>
+            <div className="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 border border-white/[0.07] rounded-2xl p-6 sm:p-10 bg-white/[0.02]">
+              {[
+                { value: '500+', label: 'Companies Trained', icon: Building },
+                { value: '6', label: 'Industry Verticals', icon: Globe2 },
+                { value: '17+', label: 'Years of Excellence', sub: '(est. 2007)', icon: MapPin },
+              ].map((stat, i) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={i} className="flex flex-col items-center text-center">
+                    <div className="flex justify-center mb-3">
+                      <Icon className="h-6 w-6 text-blue-400/60" />
+                    </div>
+                    <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tabular-nums tracking-tight">
+                      {stat.value}
+                    </div>
+                    <div className="text-[10px] sm:text-xs text-slate-500 mt-2 uppercase tracking-[0.2em] font-medium">
+                      {stat.label}
+                      {stat.sub && <span className="block opacity-70 mt-1">{stat.sub}</span>}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
@@ -1252,7 +1389,7 @@ const Enterprise = () => {
           </div>
         </section>
 
-        <section id="our-expertise" className="bg-[#07101f] py-16 sm:py-20 lg:py-28 text-white overflow-hidden">
+        <section id="our-expertise" className="bg-[#07101f] py-16 sm:py-20 lg:py-28 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
             {/* Section Header */}
@@ -1273,36 +1410,32 @@ const Enterprise = () => {
               {/* Left: Tab list */}
               <div className="space-y-1.5">
                 {expertiseData.map((item, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setActiveExpertise(i)}
-                      className={`w-full text-left rounded-2xl px-5 py-4 flex items-center gap-4 transition-all duration-300 group border ${
-                        activeExpertise === i
-                          ? 'bg-white/[0.07] border-white/15 shadow-xl shadow-black/20'
-                          : 'border-transparent hover:border-white/8 hover:bg-white/[0.04]'
+                  <button
+                    key={i}
+                    onClick={() => setActiveExpertise(i)}
+                    className={`w-full text-left rounded-2xl px-5 py-4 flex items-center gap-4 transition-all duration-300 group border ${activeExpertise === i
+                      ? 'bg-white/[0.07] border-white/15 shadow-xl shadow-black/20'
+                      : 'border-transparent hover:border-white/8 hover:bg-white/[0.04]'
                       }`}
-                    >
-                      <span className={`text-3xl font-black leading-none tabular-nums transition-all duration-300 ${
-                        activeExpertise === i ? 'text-blue-400' : 'text-white/15 group-hover:text-white/28'
+                  >
+                    <span className={`text-3xl font-black leading-none tabular-nums transition-all duration-300 ${activeExpertise === i ? 'text-blue-400' : 'text-white/15 group-hover:text-white/28'
                       }`}>
-                        {item.id}
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <div className={`text-xs font-black tracking-widest uppercase truncate transition-colors duration-300 ${
-                          activeExpertise === i ? 'text-white' : 'text-white/35 group-hover:text-white/60'
+                      {item.id}
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <div className={`text-xs font-black tracking-widest uppercase truncate transition-colors duration-300 ${activeExpertise === i ? 'text-white' : 'text-white/35 group-hover:text-white/60'
                         }`}>
-                          {item.title}
-                        </div>
-                        <div className={`text-xs mt-0.5 leading-snug line-clamp-1 transition-colors duration-300 ${
-                          activeExpertise === i ? 'text-white/55' : 'text-white/20 group-hover:text-white/38'
-                        }`}>
-                          {item.description}
-                        </div>
+                        {item.title}
                       </div>
-                      {activeExpertise === i && (
-                        <ChevronRight className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                      )}
-                    </button>
+                      <div className={`text-xs mt-0.5 leading-snug line-clamp-1 transition-colors duration-300 ${activeExpertise === i ? 'text-white/55' : 'text-white/20 group-hover:text-white/38'
+                        }`}>
+                        {item.description}
+                      </div>
+                    </div>
+                    {activeExpertise === i && (
+                      <ChevronRight className="h-4 w-4 text-blue-400 flex-shrink-0" />
+                    )}
+                  </button>
                 ))}
               </div>
 
@@ -1360,29 +1493,25 @@ const Enterprise = () => {
                 return (
                   <div
                     key={i}
-                    className={`rounded-2xl border overflow-hidden transition-all duration-300 ${
-                      isOpen ? 'border-white/20' : 'border-white/[0.06]'
-                    }`}
+                    className={`rounded-2xl border overflow-hidden transition-all duration-300 ${isOpen ? 'border-white/20' : 'border-white/[0.06]'
+                      }`}
                   >
                     {/* Accordion header */}
                     <button
                       onClick={() => setActiveExpertise(isOpen ? -1 : i)}
-                      className={`w-full text-left flex items-center gap-3 sm:gap-4 px-4 py-4 sm:px-5 sm:py-5 transition-colors ${
-                        isOpen ? `bg-gradient-to-r ${item.gradient}` : 'bg-white/[0.03] hover:bg-white/[0.06]'
-                      }`}
+                      className={`w-full text-left flex items-center gap-3 sm:gap-4 px-4 py-4 sm:px-5 sm:py-5 transition-colors ${isOpen ? `bg-gradient-to-r ${item.gradient}` : 'bg-white/[0.03] hover:bg-white/[0.06]'
+                        }`}
                     >
-                      <span className={`text-2xl sm:text-3xl font-black leading-none tabular-nums flex-shrink-0 ${
-                        isOpen ? 'text-white/50' : 'text-white/15'
-                      }`}>
+                      <span className={`text-2xl sm:text-3xl font-black leading-none tabular-nums flex-shrink-0 ${isOpen ? 'text-white/50' : 'text-white/15'
+                        }`}>
                         {item.id}
                       </span>
                       <div className="flex-1 min-w-0 text-left">
                         <div className="font-bold text-sm sm:text-base text-white">{item.title}</div>
                         <div className="text-xs text-white/45 mt-0.5 line-clamp-1">{item.description}</div>
                       </div>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
-                        isOpen ? 'bg-white/15' : 'bg-white/5'
-                      }`}>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${isOpen ? 'bg-white/15' : 'bg-white/5'
+                        }`}>
                         <ChevronDown className={`h-4 w-4 text-white/60 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
                       </div>
                     </button>
@@ -1517,7 +1646,7 @@ const Enterprise = () => {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {/* Client Selector with L&D Focus */}
               <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
                 <div className="p-4 bg-blue-900 text-white font-semibold">
@@ -1539,9 +1668,9 @@ const Enterprise = () => {
                           {client.name}
                         </div>
                         <div className="text-xs text-slate-500">{client.industry}</div>
-                        <div className="flex flex-wrap gap-1 sm:gap-2 mt-1">
+                        <div className="flex flex-wrap gap-1 mt-1">
                           {client.keyMetrics.slice(0, 2).map((metric, idx) => (
-                            <span key={idx} className="text-xs bg-slate-100 px-2 py-0.5 sm:py-1 rounded">
+                            <span key={idx} className="text-[10px] sm:text-xs bg-slate-100 px-1.5 py-0.5 rounded leading-tight">
                               {metric.label}: {metric.value}
                             </span>
                           ))}
@@ -1567,18 +1696,18 @@ const Enterprise = () => {
 
               {/* Enhanced Visualization Area */}
               <div className="lg:col-span-2 bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 sm:mb-6">
-                  <div className="mb-4 sm:mb-0">
-                    <div className="flex items-center gap-2 mb-2">
-                      <BadgeCheck className="h-5 w-5 text-blue-600" />
-                      <h3 className="text-xl sm:text-2xl font-bold text-slate-800">
-                        {activeClientData.name} - L&D Transformation
+                <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-start mb-4 sm:mb-6">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-start gap-2 mb-1.5">
+                      <BadgeCheck className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <h3 className="text-base sm:text-xl lg:text-2xl font-bold text-slate-800 leading-snug">
+                        {activeClientData.name} — L&D Transformation
                       </h3>
                     </div>
-                    <p className="text-sm sm:text-base text-slate-500">{activeClientData.desc}</p>
+                    <p className="text-xs sm:text-sm text-slate-500">{activeClientData.desc}</p>
                   </div>
                   <div
-                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-bold text-lg sm:text-xl self-start"
+                    className="px-3 py-1.5 rounded-lg font-bold text-base sm:text-lg flex-shrink-0 self-start"
                     style={{ backgroundColor: `${activeClientData.color}20`, color: activeClientData.color }}
                   >
                     {activeClientData.metric}
@@ -1586,7 +1715,7 @@ const Enterprise = () => {
                 </div>
 
                 {/* Chart Container */}
-                <div className="h-48 sm:h-56 lg:h-64 w-full mb-6 sm:mb-8">
+                <div className="h-44 sm:h-56 lg:h-64 w-full mb-4 sm:mb-6 lg:mb-8 overflow-hidden">
                   {activeClientData.chartType === 'line' ? (
                     <Line
                       data={{
@@ -1637,11 +1766,11 @@ const Enterprise = () => {
                 </div>
 
                 {/* Key Metrics Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 lg:gap-4">
                   {activeClientData.keyMetrics.map((metric, index) => (
-                    <div key={index} className="bg-slate-50 p-3 sm:p-4 rounded-lg border border-slate-200">
-                      <div className="text-xs sm:text-sm text-slate-500">{metric.label}</div>
-                      <div className="font-bold text-xl sm:text-2xl text-slate-800 mt-1">{metric.value}</div>
+                    <div key={index} className="bg-slate-50 p-2.5 sm:p-3 lg:p-4 rounded-lg border border-slate-200">
+                      <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500 leading-tight">{metric.label}</div>
+                      <div className="font-bold text-lg sm:text-xl lg:text-2xl text-slate-800 mt-0.5 sm:mt-1">{metric.value}</div>
                     </div>
                   ))}
                 </div>

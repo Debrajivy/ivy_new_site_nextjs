@@ -2,7 +2,10 @@ import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["img.youtube.com"], // ✅ allow YouTube thumbnails
+    remotePatterns: [
+      { protocol: "https", hostname: "img.youtube.com" },
+      { protocol: "https", hostname: "i.ytimg.com" },
+    ],
   },
   eslint: {
     ignoreDuringBuilds: true, 

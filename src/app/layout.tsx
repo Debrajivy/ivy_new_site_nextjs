@@ -86,6 +86,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        {/* Resource hints — load critical third-party origins early */}
+        <link rel="preconnect" href="https://www.youtube.com" />
+        <link rel="preconnect" href="https://i.ytimg.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://web.mxradon.com" />
+
         {/* Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-981187918"
@@ -150,11 +157,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
         {children}
 
-        {/* LeadSquared Tracking */}
-        <script type="text/javascript" src="https://web.mxradon.com/t/Tracker.js"></script>
-        <script type="text/javascript">
-          pidTracker('18802');
-        </script>
+        {/* LeadSquared Tracking - lazyOnload so it never blocks rendering */}
+        <Script
+          id="leadsquared-tracker"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                var t=document.createElement('script');
+                t.src='https://web.mxradon.com/t/Tracker.js';
+                t.async=true;
+                t.onload=function(){if(typeof pidTracker==='function')pidTracker('18802');};
+                document.body.appendChild(t);
+              })();
+            `,
+          }}
+        />
       </body>
     </html>
   );

@@ -2,5 +2,409 @@
   "title": "AI For Product Managers",
   "icon": "Briefcase",
   "color": "bg-teal-600",
-  "description": "AI for product management"
+  "description": "AI for product management",
+  "subcategories": {
+    "ai-tools-overview": {
+      "title": "AI Tools Overview",
+      "icon": "Star",
+      "color": "bg-indigo-500",
+      "topics": [
+        {
+          "id": "best-ai-tools-2026",
+          "metaTitle": "The Best AI Tools for 2026 | AI For Product Managers",
+          "title": "The Best AI Tools for 2026: Transforming How We Work, Create, Innovate, and Automate",
+          "description": "A complete guide to the best AI tools for 2026 — ChatGPT, Google Gemini, Claude, Microsoft Copilot, AI agents, and how to use AI strategically as a product manager.",
+          "duration": "12 min read",
+          "date": "March 16, 2026",
+          "content": {}
+        }
+      ]
+    },
+    "ai-strategy-pm": {
+      "title": "AI Strategy (PM)",
+      "icon": "Zap",
+      "color": "bg-yellow-500",
+      "topics": [
+        {
+          "id": "notebooklm-product-market-research",
+          "metaTitle": "How to Use NotebookLM for Product Market Research | PM AI Guide",
+          "title": "How to Use NotebookLM for Synthesizing Product Market Research",
+          "description": "A step-by-step guide for product managers to use NotebookLM to synthesize customer insights, competitive analysis, and market trends using AI.",
+          "duration": "10 min read",
+          "date": "March 16, 2026",
+          "content": {
+            "hero": {
+              "title": "How to Use NotebookLM for Synthesizing Product Market Research",
+              "author": "Ivy Pro School",
+              "date": "March 16, 2026",
+              "readTime": "~10 minutes"
+            },
+            "video": {
+              "youtubeId": "vwf9cRRGRVA",
+              "title": "How Product Managers Use NotebookLM for Research & Competitor Analysis"
+            },
+            "sections": [
+              {
+                "id": "intro",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "When product managers start exploring AI tools for product managers, they often discover that collecting data is the easy part. The real challenge is transforming scattered research into meaningful insights. Market research usually involves multiple documents: customer interviews, analyst reports, competitor websites, user feedback, and internal notes. Reading everything manually and connecting the dots can take days.",
+                    "hasBar": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This is where NotebookLM becomes extremely powerful. Instead of reading every document individually, NotebookLM allows you to upload all research materials into a single workspace and interact with them intelligently. Think of it as a research assistant that reads everything you provide and helps you synthesize insights quickly.",
+                    "hasBar": false
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "In this guide, you will learn how to use NotebookLM step by step to synthesize product market research effectively. This practical notebooklm tutorial will walk you through how product managers can organize research sources, analyze customer insights, study competitors, and extract strategic opportunities using AI.",
+                    "hasBar": false
+                  }
+                ]
+              },
+              {
+                "id": "what-makes-different",
+                "title": "What Makes NotebookLM Different from Other AI Research Tools?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "There are many AI platforms available today, but NotebookLM works differently from most AI assistants. Traditional AI chatbots rely on general knowledge from training data. That means they may produce answers that sound convincing but are not grounded in your specific research materials. NotebookLM takes the opposite approach — it analyzes only the sources you upload."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This approach has two important advantages for product managers:"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Every insight is based on your own research data rather than generic internet information.",
+                      "NotebookLM provides citations pointing directly to the source documents."
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "icon": "💡",
+                    "title": "Why This Matters:",
+                    "content": "This grounding in real data makes NotebookLM one of the most effective AI tools for product managers available today — especially when analyzing sensitive materials such as customer interviews, internal reports, or competitor analysis documents."
+                  }
+                ]
+              },
+              {
+                "id": "setup",
+                "title": "How Do You Set Up NotebookLM for Product Market Research?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Before analysis begins, you need to organize your research workspace properly. Many beginners upload dozens of unrelated files into a notebook and expect perfect insights. This often leads to confusing results. The best approach is to create focused notebooks around specific research goals."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Examples of focused notebook names:"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Customer Feedback Analysis — Q1",
+                      "Competitor Feature Comparison",
+                      "Market Trends in AI Analytics"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Each notebook can contain up to dozens of research sources, including:"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "PDFs of analyst reports",
+                      "Google Docs research notes",
+                      "Website URLs of competitors",
+                      "YouTube product reviews",
+                      "Customer interview transcripts"
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "✅",
+                    "title": "Best Practice:",
+                    "content": "Organizing your research sources around a clear context ensures that the AI synthesizes insights accurately. Once your notebook is ready, NotebookLM indexes the documents so you can start interacting with them conversationally. This forms the foundation of an effective notebooklm tutorial workflow."
+                  }
+                ]
+              },
+              {
+                "id": "customer-insights",
+                "title": "How Can NotebookLM Help Product Managers Synthesize Customer Insights?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Customer feedback often exists in scattered formats such as survey responses, app reviews, support tickets, and interview transcripts. Synthesizing insights from these sources manually can be extremely time consuming. With NotebookLM, you can upload all feedback sources and ask the AI to identify recurring themes."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Example Prompt for Customer Insight Analysis"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Customer Interview Analysis Prompt",
+                    "borderColor": "blue",
+                    "code": "Analyze all uploaded customer interview transcripts.\nIdentify the most common problems users mention.\nGroup these issues into categories such as:\n- usability challenges\n- missing features\n- pricing concerns\n- performance problems\n\nFor each category provide examples and frequency of mentions."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "NotebookLM reads all uploaded transcripts and looks for repeated patterns. Instead of summarizing each interview separately, it clusters feedback across all sources. For example, multiple comments such as 'Navigation is confusing', 'Hard to find features', and 'Interface is cluttered' may be grouped under a broader category like User Interface Usability Issues."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The AI then connects these patterns across documents and produces a synthesized summary. This is far more efficient than manually reviewing dozens of interviews — making NotebookLM for research particularly powerful for user insight analysis."
+                  }
+                ]
+              },
+              {
+                "id": "competitive-analysis",
+                "title": "How Can NotebookLM Help in Competitive Product Analysis?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Competitive analysis is another area where NotebookLM significantly improves productivity. Imagine you upload competitor websites, product feature documentation, industry comparison articles, and YouTube product reviews. NotebookLM can synthesize this information into structured insights."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Example Prompt for Competitive Analysis"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Competitor Comparison Prompt",
+                    "borderColor": "purple",
+                    "code": "Compare the products mentioned across the uploaded sources.\nCreate a table that includes:\n- competitor name\n- key features\n- pricing model\n- strengths mentioned by users\n- weaknesses mentioned in reviews\n- opportunities for differentiation"
+                  },
+                  {
+                    "type": "table",
+                    "title": "What NotebookLM Extracts in Competitive Analysis",
+                    "headers": [
+                      "Dimension",
+                      "What NotebookLM Extracts",
+                      "Benefit for PM"
+                    ],
+                    "rows": [
+                      [
+                        "Competitor Name",
+                        "Identifies all competitors mentioned across sources",
+                        "Clear competitive landscape"
+                      ],
+                      [
+                        "Key Features",
+                        "Summarizes feature sets from documentation",
+                        "Feature gap analysis"
+                      ],
+                      [
+                        "Pricing Model",
+                        "Extracts pricing tiers and models",
+                        "Pricing strategy insights"
+                      ],
+                      [
+                        "User Strengths",
+                        "Groups positive feedback from reviews",
+                        "Benchmark best practices"
+                      ],
+                      [
+                        "Weaknesses",
+                        "Identifies recurring user complaints",
+                        "Opportunity areas to differentiate"
+                      ],
+                      [
+                        "Differentiation",
+                        "Suggests gaps not covered by competitors",
+                        "Strategic positioning guidance"
+                      ]
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Instead of manually compiling spreadsheets, the AI produces a ready-to-use research summary. Many product teams increasingly rely on such workflows when evaluating AI tools for product managers that support strategic decision making."
+                  }
+                ]
+              },
+              {
+                "id": "key-features",
+                "title": "Which NotebookLM Features Are Most Useful for Market Research Synthesis?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "NotebookLM includes several features that directly support product market research workflows."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Source-Grounded Chat"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The chat interface allows you to ask analytical questions about your research documents. Because answers are grounded in uploaded sources, the insights remain tied to real evidence. This conversational interaction allows product managers to explore research dynamically. For example, you might ask:"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Which product features are most frequently praised in competitor reviews?",
+                      "What pain points appear repeatedly in customer interviews?",
+                      "Which trends appear across industry reports?"
+                    ]
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Data Table Generation for Market Comparison"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Product research often requires structured comparisons. NotebookLM can automatically extract information from unstructured documents and convert it into tables. For example, after uploading competitor websites, you could run a prompt like:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Market Comparison Table Prompt",
+                    "borderColor": "emerald",
+                    "code": "Extract product information from competitor sources.\nCreate a table comparing:\n- pricing tiers\n- target customers\n- key product capabilities\n- unique differentiators"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "NotebookLM reads the documents, identifies relevant information, and organizes it into a structured format. This feature helps product managers quickly transform raw research into usable strategy documents."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Audio Overviews for Research Summaries"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "One of NotebookLM's most unique features is its ability to generate Audio Overviews. Instead of reading long research reports, NotebookLM can create a conversational summary between two AI speakers discussing the insights from your documents."
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "icon": "🎧",
+                    "title": "Audio Overview Use Case:",
+                    "content": "After uploading a 50-page market research report, generate an audio overview that highlights key market trends, competitive threats, and emerging opportunities. For product managers presenting insights to leadership teams, this feature can transform dense research into an accessible briefing."
+                  }
+                ]
+              },
+              {
+                "id": "prompt-techniques",
+                "title": "How Should Product Managers Prompt NotebookLM for Better Research Insights?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "The quality of insights depends heavily on how you prompt the AI. Instead of asking vague questions like 'Summarize this research', it is better to guide the analysis step by step. This method is often called prompt chaining."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Prompt Chaining Example"
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "First Prompt — Summarize Themes",
+                        "description": "Summarize the main themes from the customer interviews."
+                      },
+                      {
+                        "title": "Follow-Up Prompt — Identify Top Problems",
+                        "description": "From those themes identify the top three product problems users face."
+                      },
+                      {
+                        "title": "Final Prompt — Suggest Improvements",
+                        "description": "Suggest potential product improvements that could solve these problems."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "💡",
+                    "title": "Why Prompt Chaining Works:",
+                    "content": "Each step builds on the previous analysis, producing more structured insights. When using AI tools for product managers, this layered approach dramatically improves output quality compared to single broad questions."
+                  }
+                ]
+              },
+              {
+                "id": "market-trends",
+                "title": "How Can NotebookLM Help Identify Market Trends?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Market trend research often involves reading multiple analyst reports and industry publications. NotebookLM can synthesize insights across these documents to produce a consolidated trend report."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Market Trend Analysis Prompt",
+                    "borderColor": "amber",
+                    "code": "Identify the major industry trends mentioned across the uploaded reports.\nFor each trend explain:\n- what the trend is\n- which sources mention it\n- potential impact on product strategy"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The AI scans all documents, identifies recurring themes, and produces a consolidated trend report. Instead of reading multiple 30-page reports separately, you receive a single synthesized analysis. This is a powerful capability when conducting strategic product research."
+                  }
+                ]
+              },
+              {
+                "id": "real-workflow",
+                "title": "What Does a Real Product Research Workflow Look Like with NotebookLM?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "A practical workflow for product market research using NotebookLM follows a clear five-step process:"
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Collect Research Sources",
+                        "description": "Gather competitor websites, analyst reports, user interviews, and product reviews that are relevant to your research goal."
+                      },
+                      {
+                        "title": "Upload to a Focused Notebook",
+                        "description": "Upload all sources into a focused NotebookLM notebook organized around a specific research context — not a generic dumping ground."
+                      },
+                      {
+                        "title": "Generate Briefing Documents",
+                        "description": "Use the Notebook Guide feature to automatically generate briefing documents summarizing the key insights from all uploaded sources."
+                      },
+                      {
+                        "title": "Ask Deeper Analytical Questions",
+                        "description": "Ask deeper analytical questions through chat, such as competitor comparisons, user sentiment analysis, or pricing strategy insights."
+                      },
+                      {
+                        "title": "Generate Tables and Structured Summaries",
+                        "description": "Generate tables or structured summaries that can be shared directly with the product team or used in strategy presentations."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "⚡",
+                    "title": "Time Savings:",
+                    "content": "Within minutes, NotebookLM converts raw documents into actionable insights. This dramatically reduces the time required for product research compared to manual synthesis methods."
+                  }
+                ]
+              },
+              {
+                "id": "conclusion",
+                "title": "Conclusion",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Product market research is often messy, complex, and time consuming. Product managers must connect insights across dozens of documents before making strategic decisions. By organizing research sources and interacting with them intelligently, NotebookLM makes this synthesis process significantly faster."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "From analyzing customer interviews and competitor websites to identifying industry trends and generating research summaries, NotebookLM enables a more structured approach to market research. As teams increasingly adopt modern workflows, mastering AI tools for product managers like NotebookLM will become an essential skill for turning scattered information into clear product strategy."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
 }
