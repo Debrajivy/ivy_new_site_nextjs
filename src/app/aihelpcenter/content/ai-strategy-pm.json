@@ -2,5 +2,23 @@
   "title": "AI Strategy (PM)",
   "icon": "Zap",
   "color": "bg-yellow-500",
-  "description": "AI strategy for product managers"
+  "description": "AI strategy for product managers",
+  "subcategories": {
+    "excel-ai": {
+      "title": "Excel & AI",
+      "icon": "BarChart3",
+      "color": "bg-emerald-500",
+      "topics": [
+        {
+          "id": "how-to-use-claude-in-excel-for-data-analytics",
+          "metaTitle": "How to Use Claude in Excel for Data Analytics | AI Strategy (PM)",
+          "title": "How to Use Claude in Excel for Data Analytics: A Complete Guide",
+          "description": "Learn how to use Claude as an AI co-analyst inside Microsoft Excel — from cleaning data and writing formulas to interpreting trends and generating insights without leaving your spreadsheet.",
+          "duration": "12 min read",
+          "date": "March 17, 2026",
+          "content": {}
+        }
+      ]
+    }
+  }
 }
