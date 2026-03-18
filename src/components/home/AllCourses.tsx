@@ -123,24 +123,7 @@ const featuredCourses: Course[] = [
       "Real-time data stream processing"
     ]
   },
-  {
-    id: '4',
-    title: "Data Science with Machine Learning & AI Certification",
-    description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
-    image: ML,
-    category: "Data Science",
-    students: 1158,
-    duration: "12 months",
-    rating: 4.8,
-    reviewCount: 324,
-    isFeatured: true,
-    slug: "data-science-and-ml-course",
-    keyFeatures: [
-      "In-depth ML algorithms",
-      "Deep learning with TensorFlow/PyTorch",
-      "Data visualization with Tableau"
-    ]
-  },
+
   {
     id: '5',
     title: "Data Analytics and Generative AI Course",

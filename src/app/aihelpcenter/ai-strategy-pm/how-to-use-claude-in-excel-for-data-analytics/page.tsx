@@ -62,6 +62,10 @@ const USE_CASES = [
     body: `Raw data is almost never clean. You have inconsistent date formats, extra spaces, mismatched categories, blank rows, and duplicate entries. Normally, cleaning this by hand is tedious and error-prone.`,
     detail: `With Claude, you can simply describe the problem. Tell it something like: "There are inconsistent entries in column B where some rows say 'New York' and others say 'NY'. Can you help me standardize these?" — and Claude walks you through exactly how to fix it, including which formulas to use or which Excel features to apply.`,
     example: `"Standardize all date formats in column C to YYYY-MM-DD and flag any blank rows in columns A through F."`,
+    links: [
+      { label: "Advanced Excel techniques (Cheat Sheet)", href: "https://blog.ivyproschool.com/advanced-excel-cheat-sheet-series-2/" },
+      { label: "Automating Excel reports with Python", href: "https://ivyproschool.com/aihelpcenter/python-basics/excel-automation-openpyxl" },
+    ],
   },
   {
     id: "formulas",
@@ -73,6 +77,7 @@ const USE_CASES = [
     body: `Even experienced Excel users struggle with complex formulas: XLOOKUP, INDEX-MATCH, nested IF statements, array formulas, SUMPRODUCT — these can get complicated fast.`,
     detail: `Claude excels in two directions. First, describe what you want in plain English and get the formula. Second, paste in an existing formula and ask Claude to explain it step by step — perfect for formulas you wrote three months ago and have completely forgotten.`,
     example: `"Write a formula that returns the manager name from Sheet2 based on the employee ID in column A of Sheet1, and return 'Not Found' if there is no match."`,
+    links: [],
   },
   {
     id: "stats",
@@ -84,6 +89,7 @@ const USE_CASES = [
     body: `Running a pivot table or a regression is one thing. Understanding what the output is actually telling you is another — especially when you need to communicate it to non-technical stakeholders.`,
     detail: `Claude can interpret statistical results in plain language. If you run a correlation analysis and get a result of 0.73, Claude explains what that means in the context of your specific dataset, what its implications are, and what follow-up analyses you might want to consider.`,
     example: `"I ran a regression and got an R-squared of 0.61 and a p-value of 0.003. Explain what this means for my quarterly sales forecast in plain language."`,
+    links: [],
   },
   {
     id: "charts",
@@ -95,6 +101,7 @@ const USE_CASES = [
     body: `One of the most common mistakes in data analytics is choosing the wrong chart type — a pie chart when a bar chart would be clearer, or a cluttered scatter plot when a simple table would communicate better.`,
     detail: `Ask Claude to look at your data structure and suggest the most effective visualization. It recommends a chart type and explains why that choice makes sense for your specific data and your audience.`,
     example: `"I have monthly revenue data for 8 product lines over 3 years. What chart type best shows both the trend over time and the relative size of each product line?"`,
+    links: [],
   },
   {
     id: "trends",
@@ -106,6 +113,7 @@ const USE_CASES = [
     body: `When you have months or years of data, spotting meaningful trends manually is genuinely hard. Patterns often hide in plain sight across dozens of rows and columns.`,
     detail: `Claude can help identify patterns, flag anomalies, and point out relationships between variables you might not have been looking for. This is especially powerful for sales data, financial reporting, and operational metrics where patterns over time drive decisions.`,
     example: `"Look at my sales data in columns A through F. Are there any months that consistently underperform? Are there any unusual spikes or drops that don't match the trend?"`,
+    links: [],
   },
 ];
 
@@ -538,6 +546,22 @@ export default function ClaudeInExcelPage() {
                     <p className="text-sm text-emerald-700">Claude handles the mechanics — freeing you to focus on the interpretation and decision-making that actually requires human judgment.</p>
                   </div>
                 </div>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Link
+                    href="/aihelpcenter/ai-strategy-pm"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-700 bg-teal-50 border border-teal-200 rounded-full px-4 py-1.5 hover:bg-teal-100 transition-colors"
+                  >
+                    <ArrowRight size={12} /> AI Strategy for Product Managers
+                  </Link>
+                  <a
+                    href="https://blog.ivyproschool.com/category/data-analytics/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 hover:bg-blue-100 transition-colors"
+                  >
+                    <ArrowUpRight size={12} /> Generative AI applications and use cases
+                  </a>
+                </div>
               </div>
             </section>
 
@@ -597,6 +621,22 @@ export default function ClaudeInExcelPage() {
                       <p className="text-xs font-bold uppercase tracking-widest mb-1.5" style={{ color: active.color }}>Example Prompt</p>
                       <p className="text-sm italic" style={{ color: active.color }}>&ldquo;{active.example}&rdquo;</p>
                     </div>
+                    {active.links && active.links.length > 0 && (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {active.links.map((link, i) => (
+                          <a
+                            key={i}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1.5 border hover:opacity-80 transition-opacity"
+                            style={{ color: active.color, borderColor: active.color, backgroundColor: active.bg }}
+                          >
+                            {link.label} <ArrowUpRight size={11} />
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -684,6 +724,24 @@ export default function ClaudeInExcelPage() {
                   <strong className="text-white">The right mental model:</strong> Think of Claude as a highly capable analytical assistant who removes friction between having a question and getting an answer. You are still the analyst. Claude just makes the work faster and more approachable.
                 </p>
               </div>
+              <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a
+                  href="https://ivyproschool.com/courses/data-analytics-course"
+                  className="flex items-center gap-2 rounded-xl bg-white/10 border border-white/20 px-4 py-3 hover:bg-white/20 transition-colors group"
+                >
+                  <BarChart3 size={16} className="text-teal-400 flex-shrink-0" />
+                  <span className="text-xs font-semibold text-white/80 group-hover:text-white flex-1">Data Analytics with Visualization</span>
+                  <ArrowUpRight size={12} className="text-white/40 flex-shrink-0" />
+                </a>
+                <a
+                  href="https://ivyproschool.com/courses/iit-data-science-course"
+                  className="flex items-center gap-2 rounded-xl bg-white/10 border border-white/20 px-4 py-3 hover:bg-white/20 transition-colors group"
+                >
+                  <Layers size={16} className="text-teal-400 flex-shrink-0" />
+                  <span className="text-xs font-semibold text-white/80 group-hover:text-white flex-1">Data Science with Machine Learning &amp; AI</span>
+                  <ArrowUpRight size={12} className="text-white/40 flex-shrink-0" />
+                </a>
+              </div>
             </section>
 
             {/* ── Best Practices ─────────────────── */}
@@ -755,12 +813,22 @@ export default function ClaudeInExcelPage() {
                   Data analytics in Excel does not have to be a solo endeavor fought against confusing formulas and impenetrable datasets. With Claude in Excel, you have a capable, knowledgeable partner ready to help you get more from your data, faster, and with greater confidence.
                 </p>
               </div>
-              <Link
-                href="/courses"
-                className="inline-flex items-center gap-2 rounded-xl bg-white text-teal-700 font-bold text-sm px-5 py-2.5 hover:bg-teal-50 transition-colors shadow-sm"
-              >
-                Explore AI & Data Analytics Courses <ArrowUpRight size={14} />
-              </Link>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/courses/data-analytics-and-generative-ai-course"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white text-teal-700 font-bold text-sm px-5 py-2.5 hover:bg-teal-50 transition-colors shadow-sm"
+                >
+                  Data Analytics and Generative AI Course <ArrowUpRight size={14} />
+                </Link>
+                <a
+                  href="https://ivyproschool.com/bootcampregister"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white/20 border border-white/30 text-white font-bold text-sm px-5 py-2.5 hover:bg-white/30 transition-colors"
+                >
+                  Live AI &amp; Excel Workshop <ArrowUpRight size={14} />
+                </a>
+              </div>
             </section>
 
             {/* ── Back links ─────────────────────── */}
