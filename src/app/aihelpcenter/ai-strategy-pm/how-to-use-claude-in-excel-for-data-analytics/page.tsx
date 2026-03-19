@@ -83,7 +83,7 @@ const USE_CASES = [
     id: "stats",
     icon: <BarChart3 size={20} />,
     label: "Statistical Analysis",
-    color: "#10b981",
+    color: "#009fda",
     bg: "#d1fae5",
     title: "Statistical Analysis & Interpretation",
     body: `Running a pivot table or a regression is one thing. Understanding what the output is actually telling you is another — especially when you need to communicate it to non-technical stakeholders.`,
@@ -132,7 +132,7 @@ const BEST_PRACTICES = [
   },
   {
     icon: <Layers size={18} />,
-    color: "#10b981",
+    color: "#009fda",
     title: "Iterate and Ask Follow-Up Questions",
     body: `Because Claude maintains context within a session, you can build on previous responses. If it gives you a formula and you want to understand one part better, just ask. If its first suggestion is close but not right, describe what needs to change. This conversational back-and-forth is one of the most powerful aspects of working with Claude.`,
   },
@@ -158,9 +158,9 @@ const REAL_EXAMPLES = [
   },
   {
     icon: "🎯",
-    color: "#10b981",
-    bg: "from-emerald-50 to-teal-50",
-    border: "border-emerald-200",
+    color: "#009fda",
+    bg: "from-blue-50 to-blue-50",
+    border: "border-blue-200",
     role: "Marketing Analyst",
     time: "Days → Hours",
     title: "Customer Segmentation",
@@ -339,7 +339,7 @@ export default function ClaudeInExcelPage() {
         <div className="fixed top-16 sm:top-20 right-2 sm:right-4 md:right-6 z-50 max-w-xs sm:max-w-sm">
           <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl p-4 sm:p-6 border border-blue-100">
             <div className="flex items-center gap-3 mb-3 sm:mb-4">
-              <div className="h-8 sm:h-10 w-8 sm:w-10 rounded-full flex items-center justify-center bg-gradient-to-br from-teal-500 to-emerald-500">
+              <div className="h-8 sm:h-10 w-8 sm:w-10 rounded-full flex items-center justify-center bg-gradient-to-br from-[#009fda] to-[#009fda]">
                 <Star className="h-4 sm:h-6 w-4 sm:w-6 text-white" />
               </div>
               <div>
@@ -353,7 +353,7 @@ export default function ClaudeInExcelPage() {
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
               <button
                 onClick={openReviewPage}
-                className="flex-1 text-white font-bold py-2 sm:py-3 rounded-lg sm:rounded-xl hover:opacity-90 transition-opacity text-sm bg-gradient-to-r from-teal-500 to-blue-700"
+                className="flex-1 text-white font-bold py-2 sm:py-3 rounded-lg sm:rounded-xl hover:opacity-90 transition-opacity text-sm bg-gradient-to-r from-[#009fda] to-blue-700"
               >
                 Write a Review
               </button>
@@ -371,9 +371,9 @@ export default function ClaudeInExcelPage() {
       {/* ── Breadcrumb ──────────────────────────────── */}
       <div className="bg-white border-b border-gray-100 px-4 py-3">
         <div className="max-w-7xl mx-auto flex items-center gap-1.5 text-xs text-gray-500 flex-wrap">
-          <Link href="/aihelpcenter" className="hover:text-teal-600 transition-colors">AI Help Center</Link>
+          <Link href="/aihelpcenter" className="hover:text-[#013a81] transition-colors">AI Help Center</Link>
           <ChevronRight size={12} />
-          <Link href="/aihelpcenter/ai-strategy-pm" className="hover:text-teal-600 transition-colors">AI Strategy (PM)</Link>
+          <Link href="/aihelpcenter/ai-strategy-pm" className="hover:text-[#013a81] transition-colors">AI Strategy (PM)</Link>
           <ChevronRight size={12} />
           <span className="text-gray-800 font-medium">Claude in Excel for Data Analytics</span>
         </div>
@@ -381,19 +381,19 @@ export default function ClaudeInExcelPage() {
 
       {/* ── Hero (split layout) ──────────────────────── */}
       <div className="relative overflow-hidden bg-white border-b border-gray-100">
-        <div className="h-1.5 w-full bg-gradient-to-r from-teal-400 via-emerald-400 to-cyan-500" />
+        <div className="h-1.5 w-full bg-gradient-to-r from-[#009fda] via-[#009fda] to-[#013a81]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* left text */}
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-xs font-bold text-teal-700 uppercase tracking-wider mb-5">
-              <FileSpreadsheet size={12} className="text-teal-500" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-bold text-[#013a81] uppercase tracking-wider mb-5">
+              <FileSpreadsheet size={12} className="text-[#009fda]" />
               AI Strategy (PM) · Excel Analytics
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight mb-4">
               How to Use{" "}
-              <span className="bg-gradient-to-r from-teal-500 to-emerald-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#009fda] to-[#009fda] bg-clip-text text-transparent">
                 Claude in Excel
               </span>{" "}
               for Data Analytics
@@ -422,11 +422,11 @@ export default function ClaudeInExcelPage() {
           {/* right — spreadsheet visual */}
           <div className="hidden lg:block">
             <div className="relative rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-white">
-              <div className="bg-[#217346] px-4 py-2.5 flex items-center gap-2">
+              <div className="bg-[#013a81] px-4 py-2.5 flex items-center gap-2">
                 <div className="flex gap-1.5">
                   <span className="w-3 h-3 rounded-full bg-red-400" />
                   <span className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <span className="w-3 h-3 rounded-full bg-green-400" />
+                  <span className="w-3 h-3 rounded-full bg-[#009fda]" />
                 </div>
                 <span className="text-white text-xs font-semibold ml-2">sales_analysis.xlsx — Claude in Excel</span>
               </div>
@@ -442,18 +442,18 @@ export default function ClaudeInExcelPage() {
                 ["West", "$176,800", "$221,600", "+25.3%"],
                 ["Central", "$88,200", "$94,100", "+6.7%"],
               ].map(([r, q1, q2, yoy], i) => (
-                <div key={i} className="grid grid-cols-4 text-[10px] border-b border-gray-100 hover:bg-teal-50/60 transition-colors">
+                <div key={i} className="grid grid-cols-4 text-[10px] border-b border-gray-100 hover:bg-blue-50/60 transition-colors">
                   <div className="px-3 py-2 border-r border-gray-100 font-medium text-gray-700">{r}</div>
                   <div className="px-3 py-2 border-r border-gray-100 text-gray-600">{q1}</div>
                   <div className="px-3 py-2 border-r border-gray-100 text-gray-600">{q2}</div>
-                  <div className={`px-3 py-2 font-bold ${yoy.startsWith("+") ? "text-emerald-600" : "text-red-500"}`}>{yoy}</div>
+                  <div className={`px-3 py-2 font-bold ${yoy.startsWith("+") ? "text-[#013a81]" : "text-red-500"}`}>{yoy}</div>
                 </div>
               ))}
-              <div className="bg-teal-50 border-t border-teal-100 px-4 py-3 flex items-start gap-2">
-                <div className="w-6 h-6 rounded-full bg-teal-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="bg-blue-50 border-t border-blue-100 px-4 py-3 flex items-start gap-2">
+                <div className="w-6 h-6 rounded-full bg-[#009fda] flex items-center justify-center flex-shrink-0 mt-0.5">
                   <Star size={12} className="text-white" />
                 </div>
-                <p className="text-[10px] text-teal-800 leading-snug">
+                <p className="text-[10px] text-[#013a81] leading-snug">
                   <strong>Claude:</strong> The East region shows a 6.7% decline. This is the only region trending negative — would you like me to help investigate the root cause using the detailed breakdown in Sheet2?
                 </p>
               </div>
@@ -471,7 +471,7 @@ export default function ClaudeInExcelPage() {
               { num: "0", label: "Coding Required" },
             ].map((s, i) => (
               <div key={i} className="text-center">
-                <div className="text-2xl sm:text-3xl font-black text-teal-600">{s.num}</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#013a81]">{s.num}</div>
                 <div className="text-[10px] text-gray-400 font-medium uppercase tracking-wide mt-0.5">{s.label}</div>
               </div>
             ))}
@@ -487,8 +487,8 @@ export default function ClaudeInExcelPage() {
           <article className="lg:col-span-3 space-y-6">
 
             {/* Table of Contents */}
-            <div className="rounded-2xl bg-white border border-teal-100 shadow-sm overflow-hidden">
-              <div className="bg-gradient-to-r from-teal-500 to-emerald-500 px-5 py-3 flex items-center gap-2">
+            <div className="rounded-2xl bg-white border border-blue-100 shadow-sm overflow-hidden">
+              <div className="bg-gradient-to-r from-[#009fda] to-[#009fda] px-5 py-3 flex items-center gap-2">
                 <BookOpen size={14} className="text-white" />
                 <span className="text-sm font-bold text-white uppercase tracking-widest">Table of Contents</span>
               </div>
@@ -497,13 +497,13 @@ export default function ClaudeInExcelPage() {
                   <button
                     key={item.id}
                     onClick={() => scrollTo(item.id)}
-                    className="group flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-teal-50 transition-colors text-left w-full"
+                    className="group flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-blue-50 transition-colors text-left w-full"
                   >
-                    <span className="w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center text-[10px] font-bold flex-shrink-0 group-hover:bg-teal-500 group-hover:text-white transition-colors">
+                    <span className="w-6 h-6 rounded-full bg-blue-100 text-[#013a81] flex items-center justify-center text-[10px] font-bold flex-shrink-0 group-hover:bg-[#009fda] group-hover:text-white transition-colors">
                       {i + 1}
                     </span>
-                    <span className="text-sm text-gray-600 group-hover:text-teal-700 transition-colors font-medium">{item.title}</span>
-                    <ArrowRight size={12} className="text-teal-300 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <span className="text-sm text-gray-600 group-hover:text-[#013a81] transition-colors font-medium">{item.title}</span>
+                    <ArrowRight size={12} className="text-[#009fda] ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
                   </button>
                 ))}
               </div>
@@ -511,7 +511,7 @@ export default function ClaudeInExcelPage() {
 
             {/* ── What Is Claude in Excel ─────────── */}
             <section id="what-is" className="rounded-2xl bg-white border border-gray-200 shadow-sm overflow-hidden">
-              <div className="h-1 bg-gradient-to-r from-teal-400 to-cyan-400" />
+              <div className="h-1 bg-gradient-to-r from-[#009fda] to-[#009fda]" />
               <div className="p-6 sm:p-8">
                 <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4" style={{ backgroundColor: "#ccfbf1", color: "#0f766e" }}>
                   <FileSpreadsheet size={12} /> Overview
@@ -519,7 +519,7 @@ export default function ClaudeInExcelPage() {
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                   What Is Claude in Excel and Why Does It Matter?
                 </h2>
-                <p className="text-base sm:text-lg border-l-4 border-teal-400 pl-4 italic text-gray-700 mb-5">
+                <p className="text-base sm:text-lg border-l-4 border-[#009fda] pl-4 italic text-gray-700 mb-5">
                   &ldquo;If you have ever stared at a massive spreadsheet and wished someone could just explain what the numbers are actually telling you, you are not alone.&rdquo;
                 </p>
                 <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
@@ -531,25 +531,25 @@ export default function ClaudeInExcelPage() {
                   </p>
                 </div>
                 <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="rounded-xl bg-teal-50 border border-teal-100 p-4">
+                  <div className="rounded-xl bg-blue-50 border border-blue-100 p-4">
                     <div className="flex items-center gap-2 mb-2">
-                      <Zap size={15} className="text-teal-600" />
-                      <span className="text-xs font-bold text-teal-800 uppercase tracking-wide">The Old Way</span>
+                      <Zap size={15} className="text-[#013a81]" />
+                      <span className="text-xs font-bold text-[#013a81] uppercase tracking-wide">The Old Way</span>
                     </div>
-                    <p className="text-sm text-teal-700">Analysts spend hours on repetitive, low-insight tasks: cleaning data, restructuring tables, writing similar formulas, and interpreting charts.</p>
+                    <p className="text-sm text-[#013a81]">Analysts spend hours on repetitive, low-insight tasks: cleaning data, restructuring tables, writing similar formulas, and interpreting charts.</p>
                   </div>
-                  <div className="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
+                  <div className="rounded-xl bg-blue-50 border border-blue-100 p-4">
                     <div className="flex items-center gap-2 mb-2">
-                      <Star size={15} className="text-emerald-600" />
-                      <span className="text-xs font-bold text-emerald-800 uppercase tracking-wide">With Claude</span>
+                      <Star size={15} className="text-[#013a81]" />
+                      <span className="text-xs font-bold text-[#013a81] uppercase tracking-wide">With Claude</span>
                     </div>
-                    <p className="text-sm text-emerald-700">Claude handles the mechanics — freeing you to focus on the interpretation and decision-making that actually requires human judgment.</p>
+                    <p className="text-sm text-[#013a81]">Claude handles the mechanics — freeing you to focus on the interpretation and decision-making that actually requires human judgment.</p>
                   </div>
                 </div>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <Link
                     href="/aihelpcenter/ai-strategy-pm"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-700 bg-teal-50 border border-teal-200 rounded-full px-4 py-1.5 hover:bg-teal-100 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#013a81] bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 hover:bg-blue-100 transition-colors"
                   >
                     <ArrowRight size={12} /> AI Strategy for Product Managers
                   </Link>
@@ -578,8 +578,8 @@ export default function ClaudeInExcelPage() {
               </p>
               <div className="space-y-3">
                 {SETUP_TIPS.map((tip, i) => (
-                  <div key={i} className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50 px-4 py-3 hover:border-teal-200 hover:bg-teal-50/40 transition-colors">
-                    <div className="w-6 h-6 rounded-full bg-teal-500 text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                  <div key={i} className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50 px-4 py-3 hover:border-blue-200 hover:bg-blue-50/40 transition-colors">
+                    <div className="w-6 h-6 rounded-full bg-[#009fda] text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
                       {i + 1}
                     </div>
                     <p className="text-sm text-gray-700 leading-relaxed">{tip}</p>
@@ -589,9 +589,9 @@ export default function ClaudeInExcelPage() {
             </section>
 
             {/* ── Use Cases (tab switcher) ─────────── */}
-            <section id="use-cases" className="rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-teal-50 border border-teal-100 p-6 sm:p-8">
+            <section id="use-cases" className="rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 border border-blue-100 p-6 sm:p-8">
               <div className="mb-6">
-                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-emerald-700 mb-4">
+                <div className="inline-flex items-center gap-2 rounded-full border border-blue-300 bg-blue-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#013a81] mb-4">
                   <Lightbulb size={12} /> Core Use Cases
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
@@ -654,7 +654,7 @@ export default function ClaudeInExcelPage() {
                 Claude in Excel is designed to work with the data structure you have open, grounded in your actual spreadsheet. For very large datasets, a staged approach works best:
               </p>
               <div className="relative">
-                <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gradient-to-b from-teal-300 to-emerald-300 hidden sm:block" />
+                <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gradient-to-b from-[#009fda] to-blue-300 hidden sm:block" />
                 <div className="space-y-4">
                   {[
                     { title: "Start with an Overview", desc: "Ask Claude for a high-level summary of your data — column types, missing values, obvious patterns, and overall shape." },
@@ -663,10 +663,10 @@ export default function ClaudeInExcelPage() {
                     { title: "Use Descriptive Column Headers", desc: "Always give your columns clear, meaningful names before working with Claude. Better headers = more accurate guidance." },
                   ].map((step, i) => (
                     <div key={i} className="flex gap-5 items-start pl-0 sm:pl-3">
-                      <div className="w-9 h-9 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold text-sm flex-shrink-0 z-10 shadow-md">
+                      <div className="w-9 h-9 rounded-full bg-[#009fda] text-white flex items-center justify-center font-bold text-sm flex-shrink-0 z-10 shadow-md">
                         {i + 1}
                       </div>
-                      <div className="flex-1 rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md hover:border-teal-200 transition-all">
+                      <div className="flex-1 rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md hover:border-blue-200 transition-all">
                         <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">{step.title}</h3>
                         <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{step.desc}</p>
                       </div>
@@ -677,10 +677,10 @@ export default function ClaudeInExcelPage() {
             </section>
 
             {/* ── Can It Replace an Analyst ────────── */}
-            <section id="replace" className="rounded-2xl overflow-hidden bg-gradient-to-br from-slate-900 to-teal-900 border border-teal-800 p-6 sm:p-8">
+            <section id="replace" className="rounded-2xl overflow-hidden bg-gradient-to-br from-slate-900 to-[#013a81] border border-[#013a81] p-6 sm:p-8">
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white/70 mb-4">
-                  <Users size={12} className="text-teal-400" /> Analyst vs AI
+                  <Users size={12} className="text-[#009fda]" /> Analyst vs AI
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
                   Can Claude in Excel Replace a Data Analyst?
@@ -704,15 +704,15 @@ export default function ClaudeInExcelPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="rounded-2xl border border-teal-400/30 bg-teal-400/10 p-5">
+                <div className="rounded-2xl border border-[#009fda]/30 bg-[#009fda]/10 p-5">
                   <div className="flex items-center gap-2 mb-4">
-                    <CheckCircle2 size={18} className="text-teal-400" />
+                    <CheckCircle2 size={18} className="text-[#009fda]" />
                     <h3 className="text-sm font-bold text-white">What Claude Does Brilliantly</h3>
                   </div>
                   <ul className="space-y-2">
                     {["Handle mechanics: formulas, cleaning, structuring", "Interpret results and explain in plain language", "Identify anomalies and surface patterns fast", "Never gets tired or minds basic questions"].map((t, i) => (
-                      <li key={i} className="flex items-center gap-2 text-xs sm:text-sm text-teal-100">
-                        <CheckCircle2 size={13} className="text-teal-400 flex-shrink-0" />
+                      <li key={i} className="flex items-center gap-2 text-xs sm:text-sm text-blue-100">
+                        <CheckCircle2 size={13} className="text-[#009fda] flex-shrink-0" />
                         {t}
                       </li>
                     ))}
@@ -729,7 +729,7 @@ export default function ClaudeInExcelPage() {
                   href="https://ivyproschool.com/courses/data-analytics-course"
                   className="flex items-center gap-2 rounded-xl bg-white/10 border border-white/20 px-4 py-3 hover:bg-white/20 transition-colors group"
                 >
-                  <BarChart3 size={16} className="text-teal-400 flex-shrink-0" />
+                  <BarChart3 size={16} className="text-[#009fda] flex-shrink-0" />
                   <span className="text-xs font-semibold text-white/80 group-hover:text-white flex-1">Data Analytics with Visualization</span>
                   <ArrowUpRight size={12} className="text-white/40 flex-shrink-0" />
                 </a>
@@ -737,7 +737,7 @@ export default function ClaudeInExcelPage() {
                   href="https://ivyproschool.com/courses/iit-data-science-course"
                   className="flex items-center gap-2 rounded-xl bg-white/10 border border-white/20 px-4 py-3 hover:bg-white/20 transition-colors group"
                 >
-                  <Layers size={16} className="text-teal-400 flex-shrink-0" />
+                  <Layers size={16} className="text-[#009fda] flex-shrink-0" />
                   <span className="text-xs font-semibold text-white/80 group-hover:text-white flex-1">Data Science with Machine Learning &amp; AI</span>
                   <ArrowUpRight size={12} className="text-white/40 flex-shrink-0" />
                 </a>
@@ -795,7 +795,7 @@ export default function ClaudeInExcelPage() {
             </section>
 
             {/* ── Conclusion ─────────────────────── */}
-            <section id="conclusion" className="rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 p-6 sm:p-8 text-white">
+            <section id="conclusion" className="rounded-2xl bg-gradient-to-br from-[#009fda] to-[#013a81] p-6 sm:p-8 text-white">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-widest mb-5">
                 <BookOpen size={12} /> Start Small, Scale Fast
               </div>
@@ -816,7 +816,7 @@ export default function ClaudeInExcelPage() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/courses/data-analytics-and-generative-ai-course"
-                  className="inline-flex items-center gap-2 rounded-xl bg-white text-teal-700 font-bold text-sm px-5 py-2.5 hover:bg-teal-50 transition-colors shadow-sm"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white text-[#013a81] font-bold text-sm px-5 py-2.5 hover:bg-blue-50 transition-colors shadow-sm"
                 >
                   Data Analytics and Generative AI Course <ArrowUpRight size={14} />
                 </Link>
@@ -833,10 +833,10 @@ export default function ClaudeInExcelPage() {
 
             {/* ── Back links ─────────────────────── */}
             <div className="flex flex-wrap gap-3 pb-4">
-              <Link href="/aihelpcenter/ai-strategy-pm" className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 hover:border-teal-300 hover:text-teal-600 transition-all shadow-sm">
+              <Link href="/aihelpcenter/ai-strategy-pm" className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 hover:border-[#009fda] hover:text-[#013a81] transition-all shadow-sm">
                 ← Back to AI Strategy (PM)
               </Link>
-              <Link href="/aihelpcenter" className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 hover:border-teal-300 hover:text-teal-600 transition-all shadow-sm">
+              <Link href="/aihelpcenter" className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 hover:border-[#009fda] hover:text-[#013a81] transition-all shadow-sm">
                 ← All Topics
               </Link>
             </div>
@@ -857,7 +857,7 @@ export default function ClaudeInExcelPage() {
                       onClick={() => scrollTo(sec.id)}
                       className={`text-left text-xs sm:text-sm font-bold transition-all border-l-4 pl-3 ${
                         activeSection === sec.id
-                          ? "text-teal-600 border-teal-500"
+                          ? "text-[#013a81] border-[#009fda]"
                           : "text-gray-400 border-transparent hover:text-gray-600"
                       }`}
                     >
@@ -892,7 +892,7 @@ export default function ClaudeInExcelPage() {
                         <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agarwal</h4>
                         <p className="text-gray-600 text-xs truncate">Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
-                          <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                          <div className="h-1.5 w-1.5 rounded-full bg-[#009fda]" />
                           <span className="text-xs text-gray-500">16+ years experience</span>
                         </div>
                       </div>
@@ -919,7 +919,7 @@ export default function ClaudeInExcelPage() {
                         <h4 className="font-bold text-gray-900 text-sm truncate">Eeshani Agrawal</h4>
                         <p className="text-gray-600 text-xs truncate">Co-Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
-                          <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                          <div className="h-1.5 w-1.5 rounded-full bg-[#009fda]" />
                           <span className="text-xs text-gray-500">16+ years experience</span>
                         </div>
                       </div>

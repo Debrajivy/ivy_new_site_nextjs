@@ -267,7 +267,26 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "A <strong>Clustered Bar Chart</strong> or <strong>Line and Clustered Column Chart</strong> works best for YoY comparisons. Here's a preview of what your final output should look like:"
+                    "text": "A <strong>Clustered Bar Chart</strong> or <strong>Line and Clustered Column Chart</strong> works best for YoY comparisons."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Monthly Revenue: 2023 vs 2024 — Sample Dashboard Output"
+                  },
+                  {
+                    "type": "table",
+                    "title": "Monthly Revenue: 2023 vs 2024",
+                    "headers": ["Month", "2023 (PY)", "2024 (CY)", "YoY %"],
+                    "rows": [
+                      ["Jan", "₹55L", "₹68L", "+24%"],
+                      ["Feb", "₹62L", "₹74L", "+19%"],
+                      ["Mar", "₹78L", "₹70L", "-10%"],
+                      ["Apr", "₹65L", "₹90L", "+38%"],
+                      ["May", "₹82L", "₹100L", "+22%"],
+                      ["Jun", "₹70L", "₹84L", "+20%"],
+                      ["Jul", "₹88L", "₹105L", "+19%"],
+                      ["Aug", "₹76L", "₹90L", "+18%"]
+                    ]
                   },
                   {
                     "type": "subtitle",
@@ -387,6 +406,175 @@
                     ]
                   }
                 ]
+              },
+              {
+                "id": "fy-yoy",
+                "title": "Financial Year YoY: April 1 to March 31 (Indian FY)",
+                "phase": "Bonus",
+                "content": [
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "icon": "🇮🇳",
+                    "title": "Indian Financial Year Context",
+                    "content": "In India, the Financial Year (FY) runs from <strong>1st April to 31st March</strong> of the following year. FY 2024-25 covers 1 April 2024 – 31 March 2025. All government, corporate, and tax reporting follows this cycle — requiring special handling in Power BI DAX."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Understanding the April–March Quarter Structure"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The table below shows how Indian FY quarters map to calendar months — the foundation of all FY DAX calculations:"
+                  },
+                  {
+                    "type": "table",
+                    "title": "Indian FY Quarter Mapping",
+                    "headers": ["FY Quarter", "Calendar Months", "Example (FY 2024-25)", "Common Name"],
+                    "rows": [
+                      ["Q1", "April, May, June", "Apr 2024 – Jun 2024", "First Quarter"],
+                      ["Q2", "July, August, September", "Jul 2024 – Sep 2024", "Second Quarter"],
+                      ["Q3", "October, November, December", "Oct 2024 – Dec 2024", "Third Quarter"],
+                      ["Q4", "January, February, March", "Jan 2025 – Mar 2025", "Year-End Quarter"]
+                    ]
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 1: Build a Financial-Year-Aware Date Table"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Add Fiscal Year columns to your Date Table. Replace your existing DateTable formula with this extended version that includes FY Year, FY Quarter, and FY Month Number columns:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — FY-Aware Date Table",
+                    "language": "dax",
+                    "code": "DateTable =\nADDCOLUMNS(\n    CALENDAR(DATE(2018, 4, 1), DATE(2026, 3, 31)),\n\n    -- Standard calendar columns\n    \"Year\",        YEAR([Date]),\n    \"MonthNumber\", MONTH([Date]),\n    \"MonthName\",   FORMAT([Date], \"MMMM\"),\n    \"Quarter\",     \"Q\" & QUARTER([Date]),\n\n    -- Indian Financial Year columns (FY starts 1 April)\n    \"FY Year\",\n        IF(\n            MONTH([Date]) >= 4,\n            \"FY \" & YEAR([Date]) & \"-\" & RIGHT(YEAR([Date])+1, 2),\n            \"FY \" & YEAR([Date])-1 & \"-\" & RIGHT(YEAR([Date]), 2)\n        ),\n\n    \"FY Quarter\",\n        SWITCH(TRUE(),\n            MONTH([Date]) >= 4 && MONTH([Date]) <= 6,  \"FY Q1 (Apr-Jun)\",\n            MONTH([Date]) >= 7 && MONTH([Date]) <= 9,  \"FY Q2 (Jul-Sep)\",\n            MONTH([Date]) >= 10 && MONTH([Date]) <= 12, \"FY Q3 (Oct-Dec)\",\n            \"FY Q4 (Jan-Mar)\"\n        ),\n\n    \"FY Month Number\",\n        IF(MONTH([Date]) >= 4,\n            MONTH([Date]) - 3,  -- April=1, May=2 ... Dec=9\n            MONTH([Date]) + 9   -- Jan=10, Feb=11, Mar=12\n        )\n)",
+                    "borderColor": "blue"
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "icon": "💡",
+                    "title": "What does FY Month Number mean?",
+                    "content": "It re-numbers months so April = 1, May = 2 ... all the way to March = 12. This lets you sort and display months in the correct financial year sequence rather than the standard Jan=1 calendar order — essential for correct FY slicers and charts."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 2: Financial Year-to-Date (FYTD) Sales"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This measure accumulates revenue from <strong>1st April</strong> of the current FY up to the selected date — equivalent to YTD but on the April–March cycle:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — FYTD Sales",
+                    "language": "dax",
+                    "code": "FY Sales YTD =\nCALCULATE(\n    [Total Sales],\n    DATESYTD(DateTable[Date], \"03-31\")\n)\n\n-- \"03-31\" tells DAX: the year ends on 31 March,\n-- so accumulate from 1 April instead of 1 January.",
+                    "borderColor": "blue"
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 3: Previous Financial Year Sales"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Returns the total sales for the same period in the previous FY. Three methods — choose based on your scenario:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — Previous FY (3 Methods)",
+                    "language": "dax",
+                    "code": "-- Method A: SAMEPERIODLASTYEAR (simplest, FY-slicer compatible)\nPY FY Sales =\nCALCULATE(\n    [Total Sales],\n    SAMEPERIODLASTYEAR(DateTable[Date])\n)\n\n-- Method B: PREVIOUSYEAR with fiscal year-end date\nPY FY Sales (Full Year) =\nCALCULATE(\n    [Total Sales],\n    PREVIOUSYEAR(DateTable[Date], \"03-31\")\n)\n\n-- Method C: DATEADD (most flexible)\nPY FY Sales (DATEADD) =\nCALCULATE(\n    [Total Sales],\n    DATEADD(DateTable[Date], -1, YEAR)\n)",
+                    "borderColor": "blue"
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 4: FY Year-over-Year Growth % (Production-Ready)"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The complete, error-safe FY YoY Growth measure — handles missing prior year data and division by zero:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — FY YoY Growth % (Final)",
+                    "language": "dax",
+                    "code": "FY YoY Growth % =\nVAR CurrentFYSales =\n    CALCULATE(\n        [Total Sales],\n        DATESYTD(DateTable[Date], \"03-31\")\n    )\nVAR PreviousFYSales =\n    CALCULATE(\n        [Total Sales],\n        SAMEPERIODLASTYEAR(DATESYTD(DateTable[Date], \"03-31\"))\n    )\nRETURN\n    IF(\n        AND(\n            NOT(ISBLANK(PreviousFYSales)),\n            PreviousFYSales <> 0\n        ),\n        DIVIDE(\n            CurrentFYSales - PreviousFYSales,\n            PreviousFYSales\n        ),\n        BLANK()\n    )",
+                    "borderColor": "amber"
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 5: Real-World Example — FY 2023-24 vs FY 2024-25"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Here is how the numbers work in practice with a sample sales dataset:"
+                  },
+                  {
+                    "type": "table",
+                    "title": "FY 2023-24 vs FY 2024-25 Comparison",
+                    "headers": ["FY Month", "Month", "FY 2023-24 Sales", "FY 2024-25 Sales", "YoY %"],
+                    "rows": [
+                      ["FY Month 1", "April", "₹42,00,000", "₹51,00,000", "+21.4%"],
+                      ["FY Month 2", "May", "₹38,00,000", "₹44,50,000", "+17.1%"],
+                      ["FY Month 3", "June", "₹45,00,000", "₹52,00,000", "+15.6%"],
+                      ["FY Month 4", "July", "₹50,00,000", "₹57,00,000", "+14.0%"],
+                      ["FY Month 5", "August", "₹48,00,000", "₹55,00,000", "+14.6%"],
+                      ["FY Month 6", "September", "₹55,00,000", "₹65,00,000", "+18.2%"],
+                      ["FY Month 12", "March", "₹5,40,00,000 (FY Total)", "₹6,48,00,000 (FY Total)", "+20.0%"]
+                    ]
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 6: Create a Financial Year Slicer"
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Insert a Slicer visual on your report page",
+                        "description": "From the Visualizations pane, click the Slicer icon."
+                      },
+                      {
+                        "title": "Drag DateTable[FY Year] into the slicer field well",
+                        "description": "This shows options like FY 2022-23, FY 2023-24, FY 2024-25 — exactly as used in Indian business reporting."
+                      },
+                      {
+                        "title": "Add a second FY Quarter slicer",
+                        "description": "Use DateTable[FY Quarter] to let users drill into Q1 (Apr-Jun), Q2 (Jul-Sep), Q3 (Oct-Dec), Q4 (Jan-Mar) of any selected FY."
+                      },
+                      {
+                        "title": "Sort FY Quarter by FY Month Number",
+                        "description": "In the Date Table, set Sort By Column for FY Quarter → FY Month Number. Without this, Power BI shows Q4 (Jan) before Q1 (Apr) alphabetically."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Complete FY Measures Reference Card"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "All the Financial Year measures you need — copy and paste directly into Power BI:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "DAX — Complete Indian FY Reference",
+                    "language": "dax",
+                    "code": "-- ═══════════════════════════════════════════════════════\n-- COMPLETE INDIAN FY (APRIL-MARCH) MEASURES\n-- Ivy Professional School | www.ivyproschool.com\n-- ═══════════════════════════════════════════════════════\n\n-- 1. Base measure\nTotal Sales = SUM(SalesData[Revenue])\n\n-- 2. Financial Year-to-Date Sales\nFY Sales YTD =\n    CALCULATE([Total Sales], DATESYTD(DateTable[Date], \"03-31\"))\n\n-- 3. Previous Financial Year same period\nPY FY Sales =\n    CALCULATE(\n        [Total Sales],\n        SAMEPERIODLASTYEAR(DATESYTD(DateTable[Date], \"03-31\"))\n    )\n\n-- 4. FY YoY Growth % (production-ready)\nFY YoY Growth % =\nVAR CurrFY = [FY Sales YTD]\nVAR PrevFY = [PY FY Sales]\nRETURN\n    IF(\n        AND(NOT(ISBLANK(PrevFY)), PrevFY <> 0),\n        DIVIDE(CurrFY - PrevFY, PrevFY),\n        BLANK()\n    )\n\n-- 5. Full previous FY total (Apr 1 to Mar 31)\nFull PY FY Sales =\n    CALCULATE([Total Sales], PREVIOUSYEAR(DateTable[Date], \"03-31\"))\n\n-- 6. FY Growth vs full prior year\nFY YoY vs Full PY % =\nVAR CurrFY = [Total Sales]\nVAR PrevFY = [Full PY FY Sales]\nRETURN\n    IF(\n        AND(NOT(ISBLANK(PrevFY)), PrevFY <> 0),\n        DIVIDE(CurrFY - PrevFY, PrevFY),\n        BLANK()\n    )",
+                    "borderColor": "amber"
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "✅",
+                    "title": "Sort FY Quarter correctly:",
+                    "content": "In Power BI Desktop, go to your Date Table → click the FY Quarter column → Modeling tab → Sort By Column → select FY Month Number. This ensures Q1 (April) always appears before Q4 (January) in every visual and slicer on your dashboard."
+                  }
+                ]
               }
             ],
             "troubleshooting": {
@@ -434,7 +622,8 @@
                 { "item": "Format Correctly", "text": "Set YoY measure format to Percentage in Measure Tools" },
                 { "item": "Handle Edge Cases", "text": "Use DIVIDE() and IF(ISBLANK()) for robust formulas" },
                 { "item": "Visualize Clearly", "text": "Line and Clustered Column Chart for YoY comparisons" },
-                { "item": "Add KPI Cards", "text": "Highlight growth vs targets for executive dashboards" }
+                { "item": "Add KPI Cards", "text": "Highlight growth vs targets for executive dashboards" },
+                { "item": "Indian FY Support", "text": "Use DATESYTD with '03-31' and add FY Year/Quarter columns" }
               ],
               "finalNote": "Remember: The goal is actionable insight, not just a formula. If your YoY chart does not make the business story clearer, simplify the visualization.",
               "finalParagraph": "By following this comprehensive guide, you will be able to create YoY growth dashboards that not only look professional but also drive meaningful business decisions. Start with SAMEPERIODLASTYEAR, gather feedback, and gradually tackle more complex time intelligence patterns."

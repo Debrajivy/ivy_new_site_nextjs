@@ -210,10 +210,12 @@ const Partners = () => {
                 >
                   <Card key={event.id} className="overflow-hidden border-none shadow-md">
                     <div>
-                      <img
-                        src={event.image.src}
+                      <Image
+                        src={event.image}
                         alt={`Training at ${event.company}`}
                         className="w-full object-cover"
+                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     </div>
                     <CardContent className="p-4">

@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Award, Users } from 'lucide-react';
 import { CheckCircle } from "lucide-react"
 
-import ratingIcon from '@/assests/rating.png';
 import { useRouter } from 'next/navigation';
 import AutpPlayYoutube from '../AutoPlayYoutube';
 import Link from 'next/link';
@@ -137,15 +136,13 @@ const Hero = () => {
           {/* Left Column - Video and Content */}
           <div className="w-full lg:w-1/2 flex flex-col">
             {/* YouTube Video */}
-            <div className="relative rounded-xl overflow-hidden shadow-lg w-full h-0 pb-[56.25%] lg:pb-[65%]">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/3uHQEQ65yJM?autoplay=1&mute=1&loop=1&playlist=3uHQEQ65yJM"
-                title="Ivy Professional School Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+            <AutpPlayYoutube
+              id="3uHQEQ65yJM"
+              title="Ivy Professional School Video"
+              className="rounded-xl shadow-lg w-full"
+              aspect={16 / 9}
+              delay={1200}
+            />
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 mt-6">
