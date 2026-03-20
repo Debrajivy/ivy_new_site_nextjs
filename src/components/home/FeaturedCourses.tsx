@@ -21,6 +21,7 @@ import DV from "@/assests/DV.webp";
 import CDI from "@/assests/CDI.webp";
 import CDEI from "@/assests/CDEI.webp";
 import DSPAP from "@/assests/DSPAP.webp";
+import AIE from "@/assests/AIE.webp";
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import DSMAI from "@/assests/ML.webp";
@@ -237,7 +238,26 @@ const featuredCourses: Course[] = [
       "Modeling",
       "ML"
     ]
-  }
+  },
+  // {
+  //   id: '11',
+  //   title: "AI for Entrepreneurs",
+  //   description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
+  //   image: AIE,
+  //   category: "Data Science",
+  //   students: 430,
+  //   duration: "4 months",
+  //   rating: 4.8,
+  //   reviewCount: 109,
+  //   isFeatured: true,
+  //   slug: "ai-for-entrepreneurs-course",
+  //   keyFeatures: [
+  //     "Stats(recorded),",
+  //     "Python",
+  //     "Modeling",
+  //     "ML"
+  //   ]
+  // }
 
 
 

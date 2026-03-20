@@ -24,7 +24,7 @@ const faculty: Faculty[] = [
     name: "Prateek Agarwal",
     position: "Founder, Ivy Pro School | Time2Justice",
     expertise: "Consulting, Analytics, Data Science",
-    experience: "16+ years",
+    experience: "20+ years",
     previousCompanies: ["Worked with 50+ global firms (IIT KGP, IIM Kolkata, IIT Delhi – trained students)"],
     image: PrateekAgarwal
   },
@@ -33,7 +33,7 @@ const faculty: Faculty[] = [
     name: " Eeshani Agrawal",
     position: "Co Founder, Ivy Pro School",
     expertise: "Data Consulting, Training, Analytics Strategy",
-    experience: "16+ years",
+    experience: "20+ years",
     previousCompanies: ["Top IITs, IIMs, ISI; 9,000+ professionals trained"],
     image:eeshani
   },

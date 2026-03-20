@@ -27,6 +27,14 @@ import {
   ChevronDown,
   GraduationCap,
 } from "lucide-react";
+
+const LinkedInSVG = ({ className }: { className?: string }) => (
+  <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
 import ivy from "@/assests/ivy.png";
 import PrateekAgarwal from "@/assests/pratilk.webp";
 import eeshani from "@/assests/eeshani.webp";
@@ -301,6 +309,38 @@ export default function BestAITools2026Page() {
                 <div className="text-[10px] text-white/50 font-medium uppercase tracking-wide">{s.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── Authority Strip — after title, above content ── */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-6 pb-0">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-6 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-xl px-4 sm:px-5 py-3">
+          <div className="flex items-center gap-2">
+            <Shield className="h-4 w-4 text-blue-600 flex-shrink-0" />
+            <span className="text-xs font-bold text-blue-900 uppercase tracking-wide">Authored by Ivy Pro School Founders</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 sm:gap-5">
+            <div className="flex items-center gap-2">
+              <Image src={PrateekAgarwal} alt="Prateek Agarwal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border border-blue-200" />
+              <div className="flex items-center gap-1">
+                <span className="text-xs font-semibold text-gray-900">Prateek Agarwal</span>
+                <span className="text-xs text-gray-500"> · 20+ yrs AI/ML Leader</span>
+                <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" title="View LinkedIn Profile" className="ml-1 text-blue-600 hover:text-blue-800">
+                  <LinkedInSVG className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </div>
+            {/* <div className="flex items-center gap-2">
+              <Image src={eeshani} alt="Eeshani Agrawal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border border-orange-200" />
+              <div className="flex items-center gap-1">
+                <span className="text-xs font-semibold text-gray-900">Eeshani Agrawal</span>
+                <span className="text-xs text-gray-500"> · 20+ yrs Data/AI Consultant</span>
+                <a href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer" title="View LinkedIn Profile" className="ml-1 text-blue-600 hover:text-blue-800">
+                  <LinkedInSVG className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -666,8 +706,8 @@ export default function BestAITools2026Page() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { name: "Prateek Agarwal", role: "Co-Founder, Ivy Pro School", exp: "Former Google | 15+ Years in AI & Data", img: PrateekAgarwal },
-              { name: "Eeshani Agarwal", role: "Co-Founder, Ivy Pro School", exp: "Former Microsoft | AI Strategy Expert", img: eeshani },
+              { name: "Prateek Agarwal", role: "Founder, Ivy Pro School", exp: "20+ yrs AI/ML leader · implements scalable systems, consults strategy", img: PrateekAgarwal },
+              { name: "Eeshani Agrawal", role: "Co-Founder, Ivy Pro School", exp: "20+ yrs data/AI consultant · implements analytics, advises enterprises", img: eeshani },
             ].map((f, i) => (
               <div key={i} className="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
                 <Image src={f.img} alt={f.name} width={44} height={44} className="rounded-full object-cover flex-shrink-0" />
