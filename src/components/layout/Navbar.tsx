@@ -26,6 +26,7 @@ import BA from "@/assests/BA.webp"
 import DV from "@/assests/DV.webp"
 import CDI from "@/assests/CDI.webp"
 import AIPM from "@/assests/AIPM.webp"
+import AIE from "@/assests/AIE.webp";
 import icon from "../../assests/icon.webp"
 
 const courseCategories = {
@@ -117,6 +118,15 @@ const courseCategories = {
       href: "/courses/no-upfront-fees-data-science-and-ml-course",
       description: "Become job-ready with ML, DL, Python, and visualization tools",
       image: ML,
+    },
+  ],
+
+  "AI for Entrepreneurs": [
+    {
+      title: "AI for Entrepreneurs",
+      href: "/courses/ai-for-entrepreneurs-course",
+      description: "Learn to leverage AI for entrepreneurial success",
+      image: AIE,
     },
   ],
 
