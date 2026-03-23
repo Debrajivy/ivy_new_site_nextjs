@@ -321,6 +321,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                             course.title === "Data Engineering Course in Delhi" ?
                               "Upon successful completion, learners receive a professional certification from Ivy Professional School. The certification validates job-ready data engineering skills and enhances employability."
                               :
+                              course.title === "AI for Entrepreneurs" ? "This certification validates your ability to strategically implement AI automation and no-code solutions to scale business operations and drive exponential growth." :
                               course.title === "Data Engineering Course in Bangalore" ?
                                 "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens job profiles" :
                                 course.title === "Data Engineering Course in Mumbai" ?
@@ -424,7 +425,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                             course.title === "Data Analytics and Generative AI Course" ? Dsvc :
                               course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Pune" ? Davc :
                                 course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
-                                  course.title === "AI for Product Managers" ? Pmc :
+                                  course.title === "AI for Product Managers"  || course.title === "AI for Entrepreneurs" ? Pmc :
                                     course.title === "AI and Machine Learning Course" ? AIML :
                                       course.title === "Data science course (Pay after Placement)" ? PAPC : ""
                     }

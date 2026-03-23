@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Users, Clock, Star, ChevronUp, ChevronDown, ChevronRight, CheckCircle } from 'lucide-react'; // Added CheckCircle for bullet points
 import webp1 from "@/assests/webp1.webp";
 import webp2 from "@/assests/webp2.webp";
@@ -57,6 +58,7 @@ const featuredCourses: Course[] = [
     keyFeatures: [
       "20+ real-life products scenarios",
       "Industry-Focused Tools: Learn tools like PromptLayer, AI Agents, LangChain, Firebase Studio.",
+      "Will I get a certificate after the course? Yes, upon completion.",
     ]
   },
   {
@@ -74,7 +76,8 @@ const featuredCourses: Course[] = [
     keyFeatures: [
       "20+ real-life project",
       "Live doubt-clearing sessions",
-      "Learn Machine Learning, Deep Learning, Langchain, RAG, Transformer, LLM"
+      "Learn Machine Learning, Deep Learning, Langchain, RAG, Transformer, LLM",
+      "Will I get a certificate after the course? Yes, upon completion.",
     ]
   },
   // {
@@ -239,25 +242,25 @@ const featuredCourses: Course[] = [
       "ML"
     ]
   },
-  // {
-  //   id: '11',
-  //   title: "AI for Entrepreneurs",
-  //   description: "Become job-ready with Excel, SQL, ML, R, Python, and visualization tools",
-  //   image: AIE,
-  //   category: "Data Science",
-  //   students: 430,
-  //   duration: "4 months",
-  //   rating: 4.8,
-  //   reviewCount: 109,
-  //   isFeatured: true,
-  //   slug: "ai-for-entrepreneurs-course",
-  //   keyFeatures: [
-  //     "Stats(recorded),",
-  //     "Python",
-  //     "Modeling",
-  //     "ML"
-  //   ]
-  // }
+  {
+    id: '11',
+    title: "AI for Entrepreneurs",
+    description: "Automate, Analyze, and Scale Your Business with AI",
+    image: AIE,
+    category: "New Course",
+    students:100 ,
+    duration: "8 weeks",
+    rating: 4.8,
+    reviewCount:90,
+    isFeatured: true,
+    slug: "ai-for-entrepreneurs-course",
+    keyFeatures: [
+      "10+ Business Automation Projects",
+      "Hands-on No-Code AI Tool Building ",
+      "Master Claude, Gemini, Grok, and Automation Tools",
+      
+    ]
+  }
 
 
 
@@ -434,6 +437,8 @@ const FeaturedCourses = () => {
             </Button>
           </div>
         )}
+
+        
       </div>
     </section>
   );

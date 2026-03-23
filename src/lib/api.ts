@@ -8990,14 +8990,14 @@ const courses: Course[] = [
     reviewCount: 5567,
     isFeatured: true,
     slug: "ai-for-entrepreneurs-course",
-    longDescription: "This Gen AI course teaches you programming fundamentals, introduces you to generative AI and machine learning, and helps you build advanced Gen AI apps with solid practical applications. For instance, you will build a chatbot that can converse like humans, develop an application that automates social media posting, and build an AI assistant that combines text, image, and voice generation.\n\nThis will not only help you gain practical experience but also build a solid portfolio that showcases your skills and expertise to employers. This way, the 18-week course will help you become a Gen AI expert and increase your chances of getting high-paying jobs. So, the opportunities are endless."
+    longDescription: "This AI for Entrepreneurs course, designed specifically for business owners and traditional industry leaders, equips you with the skills to automate, analyze, and scale your business using cutting-edge AI. You will learn to move beyond the hype and identify real AI opportunities for traditional businesses, from manufacturing to e-commerce.\n\nThe curriculum is structured into key strategic sections, covering AI Productivity, Marketing Acceleration, Product Studio (Visuals), Automation for Operations, Data Intelligence, and No-Code Tool Building. Whether you are a business owner looking to optimize overhead or an innovator aiming to disrupt your niche, this program empowers you to turn AI concepts into a concrete business roadmap."
     , outcomes: [
-      "Understand the foundations of Gen AI, ML, and LLMs through hands-on coding and real-world examples",
-      "Build cutting-edge Gen AI apps using LangChain, ChatGPT, DALL·E, Whisper, and other advanced tools",
-      "Design intelligent systems that generate text, images, audio, and automate business workflows",
-      "Deploy end-to-end AI applications using Transformer models, RAG, and cloud platforms like Azure",
-      "Work on 5+ capstone projects and build a strong portfolio that showcases real-world Gen AI skills",
-      "Earn prestigious IIT certifications and receive 1:1 mentorship and career guidance"
+      "Master the AI Shift: Understand the AI wave and identify specific opportunities for traditional businesses while debunking common AI misconceptions.",
+      "Optimize Business Productivity: Automate business communication, research, analysis, and meeting documentation to reclaim your time.",
+      "Accelerate Marketing & Sales: Use AI for outbound messaging, competitor intelligence, and creating high-converting marketing loops.",
+      "Launch an AI Product Studio: Master AI-driven product photography, reel generation, and automated catalog creation to lower content costs.",
+      "Automate Operations & Support: Build workflows for customer support automation and business process optimization using no-code frameworks.",
+      "Build Custom AI Tools: Participate in a hands-on \"No-Coding Workshop\" to build your own AI software or tool tailored to your business needs."
     ],
     prerequisites: [
       "Familiarity with basic digital tools and online platforms.",
@@ -9009,70 +9009,94 @@ const courses: Course[] = [
     curriculum: [
       {
         id: "m1",
-        title: "GenAI App Builder - Foundation Certificate Program",
-        duration: "24 hrs",
+        title: "The AI Shift for Traditional Businesses",
+        duration: "2 hrs",
         topics: [
-          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
-          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
-          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
-          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
-          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
-          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
-          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
-          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+          { id: "t1", title: "Understanding the AI Wave and opportunities for traditional businesses.", duration: "" },
+          { id: "t2", title: "Sector-specific AI applications for Manufacturing and SMEs.", duration: "" },
+          { id: "t3", title: "Debunking common misconceptions about AI in the business world.", duration: "" },
+          { id: "t4", title: "Hands-On: Identify the AI Shift potential within your specific industry.", duration: "" }
         ]
       },
       {
         id: "m2",
-        title: "Advanced GenAI and Machine Learning",
-        duration: "24 hrs",
+        title: "AI Productivity for Entrepreneurs",
+        duration: "3 hrs",
         topics: [
-          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
-          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
-          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
-          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
-          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
-          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
-          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+          { id: "t1", title: "Streamlining business communication and professional networking.", duration: "" },
+          { id: "t2", title: "AI-driven research and deep-dive market analysis.", duration: "" },
+          { id: "t3", title: "Automating meeting productivity and action item tracking.", duration: "" },
+          { id: "t4", title: "High-speed document creation and business reporting.", duration: "" }
         ]
       },
       {
         id: "m3",
-        title: "Advanced AI Integration and Multimodal Applications",
-        duration: "30 hrs",
+        title: "AI Marketing and Sales Acceleration",
+        duration: "3 hrs",
         topics: [
-          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
-          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
-          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
-          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
-          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
-          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
-          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
-          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
-          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+          { id: "t1", title: "Crafting AI-powered brand messaging and positioning.", duration: "" },
+          { id: "t2", title: "Conducting competitor intelligence using advanced AI prompts.", duration: "" },
+          { id: "t3", title: "Building automated systems for marketing lead generation.", duration: "" }
         ]
       },
       {
         id: "m4",
-        title: "Mastering Multimodal Fusion and GenAI Frameworks",
-        duration: "14 hrs",
+        title: "AI Product Studio",
+        duration: "3 hrs",
         topics: [
-          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
-          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
-          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
-          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
-          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
-          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+          { id: "t1", title: "Understanding why visual marketing is the new competitive edge.", duration: "" },
+          { id: "t2", title: "Establishing a professional AI product photography workflow.", duration: "" },
+          { id: "t3", title: "Generating high-engagement AI reels for social media platforms.", duration: "" },
+          { id: "t4", title: "Automating AI catalog creation and product descriptions.", duration: "" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "AI Automation for Business Operations",
+        duration: "3 hrs",
+        topics: [
+          { id: "t1", title: "Mastering automation basics and trigger-action workflows.", duration: "" },
+          { id: "t2", title: "Setting up automated customer support and inquiry handling.", duration: "" },
+          { id: "t3", title: "Streamlining back-office invoice processing and data entry.", duration: "" },
+          { id: "t4", title: "Designing complex workflows using Claude and G-work.", duration: "" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "AI Data Intelligence",
+        duration: "2 hrs",
+        topics: [
+          { id: "t1", title: "Utilizing AI-assisted analytics for business intelligence.", duration: "" },
+          { id: "t2", title: "Leveraging Gemini, Grok, and Stitch for data-driven insights.", duration: "" },
+          { id: "t3", title: "Customizing AI dashboards to monitor business health.", duration: "" },
+          { id: "t4", title: "Hands-On Lab: Uploading and analyzing sales data via Google Sheets AI.", duration: "" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "Build Your Own AI Tool (No-Code Workshop)",
+        duration: "3 hrs",
+        topics: [
+          { id: "t1", title: "Adopting the mindset of AI as your personal software developer.", duration: "" },
+          { id: "t2", title: "Working with Gemini Canvas to build custom business applications.", duration: "" },
+          { id: "t3", title: "Hands-on projects to create a tailored tool for your unique needs.", duration: "" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "Building Your AI Roadmap",
+        duration: "1 hrs",
+        topics: [
+          { id: "t1", title: "Systematically identifying key problems in your current business model.", duration: "" },
+          { id: "t2", title: "Developing a strategic implementation plan for long-term scaling.", duration: "" },
+          { id: "t3", title: "Final project: Presenting your business-specific AI Roadmap.", duration: "" }
         ]
       }
     ]
 
 
     ,
-
-
-
-    projects: [
+        projects: [
       {
         id: "p1",
         title: "Employee Attrition Prediction",

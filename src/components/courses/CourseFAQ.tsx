@@ -272,6 +272,97 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
+
+  "AI for Entrepreneurs": {
+    "categories": [
+      { "id": "program", "name": "Program" },
+      { "id": "eligibility", "name": "Eligibility" },
+      { "id": "business-impact", "name": "Business Impact" },
+      { "id": "automation-tools", "name": "Automation & Tools" },
+      { "id": "projects", "name": "Projects" },
+      { "id": "no-code-dev", "name": "No-Code Development" },
+      { "id": "certification", "name": "Certification" },
+      { "id": "support", "name": "Support" },
+      { "id": "roi-growth", "name": "ROI & Growth" }
+    ],
+    "faqs": [
+      {
+        "question": "What is the duration and format of the AI for Entrepreneurs course?",
+        "answer": "The course is an 8-week intensive program featuring 10+ business automation projects. It offers a blended learning model with live expert-led sessions and hands-on workshops designed for busy business owners.",
+        "category": "program"
+      },
+      {
+        "question": "What is AI for Entrepreneurs and why is it essential for business owners today?",
+        "answer": "It is a strategic program that teaches business leaders how to automate, analyze, and scale operations using AI. It is essential because it helps traditional businesses reduce overhead, reclaim time, and compete with tech-driven disruptors.",
+        "category": "program"
+      },
+      {
+        "question": "Do I need coding skills to build AI tools in this course?",
+        "answer": "No. The course features a dedicated 'No-Coding Workshop' where you will learn to build custom AI software and tools tailored to your business needs using low-code and no-code frameworks.",
+        "category": "no-code-dev"
+      },
+      {
+        "question": "Which AI models and tools are covered in the curriculum?",
+        "answer": "You will master high-performance LLMs like Claude, Gemini, and Grok, along with specialized automation tools for marketing, operations, and data intelligence.",
+        "category": "automation-tools"
+      },
+      {
+        "question": "How does this course help with Marketing and Sales acceleration?",
+        "answer": "You will learn to build high-converting marketing loops, automate outbound messaging, and use AI for deep competitor intelligence to stay ahead of the market.",
+        "category": "business-impact"
+      },
+      {
+        "question": "Can traditional industries like manufacturing or retail benefit from this course?",
+        "answer": "Absolutely. The curriculum is specifically designed to help traditional industry leaders identify real AI opportunities—from automating supply chain reporting to AI-driven product photography.",
+        "category": "eligibility"
+      },
+      {
+        "question": "What is the 'AI Product Studio' module?",
+        "answer": "This module teaches you to use AI for automated catalog creation, reel generation, and professional-grade product photography, significantly lowering your content production costs.",
+        "category": "business-impact"
+      },
+      {
+        "question": "What kind of projects will I work on during the 8 weeks?",
+        "answer": "You will complete 10+ business automation projects, including customer support automation, automated meeting documentation, and a final project building your own AI-based business tool.",
+        "category": "projects"
+      },
+      {
+        "question": "How does AI help in reducing business overhead?",
+        "answer": "By automating routine tasks like business communication, research, and operational workflows, AI allows entrepreneurs to scale their output without significantly increasing headcount.",
+        "category": "roi-growth"
+      },
+      {
+        "question": "Will I receive a certificate after completing the program?",
+        "answer": "Yes, you will receive an industry-recognized certification from Ivy Professional School, validating your ability to implement AI-driven business transformations.",
+        "category": "certification"
+      },
+      {
+        "question": "Is there support available if I get stuck while building my AI tool?",
+        "answer": "Yes. You get 24x7 support via chat, email, and calls, plus 1:1 mentoring sessions with experts to help you troubleshoot your specific business automation builds.",
+        "category": "support"
+      },
+      {
+        "question": "Can I use the tools learned here to launch a new AI-based startup?",
+        "answer": "Definitely. The 'No-Coding Workshop' and 'Product Studio' modules provide the exact blueprint needed to prototype and launch AI-first products rapidly and cost-effectively.",
+        "category": "roi-growth"
+      },
+      {
+        "question": "What if I miss a live strategy session?",
+        "answer": "All sessions are recorded and uploaded to the Learning Management System (LMS), allowing you to catch up at your convenience without missing any strategic insights.",
+        "category": "support"
+      },
+      {
+        "question": "Is the course suitable for final-year students or only established business owners?",
+        "answer": "While designed for entrepreneurs, it is highly beneficial for motivated students or aspiring founders who want to build a business with an 'AI-first' foundation from day one.",
+        "category": "eligibility"
+      },
+      {
+        "question": "How does this course handle AI Data Intelligence?",
+        "answer": "The program covers how to use AI to analyze business data for better decision-making, helping you move from 'gut-feeling' to data-driven scaling strategies.",
+        "category": "business-impact"
+      }
+    ]
+  },
   "Data Science with Machine Learning & AI Certification": {
     categories: [
       { id: "program", name: "Program" },

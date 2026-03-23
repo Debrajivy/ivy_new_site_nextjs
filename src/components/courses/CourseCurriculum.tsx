@@ -116,6 +116,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     'Data Science with Machine Learning & AI Course in Mumbai': { courseFee: 56000, registration: 10000, emi: 5111, months: 9 },
     // Removed duplicate 'Data Analytics and Generative AI Course' key to fix error
     ' Data Engineering Course': { courseFee: 58500, registration: 10000, emi: 5389, months: 9 },
+    'AI for Entrepreneurs': { courseFee: 29900, registration: 14950, emi: 5389, months: 9 },
     'Data Engineering Course in Kolkata': { courseFee: 58500, registration: 10000, emi: 5389, months: 9 },
     'Data Engineering Course in Delhi': { courseFee: 58500, registration: 10000, emi: 5389, months: 9 },
     'Data Engineering Course in Bangalore': { courseFee: 58500, registration: 10000, emi: 5389, months: 9 },
@@ -348,32 +349,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                               <div className="bg-blue-50 p-4 rounded-lg">
                                 <h3 className="text-lg font-semibold text-gray-800 mb-2">Flexible Payment Options</h3>
                                 <div className="space-y-3">
-                                  <div className="flex justify-between items-center">
-
-                                    {
-                                      course.title != "AI for Product Managers" ?
-                                        <span className="text-sm font-medium text-gray-700">No Cost EMI</span>
-                                        :
-                                        <span className="text-sm font-medium text-gray-700">Installment available</span>
-                                    }
-
-                                    {
-                                      course.title == "AI for Product Managers" ?
-
-                                        <span className="text-lg font-semibold">₹{details.emi.toLocaleString()}/installment</span>
-                                        :
-                                        <span className="text-lg font-semibold">₹{details.emi.toLocaleString()}/mo</span>
-
-                                    }
-                                  </div>
-
-                                  {
-                                    course.title == "AI for Product Managers" ? <p className="text-xs text-gray-500">Pay in 2 installment* (plus GST)</p> :
-
-                                      <p className="text-xs text-gray-500">For {details.months} months* (excluding GST)</p>
-                                  }
-
-
+                                  <span className="text-sm font-medium text-gray-700">Installment available</span>
                                 </div>
                               </div>
                             </>

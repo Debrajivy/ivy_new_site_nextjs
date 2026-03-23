@@ -340,6 +340,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <span>
                   {course.title === "AI for Product Managers"
                     ? "720 students"
+                    :
+                    course.title ==="AI for Entrepreneurs" ? "100 students"
                     : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
                       ? "1220 students"
                       : course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
@@ -378,6 +380,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <Star size={16} className="mr-2" />
                 <span> {course.title === "AI for Product Managers"
                   ? "4.7 (195 reviews)"
+                  :course.title === "AI for Entrepreneurs" ? "4.8 (90 reviews)"
                   : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
                     ? "4.9 (209 reviews)"
                     : course.title === "Data Science with Machine Learning & AI Certification"
@@ -411,7 +414,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       course.title ===
                       "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ||
                       course.title === "Data Analytics and Generative AI Course" ||
-                      course.title === "AI for Product Managers" || course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" || course.title === "AI and Machine Learning Course"
+                      course.title === "AI for Product Managers" || course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" || course.title === "AI and Machine Learning Course" || course.title === "AI for Entrepreneurs"
                       ? "Ivy Professional School Certification"
                       : ""}
               </div>
@@ -553,7 +556,12 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
 
             <div className="flex flex-wrap items-center gap-4">
-              <Button
+
+
+              {
+                course.title !="AI for Entrepreneurs" ? 
+
+                <Button
                 variant="outline"
                 size="lg"
                 className="bg-white/10 text-white hover:bg-white/20"
@@ -613,12 +621,17 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   else if (course.title === "Data Engineering Course in Kolkata") {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/preview";
-                  }
+                  } 
                   window.open(syllabusUrl, "_blank");
                 }}
               >
                 Download Syllabus
               </Button>
+              :
+              null
+
+              }
+              
               {course.title === "Data Science with Machine Learning & AI Certification" ? (
                 <div
                   style={{
