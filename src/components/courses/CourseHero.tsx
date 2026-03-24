@@ -370,6 +370,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 {/* <span>{courseHours[course.title] || "225 Hours"}</span> */}
                 {course.title === "AI and Machine Learning Course"
                   ? "32 Hours" :
+                  course.title === "AI for Entrepreneurs" ? "24 Hours":
                   course.title === "Data Science with Machine Learning & AI Certification"
                     ? "232 Hours"
                     : course.title === "AI for Product Managers"

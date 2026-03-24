@@ -194,6 +194,12 @@ const allCourses = [
     description: "4-month program focused on mastering core AI and Machine Learning concepts through hands-on modeling and real-world applications.",
     image: CDI,
   },
+  {
+    title: "AI for Entrepreneurs",
+    href: "/courses/ai-for-entrepreneurs-course",
+    description: "Learn to leverage AI for entrepreneurial success",
+    image: AIE,
+  },
   // {
   //   title: "Data science course (Pay after Placement)",
   //   href: "/courses/no-upfront-fees-data-science-and-ml-course",

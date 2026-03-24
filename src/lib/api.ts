@@ -8975,7 +8975,7 @@ const courses: Course[] = [
     {
     id: '22',
     title: "AI for Entrepreneurs",
-    description: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks.",
+    description: "Master AI to automate operations, analyze data, and scale your business. Build 10+ no-code AI tools and launch your own AI Product Studio in 8 weeks.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
@@ -8990,14 +8990,14 @@ const courses: Course[] = [
     reviewCount: 5567,
     isFeatured: true,
     slug: "ai-for-entrepreneurs-course",
-    longDescription: "This AI for Entrepreneurs course, designed specifically for business owners and traditional industry leaders, equips you with the skills to automate, analyze, and scale your business using cutting-edge AI. You will learn to move beyond the hype and identify real AI opportunities for traditional businesses, from manufacturing to e-commerce.\n\nThe curriculum is structured into key strategic sections, covering AI Productivity, Marketing Acceleration, Product Studio (Visuals), Automation for Operations, Data Intelligence, and No-Code Tool Building. Whether you are a business owner looking to optimize overhead or an innovator aiming to disrupt your niche, this program empowers you to turn AI concepts into a concrete business roadmap."
+    longDescription: "Most AI courses are built for tech professionals. This one is built for you — the business owner, the trader, the manufacturer, the retailer who wants real results without the jargon. In just 20 hours, you will learn to use AI to create marketing content, automate daily operations, generate professional product visuals, and build your own AI tools — all without writing a single line of code. \n\n From ChatGPT to Zapier to vibe coding, every module is hands-on and immediately applicable to your business. You will walk away not just with knowledge, but with a clear 90-day AI roadmap tailored to your industry"
     , outcomes: [
-      "Master the AI Shift: Understand the AI wave and identify specific opportunities for traditional businesses while debunking common AI misconceptions.",
-      "Optimize Business Productivity: Automate business communication, research, analysis, and meeting documentation to reclaim your time.",
-      "Accelerate Marketing & Sales: Use AI for outbound messaging, competitor intelligence, and creating high-converting marketing loops.",
-      "Launch an AI Product Studio: Master AI-driven product photography, reel generation, and automated catalog creation to lower content costs.",
-      "Automate Operations & Support: Build workflows for customer support automation and business process optimization using no-code frameworks.",
-      "Build Custom AI Tools: Participate in a hands-on \"No-Coding Workshop\" to build your own AI software or tool tailored to your business needs."
+      "Understand AI for Your Business: Cut through the hype and identify exactly where AI can save time, reduce costs and grow revenue in your specific industry.",
+      " Boost Daily Productivity: Use ChatGPT, Claude and Gemini to write emails, proposals, SOPs and reports in minutes — not hours.",
+      "Drive Marketing & Sales with AI: Generate social media content, run competitor analysis, write sales scripts and launch campaigns — all using AI.",
+      " Create Stunning Product Visuals: Turn basic phone photos into studio-quality images, lifestyle shoots and product reels without hiring an agency.",
+      "Automate Your Operations: Build no-code workflows for customer support, lead management, invoice processing and meeting follow-ups.",
+      "Build Your Own AI Tool: Use vibe coding to create a custom AI tool for your business — a sales analyzer, complaint handler or proposal generator."
     ],
     prerequisites: [
       "Familiarity with basic digital tools and online platforms.",
