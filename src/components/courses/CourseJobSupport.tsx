@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, Briefcase, FileText, Users, Award, BarChart, GraduationCap } from 'lucide-react';
+import { CheckCircle, Briefcase, FileText, Users, Award, BarChart, GraduationCap, Zap, GitBranch, Headset, UserRound } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import certificate from "../../assests/certificate.webp";
 import smallibm from "../../assests/placement/IBM_MAIN.webp";
@@ -63,6 +62,7 @@ interface CourseJobSupportProps {
 }
 
 const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
+  const isAICourse = course.title === "AI for Entrepreneurs";
 
   if (!course.projects || course.projects.length === 0) {
     return null;
@@ -111,7 +111,282 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
     { name: 'Wipro', logo: smallwipro },
   ];
 
+  // Conditional rendering for AI for Entrepreneurs course
+  if (isAICourse) {
+    return (
+      <section style={{ marginTop: -10 }} className="py-5 bg-primary/5">
+        <div className="container mx-auto px-4">
+          {/* Header Section */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">How does Ivy Pro School help you implement AI in your business?</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              We don't just teach AI — we help you implement it. From your first class to your first live automation, our team supports you every step of the way.
+            </p>
+          </div>
 
+          {/* Tab Section for Implementation Support */}
+          <Tabs defaultValue="post-program" className="max-w-5xl mx-auto">
+            <TabsList className="flex w-full justify-center items-center overflow-x-auto pb-2 gap-4 no-scrollbar mb-8">
+              <TabsTrigger value="post-program" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
+                Post Program Support
+              </TabsTrigger>
+              <TabsTrigger value="implementation" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
+                AI Implementation Program
+              </TabsTrigger>
+              <TabsTrigger value="mentorship" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
+                AI Implementation Mentorship
+              </TabsTrigger>
+            </TabsList>
+
+            {/* Tab 1: Post Program Support */}
+            <TabsContent value="post-program" className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <FileText className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">90-Day AI Roadmap Support</h3>
+                        <p className="text-gray-600">
+                          Our team helps you execute your personalized AI roadmap — ensuring tools, workflows and automations are actually running in your business.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <Users className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Entrepreneur Community Access</h3>
+                        <p className="text-gray-600">
+                          Join an exclusive network of business owners implementing AI — share challenges, exchange ideas and grow together.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <Headset className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">AI Tool Helpdesk</h3>
+                        <p className="text-gray-600">
+                          Stuck setting up a tool or workflow? Our support team is available to troubleshoot and guide you through any implementation challenge.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <UserRound className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">1:1 Business Consultation</h3>
+                        <p className="text-gray-600">
+                          Get a dedicated session with an AI business expert to identify the highest ROI opportunities specific to your industry and business model.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+
+            {/* Tab 2: AI Implementation Program */}
+            <TabsContent value="implementation" className="space-y-8">
+              <div className="bg-white p-8 rounded-xl shadow-sm border border-primary/20">
+                <h3 className="text-2xl font-bold mb-2">AI Implementation Program</h3>
+                <p className="text-gray-600 mb-8">
+                  Not sure where to begin? Our AI Implementation Program is designed to help you apply every tool and workflow from the course directly into your business operations — with expert guidance at every step.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Left Column */}
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Tool Setup & Configuration</span>
+                        <p className="text-sm text-gray-600">ChatGPT and Claude setup for business use</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Workflow & Automation Support</span>
+                        <p className="text-sm text-gray-600">Building your first automation on Zapier or Make</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Tool Setup & Configuration</span>
+                        <p className="text-sm text-gray-600">Canva AI for product photos and reels</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Workflow & Automation Support</span>
+                        <p className="text-sm text-gray-600">Connecting tools across your business workflow</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Tool Setup & Configuration</span>
+                        <p className="text-sm text-gray-600">AI content generation for marketing</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Workflow & Automation Support</span>
+                        <p className="text-sm text-gray-600">Customer support automation setup</p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Right Column */}
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Tool Setup & Configuration</span>
+                        <p className="text-sm text-gray-600">Excel AI and Power BI for sales insights</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Workflow & Automation Support</span>
+                        <p className="text-sm text-gray-600">Invoice and lead management automation</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Tool Setup & Configuration</span>
+                        <p className="text-sm text-gray-600">Vibe coding tool deployment</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Workflow & Automation Support</span>
+                        <p className="text-sm text-gray-600">Testing and troubleshooting live workflows</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+
+            {/* Tab 3: AI Implementation Mentorship */}
+            <TabsContent value="mentorship" className="space-y-8">
+              <div className="bg-white p-8 rounded-xl shadow-sm border border-primary/20">
+                <h3 className="text-2xl font-bold mb-4">AI Implementation Mentorship</h3>
+                <p className="text-gray-600 mb-8">
+                  Get 1-on-1 sessions with AI business experts who have implemented AI across manufacturing, retail, e-commerce and service businesses.
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div className="border rounded-lg p-6 text-center bg-primary/5">
+                    <div className="font-bold text-4xl text-primary mb-2">20+</div>
+                    <p className="text-gray-600">Hours of implementation support</p>
+                  </div>
+                  <div className="border rounded-lg p-6 text-center bg-primary/5">
+                    <div className="font-bold text-4xl text-primary mb-2">8+</div>
+                    <p className="text-gray-600">Hands-on business exercises</p>
+                  </div>
+                  <div className="border rounded-lg p-6 text-center bg-primary/5">
+                    <div className="font-bold text-4xl text-primary mb-2">5+</div>
+                    <p className="text-gray-600">AI business expert mentors</p>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
+
+          {/* Hiring Partners Section */}
+          {/* <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-4 text-center">Which businesses have trained their teams in AI with Ivy Pro School?</h3>
+            <div style={{ backgroundColor: 'white' }} className="relative overflow-hidden h-28 w-screen -ml-[calc(50vw-50%)] logo-fade-mask">
+              <div className="absolute flex items-center animate-scroll-left space-x-4" style={{ width: '200%' }}>
+                {partners.concat(partners).map((partner, index) => (
+                  <div key={`first-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44">
+                    <Image
+                      width={100}
+                      height={100}
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="max-h-full max-w-full object-contain transition-all hover:opacity-90"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div style={{ backgroundColor: 'white' }} className="relative overflow-hidden h-28 w-screen -ml-[calc(50vw-50%)] -mt-8 logo-fade-mask">
+              <div className="absolute flex items-center animate-scroll-right space-x-4" style={{ width: '200%' }}>
+                {[...partners].reverse().concat([...partners].reverse()).map((partner, index) => (
+                  <div key={`second-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44">
+                    <Image
+                      loading="lazy"
+                      height={100}
+                      width={100}
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="max-h-full max-w-full object-contain transition-all hover:opacity-90"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div> */}
+        </div>
+        <style>{`
+          @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          @keyframes scroll-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+          .animate-scroll-left {
+            animation: scroll-left 40s linear infinite;
+          }
+          .animate-scroll-right {
+            animation: scroll-right 40s linear infinite;
+          }
+          .no-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `}</style>
+      </section>
+    );
+  }
+
+  // Original return for all other courses
   return (
     <section style={{ marginTop: -10 }} className="py-5 bg-primary/5">
       <div className="container mx-auto px-4">
@@ -124,13 +399,6 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
         </div>
 
         <Tabs defaultValue="placement" className="max-w-5xl mx-auto">
-          {/* <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="placement">Placement Services</TabsTrigger>
-            <TabsTrigger value="interview">Interview Preparation</TabsTrigger>
-            <TabsTrigger value="resume">Resume Building</TabsTrigger>
-          </TabsList> */}
-
-
           <TabsList
             className="flex w-full justify-center items-center overflow-x-auto pb-2 gap-4 no-scrollbar"
             style={{
@@ -250,7 +518,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
             <div style={{
               backgroundColor: '#ffffff',
               padding: '30px 20px',
-              boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1)', // Main container has light 3D look
+              boxShadow: '0 8px 30px rgba(0, 0, 0, 0.1)',
               borderRadius: '20px',
               margin: '40px',
               maxWidth: '1200px',
@@ -273,7 +541,6 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 gap: '40px',
                 alignItems: 'stretch'
               }}>
-                {/* Left Column: Description Boxes */}
                 <div style={{
                   flex: '1 1 500px',
                   display: 'flex',
@@ -409,7 +676,6 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                   </div>
                 </div>
 
-                {/* Right Column: Image and CTA Button */}
                 <div style={{
                   flex: '1 1 300px',
                   display: 'flex',
@@ -440,7 +706,6 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     }}
                   />
 
-                  {/* Corrected CTA Button using Tailwind to avoid Server Error */}
                   <a
                     href="/verify-certificate"
                     className="w-full py-4 text-white text-lg font-semibold rounded-lg text-center transition-all duration-200"
@@ -449,7 +714,6 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       boxShadow: '0 4px 14px 0 rgba(0, 173, 239, 0.39)',
                       display: 'block'
                     }}
-                    // Using CSS hover via Tailwind classes for server compatibility
                     onMouseEnter={undefined}
                   >
                     Verify Certificate
@@ -461,12 +725,10 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
             <div>
               <h3 className="text-2xl font-bold mb-4 text-center">Who are Ivy Pro School's hiring partners and where can I get placed?</h3>
 
-              {/* First row - full width container */}
-              {/* If you want NO FADE like the reference image, remove 'logo-fade-mask' class below */}
               <div style={{ backgroundColor: 'white' }} className="relative overflow-hidden h-28 w-screen -ml-[calc(50vw-50%)] logo-fade-mask">
-                <div className="absolute flex items-center animate-scroll-left space-x-4" style={{ width: '200%' }}> {/* Adjusted space-x back to 4 for balance */}
+                <div className="absolute flex items-center animate-scroll-left space-x-4" style={{ width: '200%' }}>
                   {partners.concat(partners).map((partner, index) => (
-                    <div key={`first-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44"> {/* Added specific h, w, and flex centering for uniform logo slots */}
+                    <div key={`first-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44">
                       <Image
                         width={100}
                         height={100}
@@ -480,12 +742,10 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 </div>
               </div>
 
-              {/* Second row - full width container */}
-              {/* If you want NO FADE like the reference image, remove 'logo-fade-mask' class below */}
               <div style={{ backgroundColor: 'white' }} className="relative overflow-hidden h-28 w-screen -ml-[calc(50vw-50%)] -mt-8 logo-fade-mask">
-                <div className="absolute flex items-center animate-scroll-right space-x-4" style={{ width: '200%' }}> {/* Adjusted space-x back to 4 for balance */}
+                <div className="absolute flex items-center animate-scroll-right space-x-4" style={{ width: '200%' }}>
                   {[...partners].reverse().concat([...partners].reverse()).map((partner, index) => (
-                    <div key={`second-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44"> {/* Added specific h, w, and flex centering for uniform logo slots */}
+                    <div key={`second-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44">
                       <Image
                         loading="lazy"
                         height={100}
