@@ -288,81 +288,170 @@ const courseData: { [key: string]: CourseFAQData } = {
     "faqs": [
       {
         "question": "What is the duration and format of the AI for Entrepreneurs course?",
-        "answer": "The course is an 8-week intensive program featuring 10+ business automation projects. It offers a blended learning model with live expert-led sessions and hands-on workshops designed for busy business owners.",
+        "answer": "The course is 20 hours, delivered through live online and classroom sessions across 8 modules designed specifically for business owners.",
         "category": "program"
       },
       {
         "question": "What is AI for Entrepreneurs and why is it essential for business owners today?",
-        "answer": "It is a strategic program that teaches business leaders how to automate, analyze, and scale operations using AI. It is essential because it helps traditional businesses reduce overhead, reclaim time, and compete with tech-driven disruptors.",
+        "answer": "It is a hands-on program that teaches business owners to use AI for marketing, operations, automation and decision-making — without any coding knowledge.",
         "category": "program"
       },
       {
-        "question": "Do I need coding skills to build AI tools in this course?",
-        "answer": "No. The course features a dedicated 'No-Coding Workshop' where you will learn to build custom AI software and tools tailored to your business needs using low-code and no-code frameworks.",
-        "category": "no-code-dev"
+        "question": "Is this an online or classroom program or both?",
+        "answer": "The program is available in both online and classroom formats, giving you the flexibility to choose what works best for your schedule.",
+        "category": "program"
       },
       {
-        "question": "Which AI models and tools are covered in the curriculum?",
-        "answer": "You will master high-performance LLMs like Claude, Gemini, and Grok, along with specialized automation tools for marketing, operations, and data intelligence.",
-        "category": "automation-tools"
-      },
-      {
-        "question": "How does this course help with Marketing and Sales acceleration?",
-        "answer": "You will learn to build high-converting marketing loops, automate outbound messaging, and use AI for deep competitor intelligence to stay ahead of the market.",
-        "category": "business-impact"
+        "question": "How is this AI course different from generic ChatGPT courses?",
+        "answer": "Unlike generic AI courses, this program is built exclusively for business owners — covering AI marketing, automation, product visuals, data intelligence and no-code tool building with real business applications.",
+        "category": "program"
       },
       {
         "question": "Can traditional industries like manufacturing or retail benefit from this course?",
-        "answer": "Absolutely. The curriculum is specifically designed to help traditional industry leaders identify real AI opportunities—from automating supply chain reporting to AI-driven product photography.",
+        "answer": "Absolutely — the program is specifically designed for traditional businesses including manufacturing, retail, trading, e-commerce and service businesses.",
         "category": "eligibility"
       },
       {
-        "question": "What is the 'AI Product Studio' module?",
-        "answer": "This module teaches you to use AI for automated catalog creation, reel generation, and professional-grade product photography, significantly lowering your content production costs.",
+        "question": "Is this program suitable for small businesses or only large enterprises?",
+        "answer": "This program is ideal for small and medium businesses — every tool and workflow taught is practical, affordable and immediately applicable for SMEs.",
+        "category": "eligibility"
+      },
+      {
+        "question": "Do I need a laptop to attend this course?",
+        "answer": "A laptop is recommended for the hands-on exercises.",
+        "category": "eligibility"
+      },
+      {
+        "question": "How does this course help with Marketing and Sales acceleration?",
+        "answer": "You will learn to generate social media content, run competitor analysis, write sales scripts and create ad campaigns — all using AI tools in minutes.",
         "category": "business-impact"
       },
       {
-        "question": "What kind of projects will I work on during the 8 weeks?",
-        "answer": "You will complete 10+ business automation projects, including customer support automation, automated meeting documentation, and a final project building your own AI-based business tool.",
+        "question": "What is the AI Product Studio module?",
+        "answer": "It teaches you to turn basic phone photos into studio-quality product images, lifestyle visuals and reels using AI — without hiring a photographer or designer.",
+        "category": "business-impact"
+      },
+      {
+        "question": "How does this course handle AI Data Intelligence?",
+        "answer": "You will learn to use AI to analyze your sales data, identify best-selling products, understand customer behavior and make faster, smarter business decisions.",
+        "category": "business-impact"
+      },
+      {
+        "question": "How quickly can I see results after implementing AI in my business?",
+        "answer": "Most participants start seeing results within the first week — from faster content creation to automated workflows running in their business.",
+        "category": "business-impact"
+      },
+      {
+        "question": "Can AI really work for traditional businesses in India?",
+        "answer": "Yes — businesses across manufacturing, retail and distribution in India are already using AI to cut costs, automate operations and grow faster.",
+        "category": "business-impact"
+      },
+      {
+        "question": "Which AI models and tools are covered in the curriculum?",
+        "answer": "The program covers ChatGPT, Claude, Gemini, Canva AI, Make, Power Automate, n8n, Excel AI, Power BI and several other business-focused AI tools.",
+        "category": "automation-tools"
+      },
+      {
+        "question": "Can I automate my business operations without any coding?",
+        "answer": "Yes — using no-code tools like Make, Power Automate and n8n, you will build live automations for customer support, invoicing, lead management and more without writing a single line of code.",
+        "category": "automation-tools"
+      },
+      {
+        "question": "Which automation tool is best suited for a small business in India?",
+        "answer": "Make and Power Automate are practical and affordable automation tools for small businesses — both are covered extensively in the program alongside n8n for more advanced workflows.",
+        "category": "automation-tools"
+      },
+      {
+        "question": "How do Make and Power Automate help in business automation?",
+        "answer": "They connect your existing apps and automate repetitive tasks — for example, automatically routing a customer complaint to the right team and sending an instant response.",
+        "category": "automation-tools"
+      },
+      {
+        "question": "What kind of AI tools will I build during this program?",
+        "answer": "You will build real tools like an AI Sales Analyzer, AI Proposal Generator, AI Complaint Handler and AI Marketing Generator — all tailored to your business.",
         "category": "projects"
       },
       {
-        "question": "How does AI help in reducing business overhead?",
-        "answer": "By automating routine tasks like business communication, research, and operational workflows, AI allows entrepreneurs to scale their output without significantly increasing headcount.",
-        "category": "roi-growth"
+        "question": "Can I use the AI tools I build during the course in my actual business?",
+        "answer": "Yes — every project is built around your real business needs so you can deploy and use them immediately after the session.",
+        "category": "projects"
+      },
+      {
+        "question": "Do I need coding skills to build AI tools in this course?",
+        "answer": "No coding is required — the entire program follows a no-code approach where you describe what you want and AI builds it for you.",
+        "category": "no-code-dev"
+      },
+      {
+        "question": "What is vibe coding and how does it help entrepreneurs?",
+        "answer": "Vibe coding means building software by describing its functionality to AI in plain language — making it possible for any business owner to create their own custom AI tools.",
+        "category": "no-code-dev"
+      },
+      {
+        "question": "Which platforms will I use to build AI tools without coding?",
+        "answer": "You will work with platforms like Replit, Bolt.new, Streamlit and Claude to build and deploy your own AI tools during the program.",
+        "category": "no-code-dev"
       },
       {
         "question": "Will I receive a certificate after completing the program?",
-        "answer": "Yes, you will receive an industry-recognized certification from Ivy Professional School, validating your ability to implement AI-driven business transformations.",
+        "answer": "Yes — you will receive an Ivy Pro School certificate upon successful completion of the AI for Entrepreneurs program.",
+        "category": "certification"
+      },
+      {
+        "question": "Is the Ivy Pro School AI certificate recognised by corporates?",
+        "answer": "Ivy Pro School is a trusted training partner for companies like Accenture, Tata Steel, HSBC and Cognizant — making the certification credible and recognised.",
+        "category": "certification"
+      },
+      {
+        "question": "Can I share my AI certification on LinkedIn?",
+        "answer": "Yes — your certificate can be shared directly on LinkedIn to showcase your AI skills and build credibility with partners, clients and investors.",
         "category": "certification"
       },
       {
         "question": "Is there support available if I get stuck while building my AI tool?",
-        "answer": "Yes. You get 24x7 support via chat, email, and calls, plus 1:1 mentoring sessions with experts to help you troubleshoot your specific business automation builds.",
+        "answer": "Yes — our AI Tool Helpdesk is available to help you troubleshoot and guide you through any implementation challenge during and after the program.",
         "category": "support"
-      },
-      {
-        "question": "Can I use the tools learned here to launch a new AI-based startup?",
-        "answer": "Definitely. The 'No-Coding Workshop' and 'Product Studio' modules provide the exact blueprint needed to prototype and launch AI-first products rapidly and cost-effectively.",
-        "category": "roi-growth"
       },
       {
         "question": "What if I miss a live strategy session?",
-        "answer": "All sessions are recorded and uploaded to the Learning Management System (LMS), allowing you to catch up at your convenience without missing any strategic insights.",
+        "answer": "All live sessions are recorded and available for lifetime access so you never miss out on any content.",
         "category": "support"
       },
       {
-        "question": "Is the course suitable for final-year students or only established business owners?",
-        "answer": "While designed for entrepreneurs, it is highly beneficial for motivated students or aspiring founders who want to build a business with an 'AI-first' foundation from day one.",
-        "category": "eligibility"
+        "question": "How long do I get post-program support after completing the course?",
+        "answer": "You receive 90 days of dedicated post-program support to ensure your AI tools and workflows are successfully running in your business.",
+        "category": "support"
       },
       {
-        "question": "How does this course handle AI Data Intelligence?",
-        "answer": "The program covers how to use AI to analyze business data for better decision-making, helping you move from 'gut-feeling' to data-driven scaling strategies.",
-        "category": "business-impact"
+        "question": "Is there a community of entrepreneurs I can connect with after the program?",
+        "answer": "Yes — you will get access to an exclusive WhatsApp entrepreneur community where you can share experiences, ask questions and grow together.",
+        "category": "support"
+      },
+      {
+        "question": "How does AI help in reducing business overhead?",
+        "answer": "AI automates repetitive tasks like customer support, invoicing and reporting — saving hours of manual work every day and significantly reducing operational costs.",
+        "category": "roi-growth"
+      },
+      {
+        "question": "Can I use the tools learned here to launch a new AI-based startup?",
+        "answer": "Absolutely — the no-code tool building and automation skills taught in this program give you everything you need to build and launch an AI-powered business.",
+        "category": "roi-growth"
+      },
+      {
+        "question": "How much time and money can AI realistically save my business?",
+        "answer": "Businesses implementing AI tools typically save 5-10 hours per week on manual tasks and reduce content and operational costs by up to 40%.",
+        "category": "roi-growth"
+      },
+      {
+        "question": "Is this AI program worth the investment for a small business in Kolkata?",
+        "answer": "Yes — the tools and automations you build during the program deliver immediate ROI, often paying back the program fee within the first month of implementation.",
+        "category": "roi-growth"
       }
     ]
   },
+
+
+
+
   "Data Science with Machine Learning & AI Certification": {
     categories: [
       { id: "program", name: "Program" },
@@ -1020,7 +1109,7 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
-"Data Science with Machine Learning & AI Course in Chennai": {
+  "Data Science with Machine Learning & AI Course in Chennai": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -1478,7 +1567,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-"Data Engineering Course in Delhi": {
+  "Data Engineering Course in Delhi": {
     categories: [
       { id: "program", name: "Program" },
       { id: "eligibility", name: "Eligibility" },
@@ -2022,469 +2111,469 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
-"Data Analytics With Visualization in Kolkata": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
+  "Data Analytics With Visualization in Kolkata": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
       { id: "data-analytics", name: "Data Analytics" },
-    { id: "job and career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" }
-  ],
-  faqs: [
-    {
-      question: "Who can join the Data Analytics course in Kolkata?",
-      answer: "This course is suitable for graduates, working professionals, commerce and management students, engineers, and individuals in Kolkata looking to build practical data analytics and reporting skills.",
-      category: "eligibility"
-    },
-    {
-      question: "Is this course appropriate for beginners with no analytics experience?",
-      answer: "Yes. The learning journey starts with foundational concepts and gradually progresses to applied analytics, making it accessible for beginners as well as professionals.",
-      category: "eligibility"
-    },
-    {
-      question: "What is the course duration for the Data Analytics program in Kolkata?",
-      answer: "The program usually takes 6 to 8 months to complete, depending on the selected batch, learning format, and pace of project work.",
-      category: "program"
-    },
-    {
-      question: "Are there flexible batch options available for learners in Kolkata?",
-      answer: "Yes. The course offers weekday, weekend, and evening batches to suit students and working professionals in Kolkata.",
-      category: "program"
-    },
-    {
-      question: "What analytics tools and techniques are included in the syllabus?",
-      answer: "Learners are trained in Excel, SQL, Python for analytics, Power BI or Tableau for dashboards, and statistical techniques used in business analytics.",
-      category: "data-science"
-    },
-    {
-      question: "Does the program emphasize practical learning?",
-      answer: "Yes. The curriculum includes hands-on assignments, data analysis projects, and a capstone project based on real-world business scenarios.",
-      category: "projects"
-    },
-    {
-      question: "Is career or placement support provided after course completion?",
-      answer: "Yes. Learners receive placement support including resume preparation, interview guidance, mock interviews, and career mentoring.",
-      category: "placement"
-    },
-    {
-      question: "Which career paths can I explore after completing the course?",
-      answer: "After completion, learners can pursue roles such as Data Analyst, Business Analyst, MIS Executive, Reporting Analyst, and entry-level analytics positions.",
-      category: "job and career"
-    },
-    {
-      question: "Will I receive a certificate after finishing the Data Analytics course?",
-      answer: "Yes. A Data Analytics certification from Ivy Professional School is awarded upon successful completion of the course and project requirements.",
-      category: "certification"
-    },
-    {
-      question: "How does this certification help in the job market?",
-      answer: "The certification demonstrates hands-on analytics skills and project exposure, making it valuable for employers in Kolkata and across India.",
-      category: "certification"
-    },
-    {
-      question: "What learning formats are available for this course in Kolkata?",
-      answer: "Learners can choose between classroom training, live online instructor-led sessions, or a hybrid learning model.",
-      category: "program"
-    },
-    {
-      question: "Are there any mandatory eligibility or academic requirements?",
-      answer: "There are no mandatory academic prerequisites. Learners from engineering, commerce, science, management, and non-technical backgrounds can enroll.",
-      category: "eligibility"
-    },
-    {
-      question: "What type of academic support is offered during the program?",
-      answer: "Learners receive ongoing support through doubt-clearing sessions, mentor guidance, feedback on assignments, and structured academic assistance.",
-      category: "support"
-    },
-    {
-      question: "Why choose this Data Analytics course in Kolkata?",
-      answer: "The course focuses on applied analytics, business-relevant use cases, guided mentorship, and career readiness rather than only theoretical learning.",
-      category: "data-analytics"
-    },
-    {
-      question: "Why choose this Data Analytics course in Kolkata?",
-      answer: "The course focuses on applied analytics, business-relevant use cases, guided mentorship, and career readiness rather than only theoretical learning.",
-      category: "program"
-    },
-    {
-      question: "Can this course support a transition into analytics roles?",
-      answer: "Yes. The program is designed to help learners from diverse backgrounds build analytics capabilities and transition into data-focused roles.",
-      category: "opportunities"
-    }
-  ]
-},
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who can join the Data Analytics course in Kolkata?",
+        answer: "This course is suitable for graduates, working professionals, commerce and management students, engineers, and individuals in Kolkata looking to build practical data analytics and reporting skills.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this course appropriate for beginners with no analytics experience?",
+        answer: "Yes. The learning journey starts with foundational concepts and gradually progresses to applied analytics, making it accessible for beginners as well as professionals.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the course duration for the Data Analytics program in Kolkata?",
+        answer: "The program usually takes 6 to 8 months to complete, depending on the selected batch, learning format, and pace of project work.",
+        category: "program"
+      },
+      {
+        question: "Are there flexible batch options available for learners in Kolkata?",
+        answer: "Yes. The course offers weekday, weekend, and evening batches to suit students and working professionals in Kolkata.",
+        category: "program"
+      },
+      {
+        question: "What analytics tools and techniques are included in the syllabus?",
+        answer: "Learners are trained in Excel, SQL, Python for analytics, Power BI or Tableau for dashboards, and statistical techniques used in business analytics.",
+        category: "data-science"
+      },
+      {
+        question: "Does the program emphasize practical learning?",
+        answer: "Yes. The curriculum includes hands-on assignments, data analysis projects, and a capstone project based on real-world business scenarios.",
+        category: "projects"
+      },
+      {
+        question: "Is career or placement support provided after course completion?",
+        answer: "Yes. Learners receive placement support including resume preparation, interview guidance, mock interviews, and career mentoring.",
+        category: "placement"
+      },
+      {
+        question: "Which career paths can I explore after completing the course?",
+        answer: "After completion, learners can pursue roles such as Data Analyst, Business Analyst, MIS Executive, Reporting Analyst, and entry-level analytics positions.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certificate after finishing the Data Analytics course?",
+        answer: "Yes. A Data Analytics certification from Ivy Professional School is awarded upon successful completion of the course and project requirements.",
+        category: "certification"
+      },
+      {
+        question: "How does this certification help in the job market?",
+        answer: "The certification demonstrates hands-on analytics skills and project exposure, making it valuable for employers in Kolkata and across India.",
+        category: "certification"
+      },
+      {
+        question: "What learning formats are available for this course in Kolkata?",
+        answer: "Learners can choose between classroom training, live online instructor-led sessions, or a hybrid learning model.",
+        category: "program"
+      },
+      {
+        question: "Are there any mandatory eligibility or academic requirements?",
+        answer: "There are no mandatory academic prerequisites. Learners from engineering, commerce, science, management, and non-technical backgrounds can enroll.",
+        category: "eligibility"
+      },
+      {
+        question: "What type of academic support is offered during the program?",
+        answer: "Learners receive ongoing support through doubt-clearing sessions, mentor guidance, feedback on assignments, and structured academic assistance.",
+        category: "support"
+      },
+      {
+        question: "Why choose this Data Analytics course in Kolkata?",
+        answer: "The course focuses on applied analytics, business-relevant use cases, guided mentorship, and career readiness rather than only theoretical learning.",
+        category: "data-analytics"
+      },
+      {
+        question: "Why choose this Data Analytics course in Kolkata?",
+        answer: "The course focuses on applied analytics, business-relevant use cases, guided mentorship, and career readiness rather than only theoretical learning.",
+        category: "program"
+      },
+      {
+        question: "Can this course support a transition into analytics roles?",
+        answer: "Yes. The program is designed to help learners from diverse backgrounds build analytics capabilities and transition into data-focused roles.",
+        category: "opportunities"
+      }
+    ]
+  },
 
-"Data Analytics With Visualization in Delhi": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "data-analytics", name: "Data Analytics" },
-    { id: "job and career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" }
-  ],
-  faqs: [
-    {
-      question: "Who should enroll in the Data Analytics course in Delhi?",
-      answer: "This Data Analytics course in Delhi is ideal for fresh graduates, working professionals, IT engineers, analysts, and career switchers who want to build a strong foundation in data analytics, business intelligence, and data-driven decision-making.",
-      category: "eligibility"
-    },
-    {
-      question: "Do I need prior coding or programming experience to join this course?",
-      answer: "No prior coding experience is mandatory. The course starts from the basics of Python, SQL, and statistics, making it suitable for beginners while still adding value for experienced professionals.",
-      category: "eligibility"
-    },
-    {
-      question: "What is the duration of the Data Analytics course in Delhi?",
-      answer: "The course duration typically ranges from 6 to 8 months, depending on the learning mode (weekday or weekend) and batch structure.",
-      category: "program"
-    },
-    {
-      question: "Is this Data Analytics course in Delhi suitable for working professionals?",
-      answer: "Yes, the course is designed with flexible schedules, including weekend and evening batches, making it convenient for working professionals in Delhi.",
-      category: "program"
-    },
-    {
-      question: "What tools and technologies will I learn during the course?",
-      answer: "You will learn Excel, SQL, Python, Power BI or Tableau, statistics, data visualization, and analytics techniques used by data analysts across industries.",
-      category: "data-analytics"
-    },
-    {
-      question: "What tools and technologies will I learn during the course?",
-      answer: "You will learn Excel, SQL, Python, Power BI or Tableau, statistics, data visualization, and analytics techniques used by data analysts across industries.",
-      category: "data-science"
-    },
-    {
-      question: "Are there real-world projects included in the course?",
-      answer: "Yes, learners work on multiple real-world, industry-aligned projects and a capstone project to gain hands-on experience and practical exposure.",
-      category: "projects"
-    },
-    {
-      question: "Does the Data Analytics course in Delhi provide placement assistance?",
-      answer: "Yes, comprehensive placement support is provided, including resume building, mock interviews, career mentoring, and access to hiring partners.",
-      category: "placement"
-    },
-    {
-      question: "What kind of job roles can I apply for after completing this course?",
-      answer: "After completing the course, you can apply for roles such as Data Analyst, Business Analyst, MIS Analyst, Reporting Analyst, and Junior Data Scientist.",
-      category: "job and career"
-    },
-    {
-      question: "Will I receive a certification after course completion?",
-      answer: "Yes, upon successful completion, you will receive a recognized Data Analytics certification from Ivy Professional School, validating your skills and job readiness.",
-      category: "certification"
-    },
-    {
-      question: "Is the certification recognized by employers in Delhi and across India?",
-      answer: "Yes, the certification is recognized by employers across Delhi NCR and major Indian cities, helping learners improve credibility and job prospects.",
-      category: "certification"
-    },
-    {
-      question: "What learning modes are available for this Data Analytics course in Delhi?",
-      answer: "The course is available through instructor-led classroom training, live online sessions, and hybrid learning formats.",
-      category: "program"
-    },
-    {
-      question: "Are there any eligibility criteria for enrolling in the course?",
-      answer: "A basic understanding of mathematics and logical reasoning is recommended. Graduates from engineering, science, commerce, or management backgrounds can enroll.",
-      category: "eligibility"
-    },
-    {
-      question: "Will I get doubt-clearing and mentorship support during the course?",
-      answer: "Yes, learners receive continuous mentorship, regular doubt-clearing sessions, one-on-one guidance, and academic support throughout the program.",
-      category: "support"
-    },
-    {
-      question: "How is this Data Analytics course in Delhi different from others?",
-      answer: "This course focuses on practical, job-oriented learning with industry-aligned curriculum, experienced faculty, hands-on projects, and strong placement support.",
-      category: "program"
-    },
-    {
-      question: "Is this course suitable for a career transition into data analytics?",
-      answer: "Yes, the course is structured to help both technical and non-technical professionals successfully transition into data analytics roles.",
-      category: "opportunities"
-    }
-  ]
-},
+  "Data Analytics With Visualization in Delhi": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-analytics", name: "Data Analytics" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should enroll in the Data Analytics course in Delhi?",
+        answer: "This Data Analytics course in Delhi is ideal for fresh graduates, working professionals, IT engineers, analysts, and career switchers who want to build a strong foundation in data analytics, business intelligence, and data-driven decision-making.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior coding or programming experience to join this course?",
+        answer: "No prior coding experience is mandatory. The course starts from the basics of Python, SQL, and statistics, making it suitable for beginners while still adding value for experienced professionals.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the duration of the Data Analytics course in Delhi?",
+        answer: "The course duration typically ranges from 6 to 8 months, depending on the learning mode (weekday or weekend) and batch structure.",
+        category: "program"
+      },
+      {
+        question: "Is this Data Analytics course in Delhi suitable for working professionals?",
+        answer: "Yes, the course is designed with flexible schedules, including weekend and evening batches, making it convenient for working professionals in Delhi.",
+        category: "program"
+      },
+      {
+        question: "What tools and technologies will I learn during the course?",
+        answer: "You will learn Excel, SQL, Python, Power BI or Tableau, statistics, data visualization, and analytics techniques used by data analysts across industries.",
+        category: "data-analytics"
+      },
+      {
+        question: "What tools and technologies will I learn during the course?",
+        answer: "You will learn Excel, SQL, Python, Power BI or Tableau, statistics, data visualization, and analytics techniques used by data analysts across industries.",
+        category: "data-science"
+      },
+      {
+        question: "Are there real-world projects included in the course?",
+        answer: "Yes, learners work on multiple real-world, industry-aligned projects and a capstone project to gain hands-on experience and practical exposure.",
+        category: "projects"
+      },
+      {
+        question: "Does the Data Analytics course in Delhi provide placement assistance?",
+        answer: "Yes, comprehensive placement support is provided, including resume building, mock interviews, career mentoring, and access to hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "What kind of job roles can I apply for after completing this course?",
+        answer: "After completing the course, you can apply for roles such as Data Analyst, Business Analyst, MIS Analyst, Reporting Analyst, and Junior Data Scientist.",
+        category: "job and career"
+      },
+      {
+        question: "Will I receive a certification after course completion?",
+        answer: "Yes, upon successful completion, you will receive a recognized Data Analytics certification from Ivy Professional School, validating your skills and job readiness.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by employers in Delhi and across India?",
+        answer: "Yes, the certification is recognized by employers across Delhi NCR and major Indian cities, helping learners improve credibility and job prospects.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available for this Data Analytics course in Delhi?",
+        answer: "The course is available through instructor-led classroom training, live online sessions, and hybrid learning formats.",
+        category: "program"
+      },
+      {
+        question: "Are there any eligibility criteria for enrolling in the course?",
+        answer: "A basic understanding of mathematics and logical reasoning is recommended. Graduates from engineering, science, commerce, or management backgrounds can enroll.",
+        category: "eligibility"
+      },
+      {
+        question: "Will I get doubt-clearing and mentorship support during the course?",
+        answer: "Yes, learners receive continuous mentorship, regular doubt-clearing sessions, one-on-one guidance, and academic support throughout the program.",
+        category: "support"
+      },
+      {
+        question: "How is this Data Analytics course in Delhi different from others?",
+        answer: "This course focuses on practical, job-oriented learning with industry-aligned curriculum, experienced faculty, hands-on projects, and strong placement support.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for a career transition into data analytics?",
+        answer: "Yes, the course is structured to help both technical and non-technical professionals successfully transition into data analytics roles.",
+        category: "opportunities"
+      }
+    ]
+  },
 
-"Data Analytics With Visualization in Mumbai": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "data-analytics", name: "Data Analytics" },
-    { id: "job and career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" }
-  ],
-  faqs: [
-    {
-      question: "Who is this Data Analytics course in Mumbai designed for?",
-      answer: "The program is designed for graduates, early-career professionals, domain experts from finance, operations or sales, and professionals looking to move into analytics-driven roles using data and dashboards.",
-      category: "eligibility"
-    },
-    {
-      question: "Is this course beginner-friendly or meant for experienced professionals?",
-      answer: "The course is structured to support complete beginners as well as professionals. Concepts are taught from first principles and gradually move towards applied analytics and business use cases.",
-      category: "eligibility"
-    },
-    {
-      question: "How long does it take to complete the Data Analytics course in Mumbai?",
-      answer: "Most learners complete the program within 6 to 8 months, depending on batch type, pace of learning, and project involvement.",
-      category: "program"
-    },
-    {
-      question: "Can working professionals manage this course alongside their job?",
-      answer: "Yes. The course offers flexible scheduling options such as weekend and after-work batches, making it manageable for professionals working in Mumbai.",
-      category: "program"
-    },
-    {
-      question: "Which analytics tools and skills are covered in the curriculum?",
-      answer: "The curriculum covers Excel for analysis, SQL for data querying, Python for analytics, Power BI or Tableau for visualization, and core statistical concepts required for data-driven decisions.",
-      category: "data-analytics"
-    },
-    {
-      question: "What kind of practical exposure does the course offer?",
-      answer: "Learners work on hands-on assignments, business case–based projects, and a capstone project that mirrors real analytics problems faced by companies.",
-      category: "projects"
-    },
-    {
-      question: "Is placement or career support included in the program?",
-      answer: "Yes. The course includes structured career support such as resume optimization, interview preparation, mock interviews, and guidance on analytics career paths.",
-      category: "placement"
-    },
-    {
-      question: "What roles does this course prepare me for?",
-      answer: "The program prepares learners for roles like Data Analyst, Business Analyst, Reporting Analyst, MIS Analyst, and entry-level analytics roles across domains.",
-      category: "job and career"
-    },
-    {
-      question: "Do I receive a certificate after completing the course?",
-      answer: "Yes. Learners receive a Data Analytics certificate from Ivy Professional School upon successful completion of coursework and projects.",
-      category: "certification"
-    },
-    {
-      question: "How valuable is this certification in the job market?",
-      answer: "The certification is valued by employers across Mumbai and other major cities as it reflects practical analytics skills and project-based learning.",
-      category: "certification"
-    },
-    {
-      question: "What learning formats are available for Mumbai learners?",
-      answer: "Learners can choose between classroom sessions, live online instructor-led training, or a hybrid model depending on convenience.",
-      category: "program"
-    },
-    {
-      question: "Is there any specific educational background required to enroll?",
-      answer: "There are no strict educational prerequisites. Graduates from engineering, commerce, management, science, and even non-technical backgrounds can enroll.",
-      category: "eligibility"
-    },
-    {
-      question: "What kind of academic and learning support is provided?",
-      answer: "Students receive regular doubt-solving sessions, mentor guidance, structured feedback on projects, and continuous academic support throughout the course.",
-      category: "support"
-    },
-    {
-      question: "What sets this Data Analytics course in Mumbai apart from others?",
-      answer: "The program focuses on applied analytics, real business scenarios, strong mentoring, and career readiness rather than just tool-based training.",
-      category: "program"
-    },
-    {
-      question: "Is this course suitable for switching careers into analytics?",
-      answer: "Yes. The learning path is designed to help professionals from non-analytics roles gradually build skills and transition into analytics-focused careers.",
-      category: "opportunities"
-    }
-  ]
-},
+  "Data Analytics With Visualization in Mumbai": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-analytics", name: "Data Analytics" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who is this Data Analytics course in Mumbai designed for?",
+        answer: "The program is designed for graduates, early-career professionals, domain experts from finance, operations or sales, and professionals looking to move into analytics-driven roles using data and dashboards.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this course beginner-friendly or meant for experienced professionals?",
+        answer: "The course is structured to support complete beginners as well as professionals. Concepts are taught from first principles and gradually move towards applied analytics and business use cases.",
+        category: "eligibility"
+      },
+      {
+        question: "How long does it take to complete the Data Analytics course in Mumbai?",
+        answer: "Most learners complete the program within 6 to 8 months, depending on batch type, pace of learning, and project involvement.",
+        category: "program"
+      },
+      {
+        question: "Can working professionals manage this course alongside their job?",
+        answer: "Yes. The course offers flexible scheduling options such as weekend and after-work batches, making it manageable for professionals working in Mumbai.",
+        category: "program"
+      },
+      {
+        question: "Which analytics tools and skills are covered in the curriculum?",
+        answer: "The curriculum covers Excel for analysis, SQL for data querying, Python for analytics, Power BI or Tableau for visualization, and core statistical concepts required for data-driven decisions.",
+        category: "data-analytics"
+      },
+      {
+        question: "What kind of practical exposure does the course offer?",
+        answer: "Learners work on hands-on assignments, business case–based projects, and a capstone project that mirrors real analytics problems faced by companies.",
+        category: "projects"
+      },
+      {
+        question: "Is placement or career support included in the program?",
+        answer: "Yes. The course includes structured career support such as resume optimization, interview preparation, mock interviews, and guidance on analytics career paths.",
+        category: "placement"
+      },
+      {
+        question: "What roles does this course prepare me for?",
+        answer: "The program prepares learners for roles like Data Analyst, Business Analyst, Reporting Analyst, MIS Analyst, and entry-level analytics roles across domains.",
+        category: "job and career"
+      },
+      {
+        question: "Do I receive a certificate after completing the course?",
+        answer: "Yes. Learners receive a Data Analytics certificate from Ivy Professional School upon successful completion of coursework and projects.",
+        category: "certification"
+      },
+      {
+        question: "How valuable is this certification in the job market?",
+        answer: "The certification is valued by employers across Mumbai and other major cities as it reflects practical analytics skills and project-based learning.",
+        category: "certification"
+      },
+      {
+        question: "What learning formats are available for Mumbai learners?",
+        answer: "Learners can choose between classroom sessions, live online instructor-led training, or a hybrid model depending on convenience.",
+        category: "program"
+      },
+      {
+        question: "Is there any specific educational background required to enroll?",
+        answer: "There are no strict educational prerequisites. Graduates from engineering, commerce, management, science, and even non-technical backgrounds can enroll.",
+        category: "eligibility"
+      },
+      {
+        question: "What kind of academic and learning support is provided?",
+        answer: "Students receive regular doubt-solving sessions, mentor guidance, structured feedback on projects, and continuous academic support throughout the course.",
+        category: "support"
+      },
+      {
+        question: "What sets this Data Analytics course in Mumbai apart from others?",
+        answer: "The program focuses on applied analytics, real business scenarios, strong mentoring, and career readiness rather than just tool-based training.",
+        category: "program"
+      },
+      {
+        question: "Is this course suitable for switching careers into analytics?",
+        answer: "Yes. The learning path is designed to help professionals from non-analytics roles gradually build skills and transition into analytics-focused careers.",
+        category: "opportunities"
+      }
+    ]
+  },
 
-"Data Analytics With Visualization in Bangalore": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "data-analytics", name: "Data Analytics" },
-    { id: "job and career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" }
-  ],
-  faqs: [
-    {
-      question: "Who should consider the Data Analytics course in Bangalore?",
-      answer: "This course is ideal for graduates, software professionals, startup employees, engineers, and working professionals in Bangalore aiming to build strong analytics and data-driven decision-making skills.",
-      category: "eligibility"
-    },
-    {
-      question: "Is this Data Analytics course suitable for non-programmers?",
-      answer: "Yes. The course begins with fundamentals and does not assume prior programming knowledge, making it suitable for learners from non-coding backgrounds.",
-      category: "eligibility"
-    },
-    {
-      question: "What is the expected duration of the Data Analytics course in Bangalore?",
-      answer: "The program is designed to be completed within 6 to 8 months, depending on learning pace, batch schedule, and project submissions.",
-      category: "program"
-    },
-    {
-      question: "Can professionals working in Bangalore attend this course?",
-      answer: "Yes. The course offers flexible learning schedules including weekend and evening batches, suitable for professionals working in tech and non-tech roles.",
-      category: "program"
-    },
-    {
-      question: "Which tools and analytics techniques are covered?",
-      answer: "Learners gain hands-on experience with Excel, SQL, Python for analytics, Power BI or Tableau, and core statistical techniques used in data analysis.",
-      category: "data-analytics"
-    },
-    {
-      question: "Are industry-relevant projects part of the curriculum?",
-      answer: "Yes. The course includes guided assignments, practical projects, and a capstone project aligned with real business and analytics scenarios.",
-      category: "projects"
-    },
-    {
-      question: "Does the course offer placement or career guidance?",
-      answer: "Yes. Learners receive career support through resume building, mock interviews, interview preparation, and guidance on analytics career paths.",
-      category: "placement"
-    },
-    {
-      question: "What job roles can I target after completing the course?",
-      answer: "Graduates of the program can apply for roles such as Data Analyst, Business Analyst, Reporting Analyst, MIS Analyst, and entry-level analytics roles.",
-      category: "job and career"
-    },
-    {
-      question: "Is certification provided after completing the course?",
-      answer: "Yes. Learners receive a Data Analytics certification from Ivy Professional School after successful completion of the program.",
-      category: "certification"
-    },
-    {
-      question: "How relevant is this certification for Bangalore’s job market?",
-      answer: "The certification is valued by employers across Bangalore’s tech and business ecosystem as it reflects practical analytics skills and project experience.",
-      category: "certification"
-    },
-    {
-      question: "What learning modes are available for this course?",
-      answer: "Learners can choose between classroom sessions, live online instructor-led training, or a hybrid learning format.",
-      category: "program"
-    },
-    {
-      question: "Is there any minimum qualification required to enroll?",
-      answer: "There are no strict qualification requirements. Graduates from engineering, science, commerce, management, and other disciplines are welcome.",
-      category: "eligibility"
-    },
-    {
-      question: "What kind of academic support is available during the course?",
-      answer: "Learners receive continuous academic support through doubt-clearing sessions, mentor interactions, structured feedback, and guided learning.",
-      category: "support"
-    },
-    {
-      question: "Why choose this Data Analytics course in Bangalore?",
-      answer: "The course focuses on practical analytics skills, business-oriented projects, structured mentorship, and career readiness aligned with industry needs.",
-      category: "program"
-    },
-    {
-      question: "Can this course help in transitioning to analytics roles?",
-      answer: "Yes. The learning pathway is designed to help learners from diverse backgrounds transition into data analytics roles with confidence.",
-      category: "opportunities"
-    }
-  ]
-},
- "Data Analytics With Visualization in Pune": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "data-analytics", name: "Data Analytics" },
-    { id: "job and career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" }
-  ],
-  faqs: [
-    {
-      question: "Who should consider the Data Analytics course in Pune?",
-      answer: "This course is ideal for graduates, software professionals, startup employees, engineers, and working professionals in Pune aiming to build strong analytics and data-driven decision-making skills.",
-      category: "eligibility"
-    },
-    {
-      question: "Is this Data Analytics course suitable for non-programmers?",
-      answer: "Yes. The course begins with fundamentals and does not assume prior programming knowledge, making it suitable for learners from non-coding backgrounds.",
-      category: "eligibility"
-    },
-    {
-      question: "What is the expected duration of the Data Analytics course in Pune?",
-      answer: "The program is designed to be completed within 6 to 8 months, depending on learning pace, batch schedule, and project submissions.",
-      category: "program"
-    },
-    {
-      question: "Can professionals working in Pune attend this course?",
-      answer: "Yes. The course offers flexible learning schedules including weekend and evening batches, suitable for professionals working in tech and non-tech roles.",
-      category: "program"
-    },
-    {
-      question: "Which tools and analytics techniques are covered?",
-      answer: "Learners gain hands-on experience with Excel, SQL, Python for analytics, Power BI or Tableau, and core statistical techniques used in data analysis.",
-      category: "data-analytics"
-    },
-    {
-      question: "Are industry-relevant projects part of the curriculum?",
-      answer: "Yes. The course includes guided assignments, practical projects, and a capstone project aligned with real business and analytics scenarios.",
-      category: "projects"
-    },
-    {
-      question: "Does the course offer placement or career guidance?",
-      answer: "Yes. Learners receive career support through resume building, mock interviews, interview preparation, and guidance on analytics career paths.",
-      category: "placement"
-    },
-    {
-      question: "What job roles can I target after completing the course?",
-      answer: "Graduates of the program can apply for roles such as Data Analyst, Business Analyst, Reporting Analyst, MIS Analyst, and entry-level analytics roles.",
-      category: "job and career"
-    },
-    {
-      question: "Is certification provided after completing the course?",
-      answer: "Yes. Learners receive a Data Analytics certification from Ivy Professional School after successful completion of the program.",
-      category: "certification"
-    },
-    {
-      question: "How relevant is this certification for Pune’s job market?",
-      answer: "The certification is valued by employers across Pune’s tech and business ecosystem as it reflects practical analytics skills and project experience.",
-      category: "certification"
-    },
-    {
-      question: "What learning modes are available for this course?",
-      answer: "Learners can choose between classroom sessions, live online instructor-led training, or a hybrid learning format.",
-      category: "program"
-    },
-    {
-      question: "Is there any minimum qualification required to enroll?",
-      answer: "There are no strict qualification requirements. Graduates from engineering, science, commerce, management, and other disciplines are welcome.",
-      category: "eligibility"
-    },
-    {
-      question: "What kind of academic support is available during the course?",
-      answer: "Learners receive continuous academic support through doubt-clearing sessions, mentor interactions, structured feedback, and guided learning.",
-      category: "support"
-    },
-    {
-      question: "Why choose this Data Analytics course in Pune?",
-      answer: "The course focuses on practical analytics skills, business-oriented projects, structured mentorship, and career readiness aligned with industry needs.",
-      category: "program"
-    },
-    {
-      question: "Can this course help in transitioning to analytics roles?",
-      answer: "Yes. The learning pathway is designed to help learners from diverse backgrounds transition into data analytics roles with confidence.",
-      category: "opportunities"
-    }
-  ]
-},
+  "Data Analytics With Visualization in Bangalore": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-analytics", name: "Data Analytics" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should consider the Data Analytics course in Bangalore?",
+        answer: "This course is ideal for graduates, software professionals, startup employees, engineers, and working professionals in Bangalore aiming to build strong analytics and data-driven decision-making skills.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this Data Analytics course suitable for non-programmers?",
+        answer: "Yes. The course begins with fundamentals and does not assume prior programming knowledge, making it suitable for learners from non-coding backgrounds.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the expected duration of the Data Analytics course in Bangalore?",
+        answer: "The program is designed to be completed within 6 to 8 months, depending on learning pace, batch schedule, and project submissions.",
+        category: "program"
+      },
+      {
+        question: "Can professionals working in Bangalore attend this course?",
+        answer: "Yes. The course offers flexible learning schedules including weekend and evening batches, suitable for professionals working in tech and non-tech roles.",
+        category: "program"
+      },
+      {
+        question: "Which tools and analytics techniques are covered?",
+        answer: "Learners gain hands-on experience with Excel, SQL, Python for analytics, Power BI or Tableau, and core statistical techniques used in data analysis.",
+        category: "data-analytics"
+      },
+      {
+        question: "Are industry-relevant projects part of the curriculum?",
+        answer: "Yes. The course includes guided assignments, practical projects, and a capstone project aligned with real business and analytics scenarios.",
+        category: "projects"
+      },
+      {
+        question: "Does the course offer placement or career guidance?",
+        answer: "Yes. Learners receive career support through resume building, mock interviews, interview preparation, and guidance on analytics career paths.",
+        category: "placement"
+      },
+      {
+        question: "What job roles can I target after completing the course?",
+        answer: "Graduates of the program can apply for roles such as Data Analyst, Business Analyst, Reporting Analyst, MIS Analyst, and entry-level analytics roles.",
+        category: "job and career"
+      },
+      {
+        question: "Is certification provided after completing the course?",
+        answer: "Yes. Learners receive a Data Analytics certification from Ivy Professional School after successful completion of the program.",
+        category: "certification"
+      },
+      {
+        question: "How relevant is this certification for Bangalore’s job market?",
+        answer: "The certification is valued by employers across Bangalore’s tech and business ecosystem as it reflects practical analytics skills and project experience.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available for this course?",
+        answer: "Learners can choose between classroom sessions, live online instructor-led training, or a hybrid learning format.",
+        category: "program"
+      },
+      {
+        question: "Is there any minimum qualification required to enroll?",
+        answer: "There are no strict qualification requirements. Graduates from engineering, science, commerce, management, and other disciplines are welcome.",
+        category: "eligibility"
+      },
+      {
+        question: "What kind of academic support is available during the course?",
+        answer: "Learners receive continuous academic support through doubt-clearing sessions, mentor interactions, structured feedback, and guided learning.",
+        category: "support"
+      },
+      {
+        question: "Why choose this Data Analytics course in Bangalore?",
+        answer: "The course focuses on practical analytics skills, business-oriented projects, structured mentorship, and career readiness aligned with industry needs.",
+        category: "program"
+      },
+      {
+        question: "Can this course help in transitioning to analytics roles?",
+        answer: "Yes. The learning pathway is designed to help learners from diverse backgrounds transition into data analytics roles with confidence.",
+        category: "opportunities"
+      }
+    ]
+  },
+  "Data Analytics With Visualization in Pune": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-analytics", name: "Data Analytics" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should consider the Data Analytics course in Pune?",
+        answer: "This course is ideal for graduates, software professionals, startup employees, engineers, and working professionals in Pune aiming to build strong analytics and data-driven decision-making skills.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this Data Analytics course suitable for non-programmers?",
+        answer: "Yes. The course begins with fundamentals and does not assume prior programming knowledge, making it suitable for learners from non-coding backgrounds.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the expected duration of the Data Analytics course in Pune?",
+        answer: "The program is designed to be completed within 6 to 8 months, depending on learning pace, batch schedule, and project submissions.",
+        category: "program"
+      },
+      {
+        question: "Can professionals working in Pune attend this course?",
+        answer: "Yes. The course offers flexible learning schedules including weekend and evening batches, suitable for professionals working in tech and non-tech roles.",
+        category: "program"
+      },
+      {
+        question: "Which tools and analytics techniques are covered?",
+        answer: "Learners gain hands-on experience with Excel, SQL, Python for analytics, Power BI or Tableau, and core statistical techniques used in data analysis.",
+        category: "data-analytics"
+      },
+      {
+        question: "Are industry-relevant projects part of the curriculum?",
+        answer: "Yes. The course includes guided assignments, practical projects, and a capstone project aligned with real business and analytics scenarios.",
+        category: "projects"
+      },
+      {
+        question: "Does the course offer placement or career guidance?",
+        answer: "Yes. Learners receive career support through resume building, mock interviews, interview preparation, and guidance on analytics career paths.",
+        category: "placement"
+      },
+      {
+        question: "What job roles can I target after completing the course?",
+        answer: "Graduates of the program can apply for roles such as Data Analyst, Business Analyst, Reporting Analyst, MIS Analyst, and entry-level analytics roles.",
+        category: "job and career"
+      },
+      {
+        question: "Is certification provided after completing the course?",
+        answer: "Yes. Learners receive a Data Analytics certification from Ivy Professional School after successful completion of the program.",
+        category: "certification"
+      },
+      {
+        question: "How relevant is this certification for Pune’s job market?",
+        answer: "The certification is valued by employers across Pune’s tech and business ecosystem as it reflects practical analytics skills and project experience.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available for this course?",
+        answer: "Learners can choose between classroom sessions, live online instructor-led training, or a hybrid learning format.",
+        category: "program"
+      },
+      {
+        question: "Is there any minimum qualification required to enroll?",
+        answer: "There are no strict qualification requirements. Graduates from engineering, science, commerce, management, and other disciplines are welcome.",
+        category: "eligibility"
+      },
+      {
+        question: "What kind of academic support is available during the course?",
+        answer: "Learners receive continuous academic support through doubt-clearing sessions, mentor interactions, structured feedback, and guided learning.",
+        category: "support"
+      },
+      {
+        question: "Why choose this Data Analytics course in Pune?",
+        answer: "The course focuses on practical analytics skills, business-oriented projects, structured mentorship, and career readiness aligned with industry needs.",
+        category: "program"
+      },
+      {
+        question: "Can this course help in transitioning to analytics roles?",
+        answer: "Yes. The learning pathway is designed to help learners from diverse backgrounds transition into data analytics roles with confidence.",
+        category: "opportunities"
+      }
+    ]
+  },
 
 
   "Cloud Data Engineering Course with IIT Guwahati": {
@@ -3822,1215 +3911,1215 @@ const courseData: { [key: string]: CourseFAQData } = {
 
 
   "Generative AI Course in Kolkata": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "generative-ai", name: "Generative AI" },
-    { id: "job-and-career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" },
-    { id: "job-outlook", name: "Data & AI Job Outlook" }
-  ],
-  faqs: [
-    // Program-related FAQs
-    {
-      question: "What will I learn in the Generative AI program in Kolkata?",
-      answer: "In this program, you will master advanced concepts in Generative AI, including Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Transformer models like GPT, and deep learning techniques. You'll also gain hands-on experience in text and image generation, AI model fine-tuning, and deployment strategies.",
-      category: "program"
-    },
-    {
-      question: "How is the Generative AI course in Kolkata structured?",
-      answer: "The program includes lectures, hands-on coding sessions, live projects, and a capstone project. Flexible learning options are available with weekday and weekend batches, suitable for both full-time students and working professionals.",
-      category: "program"
-    },
-    {
-      question: "Is the Generative AI course available online or offline in Kolkata?",
-      answer: "Yes, the Generative AI course in Kolkata is offered both online and offline. You can opt for instructor-led classroom sessions, live online sessions, or hybrid learning modes, based on your preference.",
-      category: "program"
-    },
-    {
-      question: "What is the duration of the Generative AI course in Kolkata?",
-      answer: "The course duration ranges from 6 to 11 months, depending on your learning pace and the mode of study chosen (weekday or weekend batch).",
-      category: "program"
-    },
-    {
-      question: "How is this Generative AI course in Kolkata different from others?",
-      answer: "This course emphasizes practical learning, with real-world projects and expert mentorship. You will also get dedicated placement support, including resume building, mock interviews, and career counseling.",
-      category: "program"
-    },
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "generative-ai", name: "Generative AI" },
+      { id: "job-and-career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" },
+      { id: "job-outlook", name: "Data & AI Job Outlook" }
+    ],
+    faqs: [
+      // Program-related FAQs
+      {
+        question: "What will I learn in the Generative AI program in Kolkata?",
+        answer: "In this program, you will master advanced concepts in Generative AI, including Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), Transformer models like GPT, and deep learning techniques. You'll also gain hands-on experience in text and image generation, AI model fine-tuning, and deployment strategies.",
+        category: "program"
+      },
+      {
+        question: "How is the Generative AI course in Kolkata structured?",
+        answer: "The program includes lectures, hands-on coding sessions, live projects, and a capstone project. Flexible learning options are available with weekday and weekend batches, suitable for both full-time students and working professionals.",
+        category: "program"
+      },
+      {
+        question: "Is the Generative AI course available online or offline in Kolkata?",
+        answer: "Yes, the Generative AI course in Kolkata is offered both online and offline. You can opt for instructor-led classroom sessions, live online sessions, or hybrid learning modes, based on your preference.",
+        category: "program"
+      },
+      {
+        question: "What is the duration of the Generative AI course in Kolkata?",
+        answer: "The course duration ranges from 6 to 11 months, depending on your learning pace and the mode of study chosen (weekday or weekend batch).",
+        category: "program"
+      },
+      {
+        question: "How is this Generative AI course in Kolkata different from others?",
+        answer: "This course emphasizes practical learning, with real-world projects and expert mentorship. You will also get dedicated placement support, including resume building, mock interviews, and career counseling.",
+        category: "program"
+      },
 
 
-    // --- Eligibility Section ---
-{
-  question: "What are the eligibility criteria for the Generative AI course in Kolkata?",
-  answer: "The course is open to anyone with a logical mindset. Graduates from engineering, science, commerce, or management backgrounds are eligible to enroll.",
-  category: "eligibility"
-},
-{
-  question: "Do I need coding experience to join the course?",
-  answer: "No prior coding experience is mandatory. The course starts with 'Programming Fundamentals,' covering Python basics, libraries like Pandas and NumPy, and data preprocessing to bring everyone up to speed.",
-  category: "eligibility"
-},
+      // --- Eligibility Section ---
+      {
+        question: "What are the eligibility criteria for the Generative AI course in Kolkata?",
+        answer: "The course is open to anyone with a logical mindset. Graduates from engineering, science, commerce, or management backgrounds are eligible to enroll.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need coding experience to join the course?",
+        answer: "No prior coding experience is mandatory. The course starts with 'Programming Fundamentals,' covering Python basics, libraries like Pandas and NumPy, and data preprocessing to bring everyone up to speed.",
+        category: "eligibility"
+      },
 
-// --- Generative AI Section ---
-{
-  question: "What tools and frameworks will I master?",
-  answer: "You will gain expertise in Python, OpenAI APIs (GPT-4), LangChain, DALL-E, Whisper, and RAG (Retrieval-Augmented Generation) frameworks. You'll also explore model deployment using Flask and Streamlit.",
-  category: "generative-ai"
-},
+      // --- Generative AI Section ---
+      {
+        question: "What tools and frameworks will I master?",
+        answer: "You will gain expertise in Python, OpenAI APIs (GPT-4), LangChain, DALL-E, Whisper, and RAG (Retrieval-Augmented Generation) frameworks. You'll also explore model deployment using Flask and Streamlit.",
+        category: "generative-ai"
+      },
 
-// --- Job and Career Section ---
-{
-  question: "What job roles can I apply for after completing the course?",
-  answer: "Graduates are prepared for roles like GenAI Engineer, Prompt Engineer, AI Automation Specialist, Machine Learning Engineer, and Chatbot Architect.",
-  category: "job-and-career"
-},
+      // --- Job and Career Section ---
+      {
+        question: "What job roles can I apply for after completing the course?",
+        answer: "Graduates are prepared for roles like GenAI Engineer, Prompt Engineer, AI Automation Specialist, Machine Learning Engineer, and Chatbot Architect.",
+        category: "job-and-career"
+      },
 
-// --- Certification Section ---
-{
-  question: "Will I receive a recognized certification?",
-  answer: "Yes, you will earn a joint Executive Certification in Generative AI from Ivy Professional School and E&ICT Academy, IIT Guwahati. Additional certifications from IBM and NASSCOM are also provided.",
-  category: "certification"
-},
+      // --- Certification Section ---
+      {
+        question: "Will I receive a recognized certification?",
+        answer: "Yes, you will earn a joint Executive Certification in Generative AI from Ivy Professional School and E&ICT Academy, IIT Guwahati. Additional certifications from IBM and NASSCOM are also provided.",
+        category: "certification"
+      },
 
-// --- Projects Section ---
-{
-  question: "What real-world projects will I work on?",
-  answer: "You will complete 5+ capstone projects, including:\n1. **ChatPal AI**: A conversational chatbot using OpenAI APIs.\n2. **SocioGenie AI**: An automated social media content generation and scheduling tool.\n3. **ResumeGen AI**: An AI-powered tool for generating professional resumes.\n4. **VoiceMate AI**: A speech-to-text and text-to-speech assistant using Whisper.",
-  category: "projects"
-},
-{
-  question: "Is there a final capstone project?",
-  answer: "Yes, the program concludes with a 'Unified Multimodal AI Assistant' project that integrates text, voice, and image generation into a single deployment-ready application.",
-  category: "projects"
-},
+      // --- Projects Section ---
+      {
+        question: "What real-world projects will I work on?",
+        answer: "You will complete 5+ capstone projects, including:\n1. **ChatPal AI**: A conversational chatbot using OpenAI APIs.\n2. **SocioGenie AI**: An automated social media content generation and scheduling tool.\n3. **ResumeGen AI**: An AI-powered tool for generating professional resumes.\n4. **VoiceMate AI**: A speech-to-text and text-to-speech assistant using Whisper.",
+        category: "projects"
+      },
+      {
+        question: "Is there a final capstone project?",
+        answer: "Yes, the program concludes with a 'Unified Multimodal AI Assistant' project that integrates text, voice, and image generation into a single deployment-ready application.",
+        category: "projects"
+      },
 
-// --- Placement Section ---
-{
-  question: "Does the program provide placement assistance in Kolkata?",
-  answer: "Yes, Ivy provides lifetime placement assistance. This includes 1:1 career counseling, ATS-optimized resume building, mock interviews, and access to a network of 500+ hiring partners like PwC, EY, and Accenture.",
-  category: "placement"
-},
-{
-  question: "Which companies hire GenAI learners from Ivy in Kolkata?",
-  answer: "Our alumni are placed in top MNCs and startups in Kolkata's tech hubs (Sector V and New Town), including firms like Cognizant, Wipro, KPMG, and Amazon.",
-  category: "placement"
-},
+      // --- Placement Section ---
+      {
+        question: "Does the program provide placement assistance in Kolkata?",
+        answer: "Yes, Ivy provides lifetime placement assistance. This includes 1:1 career counseling, ATS-optimized resume building, mock interviews, and access to a network of 500+ hiring partners like PwC, EY, and Accenture.",
+        category: "placement"
+      },
+      {
+        question: "Which companies hire GenAI learners from Ivy in Kolkata?",
+        answer: "Our alumni are placed in top MNCs and startups in Kolkata's tech hubs (Sector V and New Town), including firms like Cognizant, Wipro, KPMG, and Amazon.",
+        category: "placement"
+      },
 
-// --- Opportunities Section ---
-{
-  question: "What are the career growth opportunities in this field?",
-  answer: "Generative AI is transforming industries from healthcare to finance. Opportunities include building custom LLM solutions for enterprises, automating creative workflows, and developing AI-driven products as a founder or lead engineer.",
-  category: "opportunities"
-},
+      // --- Opportunities Section ---
+      {
+        question: "What are the career growth opportunities in this field?",
+        answer: "Generative AI is transforming industries from healthcare to finance. Opportunities include building custom LLM solutions for enterprises, automating creative workflows, and developing AI-driven products as a founder or lead engineer.",
+        category: "opportunities"
+      },
 
-// --- Support Section ---
-{
-  question: "What kind of learning support is provided?",
-  answer: "Learners get access to live interactive classes, dedicated project mentors, and 24/7 online labs. There are also 'DoubtBuster' sessions to resolve technical queries in real-time.",
-  category: "support"
-},
-{
-  question: "What happens if I miss a live session?",
-  answer: "You get lifetime access to all recorded sessions and study materials. Additionally, you have the flexibility to rejoin a future batch at no extra cost if you need to revisit specific modules.",
-  category: "support"
-},
+      // --- Support Section ---
+      {
+        question: "What kind of learning support is provided?",
+        answer: "Learners get access to live interactive classes, dedicated project mentors, and 24/7 online labs. There are also 'DoubtBuster' sessions to resolve technical queries in real-time.",
+        category: "support"
+      },
+      {
+        question: "What happens if I miss a live session?",
+        answer: "You get lifetime access to all recorded sessions and study materials. Additionally, you have the flexibility to rejoin a future batch at no extra cost if you need to revisit specific modules.",
+        category: "support"
+      },
 
-// --- Job Outlook Section ---
-{
-  question: "What is the job outlook for GenAI professionals in Kolkata (2026)?",
-  answer: "The demand for GenAI talent in Kolkata is projected to grow by 25% annually. Entry-level salaries range from ₹8-12 LPA, while experienced professionals can earn upwards of ₹25 LPA due to the specialized nature of these skills.",
-  category: "job-outlook"
-}
+      // --- Job Outlook Section ---
+      {
+        question: "What is the job outlook for GenAI professionals in Kolkata (2026)?",
+        answer: "The demand for GenAI talent in Kolkata is projected to grow by 25% annually. Entry-level salaries range from ₹8-12 LPA, while experienced professionals can earn upwards of ₹25 LPA due to the specialized nature of these skills.",
+        category: "job-outlook"
+      }
 
-  
-  ]
-},
 
-"Generative AI Course in Delhi": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "generative-ai", name: "Generative AI" },
-    { id: "job-and-career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" },
-    { id: "job-outlook", name: "Data & AI Job Outlook" }
-  ],
-  faqs: [
-    // Program-related FAQs
-    {
-      question: "What will I learn in the Generative AI program in Delhi?",
-      answer: "In this program, you will dive deep into Generative AI techniques like GANs, VAEs, and Transformer models. You will explore real-world applications like text generation, creative image creation, and building AI models that simulate human-like creativity.",
-      category: "program"
-    },
-    {
-      question: "How is the Generative AI course structured in Delhi?",
-      answer: "The course features a blend of theoretical lectures and practical coding sessions. You'll work on real projects and complete a capstone project to solve problems using Generative AI. We offer flexible learning formats with both weekday and weekend options.",
-      category: "program"
-    },
-    {
-      question: "Is the Generative AI course available in both online and offline formats in Delhi?",
-      answer: "Yes, you can attend this course in person at our Delhi campus or join live online sessions from anywhere, depending on your preference. Hybrid learning options are also available.",
-      category: "program"
-    },
-    {
-      question: "How long is the Generative AI course in Delhi?",
-      answer: "The course duration is flexible, spanning between 6 to 11 months depending on whether you opt for a weekday or weekend batch and your pace of learning.",
-      category: "program"
-    },
-    {
-      question: "What makes this Generative AI course in Delhi different from others?",
-      answer: "Our course stands out by combining in-depth AI theory with extensive hands-on projects and personalized mentorship. We focus on real-world applications, preparing you for the challenges of AI roles in industries like media, technology, and healthcare.",
-      category: "program"
-    },
+    ]
+  },
 
-    // Eligibility-related FAQs
-    {
-      question: "What are the prerequisites to enroll in the Generative AI course in Delhi?",
-      answer: "A basic understanding of programming and mathematics is recommended, but not mandatory. We start with Python programming and essential AI concepts, making it accessible even for beginners.",
-      category: "eligibility"
-    },
-    {
-      question: "Do I need to know coding to join the Generative AI course?",
-      answer: "No prior programming experience is required. The course covers everything from the basics of Python to advanced topics in Generative AI, enabling learners from various backgrounds to succeed.",
-      category: "eligibility"
-    },
-    {
-      question: "Can non-technical professionals join the Generative AI course?",
-      answer: "Yes, the course is tailored for career switchers. Whether you come from a technical or non-technical background, this course will provide you with the skills needed to break into the AI industry.",
-      category: "eligibility"
-    },
-    {
-      question: "Is there an age restriction to enroll in the Generative AI course?",
-      answer: "There is no age restriction. The course is open to all individuals passionate about pursuing a career in Generative AI, regardless of their age.",
-      category: "eligibility"
-    },
-    {
-      question: "Do I need a degree in computer science to enroll in the course?",
-      answer: "No, a computer science degree is not required. We focus on equipping you with practical AI skills, and a solid foundation in mathematics and logical thinking is sufficient to start.",
-      category: "eligibility"
-    },
+  "Generative AI Course in Delhi": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "generative-ai", name: "Generative AI" },
+      { id: "job-and-career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" },
+      { id: "job-outlook", name: "Data & AI Job Outlook" }
+    ],
+    faqs: [
+      // Program-related FAQs
+      {
+        question: "What will I learn in the Generative AI program in Delhi?",
+        answer: "In this program, you will dive deep into Generative AI techniques like GANs, VAEs, and Transformer models. You will explore real-world applications like text generation, creative image creation, and building AI models that simulate human-like creativity.",
+        category: "program"
+      },
+      {
+        question: "How is the Generative AI course structured in Delhi?",
+        answer: "The course features a blend of theoretical lectures and practical coding sessions. You'll work on real projects and complete a capstone project to solve problems using Generative AI. We offer flexible learning formats with both weekday and weekend options.",
+        category: "program"
+      },
+      {
+        question: "Is the Generative AI course available in both online and offline formats in Delhi?",
+        answer: "Yes, you can attend this course in person at our Delhi campus or join live online sessions from anywhere, depending on your preference. Hybrid learning options are also available.",
+        category: "program"
+      },
+      {
+        question: "How long is the Generative AI course in Delhi?",
+        answer: "The course duration is flexible, spanning between 6 to 11 months depending on whether you opt for a weekday or weekend batch and your pace of learning.",
+        category: "program"
+      },
+      {
+        question: "What makes this Generative AI course in Delhi different from others?",
+        answer: "Our course stands out by combining in-depth AI theory with extensive hands-on projects and personalized mentorship. We focus on real-world applications, preparing you for the challenges of AI roles in industries like media, technology, and healthcare.",
+        category: "program"
+      },
 
-    // Generative AI-related FAQs
-    {
-      question: "What tools and technologies will I learn in the Generative AI course in Delhi?",
-      answer: "In this course, you will learn Python, TensorFlow, PyTorch, and advanced Generative AI models like GANs, VAEs, and GPT. Additionally, you'll work with tools for deep learning, data preprocessing, and cloud deployment.",
-      category: "generative-ai"
-    },
-    {
-      question: "What role does machine learning play in this Generative AI course?",
-      answer: "Machine learning is the foundation of Generative AI. You’ll learn how to build and fine-tune machine learning models to generate text, images, and even videos based on data input.",
-      category: "generative-ai"
-    },
-    {
-      question: "Is there a certification included in the course?",
-      answer: "Yes, upon completing the course, you will receive a certification from Ivy Professional School, recognized by employers in India and abroad, validating your expertise in Generative AI.",
-      category: "generative-ai"
-    },
-    {
-      question: "Is hands-on experience included in the course?",
-      answer: "Yes, the course offers extensive hands-on experience. You’ll work on practical projects, including a capstone project, to solve real-world problems using Generative AI models.",
-      category: "generative-ai"
-    },
-    {
-      question: "Will the course help me build a portfolio of Generative AI projects?",
-      answer: "Definitely. The course includes several industry-relevant projects that you can showcase in your portfolio to demonstrate your skills to potential employers.",
-      category: "generative-ai"
-    },
+      // Eligibility-related FAQs
+      {
+        question: "What are the prerequisites to enroll in the Generative AI course in Delhi?",
+        answer: "A basic understanding of programming and mathematics is recommended, but not mandatory. We start with Python programming and essential AI concepts, making it accessible even for beginners.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need to know coding to join the Generative AI course?",
+        answer: "No prior programming experience is required. The course covers everything from the basics of Python to advanced topics in Generative AI, enabling learners from various backgrounds to succeed.",
+        category: "eligibility"
+      },
+      {
+        question: "Can non-technical professionals join the Generative AI course?",
+        answer: "Yes, the course is tailored for career switchers. Whether you come from a technical or non-technical background, this course will provide you with the skills needed to break into the AI industry.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an age restriction to enroll in the Generative AI course?",
+        answer: "There is no age restriction. The course is open to all individuals passionate about pursuing a career in Generative AI, regardless of their age.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need a degree in computer science to enroll in the course?",
+        answer: "No, a computer science degree is not required. We focus on equipping you with practical AI skills, and a solid foundation in mathematics and logical thinking is sufficient to start.",
+        category: "eligibility"
+      },
 
-    // Job and Career-related FAQs
-    {
-      question: "What job roles can I pursue after completing this course?",
-      answer: "Upon completion, you can apply for roles such as Generative AI Engineer, Machine Learning Engineer, AI Researcher, Data Scientist, or Deep Learning Specialist.",
-      category: "job-and-career"
-    },
-    {
-      question: "What is the job market for Generative AI professionals in Delhi?",
-      answer: "The job market in Delhi for Generative AI professionals is growing rapidly. Industries like media, IT, and e-commerce are actively seeking AI talent, and the demand for professionals in this field is projected to grow by 25% annually.",
-      category: "job-and-career"
-    },
-    {
-      question: "Are Generative AI professionals paid well in Delhi?",
-      answer: "Yes, Generative AI professionals in Delhi are highly compensated. Entry-level roles start from ₹10-15 lakhs per annum, with experienced professionals earning upwards of ₹25-30 lakhs annually.",
-      category: "job-and-career"
-    },
-    {
-      question: "Can I transition into a career in Generative AI with no experience?",
-      answer: "Yes, the course is designed for career switchers. You’ll start with the basics of AI and work your way through advanced techniques, making it easy to transition into the field.",
-      category: "job-and-career"
-    },
-    {
-      question: "Does the course provide job placement support?",
-      answer: "Yes, we offer job placement assistance, including resume building, mock interviews, career counseling, and direct access to our network of hiring partners.",
-      category: "job-and-career"
-    },
+      // Generative AI-related FAQs
+      {
+        question: "What tools and technologies will I learn in the Generative AI course in Delhi?",
+        answer: "In this course, you will learn Python, TensorFlow, PyTorch, and advanced Generative AI models like GANs, VAEs, and GPT. Additionally, you'll work with tools for deep learning, data preprocessing, and cloud deployment.",
+        category: "generative-ai"
+      },
+      {
+        question: "What role does machine learning play in this Generative AI course?",
+        answer: "Machine learning is the foundation of Generative AI. You’ll learn how to build and fine-tune machine learning models to generate text, images, and even videos based on data input.",
+        category: "generative-ai"
+      },
+      {
+        question: "Is there a certification included in the course?",
+        answer: "Yes, upon completing the course, you will receive a certification from Ivy Professional School, recognized by employers in India and abroad, validating your expertise in Generative AI.",
+        category: "generative-ai"
+      },
+      {
+        question: "Is hands-on experience included in the course?",
+        answer: "Yes, the course offers extensive hands-on experience. You’ll work on practical projects, including a capstone project, to solve real-world problems using Generative AI models.",
+        category: "generative-ai"
+      },
+      {
+        question: "Will the course help me build a portfolio of Generative AI projects?",
+        answer: "Definitely. The course includes several industry-relevant projects that you can showcase in your portfolio to demonstrate your skills to potential employers.",
+        category: "generative-ai"
+      },
 
-    // Certification-related FAQs
-    {
-      question: "Will I receive a certification after completing the Generative AI course?",
-      answer: "Yes, you will receive a certification from Ivy Professional School upon successful completion, which will be valuable for your career growth in the AI field.",
-      category: "certification"
-    },
-    {
-      question: "Is the certification recognized in the industry?",
-      answer: "Yes, the certification is widely recognized across various industries such as IT, media, e-commerce, and finance, helping you stand out to potential employers.",
-      category: "certification"
-    },
-    {
-      question: "How can I use this certification to boost my career?",
-      answer: "You can display this certification on LinkedIn, your resume, and other professional profiles to showcase your skills in Generative AI and improve your visibility to employers.",
-      category: "certification"
-    },
-    {
-      question: "Are there additional certifications available with the course?",
-      answer: "Yes, you can pursue additional certifications from platforms like Google, Microsoft, or Coursera to further enhance your credentials in Generative AI.",
-      category: "certification"
-    },
-    {
-      question: "Can I showcase the certification on LinkedIn?",
-      answer: "Yes, you can proudly display your certification on LinkedIn and other professional networks to increase your job prospects in the AI industry.",
-      category: "certification"
-    },
+      // Job and Career-related FAQs
+      {
+        question: "What job roles can I pursue after completing this course?",
+        answer: "Upon completion, you can apply for roles such as Generative AI Engineer, Machine Learning Engineer, AI Researcher, Data Scientist, or Deep Learning Specialist.",
+        category: "job-and-career"
+      },
+      {
+        question: "What is the job market for Generative AI professionals in Delhi?",
+        answer: "The job market in Delhi for Generative AI professionals is growing rapidly. Industries like media, IT, and e-commerce are actively seeking AI talent, and the demand for professionals in this field is projected to grow by 25% annually.",
+        category: "job-and-career"
+      },
+      {
+        question: "Are Generative AI professionals paid well in Delhi?",
+        answer: "Yes, Generative AI professionals in Delhi are highly compensated. Entry-level roles start from ₹10-15 lakhs per annum, with experienced professionals earning upwards of ₹25-30 lakhs annually.",
+        category: "job-and-career"
+      },
+      {
+        question: "Can I transition into a career in Generative AI with no experience?",
+        answer: "Yes, the course is designed for career switchers. You’ll start with the basics of AI and work your way through advanced techniques, making it easy to transition into the field.",
+        category: "job-and-career"
+      },
+      {
+        question: "Does the course provide job placement support?",
+        answer: "Yes, we offer job placement assistance, including resume building, mock interviews, career counseling, and direct access to our network of hiring partners.",
+        category: "job-and-career"
+      },
 
-    // Projects-related FAQs
-    {
-      question: "What real-world projects will I work on during the Generative AI course in Delhi?",
-      answer: "You will work on 20+ real-life projects, including building GenAI-powered chatbots with Python, fine-tuning LLMs with LangChain, and image generation using Stable Diffusion. These projects are designed to build a professional portfolio that attracts top tech firms in Delhi.",
-      category: "projects"
-    },
-    {
-      question: "Is there a capstone project included in the curriculum?",
-      answer: "Yes, the course includes an industry-relevant capstone project where you apply advanced AI Integration and Multimodal Applications to solve a complex business challenge, mentored by experts from top analytics firms.",
-      category: "projects"
-    },
+      // Certification-related FAQs
+      {
+        question: "Will I receive a certification after completing the Generative AI course?",
+        answer: "Yes, you will receive a certification from Ivy Professional School upon successful completion, which will be valuable for your career growth in the AI field.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized in the industry?",
+        answer: "Yes, the certification is widely recognized across various industries such as IT, media, e-commerce, and finance, helping you stand out to potential employers.",
+        category: "certification"
+      },
+      {
+        question: "How can I use this certification to boost my career?",
+        answer: "You can display this certification on LinkedIn, your resume, and other professional profiles to showcase your skills in Generative AI and improve your visibility to employers.",
+        category: "certification"
+      },
+      {
+        question: "Are there additional certifications available with the course?",
+        answer: "Yes, you can pursue additional certifications from platforms like Google, Microsoft, or Coursera to further enhance your credentials in Generative AI.",
+        category: "certification"
+      },
+      {
+        question: "Can I showcase the certification on LinkedIn?",
+        answer: "Yes, you can proudly display your certification on LinkedIn and other professional networks to increase your job prospects in the AI industry.",
+        category: "certification"
+      },
 
-    // Placement-related FAQs
-    {
-      question: "What kind of placement support does Ivy Professional School provide in Delhi?",
-      answer: "Our dedicated placement team works with over 500+ hiring partners. We offer a Job Placement Program that includes resume optimization, salary negotiation support, and access to exclusive career fairs in the Delhi-NCR region.",
-      category: "placement"
-    },
-    {
-      question: "Is there a job guarantee with the Generative AI course?",
-      answer: "Eligible students can opt for our job guarantee program, which ensures you land a role within 6 months of graduation or receive a full tuition refund, providing peace of mind for your career transition.",
-      category: "placement"
-    },
+      // Projects-related FAQs
+      {
+        question: "What real-world projects will I work on during the Generative AI course in Delhi?",
+        answer: "You will work on 20+ real-life projects, including building GenAI-powered chatbots with Python, fine-tuning LLMs with LangChain, and image generation using Stable Diffusion. These projects are designed to build a professional portfolio that attracts top tech firms in Delhi.",
+        category: "projects"
+      },
+      {
+        question: "Is there a capstone project included in the curriculum?",
+        answer: "Yes, the course includes an industry-relevant capstone project where you apply advanced AI Integration and Multimodal Applications to solve a complex business challenge, mentored by experts from top analytics firms.",
+        category: "projects"
+      },
 
-    // Opportunities-related FAQs
-    {
-      question: "What are the career opportunities for Generative AI experts in Delhi in 2026?",
-      answer: "Delhi has emerged as a hub for AI innovation. Opportunities range from roles like AI Prompt Engineer and Agentic AI Developer to specialized positions in healthcare, finance, and US-based AI startups operating from Delhi tech parks.",
-      category: "opportunities"
-    },
-    {
-      question: "Can I find freelance or remote AI opportunities through this course?",
-      answer: "Yes, the course covers building and deploying AI models as APIs and web apps, enabling you to take on global freelance projects in automation, AI voiceovers, and custom LLM development.",
-      category: "opportunities"
-    },
+      // Placement-related FAQs
+      {
+        question: "What kind of placement support does Ivy Professional School provide in Delhi?",
+        answer: "Our dedicated placement team works with over 500+ hiring partners. We offer a Job Placement Program that includes resume optimization, salary negotiation support, and access to exclusive career fairs in the Delhi-NCR region.",
+        category: "placement"
+      },
+      {
+        question: "Is there a job guarantee with the Generative AI course?",
+        answer: "Eligible students can opt for our job guarantee program, which ensures you land a role within 6 months of graduation or receive a full tuition refund, providing peace of mind for your career transition.",
+        category: "placement"
+      },
 
-    // Support-related FAQs
-    {
-      question: "What support is available for doubt clearing and technical issues?",
-      answer: "We offer live doubt-clearing sessions and 24/7 access to teaching assistants. Our Delhi campus near Barakhamba Road and South Ex also provides in-person mentorship from approachable experts like Pratik Sir and Eshani Mam.",
-      category: "support"
-    },
-    {
-      question: "Will I have access to the learning materials after the course ends?",
-      answer: "Yes, you get lifetime access to all course recordings, multimedia resources, and our internal community forum to stay updated with the rapidly evolving Generative AI landscape.",
-      category: "support"
-    },
+      // Opportunities-related FAQs
+      {
+        question: "What are the career opportunities for Generative AI experts in Delhi in 2026?",
+        answer: "Delhi has emerged as a hub for AI innovation. Opportunities range from roles like AI Prompt Engineer and Agentic AI Developer to specialized positions in healthcare, finance, and US-based AI startups operating from Delhi tech parks.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I find freelance or remote AI opportunities through this course?",
+        answer: "Yes, the course covers building and deploying AI models as APIs and web apps, enabling you to take on global freelance projects in automation, AI voiceovers, and custom LLM development.",
+        category: "opportunities"
+      },
 
-    // Job Outlook-related FAQs
-    {
-      question: "What is the job outlook for Generative AI professionals in Delhi?",
-      answer: "The demand for Generative AI professionals in Delhi is expected to grow significantly, with industries like IT, healthcare, media, and e-commerce seeking AI talent to enhance automation and customer experiences.",
-      category: "job-outlook"
-    },
-    {
-      question: "What are the key skills required for Generative AI roles in Delhi?",
-      answer: "The key skills in demand include Python, TensorFlow, PyTorch, machine learning, natural language processing (NLP), deep learning, and model deployment. Expertise in cloud platforms such as AWS and Azure is also highly valued.",
-      category: "job-outlook"
-    },
-    {
-      question: "Which industries are hiring Generative AI professionals in Delhi?",
-      answer: "Top hiring industries in Delhi include IT, media, healthcare, e-commerce, and finance. Companies are leveraging Generative AI to drive automation, innovation, and customer engagement.",
-      category: "job-outlook"
-    },
-    {
-      question: "What is the average salary for a Generative AI professional in Delhi?",
-      answer: "Generative AI professionals in Delhi earn competitive salaries, ranging from ₹12 lakhs per annum for entry-level roles to ₹30 lakhs or more for senior positions.",
-      category: "job-outlook"
-    },
-    {
-      question: "What are the career growth prospects for Generative AI professionals in Delhi?",
-      answer: "With the rise in AI adoption, Generative AI professionals can expect significant career growth, moving into senior positions such as AI Architect, Chief Data Scientist, or AI Head in the coming years.",
-      category: "job-outlook"
-    }
-  ]
-}
-,
-"Generative AI Course in Bangalore": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "generative-ai", name: "Generative AI" },
-    { id: "job-and-career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" },
-    { id: "job-outlook", name: "Data & AI Job Outlook" }
-  ],
-  faqs: [
-    // Program-related FAQs
-    {
-      question: "What does the Generative AI program in Bangalore cover?",
-      answer: "This program covers cutting-edge techniques in Generative AI, including advanced deep learning methods, GANs, VAEs, and Transformer models like GPT. Students will work on AI-driven creative tasks such as text generation, image creation, and video synthesis, preparing them for high-demand AI roles.",
-      category: "program"
-    },
-    {
-      question: "What is the format of the Generative AI course in Bangalore?",
-      answer: "The course is a blend of theoretical lessons and hands-on practical sessions. You will engage with live projects, attend industry workshops, and complete a final capstone project. Flexibility is offered through weekday and weekend batches, making it ideal for both students and professionals.",
-      category: "program"
-    },
-    {
-      question: "Can I take the Generative AI course online in Bangalore?",
-      answer: "Yes, the course is available in both classroom and online formats. You can attend live online classes or join our interactive classroom sessions in Bangalore, whichever suits your learning preferences.",
-      category: "program"
-    },
-    {
-      question: "How long is the Generative AI course in Bangalore?",
-      answer: "The course typically lasts between 6 and 10 months. Depending on the pace you set, it can be completed in a more intensive full-time format or a flexible part-time format.",
-      category: "program"
-    },
-    {
-      question: "What makes this Generative AI course in Bangalore stand out?",
-      answer: "This course focuses on practical AI applications, teaching students to build and deploy generative models using industry-standard tools. With personalized mentorship, hands-on projects, and a focus on real-world problem-solving, this program equips you for AI careers in leading companies.",
-      category: "program"
-    },
+      // Support-related FAQs
+      {
+        question: "What support is available for doubt clearing and technical issues?",
+        answer: "We offer live doubt-clearing sessions and 24/7 access to teaching assistants. Our Delhi campus near Barakhamba Road and South Ex also provides in-person mentorship from approachable experts like Pratik Sir and Eshani Mam.",
+        category: "support"
+      },
+      {
+        question: "Will I have access to the learning materials after the course ends?",
+        answer: "Yes, you get lifetime access to all course recordings, multimedia resources, and our internal community forum to stay updated with the rapidly evolving Generative AI landscape.",
+        category: "support"
+      },
 
-    // Eligibility-related FAQs
-    {
-      question: "What are the prerequisites for joining the Generative AI course in Bangalore?",
-      answer: "The course is suitable for individuals with a basic understanding of programming and mathematics. A background in computer science, engineering, or a related field is helpful but not mandatory.",
-      category: "eligibility"
-    },
-    {
-      question: "Do I need prior AI experience to enroll in this course?",
-      answer: "No, the course is designed to start with fundamental concepts and progress to advanced AI techniques. It’s perfect for beginners as well as those looking to transition into AI from other fields.",
-      category: "eligibility"
-    },
-    {
-      question: "Can someone with no technical background join the Generative AI course?",
-      answer: "Yes, the course is structured to accommodate non-technical professionals as well. With a focus on practical skills and a hands-on approach, you’ll be guided through the basics of programming and AI concepts.",
-      category: "eligibility"
-    },
-    {
-      question: "Is there any age limit for enrollment in the Generative AI course in Bangalore?",
-      answer: "There is no age restriction. This course is open to anyone who is enthusiastic about learning Generative AI and has the determination to succeed in the field.",
-      category: "eligibility"
-    },
-    {
-      question: "Do I need a degree in computer science to join the Generative AI course?",
-      answer: "No, a computer science degree is not required. The course welcomes individuals from diverse academic backgrounds as long as they possess a logical mindset and a desire to learn.",
-      category: "eligibility"
-    },
+      // Job Outlook-related FAQs
+      {
+        question: "What is the job outlook for Generative AI professionals in Delhi?",
+        answer: "The demand for Generative AI professionals in Delhi is expected to grow significantly, with industries like IT, healthcare, media, and e-commerce seeking AI talent to enhance automation and customer experiences.",
+        category: "job-outlook"
+      },
+      {
+        question: "What are the key skills required for Generative AI roles in Delhi?",
+        answer: "The key skills in demand include Python, TensorFlow, PyTorch, machine learning, natural language processing (NLP), deep learning, and model deployment. Expertise in cloud platforms such as AWS and Azure is also highly valued.",
+        category: "job-outlook"
+      },
+      {
+        question: "Which industries are hiring Generative AI professionals in Delhi?",
+        answer: "Top hiring industries in Delhi include IT, media, healthcare, e-commerce, and finance. Companies are leveraging Generative AI to drive automation, innovation, and customer engagement.",
+        category: "job-outlook"
+      },
+      {
+        question: "What is the average salary for a Generative AI professional in Delhi?",
+        answer: "Generative AI professionals in Delhi earn competitive salaries, ranging from ₹12 lakhs per annum for entry-level roles to ₹30 lakhs or more for senior positions.",
+        category: "job-outlook"
+      },
+      {
+        question: "What are the career growth prospects for Generative AI professionals in Delhi?",
+        answer: "With the rise in AI adoption, Generative AI professionals can expect significant career growth, moving into senior positions such as AI Architect, Chief Data Scientist, or AI Head in the coming years.",
+        category: "job-outlook"
+      }
+    ]
+  }
+  ,
+  "Generative AI Course in Bangalore": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "generative-ai", name: "Generative AI" },
+      { id: "job-and-career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" },
+      { id: "job-outlook", name: "Data & AI Job Outlook" }
+    ],
+    faqs: [
+      // Program-related FAQs
+      {
+        question: "What does the Generative AI program in Bangalore cover?",
+        answer: "This program covers cutting-edge techniques in Generative AI, including advanced deep learning methods, GANs, VAEs, and Transformer models like GPT. Students will work on AI-driven creative tasks such as text generation, image creation, and video synthesis, preparing them for high-demand AI roles.",
+        category: "program"
+      },
+      {
+        question: "What is the format of the Generative AI course in Bangalore?",
+        answer: "The course is a blend of theoretical lessons and hands-on practical sessions. You will engage with live projects, attend industry workshops, and complete a final capstone project. Flexibility is offered through weekday and weekend batches, making it ideal for both students and professionals.",
+        category: "program"
+      },
+      {
+        question: "Can I take the Generative AI course online in Bangalore?",
+        answer: "Yes, the course is available in both classroom and online formats. You can attend live online classes or join our interactive classroom sessions in Bangalore, whichever suits your learning preferences.",
+        category: "program"
+      },
+      {
+        question: "How long is the Generative AI course in Bangalore?",
+        answer: "The course typically lasts between 6 and 10 months. Depending on the pace you set, it can be completed in a more intensive full-time format or a flexible part-time format.",
+        category: "program"
+      },
+      {
+        question: "What makes this Generative AI course in Bangalore stand out?",
+        answer: "This course focuses on practical AI applications, teaching students to build and deploy generative models using industry-standard tools. With personalized mentorship, hands-on projects, and a focus on real-world problem-solving, this program equips you for AI careers in leading companies.",
+        category: "program"
+      },
 
-    // Generative AI-related FAQs
-    {
-      question: "What tools and technologies will I learn in the Generative AI course in Bangalore?",
-      answer: "You will gain proficiency in Python, TensorFlow, PyTorch, and libraries used for building Generative AI models like GANs, VAEs, and GPT. You will also learn tools for cloud deployment and data preprocessing.",
-      category: "generative-ai"
-    },
-    {
-      question: "What role does deep learning play in Generative AI?",
-      answer: "Deep learning is the backbone of Generative AI. You will learn to train and optimize models that can generate realistic text, images, and other forms of content based on data-driven input.",
-      category: "generative-ai"
-    },
-    {
-      question: "What kind of certification will I receive after completing the course?",
-      answer: "Upon completion, you will receive a certification from Ivy Professional School, which will validate your expertise in Generative AI and help you stand out to employers in AI-driven industries.",
-      category: "generative-ai"
-    },
-    {
-      question: "How does the course incorporate real-world applications of Generative AI?",
-      answer: "You’ll work on hands-on projects that simulate real-world scenarios. This includes tasks like generating creative content, fine-tuning AI models, and deploying solutions to real business challenges.",
-      category: "generative-ai"
-    },
-    {
-      question: "Will I be able to create a portfolio of Generative AI projects?",
-      answer: "Yes, throughout the course, you will work on several projects, including a final capstone project, which can be showcased in your portfolio to demonstrate your skills to potential employers.",
-      category: "generative-ai"
-    },
+      // Eligibility-related FAQs
+      {
+        question: "What are the prerequisites for joining the Generative AI course in Bangalore?",
+        answer: "The course is suitable for individuals with a basic understanding of programming and mathematics. A background in computer science, engineering, or a related field is helpful but not mandatory.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior AI experience to enroll in this course?",
+        answer: "No, the course is designed to start with fundamental concepts and progress to advanced AI techniques. It’s perfect for beginners as well as those looking to transition into AI from other fields.",
+        category: "eligibility"
+      },
+      {
+        question: "Can someone with no technical background join the Generative AI course?",
+        answer: "Yes, the course is structured to accommodate non-technical professionals as well. With a focus on practical skills and a hands-on approach, you’ll be guided through the basics of programming and AI concepts.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there any age limit for enrollment in the Generative AI course in Bangalore?",
+        answer: "There is no age restriction. This course is open to anyone who is enthusiastic about learning Generative AI and has the determination to succeed in the field.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need a degree in computer science to join the Generative AI course?",
+        answer: "No, a computer science degree is not required. The course welcomes individuals from diverse academic backgrounds as long as they possess a logical mindset and a desire to learn.",
+        category: "eligibility"
+      },
 
-    // Job and Career-related FAQs
-    {
-      question: "What career opportunities are available after completing the Generative AI course?",
-      answer: "Upon completing the course, you can apply for roles such as Generative AI Engineer, Machine Learning Specialist, AI Developer, Data Scientist, and more. The skills learned are highly in demand across industries like technology, media, healthcare, and finance.",
-      category: "job-and-career"
-    },
-    {
-      question: "What is the job market for Generative AI professionals in Bangalore?",
-      answer: "Bangalore, being the tech hub of India, has a thriving job market for Generative AI professionals. Companies in IT, media, e-commerce, and healthcare are actively seeking professionals skilled in AI and machine learning.",
-      category: "job-and-career"
-    },
-    {
-      question: "What are the salary expectations for Generative AI professionals in Bangalore?",
-      answer: "Salaries for Generative AI professionals in Bangalore can range from ₹12 lakhs annually for entry-level positions to ₹30 lakhs or more for senior roles, depending on experience and expertise.",
-      category: "job-and-career"
-    },
-    {
-      question: "Can I pursue a career in Generative AI without prior experience in the field?",
-      answer: "Yes, the course is structured to cater to both beginners and career switchers. You’ll gain practical, hands-on experience in the tools and techniques necessary for a career in Generative AI.",
-      category: "job-and-career"
-    },
-    {
-      question: "Does the course offer job placement support?",
-      answer: "Yes, we provide job placement assistance, including interview coaching, resume building, and direct access to our network of hiring partners in Bangalore’s AI industry.",
-      category: "job-and-career"
-    },
+      // Generative AI-related FAQs
+      {
+        question: "What tools and technologies will I learn in the Generative AI course in Bangalore?",
+        answer: "You will gain proficiency in Python, TensorFlow, PyTorch, and libraries used for building Generative AI models like GANs, VAEs, and GPT. You will also learn tools for cloud deployment and data preprocessing.",
+        category: "generative-ai"
+      },
+      {
+        question: "What role does deep learning play in Generative AI?",
+        answer: "Deep learning is the backbone of Generative AI. You will learn to train and optimize models that can generate realistic text, images, and other forms of content based on data-driven input.",
+        category: "generative-ai"
+      },
+      {
+        question: "What kind of certification will I receive after completing the course?",
+        answer: "Upon completion, you will receive a certification from Ivy Professional School, which will validate your expertise in Generative AI and help you stand out to employers in AI-driven industries.",
+        category: "generative-ai"
+      },
+      {
+        question: "How does the course incorporate real-world applications of Generative AI?",
+        answer: "You’ll work on hands-on projects that simulate real-world scenarios. This includes tasks like generating creative content, fine-tuning AI models, and deploying solutions to real business challenges.",
+        category: "generative-ai"
+      },
+      {
+        question: "Will I be able to create a portfolio of Generative AI projects?",
+        answer: "Yes, throughout the course, you will work on several projects, including a final capstone project, which can be showcased in your portfolio to demonstrate your skills to potential employers.",
+        category: "generative-ai"
+      },
 
-    // Certification-related FAQs
-    {
-      question: "Will I receive a certificate after completing the Generative AI course?",
-      answer: "Yes, successful completion of the course will earn you a certificate from Ivy Professional School, which will validate your skills in Generative AI.",
-      category: "certification"
-    },
-    {
-      question: "Is the certification recognized by employers?",
-      answer: "Yes, our certification is widely respected by employers across India and abroad, especially in the AI, tech, and digital transformation sectors.",
-      category: "certification"
-    },
-    {
-      question: "How can I use this certification to enhance my career?",
-      answer: "You can showcase the certification on professional networks like LinkedIn and include it in your resume to increase your chances of getting hired for Generative AI roles.",
-      category: "certification"
-    },
-    {
-      question: "Are there additional certifications offered by the course?",
-      answer: "Yes, students can pursue additional industry-recognized certifications from platforms like Google and Microsoft to further enhance their AI expertise.",
-      category: "certification"
-    },
-    {
-      question: "Can I display my certification on LinkedIn?",
-      answer: "Yes, you can proudly display your Ivy Professional School certification on LinkedIn, your resume, and other platforms to highlight your new skills.",
-      category: "certification"
-    },
+      // Job and Career-related FAQs
+      {
+        question: "What career opportunities are available after completing the Generative AI course?",
+        answer: "Upon completing the course, you can apply for roles such as Generative AI Engineer, Machine Learning Specialist, AI Developer, Data Scientist, and more. The skills learned are highly in demand across industries like technology, media, healthcare, and finance.",
+        category: "job-and-career"
+      },
+      {
+        question: "What is the job market for Generative AI professionals in Bangalore?",
+        answer: "Bangalore, being the tech hub of India, has a thriving job market for Generative AI professionals. Companies in IT, media, e-commerce, and healthcare are actively seeking professionals skilled in AI and machine learning.",
+        category: "job-and-career"
+      },
+      {
+        question: "What are the salary expectations for Generative AI professionals in Bangalore?",
+        answer: "Salaries for Generative AI professionals in Bangalore can range from ₹12 lakhs annually for entry-level positions to ₹30 lakhs or more for senior roles, depending on experience and expertise.",
+        category: "job-and-career"
+      },
+      {
+        question: "Can I pursue a career in Generative AI without prior experience in the field?",
+        answer: "Yes, the course is structured to cater to both beginners and career switchers. You’ll gain practical, hands-on experience in the tools and techniques necessary for a career in Generative AI.",
+        category: "job-and-career"
+      },
+      {
+        question: "Does the course offer job placement support?",
+        answer: "Yes, we provide job placement assistance, including interview coaching, resume building, and direct access to our network of hiring partners in Bangalore’s AI industry.",
+        category: "job-and-career"
+      },
 
-    // Projects-related FAQs (New/SEO Optimized)
-    {
-      question: "What real-world projects are included in the Bangalore Generative AI course?",
-      answer: "Students work on 10+ industry-standard projects including RAG-powered Enterprise Assistants, Multimodal AI Chatbots (Text+Image), and Fine-tuning LLMs using LangChain and Pinecone. These projects focus on solving actual business problems faced by Bangalore-based tech startups.",
-      category: "projects"
-    },
-    {
-      question: "Will I complete a Capstone Project for my portfolio?",
-      answer: "Yes, the course features a production-grade Capstone project. You will build and deploy a complete AI Agent or a Custom Diffusion model, documenting the architecture from scratch to showcase your engineering skills to recruiters in Silicon Valley of India.",
-      category: "projects"
-    },
+      // Certification-related FAQs
+      {
+        question: "Will I receive a certificate after completing the Generative AI course?",
+        answer: "Yes, successful completion of the course will earn you a certificate from Ivy Professional School, which will validate your skills in Generative AI.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification recognized by employers?",
+        answer: "Yes, our certification is widely respected by employers across India and abroad, especially in the AI, tech, and digital transformation sectors.",
+        category: "certification"
+      },
+      {
+        question: "How can I use this certification to enhance my career?",
+        answer: "You can showcase the certification on professional networks like LinkedIn and include it in your resume to increase your chances of getting hired for Generative AI roles.",
+        category: "certification"
+      },
+      {
+        question: "Are there additional certifications offered by the course?",
+        answer: "Yes, students can pursue additional industry-recognized certifications from platforms like Google and Microsoft to further enhance their AI expertise.",
+        category: "certification"
+      },
+      {
+        question: "Can I display my certification on LinkedIn?",
+        answer: "Yes, you can proudly display your Ivy Professional School certification on LinkedIn, your resume, and other platforms to highlight your new skills.",
+        category: "certification"
+      },
 
-    // Placement-related FAQs (New/SEO Optimized)
-    {
-      question: "How does placement assistance work in Bangalore?",
-      answer: "We offer 100% placement support with a focus on the Bangalore market. This includes mock interviews with AI leads from top MNCs, exclusive hiring drives in Koramangala and Manyata Tech Park, and personalized resume reviews to highlight your GenAI expertise.",
-      category: "placement"
-    },
-    {
-      question: "Which companies hire from Ivy Pro School in Bangalore?",
-      answer: "Our alumni work at top-tier firms and unicorn startups across Bangalore, including companies like Accenture, Genpact, MakeMyTrip, and niche AI research labs. We connect you directly with hiring managers seeking GenAI engineers and LLM specialists.",
-      category: "placement"
-    },
+      // Projects-related FAQs (New/SEO Optimized)
+      {
+        question: "What real-world projects are included in the Bangalore Generative AI course?",
+        answer: "Students work on 10+ industry-standard projects including RAG-powered Enterprise Assistants, Multimodal AI Chatbots (Text+Image), and Fine-tuning LLMs using LangChain and Pinecone. These projects focus on solving actual business problems faced by Bangalore-based tech startups.",
+        category: "projects"
+      },
+      {
+        question: "Will I complete a Capstone Project for my portfolio?",
+        answer: "Yes, the course features a production-grade Capstone project. You will build and deploy a complete AI Agent or a Custom Diffusion model, documenting the architecture from scratch to showcase your engineering skills to recruiters in Silicon Valley of India.",
+        category: "projects"
+      },
 
-    // Opportunities-related FAQs (New/SEO Optimized)
-    {
-      question: "What job roles are available for GenAI graduates in Bangalore?",
-      answer: "Bangalore offers the highest density of AI roles in 2026. You can apply for titles like GenAI Application Developer, Agentic AI Engineer, Prompt/RAG Specialist, and MLOps Engineer at global R&D centers located in Whitefield and Electronic City.",
-      category: "opportunities"
-    },
-    {
-      question: "Are there remote or freelance opportunities in this field?",
-      answer: "Absolutely. Generative AI is highly suited for remote work. You will learn to build AI agents and automated content pipelines, enabling you to take on global freelance projects or work for US-based startups while living in Bangalore.",
-      category: "opportunities"
-    },
+      // Placement-related FAQs (New/SEO Optimized)
+      {
+        question: "How does placement assistance work in Bangalore?",
+        answer: "We offer 100% placement support with a focus on the Bangalore market. This includes mock interviews with AI leads from top MNCs, exclusive hiring drives in Koramangala and Manyata Tech Park, and personalized resume reviews to highlight your GenAI expertise.",
+        category: "placement"
+      },
+      {
+        question: "Which companies hire from Ivy Pro School in Bangalore?",
+        answer: "Our alumni work at top-tier firms and unicorn startups across Bangalore, including companies like Accenture, Genpact, MakeMyTrip, and niche AI research labs. We connect you directly with hiring managers seeking GenAI engineers and LLM specialists.",
+        category: "placement"
+      },
 
-    // Support-related FAQs (New/SEO Optimized)
-    {
-      question: "What student support services do you provide?",
-      answer: "We provide 24/7 access to our dedicated Slack community and LMS. For Bangalore students, we also offer face-to-face doubt-clearing sessions at our local center and 1-on-1 mentorship with industry professionals working in the local AI ecosystem.",
-      category: "support"
-    },
-    {
-      question: "Will I have access to GPU resources for training models?",
-      answer: "Yes, we provide cloud-based GPU access for your practical labs and projects, ensuring you can train large-scale transformer models and diffusion networks without needing high-end local hardware.",
-      category: "support"
-    },
+      // Opportunities-related FAQs (New/SEO Optimized)
+      {
+        question: "What job roles are available for GenAI graduates in Bangalore?",
+        answer: "Bangalore offers the highest density of AI roles in 2026. You can apply for titles like GenAI Application Developer, Agentic AI Engineer, Prompt/RAG Specialist, and MLOps Engineer at global R&D centers located in Whitefield and Electronic City.",
+        category: "opportunities"
+      },
+      {
+        question: "Are there remote or freelance opportunities in this field?",
+        answer: "Absolutely. Generative AI is highly suited for remote work. You will learn to build AI agents and automated content pipelines, enabling you to take on global freelance projects or work for US-based startups while living in Bangalore.",
+        category: "opportunities"
+      },
 
-    // Job Outlook-related FAQs
-    {
-      question: "What is the job outlook for Generative AI professionals in Bangalore?",
-      answer: "Bangalore is a key hub for AI and machine learning talent in India. With an increasing demand for AI-driven solutions, job growth in this field is expected to rise by 25% annually, offering numerous career opportunities for skilled professionals.",
-      category: "job-outlook"
-    },
-    {
-      question: "What skills are in demand for Generative AI roles in Bangalore?",
-      answer: "Skills in Python, machine learning, TensorFlow, PyTorch, deep learning, and cloud computing platforms like AWS and Azure are in high demand. Proficiency in NLP and AI model deployment is also valuable.",
-      category: "job-outlook"
-    },
-    {
-      question: "Which industries are hiring Generative AI professionals in Bangalore?",
-      answer: "Generative AI professionals are being hired by top companies in IT, e-commerce, media, healthcare, and fintech, all of which are investing heavily in AI-driven solutions.",
-      category: "job-outlook"
-    },
-    {
-      question: "What is the average salary for a Generative AI professional in Bangalore?",
-      answer: "The average salary for a Generative AI professional in Bangalore ranges from ₹12 lakhs per year for entry-level positions to upwards of ₹30 lakhs annually for experienced professionals.",
-      category: "job-outlook"
-    },
-    {
-      question: "What are the career growth opportunities in Generative AI in Bangalore?",
-      answer: "Career growth in Generative AI is strong, with opportunities to move into leadership roles such as AI Architect, Chief Data Scientist, or Director of AI, particularly as AI adoption continues to grow in Bangalore’s tech ecosystem.",
-      category: "job-outlook"
-    }
-  ]
-},
+      // Support-related FAQs (New/SEO Optimized)
+      {
+        question: "What student support services do you provide?",
+        answer: "We provide 24/7 access to our dedicated Slack community and LMS. For Bangalore students, we also offer face-to-face doubt-clearing sessions at our local center and 1-on-1 mentorship with industry professionals working in the local AI ecosystem.",
+        category: "support"
+      },
+      {
+        question: "Will I have access to GPU resources for training models?",
+        answer: "Yes, we provide cloud-based GPU access for your practical labs and projects, ensuring you can train large-scale transformer models and diffusion networks without needing high-end local hardware.",
+        category: "support"
+      },
 
-"Generative AI Course in Mumbai": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "generative-ai", name: "Generative AI" },
-    { id: "job-and-career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" },
-    { id: "job-outlook", name: "Data & AI Job Outlook" }
-  ],
-  faqs: [
-    // Program-related FAQs
-    {
-      question: "What skills will I gain from the Generative AI course in Mumbai?",
-      answer: "This course will help you develop a deep understanding of advanced Generative AI techniques like GANs, VAEs, and Transformer models such as GPT. You will gain the skills to create innovative AI solutions for text and image generation, and dive into deep learning, model fine-tuning, and deployment.",
-      category: "program"
-    },
-    {
-      question: "How is the course structured in Mumbai?",
-      answer: "The course is divided into interactive lectures, practical coding sessions, and real-world projects. You will also work on a capstone project that simulates actual industry challenges. We offer both weekday and weekend schedules to accommodate students and professionals alike.",
-      category: "program"
-    },
-    {
-      question: "Can I attend the Generative AI course in Mumbai online or offline?",
-      answer: "Yes, you can choose between in-person classes in Mumbai or live online sessions. Hybrid learning is also available for added flexibility, so you can switch between the formats based on your convenience.",
-      category: "program"
-    },
-    {
-      question: "How long will it take to complete the Generative AI course in Mumbai?",
-      answer: "The duration of the course ranges from 6 to 10 months depending on your learning pace and chosen batch schedule. You can select the format that best fits your availability.",
-      category: "program"
-    },
-    {
-      question: "What makes the Generative AI course in Mumbai different from others?",
-      answer: "Our program combines in-depth theory with hands-on experience, ensuring you can apply what you learn to solve real-world problems. The course also emphasizes practical skills, with expert mentorship and placement support throughout.",
-      category: "program"
-    },
+      // Job Outlook-related FAQs
+      {
+        question: "What is the job outlook for Generative AI professionals in Bangalore?",
+        answer: "Bangalore is a key hub for AI and machine learning talent in India. With an increasing demand for AI-driven solutions, job growth in this field is expected to rise by 25% annually, offering numerous career opportunities for skilled professionals.",
+        category: "job-outlook"
+      },
+      {
+        question: "What skills are in demand for Generative AI roles in Bangalore?",
+        answer: "Skills in Python, machine learning, TensorFlow, PyTorch, deep learning, and cloud computing platforms like AWS and Azure are in high demand. Proficiency in NLP and AI model deployment is also valuable.",
+        category: "job-outlook"
+      },
+      {
+        question: "Which industries are hiring Generative AI professionals in Bangalore?",
+        answer: "Generative AI professionals are being hired by top companies in IT, e-commerce, media, healthcare, and fintech, all of which are investing heavily in AI-driven solutions.",
+        category: "job-outlook"
+      },
+      {
+        question: "What is the average salary for a Generative AI professional in Bangalore?",
+        answer: "The average salary for a Generative AI professional in Bangalore ranges from ₹12 lakhs per year for entry-level positions to upwards of ₹30 lakhs annually for experienced professionals.",
+        category: "job-outlook"
+      },
+      {
+        question: "What are the career growth opportunities in Generative AI in Bangalore?",
+        answer: "Career growth in Generative AI is strong, with opportunities to move into leadership roles such as AI Architect, Chief Data Scientist, or Director of AI, particularly as AI adoption continues to grow in Bangalore’s tech ecosystem.",
+        category: "job-outlook"
+      }
+    ]
+  },
 
-    // Eligibility-related FAQs
-    {
-      question: "Who can enroll in the Generative AI course in Mumbai?",
-      answer: "The course is suitable for anyone with basic knowledge of programming and math. Graduates from engineering, computer science, or related fields can join, and it's also open to career switchers from non-technical backgrounds.",
-      category: "eligibility"
-    },
-    {
-      question: "Do I need coding experience to take the course?",
-      answer: "Prior programming experience is not mandatory. The course starts from the basics of Python programming and gradually covers more advanced AI topics, making it ideal for beginners.",
-      category: "eligibility"
-    },
-    {
-      question: "Can professionals without a technical background enroll in the Generative AI course?",
-      answer: "Yes, this course is designed to be accessible to individuals from non-technical backgrounds. With a focus on practical applications and step-by-step learning, it’s a great option for professionals looking to pivot into AI.",
-      category: "eligibility"
-    },
-    {
-      question: "Is there an age limit to join the Generative AI course in Mumbai?",
-      answer: "No, there is no age limit. The course is open to anyone passionate about AI and willing to learn, regardless of age.",
-      category: "eligibility"
-    },
-    {
-      question: "Do I need a degree in computer science to join the course?",
-      answer: "No, a computer science degree is not required. As long as you have a strong grasp of logic and basic math, you will find the course accessible and valuable.",
-      category: "eligibility"
-    },
+  "Generative AI Course in Mumbai": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "generative-ai", name: "Generative AI" },
+      { id: "job-and-career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" },
+      { id: "job-outlook", name: "Data & AI Job Outlook" }
+    ],
+    faqs: [
+      // Program-related FAQs
+      {
+        question: "What skills will I gain from the Generative AI course in Mumbai?",
+        answer: "This course will help you develop a deep understanding of advanced Generative AI techniques like GANs, VAEs, and Transformer models such as GPT. You will gain the skills to create innovative AI solutions for text and image generation, and dive into deep learning, model fine-tuning, and deployment.",
+        category: "program"
+      },
+      {
+        question: "How is the course structured in Mumbai?",
+        answer: "The course is divided into interactive lectures, practical coding sessions, and real-world projects. You will also work on a capstone project that simulates actual industry challenges. We offer both weekday and weekend schedules to accommodate students and professionals alike.",
+        category: "program"
+      },
+      {
+        question: "Can I attend the Generative AI course in Mumbai online or offline?",
+        answer: "Yes, you can choose between in-person classes in Mumbai or live online sessions. Hybrid learning is also available for added flexibility, so you can switch between the formats based on your convenience.",
+        category: "program"
+      },
+      {
+        question: "How long will it take to complete the Generative AI course in Mumbai?",
+        answer: "The duration of the course ranges from 6 to 10 months depending on your learning pace and chosen batch schedule. You can select the format that best fits your availability.",
+        category: "program"
+      },
+      {
+        question: "What makes the Generative AI course in Mumbai different from others?",
+        answer: "Our program combines in-depth theory with hands-on experience, ensuring you can apply what you learn to solve real-world problems. The course also emphasizes practical skills, with expert mentorship and placement support throughout.",
+        category: "program"
+      },
 
-    // Generative AI-related FAQs
-    {
-      question: "What technologies will I learn during the Generative AI course in Mumbai?",
-      answer: "You'll learn tools and technologies such as Python, TensorFlow, PyTorch, and libraries essential for building Generative AI models. The course also covers model deployment and cloud computing platforms like AWS.",
-      category: "generative-ai"
-    },
-    {
-      question: "How important is deep learning in the Generative AI course?",
-      answer: "Deep learning is crucial to Generative AI. The course covers how to use neural networks and deep learning architectures to train models for generating text, images, and other creative outputs.",
-      category: "generative-ai"
-    },
-    {
-      question: "Will I receive a certificate upon completion of the course?",
-      answer: "Yes, you will receive a certificate from Ivy Professional School upon successfully completing the course. This certificate is recognized by employers and will validate your expertise in Generative AI.",
-      category: "generative-ai"
-    },
-    {
-      question: "Does the course include real-world project experience?",
-      answer: "Yes, the course includes hands-on projects and a capstone project where you will work on real business problems. You'll apply Generative AI techniques to practical challenges in various industries.",
-      category: "generative-ai"
-    },
-    {
-      question: "How will the course help me build a portfolio of Generative AI work?",
-      answer: "Throughout the course, you’ll create multiple projects, including a capstone project, that you can showcase in your portfolio to demonstrate your skills and increase your employability.",
-      category: "generative-ai"
-    },
+      // Eligibility-related FAQs
+      {
+        question: "Who can enroll in the Generative AI course in Mumbai?",
+        answer: "The course is suitable for anyone with basic knowledge of programming and math. Graduates from engineering, computer science, or related fields can join, and it's also open to career switchers from non-technical backgrounds.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need coding experience to take the course?",
+        answer: "Prior programming experience is not mandatory. The course starts from the basics of Python programming and gradually covers more advanced AI topics, making it ideal for beginners.",
+        category: "eligibility"
+      },
+      {
+        question: "Can professionals without a technical background enroll in the Generative AI course?",
+        answer: "Yes, this course is designed to be accessible to individuals from non-technical backgrounds. With a focus on practical applications and step-by-step learning, it’s a great option for professionals looking to pivot into AI.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an age limit to join the Generative AI course in Mumbai?",
+        answer: "No, there is no age limit. The course is open to anyone passionate about AI and willing to learn, regardless of age.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need a degree in computer science to join the course?",
+        answer: "No, a computer science degree is not required. As long as you have a strong grasp of logic and basic math, you will find the course accessible and valuable.",
+        category: "eligibility"
+      },
 
-    // Job and Career-related FAQs
-    {
-      question: "What job roles can I pursue after completing the Generative AI course?",
-      answer: "Upon completing the course, you can apply for roles such as AI Engineer, Generative AI Developer, Machine Learning Engineer, Data Scientist, and AI Researcher.",
-      category: "job-and-career"
-    },
-    {
-      question: "How is the job market for Generative AI professionals in Mumbai?",
-      answer: "The job market in Mumbai is vibrant, with significant demand for Generative AI professionals across industries like technology, media, finance, and healthcare. Companies are increasingly integrating AI into their operations, leading to a surge in job opportunities.",
-      category: "job-and-career"
-    },
-    {
-      question: "What is the salary range for Generative AI professionals in Mumbai?",
-      answer: "Generative AI professionals in Mumbai can expect competitive salaries. Entry-level roles typically start at ₹10-15 lakhs per annum, while experienced professionals can earn ₹30 lakhs or more.",
-      category: "job-and-career"
-    },
-    {
-      question: "Can I switch careers to Generative AI after completing the course?",
-      answer: "Yes, the course is designed for career switchers. By the end of the program, you'll have the skills necessary to transition into a Generative AI career, even if you come from a non-technical background.",
-      category: "job-and-career"
-    },
-    {
-      question: "Do you offer job placement assistance?",
-      answer: "Yes, we provide job placement assistance, including resume reviews, mock interviews, and connections to hiring companies in Mumbai’s AI sector.",
-      category: "job-and-career"
-    },
+      // Generative AI-related FAQs
+      {
+        question: "What technologies will I learn during the Generative AI course in Mumbai?",
+        answer: "You'll learn tools and technologies such as Python, TensorFlow, PyTorch, and libraries essential for building Generative AI models. The course also covers model deployment and cloud computing platforms like AWS.",
+        category: "generative-ai"
+      },
+      {
+        question: "How important is deep learning in the Generative AI course?",
+        answer: "Deep learning is crucial to Generative AI. The course covers how to use neural networks and deep learning architectures to train models for generating text, images, and other creative outputs.",
+        category: "generative-ai"
+      },
+      {
+        question: "Will I receive a certificate upon completion of the course?",
+        answer: "Yes, you will receive a certificate from Ivy Professional School upon successfully completing the course. This certificate is recognized by employers and will validate your expertise in Generative AI.",
+        category: "generative-ai"
+      },
+      {
+        question: "Does the course include real-world project experience?",
+        answer: "Yes, the course includes hands-on projects and a capstone project where you will work on real business problems. You'll apply Generative AI techniques to practical challenges in various industries.",
+        category: "generative-ai"
+      },
+      {
+        question: "How will the course help me build a portfolio of Generative AI work?",
+        answer: "Throughout the course, you’ll create multiple projects, including a capstone project, that you can showcase in your portfolio to demonstrate your skills and increase your employability.",
+        category: "generative-ai"
+      },
 
-    // Certification-related FAQs
-    {
-      question: "Will I receive a certification after completing the Generative AI course?",
-      answer: "Yes, after successfully completing the course, you will receive a certification from Ivy Professional School, recognized by industry leaders and employers.",
-      category: "certification"
-    },
-    {
-      question: "Is the certification industry-recognized?",
-      answer: "Yes, Ivy Professional School’s certification is well-regarded by employers in the tech, AI, and data science industries, helping you stand out in the competitive job market.",
-      category: "certification"
-    },
-    {
-      question: "How can I use this certification to enhance my career?",
-      answer: "The certification will serve as a powerful addition to your resume and LinkedIn profile, demonstrating your expertise in Generative AI and boosting your job prospects in the AI field.",
-      category: "certification"
-    },
-    {
-      question: "Are there any additional certifications offered alongside the course?",
-      answer: "Yes, students are encouraged to pursue additional certifications from platforms like Google, Microsoft, or Coursera to further validate their skills and increase their industry credibility.",
-      category: "certification"
-    },
-    {
-      question: "Can I add the certification to my professional profiles?",
-      answer: "Yes, the certification can be added to your LinkedIn profile, resume, and other professional platforms to highlight your new skills in Generative AI.",
-      category: "certification"
-    },
+      // Job and Career-related FAQs
+      {
+        question: "What job roles can I pursue after completing the Generative AI course?",
+        answer: "Upon completing the course, you can apply for roles such as AI Engineer, Generative AI Developer, Machine Learning Engineer, Data Scientist, and AI Researcher.",
+        category: "job-and-career"
+      },
+      {
+        question: "How is the job market for Generative AI professionals in Mumbai?",
+        answer: "The job market in Mumbai is vibrant, with significant demand for Generative AI professionals across industries like technology, media, finance, and healthcare. Companies are increasingly integrating AI into their operations, leading to a surge in job opportunities.",
+        category: "job-and-career"
+      },
+      {
+        question: "What is the salary range for Generative AI professionals in Mumbai?",
+        answer: "Generative AI professionals in Mumbai can expect competitive salaries. Entry-level roles typically start at ₹10-15 lakhs per annum, while experienced professionals can earn ₹30 lakhs or more.",
+        category: "job-and-career"
+      },
+      {
+        question: "Can I switch careers to Generative AI after completing the course?",
+        answer: "Yes, the course is designed for career switchers. By the end of the program, you'll have the skills necessary to transition into a Generative AI career, even if you come from a non-technical background.",
+        category: "job-and-career"
+      },
+      {
+        question: "Do you offer job placement assistance?",
+        answer: "Yes, we provide job placement assistance, including resume reviews, mock interviews, and connections to hiring companies in Mumbai’s AI sector.",
+        category: "job-and-career"
+      },
 
-    // Projects-related FAQs (Mumbai-Specific & SEO Updated)
-    {
-      question: "What kind of Generative AI projects are included in the Mumbai course?",
-      answer: "You will build 10+ industry-relevant projects including AI-powered Financial Fraud Detectors for Mumbai's fintech sector, Multimodal Content Creators for media agencies, and RAG-based Legal Assistants for corporate firms in BKC. These projects utilize LangChain, Vector DBs, and OpenAI APIs.",
-      category: "projects"
-    },
-    {
-      question: "Will the projects focus on local Mumbai industries?",
-      answer: "Yes. Our curriculum is tailored to Mumbai’s dominance in Finance and Media. Projects include automating stock market sentiment analysis and building custom Stable Diffusion pipelines for digital marketing and production houses based in Andheri and Powai.",
-      category: "projects"
-    },
+      // Certification-related FAQs
+      {
+        question: "Will I receive a certification after completing the Generative AI course?",
+        answer: "Yes, after successfully completing the course, you will receive a certification from Ivy Professional School, recognized by industry leaders and employers.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification industry-recognized?",
+        answer: "Yes, Ivy Professional School’s certification is well-regarded by employers in the tech, AI, and data science industries, helping you stand out in the competitive job market.",
+        category: "certification"
+      },
+      {
+        question: "How can I use this certification to enhance my career?",
+        answer: "The certification will serve as a powerful addition to your resume and LinkedIn profile, demonstrating your expertise in Generative AI and boosting your job prospects in the AI field.",
+        category: "certification"
+      },
+      {
+        question: "Are there any additional certifications offered alongside the course?",
+        answer: "Yes, students are encouraged to pursue additional certifications from platforms like Google, Microsoft, or Coursera to further validate their skills and increase their industry credibility.",
+        category: "certification"
+      },
+      {
+        question: "Can I add the certification to my professional profiles?",
+        answer: "Yes, the certification can be added to your LinkedIn profile, resume, and other professional platforms to highlight your new skills in Generative AI.",
+        category: "certification"
+      },
 
-    // Placement-related FAQs (Mumbai-Specific & SEO Updated)
-    {
-      question: "How does the placement support benefit Mumbai-based students?",
-      answer: "We offer 100% placement support through exclusive hiring drives in major Mumbai business districts like Bandra-Kurla Complex (BKC) and Andheri East. Our career cell connects you with top-tier firms including Jio, TCS, and boutique AI startups in Navi Mumbai.",
-      category: "placement"
-    },
-    {
-      question: "Are there specific mock interviews for Mumbai companies?",
-      answer: "Absolutely. We conduct domain-specific mock interviews that mirror the technical and behavioral rounds of leading Mumbai-based companies, ensuring you are prepared for roles in Banking, Fintech, and Entertainment-tech.",
-      category: "placement"
-    },
+      // Projects-related FAQs (Mumbai-Specific & SEO Updated)
+      {
+        question: "What kind of Generative AI projects are included in the Mumbai course?",
+        answer: "You will build 10+ industry-relevant projects including AI-powered Financial Fraud Detectors for Mumbai's fintech sector, Multimodal Content Creators for media agencies, and RAG-based Legal Assistants for corporate firms in BKC. These projects utilize LangChain, Vector DBs, and OpenAI APIs.",
+        category: "projects"
+      },
+      {
+        question: "Will the projects focus on local Mumbai industries?",
+        answer: "Yes. Our curriculum is tailored to Mumbai’s dominance in Finance and Media. Projects include automating stock market sentiment analysis and building custom Stable Diffusion pipelines for digital marketing and production houses based in Andheri and Powai.",
+        category: "projects"
+      },
 
-    // Opportunities-related FAQs (Mumbai-Specific & SEO Updated)
-    {
-      question: "What job opportunities exist for GenAI experts in Mumbai in 2026?",
-      answer: "Mumbai is a booming hub for 'Agentic AI' and 'LLM Engineering' roles. Graduates can find high-paying opportunities as AI Solutions Architects, Prompt Architects, and AI Artists at global consulting firms and creative studios throughout Greater Mumbai and Thane.",
-      category: "opportunities"
-    },
-    {
-      question: "Can I find freelance AI work in Mumbai after this course?",
-      answer: "Yes. The course teaches you to build production-grade AI applications. Mumbai’s massive freelance market for content automation and custom AI tool development offers numerous high-ticket projects for skilled Generative AI developers.",
-      category: "opportunities"
-    },
+      // Placement-related FAQs (Mumbai-Specific & SEO Updated)
+      {
+        question: "How does the placement support benefit Mumbai-based students?",
+        answer: "We offer 100% placement support through exclusive hiring drives in major Mumbai business districts like Bandra-Kurla Complex (BKC) and Andheri East. Our career cell connects you with top-tier firms including Jio, TCS, and boutique AI startups in Navi Mumbai.",
+        category: "placement"
+      },
+      {
+        question: "Are there specific mock interviews for Mumbai companies?",
+        answer: "Absolutely. We conduct domain-specific mock interviews that mirror the technical and behavioral rounds of leading Mumbai-based companies, ensuring you are prepared for roles in Banking, Fintech, and Entertainment-tech.",
+        category: "placement"
+      },
 
-    // Support-related FAQs (Mumbai-Specific & SEO Updated)
-    {
-      question: "What student support is available for the Mumbai Generative AI course?",
-      answer: "We provide 24/7 technical support via our dedicated community forums. For Mumbai classroom students, we offer on-site lab access and face-to-face mentorship. Online students get live screen-sharing support to debug complex neural network code in real-time.",
-      category: "support"
-    },
-    {
-      question: "Do you provide infrastructure support like GPU access?",
-      answer: "Yes. Since training Generative models requires significant compute, we provide cloud-based GPU access for all students, ensuring you can train GANs and Transformers without investing in expensive hardware.",
-      category: "support"
-    },
+      // Opportunities-related FAQs (Mumbai-Specific & SEO Updated)
+      {
+        question: "What job opportunities exist for GenAI experts in Mumbai in 2026?",
+        answer: "Mumbai is a booming hub for 'Agentic AI' and 'LLM Engineering' roles. Graduates can find high-paying opportunities as AI Solutions Architects, Prompt Architects, and AI Artists at global consulting firms and creative studios throughout Greater Mumbai and Thane.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I find freelance AI work in Mumbai after this course?",
+        answer: "Yes. The course teaches you to build production-grade AI applications. Mumbai’s massive freelance market for content automation and custom AI tool development offers numerous high-ticket projects for skilled Generative AI developers.",
+        category: "opportunities"
+      },
 
-    // Job Outlook-related FAQs
-    {
-      question: "What is the job outlook for Generative AI professionals in Mumbai?",
-      answer: "Mumbai offers excellent career prospects for Generative AI professionals, with the demand for skilled talent growing at an accelerated rate. The job market is expected to expand by over 20% annually as more companies adopt AI technologies.",
-      category: "job-outlook"
-    },
-    {
-      question: "What are the key skills in demand for Generative AI roles in Mumbai?",
-      answer: "Key skills in demand include Python, deep learning, TensorFlow, PyTorch, GANs, VAEs, NLP, and model deployment. Expertise in cloud platforms like AWS and Azure is also highly sought after.",
-      category: "job-outlook"
-    },
-    {
-      question: "Which industries are hiring Generative AI professionals in Mumbai?",
-      answer: "Generative AI professionals are being sought after by industries such as technology, media, finance, healthcare, and e-commerce. Companies are utilizing AI to enhance their products, services, and customer experiences.",
-      category: "job-outlook"
-    },
-    {
-      question: "What is the average salary for a Generative AI professional in Mumbai?",
-      answer: "The average salary for a Generative AI professional in Mumbai ranges from ₹12 lakhs per annum for entry-level positions to ₹30 lakhs or more for senior-level roles.",
-      category: "job-outlook"
-    },
-    {
-      question: "What are the career growth prospects for Generative AI professionals in Mumbai?",
-      answer: "Generative AI professionals in Mumbai have strong career growth prospects, with opportunities for leadership roles such as AI Architect, Chief Data Scientist, and Director of AI as demand for AI expertise continues to grow.",
-      category: "job-outlook"
-    }
-  ]
-},
+      // Support-related FAQs (Mumbai-Specific & SEO Updated)
+      {
+        question: "What student support is available for the Mumbai Generative AI course?",
+        answer: "We provide 24/7 technical support via our dedicated community forums. For Mumbai classroom students, we offer on-site lab access and face-to-face mentorship. Online students get live screen-sharing support to debug complex neural network code in real-time.",
+        category: "support"
+      },
+      {
+        question: "Do you provide infrastructure support like GPU access?",
+        answer: "Yes. Since training Generative models requires significant compute, we provide cloud-based GPU access for all students, ensuring you can train GANs and Transformers without investing in expensive hardware.",
+        category: "support"
+      },
 
-"Generative AI Course in Pune": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "generative-ai", name: "Generative AI" },
-    { id: "job-and-career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" },
-    { id: "job-outlook", name: "Data & AI Job Outlook" }
-  ],
+      // Job Outlook-related FAQs
+      {
+        question: "What is the job outlook for Generative AI professionals in Mumbai?",
+        answer: "Mumbai offers excellent career prospects for Generative AI professionals, with the demand for skilled talent growing at an accelerated rate. The job market is expected to expand by over 20% annually as more companies adopt AI technologies.",
+        category: "job-outlook"
+      },
+      {
+        question: "What are the key skills in demand for Generative AI roles in Mumbai?",
+        answer: "Key skills in demand include Python, deep learning, TensorFlow, PyTorch, GANs, VAEs, NLP, and model deployment. Expertise in cloud platforms like AWS and Azure is also highly sought after.",
+        category: "job-outlook"
+      },
+      {
+        question: "Which industries are hiring Generative AI professionals in Mumbai?",
+        answer: "Generative AI professionals are being sought after by industries such as technology, media, finance, healthcare, and e-commerce. Companies are utilizing AI to enhance their products, services, and customer experiences.",
+        category: "job-outlook"
+      },
+      {
+        question: "What is the average salary for a Generative AI professional in Mumbai?",
+        answer: "The average salary for a Generative AI professional in Mumbai ranges from ₹12 lakhs per annum for entry-level positions to ₹30 lakhs or more for senior-level roles.",
+        category: "job-outlook"
+      },
+      {
+        question: "What are the career growth prospects for Generative AI professionals in Mumbai?",
+        answer: "Generative AI professionals in Mumbai have strong career growth prospects, with opportunities for leadership roles such as AI Architect, Chief Data Scientist, and Director of AI as demand for AI expertise continues to grow.",
+        category: "job-outlook"
+      }
+    ]
+  },
 
-  faqs: [
+  "Generative AI Course in Pune": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "generative-ai", name: "Generative AI" },
+      { id: "job-and-career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" },
+      { id: "job-outlook", name: "Data & AI Job Outlook" }
+    ],
 
-    /* ================= PROGRAM ================= */
-    {
-      question: "What does the Generative AI course in Pune cover?",
-      answer: "In this course, you will explore advanced Generative AI techniques such as GANs, VAEs, diffusion models, and Transformer-based architectures like GPT. You’ll work on real-world applications including text generation, image synthesis, chatbots, and AI-powered automation with hands-on projects.",
-      category: "program"
-    },
-    {
-      question: "How is the Generative AI course structured in Pune?",
-      answer: "The program follows a structured learning path including live instructor-led sessions, hands-on labs, real-time assignments, and an industry-aligned capstone project. Both weekday and weekend batches are available.",
-      category: "program"
-    },
-    {
-      question: "Can I take the Generative AI course online or offline in Pune?",
-      answer: "Yes, learners can choose between classroom training in Pune, live online sessions, or a hybrid learning model for maximum flexibility.",
-      category: "program"
-    },
-    {
-      question: "How long is the Generative AI course in Pune?",
-      answer: "The course duration ranges from 6 to 10 months depending on your learning pace and batch selection.",
-      category: "program"
-    },
-    {
-      question: "What makes this Generative AI course in Pune unique?",
-      answer: "The course emphasizes real-world GenAI use cases, production-ready projects, expert mentorship, and strong career support aligned with current industry demands.",
-      category: "program"
-    },
+    faqs: [
 
-    /* ================= ELIGIBILITY ================= */
-    {
-      question: "Who is eligible for the Generative AI course in Pune?",
-      answer: "Graduates, working professionals, and career switchers with basic logical thinking and interest in AI are eligible. Prior technical background is helpful but not mandatory.",
-      category: "eligibility"
-    },
-    {
-      question: "Do I need prior coding experience?",
-      answer: "No. The course starts with Python fundamentals and gradually advances to deep learning and Generative AI concepts.",
-      category: "eligibility"
-    },
-    {
-      question: "Can non-technical professionals enroll?",
-      answer: "Yes. This program is designed to support learners from non-technical backgrounds with structured foundational training.",
-      category: "eligibility"
-    },
-    {
-      question: "Is there an age limit?",
-      answer: "No age limit. Anyone passionate about Generative AI can enroll.",
-      category: "eligibility"
-    },
-    {
-      question: "Is a computer science degree required?",
-      answer: "No. Practical skills and applied learning are the focus of this course.",
-      category: "eligibility"
-    },
+      /* ================= PROGRAM ================= */
+      {
+        question: "What does the Generative AI course in Pune cover?",
+        answer: "In this course, you will explore advanced Generative AI techniques such as GANs, VAEs, diffusion models, and Transformer-based architectures like GPT. You’ll work on real-world applications including text generation, image synthesis, chatbots, and AI-powered automation with hands-on projects.",
+        category: "program"
+      },
+      {
+        question: "How is the Generative AI course structured in Pune?",
+        answer: "The program follows a structured learning path including live instructor-led sessions, hands-on labs, real-time assignments, and an industry-aligned capstone project. Both weekday and weekend batches are available.",
+        category: "program"
+      },
+      {
+        question: "Can I take the Generative AI course online or offline in Pune?",
+        answer: "Yes, learners can choose between classroom training in Pune, live online sessions, or a hybrid learning model for maximum flexibility.",
+        category: "program"
+      },
+      {
+        question: "How long is the Generative AI course in Pune?",
+        answer: "The course duration ranges from 6 to 10 months depending on your learning pace and batch selection.",
+        category: "program"
+      },
+      {
+        question: "What makes this Generative AI course in Pune unique?",
+        answer: "The course emphasizes real-world GenAI use cases, production-ready projects, expert mentorship, and strong career support aligned with current industry demands.",
+        category: "program"
+      },
 
-    /* ================= GENERATIVE AI ================= */
-    {
-      question: "Which tools are covered in the Generative AI course?",
-      answer: "You will learn Python, PyTorch, TensorFlow, Hugging Face, LangChain, OpenAI APIs, diffusion models, vector databases, and cloud deployment.",
-      category: "generative-ai"
-    },
-    {
-      question: "Does the course focus on real-world GenAI use cases?",
-      answer: "Yes. You will build chatbots, AI copilots, recommendation systems, image generators, and enterprise GenAI solutions.",
-      category: "generative-ai"
-    },
-    {
-      question: "Will I receive a certification?",
-      answer: "Yes. You will receive an industry-recognized certification from Ivy Professional School upon completion.",
-      category: "generative-ai"
-    },
+      /* ================= ELIGIBILITY ================= */
+      {
+        question: "Who is eligible for the Generative AI course in Pune?",
+        answer: "Graduates, working professionals, and career switchers with basic logical thinking and interest in AI are eligible. Prior technical background is helpful but not mandatory.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need prior coding experience?",
+        answer: "No. The course starts with Python fundamentals and gradually advances to deep learning and Generative AI concepts.",
+        category: "eligibility"
+      },
+      {
+        question: "Can non-technical professionals enroll?",
+        answer: "Yes. This program is designed to support learners from non-technical backgrounds with structured foundational training.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an age limit?",
+        answer: "No age limit. Anyone passionate about Generative AI can enroll.",
+        category: "eligibility"
+      },
+      {
+        question: "Is a computer science degree required?",
+        answer: "No. Practical skills and applied learning are the focus of this course.",
+        category: "eligibility"
+      },
 
-    /* ================= JOB & CAREER ================= */
-    {
-      question: "What jobs can I apply for after this course?",
-      answer: "You can apply for roles such as Generative AI Engineer, Machine Learning Engineer, AI Developer, Data Scientist, and AI Consultant.",
-      category: "job-and-career"
-    },
-    {
-      question: "What salary can I expect in Pune?",
-      answer: "Entry-level salaries start around ₹8–10 LPA, while experienced GenAI professionals earn ₹25–35 LPA depending on skillset and domain.",
-      category: "job-and-career"
-    },
-    {
-      question: "Does the course help with career transition?",
-      answer: "Yes. The curriculum and career support are designed specifically for career switchers.",
-      category: "job-and-career"
-    },
+      /* ================= GENERATIVE AI ================= */
+      {
+        question: "Which tools are covered in the Generative AI course?",
+        answer: "You will learn Python, PyTorch, TensorFlow, Hugging Face, LangChain, OpenAI APIs, diffusion models, vector databases, and cloud deployment.",
+        category: "generative-ai"
+      },
+      {
+        question: "Does the course focus on real-world GenAI use cases?",
+        answer: "Yes. You will build chatbots, AI copilots, recommendation systems, image generators, and enterprise GenAI solutions.",
+        category: "generative-ai"
+      },
+      {
+        question: "Will I receive a certification?",
+        answer: "Yes. You will receive an industry-recognized certification from Ivy Professional School upon completion.",
+        category: "generative-ai"
+      },
 
-    /* ================= PROJECTS ================= */
-    {
-      question: "What projects will I work on during the Generative AI course?",
-      answer: "You will work on real-world projects including GenAI chatbots, AI content generators, document intelligence systems, image generation using diffusion models, and LLM-powered applications.",
-      category: "projects"
-    },
-    {
-      question: "Is there a capstone project in the course?",
-      answer: "Yes. The capstone project is industry-aligned and designed to solve real business problems using Generative AI technologies.",
-      category: "projects"
-    },
-    {
-      question: "Are projects aligned with current industry needs?",
-      answer: "Absolutely. Projects are updated regularly based on 2025 GenAI hiring trends and enterprise use cases.",
-      category: "projects"
-    },
+      /* ================= JOB & CAREER ================= */
+      {
+        question: "What jobs can I apply for after this course?",
+        answer: "You can apply for roles such as Generative AI Engineer, Machine Learning Engineer, AI Developer, Data Scientist, and AI Consultant.",
+        category: "job-and-career"
+      },
+      {
+        question: "What salary can I expect in Pune?",
+        answer: "Entry-level salaries start around ₹8–10 LPA, while experienced GenAI professionals earn ₹25–35 LPA depending on skillset and domain.",
+        category: "job-and-career"
+      },
+      {
+        question: "Does the course help with career transition?",
+        answer: "Yes. The curriculum and career support are designed specifically for career switchers.",
+        category: "job-and-career"
+      },
 
-    /* ================= PLACEMENT ================= */
-    {
-      question: "Does the Generative AI course provide placement assistance?",
-      answer: "Yes. Ivy Professional School offers structured placement assistance including resume building, interview prep, mock interviews, and hiring partner referrals.",
-      category: "placement"
-    },
-    {
-      question: "Which companies hire Generative AI professionals from Pune?",
-      answer: "Hiring partners include IT services companies, AI startups, SaaS firms, fintech, healthcare, and global MNCs hiring for GenAI roles.",
-      category: "placement"
-    },
-    {
-      question: "Is placement support available after course completion?",
-      answer: "Yes. Placement support continues even after course completion until you secure a relevant role.",
-      category: "placement"
-    },
+      /* ================= PROJECTS ================= */
+      {
+        question: "What projects will I work on during the Generative AI course?",
+        answer: "You will work on real-world projects including GenAI chatbots, AI content generators, document intelligence systems, image generation using diffusion models, and LLM-powered applications.",
+        category: "projects"
+      },
+      {
+        question: "Is there a capstone project in the course?",
+        answer: "Yes. The capstone project is industry-aligned and designed to solve real business problems using Generative AI technologies.",
+        category: "projects"
+      },
+      {
+        question: "Are projects aligned with current industry needs?",
+        answer: "Absolutely. Projects are updated regularly based on 2025 GenAI hiring trends and enterprise use cases.",
+        category: "projects"
+      },
 
-    /* ================= OPPORTUNITIES ================= */
-    {
-      question: "What opportunities open up after learning Generative AI?",
-      answer: "You can work on AI product development, enterprise automation, GenAI research, freelance AI consulting, and startup innovation projects.",
-      category: "opportunities"
-    },
-    {
-      question: "Can I work on global GenAI projects?",
-      answer: "Yes. GenAI skills are globally in demand, enabling remote and international opportunities.",
-      category: "opportunities"
-    },
+      /* ================= PLACEMENT ================= */
+      {
+        question: "Does the Generative AI course provide placement assistance?",
+        answer: "Yes. Ivy Professional School offers structured placement assistance including resume building, interview prep, mock interviews, and hiring partner referrals.",
+        category: "placement"
+      },
+      {
+        question: "Which companies hire Generative AI professionals from Pune?",
+        answer: "Hiring partners include IT services companies, AI startups, SaaS firms, fintech, healthcare, and global MNCs hiring for GenAI roles.",
+        category: "placement"
+      },
+      {
+        question: "Is placement support available after course completion?",
+        answer: "Yes. Placement support continues even after course completion until you secure a relevant role.",
+        category: "placement"
+      },
 
-    /* ================= SUPPORT ================= */
-    {
-      question: "What kind of learning support is provided?",
-      answer: "You receive mentor support, doubt-clearing sessions, recorded lectures, dedicated Slack/WhatsApp groups, and one-on-one guidance.",
-      category: "support"
-    },
-    {
-      question: "Is there career and interview support?",
-      answer: "Yes. Dedicated career mentors help with resume reviews, LinkedIn optimization, mock interviews, and job strategy.",
-      category: "support"
-    },
+      /* ================= OPPORTUNITIES ================= */
+      {
+        question: "What opportunities open up after learning Generative AI?",
+        answer: "You can work on AI product development, enterprise automation, GenAI research, freelance AI consulting, and startup innovation projects.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I work on global GenAI projects?",
+        answer: "Yes. GenAI skills are globally in demand, enabling remote and international opportunities.",
+        category: "opportunities"
+      },
 
-    /* ================= JOB OUTLOOK ================= */
-    {
-      question: "What is the job outlook for Generative AI professionals in Pune?",
-      answer: "The demand for Generative AI professionals in Pune is growing at over 25% annually due to enterprise AI adoption and GenAI-led transformation in 2025.",
-      category: "job-outlook"
-    },
-    {
-      question: "Which industries are hiring GenAI talent?",
-      answer: "IT, SaaS, fintech, healthcare, e-commerce, media, and manufacturing sectors are actively hiring GenAI professionals.",
-      category: "job-outlook"
-    },
-       // Certification-related FAQs
-    {
-      question: "Will I receive a certification after completing the Generative AI course?",
-      answer: "Yes, after successfully completing the course, you will receive a certification from Ivy Professional School, recognized by industry leaders and employers.",
-      category: "certification"
-    },
-    {
-      question: "Is the certification industry-recognized?",
-      answer: "Yes, Ivy Professional School’s certification is well-regarded by employers in the tech, AI, and data science industries, helping you stand out in the competitive job market.",
-      category: "certification"
-    },
-    {
-      question: "How can I use this certification to enhance my career?",
-      answer: "The certification will serve as a powerful addition to your resume and LinkedIn profile, demonstrating your expertise in Generative AI and boosting your job prospects in the AI field.",
-      category: "certification"
-    },
-    {
-      question: "Are there any additional certifications offered alongside the course?",
-      answer: "Yes, students are encouraged to pursue additional certifications from platforms like Google, Microsoft, or Coursera to further validate their skills and increase their industry credibility.",
-      category: "certification"
-    },
-    {
-      question: "Can I add the certification to my professional profiles?",
-      answer: "Yes, the certification can be added to your LinkedIn profile, resume, and other professional platforms to highlight your new skills in Generative AI.",
-      category: "certification"
-    },
-  ]
-},
+      /* ================= SUPPORT ================= */
+      {
+        question: "What kind of learning support is provided?",
+        answer: "You receive mentor support, doubt-clearing sessions, recorded lectures, dedicated Slack/WhatsApp groups, and one-on-one guidance.",
+        category: "support"
+      },
+      {
+        question: "Is there career and interview support?",
+        answer: "Yes. Dedicated career mentors help with resume reviews, LinkedIn optimization, mock interviews, and job strategy.",
+        category: "support"
+      },
 
-"Generative AI Course in Chennai": {
-  categories: [
-    { id: "program", name: "Program" },
-    { id: "eligibility", name: "Eligibility" },
-    { id: "generative-ai", name: "Generative AI" },
-    { id: "job-and-career", name: "Job And Career" },
-    { id: "certification", name: "Certification" },
-    { id: "projects", name: "Projects" },
-    { id: "placement", name: "Placement" },
-    { id: "opportunities", name: "Opportunities" },
-    { id: "support", name: "Support" },
-    { id: "job-outlook", name: "Data & AI Job Outlook" }
-  ],
+      /* ================= JOB OUTLOOK ================= */
+      {
+        question: "What is the job outlook for Generative AI professionals in Pune?",
+        answer: "The demand for Generative AI professionals in Pune is growing at over 25% annually due to enterprise AI adoption and GenAI-led transformation in 2025.",
+        category: "job-outlook"
+      },
+      {
+        question: "Which industries are hiring GenAI talent?",
+        answer: "IT, SaaS, fintech, healthcare, e-commerce, media, and manufacturing sectors are actively hiring GenAI professionals.",
+        category: "job-outlook"
+      },
+      // Certification-related FAQs
+      {
+        question: "Will I receive a certification after completing the Generative AI course?",
+        answer: "Yes, after successfully completing the course, you will receive a certification from Ivy Professional School, recognized by industry leaders and employers.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification industry-recognized?",
+        answer: "Yes, Ivy Professional School’s certification is well-regarded by employers in the tech, AI, and data science industries, helping you stand out in the competitive job market.",
+        category: "certification"
+      },
+      {
+        question: "How can I use this certification to enhance my career?",
+        answer: "The certification will serve as a powerful addition to your resume and LinkedIn profile, demonstrating your expertise in Generative AI and boosting your job prospects in the AI field.",
+        category: "certification"
+      },
+      {
+        question: "Are there any additional certifications offered alongside the course?",
+        answer: "Yes, students are encouraged to pursue additional certifications from platforms like Google, Microsoft, or Coursera to further validate their skills and increase their industry credibility.",
+        category: "certification"
+      },
+      {
+        question: "Can I add the certification to my professional profiles?",
+        answer: "Yes, the certification can be added to your LinkedIn profile, resume, and other professional platforms to highlight your new skills in Generative AI.",
+        category: "certification"
+      },
+    ]
+  },
 
-  faqs: [
-       // Certification-related FAQs
-    {
-      question: "Will I receive a certification after completing the Generative AI course?",
-      answer: "Yes, after successfully completing the course, you will receive a certification from Ivy Professional School, recognized by industry leaders and employers.",
-      category: "certification"
-    },
-    {
-      question: "Is the certification industry-recognized?",
-      answer: "Yes, Ivy Professional School’s certification is well-regarded by employers in the tech, AI, and data science industries, helping you stand out in the competitive job market.",
-      category: "certification"
-    },
-    {
-      question: "How can I use this certification to enhance my career?",
-      answer: "The certification will serve as a powerful addition to your resume and LinkedIn profile, demonstrating your expertise in Generative AI and boosting your job prospects in the AI field.",
-      category: "certification"
-    },
-    {
-      question: "Are there any additional certifications offered alongside the course?",
-      answer: "Yes, students are encouraged to pursue additional certifications from platforms like Google, Microsoft, or Coursera to further validate their skills and increase their industry credibility.",
-      category: "certification"
-    },
-    {
-      question: "Can I add the certification to my professional profiles?",
-      answer: "Yes, the certification can be added to your LinkedIn profile, resume, and other professional platforms to highlight your new skills in Generative AI.",
-      category: "certification"
-    },
+  "Generative AI Course in Chennai": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "generative-ai", name: "Generative AI" },
+      { id: "job-and-career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" },
+      { id: "job-outlook", name: "Data & AI Job Outlook" }
+    ],
 
-    /* ================= PROGRAM ================= */
-    {
-      question: "What will I learn in the Generative AI course in Chennai?",
-      answer: "You will learn core and advanced Generative AI concepts including GANs, VAEs, diffusion models, large language models (LLMs), and transformer architectures. The course focuses on building real-world AI applications such as chatbots, content generators, and AI automation systems.",
-      category: "program"
-    },
-    {
-      question: "How is the Generative AI course in Chennai structured?",
-      answer: "The course includes instructor-led sessions, hands-on coding labs, live industry projects, and a capstone project. Learners can choose weekday or weekend batches based on availability.",
-      category: "program"
-    },
-    {
-      question: "Is the Generative AI course available online or offline in Chennai?",
-      answer: "Yes. You can attend classroom training in Chennai, join live online sessions, or opt for a hybrid learning model.",
-      category: "program"
-    },
-    {
-      question: "What is the duration of the Generative AI course in Chennai?",
-      answer: "The course duration ranges from 6 to 10 months depending on the learning pace and batch selection.",
-      category: "program"
-    },
-    {
-      question: "Why choose this Generative AI course in Chennai?",
-      answer: "This program emphasizes hands-on learning, real-world GenAI use cases, expert mentorship, and strong career guidance aligned with current industry requirements.",
-      category: "program"
-    },
+    faqs: [
+      // Certification-related FAQs
+      {
+        question: "Will I receive a certification after completing the Generative AI course?",
+        answer: "Yes, after successfully completing the course, you will receive a certification from Ivy Professional School, recognized by industry leaders and employers.",
+        category: "certification"
+      },
+      {
+        question: "Is the certification industry-recognized?",
+        answer: "Yes, Ivy Professional School’s certification is well-regarded by employers in the tech, AI, and data science industries, helping you stand out in the competitive job market.",
+        category: "certification"
+      },
+      {
+        question: "How can I use this certification to enhance my career?",
+        answer: "The certification will serve as a powerful addition to your resume and LinkedIn profile, demonstrating your expertise in Generative AI and boosting your job prospects in the AI field.",
+        category: "certification"
+      },
+      {
+        question: "Are there any additional certifications offered alongside the course?",
+        answer: "Yes, students are encouraged to pursue additional certifications from platforms like Google, Microsoft, or Coursera to further validate their skills and increase their industry credibility.",
+        category: "certification"
+      },
+      {
+        question: "Can I add the certification to my professional profiles?",
+        answer: "Yes, the certification can be added to your LinkedIn profile, resume, and other professional platforms to highlight your new skills in Generative AI.",
+        category: "certification"
+      },
 
-    /* ================= ELIGIBILITY ================= */
-    {
-      question: "Who can enroll in the Generative AI course in Chennai?",
-      answer: "Graduates, working professionals, and career switchers from both technical and non-technical backgrounds can enroll. Basic logical thinking and interest in AI are sufficient.",
-      category: "eligibility"
-    },
-    {
-      question: "Is prior coding experience required?",
-      answer: "No. The course begins with Python fundamentals and gradually progresses to advanced AI concepts.",
-      category: "eligibility"
-    },
-    {
-      question: "Can non-technical professionals join this course?",
-      answer: "Yes. The curriculum is designed to support non-technical learners through structured foundational training.",
-      category: "eligibility"
-    },
-    {
-      question: "Is there an age limit?",
-      answer: "No age limit applies. Anyone interested in learning Generative AI can enroll.",
-      category: "eligibility"
-    },
-    {
-      question: "Do I need a computer science degree?",
-      answer: "No. The course focuses on practical skills rather than academic background.",
-      category: "eligibility"
-    },
+      /* ================= PROGRAM ================= */
+      {
+        question: "What will I learn in the Generative AI course in Chennai?",
+        answer: "You will learn core and advanced Generative AI concepts including GANs, VAEs, diffusion models, large language models (LLMs), and transformer architectures. The course focuses on building real-world AI applications such as chatbots, content generators, and AI automation systems.",
+        category: "program"
+      },
+      {
+        question: "How is the Generative AI course in Chennai structured?",
+        answer: "The course includes instructor-led sessions, hands-on coding labs, live industry projects, and a capstone project. Learners can choose weekday or weekend batches based on availability.",
+        category: "program"
+      },
+      {
+        question: "Is the Generative AI course available online or offline in Chennai?",
+        answer: "Yes. You can attend classroom training in Chennai, join live online sessions, or opt for a hybrid learning model.",
+        category: "program"
+      },
+      {
+        question: "What is the duration of the Generative AI course in Chennai?",
+        answer: "The course duration ranges from 6 to 10 months depending on the learning pace and batch selection.",
+        category: "program"
+      },
+      {
+        question: "Why choose this Generative AI course in Chennai?",
+        answer: "This program emphasizes hands-on learning, real-world GenAI use cases, expert mentorship, and strong career guidance aligned with current industry requirements.",
+        category: "program"
+      },
 
-    /* ================= GENERATIVE AI ================= */
-    {
-      question: "Which tools are covered in the Generative AI course?",
-      answer: "You will work with Python, PyTorch, TensorFlow, Hugging Face, LangChain, OpenAI APIs, vector databases, and cloud platforms for deployment.",
-      category: "generative-ai"
-    },
-    {
-      question: "Is the course focused on practical GenAI applications?",
-      answer: "Yes. The program emphasizes real-world use cases such as AI copilots, document intelligence, recommendation systems, and content generation.",
-      category: "generative-ai"
-    },
-    {
-      question: "Will I receive a Generative AI certification?",
-      answer: "Yes. You will receive an industry-recognized certification from Ivy Professional School.",
-      category: "generative-ai"
-    },
+      /* ================= ELIGIBILITY ================= */
+      {
+        question: "Who can enroll in the Generative AI course in Chennai?",
+        answer: "Graduates, working professionals, and career switchers from both technical and non-technical backgrounds can enroll. Basic logical thinking and interest in AI are sufficient.",
+        category: "eligibility"
+      },
+      {
+        question: "Is prior coding experience required?",
+        answer: "No. The course begins with Python fundamentals and gradually progresses to advanced AI concepts.",
+        category: "eligibility"
+      },
+      {
+        question: "Can non-technical professionals join this course?",
+        answer: "Yes. The curriculum is designed to support non-technical learners through structured foundational training.",
+        category: "eligibility"
+      },
+      {
+        question: "Is there an age limit?",
+        answer: "No age limit applies. Anyone interested in learning Generative AI can enroll.",
+        category: "eligibility"
+      },
+      {
+        question: "Do I need a computer science degree?",
+        answer: "No. The course focuses on practical skills rather than academic background.",
+        category: "eligibility"
+      },
 
-    /* ================= JOB & CAREER ================= */
-    {
-      question: "What roles can I apply for after completing the course?",
-      answer: "You can apply for roles such as Generative AI Engineer, Machine Learning Engineer, AI Developer, Data Scientist, and AI Consultant.",
-      category: "job-and-career"
-    },
-    {
-      question: "What salary can I expect in Chennai?",
-      answer: "Entry-level salaries typically range from ₹8–10 LPA, while experienced GenAI professionals can earn ₹25–35 LPA.",
-      category: "job-and-career"
-    },
-    {
-      question: "Is this course suitable for career switching?",
-      answer: "Yes. The course is structured to support professionals transitioning into AI roles.",
-      category: "job-and-career"
-    },
+      /* ================= GENERATIVE AI ================= */
+      {
+        question: "Which tools are covered in the Generative AI course?",
+        answer: "You will work with Python, PyTorch, TensorFlow, Hugging Face, LangChain, OpenAI APIs, vector databases, and cloud platforms for deployment.",
+        category: "generative-ai"
+      },
+      {
+        question: "Is the course focused on practical GenAI applications?",
+        answer: "Yes. The program emphasizes real-world use cases such as AI copilots, document intelligence, recommendation systems, and content generation.",
+        category: "generative-ai"
+      },
+      {
+        question: "Will I receive a Generative AI certification?",
+        answer: "Yes. You will receive an industry-recognized certification from Ivy Professional School.",
+        category: "generative-ai"
+      },
 
-    /* ================= PROJECTS ================= */
-    {
-      question: "What projects are included in the Generative AI course in Chennai?",
-      answer: "You will work on projects such as GenAI chatbots, AI content generators, document summarization systems, image generation using diffusion models, and LLM-powered applications.",
-      category: "projects"
-    },
-    {
-      question: "Is there a capstone project?",
-      answer: "Yes. The capstone project focuses on solving real business problems using Generative AI technologies.",
-      category: "projects"
-    },
-    {
-      question: "Are projects aligned with current industry trends?",
-      answer: "Yes. Projects are regularly updated based on 2025 GenAI hiring trends and enterprise requirements.",
-      category: "projects"
-    },
+      /* ================= JOB & CAREER ================= */
+      {
+        question: "What roles can I apply for after completing the course?",
+        answer: "You can apply for roles such as Generative AI Engineer, Machine Learning Engineer, AI Developer, Data Scientist, and AI Consultant.",
+        category: "job-and-career"
+      },
+      {
+        question: "What salary can I expect in Chennai?",
+        answer: "Entry-level salaries typically range from ₹8–10 LPA, while experienced GenAI professionals can earn ₹25–35 LPA.",
+        category: "job-and-career"
+      },
+      {
+        question: "Is this course suitable for career switching?",
+        answer: "Yes. The course is structured to support professionals transitioning into AI roles.",
+        category: "job-and-career"
+      },
 
-    /* ================= PLACEMENT ================= */
-    {
-      question: "Does the Generative AI course provide placement assistance in Chennai?",
-      answer: "Yes. Ivy Professional School offers resume building, interview preparation, mock interviews, and access to hiring partners.",
-      category: "placement"
-    },
-    {
-      question: "Which companies hire Generative AI professionals in Chennai?",
-      answer: "Hiring companies include IT services firms, AI startups, SaaS companies, fintech, healthcare organizations, and global MNCs.",
-      category: "placement"
-    },
-    {
-      question: "How long does placement support last?",
-      answer: "Placement support continues even after course completion until you secure a relevant role.",
-      category: "placement"
-    },
+      /* ================= PROJECTS ================= */
+      {
+        question: "What projects are included in the Generative AI course in Chennai?",
+        answer: "You will work on projects such as GenAI chatbots, AI content generators, document summarization systems, image generation using diffusion models, and LLM-powered applications.",
+        category: "projects"
+      },
+      {
+        question: "Is there a capstone project?",
+        answer: "Yes. The capstone project focuses on solving real business problems using Generative AI technologies.",
+        category: "projects"
+      },
+      {
+        question: "Are projects aligned with current industry trends?",
+        answer: "Yes. Projects are regularly updated based on 2025 GenAI hiring trends and enterprise requirements.",
+        category: "projects"
+      },
 
-    /* ================= OPPORTUNITIES ================= */
-    {
-      question: "What opportunities are available after learning Generative AI?",
-      answer: "You can work on enterprise AI solutions, GenAI product development, freelance AI consulting, global remote roles, and startup innovation projects.",
-      category: "opportunities"
-    },
-    {
-      question: "Are international or remote opportunities available?",
-      answer: "Yes. Generative AI skills are globally in demand, enabling remote and international career opportunities.",
-      category: "opportunities"
-    },
+      /* ================= PLACEMENT ================= */
+      {
+        question: "Does the Generative AI course provide placement assistance in Chennai?",
+        answer: "Yes. Ivy Professional School offers resume building, interview preparation, mock interviews, and access to hiring partners.",
+        category: "placement"
+      },
+      {
+        question: "Which companies hire Generative AI professionals in Chennai?",
+        answer: "Hiring companies include IT services firms, AI startups, SaaS companies, fintech, healthcare organizations, and global MNCs.",
+        category: "placement"
+      },
+      {
+        question: "How long does placement support last?",
+        answer: "Placement support continues even after course completion until you secure a relevant role.",
+        category: "placement"
+      },
 
-    /* ================= SUPPORT ================= */
-    {
-      question: "What learning support is provided during the course?",
-      answer: "You receive mentor support, doubt-clearing sessions, recorded lectures, peer discussion groups, and one-on-one guidance.",
-      category: "support"
-    },
-    {
-      question: "Is career and interview support included?",
-      answer: "Yes. Dedicated career mentors assist with resume reviews, LinkedIn optimization, and mock interviews.",
-      category: "support"
-    },
+      /* ================= OPPORTUNITIES ================= */
+      {
+        question: "What opportunities are available after learning Generative AI?",
+        answer: "You can work on enterprise AI solutions, GenAI product development, freelance AI consulting, global remote roles, and startup innovation projects.",
+        category: "opportunities"
+      },
+      {
+        question: "Are international or remote opportunities available?",
+        answer: "Yes. Generative AI skills are globally in demand, enabling remote and international career opportunities.",
+        category: "opportunities"
+      },
 
-    /* ================= JOB OUTLOOK ================= */
-    {
-      question: "What is the job outlook for Generative AI professionals in Chennai?",
-      answer: "The demand for Generative AI professionals in Chennai is growing at over 25% annually due to enterprise AI adoption and GenAI-led digital transformation.",
-      category: "job-outlook"
-    },
-    {
-      question: "Which industries are hiring GenAI professionals?",
-      answer: "IT, SaaS, healthcare, fintech, e-commerce, manufacturing, and media industries are actively hiring GenAI talent.",
-      category: "job-outlook"
-    }
-  ]
-}
+      /* ================= SUPPORT ================= */
+      {
+        question: "What learning support is provided during the course?",
+        answer: "You receive mentor support, doubt-clearing sessions, recorded lectures, peer discussion groups, and one-on-one guidance.",
+        category: "support"
+      },
+      {
+        question: "Is career and interview support included?",
+        answer: "Yes. Dedicated career mentors assist with resume reviews, LinkedIn optimization, and mock interviews.",
+        category: "support"
+      },
+
+      /* ================= JOB OUTLOOK ================= */
+      {
+        question: "What is the job outlook for Generative AI professionals in Chennai?",
+        answer: "The demand for Generative AI professionals in Chennai is growing at over 25% annually due to enterprise AI adoption and GenAI-led digital transformation.",
+        category: "job-outlook"
+      },
+      {
+        question: "Which industries are hiring GenAI professionals?",
+        answer: "IT, SaaS, healthcare, fintech, e-commerce, manufacturing, and media industries are actively hiring GenAI talent.",
+        category: "job-outlook"
+      }
+    ]
+  }
 
 
 
@@ -5111,112 +5200,112 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
                     Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Kolkata</span>
                   </h2>
                 ) :
-                course.title === "Data Engineering Course in Bangalore" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Bangalore</span>
-                  </h2>
-                ):
-                course.title === "Data Engineering Course in Mumbai" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Mumbai</span>
-                  </h2>
-                ) :
-                course.title === "Data Engineering Course in Pune" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Pune</span>
-                  </h2>
-                ):
-                course.title === "Data Engineering Course in Delhi" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Delhi</span>
-                  </h2>
-                ) :
-                course.title === "Data Engineering Course in Chennai" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Chennai</span>
-                  </h2>
-                ):
-                course.title === "Data Analytics With Visualization in Kolkata" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics With Visualization in Kolkata</span>
-                  </h2>
-                ) :
-                course.title === "Data Analytics With Visualization in Delhi" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics With Visualization in Delhi</span>
-                  </h2>
-                ) 
-                 : course.title === "Data Analytics With Visualization in Bangalore" ? (
+                  course.title === "Data Engineering Course in Bangalore" ? (
                     <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Bangalore</span>
+                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Bangalore</span>
                     </h2>
-                  )
-                  : course.title === "Data Analytics With Visualization in Pune" ? (
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Pune</span>
-                    </h2>
-                  )
-              
-                : course.title === "Data Science with Machine Learning & AI Course in Delhi" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Science Course in Delhi</span>
-                  </h2>
-                ) : course.title === "Data Science with Machine Learning & AI Course in Pune" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Science Course in Pune</span>
-                  </h2>
-                ) : course.title === "Data Science with Machine Learning & AI Course in Chennai" ? (
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Chennai</span>
-                  </h2>
-                )
-                  : course.title === "Data Science with Machine Learning & AI Course in Bangalore" ? (
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Bangalore</span>
-                    </h2>
-                  )
-                  : course.title === "Data Science with Machine Learning & AI Course in Mumbai" ? (
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
-                    </h2>
-                  )
-                  : course.title === "Generative AI Course in Kolkata" ? (
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Kolkata</span>
-                    </h2>
-                  )
-                  : course.title === "Generative AI Course in Delhi" ? (
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Delhi</span>
-                    </h2>
-                  )
-                  : course.title === "Generative AI Course in Bangalore" ? (
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Bangalore</span>
-                    </h2>
-                  )
-                  : course.title === "Generative AI Course in Mumbai" ? (
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Mumbai</span>
-                    </h2>
-                  )
-                  : course.title === "Generative AI Course in Pune" ? (
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Pune</span>
-                    </h2>
-                  )
-                  : course.title === "Generative AI Course in Chennai" ? (
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Chennai</span>
-                    </h2>
-                  )
-
-
-                    : (
-                      /* DEFAULT FALLBACK - If no matches above */
+                  ) :
+                    course.title === "Data Engineering Course in Mumbai" ? (
                       <h2 className="text-3xl font-bold mb-4 text-gray-900">
-                        What I need to know more about Ivy’s support, fees, and projects?                  </h2>
-                    )
+                        Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Mumbai</span>
+                      </h2>
+                    ) :
+                      course.title === "Data Engineering Course in Pune" ? (
+                        <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                          Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Pune</span>
+                        </h2>
+                      ) :
+                        course.title === "Data Engineering Course in Delhi" ? (
+                          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                            Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Delhi</span>
+                          </h2>
+                        ) :
+                          course.title === "Data Engineering Course in Chennai" ? (
+                            <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                              Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Engineering Course in Chennai</span>
+                            </h2>
+                          ) :
+                            course.title === "Data Analytics With Visualization in Kolkata" ? (
+                              <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics With Visualization in Kolkata</span>
+                              </h2>
+                            ) :
+                              course.title === "Data Analytics With Visualization in Delhi" ? (
+                                <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                  Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Analytics With Visualization in Delhi</span>
+                                </h2>
+                              )
+                                : course.title === "Data Analytics With Visualization in Bangalore" ? (
+                                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Bangalore</span>
+                                  </h2>
+                                )
+                                  : course.title === "Data Analytics With Visualization in Pune" ? (
+                                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Pune</span>
+                                    </h2>
+                                  )
+
+                                    : course.title === "Data Science with Machine Learning & AI Course in Delhi" ? (
+                                      <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                        Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Science Course in Delhi</span>
+                                      </h2>
+                                    ) : course.title === "Data Science with Machine Learning & AI Course in Pune" ? (
+                                      <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                        Frequently Asked Questions – <span style={{ color: '#16a5db' }}>Data Science Course in Pune</span>
+                                      </h2>
+                                    ) : course.title === "Data Science with Machine Learning & AI Course in Chennai" ? (
+                                      <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                        Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Chennai</span>
+                                      </h2>
+                                    )
+                                      : course.title === "Data Science with Machine Learning & AI Course in Bangalore" ? (
+                                        <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                          Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Bangalore</span>
+                                        </h2>
+                                      )
+                                        : course.title === "Data Science with Machine Learning & AI Course in Mumbai" ? (
+                                          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                            Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Data Science Course in Mumbai</span>
+                                          </h2>
+                                        )
+                                          : course.title === "Generative AI Course in Kolkata" ? (
+                                            <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                              Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Kolkata</span>
+                                            </h2>
+                                          )
+                                            : course.title === "Generative AI Course in Delhi" ? (
+                                              <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                                Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Delhi</span>
+                                              </h2>
+                                            )
+                                              : course.title === "Generative AI Course in Bangalore" ? (
+                                                <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                                  Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Bangalore</span>
+                                                </h2>
+                                              )
+                                                : course.title === "Generative AI Course in Mumbai" ? (
+                                                  <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                                    Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Mumbai</span>
+                                                  </h2>
+                                                )
+                                                  : course.title === "Generative AI Course in Pune" ? (
+                                                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                                      Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Pune</span>
+                                                    </h2>
+                                                  )
+                                                    : course.title === "Generative AI Course in Chennai" ? (
+                                                      <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                                        Frequently Asked Questions – <span style={{ color: '#16a5db' }}> Generative AI Course in Chennai</span>
+                                                      </h2>
+                                                    )
+
+
+                                                      : (
+                                                        /* DEFAULT FALLBACK - If no matches above */
+                                                        <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                                                          What I need to know more about Ivy’s support, fees, and projects?                  </h2>
+                                                      )
               }
 
               <p className="text-gray-600">

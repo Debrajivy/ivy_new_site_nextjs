@@ -8979,11 +8979,10 @@ const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
-    metaData: {
-      title: "Generative AI Certification Course | Ivy Professional School ",
-      description: "IIT Guwahati GenAI certification. Master ChatGPT, LLMs, build AI apps. 20+ projects. 1,220 students. Pay After Placement. 4.8★. Apply for 18-week program!",
-      bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
-
+   metaData: {
+      title: "AI for Entrepreneurs | Master Business Automation | Ivy Professional School",
+      description: "Scale your business with GenAI. Learn to automate workflows, build custom AI agents, and drive ROI. 18-week strategic program for founders & leaders.",
+      bio: "Master the ROI of Generative AI. Learn to build AI-driven operations, automate marketing, and lead your industry as an AI-first entrepreneur in just 6 weeks."
     },
     duration: "225 Hours",
     rating: 4.9,

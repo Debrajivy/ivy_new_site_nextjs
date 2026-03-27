@@ -249,7 +249,7 @@ const featuredCourses: Course[] = [
     image: AIE,
     category: "New Course",
     students:100 ,
-    duration: "8 weeks",
+    duration: "6 weeks",
     rating: 4.8,
     reviewCount:90,
     isFeatured: true,

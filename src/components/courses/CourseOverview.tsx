@@ -94,72 +94,141 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
             </div>
           </div>
           <div className="space-y-6">
-          <Card>
-  <CardContent className="p-6">
-    <h3 className="font-bold text-lg mb-4">Who are the instructors for this course?</h3>
-    <div className="space-y-6">
-      {course.instructors?.map((instructor) => {
-        const linkedInUrl =
-          instructor.name === "Prateek Agrawal"
-            ? "https://www.linkedin.com/in/prateekagrawal/"
-            : instructor.name === "Eeshani Agrawal"
-            ? "https://www.linkedin.com/in/eeshani-agrawal-b674045/"
-            : "#";
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-bold text-lg mb-4">Who are the instructors for this course?</h3>
+                <div className="space-y-6">
+                  {course.instructors?.map((instructor) => {
+                    const linkedInUrl =
+                      instructor.name === "Prateek Agrawal"
+                        ? "https://www.linkedin.com/in/prateekagrawal/"
+                        : instructor.name === "Eeshani Agrawal"
+                          ? "https://www.linkedin.com/in/eeshani-agrawal-b674045/"
+                          : "#";
 
-        return (
-          <a
-            key={instructor.id}
-            href={linkedInUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-start mb-3 hover:bg-gray-50 rounded-lg p-2 transition"
-          >
-            <img
-              src={instructor.image}
-              alt={instructor.name}
-              className="w-12 h-12 rounded-full object-cover mr-4"
-            />
-            <div>
-              <div className="font-semibold flex items-center">
-                {instructor.name}
-                {/* LinkedIn icon — now just a decorative image inside the same link */}
-                {(instructor.name === "Prateek Agrawal" ||
-                  instructor.name === "Eeshani Agrawal") && (
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    viewBox="0 0 24 24"
-                    fill="#0A66C2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-label="LinkedIn"
-                  >
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                )}
-                {instructor.isFounder && (
-                  <span className="ml-2 text-xs bg-ivy-orange text-white px-2 py-0.5 rounded-full">
-                    Founder
-                  </span>
-                )}
-                {instructor.isDirector && (
-                  <span className="ml-2 text-xs bg-blue-600 text-white px-2 py-0.5 rounded-full">
-                    Director
-                  </span>
-                )}
-              </div>
-              <div className="text-sm text-gray-500">{instructor.role}</div>
-            </div>
-          </a>
-        );
-      })}
-    </div>
-  </CardContent>
-</Card>
+                    return (
+                      <a
+                        key={instructor.id}
+                        href={linkedInUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start mb-3 hover:bg-gray-50 rounded-lg p-2 transition"
+                      >
+                        <img
+                          src={instructor.image}
+                          alt={instructor.name}
+                          className="w-12 h-12 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                          <div className="font-semibold flex items-center">
+                            {instructor.name}
+                            {/* LinkedIn icon — now just a decorative image inside the same link */}
+                            {(instructor.name === "Prateek Agrawal" ||
+                              instructor.name === "Eeshani Agrawal") && (
+                                <svg
+                                  className="w-4 h-4 ml-2"
+                                  viewBox="0 0 24 24"
+                                  fill="#0A66C2"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  aria-label="LinkedIn"
+                                >
+                                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                              )}
+                            {instructor.isFounder && (
+                              <span className="ml-2 text-xs bg-ivy-orange text-white px-2 py-0.5 rounded-full">
+                                Founder
+                              </span>
+                            )}
+                            {instructor.isDirector && (
+                              <span className="ml-2 text-xs bg-blue-600 text-white px-2 py-0.5 rounded-full">
+                                Director
+                              </span>
+                            )}
+                          </div>
+                          <div className="text-sm text-gray-500">{instructor.role}</div>
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+              </CardContent>
+            </Card>
 
 
 
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-4">What career opportunities can I expect after this course?</h3>
+              {course.title != "AI for Entrepreneurs" ?
+                <h3 className="font-bold text-lg mb-4">What career opportunities can I expect after this course?</h3>
+
+                :
+                <h3 className="font-bold text-lg mb-4">What business outcomes can I expect after this course?</h3>
+
+              }
+
               <div className="space-y-4">
+                {course.title !== "AI for Entrepreneurs" ? (
+                  /* Standard Course Logic */
+                  <>
+                    <div className="flex items-start">
+                      <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
+                      <div>
+                        <div className="font-medium">Hiring Partners</div>
+                        <p className="text-sm text-gray-600"> 94% Placement Rate | 4-5 LPA avg salary | 17,000+ job openings in India</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <Users size={20} className="text-ivy-blue mr-3 mt-1" />
+                      <div>
+                        <div style={{ marginLeft: 1 }} className="font-medium">Alumni Network</div>
+                        <p className="text-sm text-gray-600">
+                          Get <a href="https://ivyproschool.com/alumni" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">connected with alumni, </a>
+                          Join over <a href="https://chat.whatsapp.com/ImcpUAYaD87FVwce6ZMaYN" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">WhatsApp Student Community </a>
+                          and Lifetime <a href="https://youtu.be/HTTMGTCxd0Q?si=__QkZiVlXQM9t8A0" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">Placement Assistance</a>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <Award size={30} className="text-ivy-blue mr-3 mt-1" />
+                      <div>
+                        <div className="font-medium">Industry Recognition</div>
+                        <p className="text-sm text-gray-600">Fortune 500 hiring partners including Google, Microsoft, Accenture, IBM, Oracle, Cognizant</p>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  /* AI for Entrepreneurs Logic */
+                  <>
+                    <div className="flex items-start">
+                      <div className="text-xl mr-3">🛠️</div>
+                      <div>
+                        <div className="font-medium">Immediate Implementation</div>
+                        <p className="text-sm text-gray-600">5+ AI tools built during the program | 90-day roadmap ready to execute | Automations live in your business from Day 1</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="text-xl mr-3">👥</div>
+                      <div>
+                        <div className="font-medium">Entrepreneur Community</div>
+                        <p className="text-sm text-gray-600">Get connected with fellow business owners | Join our exclusive WhatsApp Entrepreneur Community | Lifetime access to resources and updates</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="text-xl mr-3">🏆</div>
+                      <div>
+                        <div className="font-medium">Business Impact</div>
+                        <p className="text-sm text-gray-600">Reduced operational costs | Faster marketing content creation | Data-driven decisions across sales, inventory and customer behaviour</p>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* <div className="space-y-4">
                 <div className="flex items-start">
                   <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
                   <div>
@@ -223,7 +292,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                     <p className="text-sm text-gray-600">Fortune 500 hiring partners including Google, Microsoft, Accenture, IBM, Oracle, Cognizant</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

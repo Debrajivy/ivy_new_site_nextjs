@@ -71,8 +71,7 @@ export default async function CoursePage({ params }: AsyncPageProps) {
           <CourseHero course={course} />
 
           {/* Sticky sub-nav */}
-          <CourseSubNavigation />
-
+<CourseSubNavigation course={course} />.
           {/* Anchor targets */}
           <div id="course-accreditation-section">
             <CourseAccreditation />

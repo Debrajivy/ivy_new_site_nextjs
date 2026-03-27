@@ -370,7 +370,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 {/* <span>{courseHours[course.title] || "225 Hours"}</span> */}
                 {course.title === "AI and Machine Learning Course"
                   ? "32 Hours" :
-                  course.title === "AI for Entrepreneurs" ? "24 Hours":
+                  course.title === "AI for Entrepreneurs" ? "20 Hours":
                   course.title === "Data Science with Machine Learning & AI Certification"
                     ? "232 Hours"
                     : course.title === "AI for Product Managers"
@@ -559,8 +559,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
             <div className="flex flex-wrap items-center gap-4">
 
 
-              {
-                course.title !="AI for Entrepreneurs" ? 
+             
 
                 <Button
                 variant="outline"
@@ -618,6 +617,12 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1p4d84pQ8c-HmIYD7fUH16HNPkmfQzN7r/preview";
                   }
+                  else if (
+                    course.title === "AI for Entrepreneurs"
+                  ) {
+                    syllabusUrl =
+                      "https://drive.google.com/file/d/1moogMI6nv5NIfdR3kp0XurQye80EOUJH/preview";
+                  }
 
                   else if (course.title === "Data Engineering Course in Kolkata") {
                     syllabusUrl =
@@ -628,10 +633,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               >
                 Download Syllabus
               </Button>
-              :
-              null
-
-              }
+             
               
               {course.title === "Data Science with Machine Learning & AI Certification" ? (
                 <div
@@ -650,10 +652,15 @@ const CourseHero = ({ course }: CourseHeroProps) => {
           <div style={{ marginTop: 30 }}>
             <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-6 w-full h-full flex flex-col">
               <div className="text-center mb-6">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-                  Join Two Classes for{" "}
-                  <span className="text-[#1a98cb]">No Cost</span>
-                </h2>
+               <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+  Join Two Classes for{" "}
+  <span className="text-[#1a98cb]">No Cost</span>
+  {course.title === "AI for Entrepreneurs" && (
+    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-sm md:text-base font-bold bg-amber-100 text-amber-600 animate-pulse border border-amber-200">
+      (New Course)
+    </span>
+  )}
+</h2>
                 <p className="text-gray-600 text-sm md:text-base">
                   Learn with Experts & Industry Leaders from IIT & IIM
                 </p>

@@ -2,9 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react'; // Removed Menu as it's no longer used for mobile sub-nav
+import { Course } from '@/lib/api';
 
-const CourseSubNavigation = () => {
-  const [isSubNavSticky, setIsSubNavSticky] = useState(false);
+interface CourseOverviewProps {
+  course: Course;
+}
+
+
+const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSubNavSticky, setIsSubNavSticky] = useState(false);
   const [showFixedPopup, setShowFixedPopup] = useState(false);
   const [canShowPopupAfterDelay, setCanShowPopupAfterDelay] = useState(false);
   const [hasPopupBeenDismissed, setHasPopupBeenDismissed] = useState(false);
@@ -19,20 +24,33 @@ const CourseSubNavigation = () => {
   };
 
   // Full list of navigation items for desktop
+  // Define navigation items based on course title
+  const isEntrepreneurCourse = course.title === "AI for Entrepreneurs";
+
+  // Full list of navigation items for desktop
   const navItems = [
     { name: 'Overview & Faculty', id: 'course-overview-section' },
     { name: 'Curriculum & Fees', id: 'course-curriculum-section' },
-    { name: 'Projects', id: 'course-projects-section' },
-    { name: 'Job Support & Certificates', id: 'course-jobsupport-section' },
+    // Only show Projects if NOT AI for Entrepreneurs
+    ...(!isEntrepreneurCourse ? [{ name: 'Projects', id: 'course-projects-section' }] : []),
+    { 
+      name: isEntrepreneurCourse ? 'AI Implementation Support' : 'Job Support & Certificates', 
+      id: 'course-jobsupport-section' 
+    },
     { name: 'Review', id: 'course-alumni-section' },
     { name: 'FAQ', id: 'course-faq-section' },
   ];
 
-  // Filtered list for mobile, with single-word names
+  // Filtered list for mobile
   const mobileNavItems = [
     { name: 'Curriculum & Fees', mobileName: 'Curriculum', id: 'course-curriculum-section' },
-    { name: 'Projects', mobileName: 'Projects', id: 'course-projects-section' },
-    { name: 'Job Support & Certificates', mobileName: 'Job Support', id: 'course-jobsupport-section' },
+    // Only show Projects if NOT AI for Entrepreneurs
+    ...(!isEntrepreneurCourse ? [{ name: 'Projects', mobileName: 'Projects', id: 'course-projects-section' }] : []),
+    { 
+      name: isEntrepreneurCourse ? 'AI Implementation Support' : 'Job Support & Certificates', 
+      mobileName: isEntrepreneurCourse ? 'Implementation' : 'Job Support', 
+      id: 'course-jobsupport-section' 
+    },
     { name: 'Review', mobileName: 'Review', id: 'course-alumni-section' },
   ];
 

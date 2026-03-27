@@ -133,9 +133,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
               <TabsTrigger value="implementation" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
                 AI Implementation Program
               </TabsTrigger>
-              <TabsTrigger value="mentorship" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
-                AI Implementation Mentorship
-              </TabsTrigger>
+         
             </TabsList>
 
             {/* Tab 1: Post Program Support */}
@@ -214,7 +212,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 <p className="text-gray-600 mb-8">
                   Not sure where to begin? Our AI Implementation Program is designed to help you apply every tool and workflow from the course directly into your business operations — with expert guidance at every step.
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Left Column */}
                   <div className="space-y-4">
@@ -228,6 +226,38 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <div>
+                        <span className="font-semibold">Visual Content Creation</span>
+                        <p className="text-sm text-gray-600">Canva AI for product photos and reels</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Marketing Strategy</span>
+                        <p className="text-sm text-gray-600">AI content generation for marketing</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">Data Intelligence</span>
+                        <p className="text-sm text-gray-600">Excel AI and Power BI for sales insights</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold">No-Code Development</span>
+                        <p className="text-sm text-gray-600">Vibe coding tool deployment</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Column */}
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
                         <span className="font-semibold">Workflow & Automation Support</span>
                         <p className="text-sm text-gray-600">Building your first automation on Zapier or Make</p>
                       </div>
@@ -235,91 +265,63 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-semibold">Tool Setup & Configuration</span>
-                        <p className="text-sm text-gray-600">Canva AI for product photos and reels</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-semibold">Workflow & Automation Support</span>
+                        <span className="font-semibold">Operational Integration</span>
                         <p className="text-sm text-gray-600">Connecting tools across your business workflow</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-semibold">Tool Setup & Configuration</span>
-                        <p className="text-sm text-gray-600">AI content generation for marketing</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-semibold">Workflow & Automation Support</span>
+                        <span className="font-semibold">Service Automation</span>
                         <p className="text-sm text-gray-600">Customer support automation setup</p>
                       </div>
                     </div>
-                  </div>
-                  {/* Right Column */}
-                  <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-semibold">Tool Setup & Configuration</span>
-                        <p className="text-sm text-gray-600">Excel AI and Power BI for sales insights</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-semibold">Workflow & Automation Support</span>
+                        <span className="font-semibold">Business Operations</span>
                         <p className="text-sm text-gray-600">Invoice and lead management automation</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <span className="font-semibold">Tool Setup & Configuration</span>
-                        <p className="text-sm text-gray-600">Vibe coding tool deployment</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <span className="font-semibold">Workflow & Automation Support</span>
+                        <span className="font-semibold">Maintenance & QA</span>
                         <p className="text-sm text-gray-600">Testing and troubleshooting live workflows</p>
+                      </div>
+
+
+                    </div>
+
+
+                  </div>
+                 
+                </div>
+                 <div style={{marginTop:10}} className="bg-white p-8 rounded-xl shadow-sm border border-primary/20">
+                    <h3 className="text-2xl font-bold mb-4">AI Implementation Mentorship</h3>
+                    <p className="text-gray-600 mb-8">
+                      Get 1-on-1 sessions with AI business experts who have implemented AI across manufacturing, retail, e-commerce and service businesses.
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                      <div className="border rounded-lg p-6 text-center bg-primary/5">
+                        <div className="font-bold text-4xl text-primary mb-2">20+</div>
+                        <p className="text-gray-600">Hours of implementation support</p>
+                      </div>
+                      <div className="border rounded-lg p-6 text-center bg-primary/5">
+                        <div className="font-bold text-4xl text-primary mb-2">8+</div>
+                        <p className="text-gray-600">Hands-on business exercises</p>
+                      </div>
+                      <div className="border rounded-lg p-6 text-center bg-primary/5">
+                        <div className="font-bold text-4xl text-primary mb-2">5+</div>
+                        <p className="text-gray-600">AI business expert mentors</p>
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
             </TabsContent>
 
-            {/* Tab 3: AI Implementation Mentorship */}
-            <TabsContent value="mentorship" className="space-y-8">
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-primary/20">
-                <h3 className="text-2xl font-bold mb-4">AI Implementation Mentorship</h3>
-                <p className="text-gray-600 mb-8">
-                  Get 1-on-1 sessions with AI business experts who have implemented AI across manufacturing, retail, e-commerce and service businesses.
-                </p>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                  <div className="border rounded-lg p-6 text-center bg-primary/5">
-                    <div className="font-bold text-4xl text-primary mb-2">20+</div>
-                    <p className="text-gray-600">Hours of implementation support</p>
-                  </div>
-                  <div className="border rounded-lg p-6 text-center bg-primary/5">
-                    <div className="font-bold text-4xl text-primary mb-2">8+</div>
-                    <p className="text-gray-600">Hands-on business exercises</p>
-                  </div>
-                  <div className="border rounded-lg p-6 text-center bg-primary/5">
-                    <div className="font-bold text-4xl text-primary mb-2">5+</div>
-                    <p className="text-gray-600">AI business expert mentors</p>
-                  </div>
-                </div>
-              </div>
-            </TabsContent>
+
           </Tabs>
 
           {/* Hiring Partners Section */}
@@ -589,25 +591,25 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                               "Upon successful completion, learners receive a professional certification from Ivy Professional School. The certification validates job-ready data engineering skills and enhances employability."
                               :
                               course.title === "AI for Entrepreneurs" ? "This certification validates your ability to strategically implement AI automation and no-code solutions to scale business operations and drive exponential growth." :
-                              course.title === "Data Engineering Course in Bangalore" ?
-                                "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens job profiles" :
-                                course.title === "Data Engineering Course in Mumbai" ?
-                                  "Upon successful completion, learners receive a professional certification from Ivy Professional School, validating industry-relevant data engineering skills." :
-                                  course.title === "Data Engineering Course in Pune" ?
-                                    "Upon successful completion, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and enhances employability." :
-                                    course.title === "Data Engineering Course in Chennai" ?
-                                      "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens employability." :
-                                      course.title === "Data Analytics and Generative AI Course" ?
-                                        "Earn Ivy’s Data Science with Visualization certificate and prove your command over Excel, SQL, Python, Tableau & Power BI. Backed by 1:1 mentoring, this certification blends dashboarding, predictive modeling & automation into job-ready expertise." :
-                                        course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Pune" ?
-                                          "This dual-focus certification covers both analytical techniques and visualization best practices for comprehensive data storytelling." :
-                                          course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
-                                            "The Executive Certification in Cloud Data Engineering with IIT Guwahati combines academic rigor with industry-relevant cloud technologies." :
-                                            course.title === "AI for Product Managers" ?
-                                              "This product management certification empowers product managers to lead AI-driven transformations, equipping you with future-ready skills for high-impact roles across industries." :
-                                              course.title === "Data science course (Pay after Placement)" ?
-                                                "This certification demonstrates your proficiency in end-to-end data science workflows, from data cleaning to deploying ML models." :
-                                                null
+                                course.title === "Data Engineering Course in Bangalore" ?
+                                  "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens job profiles" :
+                                  course.title === "Data Engineering Course in Mumbai" ?
+                                    "Upon successful completion, learners receive a professional certification from Ivy Professional School, validating industry-relevant data engineering skills." :
+                                    course.title === "Data Engineering Course in Pune" ?
+                                      "Upon successful completion, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and enhances employability." :
+                                      course.title === "Data Engineering Course in Chennai" ?
+                                        "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens employability." :
+                                        course.title === "Data Analytics and Generative AI Course" ?
+                                          "Earn Ivy’s Data Science with Visualization certificate and prove your command over Excel, SQL, Python, Tableau & Power BI. Backed by 1:1 mentoring, this certification blends dashboarding, predictive modeling & automation into job-ready expertise." :
+                                          course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Pune" ?
+                                            "This dual-focus certification covers both analytical techniques and visualization best practices for comprehensive data storytelling." :
+                                            course.title === "Cloud Data Engineering Course with IIT Guwahati" ?
+                                              "The Executive Certification in Cloud Data Engineering with IIT Guwahati combines academic rigor with industry-relevant cloud technologies." :
+                                              course.title === "AI for Product Managers" ?
+                                                "This product management certification empowers product managers to lead AI-driven transformations, equipping you with future-ready skills for high-impact roles across industries." :
+                                                course.title === "Data science course (Pay after Placement)" ?
+                                                  "This certification demonstrates your proficiency in end-to-end data science workflows, from data cleaning to deploying ML models." :
+                                                  null
                       }
                     </p>
                   </div>
@@ -691,7 +693,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                             course.title === "Data Analytics and Generative AI Course" ? Dsvc :
                               course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Pune" ? Davc :
                                 course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
-                                  course.title === "AI for Product Managers"  || course.title === "AI for Entrepreneurs" ? Pmc :
+                                  course.title === "AI for Product Managers" || course.title === "AI for Entrepreneurs" ? Pmc :
                                     course.title === "AI and Machine Learning Course" ? AIML :
                                       course.title === "Data science course (Pay after Placement)" ? PAPC : ""
                     }
