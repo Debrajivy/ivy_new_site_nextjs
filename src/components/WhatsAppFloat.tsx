@@ -6,28 +6,22 @@ const WHATSAPP_NUMBER = "919748441111";
 
 const ctaOptions = [
   {
-    label: "Ask about placements",
+    label: "Upskill for my current role",
+    emoji: "📈",
+    getMessage: (_course: string) =>
+      "Hi! I want to upskill for my current role. Can you help me find the right course at Ivy Professional School?",
+  },
+  {
+    label: "Career switch into Data/AI",
+    emoji: "🚀",
+    getMessage: (_course: string) =>
+      "Hi! I'm looking to switch my career into Data/AI. Can you guide me on the best course at Ivy Professional School?",
+  },
+  {
+    label: "Do you need placement assistance?",
     emoji: "🎓",
-    getMessage: (course: string) =>
-      course
-        ? `Hi! I'd like to know about placements for the *${course}* at Ivy Professional School.`
-        : "Hi! I'd like to know about placements at Ivy Professional School.",
-  },
-  {
-    label: "Talk to a counselor",
-    emoji: "🧑‍💼",
-    getMessage: (course: string) =>
-      course
-        ? `Hi! I'd like to talk to a counselor about the *${course}* at Ivy Professional School.`
-        : "Hi! I'd like to talk to a counselor about courses at Ivy Professional School.",
-  },
-  {
-    label: "Check eligibility in 2 mins",
-    emoji: "💬",
-    getMessage: (course: string) =>
-      course
-        ? `Hi! I'd like to check my eligibility for the *${course}* at Ivy Professional School.`
-        : "Hi! I'd like to check my eligibility for courses at Ivy Professional School.",
+    getMessage: (_course: string) =>
+      "Hi! I'd like to know about placement assistance at Ivy Professional School. Can you share details?",
   },
 ];
 
@@ -62,7 +56,7 @@ export default function WhatsAppFloat() {
   };
 
   return (
-    <div className="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-24 right-4 z-50 flex flex-col items-end gap-3">
       {/* Expandable panel */}
       {isOpen && (
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 w-72 overflow-hidden">
@@ -101,6 +95,7 @@ export default function WhatsAppFloat() {
                     {option.emoji} {option.label}
                   </span>
                   <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#25D366] shrink-0" />
+                  
                 </button>
               ))}
             </div>
@@ -128,7 +123,9 @@ export default function WhatsAppFloat() {
             <X className="w-6 h-6 text-white" />
           ) : (
             <MessageCircle className="w-7 h-7 text-white" />
+            
           )}
+          
         </button>
       </div>
     </div>

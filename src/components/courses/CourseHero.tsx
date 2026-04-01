@@ -76,73 +76,23 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
   const WHATSAPP_NUMBER = "919748441111";
 
-  const getCourseCTAs = (title: string) => {
-    const t = title.toLowerCase();
-    if (t.includes("ai for product manager") || t.includes("ai pm")) {
-      return [
-        { emoji: "💼", label: "Will this make me a better Product Manager?", msg: `Hi! I want to understand how the ${title} at Ivy Professional School will help me grow as a Product Manager.` },
-        { emoji: "✅", label: "Am I eligible for this AI PM course?", msg: `Hi! I'd like to check if I'm eligible for the ${title} at Ivy Professional School.` },
-        { emoji: "💰", label: "What is the course fee & can I pay in EMI?", msg: `Hi! I'd like to know the fee structure and EMI options for the ${title} at Ivy Professional School.` },
-      ];
-    }
-    if (t.includes("generative ai") || t.includes("genai")) {
-      return [
-        { emoji: "💼", label: "What jobs can I get after this GenAI course?", msg: `Hi! I want to know what job roles I can get after completing the ${title} at Ivy Professional School.` },
-        { emoji: "📜", label: "Is this really certified by IIT Guwahati?", msg: `Hi! I'd like to confirm the IIT Guwahati certification details for the ${title} at Ivy Professional School.` },
-        { emoji: "✅", label: "Am I eligible for this course?", msg: `Hi! I'd like to check if I'm eligible for the ${title} at Ivy Professional School.` },
-      ];
-    }
-    if (t.includes("cloud data engineer") || (t.includes("cloud") && t.includes("engineer"))) {
-      return [
-        { emoji: "💸", label: "How much can I earn as a Cloud Data Engineer?", msg: `Hi! I want to know the average salary of cloud data engineers after completing the ${title} at Ivy Professional School.` },
-        { emoji: "📜", label: "Is this IIT Guwahati certified?", msg: `Hi! I'd like to confirm the IIT Guwahati certification for the ${title} at Ivy Professional School.` },
-        { emoji: "💰", label: "What is the fee & can I pay in instalments?", msg: `Hi! I'd like to know the fee and EMI/instalment options for the ${title} at Ivy Professional School.` },
-      ];
-    }
-    if (t.includes("data science") && t.includes("pay after")) {
-      return [
-        { emoji: "🤝", label: "Do I really pay only after I get a job?", msg: `Hi! I'd like to understand exactly how the pay-after-placement model works for the ${title} at Ivy Professional School.` },
-        { emoji: "✅", label: "Am I eligible for the Pay After Placement plan?", msg: `Hi! I'd like to check if I qualify for the pay-after-placement program for ${title} at Ivy Professional School.` },
-        { emoji: "🛡️", label: "Is placement guaranteed with this course?", msg: `Hi! I'd like to know about the placement guarantee and ISA terms for the ${title} at Ivy Professional School.` },
-      ];
-    }
-    if (t.includes("data science")) {
-      return [
-        { emoji: "💸", label: "What salary will I get after this course?", msg: `Hi! I want to know the average salary hike students get after completing the ${title} at Ivy Professional School.` },
-        { emoji: "🤝", label: "Can I pay the fee only after getting a job?", msg: `Hi! I'd like to know about the pay-after-placement option for the ${title} at Ivy Professional School.` },
-        { emoji: "✅", label: "Am I eligible for this Data Science course?", msg: `Hi! I'd like to check if I'm eligible for the ${title} at Ivy Professional School.` },
-      ];
-    }
-    if (t.includes("data engineering")) {
-      return [
-        { emoji: "💼", label: "What companies hire Data Engineers from here?", msg: `Hi! I want to know which companies hire students after completing the ${title} at Ivy Professional School.` },
-        { emoji: "💰", label: "What is the course fee & EMI options?", msg: `Hi! I'd like to know the fee and EMI options for the ${title} at Ivy Professional School.` },
-        { emoji: "🧑‍💼", label: "I want to speak with a course counselor", msg: `Hi! I'd like to connect with a counselor to learn more about the ${title} at Ivy Professional School.` },
-      ];
-    }
-    if (t.includes("data analytics") && t.includes("generative")) {
-      return [
-        { emoji: "🔍", label: "What jobs does Analytics + AI open for me?", msg: `Hi! I want to know what job roles I can target after the ${title} at Ivy Professional School.` },
-        { emoji: "✅", label: "Am I eligible for this Analytics + AI course?", msg: `Hi! I'd like to check if I'm eligible for the ${title} at Ivy Professional School.` },
-        { emoji: "🏆", label: "How many students got placed from this course?", msg: `Hi! I'd like to know the placement record for the ${title} at Ivy Professional School.` },
-      ];
-    }
-    if (t.includes("data analytics") || t.includes("visualization") || t.includes("tableau") || t.includes("power bi")) {
-      return [
-        { emoji: "📊", label: "What jobs will Tableau & Power BI get me?", msg: `Hi! I want to know what job roles I can get with Tableau and Power BI skills after the ${title} at Ivy Professional School.` },
-        { emoji: "💰", label: "What is the course fee — is it worth it?", msg: `Hi! I'd like to know the fee structure and value of the ${title} at Ivy Professional School.` },
-        { emoji: "🧑‍💼", label: "I want a free career guidance session", msg: `Hi! I'd like to book a free career guidance session for the ${title} at Ivy Professional School.` },
-      ];
-    }
-    // Fallback
-    return [
-      { emoji: "💼", label: "Will I get a job after this course?", msg: `Hi! I want to know about placement outcomes for the ${title} at Ivy Professional School.` },
-      { emoji: "✅", label: "Am I eligible to join this course?", msg: `Hi! I'd like to check if I'm eligible for the ${title} at Ivy Professional School.` },
-      { emoji: "🧑‍💼", label: "I want to talk to a counselor for free", msg: `Hi! I'd like to speak with a counselor about the ${title} at Ivy Professional School.` },
-    ];
-  };
-
-  const courseCTAs = getCourseCTAs(course.title);
+  const courseCTAs = [
+    {
+      emoji: "📈",
+      label: "Upskill for my current role",
+      msg: `Hi! I want to upskill for my current role. I'm interested in the *${course.title}* at Ivy Professional School. Can you help?`,
+    },
+    {
+      emoji: "🚀",
+      label: "Career switch into Data/AI",
+      msg: `Hi! I'm looking to switch my career into Data/AI. I'm interested in the *${course.title}* at Ivy Professional School. Can you guide me?`,
+    },
+    {
+      emoji: "🎓",
+      label: "Do you need placement assistance?",
+      msg: `Hi! I'd like to know about placement assistance for the *${course.title}* at Ivy Professional School. Can you share details?`,
+    },
+  ];
 
   let sourceCampaignValue = "";
   if (course.title === "AI for Product Managers") {

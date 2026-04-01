@@ -480,7 +480,17 @@ const Navbar = () => {
                       style={{ marginLeft: 10, fontWeight: "bold" }}
                       className="border border-[#009fda] text-[#009fda] px-6 py-2 rounded-md hover:text-[#013a81] transition duration-200"
                     >
-                      Alumni & Reviews
+                      Alumni
+                    </button>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/reviews" className="flex items-center">
+                    <button
+                      style={{ marginLeft: 10, fontWeight: "bold" }}
+                      className="border border-[#009fda] text-[#009fda] px-6 py-2 rounded-md hover:text-[#013a81] transition duration-200"
+                    >
+                     Reviews
                     </button>
                   </Link>
                 </NavigationMenuItem>
@@ -636,7 +646,15 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   <Trophy className="h-5 w-5 text-amber-500" />
-                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Alumni & Reviews</span>
+                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Alumni </span>
+                </Link>
+                <Link
+                  href="/reviews"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-ivy-blue transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Trophy className="h-5 w-5 text-amber-500" />
+                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Reviews </span>
                 </Link>
 
                 {/* Case Studies */}

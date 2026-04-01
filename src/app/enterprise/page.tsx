@@ -715,8 +715,7 @@ const Enterprise = () => {
                   ) : (
                     <span className="flex items-center justify-center gap-2">
                       <Calendar className="h-5 w-5 opacity-70" />
-                      Secure Free Consultation
-                    </span>
+Request a Strategy Session                    </span>
                   )}
                 </Button>
 

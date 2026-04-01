@@ -27,6 +27,7 @@ const FAQ = dynamic(() => import('@/components/home/FAQ'));
 const StickyAIHelpCenter = dynamic(() => import('@/components/StickyAIHelpCenter'), { ssr: false });
 const StickyAICareerAssessment = dynamic(() => import('@/components/StickyAICareerAssessment'), { ssr: false });
 const Notifications = dynamic(() => import('@/components/layout/Notification'), { ssr: false });
+const WhatsAppFloat = dynamic(() => import('@/components/WhatsAppFloat'), { ssr: false });
 
 const Index: React.FC = () => {
     // State to control the visibility of the AIAdvisor section
@@ -74,6 +75,7 @@ const Index: React.FC = () => {
             <FAQ />
         </main>
         <Footer />
+        <WhatsAppFloat />
         </>
     );
 };

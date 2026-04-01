@@ -154,7 +154,7 @@ const CareerProgressionDisplay = ({ progression }: { progression: CareerProgress
             <div className="flex items-center justify-center h-12 w-full">
               {progression.previous.logo ? (
                 <Image
-                loading="lazy"
+                  loading="lazy"
                   width={128} // Adjusted width to 128px
                   height={64} // Adjusted height to 64px
                   src={progression.previous.logo}
@@ -183,7 +183,7 @@ const CareerProgressionDisplay = ({ progression }: { progression: CareerProgress
           <div className="rounded-lg p-2 shadow-sm w-full flex flex-col items-center justify-center"> {/* Removed 'border' class, changed p-3 to p-2 for minor internal padding */}
             <div className="flex items-center justify-center  h-12 w-full">
               <Image
-              loading="lazy"
+                loading="lazy"
                 width={128} // Adjusted width to 128px
                 height={64} // Adjusted height to 64px
                 src={progression.current.logo || "/placeholder.svg"}
@@ -208,7 +208,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
         {/* Rating */}
         <div className="flex mb-4 justify-center items-center">
           <Image
-          loading="lazy"
+            loading="lazy"
             width={16} // Adjusted width to 16px
             height={16} // Adjusted height to 16px 
             src={Google} alt="Google" className="h-4 w-4 mr-2" />
@@ -387,7 +387,7 @@ const Testimonials = () => {
 
         {/* Testimonials Grid */}
 
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id} testimonial={testimonial} />
@@ -408,6 +408,19 @@ const Testimonials = () => {
             >
               Watch More Student Success Stories on YouTube
             </a>
+          </Button>
+          <Button
+            variant="default"
+            size="lg"
+            className="text-white font-semibold"
+            style={{ backgroundColor: '#009fda' }}
+          >
+            <a
+              href="https://ivyproschool.com/alumni"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Watch Ivy Professional School Placement Highlights            </a>
           </Button>
         </div>
 
