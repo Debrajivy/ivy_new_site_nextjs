@@ -457,7 +457,8 @@ const Navbar = () => {
                 className="bg-gradient-to-r from-ivy-blue text-white px-1.5 py-1 text-sm"
                 onClick={handleApplyClick}
               >
-                Apply Now
+                Register Now
+
               </Button>
             </div>
           </div>
@@ -490,7 +491,7 @@ const Navbar = () => {
                       style={{ marginLeft: 10, fontWeight: "bold" }}
                       className="border border-[#009fda] text-[#009fda] px-6 py-2 rounded-md hover:text-[#013a81] transition duration-200"
                     >
-                     Reviews
+                      Reviews
                     </button>
                   </Link>
                 </NavigationMenuItem>
@@ -586,7 +587,7 @@ const Navbar = () => {
                   textShadow: '0px -1px 1px #eb6200'
                 }}
               >
-                Apply Now
+                Register Now
               </Button>
             </div>
           </div>

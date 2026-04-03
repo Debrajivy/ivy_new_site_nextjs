@@ -8861,7 +8861,7 @@ const courses: Course[] = [
       {
         id: "m1",
         title: "The AI Shift for Traditional Businesses",
-        duration: "2 hrs",
+        duration: "1 hr",
         topics: [
           { id: "t1", title: "Understanding the AI Wave and opportunities for traditional businesses.", duration: "" },
           { id: "t2", title: "Sector-specific AI applications for Manufacturing and SMEs.", duration: "" },
@@ -8872,7 +8872,7 @@ const courses: Course[] = [
       {
         id: "m2",
         title: "AI Productivity for Entrepreneurs",
-        duration: "3 hrs",
+        duration: "1.5 hrs",
         topics: [
           { id: "t1", title: "Streamlining business communication and professional networking.", duration: "" },
           { id: "t2", title: "AI-driven research and deep-dive market analysis.", duration: "" },
@@ -8883,7 +8883,7 @@ const courses: Course[] = [
       {
         id: "m3",
         title: "AI Marketing and Sales Acceleration",
-        duration: "3 hrs",
+        duration: "1.5 hrs",
         topics: [
           { id: "t1", title: "Crafting AI-powered brand messaging and positioning.", duration: "" },
           { id: "t2", title: "Conducting competitor intelligence using advanced AI prompts.", duration: "" },
@@ -8893,7 +8893,7 @@ const courses: Course[] = [
       {
         id: "m4",
         title: "AI Product Studio",
-        duration: "3 hrs",
+        duration: "4 hrs",
         topics: [
           { id: "t1", title: "Understanding why visual marketing is the new competitive edge.", duration: "" },
           { id: "t2", title: "Establishing a professional AI product photography workflow.", duration: "" },
@@ -8904,7 +8904,7 @@ const courses: Course[] = [
       {
         id: "m5",
         title: "AI Automation for Business Operations",
-        duration: "3 hrs",
+        duration: "4 hrs",
         topics: [
           { id: "t1", title: "Mastering automation basics and trigger-action workflows.", duration: "" },
           { id: "t2", title: "Setting up automated customer support and inquiry handling.", duration: "" },
@@ -8915,7 +8915,7 @@ const courses: Course[] = [
       {
         id: "m6",
         title: "AI Data Intelligence",
-        duration: "2 hrs",
+        duration: "4 hrs",
         topics: [
           { id: "t1", title: "Utilizing AI-assisted analytics for business intelligence.", duration: "" },
           { id: "t2", title: "Leveraging Gemini, Grok, and Stitch for data-driven insights.", duration: "" },

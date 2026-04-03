@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Course } from '@/lib/api';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Clock, FileText, CheckCircle, X } from 'lucide-react';
+import { Clock, FileText, CheckCircle, X, LayoutDashboard } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from "@/components/ui/button"
 import { Bot, Send, MessageSquare, Phone } from "lucide-react"
@@ -214,11 +214,31 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                         <div className="flex items-center text-sm text-gray-500 mt-1">
                           <Clock size={14} className="mr-1" />
                           <span className="no-underline hover:no-underline">{module.duration}</span>
+
                           <span className="mx-2">•</span>
+
                           <FileText size={14} className="mr-1" />
-                          {/* <span className="no-underline hover:no-underline">
-                            {module.topics.length} lessons
-                          </span> */}
+                          <span className="no-underline hover:no-underline">
+                            {/* Count only lessons (IDs starting with 't') */}
+                            {module.topics.filter((t: any) => t.id.startsWith('t')).length} lessons
+                          </span>
+
+                          {/* Conditional Project Logic */}
+                          {(() => {
+                            const projectCount = module.topics.filter((t: any) => t.id.startsWith('p')).length;
+                            if (projectCount > 0) {
+                              return (
+                                <>
+                                  <span className="mx-2">•</span>
+                                  <LayoutDashboard size={14} className="mr-1 text-[#013a81]" />
+                                  <span className="no-underline hover:no-underline text-[#013a81] font-medium">
+                                    {projectCount} {projectCount === 1 ? 'Project' : 'Projects'}
+                                  </span>
+                                </>
+                              );
+                            }
+                            return null;
+                          })()}
                         </div>
                       </div>
                     </div>
@@ -226,26 +246,49 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                   <AccordionContent>
                     <div className="px-6 pt-2 pb-4">
                       <ul className="space-y-3">
-                        {module.topics.map((topic: any) => (
-                          <li
-                            key={topic.id}
-                            className="flex justify-between items-center py-2 border-b border-gray-100"
-                          >
-                            <div style={{ width: '90%' }} className="flex items-center">
-                              <CheckCircle size={19} className="text-blue-500 mr-3" />
-                              <span className="no-underline hover:no-underline">{topic.title}</span>
-                              {topic.isAdvanced && (
-                                <Badge variant="outline" className="ml-2 text-xs">
-                                  Advanced
-                                </Badge>
-                              )}
-                            </div>
-                            <div style={{ width: '10%' }} className="flex items-center text-sm text-gray-500">
-                              {/* <Clock size={14} className="mr-1" /> */}
-                              {/* <span >{topic.duration}</span> */}
-                            </div>
-                          </li>
-                        ))}
+                        {module.topics.map((topic: any) => {
+                          // Determine if this is a project item
+                          const isProject = topic.id.startsWith('p') || topic.title.startsWith('Project:');
+
+                          return (
+                            <li
+                              key={topic.id}
+                              className={`flex justify-between items-start py-3 border-b border-gray-100 ${isProject ? "bg-blue-50/30 rounded-md px-2" : ""
+                                }`}
+                            >
+                              <div style={{ width: '90%' }} className="flex items-start">
+                                {/* Different Icon for Project vs Topic */}
+                                {isProject ? (
+                                  <LayoutDashboard size={19} className="text-[#013a81] mr-3 mt-1 flex-shrink-0" />
+                                ) : (
+                                  <CheckCircle size={19} className="text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                                )}
+
+                                <span className="text-gray-800 leading-relaxed">
+                                  {isProject ? (
+                                    <>
+                                      {/* Bolding only the 'Project:' keyword */}
+                                      <span className="font-bold text-[#013a81]">Project:</span>
+                                      {topic.title.replace('Project:', '')}
+                                    </>
+                                  ) : (
+                                    topic.title
+                                  )}
+
+                                  {topic.isAdvanced && (
+                                    <Badge variant="outline" className="ml-2 text-xs">
+                                      Advanced
+                                    </Badge>
+                                  )}
+                                </span>
+                              </div>
+
+                              <div style={{ width: '10%' }} className="flex items-center text-sm text-gray-500">
+                                {/* Duration placeholder */}
+                              </div>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   </AccordionContent>
@@ -382,7 +425,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                           className="w-full bg-gradient-to-r text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
                           onClick={handleApplyClick}
                         >
-                          Apply Now
+                   Register Now
                         </button>
                       </div>
                     );

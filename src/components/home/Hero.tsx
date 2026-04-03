@@ -314,7 +314,7 @@ const Hero = () => {
                     style={{ backgroundColor: '#013a81' }}
                     disabled={submitStatus === 'submitting'}
                   >
-                    {submitStatus === 'submitting' ? 'Applying...' : 'Apply Now'}
+                    {submitStatus === 'submitting' ? 'Applying...' : 'Register Now'}
                   </Button>
 
                   {submitMessage && (

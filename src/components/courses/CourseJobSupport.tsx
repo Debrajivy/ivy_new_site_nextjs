@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, Briefcase, FileText, Users, Award, BarChart, GraduationCap, Zap, GitBranch, Headset, UserRound } from 'lucide-react';
+import { CheckCircle, Briefcase, FileText, Users, Award, BarChart, GraduationCap, Zap, GitBranch, Headset, UserRound, TrendingUp, Video, FileSpreadsheet, Mic, Cpu } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import certificate from "../../assests/certificate.webp";
 import smallibm from "../../assests/placement/IBM_MAIN.webp";
@@ -126,15 +126,112 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
 
           {/* Tab Section for Implementation Support */}
           <Tabs defaultValue="post-program" className="max-w-5xl mx-auto">
+
+
             <TabsList className="flex w-full justify-center items-center overflow-x-auto pb-2 gap-4 no-scrollbar mb-8">
+              <TabsTrigger value="live-projects" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
+                Live Projects
+              </TabsTrigger>
               <TabsTrigger value="post-program" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
                 Post Program Support
               </TabsTrigger>
               <TabsTrigger value="implementation" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
                 AI Implementation Program
               </TabsTrigger>
-         
+
             </TabsList>
+
+
+            <TabsContent value="live-projects" className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                {/* Project 1: Sales Analyzer */}
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <TrendingUp className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Build AI Sales Analyzer & Predictor</h3>
+                        <p className="text-gray-600">
+                          Upload sales data and instantly get insights on top products, weak SKUs and revenue trends. Use ML to predict future growth.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Project 2: Marketing Studio */}
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <Video className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Create AI Marketing Studio</h3>
+                        <p className="text-gray-600">
+                          Create product photos, lifestyle visuals, Reels and ad campaigns using AI — no designer needed.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Project 3: Business Integration */}
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <Cpu className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Integrate AI Agents in your Business</h3>
+                        <p className="text-gray-600">
+                          Build a live agent for complaint handling, lead qualification or invoice processing.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Project 4: Sales Pitch & Proposal */}
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <FileSpreadsheet className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Automate Sales Pitch & Proposal Generation</h3>
+                        <p className="text-gray-600">
+                          Build a Web Application which reads client requirement, your product portfolio and instantly generates a professional quotation or pitch deck.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Project 5: Voice Agent */}
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-start">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4">
+                        <Mic className="text-primary h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">Build AI Customer Complaint Voice Agent Tool</h3>
+                        <p className="text-gray-600">
+                          Deploy a working voice agent to handle customer issues.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+              </div>
+            </TabsContent>
 
             {/* Tab 1: Post Program Support */}
             <TabsContent value="post-program" className="space-y-8">
@@ -295,33 +392,69 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
 
 
                   </div>
-                 
-                </div>
-                 <div style={{marginTop:10}} className="bg-white p-8 rounded-xl shadow-sm border border-primary/20">
-                    <h3 className="text-2xl font-bold mb-4">AI Implementation Mentorship</h3>
-                    <p className="text-gray-600 mb-8">
-                      Get 1-on-1 sessions with AI business experts who have implemented AI across manufacturing, retail, e-commerce and service businesses.
-                    </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                      <div className="border rounded-lg p-6 text-center bg-primary/5">
-                        <div className="font-bold text-4xl text-primary mb-2">20+</div>
-                        <p className="text-gray-600">Hours of implementation support</p>
-                      </div>
-                      <div className="border rounded-lg p-6 text-center bg-primary/5">
-                        <div className="font-bold text-4xl text-primary mb-2">8+</div>
-                        <p className="text-gray-600">Hands-on business exercises</p>
-                      </div>
-                      <div className="border rounded-lg p-6 text-center bg-primary/5">
-                        <div className="font-bold text-4xl text-primary mb-2">5+</div>
-                        <p className="text-gray-600">AI business expert mentors</p>
-                      </div>
+                </div>
+                <div style={{ marginTop: 10 }} className="bg-white p-8 rounded-xl shadow-sm border border-primary/20">
+                  <h3 className="text-2xl font-bold mb-4">AI Implementation Mentorship</h3>
+                  <p className="text-gray-600 mb-8">
+                    Get 1-on-1 sessions with AI business experts who have implemented AI across manufacturing, retail, e-commerce and service businesses.
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div className="border rounded-lg p-6 text-center bg-primary/5">
+                      <div className="font-bold text-4xl text-primary mb-2">20+</div>
+                      <p className="text-gray-600">Hours of implementation support</p>
+                    </div>
+                    <div className="border rounded-lg p-6 text-center bg-primary/5">
+                      <div className="font-bold text-4xl text-primary mb-2">8+</div>
+                      <p className="text-gray-600">Hands-on business exercises</p>
+                    </div>
+                    <div className="border rounded-lg p-6 text-center bg-primary/5">
+                      <div className="font-bold text-4xl text-primary mb-2">5+</div>
+                      <p className="text-gray-600">AI business expert mentors</p>
                     </div>
                   </div>
+                </div>
               </div>
             </TabsContent>
 
+            <div style={{marginTop:50}}> 
+              <h3 className="text-2xl font-bold mb-4 text-center">Who are Ivy Pro School's hiring partners and where can I get placed?</h3>
 
+              <div style={{ backgroundColor: 'white' }} className="relative overflow-hidden h-28 w-screen -ml-[calc(50vw-50%)] logo-fade-mask">
+                <div className="absolute flex items-center animate-scroll-left space-x-4" style={{ width: '200%' }}>
+                  {partners.concat(partners).map((partner, index) => (
+                    <div key={`first-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44">
+                      <Image
+                        width={100}
+                        height={100}
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        className="max-h-full max-w-full object-contain transition-all hover:opacity-90"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div style={{ backgroundColor: 'white' }} className="relative overflow-hidden h-28 w-screen -ml-[calc(50vw-50%)] -mt-8 logo-fade-mask">
+                <div className="absolute flex items-center animate-scroll-right space-x-4" style={{ width: '200%' }}>
+                  {[...partners].reverse().concat([...partners].reverse()).map((partner, index) => (
+                    <div key={`second-${index}`} className="flex-shrink-0 flex items-center justify-center h-24 w-44">
+                      <Image
+                        loading="lazy"
+                        height={100}
+                        width={100}
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        className="max-h-full max-w-full object-contain transition-all hover:opacity-90"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </Tabs>
 
           {/* Hiring Partners Section */}

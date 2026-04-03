@@ -23,6 +23,11 @@ const ANNOUNCEMENTS = [
     color: "text-white"
   },
   {
+    icon: Bell,
+    text: "Master No-Code AI for your Business: Free Intro Session by Ivy Pro this Sunday @ 10 AM!",
+    color: "text-white"
+  },
+  {
     icon: TrendingUp,
     text: "New Trending AI Help Center is now LIVE to support your learning journey.",
     color: "text-green-300"

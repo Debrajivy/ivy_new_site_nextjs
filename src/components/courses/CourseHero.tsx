@@ -31,6 +31,16 @@ import AnishBanerjee from "@/assests/alumni/AnishBanerjee.webp";
 import AtlasCopco from "@/assests/casestudies/AtlasCopco.png";
 import Lalbaba from "@/assests/casestudies/Lalbaba.jpg";
 import TMILL from "@/assests/casestudies/TMILL.webp";
+import prepai from "@/assests/casestudies/prepai.webp";
+import srijanvalley from "@/assests/casestudies/srijanvalley.webp";
+import timesof from "@/assests/casestudies/timesof.webp";
+import tatasteel from "@/assests/casestudies/tatasteel.webp";
+import msp from "@/assests/casestudies/msp.webp";
+import bridge from "@/assests/casestudies/bridge.webp";
+import apple from "@/assests/casestudies/apple.webp";
+import google from "@/assests/casestudies/google.webp";
+import ITC from "../../assests/casestudies/ITC.webp";
+import Honeywell from "../../assests/casestudies/Honeywell.png";
 
 interface CourseHeroProps {
   course: Course;
@@ -479,13 +489,13 @@ const CourseHero = ({ course }: CourseHeroProps) => {
             <div className="space-y-2">
               {
                 course.title === "AI for Entrepreneurs" ?
-              <div className="text-white text-sm font-medium">
-                AI Training delivered to
-              </div>
-              :
-                 <div className="text-white text-sm font-medium">
-                Find our Alumni at
-              </div>
+                  <div className="text-white text-sm font-medium">
+                    AI Training delivered to
+                  </div>
+                  :
+                  <div className="text-white text-sm font-medium">
+                    Find our Alumni at
+                  </div>
               }
 
 
@@ -503,34 +513,42 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           height={50}
                           src={partner.logo}
                           alt={`${partner.name} logo`}
-                          className="object-contain opacity-100 transition-all h-10 sm:h-12 lg:h-14 w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px]"
-                        />
+                          className="object-contain opacity-100 transition-all h-12 sm:h-14 lg:h-16 w-auto max-w-[100px] sm:max-w-[120px] lg:max-w-[150px]" />
                       </div>
                     ))}
                   </div>
                 </div>
               ) : course.title === "AI for Entrepreneurs" ? (
                 /* Logic for AI for Entrepreneurs */
-               <div className="flex items-center bg-[#013b81b2] rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
-  <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-5">
-    {[
-      { name: "Atlas Copco", logo: AtlasCopco },
-      { name: "Lalbaba", logo: Lalbaba },
-      { name: "TMILL", logo: TMILL },
-    ].map((partner) => (
-      <div key={partner.name} className="flex items-center">
-        <Image
-          loading="lazy"
-          width={120} 
-          height={40} 
-          src={partner.logo}
-          alt={`${partner.name} logo`}
-          className="object-contain opacity-100 transition-all h-8 sm:h-10 lg:h-11 w-auto max-w-[65px] sm:max-w-[85px] lg:max-w-[100px]"
-        />
-      </div>
-    ))}
-  </div>
-</div>
+                <div className="flex items-center bg-[#ffffffa9] rounded-full px-5 py-2.5 w-fit mx-auto sm:mx-0 shadow-sm border border-white/10">
+                  <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-8">
+                    {[
+                      { name: "Atlas Copco", logo: AtlasCopco },
+                      { name: "The Times of India", logo: timesof },
+                      { name: "Tata Steel", logo: tatasteel },
+                      { name: "ITC", logo: ITC },
+                      { name: "Honeywell", logo: Honeywell },
+                    ].map((partner) => (
+                      <div key={partner.name} className="flex items-center justify-center">
+                        <Image
+                          loading="lazy"
+                          width={140}
+                          height={40}
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          /* h-5 (20px) on mobile is very subtle and clean.
+                             h-8 (32px) on desktop is the standard professional height.
+                             Reduced max-widths to keep them contained.
+                          */
+                          className="object-contain w-auto 
+                   h-6 sm:h-8 lg:h-10 
+max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
+                     opacity-90 hover:opacity-100 transition-opacity"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ) : (
                 /* Default/Fallback for other courses */
                 <div className="flex items-center bg-[#75a082]/40 rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
@@ -746,7 +764,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     course.title === "AI for Entrepreneurs"
                   ) {
                     syllabusUrl =
-                      "https://drive.google.com/file/d/1moogMI6nv5NIfdR3kp0XurQye80EOUJH/preview";
+                      "https://drive.google.com/file/d/1X4593VFm1GOGoRlHrLOd0pqFq3wkhymF/preview";
                   }
 
                   else if (course.title === "Data Engineering Course in Kolkata") {
@@ -893,7 +911,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   >
                     {submitStatus === "submitting"
                       ? "Applying..."
-                      : "Apply Now"}
+                      : "Register Now"}
                   </Button>
 
                   {submitMessage && (
@@ -917,7 +935,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       }
 
                     </span>
-                   
+
                     <div className="flex items-center gap-1">
                       <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                       <span className="text-red-600 font-medium">
@@ -929,14 +947,14 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     style={{ marginTop: 10 }}
                     className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm"
                   >
-                  
+
                     <span className="text-[#1a98cb] font-medium">
                       {
                         course.title === "AI for Entrepreneurs" ? "Every Mon, Wed, Fri from 7:00 to 8:30 PM" : null
                       }
 
                     </span>
-                   
+
                   </div>
                 </div>
 

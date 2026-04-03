@@ -275,7 +275,7 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
                     </select>
                   </div>
                   <Button type="submit" className="w-full py-3" style={{ backgroundColor: '#013a81' }}>
-                    Apply Now
+                   Register Now
                   </Button>
                   <div className="flex items-center justify-center gap-2 pt-2">
                     <p className="text-sm font-semibold text-center">
@@ -293,24 +293,25 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
 
       {/* Fixed Position Pop-up */}
       {showFixedPopup && (
-        <div className="fixed bottom-4 right-4 bg-white p-6 rounded-lg shadow-xl z-50 max-w-sm w-full animate-slideUp">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-            onClick={handleClosePopup}
-          >
-            <X size={20} />
-          </Button>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Limited Time Opportunity!</h3>
-          <p className="text-gray-700 mb-4">
-            Don’t miss out! Enroll now and get special pricing  on our popular courses.
-          </p>
-          <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" onClick={handleClick}>
-            Enroll Now
-          </Button>
-        </div>
-      )}
+  /* Changed bottom-4 to bottom-20 to move it higher */
+  <div className="fixed bottom-20 right-4 bg-white p-6 rounded-lg shadow-xl z-50 max-w-sm w-full animate-slideUp">
+    <Button
+      variant="ghost"
+      size="icon"
+      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+      onClick={handleClosePopup}
+    >
+      <X size={20} />
+    </Button>
+    <h3 className="text-xl font-bold text-gray-900 mb-2">Limited Time Opportunity!</h3>
+    <p className="text-gray-700 mb-4">
+      Don’t miss out! Enroll now and get special pricing on our popular courses.
+    </p>
+    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" onClick={handleClick}>
+      Enroll Now
+    </Button>
+  </div>
+)}
 
       <style>{`
         @keyframes slideDown {
