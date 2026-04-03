@@ -3,6 +3,28 @@ import { Course } from '@/lib/api';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { CheckCircle, Users, Award, Briefcase, Brain } from 'lucide-react';
+// Existing imports (updated to .webp)
+import Lovable from "@/assests/casestudies/lovable.webp";
+import Replit from "@/assests/casestudies/Replitai.webp";
+import Canva from "@/assests/casestudies/Canva.png";
+import Chatgpt from "@/assests/casestudies/Chatgpt.webp";
+
+// New imports for selected items in screenshot
+import Adobe from "@/assests/casestudies/Adobe.webp";
+import Bolt from "@/assests/casestudies/Bolt.webp";
+import Excelai from "@/assests/casestudies/Excelai.webp";
+import Freepikai from "@/assests/casestudies/Freepikai.webp";
+import Gemini from "@/assests/casestudies/Gemini.webp";
+import Googlestudio from "@/assests/casestudies/Googlestudio.webp";
+import Notebooklm from "@/assests/casestudies/Notebooklm.webp";
+import Pebbeley from "@/assests/casestudies/Pebbely.webp";
+import Powerautomate from "@/assests/casestudies/Powerautomate.webp";
+import Runway from "@/assests/casestudies/Runway.webp";
+import Claude from "@/assests/casestudies/Claude.webp";
+import Netlify from "@/assests/casestudies/Netlify.webp";
+import N8n from "@/assests/casestudies/N8n.webp";
+import Eleven  from "@/assests/casestudies/Eleven.webp";
+import Image from 'next/image';
 
 interface CourseOverviewProps {
   course: Course;
@@ -92,6 +114,64 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                 ))}
               </div>
             </div>
+
+            {
+              course.title==="AI for Entrepreneurs" ?
+               <section className="py-10">
+              <div className="container mx-auto px-4">
+                {/* Section Title */}
+                <h3 className="text-xl font-bold mb-4">
+           Which AI Tools I Will Master in {" "}
+               
+                    <span className="text-[#00a0da]">{course.title} course?</span> 
+            
+              </h3>
+
+                {/* Logos Container */}
+                <div style={{textAlign:'left', alignItems:'flex-start',marginTop:30}}>
+                  <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-8">
+                    {[
+                      { name: "Lovable", logo: Lovable },
+                      { name: "Replit", logo: Replit },
+                      { name: "Canva", logo: Canva },
+                      { name: "ChatGPT", logo: Chatgpt },
+                      { name: "Gemini", logo: Gemini },
+                      { name: "Google Studio", logo: Googlestudio },
+                      { name: "NotebookLM", logo: Notebooklm },
+                      { name: "Pebbeley", logo: Pebbeley }, 
+                      { name: "ExcelAI", logo: Excelai },
+                      { name: "Power Automate", logo: Powerautomate },
+                      { name: "Adobe Firefly", logo: Adobe },
+                      { name: "Bolt AI", logo: Bolt },
+                      { name: "Runway", logo: Runway },
+                      { name: "Freepik AI", logo: Freepikai },
+                      { name: "Claude", logo: Claude },
+                      { name: "Netlify", logo: Netlify },
+                      { name: "N8n", logo: N8n },
+                      { name: "Eleven Labs", logo: Eleven },
+                      
+                    ].map((tool) => (
+                      <div key={tool.name} className="flex items-center group">
+                        <Image
+                          loading="lazy"
+                          width={140}
+                          height={45}
+                          src={tool.logo}
+                          alt={`${tool.name} logo`}
+                          className="object-contain opacity-90 hover:opacity-100 transition-all h-7 sm:h-9 lg:h-10 w-auto max-w-[70px] sm:max-w-[90px] lg:max-w-[110px]"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+            :
+            null
+            }
+           
+
+
           </div>
           <div className="space-y-6">
             <Card>
@@ -202,7 +282,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                   /* AI for Entrepreneurs Logic */
                   <>
                     <div className="flex items-start">
-                      <div className="text-xl mr-3">🛠️</div>
+                      {/* <div className="text-xl mr-3">🛠️</div> */}
                       <div>
                         <div className="font-medium">Immediate Implementation</div>
                         <p className="text-sm text-gray-600">5+ AI tools built during the program | 90-day roadmap ready to execute | Automations live in your business from Day 1</p>
@@ -210,7 +290,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                     </div>
 
                     <div className="flex items-start">
-                      <div className="text-xl mr-3">👥</div>
+                      {/* <div className="text-xl mr-3">👥</div> */}
                       <div>
                         <div className="font-medium">Entrepreneur Community</div>
                         <p className="text-sm text-gray-600">Get connected with fellow business owners | Join our exclusive WhatsApp Entrepreneur Community | Lifetime access to resources and updates</p>
@@ -218,7 +298,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                     </div>
 
                     <div className="flex items-start">
-                      <div className="text-xl mr-3">🏆</div>
+                      {/* <div className="text-xl mr-3">🏆</div> */}
                       <div>
                         <div className="font-medium">Business Impact</div>
                         <p className="text-sm text-gray-600">Reduced operational costs | Faster marketing content creation | Data-driven decisions across sales, inventory and customer behaviour</p>

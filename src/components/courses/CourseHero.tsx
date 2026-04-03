@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Star, Award, CheckCircle, X, ChevronRight } from "lucide-react";
+import { Clock, Users, Star, Award, CheckCircle, X, ChevronRight, NotebookPen } from "lucide-react";
 
 /* Official WhatsApp logo path from SimpleIcons */
 const WhatsAppIcon = ({ size = 28 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <rect width="24" height="24" rx="12" fill="#25D366" />
-    <path fill="#ffffff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    <path fill="#ffffff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
   </svg>
 );
 import { Course } from "@/lib/api";
@@ -28,6 +28,9 @@ import NASSCOMNEW from "@/assests/NASSCOMNEW.webp";
 import PritiJha from "@/assests/alumni/PritiJha.webp";
 import PranabKumarPaul from "@/assests/alumni/PranabKumarPaul.webp";
 import AnishBanerjee from "@/assests/alumni/AnishBanerjee.webp";
+import AtlasCopco from "@/assests/casestudies/AtlasCopco.png";
+import Lalbaba from "@/assests/casestudies/Lalbaba.jpg";
+import TMILL from "@/assests/casestudies/TMILL.webp";
 
 interface CourseHeroProps {
   course: Course;
@@ -373,27 +376,27 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   {course.title === "AI for Product Managers"
                     ? "720 students"
                     :
-                    course.title ==="AI for Entrepreneurs" ? "100 students"
-                    : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
-                      ? "1220 students"
-                      : course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
-                        ? "1440 students"
-                        : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai"
-                          ? "862 students"
-                          : course.title === "Data Science with Machine Learning & AI Certification"
-                            ? "1158 students"
-                            : course.title === "Data Analytics and Generative AI Course"
-                              ? "855 students"
-                              : course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
-                                ? "967 students"
-                                : course.title === "Data Analytics and Generative AI Course"
-                                  ? "25,090 students"
-                                  : course.title === "Cloud Data Engineering Course with IIT Guwahati"
-                                    ? "445 students"
-                                    : course.title === "AI and Machine Learning Course" ? "658 students"
-                                      : course.title === "Data science course (Pay after Placement)"
-                                        ? "430 students"
-                                        : "N/A"}
+                    course.title === "AI for Entrepreneurs" ? "100 students"
+                      : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
+                        ? "1220 students"
+                        : course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
+                          ? "1440 students"
+                          : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai"
+                            ? "862 students"
+                            : course.title === "Data Science with Machine Learning & AI Certification"
+                              ? "1158 students"
+                              : course.title === "Data Analytics and Generative AI Course"
+                                ? "855 students"
+                                : course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
+                                  ? "967 students"
+                                  : course.title === "Data Analytics and Generative AI Course"
+                                    ? "25,090 students"
+                                    : course.title === "Cloud Data Engineering Course with IIT Guwahati"
+                                      ? "445 students"
+                                      : course.title === "AI and Machine Learning Course" ? "658 students"
+                                        : course.title === "Data science course (Pay after Placement)"
+                                          ? "430 students"
+                                          : "N/A"}
                 </span>
               </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
@@ -402,39 +405,59 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 {/* <span>{courseHours[course.title] || "225 Hours"}</span> */}
                 {course.title === "AI and Machine Learning Course"
                   ? "32 Hours" :
-                  course.title === "AI for Entrepreneurs" ? "20 Hours":
-                  course.title === "Data Science with Machine Learning & AI Certification"
-                    ? "232 Hours"
-                    : course.title === "AI for Product Managers"
-                      ? "24 Hours"
-                      : "225 Hours"
+                  course.title === "AI for Entrepreneurs" ? "20 Hours" :
+                    course.title === "Data Science with Machine Learning & AI Certification"
+                      ? "232 Hours"
+                      : course.title === "AI for Product Managers"
+                        ? "24 Hours"
+                        : "225 Hours"
                 }              </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Star size={16} className="mr-2" />
                 <span> {course.title === "AI for Product Managers"
                   ? "4.7 (195 reviews)"
-                  :course.title === "AI for Entrepreneurs" ? "4.8 (90 reviews)"
-                  : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
-                    ? "4.9 (209 reviews)"
-                    : course.title === "Data Science with Machine Learning & AI Certification"
-                      ? "4.8 (230 reviews)"
-                      : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai"
-                        ? "4.7 (198 reviews)"
-                        : course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
-                          "4.8 (324 reviews)"
-                          : course.title === "Data Analytics and Generative AI Course"
-                            ? "4.7 (212 reviews)"
-                            : course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
-                              ? "4.6 (286 reviews)"
-                              : course.title === "Data Analytics and Generative AI Course"
-                                ? "4.8 (6983 reviews)"
-                                : course.title === "Cloud Data Engineering Course with IIT Guwahati"
-                                  ? "4.7 (189 reviews)"
-                                  : course.title === "AI and Machine Learning Course" ? "4.8 (230 reviews)"
-                                    : course.title === "Data science course (Pay after Placement)"
-                                      ? "4.8 (109 reviews)"
-                                      : "N/A"}</span>
+                  : course.title === "AI for Entrepreneurs" ? "4.8 (90 reviews)"
+                    : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
+                      ? "4.9 (209 reviews)"
+                      : course.title === "Data Science with Machine Learning & AI Certification"
+                        ? "4.8 (230 reviews)"
+                        : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai"
+                          ? "4.7 (198 reviews)"
+                          : course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
+                            "4.8 (324 reviews)"
+                            : course.title === "Data Analytics and Generative AI Course"
+                              ? "4.7 (212 reviews)"
+                              : course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
+                                ? "4.6 (286 reviews)"
+                                : course.title === "Data Analytics and Generative AI Course"
+                                  ? "4.8 (6983 reviews)"
+                                  : course.title === "Cloud Data Engineering Course with IIT Guwahati"
+                                    ? "4.7 (189 reviews)"
+                                    : course.title === "AI and Machine Learning Course" ? "4.8 (230 reviews)"
+                                      : course.title === "Data science course (Pay after Placement)"
+                                        ? "4.8 (109 reviews)"
+                                        : "N/A"}</span>
               </div>
+
+
+
+              {
+                course.title === "AI for Entrepreneurs" ?
+
+                  <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                    <NotebookPen size={16} className="mr-2" />
+                    Weekday Evening Sessions
+                  </div>
+
+                  :
+
+                  null
+              }
+
+
+
+
+
 
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Award size={16} className="mr-2" />
@@ -454,11 +477,81 @@ const CourseHero = ({ course }: CourseHeroProps) => {
             </div>
 
             <div className="space-y-2">
+              {
+                course.title === "AI for Entrepreneurs" ?
               <div className="text-white text-sm font-medium">
+                AI Training delivered to
+              </div>
+              :
+                 <div className="text-white text-sm font-medium">
                 Find our Alumni at
               </div>
+              }
 
-              {course.title ===
+
+
+              {course.title === "Generative AI Course" ||
+                course.title === "Data Science with Machine Learning & AI Certification" ||
+                course.title === "Cloud Data Engineering Course with IIT Guwahati" ? (
+                <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
+                  <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
+                    {partners.map((partner) => (
+                      <div key={partner.name} className="flex items-center">
+                        <Image
+                          loading="lazy"
+                          width={150}
+                          height={50}
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="object-contain opacity-100 transition-all h-10 sm:h-12 lg:h-14 w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px]"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : course.title === "AI for Entrepreneurs" ? (
+                /* Logic for AI for Entrepreneurs */
+               <div className="flex items-center bg-[#013b81b2] rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
+  <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-5">
+    {[
+      { name: "Atlas Copco", logo: AtlasCopco },
+      { name: "Lalbaba", logo: Lalbaba },
+      { name: "TMILL", logo: TMILL },
+    ].map((partner) => (
+      <div key={partner.name} className="flex items-center">
+        <Image
+          loading="lazy"
+          width={120} 
+          height={40} 
+          src={partner.logo}
+          alt={`${partner.name} logo`}
+          className="object-contain opacity-100 transition-all h-8 sm:h-10 lg:h-11 w-auto max-w-[65px] sm:max-w-[85px] lg:max-w-[100px]"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+              ) : (
+                /* Default/Fallback for other courses */
+                <div className="flex items-center bg-[#75a082]/40 rounded-full px-4 py-2 w-fit mx-auto sm:mx-0">
+                  <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 lg:gap-6">
+                    {partners.map((partner) => (
+                      <div key={partner.name} className="flex items-center">
+                        <Image
+                          loading="lazy"
+                          width={150}
+                          height={50}
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="object-contain opacity-100 transition-all h-10 sm:h-12 lg:h-14 w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px]"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* {course.title ===
                 "Generative AI Course" ||
                 course.title === "Data Science with Machine Learning & AI Certification" ||
                 course.title ===
@@ -496,7 +589,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
 
 
@@ -591,9 +684,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
             <div className="flex flex-wrap items-center gap-4">
 
 
-             
 
-                <Button
+
+              <Button
                 variant="outline"
                 size="lg"
                 className="bg-white/10 text-white hover:bg-white/20"
@@ -659,14 +752,14 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   else if (course.title === "Data Engineering Course in Kolkata") {
                     syllabusUrl =
                       "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/preview";
-                  } 
+                  }
                   window.open(syllabusUrl, "_blank");
                 }}
               >
                 Download Syllabus
               </Button>
-             
-              
+
+
               {course.title === "Data Science with Machine Learning & AI Certification" ? (
                 <div
                   style={{
@@ -684,15 +777,15 @@ const CourseHero = ({ course }: CourseHeroProps) => {
           <div style={{ marginTop: 30 }}>
             <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-6 w-full h-full flex flex-col">
               <div className="text-center mb-6">
-               <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-  Join Two Classes for{" "}
-  <span className="text-[#1a98cb]">No Cost</span>
-  {course.title === "AI for Entrepreneurs" && (
-    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-sm md:text-base font-bold bg-amber-100 text-amber-600 animate-pulse border border-amber-200">
-      (New Course)
-    </span>
-  )}
-</h2>
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+                  Join Two Classes for{" "}
+                  <span className="text-[#1a98cb]">No Cost</span>
+                  {course.title === "AI for Entrepreneurs" && (
+                    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-sm md:text-base font-bold bg-amber-100 text-amber-600 animate-pulse border border-amber-200">
+                      (New Course)
+                    </span>
+                  )}
+                </h2>
                 <p className="text-gray-600 text-sm md:text-base">
                   Learn with Experts & Industry Leaders from IIT & IIM
                 </p>
@@ -819,15 +912,31 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm"
                   >
                     <span className="text-[#1a98cb] font-medium">
-                      New batch starting 7th and 21st March, 2026
+                      {
+                        course.title === "AI for Entrepreneurs" ? "Next batch starting from 10th April, 2026" : "New batch starting 7th and 21st March, 2026"
+                      }
 
                     </span>
+                   
                     <div className="flex items-center gap-1">
                       <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                       <span className="text-red-600 font-medium">
                         Limited seats left!
                       </span>
                     </div>
+                  </div>
+                  <div
+                    style={{ marginTop: 10 }}
+                    className="flex flex-wrap items-center justify-center gap-1 pt-2 text-sm"
+                  >
+                  
+                    <span className="text-[#1a98cb] font-medium">
+                      {
+                        course.title === "AI for Entrepreneurs" ? "Every Mon, Wed, Fri from 7:00 to 8:30 PM" : null
+                      }
+
+                    </span>
+                   
                   </div>
                 </div>
 
@@ -840,100 +949,100 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
       {/* ── WhatsApp floating widget ── */}
       {/* ── WhatsApp floating widget ── */}
-<div className="fixed bottom-4 right-4 z-[9999] flex flex-col items-end gap-3" style={{ pointerEvents: "none" }}>
+      <div className="fixed bottom-4 right-4 z-[9999] flex flex-col items-end gap-3" style={{ pointerEvents: "none" }}>
 
-  {/* Expandable panel */}
-  {chatOpen && (
-    <div
-      className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ease-in-out"
-      /* Mobile: nearly full width | Desktop: 288px (w-72) */
-      style={{ 
-        width: "min(320px, calc(100vw - 32px))", 
-        pointerEvents: "auto",
-        marginBottom: "8px" 
-      }}
-    >
-      {/* Header */}
-      <div className="px-4 py-3 flex items-center gap-3" style={{ background: "#25D366" }}>
-        <WhatsAppIcon size={24} />
-        <div className="flex-1">
-          <p className="font-semibold text-white text-sm leading-tight">Ivy Pro School</p>
-          <p className="text-[10px] text-green-100 mt-0.5">● Typically replies in minutes</p>
-        </div>
-        <button
-          onClick={() => setChatOpen(false)}
-          className="p-1 rounded-full hover:bg-black/10 text-white/80 hover:text-white transition-colors"
-          aria-label="Close"
-        >
-          <X className="w-4 h-4" />
-        </button>
-      </div>
+        {/* Expandable panel */}
+        {chatOpen && (
+          <div
+            className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ease-in-out"
+            /* Mobile: nearly full width | Desktop: 288px (w-72) */
+            style={{
+              width: "min(320px, calc(100vw - 32px))",
+              pointerEvents: "auto",
+              marginBottom: "8px"
+            }}
+          >
+            {/* Header */}
+            <div className="px-4 py-3 flex items-center gap-3" style={{ background: "#25D366" }}>
+              <WhatsAppIcon size={24} />
+              <div className="flex-1">
+                <p className="font-semibold text-white text-sm leading-tight">Ivy Pro School</p>
+                <p className="text-[10px] text-green-100 mt-0.5">● Typically replies in minutes</p>
+              </div>
+              <button
+                onClick={() => setChatOpen(false)}
+                className="p-1 rounded-full hover:bg-black/10 text-white/80 hover:text-white transition-colors"
+                aria-label="Close"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
 
-      {/* Body */}
-      <div className="p-3 max-h-[60vh] overflow-y-auto">
-        <div className="mb-3 rounded-lg px-3 py-2" style={{ background: "#f0fdf4", border: "1px solid #bbf7d0" }}>
-          <p className="text-[11px] text-gray-500 uppercase tracking-wider font-bold mb-0.5">Course Context</p>
-          <p className="text-xs text-gray-700 font-medium line-clamp-1">
-            {course.title}
-          </p>
-        </div>
-        
-        <p className="text-[11px] text-gray-400 mb-2 px-1">How can we help you?</p>
-        
-        <div className="flex flex-col gap-2">
-          {courseCTAs.map((cta) => (
-            <a
-              key={cta.label}
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(cta.msg)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between w-full px-3 py-3 rounded-xl bg-gray-50 hover:bg-green-50 border border-gray-100 hover:border-green-200 transition-all active:scale-[0.98]"
-              style={{ textDecoration: "none" }}
-            >
-              <span className="text-xs font-semibold text-gray-700 leading-snug">
-                {cta.emoji} {cta.label}
-              </span>
-              <ChevronRight className="w-3.5 h-3.5 text-gray-400 shrink-0 ml-2" />
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  )}
+            {/* Body */}
+            <div className="p-3 max-h-[60vh] overflow-y-auto">
+              <div className="mb-3 rounded-lg px-3 py-2" style={{ background: "#f0fdf4", border: "1px solid #bbf7d0" }}>
+                <p className="text-[11px] text-gray-500 uppercase tracking-wider font-bold mb-0.5">Course Context</p>
+                <p className="text-xs text-gray-700 font-medium line-clamp-1">
+                  {course.title}
+                </p>
+              </div>
 
-  {/* Bottom row: pill label + round button */}
-  <div className="flex items-center gap-2" style={{ pointerEvents: "auto" }}>
-    {/* Hide the text pill on mobile (hidden) and show on small screens and up (sm:flex) */}
-    {!chatOpen && (
-      <button
-        onClick={() => { setChatOpen(true); setShowPulse(false); }}
-        className="hidden sm:flex items-center gap-1.5 px-4 py-2.5 rounded-full shadow-lg text-white text-xs font-bold whitespace-nowrap hover:brightness-110 transition-all"
-        style={{ background: "#25D366" }}
-      >
-        <WhatsAppIcon size={16} />
-        Ask about this course
-      </button>
-    )}
-    
-    <div className="relative shrink-0">
-      {showPulse && !chatOpen && (
-        <span className="absolute inset-0 rounded-full animate-ping opacity-40" style={{ background: "#25D366" }} />
-      )}
-      <button
-        onClick={() => { setChatOpen(prev => !prev); setShowPulse(false); }}
-        className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-xl flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-90"
-        style={{ background: chatOpen ? "#374151" : "#25D366" }}
-        aria-label={chatOpen ? "Close WhatsApp chat" : "Chat on WhatsApp"}
-      >
-        {chatOpen ? (
-          <X className="w-6 h-6 text-white" />
-        ) : (
-          <WhatsAppIcon size={window?.innerWidth < 640 ? 24 : 28} />
+              <p className="text-[11px] text-gray-400 mb-2 px-1">How can we help you?</p>
+
+              <div className="flex flex-col gap-2">
+                {courseCTAs.map((cta) => (
+                  <a
+                    key={cta.label}
+                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(cta.msg)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between w-full px-3 py-3 rounded-xl bg-gray-50 hover:bg-green-50 border border-gray-100 hover:border-green-200 transition-all active:scale-[0.98]"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <span className="text-xs font-semibold text-gray-700 leading-snug">
+                      {cta.emoji} {cta.label}
+                    </span>
+                    <ChevronRight className="w-3.5 h-3.5 text-gray-400 shrink-0 ml-2" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         )}
-      </button>
-    </div>
-  </div>
-</div>
+
+        {/* Bottom row: pill label + round button */}
+        <div className="flex items-center gap-2" style={{ pointerEvents: "auto" }}>
+          {/* Hide the text pill on mobile (hidden) and show on small screens and up (sm:flex) */}
+          {!chatOpen && (
+            <button
+              onClick={() => { setChatOpen(true); setShowPulse(false); }}
+              className="hidden sm:flex items-center gap-1.5 px-4 py-2.5 rounded-full shadow-lg text-white text-xs font-bold whitespace-nowrap hover:brightness-110 transition-all"
+              style={{ background: "#25D366" }}
+            >
+              <WhatsAppIcon size={16} />
+              Ask about this course
+            </button>
+          )}
+
+          <div className="relative shrink-0">
+            {showPulse && !chatOpen && (
+              <span className="absolute inset-0 rounded-full animate-ping opacity-40" style={{ background: "#25D366" }} />
+            )}
+            <button
+              onClick={() => { setChatOpen(prev => !prev); setShowPulse(false); }}
+              className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full shadow-xl flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-90"
+              style={{ background: chatOpen ? "#374151" : "#25D366" }}
+              aria-label={chatOpen ? "Close WhatsApp chat" : "Chat on WhatsApp"}
+            >
+              {chatOpen ? (
+                <X className="w-6 h-6 text-white" />
+              ) : (
+                <WhatsAppIcon size={window?.innerWidth < 640 ? 24 : 28} />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

@@ -392,13 +392,25 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
               </div>
               {/* New Section for 'Fees seem higher?' */}
               <div className="mt-8 text-center w-full max-w-4xl mx-auto">
-                <h3 className="text-lg font-semibold text-gray-800">Fees seems higher? Pick your own module.</h3>
+
+                {
+                  course.title != "AI for Entrepreneurs" ?
+                    <h3 className="text-lg font-semibold text-gray-800">Fees seems higher? Pick your own module.</h3>
+                    :
+                    null
+                }
+
                 <Button
                   style={{ backgroundColor: '#009fda' }}
                   className="mt-4 px-6 py-3 rounded-lg text-white font-medium shadow-md hover:shadow-lg transition-all duration-200"
                   onClick={() => setShowContactOptions(!showContactOptions)}
                 >
-                  Pick your own customized course
+                  {
+                    course.title != "AI for Entrepreneurs" ?
+                      "Pick your own customized course"
+                      :
+                      "Book your call with our counsellor"
+                  }
                 </Button>
 
                 {showContactOptions && (
