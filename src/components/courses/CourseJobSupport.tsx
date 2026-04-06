@@ -130,13 +130,16 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
 
             <TabsList className="flex w-full justify-center items-center overflow-x-auto pb-2 gap-4 no-scrollbar mb-8">
               <TabsTrigger value="live-projects" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
-                Live Projects
+                <span className="sm:hidden">Projects</span>
+                <span className="hidden sm:inline">Live Projects</span>
               </TabsTrigger>
               <TabsTrigger value="post-program" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
-                Post Program Support
+                <span className="sm:hidden">Support</span>
+                <span className="hidden sm:inline">Post Program Support</span>
               </TabsTrigger>
               <TabsTrigger value="implementation" className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[200px] text-center bg-white shadow-sm">
-                AI Implementation Program
+                <span className="sm:hidden">Implementation</span>
+                <span className="hidden sm:inline">AI Implementation Program</span>
               </TabsTrigger>
 
             </TabsList>
@@ -418,8 +421,14 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
               </div>
             </TabsContent>
 
-            <div style={{marginTop:50}}> 
-              <h3 className="text-2xl font-bold mb-4 text-center">Who are Ivy Pro School's hiring partners and where can I get placed?</h3>
+            <div style={{ marginTop: 50 }}>
+              {
+                course.title === "AI for Entrepreneurs" ?
+                  <h3 className="text-2xl font-bold mb-4 text-center">Which businesses have trained their teams in AI with Ivy Pro School?</h3>
+                  :
+                  <h3 className="text-2xl font-bold mb-4 text-center">Who are Ivy Pro School's hiring partners and where can I get placed?</h3>
+
+              }
 
               <div style={{ backgroundColor: 'white' }} className="relative overflow-hidden h-28 w-screen -ml-[calc(50vw-50%)] logo-fade-mask">
                 <div className="absolute flex items-center animate-scroll-left space-x-4" style={{ width: '200%' }}>
@@ -720,6 +729,8 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                           "The Executive Certification in Data Science, widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
                           course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ?
                             "Launch your cloud career with an elite certification FROM Ivy Pro School. Designed with experts from Amazon & Accenture, it proves your ability to build real-time data systems using Spark, Kafka, and AWS." :
+                           course.title ==="AI and Machine Learning Course" ?
+                              "The AI and Machine Learning Certification from Ivy Pro School is a prestigious credential that validates your expertise in AI and ML concepts, tools, and applications. It demonstrates your ability to design, build, and deploy AI and ML solutions, making you a valuable asset in the rapidly evolving field of artificial intelligence." :
                             course.title === "Data Engineering Course in Delhi" ?
                               "Upon successful completion, learners receive a professional certification from Ivy Professional School. The certification validates job-ready data engineering skills and enhances employability."
                               :

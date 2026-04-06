@@ -839,110 +839,190 @@ const courses: Course[] = [
 
 
 
-   
-  
-  "curriculum": [
-    {
-      "id": "m1",
-      "title": "Advanced Excel",
-      "duration": "32 hrs",
-      "topics": [
-        { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
-        { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
-        { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
-        { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
-        { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
-        { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
-        { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
-        { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
-        { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
-      ]
-    },
-    {
-      "id": "m2",
-      "title": "Advanced SQL",
-      "duration": "32 hrs",
-      "topics": [
-        { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
-        { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
-        { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
-        { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
-        { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
-        { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
-        { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
-        { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
-        { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
-        { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
-      ]
-    },
-    {
-      "id": "m3",
-      "title": "Tableau",
-      "duration": "28 hrs",
-      "topics": [
-        { "id": "t1", "title": "Data Visualization Fundamentals – Design principles, chart selection, and best practices" },
-        { "id": "t2", "title": "Build Interactive Dashboards – Filters, actions, parameters, and dynamic KPI tracking" },
-        { "id": "t3", "title": "Work with Real Data – Data connection, joins, blending, and data preparation techniques" },
-        { "id": "t4", "title": "Advanced Tableau Techniques – Calculated fields, LOD expressions, table calculations" },
-        { "id": "t5", "title": "Create Impactful Visuals – Heatmaps, treemaps, waterfall charts, maps, and advanced charts" },
-        { "id": "t6", "title": "Storytelling with Data – Dashboard design, annotations, and business storytelling" },
-        { "id": "t7", "title": "AI in Tableau – Use Explain Data, Ask Data, and Tableau GPT for faster insights" },
-        { "id": "p1", "title": "Project: Interactive Sales Dashboard \n Designed an Interactive Sales Dashboard with filters and storyboards for management." },
-        { "id": "p2", "title": "Project: Customer Segmentation Report \n Created a Customer Segmentation Report using clustering insights and visuals." }
-      ]
-    },
-    {
-      "id": "m4",
-      "title": "R Language",
-      "duration": "40 hrs",
-      "topics": [
-        { "id": "t1", "title": "Data Handling in R – Data cleaning, transformation, and working with structured datasets" },
-        { "id": "t2", "title": "Exploratory Data Analysis & Visualization – Statistical summaries, correlations, and visualizations" },
-        { "id": "t3", "title": "Predictive Modeling – Linear & Logistic Regression, model evaluation, and validation techniques" },
-        { "id": "t4", "title": "Time Series Analysis – ARIMA models, trend analysis, and forecasting" },
-        { "id": "t5", "title": "Feature Engineering – PCA and dimensionality reduction for improving model performance" },
-        { "id": "t6", "title": "Statistical Thinking for Business Problems – Applying data-driven methods to real-world scenarios" },
-        { "id": "t7", "title": "AI in R – Use generative AI tools for code automation, visualization, and model interpretation" },
-        { "id": "p1", "title": "Project: Sales Forecasting \n Conducted Sales Forecasting using Time Series Analysis and ARIMA models." },
-        { "id": "p2", "title": "Project: Employee Attrition Predictor \n Built an Employee Attrition Predictor using Logistic Regression and tidyverse tools." }
-      ]
-    },
-    {
-      "id": "m5",
-      "title": "Python",
-      "duration": "40 hrs",
-      "topics": [
-        { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
-        { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
-        { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
-        { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
-        { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
-        { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
-        { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
-        { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
-        { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
-        { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
-      ]
-    },
-    {
-      "id": "m6",
-      "title": "Machine Learning",
-      "duration": "28 hrs",
-      "topics": [
-        { "id": "t1", "title": "Machine Learning Foundations: Supervised vs unsupervised learning, model evaluation, and bias-variance tradeoff" },
-        { "id": "t2", "title": "Predictive Modeling & Algorithms: Regression, classification, decision trees, SVM, KNN, and Naïve Bayes" },
-        { "id": "t3", "title": "Clustering & Dimensionality Reduction: K-Means, Hierarchical, DBSCAN, PCA" },
-        { "id": "t4", "title": "Ensemble Techniques: Random Forest, XGBoost and model improvement strategies" },
-        { "id": "t5", "title": "Model Optimization: Hyperparameter tuning using GridSearchCV & RandomizedSearchCV" },
-        { "id": "t6", "title": "Natural Language Processing (NLP): Text classification, sentiment analysis, topic modeling, and BERT fundamentals" },
-        { "id": "t7", "title": "Deep Learning: Neural networks, CNNs, RNNs, LSTMs and TensorFlow" },
-        { "id": "t8", "title": "AI Projects & Deployment: Build and deploy Image, Text, and Time-Series models using Flask/Streamlit" },
-        { "id": "t9", "title": "AI-Powered Workflows: Use AI tools to accelerate model building, analysis, and documentation" },
-        { "id": "p1", "title": "Project: Image Classification Model \n Build a CNN using TensorFlow to identify objects or handwritten digits." },
-        { "id": "p2", "title": "Project: Stock Price Prediction \n Use LSTM networks to forecast time-series data and visualize trend accuracy." }
-      ]
-    }
-  ],
+
+
+    "curriculum": [
+      {
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
+        ]
+      },
+      {
+        "id": "m2",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+        ]
+      },
+
+
+      {
+        id: "m3",
+        title: "Python programming for Beginners",
+        duration: "2O hrs",
+        topics: [
+          { id: "t1", title: "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", duration: "1.5 hrs" },
+          { id: "t2", title: "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", duration: "2.5 hrs" },
+          { id: "t3", title: "Collections & Iterations: Lists, Tuples, Sets, Dictionaries, and Comprehensions", duration: "3 hrs" },
+          { id: "t4", title: "Control Flow: Conditionals, Loops, and Exception Handling", duration: "2.5 hrs" },
+          { id: "t5", title: "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", duration: "3 hrs" },
+          { id: "t6", title: "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", duration: "4 hrs" },
+          { id: "p1", title: "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", duration: "2 hrs" },
+          { id: "p2", title: "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", duration: "2 hrs" },
+        ]
+      },
+      {
+        "id": "m4",
+        "title": "Tableau",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Visualization Fundamentals – Design principles, chart selection, and best practices" },
+          { "id": "t2", "title": "Build Interactive Dashboards – Filters, actions, parameters, and dynamic KPI tracking" },
+          { "id": "t3", "title": "Work with Real Data – Data connection, joins, blending, and data preparation techniques" },
+          { "id": "t4", "title": "Advanced Tableau Techniques – Calculated fields, LOD expressions, table calculations" },
+          { "id": "t5", "title": "Create Impactful Visuals – Heatmaps, treemaps, waterfall charts, maps, and advanced charts" },
+          { "id": "t6", "title": "Storytelling with Data – Dashboard design, annotations, and business storytelling" },
+          { "id": "t7", "title": "AI in Tableau – Use Explain Data, Ask Data, and Tableau GPT for faster insights" },
+          { "id": "p1", "title": "Project: Interactive Sales Dashboard \n Designed an Interactive Sales Dashboard with filters and storyboards for management." },
+          { "id": "p2", "title": "Project: Customer Segmentation Report \n Created a Customer Segmentation Report using clustering insights and visuals." }
+        ]
+      },
+
+      {
+        id: "m5",
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
+        topics: [
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
+        ]
+      },
+      {
+        "id": "m6",
+        "title": "R Language",
+        "duration": "40 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Handling in R – Data cleaning, transformation, and working with structured datasets" },
+          { "id": "t2", "title": "Exploratory Data Analysis & Visualization – Statistical summaries, correlations, and visualizations" },
+          { "id": "t3", "title": "Predictive Modeling – Linear & Logistic Regression, model evaluation, and validation techniques" },
+          { "id": "t4", "title": "Time Series Analysis – ARIMA models, trend analysis, and forecasting" },
+          { "id": "t5", "title": "Feature Engineering – PCA and dimensionality reduction for improving model performance" },
+          { "id": "t6", "title": "Statistical Thinking for Business Problems – Applying data-driven methods to real-world scenarios" },
+          { "id": "t7", "title": "AI in R – Use generative AI tools for code automation, visualization, and model interpretation" },
+          { "id": "p1", "title": "Project: Sales Forecasting \n Conducted Sales Forecasting using Time Series Analysis and ARIMA models." },
+          { "id": "p2", "title": "Project: Employee Attrition Predictor \n Built an Employee Attrition Predictor using Logistic Regression and tidyverse tools." }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
+
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
+
+
+        ]
+      },
+      {
+        "id": "m8",
+        "title": "Machine Learning",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Machine Learning Foundations: Supervised vs unsupervised learning, model evaluation, and bias-variance tradeoff" },
+          { "id": "t2", "title": "Predictive Modeling & Algorithms: Regression, classification, decision trees, SVM, KNN, and Naïve Bayes" },
+          { "id": "t3", "title": "Clustering & Dimensionality Reduction: K-Means, Hierarchical, DBSCAN, PCA" },
+          { "id": "t4", "title": "Ensemble Techniques: Random Forest, XGBoost and model improvement strategies" },
+          { "id": "t5", "title": "Model Optimization: Hyperparameter tuning using GridSearchCV & RandomizedSearchCV" },
+          { "id": "t6", "title": "Natural Language Processing (NLP): Text classification, sentiment analysis, topic modeling, and BERT fundamentals" },
+          { "id": "t7", "title": "Deep Learning: Neural networks, CNNs, RNNs, LSTMs and TensorFlow" },
+          { "id": "t8", "title": "AI Projects & Deployment: Build and deploy Image, Text, and Time-Series models using Flask/Streamlit" },
+          { "id": "t9", "title": "AI-Powered Workflows: Use AI tools to accelerate model building, analysis, and documentation" },
+          { "id": "p1", "title": "Project: Image Classification Model \n Build a CNN using TensorFlow to identify objects or handwritten digits." },
+          { "id": "p2", "title": "Project: Stock Price Prediction \n Use LSTM networks to forecast time-series data and visualize trend accuracy." }
+        ]
+      },
+
+      
+        {
+          "id": "m9",
+          "title": "CV Building",
+          "duration": "4 hrs",
+          "topics": [
+            { "id": "t1", "title": "Career Planning & Resume Strategy: Strategic alignment for job readiness and career mapping" },
+            { "id": "t2", "title": "Resume & CV Architecture: Drafting high-impact documents for both Freshers and Professionals" },
+            { "id": "t3", "title": "ATS Optimization: Keyword research techniques and formatting for Applicant Tracking Systems" },
+            { "id": "t4", "title": "Multi-Platform Job Search: Mastering LinkedIn, Naukri, Indeed, and emerging portals" },
+            { "id": "t5", "title": "Advanced Customization: Role-based resume tailoring and shortlisting strategies" },
+            { "id": "t6", "title": "Interview Simulation: Using PrepAI for dynamic question generation and mock practice" },
+            { "id": "t7", "title": "Job Search Execution: End-to-end placement preparation and tracking using PrepAI" },
+            { "id": "p1", "title": "Project: Professional Portfolio Build \n Construct an ATS-optimized resume and LinkedIn profile tailored to a target job description." }
+          ]
+        },
+        {
+          "id": "m10",
+          "title": "Analytical Problem Solving (APS)",
+          "duration": "4 hrs",
+          "topics": [
+            { "id": "t1", "title": "Introduction to APS: Understanding the role of analytical thinking in modern job functions" },
+            { "id": "t2", "title": "Problem Solving Frameworks: Applying structured logic to complex business scenarios" },
+            { "id": "t3", "title": "Domain-Specific Case Studies: Analyzing Sales, Operations, and Manufacturing use cases" },
+            { "id": "t4", "title": "Root Cause Analysis (RCA): Techniques for identifying core issues in real-world problems" },
+            { "id": "t5", "title": "Data-Driven Decision Making: Leveraging quantitative insights to drive business strategy" },
+            { "id": "t6", "title": "Structured Interview Prep: Navigating case-based questions and workplace logic scenarios" },
+            { "id": "t7", "title": "PrepAI APS Practice: Solving simulated business cases with AI-driven feedback" },
+            { "id": "p1", "title": "Project: Business Impact Case Study \n Perform a Root Cause Analysis on a manufacturing or sales bottleneck and present a data-backed solution." }
+          ]
+        }
+      
+
+
+    ],
 
     projects: [
       {
@@ -1290,7 +1370,7 @@ const courses: Course[] = [
           { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
           { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
           { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-          
+
           { id: "t21", title: "PROJECTS: Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
           { id: "t22", title: "PROJECTS: Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." },
           { id: "t23", title: "PROJECTS: Create a Retail Inventory Optimizer using data validation and lookup functions." },
@@ -1356,7 +1436,7 @@ const courses: Course[] = [
         id: "m5",
         title: "Python Predictive Modelling & Basic Machine learning",
         duration: "42 hrs",
-       topics: [
+        topics: [
           { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
           { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
           { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
@@ -1395,7 +1475,7 @@ const courses: Course[] = [
         id: "m7",
         title: "Prep AI 4 months Premium Subscription,",
         duration: "24 HOURS",
-       topics: [
+        topics: [
           { id: "t1", title: "Diagnose: Unlimited Interview Readiness Quizzes & Instant Feedback", duration: "3.5 hrs" },
           { id: "t2", title: "Personalized Learning: Gap Analysis & Contextual Learning from Uploaded Files", duration: "4.5 hrs" },
           { id: "t3", title: "Resume Excellence: ATS-Friendly Builder & Skills Matching Score", duration: "4 hrs" },
@@ -2077,7 +2157,7 @@ const courses: Course[] = [
     projects: [
 
 
-      
+
       {
         id: "p4",
         title: "How to Create Telegram AI Bot | Build a Telegram AI Bot for Financial Advisory | Step-by-Step Guide",
@@ -2108,7 +2188,7 @@ const courses: Course[] = [
         isPractice: true,
         videoId: "f8Da8x8KNXE"
       },
-      
+
     ],
     outcomes: [
       "Master AI-PM foundations: opportunity discovery, AI UX, prompt design, and core LLM/RAG/agent patterns to ship real features.",
@@ -2855,7 +2935,7 @@ const courses: Course[] = [
 
 
 
-   {
+  {
     id: '11',
     title: "Data Engineering Course in Delhi",
     description: "The Data Engineering Course in Delhi provides comprehensive training on building scalable, reliable, and high-performance data pipelines. The course focuses on real-world data engineering workflows, enabling learners to work with structured and unstructured data at scale. With Delhi witnessing rapid adoption of data-driven decision-making across sectors such as BFSI, consulting, e-governance, and IT services, this course aligns closely with current industry requirements. Learners gain exposure to batch and real-time data processing, cloud-based data architectures, and distributed computing systems.",
@@ -3322,7 +3402,7 @@ const courses: Course[] = [
       "Implement batch and real-time data processing frameworks",
       "Prepare for Data Engineer roles in Bangalore’s competitive job market",
       "Ensure data quality, scalability, and performance in production systems",
-      
+
     ],
 
 
@@ -3556,7 +3636,7 @@ const courses: Course[] = [
       "Work with relational and NoSQL databases",
       "Build distributed data systems using Hadoop and Apache Spark",
       "Implement batch and real-time data processing frameworks",
-      
+
     ],
 
 
@@ -3791,7 +3871,7 @@ const courses: Course[] = [
       "Work with relational and NoSQL databases",
       "Build distributed data processing systems using Hadoop and Apache Spark",
       "Implement batch and real-time data processing frameworks",
-      
+
     ],
 
 
@@ -4026,7 +4106,7 @@ const courses: Course[] = [
       "Build distributed data processing systems using Hadoop and Apache Spark",
       "Implement batch and real-time data processing frameworks",
       "Prepare for Data Engineer roles in Chennai’s competitive job market",
-      
+
     ],
 
 
@@ -4793,7 +4873,7 @@ const courses: Course[] = [
   },
 
 
-   {
+  {
     id: '14',
     title: "Data Science with Machine Learning & AI Course in Pune",
     description: "If you are looking for a career-focused data science course in Pune, Ivy Professional School offers a comprehensive program designed to help learners master analytics, machine learning, and artificial intelligence with real-world relevance. Pune is widely recognized as one of India’s leading IT and technology hubs, hosting global IT firms, startups, and analytics-driven organizations. This program is ideal for learners who want to build data science expertise aligned with Pune’s thriving tech ecosystem.",
@@ -5173,7 +5253,7 @@ const courses: Course[] = [
   },
 
 
-   {
+  {
     id: '15',
     title: "Data Science with Machine Learning & AI Course in Chennai",
     description: "If you are searching for a career-driven data science course in Chennai, Ivy Professional School offers a comprehensive program designed to help learners gain in-demand skills in analytics, machine learning, and artificial intelligence.Chennai is a major hub for IT services, manufacturing analytics, fintech, and enterprise technology, making it an excellent city to build a long-term career in data science. This program prepares learners to meet industry expectations through practical learning and real-world exposure",
@@ -5218,7 +5298,7 @@ const courses: Course[] = [
       "Apply supervised and unsupervised learning techniques effectively",
       "Work with real-world datasets and industry-focused case studies",
       "Communicate data-driven insights clearly to technical and business stakeholders"
-   
+
     ],
 
 
@@ -5553,7 +5633,7 @@ const courses: Course[] = [
 
   },
 
-   {
+  {
     id: '16',
     title: "Data Science with Machine Learning & AI Course in Bangalore",
     description: "Ivy Professional School’s Data Science Course in Bangalore with Machine Learning and Gen AI is designed to help you break into this high-growth field with confidence. Whether you’re a fresher or a working professional, this program focuses on what actually gets you hired. Learn through a hands-on, industry-driven curriculum covering Excel, SQL, Python, Machine Learning, and AI, combined with real-world projects and business case studies. Build a strong portfolio, gain practical experience, and develop the skills companies actively look for. With dedicated career support, mentorship, and placement assistance, you’ll be prepared for roles like Data Analyst, Data Scientist, and Machine Learning Engineer.",
@@ -5599,7 +5679,7 @@ const courses: Course[] = [
       "Working with real-world datasets and business problems",
       "Communicating insights through dashboards and visual storytelling",
       "Introduction to Artificial Intelligence concepts"
-   
+
     ],
 
 
@@ -5981,7 +6061,7 @@ const courses: Course[] = [
       "Model evaluation, tuning, and optimization methods",
       "Introduction to Artificial Intelligence fundamentals",
       "Applying data science solutions to real-world corporate and financial problems"
-   
+
     ],
 
 
@@ -6317,7 +6397,7 @@ const courses: Course[] = [
   },
 
 
-   {
+  {
     id: '18',
     title: "Data Analytics With Visualization in Kolkata",
     description: "The Data Analytics With Visualization in Kolkata by Ivy Professional School is designed to help students and professionals build strong analytical skills required to make data-driven business decisions. With Kolkata emerging as a growing hub for analytics, BFSI, consulting, and IT services, the demand for skilled data analysts is steadily increasing.This program focuses on practical data analysis skills using industry-standard tools and real business datasets, preparing learners for entry-level to mid-level data analytics roles.",
@@ -6556,7 +6636,7 @@ const courses: Course[] = [
   },
 
 
-   {
+  {
     id: '19',
     title: "Data Analytics With Visualization in Delhi",
     description: "Gain hands-on skills in data analytics, master tools like Python and Power BI, build real-world projects, and become a certified, job-ready analyst in 8-10 months.",
@@ -6709,7 +6789,7 @@ const courses: Course[] = [
         ]
       }
       ,
-     {
+      {
         id: "m6",
         title: "4 Months PrepAI",
         duration: "120 days",
@@ -6947,7 +7027,7 @@ const courses: Course[] = [
         ]
       }
       ,
-     {
+      {
         id: "m6",
         title: "4 Months PrepAI",
         duration: "120 days",
@@ -7270,7 +7350,7 @@ const courses: Course[] = [
 
   },
 
-   {
+  {
     id: '20',
     title: "Data Analytics With Visualization in Pune",
     description: "  Start your journey in analytics with Ivy Professional School’s Pune-based program. Learn industry-relevant tools and techniques, build real projects, and gain job-focused training to thrive in data roles.",
@@ -7314,7 +7394,7 @@ const courses: Course[] = [
       "Use Python libraries such as Pandas and Matplotlib to clean and visualize large datasets.",
       "Write and optimize SQL queries to retrieve and manipulate data from relational databases.",
       "Understand key analytics principles like data structures, sampling techniques, probability, and descriptive statistics.",
-      
+
     ],
     curriculum: [
       {
@@ -7509,7 +7589,7 @@ const courses: Course[] = [
 
   },
 
-    {
+  {
     id: '21',
     title: "Generative AI Course in Kolkata",
     description: "Looking to advance your career with cutting-edge artificial intelligence skills? The Generative AI Course in Kolkata by Ivy Professional School is designed to help students, developers, and working professionals master generative models like GANs, VAEs, and Transformers through hands-on projects, expert mentorship, and career-focused training. Kolkata is fast becoming a tech and analytics hub, and our generative AI program empowers learners with real-world applications, practical deployment skills, and dedicated placement support to compete in top AI-driven roles.",
@@ -7729,7 +7809,7 @@ const courses: Course[] = [
   },
 
 
-   {
+  {
     id: '21',
     title: "Generative AI Course in Bangalore",
     description: "Become a Generative AI expert in Bangalore. Learn GPT, LLM fine-tuning, AI apps, and multimodal AI with hands-on projects and certification.",
@@ -7947,7 +8027,7 @@ const courses: Course[] = [
       }
     ]
   },
-   {
+  {
     id: '21',
     title: "Generative AI Course in Delhi",
     description: "Master Generative AI in Delhi. Build GPT apps, LLM projects, and multimodal AI solutions with expert mentorship and industry-recognized certification.",
@@ -8165,7 +8245,7 @@ const courses: Course[] = [
       }
     ]
   },
- {
+  {
     id: '21',
     title: "Generative AI Course in Mumbai",
     description: "Looking to build advanced artificial intelligence skills that stand out in today’s tech landscape? The Generative AI Course in Mumbai from Ivy Professional School is tailored for professionals, students, and innovators who want to master generative AI techniques such as GANs, VAEs, and Transformer‑based models like GPT.\n\n  In Mumbai, one of India’s leading centers for technology and business innovation, this program provides project‑based learning, expert mentorship, and placement‑oriented training that equips you to create intelligent AI solutions for real‑world challenges.",
@@ -8384,7 +8464,7 @@ const courses: Course[] = [
       }
     ]
   },
-{
+  {
     id: '21',
     title: "Generative AI Course in Pune",
     description: "Looking to level up your AI skills and build expertise in generative models? The Generative AI Course in Pune from Ivy Professional School is designed for professionals, students, and tech enthusiasts who want to master the art of AI-driven content generation. Learn to work with advanced models like GANs, VAEs, and Transformer-based models such as GPT.In Pune, a city known for its thriving tech ecosystem, this program combines project-based learning, expert mentorship, and industry-aligned training to prepare you for real-world AI challenges.",
@@ -8604,7 +8684,7 @@ const courses: Course[] = [
     ]
   },
 
-{
+  {
     id: '21',
     title: "Generative AI Course in Chennai",
     description: "The Generative AI Course in Chennai is a comprehensive program aimed at equipping you with both theoretical knowledge and practical skills in generative AI. If you're aiming to advance your career in artificial intelligence, the Generative AI Course in Chennai by Ivy Professional School is the perfect opportunity. Whether you're a professional, a student, or an innovator, this course equips you with advanced skills to master generative models such as GANs, VAEs, and GPT-based architectures. Chennai, a fast-growing tech hub, provides the ideal environment for you to learn and build real-world AI applications that are changing industries.",
@@ -8824,14 +8904,14 @@ const courses: Course[] = [
   },
 
 
-    {
+  {
     id: '22',
     title: "AI for Entrepreneurs",
     description: "Master AI to automate operations, analyze data, and scale your business. Build 10+ no-code AI tools and launch your own AI Product Studio in 8 weeks.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
-   metaData: {
+    metaData: {
       title: "AI for Entrepreneurs | Master Business Automation | Ivy Professional School",
       description: "Scale your business with GenAI. Learn to automate workflows, build custom AI agents, and drive ROI. 18-week strategic program for founders & leaders.",
       bio: "Master the ROI of Generative AI. Learn to build AI-driven operations, automate marketing, and lead your industry as an AI-first entrepreneur in just 6 weeks."
@@ -8841,7 +8921,7 @@ const courses: Course[] = [
     reviewCount: 5567,
     isFeatured: true,
     slug: "ai-for-entrepreneurs-course",
-    longDescription: "Most AI courses are built for tech professionals. This one is built for you — the business owner, the trader, the manufacturer, the retailer who wants real results without the jargon. In just 20 hours, you will learn to use AI to create marketing content, automate daily operations, generate professional product visuals, and build your own AI tools — all without writing a single line of code. \n\n From ChatGPT to Zapier to vibe coding, every module is hands-on and immediately applicable to your business. You will walk away not just with knowledge, but with a clear 90-day AI roadmap tailored to your industry"
+    longDescription: "Most AI courses are built for tech professionals. This one is built for you — the business owner, the trader, the manufacturer, the retailer who wants real results without the jargon. In just 20 hours, you will learn to use AI to create marketing content, automate daily operations, generate professional product visuals, and build your own AI tools — all without writing a single line of code. \n\n From Claude to Gemini to vibe coding, every module is hands-on and immediately applicable to your business. You will walk away not just with knowledge, but with a clear 90-day AI roadmap tailored to your industry"
     , outcomes: [
       "Understand AI for Your Business: Cut through the hype and identify exactly where AI can save time, reduce costs and grow revenue in your specific industry.",
       " Boost Daily Productivity: Use ChatGPT, Claude and Gemini to write emails, proposals, SOPs and reports in minutes — not hours.",
@@ -8947,7 +9027,7 @@ const courses: Course[] = [
 
 
     ,
-        projects: [
+    projects: [
       {
         id: "p1",
         title: "Employee Attrition Prediction",
@@ -9064,7 +9144,7 @@ const courses: Course[] = [
       }
     ]
   },
-  
+
 
 ];
 

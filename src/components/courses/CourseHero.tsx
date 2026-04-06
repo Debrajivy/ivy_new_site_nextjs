@@ -81,6 +81,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
   const [chatOpen, setChatOpen] = useState(false);
   const [showPulse, setShowPulse] = useState(true);
+  const [videoPlaying, setVideoPlaying] = useState(false);
 
   useEffect(() => {
     const t = setTimeout(() => setShowPulse(false), 5000);
@@ -793,6 +794,46 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
           </div>
 
           <div style={{ marginTop: 30 }}>
+            {course.title === "AI for Entrepreneurs" && (
+              <div className="mb-4 rounded-xl overflow-hidden shadow-lg">
+                {videoPlaying ? (
+                  <iframe
+                    width="100%"
+                    height="340"
+                    src="https://www.youtube.com/embed/_Z2Dw0id6dA?autoplay=1"
+                    title="AI for Entrepreneurs"
+                    style={{ border: "none" }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full"
+                  />
+                ) : (
+                  <div
+                    className="relative cursor-pointer group"
+                    onClick={() => setVideoPlaying(true)}
+                  >
+                    <img
+                      src="https://img.youtube.com/vi/_Z2Dw0id6dA/hqdefault.jpg"
+                      alt="AI for Entrepreneurs video thumbnail"
+                      className="w-full object-cover"
+                      style={{ height: 340 }}
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                      <div className="bg-red-600 rounded-full p-4 shadow-xl group-hover:scale-110 transition-transform">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="white"
+                          className="w-8 h-8"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
             <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-6 w-full h-full flex flex-col">
               <div className="text-center mb-6">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
