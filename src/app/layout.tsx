@@ -10,9 +10,9 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 // --- METADATA & SCHEMA DATA ---
 
 export const metadata: Metadata = {
-  title: "#1 Data Science & GenAI Institute | IIT Certified | Pay After Placement | Ivy",
+  title: "#1 Data Science & GenAI Institute | IIT Certification | Pay After Placement | Ivy Professional School",
   description:
-    "Join Ivy Pro's GenAI & Data Science Courses. 4.9/5 Rated since 2008. Partners: IIT Guwahati, NASSCOM, IBM. 32500+ Alumni in 500+ firms. 40+ Fortune 500 Clients",
+    "Advance your career in GenAI & Data Science with Ivy Pro, trusted by 37,500+ alumni across 500+ firms. Rated 4.9/5. Backed by IIT Guwahati, NASSCOM & IBM since 2008.",
   authors: [{ name: "Ivy Professional School" }],
   keywords: [
     "GenAI Courses",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     google: "5DI8S_HoObJNVtsYs8s9vhGls8HL93FvxJdZYSPo_G4",
   },
   openGraph: {
-    title: "#1 Data Science & GenAI Institute | IIT Certified | Pay After Placement | Ivy",
+    title: "#1 Data Science & GenAI Institute | IIT Certification | Pay After Placement | Ivy Professional School",
     description:
       "JLearn Data Science, GenAI & AI from IIT-certified instructors. Pay After Placement. 4.8★ (1300+ reviews). Placements at Amazon, IBM, Deloitte. Kolkata & Bangalore. Apply Now!",
     url: "https://ivyproschool.com/",

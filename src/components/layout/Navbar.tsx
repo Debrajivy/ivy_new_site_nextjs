@@ -28,8 +28,26 @@ import CDI from "@/assests/CDI.webp"
 import AIPM from "@/assests/AIPM.webp"
 import AIE from "@/assests/AIE.webp";
 import icon from "../../assests/icon.webp"
+import AIB from "../../assests/AIB.webp";
 
 const courseCategories = {
+
+   "AI for Entrepreneurs": [
+    {
+      title: "AI for Entrepreneurs",
+      href: "/courses/ai-for-entrepreneurs-course",
+      description: "Learn to leverage AI for entrepreneurial success",
+      image: AIE,
+    },
+  ],
+  //  "AI for Beginners": [
+  //   {
+  //     title: "AI for Beginners",
+  //     href: "/courses/ai-for-beginners-course",
+  //     description: "Get started with AI and learn the fundamentals",
+  //     image: AIB,
+  //   },
+  // ],
   "AI for Product Managers": [
     {
       title: "AI for Product Managers",
@@ -121,14 +139,7 @@ const courseCategories = {
     },
   ],
 
-  "AI for Entrepreneurs": [
-    {
-      title: "AI for Entrepreneurs",
-      href: "/courses/ai-for-entrepreneurs-course",
-      description: "Learn to leverage AI for entrepreneurial success",
-      image: AIE,
-    },
-  ],
+ 
 
 }
 

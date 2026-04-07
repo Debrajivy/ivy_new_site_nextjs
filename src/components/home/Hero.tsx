@@ -156,14 +156,14 @@ const Hero = () => {
               <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-sm">
                 <Users className="text-primary" size={18} />
                 <div>
-                  <div className="font-bold text-md">32.5K+</div>
+                  <div className="font-bold text-md">37.5K+</div>
                   <div className="text-xs text-gray-500">Students Trained</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-sm">
                 <Users className="text-primary" size={18} />
                 <div>
-                  <div className="font-bold text-md">59%</div>
+                  <div className="font-bold text-md">67%</div>
                   <div className="text-xs text-gray-500">Avg. Salary Hike</div>
                 </div>
               </div>

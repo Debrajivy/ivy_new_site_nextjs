@@ -14,7 +14,7 @@ const PlacementReportCTA = () => {
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/10 rounded-lg -z-10"></div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-lg -z-10"></div>
 
-              <div className="bg-white shadow-xl rounded-xl overflow-hidden border border-gray-100">
+              <div className="bg-white shadow-xl rounded-xl overflow-hidden border border-gray-100" >
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-6">
                     <div className="flex items-center">
@@ -23,7 +23,7 @@ const PlacementReportCTA = () => {
                       </div>
                       <h3 className="font-bold text-lg">Placement Report 2025</h3>
                     </div>
-                    <div className="text-sm text-gray-500">Q1 2025</div>
+                    {/* <div className="text-sm text-gray-500">Q1 2025</div> */}
                   </div>
 
                   <div className="space-y-5">
@@ -71,8 +71,7 @@ const PlacementReportCTA = () => {
 
                   <div className="mt-6 pt-6 border-t border-gray-100">
                     <div className="text-center text-gray-500 text-sm">
-                      Last updated: 15th July, 2025
-                    </div>
+                      Start your AI & Data career journey today                    </div>
                   </div>
                 </div>
               </div>
@@ -87,19 +86,19 @@ const PlacementReportCTA = () => {
 
             <h2 className="text-3xl md:text-4xl font-bold mb-6">What should I know about Ivy Pro School's placement and career outcomes?</h2>
 
-           <p className="text-lg text-gray-700 mb-6">
-  Ivy Professional School has a proven track record of placing students in top
-  companies with significant salary improvements. Download our{" "}
-  <a
-    href="https://ivyproschool.com/alumni"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-[#00a1db] font-semibold hover:underline"
-  >
-    latest placement report
-  </a>{" "}
-  to see how our graduates are thriving.
-</p>
+            <p className="text-lg text-gray-700 mb-6">
+              Ivy Professional School has a proven track record of placing students in top
+              companies with significant salary improvements. Download our{" "}
+              <a
+                href="https://ivyproschool.com/alumni"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#00a1db] font-semibold hover:underline"
+              >
+                latest placement report
+              </a>{" "}
+              to see how our graduates are thriving.
+            </p>
 
             {/* Advanced AI for CXOs at Atlas Copco. 
             We can take the name of this company while posting. But we should also post with some use cases. */}
@@ -114,7 +113,7 @@ const PlacementReportCTA = () => {
               <div className="flex items-start">
                 <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold">Rated 4.9/5 on Google</h3>
+                  <h3 className="font-semibold">Rated 4.8/5 on Google</h3>
                   <p className="text-gray-600">Highly rated on Google by more than 1250+ of students accross different industries.</p>
                 </div>
               </div>

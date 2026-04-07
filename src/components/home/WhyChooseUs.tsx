@@ -6,7 +6,7 @@ import { CalendarClock, Users, Medal, Briefcase, TrendingUp, Award } from 'lucid
 const features = [
   {
     icon: <CalendarClock className="h-8 w-8 text-primary" />,
-    title: "17+ Years of Excellence",
+    title: "18+ Years of Excellence",
     description: "Delivering high-quality data science & AI education since 2008 with proven expertise"
   },
   {

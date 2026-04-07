@@ -2,5 +2,23 @@
   "title": "Career",
   "icon": "Briefcase",
   "color": "bg-emerald-500",
-  "description": "Career guidance for data professionals"
+  "description": "Career guidance for data professionals",
+  "subcategories": {
+    "data-science": {
+      "title": "Data Science",
+      "icon": "BarChart3",
+      "color": "bg-emerald-500",
+      "topics": [
+        {
+          "id": "data-science-for-commerce-students",
+          "metaTitle": "Is Data Science a Good Career for Commerce Students? | Career Guide 2025",
+          "title": "Is Data Science a Good Career for Commerce Students?",
+          "description": "A step-by-step practical roadmap from BCom to Business Analyst, Data Analyst, and beyond — covering skills, roles, salary, and the right learning path.",
+          "duration": "9 min read",
+          "date": "April 7, 2026",
+          "content": {}
+        }
+      ]
+    }
+  }
 }

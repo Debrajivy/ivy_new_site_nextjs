@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Course } from '@/lib/api';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Clock, FileText, CheckCircle, X, LayoutDashboard } from 'lucide-react';
+import { Clock, FileText, CheckCircle, X, LayoutDashboard,Plus, Sparkles , ExternalLink} from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from "@/components/ui/button"
 import { Bot, Send, MessageSquare, Phone } from "lucide-react"
@@ -201,100 +201,124 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
               </div>
             </div>
 
-            <Accordion type="single" collapsible>
-              {course.curriculum.map((module: any, index: any) => (
-                <AccordionItem key={module.id} value={module.id}>
-                  <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 no-underline hover:no-underline">
-                    <div className="flex items-center">
-                      <div className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center mr-4">
-                        {index + 1}
-                      </div>
-                      <div className="text-left">
-                        <h4 className="font-semibold no-underline hover:no-underline">{module.title}</h4>
-                        <div className="flex items-center text-sm text-gray-500 mt-1">
-                          <Clock size={14} className="mr-1" />
-                          <span className="no-underline hover:no-underline">{module.duration}</span>
+          <Accordion type="single" collapsible className="w-full">
+  {course.curriculum.map((module: any, index: any) => (
+    <AccordionItem key={module.id} value={module.id}>
+      <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 no-underline hover:no-underline">
+        <div className="flex items-center">
+          <div className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0 font-bold">
+            {index + 1}
+          </div>
+          <div className="text-left">
+            <h4 className="font-semibold no-underline hover:no-underline">{module.title}</h4>
+            <div className="flex items-center text-sm text-gray-500 mt-1">
+              <Clock size={14} className="mr-1" />
+              <span className="no-underline hover:no-underline">{module.duration}</span>
 
-                          <span className="mx-2">•</span>
+              <span className="mx-2">•</span>
 
-                          <FileText size={14} className="mr-1" />
-                          <span className="no-underline hover:no-underline">
-                            {/* Count only lessons (IDs starting with 't') */}
-                            {module.topics.filter((t: any) => t.id.startsWith('t')).length} lessons
-                          </span>
+              <FileText size={14} className="mr-1" />
+              <span className="no-underline hover:no-underline">
+                {module.topics.filter((t: any) => t.id.startsWith('t')).length} lessons
+              </span>
 
-                          {/* Conditional Project Logic */}
-                          {(() => {
-                            const projectCount = module.topics.filter((t: any) => t.id.startsWith('p')).length;
-                            if (projectCount > 0) {
-                              return (
-                                <>
-                                  <span className="mx-2">•</span>
-                                  <LayoutDashboard size={14} className="mr-1 text-[#013a81]" />
-                                  <span className="no-underline hover:no-underline text-[#013a81] font-medium">
-                                    {projectCount} {projectCount === 1 ? 'Project' : 'Projects'}
-                                  </span>
-                                </>
-                              );
-                            }
-                            return null;
-                          })()}
-                        </div>
-                      </div>
+              {/* Conditional Project Logic */}
+              {(() => {
+                const projectCount = module.topics.filter((t: any) => t.id.startsWith('p')).length;
+                if (projectCount > 0) {
+                  return (
+                    <>
+                      <span className="mx-2">•</span>
+                      <LayoutDashboard size={14} className="mr-1 text-[#013a81]" />
+                      <span className="no-underline hover:no-underline text-[#013a81] font-medium">
+                        {projectCount} {projectCount === 1 ? 'Project' : 'Projects'}
+                      </span>
+                    </>
+                  );
+                }
+                return null;
+              })()}
+            </div>
+          </div>
+        </div>
+      </AccordionTrigger>
+
+      <AccordionContent className="bg-white">
+        <div className="px-6 pt-2 pb-6">
+          <ul className="space-y-1">
+            {module.topics.map((topic: any) => {
+              const isProject = topic.id.startsWith('p') || topic.title.startsWith('Project:');
+
+              return (
+                <li
+                  key={topic.id}
+                  className={`flex justify-between items-start py-3 border-b border-gray-50 last:border-0 ${
+                    isProject ? "bg-blue-50/40 rounded-lg px-4 my-2 border-none" : ""
+                  }`}
+                >
+                  <div className="flex items-start w-full">
+                    {isProject ? (
+                      <LayoutDashboard size={18} className="text-[#013a81] mr-3 mt-1 flex-shrink-0" />
+                    ) : (
+                      <CheckCircle size={18} className="text-blue-400 mr-3 mt-1 flex-shrink-0" />
+                    )}
+
+                    <div className="text-gray-700 leading-relaxed text-sm md:text-base flex-grow">
+                      {isProject ? (
+                        <>
+                          <span className="font-bold text-[#013a81] mr-1">Project:</span>
+                          {topic.title.replace('Project:', '').trim()}
+                        </>
+                      ) : (
+                        topic.title
+                      )}
+
+                      {topic.isAdvanced && (
+                        <Badge variant="outline" className="ml-2 text-[10px] bg-white text-blue-600 border-blue-200">
+                          ADVANCED
+                        </Badge>
+                      )}
                     </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="px-6 pt-2 pb-4">
-                      <ul className="space-y-3">
-                        {module.topics.map((topic: any) => {
-                          // Determine if this is a project item
-                          const isProject = topic.id.startsWith('p') || topic.title.startsWith('Project:');
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
 
-                          return (
-                            <li
-                              key={topic.id}
-                              className={`flex justify-between items-start py-3 border-b border-gray-100 ${isProject ? "bg-blue-50/30 rounded-md px-2" : ""
-                                }`}
-                            >
-                              <div style={{ width: '90%' }} className="flex items-start">
-                                {/* Different Icon for Project vs Topic */}
-                                {isProject ? (
-                                  <LayoutDashboard size={19} className="text-[#013a81] mr-3 mt-1 flex-shrink-0" />
-                                ) : (
-                                  <CheckCircle size={19} className="text-blue-500 mr-3 mt-1 flex-shrink-0" />
-                                )}
-
-                                <span className="text-gray-800 leading-relaxed">
-                                  {isProject ? (
-                                    <>
-                                      {/* Bolding only the 'Project:' keyword */}
-                                      <span className="font-bold text-[#013a81]">Project:</span>
-                                      {topic.title.replace('Project:', '')}
-                                    </>
-                                  ) : (
-                                    topic.title
-                                  )}
-
-                                  {topic.isAdvanced && (
-                                    <Badge variant="outline" className="ml-2 text-xs">
-                                      Advanced
-                                    </Badge>
-                                  )}
-                                </span>
-                              </div>
-
-                              <div style={{ width: '10%' }} className="flex items-center text-sm text-gray-500">
-                                {/* Duration placeholder */}
-                              </div>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          {/* SPECIFIC PREPAI RESUME BUILDER SECTION */}
+          {course.title === "Data Science with Machine Learning & AI Certification" && 
+           module.title === "CV Building" && (
+            <div className="mt-8 p-6 rounded-2xl border border-orange-100 bg-orange-50/30 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex items-center gap-4">
+                <div className="bg-white p-3 rounded-xl shadow-sm border border-orange-100">
+                  <Sparkles className="text-orange-500" size={24} />
+                </div>
+                <div>
+                  <h5 className="font-bold text-gray-900 text-lg">AI Resume Builder</h5>
+                  <p className="text-sm text-gray-600">Build a high-impact, ATS-friendly resume in minutes.</p>
+                </div>
+              </div>
+              
+              <a 
+                href="https://prepai.ivyproschool.com/ai/resume" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-white transition-all shadow-lg hover:shadow-orange-200 active:scale-95 whitespace-nowrap text-base"
+                style={{ 
+                  background: 'linear-gradient(90deg, #FF6B00 0%, #D1458A 50%, #9B30FF 100%)' 
+                }}
+              >
+                <Plus size={20} strokeWidth={3} />
+                Build Your Resume Now
+                <ExternalLink size={16} className="ml-1 opacity-70" />
+              </a>
+            </div>
+          )}
+        </div>
+      </AccordionContent>
+    </AccordionItem>
+  ))}
+</Accordion>
           </div>
 
           {/* Desktop Pricing Section - Below Curriculum */}
