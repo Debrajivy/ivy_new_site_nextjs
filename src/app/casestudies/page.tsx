@@ -192,11 +192,14 @@ const sqlDrills = {
       { id: 20, name: 'Tina', salary: '76,000', joining_date: '2017-04-16', department_id: 3 },
     ],
     task: 'Find the total salary for each department. Your result table should have department_name and total_salary columns.',
+    outputColumns: ['department_name', 'total_salary'],
     expectedOutputPreview: [
       { department_name: 'HR', total_salary: '552,000' },
       { department_name: 'Engineering', total_salary: '495,000' },
       { department_name: '…', total_salary: '…' },
-    ],
+    ] as Record<string, string>[],
+    hint: undefined as string[] | undefined,
+    hintTitle: undefined as string | undefined,
     solution: {
       sql: `SELECT d.name AS department_name,
        SUM(e.salary) AS total_salary
@@ -210,6 +213,8 @@ GROUP BY d.name;`,
         'GROUP BY d.name ensures the aggregation happens per department.',
         'Departments with no employees (Graphic Designer, Data Analyst) are excluded by the INNER JOIN — use a LEFT JOIN if you need to include them with a total of 0 or NULL.',
       ],
+      commonMistake: undefined as { title: string; points: string[] } | undefined,
+      observation: undefined as { title: string; points: string[] } | undefined,
       result: [
         { department_name: 'Engineering', total_salary: '495,000' },
         { department_name: 'Finance', total_salary: '91,000' },
@@ -217,7 +222,233 @@ GROUP BY d.name;`,
         { department_name: 'IT', total_salary: '63,000' },
         { department_name: 'Marketing', total_salary: '324,000' },
         { department_name: 'Sales', total_salary: '83,000' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-2': {
+    id: 'sql-drill-2',
+    number: 2,
+    title: 'Skeleton Crew',
+    tool: 'SQL' as const,
+    difficulty: 'Beginner' as Difficulty,
+    skills: ['LEFT JOIN', 'GROUP BY', 'HAVING', 'COUNT'],
+    description: 'Identify understaffed departments by finding those with fewer than 2 employees using LEFT JOIN, GROUP BY, and HAVING.',
+    setup: "Your dataset contains two tables from a company's HR database:\n\n1. A Department table with the ID and name of each department\n2. An Employee table with the ID, name, salary, joining date, and department reference for each employee",
+    schema: {
+      Department: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
       ],
+      Employee: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+        { name: 'salary', type: 'DECIMAL(10,2)', constraint: '' },
+        { name: 'joining_date', type: 'DATE', constraint: '' },
+        { name: 'department_id', type: 'INT', constraint: 'FK' },
+      ],
+    },
+    departmentData: [
+      { id: 1, name: 'HR' },
+      { id: 2, name: 'Engineering' },
+      { id: 3, name: 'Marketing' },
+      { id: 4, name: 'Sales' },
+      { id: 5, name: 'IT' },
+      { id: 6, name: 'Finance' },
+      { id: 7, name: 'Graphic Designer' },
+      { id: 8, name: 'Data Analyst' },
+    ],
+    employeeData: [
+      { id: 1, name: 'Alice', salary: '70,000', joining_date: '2020-01-15', department_id: 1 },
+      { id: 2, name: 'Bob', salary: '85,000', joining_date: '2019-03-22', department_id: 2 },
+      { id: 3, name: 'Charlie', salary: '60,000', joining_date: '2021-05-18', department_id: 1 },
+      { id: 4, name: 'David', salary: '95,000', joining_date: '2018-07-11', department_id: 3 },
+      { id: 5, name: 'Eva', salary: '80,000', joining_date: '2017-09-09', department_id: 2 },
+      { id: 6, name: 'Frank', salary: '75,000', joining_date: '2016-11-14', department_id: 3 },
+      { id: 7, name: 'Grace', salary: '90,000', joining_date: '2015-02-23', department_id: 1 },
+      { id: 8, name: 'Henry', salary: '68,000', joining_date: '2021-04-30', department_id: 2 },
+      { id: 9, name: 'Irene', salary: '72,000', joining_date: '2020-06-25', department_id: 1 },
+      { id: 10, name: 'Jack', salary: '78,000', joining_date: '2019-08-19', department_id: 3 },
+      { id: 11, name: 'Karen', salary: '83,000', joining_date: '2018-10-07', department_id: 4 },
+      { id: 12, name: 'Leo', salary: '95,000', joining_date: '2017-12-13', department_id: 1 },
+      { id: 13, name: 'Mona', salary: '87,000', joining_date: '2016-03-21', department_id: 2 },
+      { id: 14, name: 'Nick', salary: '63,000', joining_date: '2015-05-29', department_id: 5 },
+      { id: 15, name: 'Olivia', salary: '77,000', joining_date: '2014-07-15', department_id: 1 },
+      { id: 16, name: 'Peter', salary: '82,000', joining_date: '2021-01-18', department_id: 2 },
+      { id: 17, name: 'Quinn', salary: '91,000', joining_date: '2020-03-12', department_id: 6 },
+      { id: 18, name: 'Rachel', salary: '88,000', joining_date: '2019-09-28', department_id: 1 },
+      { id: 19, name: 'Steve', salary: '93,000', joining_date: '2018-11-06', department_id: 2 },
+      { id: 20, name: 'Tina', salary: '76,000', joining_date: '2017-04-16', department_id: 3 },
+    ],
+    task: 'Find the names of the departments which have less than 2 employees. The final result table should have department_name and count_of_employees columns.',
+    outputColumns: ['department_name', 'count_of_employees'],
+    expectedOutputPreview: [
+      { department_name: 'Data Analyst', count_of_employees: '0' },
+      { department_name: 'Graphic Designer', count_of_employees: '0' },
+      { department_name: '…', count_of_employees: '…' },
+    ] as Record<string, string>[],
+    hint: [
+      'Think carefully about which type of JOIN to use. Some departments may have zero employees — will an INNER JOIN show them?',
+      'Remember: WHERE filters rows before grouping, HAVING filters groups after aggregation. Which one works with COUNT?',
+    ] as string[] | undefined,
+    hintTitle: undefined as string | undefined,
+    solution: {
+      sql: `SELECT d.name AS department_name,
+       COUNT(e.id) AS count_of_employees
+FROM Department d
+LEFT JOIN Employee e
+  ON e.department_id = d.id
+GROUP BY d.name
+HAVING COUNT(e.id) < 2;`,
+      howItWorks: [
+        'LEFT JOIN ensures all departments appear in the result, even those with zero employees. An INNER JOIN would silently drop Graphic Designer and Data Analyst since they have no matching rows in the Employee table.',
+        'COUNT(e.id) counts only non-NULL employee IDs. For departments with no employees, the LEFT JOIN produces NULL in e.id, so COUNT returns 0 — exactly what we need.',
+        'GROUP BY d.name groups the joined rows by department so the COUNT is calculated per department.',
+        'HAVING COUNT(e.id) < 2 filters the grouped results to keep only departments where the employee count is 0 or 1. We use HAVING (not WHERE) because the filter applies to an aggregate function that is computed after grouping.',
+      ],
+      commonMistake: {
+        title: 'WHERE vs HAVING',
+        points: [
+          'WHERE COUNT(e.id) < 2 would cause a syntax error. WHERE operates on individual rows before any grouping happens, so aggregate functions like COUNT are not available yet.',
+          'HAVING operates after GROUP BY, on the aggregated groups — making it the correct clause for filtering on COUNT, SUM, AVG, etc.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: undefined as { title: string; points: string[] } | undefined,
+      result: [
+        { department_name: 'Data Analyst', count_of_employees: '0' },
+        { department_name: 'Graphic Designer', count_of_employees: '0' },
+        { department_name: 'Finance', count_of_employees: '1' },
+        { department_name: 'IT', count_of_employees: '1' },
+        { department_name: 'Sales', count_of_employees: '1' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-3': {
+    id: 'sql-drill-3',
+    number: 3,
+    title: 'Rank & File',
+    tool: 'SQL' as const,
+    difficulty: 'Intermediate' as Difficulty,
+    skills: ['DENSE_RANK', 'Window Functions', 'CTE', 'FULL OUTER JOIN'],
+    description: 'Use window functions to find the second highest and third lowest earners in each department — combined into a single result table.',
+    setup: "Your dataset contains two tables from a company's HR database:\n\n1. A Department table with the ID and name of each department\n2. An Employee table with the ID, name, salary, joining date, and department reference for each employee",
+    schema: {
+      Department: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+      ],
+      Employee: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+        { name: 'salary', type: 'DECIMAL(10,2)', constraint: '' },
+        { name: 'joining_date', type: 'DATE', constraint: '' },
+        { name: 'department_id', type: 'INT', constraint: 'FK' },
+      ],
+    },
+    departmentData: [
+      { id: 1, name: 'HR' },
+      { id: 2, name: 'Engineering' },
+      { id: 3, name: 'Marketing' },
+      { id: 4, name: 'Sales' },
+      { id: 5, name: 'IT' },
+      { id: 6, name: 'Finance' },
+      { id: 7, name: 'Graphic Designer' },
+      { id: 8, name: 'Data Analyst' },
+    ],
+    employeeData: [
+      { id: 1, name: 'Alice', salary: '70,000', joining_date: '2020-01-15', department_id: 1 },
+      { id: 2, name: 'Bob', salary: '85,000', joining_date: '2019-03-22', department_id: 2 },
+      { id: 3, name: 'Charlie', salary: '60,000', joining_date: '2021-05-18', department_id: 1 },
+      { id: 4, name: 'David', salary: '95,000', joining_date: '2018-07-11', department_id: 3 },
+      { id: 5, name: 'Eva', salary: '80,000', joining_date: '2017-09-09', department_id: 2 },
+      { id: 6, name: 'Frank', salary: '75,000', joining_date: '2016-11-14', department_id: 3 },
+      { id: 7, name: 'Grace', salary: '90,000', joining_date: '2015-02-23', department_id: 1 },
+      { id: 8, name: 'Henry', salary: '68,000', joining_date: '2021-04-30', department_id: 2 },
+      { id: 9, name: 'Irene', salary: '72,000', joining_date: '2020-06-25', department_id: 1 },
+      { id: 10, name: 'Jack', salary: '78,000', joining_date: '2019-08-19', department_id: 3 },
+      { id: 11, name: 'Karen', salary: '83,000', joining_date: '2018-10-07', department_id: 4 },
+      { id: 12, name: 'Leo', salary: '95,000', joining_date: '2017-12-13', department_id: 1 },
+      { id: 13, name: 'Mona', salary: '87,000', joining_date: '2016-03-21', department_id: 2 },
+      { id: 14, name: 'Nick', salary: '63,000', joining_date: '2015-05-29', department_id: 5 },
+      { id: 15, name: 'Olivia', salary: '77,000', joining_date: '2014-07-15', department_id: 1 },
+      { id: 16, name: 'Peter', salary: '82,000', joining_date: '2021-01-18', department_id: 2 },
+      { id: 17, name: 'Quinn', salary: '91,000', joining_date: '2020-03-12', department_id: 6 },
+      { id: 18, name: 'Rachel', salary: '88,000', joining_date: '2019-09-28', department_id: 1 },
+      { id: 19, name: 'Steve', salary: '93,000', joining_date: '2018-11-06', department_id: 2 },
+      { id: 20, name: 'Tina', salary: '76,000', joining_date: '2017-04-16', department_id: 3 },
+    ],
+    task: 'List the employees who have the second highest salary and the third lowest salary in their respective departments. Give the answers in a single table with the format: department_name | second_highest | third_lowest',
+    outputColumns: ['department_name', 'second_highest', 'third_lowest'],
+    expectedOutputPreview: [
+      { department_name: 'Engineering', second_highest: 'Mona', third_lowest: 'Peter' },
+      { department_name: '…', second_highest: '…', third_lowest: '…' },
+    ] as Record<string, string>[],
+    hint: [
+      'Only include departments that have enough employees to satisfy the condition. For example, a department with only 1 employee cannot have a second highest salary.',
+      'If the same employee holds both ranks (second highest and third lowest), they should appear in both columns.',
+      'Use DENSE_RANK rather than ROW_NUMBER — if two employees share the same salary, they should receive the same rank.',
+    ] as string[] | undefined,
+    hintTitle: 'Important Notes' as string | undefined,
+    solution: {
+      sql: `WITH second_highest AS (
+    SELECT d.name AS dept_name,
+           e.name AS emp_name,
+           DENSE_RANK() OVER (
+               PARTITION BY d.id
+               ORDER BY e.salary DESC
+           ) AS rk
+    FROM Employee e
+    JOIN Department d ON e.department_id = d.id
+),
+third_lowest AS (
+    SELECT d.name AS dept_name,
+           e.name AS emp_name,
+           DENSE_RANK() OVER (
+               PARTITION BY d.id
+               ORDER BY e.salary ASC
+           ) AS rk
+    FROM Employee e
+    JOIN Department d ON e.department_id = d.id
+)
+
+SELECT
+    COALESCE(sh.dept_name, tl.dept_name)
+        AS department_name,
+    sh.emp_name AS second_highest,
+    tl.emp_name AS third_lowest
+FROM
+    (SELECT dept_name, emp_name
+     FROM second_highest WHERE rk = 2) sh
+FULL OUTER JOIN
+    (SELECT dept_name, emp_name
+     FROM third_lowest WHERE rk = 3) tl
+ON sh.dept_name = tl.dept_name
+ORDER BY department_name;`,
+      howItWorks: [
+        'CTE second_highest: Uses DENSE_RANK() with ORDER BY salary DESC partitioned by department. The employee(s) at rank 2 have the second highest salary in their department.',
+        'CTE third_lowest: Uses DENSE_RANK() with ORDER BY salary ASC partitioned by department. The employee(s) at rank 3 have the third lowest salary in their department.',
+        'The main query filters each CTE to the target rank (rk = 2 and rk = 3) and joins them on department name using FULL OUTER JOIN, so departments that qualify for one rank but not the other can still appear.',
+        'COALESCE(sh.dept_name, tl.dept_name) ensures the department name is shown regardless of which side of the FULL OUTER JOIN provides it.',
+      ],
+      commonMistake: {
+        title: 'Why DENSE_RANK and not ROW_NUMBER?',
+        points: [
+          'ROW_NUMBER assigns a unique sequential number to each row, even when salaries are tied. Two employees earning 85,000 would get ranks 2 and 3 arbitrarily.',
+          'DENSE_RANK gives tied salaries the same rank and does not skip the next number. Two employees at 85,000 both get rank 2, and the next distinct salary gets rank 3.',
+          'For salary-based ranking, DENSE_RANK is usually the correct choice because salary ties should be treated equally.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: {
+        title: 'Interesting Observation',
+        points: [
+          'In Marketing, Jack (salary 78,000) appears as both the second highest AND the third lowest employee. This is perfectly valid — with only 4 employees (95K, 78K, 76K, 75K), the second from the top and the third from the bottom happen to be the same person.',
+          'Departments with fewer than 2 employees (Sales, IT, Finance) have no second highest salary. Departments with fewer than 3 employees also have no third lowest. These departments are excluded from the result.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      result: [
+        { department_name: 'Engineering', second_highest: 'Mona', third_lowest: 'Peter' },
+        { department_name: 'HR', second_highest: 'Grace', third_lowest: 'Irene' },
+        { department_name: 'Marketing', second_highest: 'Jack', third_lowest: 'Jack' },
+      ] as Record<string, string>[],
     },
   },
 };
@@ -547,10 +778,28 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
           <p className="text-slate-700 font-medium leading-relaxed mb-5">{drill.task}</p>
           <p className="text-sm text-slate-600 mb-3 font-medium">Your output should look like this (partial example):</p>
           <DataTable
-            headers={['department_name', 'total_salary']}
-            rows={drill.expectedOutputPreview.map((r) => [r.department_name, r.total_salary])}
+            headers={drill.outputColumns}
+            rows={drill.expectedOutputPreview.map((r) => drill.outputColumns.map((col) => r[col]))}
           />
         </div>
+
+        {/* Hint / Notes */}
+        {drill.hint && (
+          <div className="bg-amber-50 rounded-2xl border border-amber-200 p-7">
+            <h2 className="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+              <span className="w-1 h-5 rounded-full bg-amber-400 inline-block" />
+              {drill.hintTitle ?? 'Hint'}
+            </h2>
+            <ul className="space-y-3">
+              {drill.hint.map((h, i) => (
+                <li key={i} className="flex items-start gap-3 text-slate-700">
+                  <span className="mt-0.5 text-amber-500 font-bold flex-shrink-0">→</span>
+                  <span className="leading-relaxed">{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Solution Toggle */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
@@ -597,12 +846,46 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
                 </ul>
               </div>
 
+              {/* Common Mistake */}
+              {drill.solution.commonMistake && (
+                <div className="bg-red-50 rounded-xl border border-red-200 p-5">
+                  <p className="text-sm font-bold text-red-700 uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <span className="text-base">⚠️</span> Common Mistake: {drill.solution.commonMistake.title}
+                  </p>
+                  <ul className="space-y-2">
+                    {drill.solution.commonMistake.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-2 text-slate-700 text-sm leading-relaxed">
+                        <span className="mt-0.5 text-red-500 font-bold flex-shrink-0">→</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Interesting Observation */}
+              {drill.solution.observation && (
+                <div className="bg-indigo-50 rounded-xl border border-indigo-200 p-5">
+                  <p className="text-sm font-bold text-indigo-700 uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <span className="text-base">🔍</span> {drill.solution.observation.title}
+                  </p>
+                  <ul className="space-y-2">
+                    {drill.solution.observation.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-2 text-slate-700 text-sm leading-relaxed">
+                        <span className="mt-0.5 text-indigo-500 font-bold flex-shrink-0">→</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               {/* Complete Result */}
               <div>
                 <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">Complete Result</p>
                 <DataTable
-                  headers={['department_name', 'total_salary']}
-                  rows={drill.solution.result.map((r) => [r.department_name, r.total_salary])}
+                  headers={drill.outputColumns}
+                  rows={drill.solution.result.map((r) => drill.outputColumns.map((col) => r[col]))}
                 />
               </div>
             </div>

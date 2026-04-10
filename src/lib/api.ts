@@ -1320,13 +1320,13 @@ const courses: Course[] = [
   {
     id: '6',
     title: "Data Analytics With Visualization",
-    description: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months.",
+    description: "Learn Data Analytics with hands-on projects, real-world datasets, and industry tools. Build in-demand skills, earn a recognized certification, and become job-ready with placement support in 12–14 months.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Best Data Analytics With Visualization Online with Placement Support",
-      description: "Join 4.8/5 rated Data Analytics course with 230 hours of live training, 50+ assignments, 30+ case studies, & 10+ industry projects. IBM Certified.",
+      title: "Best Data Analytics With Visualization Course with Placement Support",
+      description: "Learn Data Analytics with hands-on projects, real-world datasets, and industry tools. Build in-demand skills, earn a recognized certification, and become job-ready with placement support in 12–14 months.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
     },
