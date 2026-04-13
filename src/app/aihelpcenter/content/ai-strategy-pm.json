@@ -17,6 +17,33 @@
           "duration": "12 min read",
           "date": "March 17, 2026",
           "content": {}
+        },
+        {
+          "id": "how-to-use-claude-ai-like-a-pro",
+          "metaTitle": "How to Use Claude AI Like a Pro: Complete Beginner to Advanced Guide | AI Strategy (PM)",
+          "title": "How to Use Claude AI Like a Pro: Complete Beginner to Advanced Guide",
+          "description": "Master Claude AI from beginner to advanced — learn Claude Chat, Projects, Artifacts, Skills, Claude Code, Co-Work, MCP connectors, and real automation workflows with this complete guide.",
+          "duration": "20 min read",
+          "date": "April 13, 2026",
+          "content": {}
+        },
+        {
+          "id": "how-to-use-claude-in-finance",
+          "metaTitle": "How to Use Claude in Finance: AI for Financial Analysis, Modeling & Excel | Ivy Pro School",
+          "title": "How to Use Claude in Finance: AI for Financial Analysis, Modeling and Automation",
+          "description": "Complete guide to using Claude AI for financial analysis, modeling, and Excel automation — DCF models, scenario analysis, dashboards, data cleaning, and formula building with AI.",
+          "duration": "15 min read",
+          "date": "April 13, 2026",
+          "content": {}
+        },
+        {
+          "id": "how-to-use-notebooklm",
+          "metaTitle": "How to Use NotebookLM: Complete Guide to Features, Pricing, and Best Practices | Ivy Pro School",
+          "title": "How to Use NotebookLM: Complete Guide to Features, Pricing, Use Cases, and Best Practices",
+          "description": "Complete guide to NotebookLM — features, pricing plans, use cases, audio overviews, slide decks, mind maps, best practices, alternatives, and whether it's worth it in 2026.",
+          "duration": "15 min read",
+          "date": "April 13, 2026",
+          "content": {}
         }
       ]
     }

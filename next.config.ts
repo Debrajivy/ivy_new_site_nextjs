@@ -67,17 +67,17 @@ const nextConfig: NextConfig = {
         source: "/data-science-and-visualization-course",
         destination: "/courses/data-visualization-course",
         permanent: true,
-      },
-      {
-        source: "/blog",
-        destination: "https://blog.ivyproschool.com",
-        permanent: true,
-      },
-      {
-        source: "/blog/:slug*",
-        destination: "https://blog.ivyproschool.com/:slug*",
-        permanent: true,
-      },
+      }
+      // {
+      //   source: "/blog",
+      //   destination: "https://blog.ivyproschool.com",
+      //   permanent: true,
+      // },
+      // {
+      //   source: "/blog/:slug*",
+      //   destination: "https://blog.ivyproschool.com/:slug*",
+      //   permanent: true,
+      // },
 
  
     ]

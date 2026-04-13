@@ -8,7 +8,17 @@
       "title": "Supervised Learning",
       "icon": "BarChart3",
       "color": "bg-purple-400",
-      "topics": []
+      "topics": [
+        {
+          "id": "decision-tree-vs-random-forest",
+          "metaTitle": "Decision Tree vs Random Forest: Differences, Use Cases & When to Use Each | Ivy Pro School",
+          "title": "Decision Tree vs Random Forest: Differences, Use Cases and When to Use Each",
+          "description": "Understand the difference between Decision Tree and Random Forest with real-world examples, performance metrics, and use cases. A complete beginner-to-advanced guide for 2026.",
+          "duration": "12 min read",
+          "date": "April 13, 2026",
+          "content": {}
+        }
+      ]
     }
   }
 }
