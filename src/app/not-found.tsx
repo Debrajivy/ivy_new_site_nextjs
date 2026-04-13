@@ -1,14 +1,18 @@
 "use client"
 
 import { useEffect } from "react"
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 
 export default function NotFound() {
   const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
-    router.replace("/") // instantly redirect to home
-  }, [router])
+    if (pathname && (pathname === "/blog" || pathname.startsWith("/blog/"))) {
+      return // let /blog and /blog/* pass through, don't redirect
+    }
+    router.replace("/")
+  }, [router, pathname])
 
-  return null // don't render anything, just redirect
+  return null
 }
