@@ -227,12 +227,14 @@ const ListItem = React.forwardRef<
   }
 >(
   ({ className, title, children, image, href }, ref) => {
+    const isExternal = href.startsWith("http://") || href.startsWith("https://")
+    const Comp = isExternal ? "a" : Link
     return (
       <li>
         <NavigationMenuLink asChild>
-          <Link
+          <Comp
             href={href}
-            ref={ref}
+            ref={ref as any}
             className={cn("flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors", className)}
           >
             {image && (
@@ -248,7 +250,7 @@ const ListItem = React.forwardRef<
                 {children}
               </div>
             </div>
-          </Link>
+          </Comp>
         </NavigationMenuLink>
       </li>
     )
