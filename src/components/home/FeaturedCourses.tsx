@@ -262,23 +262,23 @@ const featuredCourses: Course[] = [
       
     ]
   },
-  //  {
-  //   id: '12',
-  //   title: "AI for Beginners",
-  //   description: "Learn 15+ AI tools including ChatGPT,Claude, Canva AI, Midjourney, Replit and more",
-  //   image: AIB,
-  //   category: "AI & Technology",
-  //   students: 100,
-  //   duration: "6 Weeks",
-  //   rating: 4.8,
-  //   reviewCount: 25,
-  //   isFeatured: true,
-  //   slug: "data-analytics-course",
-  //   keyFeatures: [
-  //     "Hands-on AI projects every session",
-  //     "Capstone project + certificate",
-  //   ]
-  // },
+   {
+    id: '12',
+    title: "AI for Beginners",
+    description: "Learn 15+ AI tools including ChatGPT,Claude, Canva AI, Midjourney, Replit and more",
+    image: AIB,
+    category: "AI & Technology",
+    students: 100,
+    duration: "6 Weeks",
+    rating: 4.8,
+    reviewCount: 25,
+    isFeatured: true,
+    slug: "ai-for-beginners-course",
+    keyFeatures: [
+      "Hands-on AI projects every session",
+      "Capstone project + certificate",
+    ]
+  },
 
 
 

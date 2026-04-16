@@ -40,14 +40,14 @@ const courseCategories = {
       image: AIE,
     },
   ],
-  //  "AI for Beginners": [
-  //   {
-  //     title: "AI for Beginners",
-  //     href: "/courses/ai-for-beginners-course",
-  //     description: "Get started with AI and learn the fundamentals",
-  //     image: AIB,
-  //   },
-  // ],
+   "AI for Beginners": [
+    {
+      title: "AI for Beginners",
+      href: "/courses/ai-for-beginners-course",
+      description: "Get started with AI and learn the fundamentals",
+      image: AIB,
+    },
+  ],
   "AI for Product Managers": [
     {
       title: "AI for Product Managers",

@@ -449,6 +449,131 @@ const courseData: { [key: string]: CourseFAQData } = {
     ]
   },
 
+  "AI for Beginners": {
+    "categories": [
+      { "id": "program-basics", "name": "1. Program Basics" },
+      { "id": "program-structure", "name": "2. Program Structure" },
+      { "id": "practical-learning", "name": "3. Practical Learning" },
+      { "id": "outcomes-benefits", "name": "4. Outcomes & Benefits" },
+      { "id": "eligibility-requirements", "name": "5. Eligibility & Requirements" },
+      { "id": "fees-enrollment", "name": "6. Fees & Enrollment" },
+      { "id": "scheduling-batch", "name": "7. Scheduling & Batch" },
+      { "id": "support-experience", "name": "8. Support & Experience" }
+    ],
+    "faqs": [
+      {
+        "question": " Who can join an AI course for beginners?",
+        "answer": "This AI course for beginners is designed for anyone who wants to understand and use AI effectively—high school students, college students, working professionals, and even business owners. No prior technical background is required.",
+        "category": "program-basics"
+      },
+      {
+        "question": " Can I learn AI without coding?",
+        "answer": "Yes, you can learn AI without coding. This is a beginner-friendly program where you start from fundamentals and gradually move towards practical applications. Basic coding is introduced in a very simplified manner.",
+        "category": "program-basics"
+      },
+      {
+        "question": " What will I learn in an AI for beginners course?",
+        "answer": "In this AI course for beginners, you will learn:\n· How AI actually works (not just theory, but practical understanding)\n· How to use AI tools to increase productivity\n· Basics of coding and building simple AI apps\n· Data analysis using AI\n· How to present and communicate insights using AI",
+        "category": "program-basics"
+      },
+      {
+        "question": " How long does an AI course for beginners take?",
+        "answer": "The AI course duration is 6 weeks.",
+        "category": "program-structure"
+      },
+      {
+        "question": " How many sessions are included in this AI course?",
+        "answer": "There are 12 sessions in total.",
+        "category": "program-structure"
+      },
+      {
+        "question": " What is the total time commitment for this AI course?",
+        "answer": "The total time commitment is approximately 20 hours across the program.",
+        "category": "program-structure"
+      },
+      {
+        "question": " What topics are covered in a beginner AI course week-wise?",
+        "answer": "The course covers the following topics:\n· Week 1–2: AI Foundations & Creative Tools\n· Week 3: Coding & App Building\n· Week 4: Data, Research & Analysis\n· Week 5: Presentations & Communication\n· Week 6: Capstone Project & Showcase",
+        "category": "program-structure"
+      },
+      {
+        "question": " Is this AI course practical or theoretical?",
+        "answer": "This AI course is highly practical. You will work with 15+ AI tools and build real use cases.",
+        "category": "practical-learning"
+      },
+      {
+        "question": " Will I build projects in this AI course?",
+        "answer": "Yes, you will complete a capstone project where you apply everything you’ve learned.",
+        "category": "practical-learning"
+      },
+      {
+        "question": " What AI tools will I learn in this course?",
+        "answer": "You will work with tools for:\n· Content creation\n· Data analysis\n· Research automation\n· App building",
+        "category": "practical-learning"
+      },
+      {
+        "question": " What are the benefits of learning AI for beginners?",
+        "answer": "By learning AI, you will:\n· Save time using AI in daily tasks\n· Improve productivity\n· Learn future-ready skills\n· Gain confidence in using AI tools",
+        "category": "outcomes-benefits"
+      },
+      {
+        "question": " Is this AI course useful for non-tech professionals?",
+        "answer": "Yes, this AI course is especially useful for non-tech professionals. The focus is on using AI, not becoming a programmer.",
+        "category": "outcomes-benefits"
+      },
+      {
+        "question": " Will learning AI help in career growth?",
+        "answer": "Yes, learning AI helps in career growth. AI literacy is becoming essential across roles—this program helps you stay relevant and efficient.",
+        "category": "outcomes-benefits"
+      },
+      {
+        "question": " What is the minimum age to learn AI?",
+        "answer": "Anyone from high school level onwards can join this AI course.",
+        "category": "eligibility-requirements"
+      },
+      {
+        "question": " What do I need to start learning AI?",
+        "answer": "To attend this AI course, you need:\n· A laptop\n· Stable internet connection\n· Basic familiarity with using a computer",
+        "category": "eligibility-requirements"
+      },
+      {
+        "question": " What is the fee for an AI course in India?",
+        "answer": "· Standard Fee: ₹10,000 + GST\n· Discounted Fee: ₹8,500 + GST (for eligible students)",
+        "category": "fees-enrollment"
+      },
+      {
+        "question": " Who is eligible for the discount in this AI course?",
+        "answer": "Students who have scored 80% or above in their most recent class are eligible for the discount.",
+        "category": "fees-enrollment"
+      },
+      {
+        "question": " Are seats limited in this AI course?",
+        "answer": "Yes, seats are limited to ensure better interaction and learning quality.",
+        "category": "fees-enrollment"
+      },
+      {
+        "question": " When does the next AI course batch start?",
+        "answer": "The upcoming batch starts on 4th May 2026.",
+        "category": "scheduling-batch"
+      },
+      {
+        "question": " What happens if I miss a session in the AI course?",
+        "answer": "Recordings/support materials may be provided.",
+        "category": "scheduling-batch"
+      },
+      {
+        "question": "Will I get support during the AI course?",
+        "answer": "Yes, you will have access to instructor guidance and doubt-solving.",
+        "category": "support-experience"
+      },
+      {
+        "question": " Will I get a certificate after completing the AI course?",
+        "answer": "Yes, participants receive a certificate upon completion.",
+        "category": "support-experience"
+      }
+    ]
+  },
+
 
 
 

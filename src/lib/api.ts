@@ -9116,6 +9116,211 @@ const courses: Course[] = [
     ]
   },
 
+  {
+    id: '23',
+    title: "AI for Beginners",
+    description: "Explore, create, and build with 15+ AI tools. A hands-on program for everyone who want to learn — no prior experience needed.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Best Data Analytics With Visualization Course with Placement Support",
+      description: "Explore, create, and build with 15+ AI tools. A hands-on program for everyone who want to learn — no prior experience needed.",
+      bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "ai-for-beginners-course",
+    longDescription: "In this AI for Beginners program, you will explore how Artificial Intelligence works and use 15+ real AI tools to create, build, and communicate ideas. From writing and image generation to coding and data — you'll do it all hands-on. The program covers AI foundations, creative tools like Midjourney and Canva AI, coding with Replit, data research with Perplexity, and professional communication using HeyGen and ElevenLabs.You will work on creative projects every session — from building your own app to designing AI-generated videos — and finish with a Capstone Project that goes into your personal portfolio. By the end of the program, you'll be confident using AI as a tool for school, creativity, and beyond."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Use 15+ AI tools including ChatGPT, Gemini, Canva AI, Midjourney, and Replit",
+      "Generate AI images, videos, and music using Ideogram, Runway, and Suno",
+      "Build mini-apps and your own portfolio website using no-code AI tools like Lovable",
+      "Research, collect, and visualize data using Perplexity, Google Forms, and Google Sheets",
+      "Create AI-powered presentations, professional emails, and avatar videos using Gamma, HeyGen, and ElevenLabs",
+      "Complete a Capstone Project and receive a personalized portfolio review and Certificate of Completion"
+    ],
+    curriculum: [
+      
+  {
+    "id": "m1",
+    "title": " AI Foundations & Prompt Mastery",
+    "duration": "3 Hours",
+    "sessions": "2 Sessions",
+    "topics": [
+      { "id": "t1", "title": "What is AI and how it differs from traditional software" },
+      { "id": "t2", "title": "AI in daily life — YouTube, Google Maps, Siri, ChatGPT" },
+      { "id": "t3", "title": "Difference between AI, Machine Learning, and Generative AI" },
+      { "id": "t4", "title": "Anatomy of an effective prompt: Role, Task, Context, Format, Tone" },
+      { "id": "t5", "title": "Prompt Chaining techniques & rewriting weak prompts" },
+      { "id": "t6", "title": "AI Hallucinations and Fact-checking protocols" },
+      { "id": "t7", "title": "Creative writing, essay outlines, and brainstorming with AI" },
+      { "id": "t8", "title": "Research using Perplexity AI with cited sources" },
+      { "id": "t9", "title": "Academic integrity and using NotebookLM for document-based Q&A" }
+    ],
+    "tools": ["ChatGPT", "Gemini", "Perplexity", "NotebookLM"]
+  },
+  {
+    "id": "m2",
+    "title": " AI for Creative Content — Images, Video & Music",
+    "duration": "3 Hours",
+    "sessions": "2 Sessions",
+    "topics": [
+      { "id": "t1", "title": "Text-to-image AI mechanics and style/lighting prompt techniques" },
+      { "id": "t2", "title": "Ethical considerations: Copyright, deepfakes, and responsible use" },
+      { "id": "t3", "title": "AI Video Generation: Text-to-video capabilities and limitations" },
+      { "id": "t4", "title": "Original AI Music: Custom genres, moods, and Suno integration" },
+      { "id": "t5", "title": "Combining AI visuals and music for a short creative reel" }
+    ],
+    "tools": ["Midjourney", "Ideogram", "Canva AI", "Gemini", "Suno", "Runway"]
+  },
+  {
+    "id": "m3",
+    "title": " Coding & App Building with AI",
+    "duration": "3 Hours",
+    "sessions": "2 Sessions",
+    "topics": [
+      { "id": "t1", "title": "Introduction to AI-driven coding: Python and JavaScript basics" },
+      { "id": "t2", "title": "Using AI to explain, debug, and write functions/loops" },
+      { "id": "t3", "title": "No-code AI platforms: Building functional web apps with Lovable" },
+      { "id": "t4", "title": "UI/UX basics and iterative design using natural language" }
+    ],
+    "tools": ["Replit AI", "ChatGPT", "Lovable"]
+  },
+  {
+    "id": "m4",
+    "title": " Data Research & Analysis",
+    "duration": "4.5 Hours",
+    "sessions": "3 Sessions",
+    "topics": [
+      { "id": "t1", "title": "Sourcing reliable data: Kaggle, Government portals, and WHO" },
+      { "id": "t2", "title": "Data verification and evaluating source credibility" },
+      { "id": "t3", "title": "Survey Design: Using AI to draft unbiased Google Forms questions" },
+      { "id": "t4", "title": "Quantitative vs. Qualitative data analysis" },
+      { "id": "t5", "title": "Automating Google Sheets: Formula generation and data visualization" }
+    ],
+    "tools": ["Perplexity", "Google Dataset Search", "ChatGPT", "Google Forms", "Google Sheets"]
+  },
+  {
+    "id": "m5",
+    "title": " Presentations & Professional Communication",
+    "duration": "3 Hours",
+    "sessions": "2 Sessions",
+    "topics": [
+      { "id": "t1", "title": "AI slide outlines, talking points, and the 'One Idea Per Slide' rule" },
+      { "id": "t2", "title": "Professional Communication: Emails, reports, and tone refinement" },
+      { "id": "t3", "title": "AI Avatars and Voiceovers for video presentations" },
+      { "id": "t4", "title": "Formal vs. Conversational AI output structures" }
+    ],
+    "tools": ["Gamma", "ChatGPT", "Gemini", "NotebookLM", "HeyGen", "ElevenLabs"]
+  },
+  {
+    "id": "m6",
+    "title": " Capstone Project & Showcase",
+    "duration": "3 Hours",
+    "sessions": "1 Session",
+    "topics": [
+      { "id": "t1", "title": "Capstone Tracks: Prompt Library, BrandLab, AlterEgo AI, or Solver AI" },
+      { "id": "t2", "title": "Storytelling with AI: How to present projects compellingly" },
+      { "id": "t3", "title": "Live Showcase: 5-minute project presentations and feedback" }
+    ],
+    "tools": ["All tools from previous modules"]
+  }
+
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "How To Choose Ideal Residence Using SQL",
+        description: "Master SQL for real estate data analysis. Learn how to use SELECT statements, create databases, and import/export data, while performing calculations and reporting in SQL.",
+        image: "https://img.youtube.com/vi/hzxawPxuks8/0.jpg",
+        skills: ["SQL ", "SELECT", "CREATE DATABASE", "MySQL Connections", "MySQL Connections", "Data Export", "Excel to MySQL", "CSV Conversion", "SQL LIMIT", "SQL COUNT", "SQL COUNT", "Data Summarization", "Reporting in SQL"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "hzxawPxuks8"
+      },
+      {
+        id: "p2",
+        title: "Power BI Live Case Study | Web Analytics",
+        description: "Learn to create a Power BI dashboard from scratch. Explore website click analysis, data visualization techniques, filters, fields, and Power Query transformations in Power BI.",
+        image: "https://img.youtube.com/vi/-XUN_3Hama0/0.jpg",
+        skills: ["Power BI", "Power Query", "Data Transformation", "Filters", "Fields in Power BI", "Power BI Cards", "Power BI Charts", "Bar Charts", "Slicers", "Data Visualization", "Power BI Dashboard", "Date Handling in Power BI"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "-XUN_3Hama0"
+      },
+      {
+        id: "p3",
+        title: "Tableau Live Case | WPL Dataset | Identify the Strategies used in WPL Auctions",
+        description: "Analyze the Women's Premier League (WPL) auction strategies using Tableau. Learn to create interactive dashboards and visualize key data points for team performance insights.",
+        image: "https://img.youtube.com/vi/THyEuZ0xHC8/0.jpg",
+        skills: ["Tableau", "Tableau Dashboard", "Tableau Drag and Drop", "Tableau Sheets", "Data Source in Tableau", "Tableau Live and Extract", "Tableau Stories", "Tableau Filters", "Tableau Visualizations", "Tableau Functions", "Tableau Headers"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "THyEuZ0xHC8"
+      },
+      {
+        id: "p4",
+        title: "Analyze Sales of Smartphones on Amazon",
+        description: "Analyze smartphone sales data using Excel. Learn to create dashboards, perform quarterly revenue analysis, and uncover insights using key Excel functions.",
+        image: "https://img.youtube.com/vi/oWy7ZkS3axE/0.jpg",
+        skills: ["Excel Dashboards", "PivotTables", "PivotCharts", " VLOOKUP", "SUMIF", "Data Validation", "Conditional Formatting", "Excel Formulas", " Data Analysis", "Revenue Analysis", "Excel Charts"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "oWy7ZkS3axE"
+      },
+      // {
+      //   id: "p5",
+      //   title: "AirBNB Business Case Study - Tableau Dashboarding",
+      //   description: "Analyze AirBNB business data and create insightful visualizations using Tableau. Learn key techniques for dashboarding, filtering, and data presentation to drive business decisions.",
+      //   image: "https://img.youtube.com/vi/4cx9_OSv4Fo/0.jpg",
+      //   skills: ["Tableau", "Tableau Dashboarding", "Tableau Dashboarding", "Filters", "Tableau Calculations", "Interactive Dashboards", "Data Connections", "Data Blending", "Tableau Filters"],
+      //   difficulty: "Beginner to Intermediate",
+      //   videoId: "4cx9_OSv4Fo"
+      // },
+      {
+        id: "p6",
+        title: "Analyzing Netflix Originals & IMDB Scores",
+        description: "Analyze Netflix Originals data with SQL, utilizing Window Functions, CTEs, and various SQL queries to explore trends and uncover insights in the dataset.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["SQL Queries", "Window Functions", "Common Table Expressions (CTEs)", "Date Functions", "JOINs", "GROUP BY", "HAVING", "ORDER BY", "String Functions", "SQL Aggregates"],
+        difficulty: "Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      }
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ]
+
+  },
+
 
 ];
 

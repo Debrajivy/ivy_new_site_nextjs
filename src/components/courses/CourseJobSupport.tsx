@@ -734,7 +734,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                             course.title === "Data Engineering Course in Delhi" ?
                               "Upon successful completion, learners receive a professional certification from Ivy Professional School. The certification validates job-ready data engineering skills and enhances employability."
                               :
-                              course.title === "AI for Entrepreneurs" ? "This certification validates your ability to strategically implement AI automation and no-code solutions to scale business operations and drive exponential growth." :
+                              course.title === "AI for Entrepreneurs" || course.title === "AI for Beginners" ? "This certification validates your ability to strategically implement AI automation and no-code solutions to scale business operations and drive exponential growth." :
                                 course.title === "Data Engineering Course in Bangalore" ?
                                   "Upon successful completion of the program, learners receive a professional certification from Ivy Professional School. This certification validates industry-relevant data engineering skills and strengthens job profiles" :
                                   course.title === "Data Engineering Course in Mumbai" ?

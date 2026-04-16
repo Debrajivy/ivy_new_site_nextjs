@@ -2,7 +2,7 @@ import React from 'react';
 import { Course } from '@/lib/api';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { CheckCircle, Users, Award, Briefcase, Brain, TrendingUp, Factory, Zap, Rocket, Target, Linkedin } from 'lucide-react';
+import { CheckCircle, Users, Award, Briefcase, Brain, TrendingUp, Factory, Zap, Rocket, Target, Linkedin, Layers, BookOpen } from 'lucide-react';
 // Existing imports (updated to .webp)
 import Lovable from "@/assests/casestudies/lovable.webp";
 import Replit from "@/assests/casestudies/Replitai.webp";
@@ -360,65 +360,100 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                   }
 
                   <div className="space-y-4">
-                    {course.title !== "AI for Entrepreneurs" ? (
-                      /* Standard Course Logic */
-                      <>
-                        <div className="flex items-start">
-                          <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
-                          <div>
-                            <div className="font-medium">Hiring Partners</div>
-                            <p className="text-sm text-gray-600"> 94% Placement Rate | 4-5 LPA avg salary | 17,000+ job openings in India</p>
-                          </div>
-                        </div>
+                    {(() => {
+                      if (course.title === "AI for Entrepreneurs") {
+                        /* AI for Entrepreneurs Logic */
+                        return (
+                          <>
+                            <div className="flex items-start">
+                              <Zap size={25} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">Immediate Implementation</div>
+                                <p className="text-sm text-gray-600">5+ AI tools built during the program | 90-day roadmap ready to execute | Automations live in your business from Day 1</p>
+                              </div>
+                            </div>
 
-                        <div className="flex items-start">
-                          <Users size={20} className="text-ivy-blue mr-3 mt-1" />
-                          <div>
-                            <div style={{ marginLeft: 1 }} className="font-medium">Alumni Network</div>
-                            <p className="text-sm text-gray-600">
-                              Get <a href="https://ivyproschool.com/alumni" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">connected with alumni, </a>
-                              Join over <a href="https://chat.whatsapp.com/ImcpUAYaD87FVwce6ZMaYN" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">WhatsApp Student Community </a>
-                              and Lifetime <a href="https://youtu.be/HTTMGTCxd0Q?si=__QkZiVlXQM9t8A0" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">Placement Assistance</a>
-                            </p>
-                          </div>
-                        </div>
+                            <div className="flex items-start">
+                              <Users size={20} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">Entrepreneur Community</div>
+                                <p className="text-sm text-gray-600">Get connected with fellow business owners | Join our exclusive WhatsApp Entrepreneur Community | Lifetime access to resources and updates</p>
+                              </div>
+                            </div>
 
-                        <div className="flex items-start">
-                          <Award size={30} className="text-ivy-blue mr-3 mt-1" />
-                          <div>
-                            <div className="font-medium">Industry Recognition</div>
-                            <p className="text-sm text-gray-600">Fortune 500 hiring partners including Google, Microsoft, Accenture, IBM, Oracle, Cognizant</p>
-                          </div>
-                        </div>
-                      </>
-                    ) : (
-                      /* AI for Entrepreneurs Logic */
-                      <>
-                        <div className="flex items-start">
-                          {/* <div className="text-xl mr-3">🛠️</div> */}
-                          <div>
-                            <div className="font-medium">Immediate Implementation</div>
-                            <p className="text-sm text-gray-600">5+ AI tools built during the program | 90-day roadmap ready to execute | Automations live in your business from Day 1</p>
-                          </div>
-                        </div>
+                            <div className="flex items-start">
+                              <TrendingUp size={25} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">Business Impact</div>
+                                <p className="text-sm text-gray-600">Reduced operational costs | Faster marketing content creation | Data-driven decisions across sales and inventory</p>
+                              </div>
+                            </div>
+                          </>
+                        );
+                      } else if (course.title === "AI for Beginners") {
+                        /* AI for Beginners Logic */
+                        return (
+                          <>
+                            <div className="flex items-start">
+                              <BookOpen size={25} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">AI Portfolio</div>
+                                <p className="text-sm text-gray-600">A showcase-ready portfolio of 12+ hands-on AI projects built across 6 weeks</p>
+                              </div>
+                            </div>
 
-                        <div className="flex items-start">
-                          {/* <div className="text-xl mr-3">👥</div> */}
-                          <div>
-                            <div className="font-medium">Entrepreneur Community</div>
-                            <p className="text-sm text-gray-600">Get connected with fellow business owners | Join our exclusive WhatsApp Entrepreneur Community | Lifetime access to resources and updates</p>
-                          </div>
-                        </div>
+                            <div className="flex items-start">
+                              <Layers size={25} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">AI Community</div>
+                                <p className="text-sm text-gray-600">Join our WhatsApp Community and stay connected with peers and instructors beyond the program</p>
+                              </div>
+                            </div>
 
-                        <div className="flex items-start">
-                          {/* <div className="text-xl mr-3">🏆</div> */}
-                          <div>
-                            <div className="font-medium">Business Impact</div>
-                            <p className="text-sm text-gray-600">Reduced operational costs | Faster marketing content creation | Data-driven decisions across sales, inventory and customer behaviour</p>
-                          </div>
-                        </div>
-                      </>
-                    )}
+                            <div className="flex items-start">
+                              <Award size={25} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">Certificate of Completion</div>
+                                <p className="text-sm text-gray-600">Earn an Ivy Professional School Certificate of Completion, reviewed and awarded at the Capstone Showcase</p>
+                              </div>
+                            </div>
+                          </>
+                        );
+                      } else {
+                        /* Standard Course Logic (Default) */
+                        return (
+                          <>
+                            <div className="flex items-start">
+                              <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">Hiring Partners</div>
+                                <p className="text-sm text-gray-600"> 94% Placement Rate | 4-5 LPA avg salary | 17,000+ job openings in India</p>
+                              </div>
+                            </div>
+
+                            <div className="flex items-start">
+                              <Users size={20} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div style={{ marginLeft: 1 }} className="font-medium">Alumni Network</div>
+                                <p className="text-sm text-gray-600">
+                                  Get <a href="https://ivyproschool.com/alumni" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">connected with alumni, </a>
+                                  Join over <a href="https://chat.whatsapp.com/ImcpUAYaD87FVwce6ZMaYN" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">WhatsApp Student Community </a>
+                                  and Lifetime <a href="https://youtu.be/HTTMGTCxd0Q?si=__QkZiVlXQM9t8A0" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">Placement Assistance</a>
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex items-start">
+                              <Award size={30} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">Industry Recognition</div>
+                                <p className="text-sm text-gray-600">Fortune 500 hiring partners including Google, Microsoft, Accenture, IBM, Oracle, Cognizant</p>
+                              </div>
+                            </div>
+                          </>
+                        );
+                      }
+                    })()}
                   </div>
 
                   {/* <div className="space-y-4">
