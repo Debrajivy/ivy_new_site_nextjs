@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, Briefcase, FileText, Users, Award, BarChart, GraduationCap, Zap, GitBranch, Headset, UserRound, TrendingUp, Video, FileSpreadsheet, Mic, Cpu } from 'lucide-react';
+import { CheckCircle, Briefcase, FileText, Users, Award, BarChart, GraduationCap, Zap, GitBranch, Headset, UserRound, TrendingUp, Video,ClipboardCheck, FileSpreadsheet, Mic, Cpu,UserCheck } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import certificate from "../../assests/certificate.webp";
 import smallibm from "../../assests/placement/IBM_MAIN.webp";
@@ -535,15 +535,37 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
     <section style={{ marginTop: -10 }} className="py-5 bg-primary/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">What kind of career support does Ivy Pro School provide?</h2>
+          
+            
+          {
+            course.title!="AI for Beginners"?
+            <h2 className="text-3xl font-bold mb-4">What kind of career support does Ivy Pro School provide?</h2>
+            :
+                   <h2 className="text-3xl font-bold mb-4">What kind of support does Ivy Pro School provide?</h2>
+          }
+
+          {
+            course.title!="AI for Beginners"?
           <p className="text-gray-600 max-w-3xl mx-auto">
             Our career services team is dedicated to helping you launch or advance your career in the tech industry.
             We provide end-to-end support from resume building to job placement.
           </p>
+          :
+
+  <p className="text-gray-600 max-w-3xl mx-auto">
+            From your first session to your final showcase, we are with you every step of the way — with expert guidance, peer learning, and hands-on mentorship.
+          </p>
+          }
         </div>
 
         <Tabs defaultValue="placement" className="max-w-5xl mx-auto">
-          <TabsList
+
+
+          {
+
+            course.title!="AI for Beginners"?
+
+  <TabsList
             className="flex w-full justify-center items-center overflow-x-auto pb-2 gap-4 no-scrollbar"
             style={{
               WebkitOverflowScrolling: 'touch',
@@ -573,12 +595,51 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
               <span className="hidden sm:inline">Resume Building</span>
             </TabsTrigger>
           </TabsList>
+          :
+
+            <TabsList
+            className="flex w-full justify-center items-center overflow-x-auto pb-2 gap-4 no-scrollbar"
+            style={{
+              WebkitOverflowScrolling: 'touch',
+              scrollbarWidth: 'none',
+              padding: '0 16px',
+            }}
+          >
+            <TabsTrigger
+              value="placement"
+              className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[180px] text-center bg-white shadow-sm"
+            >
+              <span className="inline sm:hidden">Learning </span>
+              <span className="hidden sm:inline">Learning Support</span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="interview"
+              className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[180px] text-center bg-white shadow-sm"
+            >
+              <span className="inline sm:hidden">Networking</span>
+              <span className="hidden sm:inline">Community & Networking</span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="resume"
+              className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[180px] text-center bg-white shadow-sm"
+            >
+              <span className="inline sm:hidden">Resume</span>
+              <span className="hidden sm:inline">Resume Building</span>
+            </TabsTrigger>
+          </TabsList>
+
+
+          }
+
+          
+        
 
 
           <TabsContent value="placement" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-
+              {
+                course.title!="AI for Beginners"?
               <Card>
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-start">
@@ -595,8 +656,28 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                   </div>
                 </CardContent>
               </Card>
+              :
+              <Card>
+                <CardContent className="p-6 space-y-4">
+                  <div className="flex items-start">
+                    <div className="bg-primary/10 p-3 rounded-full mr-4">
+                      <Briefcase className="text-primary h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Live Doubt-Clearing Sessions</h3>
+                      <p className="text-gray-600">
+                       Every session comes with dedicated time for questions. Instructors are available to clear doubts in real time so no concept is left behind.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card> 
 
-              {course.title != "AI for Product Managers" ?
+              }
+
+
+
+              {/* {course.title != "AI for Product Managers" ?
 
                 <Card>
                   <CardContent className="p-6 space-y-4">
@@ -617,9 +698,51 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 : null
 
 
-              }
+              } */}
 
-              {course.title != "AI for Product Managers" ?
+
+              {
+  course.title === "AI for Product Managers" ? null : 
+  course.title === "AI for Beginners" ? (
+    /* Card for AI for Beginners - showing Mentorship info from your image */
+    <Card>
+      <CardContent className="p-6 space-y-4">
+        <div className="flex items-start">
+          <div className="bg-primary/10 p-3 rounded-full mr-4">
+            <UserCheck className="text-primary h-6 w-6" /> 
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-2">1:1 Instructor Mentorship</h3>
+            <p className="text-gray-600">
+              Get personalised attention from instructors who review your work, 
+              guide your projects, and help you get the most out of every session.
+            </p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  ) : (
+    /* Default Card for all other courses - Career Fairs */
+    <Card>
+      <CardContent className="p-6 space-y-4">
+        <div className="flex items-start">
+          <div className="bg-primary/10 p-3 rounded-full mr-4">
+            <Users className="text-primary h-6 w-6" />
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-2">Career Fairs & Networking</h3>
+            <p className="text-gray-600">
+              Access exclusive hiring events, industry meetups, and networking 
+              opportunities with top companies in the tech and data science fields.
+            </p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+
+              {/* {course.title != "AI for Product Managers" ?
                 <Card>
                   <CardContent className="p-6 space-y-4">
                     <div className="flex items-start">
@@ -638,10 +761,51 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 </Card>
                 : null
 
-              }
+              } */}
+
+              {
+  course.title === "AI for Product Managers" ? null : 
+  course.title === "AI for Beginners" ? (
+    /* Card for AI for Beginners - Session Recordings & Resources */
+    <Card>
+      <CardContent className="p-6 space-y-4">
+        <div className="flex items-start">
+          <div className="bg-primary/10 p-3 rounded-full mr-4">
+            <Video className="text-primary h-6 w-6" />
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-2">Session Recordings & Resources</h3>
+            <p className="text-gray-600">
+              Missed a session or want to revise? Access recorded sessions and curated 
+              resources anytime during the program.
+            </p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  ) : (
+    /* Default Card - Job Guarantee Program */
+    <Card>
+      <CardContent className="p-6 space-y-4">
+        <div className="flex items-start">
+          <div className="bg-primary/10 p-3 rounded-full mr-4">
+            <Award className="text-primary h-6 w-6" />
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-2">Job Guarantee Program</h3>
+            <p className="text-gray-600">
+              Eligible students can opt for our job guarantee program, ensuring you land a 
+              role within 6 months of graduation or receive a full tuition refund.
+            </p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
 
 
-              <Card>
+              {/* <Card>
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-start">
                     <div className="bg-primary/10 p-3 rounded-full mr-4">
@@ -656,7 +820,51 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
+{
+  course.title === "AI for Product Managers" ? null : 
+  course.title === "AI for Beginners" ? (
+    /* Card for AI for Beginners - Weekly Assignments & Feedback */
+    <Card>
+      <CardContent className="p-6 space-y-4">
+        <div className="flex items-start">
+          <div className="bg-primary/10 p-3 rounded-full mr-4">
+            <ClipboardCheck className="text-primary h-6 w-6" />
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-2">Weekly Assignments & Feedback</h3>
+            <p className="text-gray-600">
+              Structured take-home assignments after every session with written 
+              feedback from instructors to track your progress week by week.
+            </p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  ) : (
+    /* Default Card - Salary Negotiation Support */
+    <Card>
+      <CardContent className="p-6 space-y-4">
+        <div className="flex items-start">
+          <div className="bg-primary/10 p-3 rounded-full mr-4">
+            <BarChart className="text-primary h-6 w-6" />
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-2">Salary Negotiation Support</h3>
+            <p className="text-gray-600">
+              Get guidance on evaluating job opportunities, negotiating compensation 
+              packages, and understanding industry salary benchmarks for your role 
+              and experience level.
+            </p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+
+
+
             </div>
 
             <div style={{

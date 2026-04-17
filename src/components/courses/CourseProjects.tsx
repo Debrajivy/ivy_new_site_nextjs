@@ -42,7 +42,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
     <section className="py-10">
 
       {
-        course.title != "AI for Entrepreneurs" ?
+        course.title != "AI for Entrepreneurs" && course.title != "AI for Beginners" ?
 
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">

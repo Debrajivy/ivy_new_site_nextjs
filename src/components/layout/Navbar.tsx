@@ -211,6 +211,12 @@ const allCourses = [
     description: "Learn to leverage AI for entrepreneurial success",
     image: AIE,
   },
+  {
+    title: "AI for Beginners",
+    href: "/courses/ai-for-beginners-course",
+    description: "Learn the fundamentals of AI and its applications",
+    image: AIE,
+  }
   // {
   //   title: "Data science course (Pay after Placement)",
   //   href: "/courses/no-upfront-fees-data-science-and-ml-course",
