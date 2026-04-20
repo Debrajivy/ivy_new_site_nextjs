@@ -862,7 +862,278 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
-
+"AI and Machine Learning Course": {
+    "categories": [
+      { "id": "program", "name": "Program" },
+      { "id": "eligibility", "name": "Eligibility" },
+      { "id": "job and career", "name": "Job And Career" },
+      { "id": "certification", "name": "Certification" },
+      { "id": "projects", "name": "Projects" },
+      { "id": "placement", "name": "Placement" },
+      { "id": "opportunities", "name": "Opportunities" },
+      { "id": "support", "name": "Support" }
+    ],
+    "faqs": [
+      {
+        "question": "What is the duration of the AI and Machine Learning Course?",
+        "answer": "The program is an intensive 80 hours certification course designed to provide deep technical expertise in a condensed timeframe.",
+        "category": "program"
+      },
+      {
+        "question": "Is this an instructor-led or self-paced course?",
+        "answer": "It is a live, instructor-led program featuring real-time interaction, complemented by 24/7 access to recorded sessions for review.",
+        "category": "program"
+      },
+      {
+        "question": "What is the primary focus of the 80 hours AI/ML curriculum?",
+        "answer": "The course focuses on practical implementation of supervised and unsupervised learning, neural networks, and deep learning architectures.",
+        "category": "program"
+      },
+      {
+        "question": "Does the course cover the latest AI trends like LLMs?",
+        "answer": "Yes, the curriculum is updated for 2026 to include Large Language Models (LLMs), Transformer architectures, and Generative AI integration.",
+        "category": "program"
+      },
+      {
+        "question": "Are there weekend batches available for working professionals?",
+        "answer": "Yes, we offer flexible scheduling including weekend-only and weekday-evening batches to accommodate busy professionals.",
+        "category": "program"
+      },
+      {
+        "question": "Can I request a demo session before enrolling?",
+        "answer": "Absolutely. You can attend a live demo session to experience our teaching methodology and interact with the faculty.",
+        "category": "program"
+      },
+      {
+        "question": "Who can enroll in this AI and Machine Learning program?",
+        "answer": "It is ideal for software engineers, data analysts, STEM graduates, and professionals looking to pivot into AI-specific roles.",
+        "category": "eligibility"
+      },
+      {
+        "question": "Is a background in coding mandatory?",
+        "answer": "While basic logic is helpful, the course includes a 'Python for AI' refresher to ensure all learners are comfortable with programming.",
+        "category": "eligibility"
+      },
+      {
+        "question": "Do I need a high-end computer for this course?",
+        "answer": "No, we provide access to cloud-based environments (like Google Colab and AWS) for heavy model training and computation.",
+        "category": "eligibility"
+      },
+      {
+        "question": "What mathematical knowledge is required?",
+        "answer": "High-school level linear algebra and probability are sufficient; the course covers the necessary 'Math for ML' within the 80 hours.",
+        "category": "eligibility"
+      },
+      {
+        "question": "Can final-year students apply?",
+        "answer": "Yes, students in their final year of graduation are eligible and often use this course to secure high-paying campus placements.",
+        "category": "eligibility"
+      },
+      {
+        "question": "Is there an age limit for this certification?",
+        "answer": "No, we welcome learners of all ages who have a passion for technology and automation.",
+        "category": "eligibility"
+      },
+      {
+        "question": "What libraries and frameworks will I learn?",
+        "answer": "You will master industry-standard tools including Scikit-Learn, TensorFlow, Keras, PyTorch, Pandas, and NumPy.",
+        "category": "curriculum"
+      },
+      {
+        "question": "Does the course cover Deep Learning and Neural Networks?",
+        "answer": "Yes, a significant portion of the 80 hours is dedicated to CNNs for computer vision and RNNs/LSTMs for sequence data.",
+        "category": "curriculum"
+      },
+      {
+        "question": "Will I learn how to deploy AI models?",
+        "answer": "Yes, you will learn to containerize models using Docker and deploy them as APIs using Flask or FastAPI.",
+        "category": "curriculum"
+      },
+      {
+        "question": "Is Computer Vision included in the syllabus?",
+        "answer": "Yes, we cover image processing, object detection, and facial recognition techniques.",
+        "category": "curriculum"
+      },
+      {
+        "question": "Do we study Natural Language Processing (NLP)?",
+        "answer": "The course covers text preprocessing, sentiment analysis, and an introduction to attention mechanisms in NLP.",
+        "category": "curriculum"
+      },
+      {
+        "question": "How much of the course is practical vs. theoretical?",
+        "answer": "The program is 70% hands-on, involving live coding labs and 30% theory to understand the underlying algorithms.",
+        "category": "curriculum"
+      },
+      {
+        "question": "What are the career prospects after finishing 80 hours of training?",
+        "answer": "Graduates qualify for roles like Machine Learning Engineer, AI Research Associate, Data Scientist, and Computer Vision Engineer.",
+        "category": "job and career"
+      },
+      {
+        "question": "What is the starting salary for an AI Engineer?",
+        "answer": "Entry-level AI roles typically range from 6-10 LPA, significantly higher than standard software engineering roles.",
+        "category": "job and career"
+      },
+      {
+        "question": "Does this course help in moving from Web Development to AI?",
+        "answer": "Yes, the curriculum is designed to help developers leverage their existing logic into building intelligent systems.",
+        "category": "job and career"
+      },
+      
+      {
+        "question": "Do you provide portfolio-building assistance?",
+        "answer": "Yes, we guide you in documenting your 80 hours journey into a professional portfolio that showcases your technical depth.",
+        "category": "job and career"
+      },
+      {
+        "question": "Is there a fast-track option for this career transition?",
+        "answer": "The 80 hours structure itself is a fast-track designed to make you 'job-ready' without unnecessary academic filler.",
+        "category": "job and career"
+      },
+      {
+        "question": "Who issues the AI and Machine Learning certificate?",
+        "answer": "The certificate is issued by Ivy Professional School in collaboration with industry partners, recognized globally.",
+        "category": "certification"
+      },
+      {
+        "question": "Is the certificate valid for international job applications?",
+        "answer": "Yes, the certification is aligned with global AI standards and is recognized by MNCs worldwide.",
+        "category": "certification"
+      },
+      {
+        "question": "Do I need to pass an exam to get the certificate?",
+        "answer": "Certification is awarded based on project completion, class participation, and a final capstone assessment.",
+        "category": "certification"
+      },
+      {
+        "question": "Is the certificate digitally verifiable?",
+        "answer": "Yes, every certificate comes with a unique ID and QR code for employer verification.",
+        "category": "certification"
+      },
+     
+      
+      {
+        "question": "What kind of Capstone projects are included?",
+        "answer": "Projects include Hate Speech Detection, Customer Personality Segmentation and many more...",
+        "category": "projects"
+      },
+      {
+        "question": "Will I work with real-world datasets?",
+        "answer": "Yes, you will work with datasets from Kaggle, UCI Machine Learning Repository, and actual industry-anonymized data.",
+        "category": "projects"
+      },
+      {
+        "question": "Can I choose my own project topic?",
+        "answer": "Yes, students are encouraged to propose their own project ideas, which mentors then help refine and implement.",
+        "category": "projects"
+      },
+      {
+        "question": "Is there a project dedicated to Deep Learning?",
+        "answer": "Yes, a mandatory project involves building and tuning a Deep Neural Network using TensorFlow or PyTorch.",
+        "category": "projects"
+      },
+      {
+        "question": "How many projects will I complete in 80 hours?",
+        "answer": "You will complete 4 mini-projects and 1 comprehensive end-to-end Capstone project.",
+        "category": "projects"
+      },
+      {
+        "question": "Are the projects deployable on the web?",
+        "answer": "Yes, we ensure your final project is a working application that can be demoed via a URL.",
+        "category": "projects"
+      },
+      {
+        "question": "How does the placement cell assist me?",
+        "answer": "The cell provides 1-on-1 interview scheduling, exclusive job postings, and direct referrals to hiring managers.",
+        "category": "placement"
+      },
+      {
+        "question": "What companies have hired Ivy's AI students?",
+        "answer": "Our alumni work at Google, Capgemini, Cognizant, Genpact, and several high-growth AI startups.",
+        "category": "placement"
+      },
+      {
+        "question": "Do you provide mock technical interviews?",
+        "answer": "Yes, we conduct rigorous mock interviews focusing on ML algorithms, system design, and live coding challenges.",
+        "category": "placement"
+      },
+      {
+        "question": "Is there a placement guarantee for this 80 hours course?",
+        "answer": "We offer 100% placement assistance and career support until you land your first role in the AI/ML domain.",
+        "category": "placement"
+      },
+      {
+        "question": "Do you help with salary negotiation?",
+        "answer": "Our placement experts guide you on industry benchmarks and help you negotiate the best possible compensation package.",
+        "category": "placement"
+      },
+      {
+        "question": "What happens if I don't get placed immediately?",
+        "answer": "You retain access to our job portal and recruitment drives until you are successfully placed.",
+        "category": "placement"
+      },
+      {
+        question: "Which industries hire graduates from this course?",
+        answer: "Tech, healthcare, e-commerce, banking, media, manufacturing.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I work internationally after this course?",
+        answer: "Yes, the skills are aligned to global standards.",
+        category: "opportunities"
+      },
+      {
+        question: "Will this course help me transition careers?",
+        answer: "Yes, it's ideal for both freshers and professionals switching to AIData.",
+        category: "opportunities"
+      },
+      {
+        question: "Can I freelance after this course?",
+        answer: "Yes, especially in analytics, dashboarding, and GenAI apps.",
+        category: "opportunities"
+      },
+      {
+        question: "Will this help me if I'm specializing in IT?",
+        answer: "Yes, it upgrades your profile for AI/ML specializations.",
+        category: "opportunities"
+      },
+      {
+        question: "Does this course use suitable tools for entrepreneurs?",
+        answer: "Yes, it teaches how to use AI tools to build products.",
+        category: "opportunities"
+      },
+      {
+        "question": "What happens if I miss a live class?",
+        "answer": "All sessions are recorded and uploaded to your LMS portal within 24 hours for you to catch up.",
+        "category": "support"
+      },
+      {
+        "question": "How do I clear my doubts during the 80 hours training?",
+        "answer": "You can use the live Q&A during class, 1:1 mentor slots, or our dedicated Discord/Slack technical support channels.",
+        "category": "support"
+      },
+      {
+        "question": "Do I get access to study materials for life?",
+        "answer": "Yes, you get lifetime access to the LMS, including all code notebooks, datasets, and future updates to the material.",
+        "category": "support"
+      },
+      {
+        "question": "Is there a dedicated Teaching Assistant (TA)?",
+        "answer": "Yes, each batch is assigned a TA to help with debugging code and troubleshooting installation issues.",
+        "category": "support"
+      },
+      {
+        "question": "Are there any additional workshops provided?",
+        "answer": "We frequently host masterclasses on niche topics like Reinforcement Learning and AI Ethics at no extra cost to our students.",
+        "category": "support"
+      },
+      {
+        "question": "Can I retake a module if I didn't understand it?",
+        "answer": "Yes, we allow students to re-attend specific modules in subsequent batches to ensure total mastery of the subject.",
+        "category": "support"
+      }
+    ]
+},
 
   "Data Science with Machine Learning & AI Course in Kolkata": {
     categories: [

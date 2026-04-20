@@ -49,7 +49,7 @@ const ACCENT_DARK = "#013a81";
 const ACCENT_LIGHT = "#dbeafe";
 
 const PUBLISHED_BY = {
-  tagline: "Published by practitioners who've helped 32,500+ professionals build job-ready data science portfolios",
+  tagline: "Published by practitioners who've helped 37,500+ professionals build job-ready data science portfolios",
   authors: [
     {
       name: "Prateek Agarwal",
@@ -1099,7 +1099,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
                   {[
-                    { value: "32,500+", label: "Students Trained" },
+                    { value: "37,500+", label: "Students Trained" },
                     { value: "82%", label: "Placement Rate" },
                     { value: "59%", label: "Avg. Salary Hike" },
                     { value: "₹42 LPA", label: "Highest Package" },
@@ -1298,7 +1298,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                 <div className="flex-1">
                   <div className="font-bold text-gray-900 text-base mb-0.5">Ivy Pro School Editorial Team</div>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Ivy Pro School is India&apos;s #1 Data Science &amp; GenAI Training Institute with 17+ years of experience, IIT-certified curriculum, and a track record of placing 32,500+ students at top companies. Instructors have trained professionals at{" "}
+                    Ivy Pro School is India&apos;s #1 Data Science &amp; GenAI Training Institute with 17+ years of experience, IIT-certified curriculum, and a track record of placing 37,500+ students at top companies. Instructors have trained professionals at{" "}
                     <a href="https://ivyproschool.com/alumni" className="font-semibold hover:underline" style={{ color: ACCENT }}>PwC, HSBC, Accenture, Genpact</a>, and more.{" "}
                     <Link href="/about" className="font-semibold hover:underline" style={{ color: ACCENT }}>
                       Learn more →
@@ -1348,7 +1348,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
               >
                 <div className="text-white font-bold text-sm mb-2">Ready to Build Your Portfolio?</div>
                 <p className="text-blue-100 text-xs leading-relaxed mb-4">
-                  Join 32,500+ students who built job-ready data science portfolios with Ivy Pro School.
+                  Join 37,500+ students who built job-ready data science portfolios with Ivy Pro School.
                 </p>
                 <Link
                   href="/courses/data-science-and-ml-course"

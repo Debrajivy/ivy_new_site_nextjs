@@ -29,11 +29,11 @@ const FAQ_DATA = [
   },
   {
     question: "How does Ivy support students in their career journey?",
-    answer: "Beyond the classroom, we provide students with access to a massive network of **32,000+ alumni** for mentorship and networking. This community, combined with our dedicated placement support, ensures students are prepared for the rigorous hiring processes of top-tier global firms."
+    answer: "Beyond the classroom, we provide students with access to a massive network of **37,500+ alumni** for mentorship and networking. This community, combined with our dedicated placement support, ensures students are prepared for the rigorous hiring processes of top-tier global firms."
   },
   {
     question: "Does Ivy Professional School provide placement assistance to students?",
-    answer: "**Yes, we provide comprehensive, lifetime placement support to all our students.** Our dedicated career cell works closely with students on **resume building, LinkedIn profile optimization, and mock interview preparation**. By leveraging our vast network of **32,000+ alumni** and 400+ corporate hiring partners, we ensure our students are prioritized for job openings at top-tier firms like **PwC, IBM, and Accenture**."
+    answer: "**Yes, we provide comprehensive, lifetime placement support to all our students.** Our dedicated career cell works closely with students on **resume building, LinkedIn profile optimization, and mock interview preparation**. By leveraging our vast network of **37,500+ alumni** and 400+ corporate hiring partners, we ensure our students are prioritized for job openings at top-tier firms like **PwC, IBM, and Accenture**."
   }
 ];
 
@@ -134,13 +134,13 @@ const Alumni = () => {
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 py-12">
             <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
-              Join a Global Network of 32,000+ Industry Leaders
+              Join a Global Network of 37,500+ Industry Leaders
             </h1>
             <h2 className="text-xl md:text-2xl font-semibold text-[#009fda] mb-6">
               Empowering Career Transformations from Non-Tech to Data Science Excellence.
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-4xl mb-8">
-              Become part of an elite community where {renderBoldText("**32,000+ Ivy Professional School students**")} have successfully transitioned into high-impact careers at {renderBoldText("**Fortune 500 companies**")}. Our students move from non-tech roles into specialized positions such as Data Scientists and Business Analysts at world-class organizations like {renderBoldText("**Amazon, Google, and LinkedIn**")}. By mastering industry-relevant skills, our students have secured life-changing career moves with {renderBoldText("**salary hikes reaching up to 400%**")}.
+              Become part of an elite community where {renderBoldText("**37,500+ Ivy Professional School students**")} have successfully transitioned into high-impact careers at {renderBoldText("**Fortune 500 companies**")}. Our students move from non-tech roles into specialized positions such as Data Scientists and Business Analysts at world-class organizations like {renderBoldText("**Amazon, Google, and LinkedIn**")}. By mastering industry-relevant skills, our students have secured life-changing career moves with {renderBoldText("**salary hikes reaching up to 400%**")}.
             </p>
 
             <Badge style={{ backgroundColor: "#4eaec3", color: "white" }} className="mb-8">
