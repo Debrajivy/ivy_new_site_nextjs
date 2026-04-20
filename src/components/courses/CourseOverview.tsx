@@ -117,7 +117,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
               </div>
 
               {
-                course.title === "AI for Entrepreneurs" ?
+                course.title === "AI for Entrepreneurs"  || course.title === "AI for Beginners" ?
 
                   <section className="py-10">
                     <div className="container mx-auto px-4">

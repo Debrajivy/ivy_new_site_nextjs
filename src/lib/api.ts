@@ -9137,7 +9137,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "AI for Beginners Course with Placement Support",
+      title: "AI for Beginners Course with Industry ready portfolio | Ivy Professional School",
       description: "Explore, create, and build with 15+ AI tools. A hands-on program for everyone who want to learn — no prior experience needed.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
