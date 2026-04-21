@@ -53,6 +53,24 @@
           "duration": "18 min read",
           "date": "April 16, 2026",
           "content": {}
+        },
+        {
+          "id": "what-is-claude-design",
+          "metaTitle": "What is Claude Design? The AI-Powered Visual Tool for Every Professional | Ivy Pro School",
+          "title": "What is Claude Design? The AI-Powered Visual Tool for Every Professional",
+          "description": "Anthropic launched Claude Design on April 17, 2026 — powered by Claude Opus 4.7. Learn what it is, how it works, six real use cases, competitive landscape, and what it means for professional development.",
+          "duration": "15 min read",
+          "date": "April 21, 2026",
+          "content": {}
+        },
+        {
+          "id": "claude-opus-vs-claude-mythos",
+          "metaTitle": "Claude Opus 4.7 vs. Claude Mythos: Full Benchmark Comparison | AI Strategy (PM) | Ivy Pro School",
+          "title": "Claude Opus 4.7 vs. Claude Mythos: Every Benchmark, Explained",
+          "description": "Claude Opus 4.7 vs. Claude Mythos — complete benchmark breakdown across SWE-bench, BrowseComp, GPQA, MCP Atlas, OS World, and CyberGym. Which model should you use, and why is Mythos restricted?",
+          "duration": "18 min read",
+          "date": "April 21, 2026",
+          "content": {}
         }
       ]
     }

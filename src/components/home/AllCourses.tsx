@@ -145,7 +145,7 @@ const featuredCourses: Course[] = [
   {
     id: '6',
     title: "Data Analytics With Visualization",
-    description: "Learn Excel, Python, SQL, Tableau, Power BI and VBA for data analysis",
+    description: "Learn Excel, Python, SQL, Power BI and VBA for data analysis",
     image: DA,
     category: "Analytics",
     students: 967,
