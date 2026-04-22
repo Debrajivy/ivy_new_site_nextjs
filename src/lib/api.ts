@@ -609,7 +609,9 @@ const courses: Course[] = [
       }
     ],
 
-    curriculum: [
+
+
+    "curriculum": [
       {
         "id": "m1",
         "title": "Advanced SQL",
@@ -623,131 +625,175 @@ const courses: Course[] = [
           { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
           { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
           { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
-          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
-          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
         ]
       },
       {
         "id": "m2",
         "title": "Python programming for Beginners",
-        "duration": "2O hrs",
+        "duration": "20 hrs",
         "topics": [
-          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", "duration": "1.5 hrs" },
-          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", "duration": "2.5 hrs" },
-          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions", "duration": "3 hrs" },
-          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling", "duration": "2.5 hrs" },
-          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", "duration": "3 hrs" },
-          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", "duration": "4 hrs" },
-          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", "duration": "2 hrs" },
-          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
         ]
       },
-
-
-
       {
         "id": "m3",
-        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
-        "duration": "8 hrs",
+        "title": "Big Data Terminologies",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
-          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
-          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
-          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
-          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
-          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
-          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
-          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
-          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
-          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
-          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
+          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
+          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
+          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
+          { "id": "t5", "title": "File Compressions Techniques" },
+          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
         ]
       },
-
       {
         "id": "m4",
-        "title": "Hadoop Framework & Architecture",
-        "duration": "4 hrs",
+        "title": "Data Warehousing",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+          { "id": "t1", "title": "Facts" },
+          { "id": "t2", "title": "OLAPS" },
+          { "id": "t3", "title": "Dimensions" },
+          { "id": "t4", "title": "Star Schema" },
+          { "id": "t5", "title": "Snowflake Schema" },
+          { "id": "t6", "title": "Data Model Types" },
+          { "id": "t7", "title": "Data Integrity" },
+          { "id": "t8", "title": "Metadata" },
+          { "id": "t9", "title": "Slowly Changing Dimensions" },
+          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
+          { "id": "t11", "title": "Understanding of all theoretical concepts" },
+          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
         ]
       },
       {
         "id": "m5",
-        "title": "Apache Spark Architecture & Programming",
-        "duration": "8 hrs",
+        "title": "Hadoop",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
-          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
-          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
-          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
-          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
-          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
-          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Map-Reduce Functioning" },
+          { "id": "t3", "title": "HDFS" },
+          { "id": "t4", "title": "YARN" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
+          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
+          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
         ]
-      }
-      ,
+      },
       {
         "id": "m6",
-        "title": "MongoDB for Developers & Admins",
-        "duration": "2 hrs",
+        "title": "Apache Hive",
+        "duration": "12 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
-          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
-          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
-          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
-        ]
-      }
-      ,
-      {
-        "id": "m7",
-        "title": "Apache Kafka Basics",
-        "duration": "2 hrs",
-        "topics": [
-          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
-          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
-          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+          { "id": "t1", "title": "Hive Installation" },
+          { "id": "t2", "title": "Query Syntax" },
+          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
+          { "id": "t4", "title": "Internal Vs External Tables" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning" },
+          { "id": "t6", "title": "Bucketing" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
+          { "id": "t8", "title": "Hive SerDe" },
+          { "id": "t9", "title": "UDF's in Hive" },
+          { "id": "t10", "title": "Query Optimization" },
+          { "id": "t11", "title": "Setup hive in local machine" },
+          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
+          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
+          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
         ]
       },
       {
         "id": "m8",
-        "title": "Apache Hive for Data Warehousing",
-        "duration": "4 hrs",
+        "title": "Spark",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
-          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
-          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
-          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
-          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
-          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Spark Core" },
+          { "id": "t3", "title": "RDDs" },
+          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
+          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
+          { "id": "t6", "title": "Spark Read/Write operations" },
+          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
+          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
+          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
+          { "id": "t10", "title": "Spark Submit Command Options" },
+          { "id": "t11", "title": "Job optimization techniques" },
+          { "id": "t12", "title": "Spark Catalyst Optimizer" },
+          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
+          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
+          { "id": "t15", "title": "Setup spark in local mode" },
+          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
+          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
         ]
       },
-      ,
+      {
+        "id": "m9",
+        "title": "Kafka",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Producer" },
+          { "id": "t2", "title": "Consumer" },
+          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
+          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
+          { "id": "t5", "title": "Consumer Group" },
+          { "id": "t6", "title": "ZooKeeper" },
+          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
+        ]
+      },
+      {
+        "id": "m10",
+        "title": "Cloud Essentials & Fundamentals of AZURE",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
+          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
+          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
+          { "id": "t4", "title": "Microsoft Azure Key Vault" },
+          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
+          { "id": "t6", "title": "Azure CLI Commands" },
+          { "id": "t7", "title": "Azure Virtual Machine" }
+        ]
+      },
+      {
+        "id": "m11",
+        "title": "BigData in AZURE",
+        "duration": "10 hrs",
 
-
-
+        "topics": [
+          { "id": "t1", "title": "Azure Blob/queue/table" },
+          { "id": "t2", "title": "Azure SQL database" },
+          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
+          { "id": "t4", "title": "Azure Synapse analytics" },
+          { "id": "t5", "title": "Azure Cosmos DB" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
+          { "id": "t7", "title": "Azure Event Hubs" },
+          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
+          { "id": "t9", "title": "Azure Scaling and Monitoring" },
+          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
+          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
+          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
+          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
+        ]
+      }
     ]
+
+
     ,
     projects: [
       {
