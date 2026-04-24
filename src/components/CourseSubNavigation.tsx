@@ -294,7 +294,7 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
       {/* Fixed Position Pop-up */}
       {showFixedPopup && (
   /* Changed bottom-4 to bottom-20 to move it higher */
-  <div className="fixed bottom-20 right-4 bg-white p-6 rounded-lg shadow-xl z-50 max-w-sm w-full animate-slideUp">
+  <div className="fixed bottom-20 left-4 right-4 lg:left-auto lg:right-4 lg:max-w-sm bg-white p-6 rounded-lg shadow-xl z-50 animate-slideUp">
     <Button
       variant="ghost"
       size="icon"
