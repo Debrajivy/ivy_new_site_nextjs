@@ -108,7 +108,7 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Certification Course | Ivy Professional School ",
+      title: "Generative AI Certification Course with Placement Assistance | Ivy Professional School ",
       description: "IIT Guwahati GenAI certification. Master ChatGPT, LLMs, build AI apps. 20+ projects. 1,220 students. Pay After Placement. 4.8★. Apply for 18-week program!",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
@@ -7627,7 +7627,7 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Course in Kolkata | Ivy Professional School",
+      title: "Generative AI Course in Kolkata with Placement Assistance | Ivy Professional School",
       description: "JEnroll in the Generative AI Course in Kolkata by Ivy Professional School. Learn to build GPT models, GANs, and deploy real-world AI projects with expert guidance.",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
@@ -7847,7 +7847,7 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Course in Bangalore | Ivy Professional School",
+      title: "Generative AI Course in Bangalore with Placement Assistance | Ivy Professional School",
       description: "Enroll in Ivy Professional School’s Generative AI Course in Bangalore. Master AI tools, build real-world projects & get certified with 100% placement support.",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
@@ -8060,7 +8060,7 @@ const courses: Course[] = [
   {
     id: '21',
     title: "Generative AI Course in Delhi",
-    description: "Master Generative AI in Delhi. Build GPT apps, LLM projects, and multimodal AI solutions with expert mentorship and industry-recognized certification.",
+    description: "Master Generative AI in Delhi with Placement Assistance. Build GPT apps, LLM projects, and multimodal AI solutions with expert mentorship and industry-recognized certification.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
@@ -8283,7 +8283,7 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Course in Mumbai | Ivy Professional School",
+      title: "Generative AI Course in Mumbai with Placement Assistance | Ivy Professional School",
       description: "Join Ivy Professional School’s Generative AI Course in Mumbai. Gain hands‑on experience with AI tools, build projects, get certified, and access placement support.",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
@@ -8502,7 +8502,7 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Course in Pune | Ivy Professional School",
+      title: "Generative AI Course in Pune with Placement Assistance| Ivy Professional School",
       description: "Join Ivy Professional School's Generative AI Course in Pune. Build AI models and enhance your career with hands-on training and expert mentorship.",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
@@ -8722,7 +8722,7 @@ const courses: Course[] = [
     category: "Data Science",
     students: 5876,
     metaData: {
-      title: "Generative AI Course in Chennai | Ivy Professional School",
+      title: "Generative AI Course in Chennai with Placement Assistance| Ivy Professional School",
       description: "Enroll in the Generative AI Course in Chennai at Ivy Professional School. Gain practical AI skills with expert guidance and real-world projects.",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
