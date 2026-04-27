@@ -1624,7 +1624,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analyst & Business Analytics Course with IBM [4.8/5]",
+      title: "Data Analytics and Generative AI Course with Placement Support  | Ivy Professional School",
       description: "Join Business Analytics course in collaboration with IBM. Learn in Classroom / Online Live & work on 20+ industry projects with IIT, IIM faculty",
       bio: "Learn business analytics with advanced tools like Excel, SQL, Python, R, Tableau, etc., and become a data expert employers want to hire."
 
@@ -6435,7 +6435,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics With Visualization in Kolkata | Ivy Professional School",
+      title: "Data Analytics Course in Kolkata with Placement Support | Ivy Professional School",
       description: "Join Ivy Professional School’s Data Analytics With Visualization in Kolkata with real-world projects, Python, SQL, Power BI & career support. Enroll now!",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
@@ -6674,7 +6674,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics With Visualization in Delhi | Ivy Professional School",
+      title: "Data Analytics Course in Delhi with Placement Support | Ivy Professional School",
       description: "Learn Data Analytics in Delhi with Ivy Professional School - Python, SQL, Excel, Power BI. Includes projects & placement help.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
@@ -6912,7 +6912,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics With Visualization in Bangalore | Ivy Professional School",
+      title: "Data Analytics Training in Bangalore + Placement Support | Ivy Professional School",
       description: "Enroll in Ivy Professional School’s Data Analytics With Visualization in Bangalore with hands-on projects, Python, SQL, Power BI & career support.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
@@ -7150,7 +7150,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics With Visualization in Mumbai | Ivy Professional School",
+      title: "Data Analytics Training in Mumbai + Placement Support | Ivy Professional School",
       description: "Join Ivy Professional School’s Data Analytics With Visualization in Mumbai - Learn top tools with hands-on projects & career support.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
@@ -7388,7 +7388,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Analytics Course in Pune | Ivy Professional School",
+      title: "Data Analytics Training in Pune + Placement Support | Ivy Professional School",
       description: "Join Ivy Professional School’s Data Analytics With Visualization in Mumbai - Learn top tools with hands-on projects & career support.",
       bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
 
