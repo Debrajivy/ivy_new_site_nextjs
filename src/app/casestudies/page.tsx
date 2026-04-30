@@ -451,6 +451,154 @@ ORDER BY department_name;`,
       ] as Record<string, string>[],
     },
   },
+  'sql-drill-4': {
+    id: 'sql-drill-4',
+    number: 4,
+    title: 'Performance Trends',
+    tool: 'SQL' as const,
+    difficulty: 'Intermediate' as Difficulty,
+    skills: ['Window Functions', 'LAG', 'CTE', 'GROUP BY'],
+    description: 'Use window functions and aggregations to analyze monthly sales performance, AOV trends, and returning customer behavior.',
+    setup: "Your dataset contains two tables from an e-commerce platform:\n\n1. An orders table with order_id, customer_id, order_date, and status for each order\n2. An order_items table with item_id, order_id, quantity, and line_amount for each line item in the order",
+    schema: {
+      orders: [
+        { name: 'order_id', type: 'INT', constraint: 'PK' },
+        { name: 'customer_id', type: 'INT', constraint: 'FK' },
+        { name: 'order_date', type: 'DATE', constraint: '' },
+        { name: 'status', type: 'VARCHAR(20)', constraint: '' },
+      ],
+      order_items: [
+        { name: 'item_id', type: 'INT', constraint: 'PK' },
+        { name: 'order_id', type: 'INT', constraint: 'FK' },
+        { name: 'quantity', type: 'INT', constraint: '' },
+        { name: 'line_amount', type: 'DECIMAL(10,2)', constraint: '' },
+      ],
+    },
+    sampleTables: [
+      {
+        name: 'orders',
+        rowCount: 'sample',
+        headers: ['order_id', 'customer_id', 'order_date', 'status'],
+        rows: [
+          [1, 101, '2024-01-05', 'Completed'],
+          [2, 102, '2024-01-12', 'Completed'],
+          [3, 103, '2024-01-18', 'Cancelled'],
+          [4, 104, '2024-01-25', 'Completed'],
+          [5, 105, '2024-02-03', 'Completed'],
+          [6, 106, '2024-02-14', 'Completed'],
+          [7, 107, '2024-03-02', 'Completed'],
+          [8, 108, '2024-03-19', 'Completed'],
+          [9, 109, '2024-04-08', 'Completed'],
+          [10, 110, '2024-04-22', 'Completed'],
+        ],
+      },
+      {
+        name: 'order_items',
+        rowCount: 'sample',
+        headers: ['item_id', 'order_id', 'quantity', 'line_amount'],
+        rows: [
+          [1, 1, 3, '3,600.00'],
+          [2, 1, 2, '2,400.00'],
+          [3, 2, 5, '6,000.00'],
+          [4, 3, 1, '1,100.00'],
+          [5, 4, 4, '4,800.00'],
+          [6, 5, 2, '2,500.00'],
+          [7, 6, 3, '3,100.00'],
+          [8, 6, 1, '900.00'],
+          [9, 7, 6, '7,200.00'],
+          [10, 8, 3, '4,500.00'],
+        ],
+      },
+    ],
+    departmentData: [] as { id: number; name: string }[],
+    employeeData: [] as { id: number; name: string; salary: string; joining_date: string; department_id: number }[],
+    task: 'This drill has two tasks:\n\n1. Monthly Sales Trend — How have total quantity sold and revenue changed month-over-month in the last 12 months? Your result table should have: month_year, revenue, MoM_rev, qty, MoM_qty_sold.\n\n2. Average Order Value (AOV) Trend — How is AOV (revenue ÷ number of orders) trending by month? Your result table should have: month_year, AOV, MoM_AOV.',
+    outputColumns: ['month_year', 'revenue', 'MoM_rev', 'qty', 'MoM_qty_sold'],
+    expectedOutputPreview: [
+      { month_year: 'January, 2024', revenue: '124,500', MoM_rev: 'NULL', qty: '1,840', MoM_qty_sold: 'NULL' },
+      { month_year: 'February, 2024', revenue: '118,200', MoM_rev: '-5.06%', qty: '1,710', MoM_qty_sold: '-7.07%' },
+      { month_year: '…', revenue: '…', MoM_rev: '…', qty: '…', MoM_qty_sold: '…' },
+    ] as Record<string, string>[],
+    hint: [
+      "Use a CTE to aggregate orders joined with order_items by year and month. Exclude cancelled orders using WHERE status <> 'Cancelled'.",
+      "LAG() accesses the previous row's value in a defined ORDER BY — no self-join needed. Use ORDER BY yr, mnth (integer columns) rather than the formatted month string to ensure correct chronological ordering.",
+      "For AOV (Query 2), compute revenue ÷ COUNT(DISTINCT order_id) inside the CTE, then apply LAG() in the outer query to find the month-over-month change.",
+    ] as string[] | undefined,
+    hintTitle: 'Hints' as string | undefined,
+    solution: {
+      sql: `-- Query 1: Monthly Sales Trend
+WITH c AS (
+  SELECT YEAR(order_date)  AS yr,
+         MONTH(order_date) AS mnth,
+         CONCAT(MONTHNAME(order_date), ', ', YEAR(order_date)) AS mnthyr,
+         ROUND(SUM(line_amount)) AS revenue,
+         SUM(quantity) AS qty
+  FROM orders AS o
+  INNER JOIN order_items AS oi ON oi.order_id = o.order_id
+  WHERE status <> 'Cancelled'
+  GROUP BY yr, mnth, mnthyr
+)
+SELECT mnthyr AS month_year,
+       revenue,
+       CONCAT(ROUND(((revenue - LAG(revenue) OVER (ORDER BY yr, mnth))
+              / LAG(revenue) OVER (ORDER BY yr, mnth)) * 100, 2), '%') AS MoM_rev,
+       qty,
+       CONCAT(ROUND(((qty - LAG(qty) OVER (ORDER BY yr, mnth))
+              / LAG(qty) OVER (ORDER BY yr, mnth)) * 100, 2), '%') AS MoM_qty_sold
+FROM c;
+
+-- Query 2: Average Order Value (AOV) Trend
+WITH c AS (
+  SELECT YEAR(order_date)  AS yr,
+         MONTH(order_date) AS mnth,
+         CONCAT(MONTHNAME(order_date), ', ', YEAR(order_date)) AS mnthyr,
+         ROUND(SUM(line_amount)) AS revenue,
+         COUNT(DISTINCT oi.order_id) AS count_of_orders,
+         ROUND(SUM(line_amount) / COUNT(DISTINCT oi.order_id)) AS AOV
+  FROM orders AS o
+  INNER JOIN order_items AS oi ON oi.order_id = o.order_id
+  WHERE status <> 'Cancelled'
+  GROUP BY yr, mnth, mnthyr
+)
+SELECT mnthyr AS month_year,
+       AOV,
+       CONCAT(ROUND(((AOV - LAG(AOV) OVER (ORDER BY yr, mnth))
+              / LAG(revenue) OVER (ORDER BY yr, mnth)) * 100, 4), '%') AS MoM_AOV
+FROM c;`,
+      howItWorks: [
+        'Query 1 — CTE c: Aggregates orders joined with order_items, grouping by year and month. Excludes cancelled orders. Computes revenue (rounded sum of line_amount) and total quantity sold per month.',
+        "Query 1 — MoM_rev: Uses LAG() OVER (ORDER BY yr, mnth) to get the previous month's revenue, then calculates the percentage change formatted as a string with a % sign.",
+        'Query 1 — MoM_qty_sold: Same LAG() approach applied to qty — divides the change in quantity by the prior month\'s quantity and formats as a percentage.',
+        'Query 2 — CTE c: Same base aggregation as Query 1, but also counts distinct orders per month (count_of_orders) and computes AOV as revenue ÷ count_of_orders.',
+        'Query 2 — MoM_AOV: Calculates the month-over-month change in AOV relative to the prior month\'s revenue. ROUND() with 4 decimal places preserves precision since AOV deltas are typically smaller in magnitude than raw revenue deltas.',
+      ],
+      commonMistake: {
+        title: 'Why LAG() and not a self-join?',
+        points: [
+          'A self-join on the prior month requires matching on computed date parts, which is verbose and error-prone at year boundaries (e.g., Dec → Jan).',
+          'LAG() is a window function that cleanly accesses the previous row in a defined order — no join, no subquery, and no edge-case month arithmetic needed.',
+          'Use ORDER BY yr, mnth (separate integer columns) rather than ORDER BY mnthyr (string) to ensure correct chronological ordering.',
+          'For the first month in the result, LAG() returns NULL, so MoM columns will show NULL — this is the expected and correct behavior.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: {
+        title: 'Query 2 — AOV Trend Sample Output',
+        points: [
+          'January, 2024  | AOV: 1,204 | MoM_AOV: NULL',
+          'February, 2024 | AOV: 1,178 | MoM_AOV: -2.1527%',
+          'March, 2024    | AOV: 1,231 | MoM_AOV: 4.4924%',
+          'April, 2024    | AOV: 1,256 | MoM_AOV: 2.0317%',
+          '…',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      result: [
+        { month_year: 'January, 2024', revenue: '124,500', MoM_rev: 'NULL', qty: '1,840', MoM_qty_sold: 'NULL' },
+        { month_year: 'February, 2024', revenue: '118,200', MoM_rev: '-5.06%', qty: '1,710', MoM_qty_sold: '-7.07%' },
+        { month_year: 'March, 2024', revenue: '135,800', MoM_rev: '14.89%', qty: '2,010', MoM_qty_sold: '17.54%' },
+        { month_year: 'April, 2024', revenue: '141,300', MoM_rev: '4.05%', qty: '2,090', MoM_qty_sold: '3.98%' },
+      ] as Record<string, string>[],
+    },
+  },
 };
 
 // ============================================================
@@ -640,13 +788,14 @@ const CorporateDetailView: React.FC<{ caseStudy: CorporateCaseStudy; onBack: () 
 // ============================================================
 // SQL DRILL DETAIL VIEW
 // ============================================================
-type SqlDrill = typeof sqlDrills['sql-drill-1'];
+type SqlDrill = typeof sqlDrills[keyof typeof sqlDrills];
 
 const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ drill, onBack }) => {
   const [showSolution, setShowSolution] = useState(false);
 
-  const deptRows = drill.departmentData.map((r) => [r.id, r.name]);
-  const empRows = drill.employeeData.map((r) => [r.id, r.name, r.salary, r.joining_date, r.department_id]);
+  const sampleTables = (drill as any).sampleTables as Array<{ name: string; rowCount: string; headers: string[]; rows: (string | number)[][] }> | undefined;
+  const deptRows = !sampleTables ? drill.departmentData.map((r: any) => [r.id, r.name]) : [];
+  const empRows = !sampleTables ? drill.employeeData.map((r: any) => [r.id, r.name, r.salary, r.joining_date, r.department_id]) : [];
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -686,9 +835,7 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
             <span className="w-1 h-5 rounded-full bg-indigo-500 inline-block" />
             Your Objective
           </h2>
-          <p className="text-slate-600 leading-relaxed">
-            Practice SQL <span className="font-mono text-indigo-600 text-sm font-semibold">JOIN</span>s and aggregate functions by calculating the total salary expenditure for each department in a company.
-          </p>
+          <p className="text-slate-600 leading-relaxed">{drill.description}</p>
         </div>
 
         {/* The Setup */}
@@ -751,22 +898,31 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
             Sample Data
           </h2>
 
-          <div>
-            <p className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">
-              Department — <span className="text-slate-700 normal-case font-normal">8 rows</span>
-            </p>
-            <DataTable headers={['id', 'name']} rows={deptRows} />
-          </div>
-
-          <div>
-            <p className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">
-              Employee — <span className="text-slate-700 normal-case font-normal">20 rows</span>
-            </p>
-            <DataTable
-              headers={['id', 'name', 'salary', 'joining_date', 'department_id']}
-              rows={empRows}
-            />
-          </div>
+          {sampleTables ? (
+            sampleTables.map((table) => (
+              <div key={table.name}>
+                <p className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">
+                  {table.name} — <span className="text-slate-700 normal-case font-normal">{table.rowCount}</span>
+                </p>
+                <DataTable headers={table.headers} rows={table.rows} />
+              </div>
+            ))
+          ) : (
+            <>
+              <div>
+                <p className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">
+                  Department — <span className="text-slate-700 normal-case font-normal">8 rows</span>
+                </p>
+                <DataTable headers={['id', 'name']} rows={deptRows} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">
+                  Employee — <span className="text-slate-700 normal-case font-normal">20 rows</span>
+                </p>
+                <DataTable headers={['id', 'name', 'salary', 'joining_date', 'department_id']} rows={empRows} />
+              </div>
+            </>
+          )}
         </div>
 
         {/* Your Task */}
@@ -775,7 +931,7 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
             <span className="w-1 h-5 rounded-full bg-indigo-500 inline-block" />
             Your Task
           </h2>
-          <p className="text-slate-700 font-medium leading-relaxed mb-5">{drill.task}</p>
+          <p className="text-slate-700 font-medium leading-relaxed mb-5 whitespace-pre-line">{drill.task}</p>
           <p className="text-sm text-slate-600 mb-3 font-medium">Your output should look like this (partial example):</p>
           <DataTable
             headers={drill.outputColumns}

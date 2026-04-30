@@ -4151,7 +4151,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Science Course in Kolkata | Ivy Professional School",
+      title: "Data Science Course in Kolkata with Placement Support | Ivy Professional School",
       description: "Enroll in the Data Science Course in Kolkata by Ivy Professional School. Learn Machine Learning & AI with real projects, expert mentors, and strong placement support.",
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
@@ -4531,7 +4531,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Science Course in Delhi | Ivy Professional School",
+      title: "Data Science Course in Delhi with Placement Support | Ivy Professional School",
       description: "Enroll in Ivy Professional School’s Data Science Course in Delhi with hands-on projects, expert mentorship, and career-focused analytics training.",
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
@@ -4911,7 +4911,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Science Course in Pune | Ivy Professional School",
+      title: "Data Science Course in Pune with Placement Support | Ivy Professional School",
       description: "Join Ivy Professional School’s Data Science Course in Pune with hands-on projects, expert mentors, and industry-focused analytics training.",
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
@@ -6053,7 +6053,7 @@ const courses: Course[] = [
     category: "Deep Learning",
     students: 1243,
     metaData: {
-      title: "Data Science Course in Mumbai | Ivy Professional School",
+      title: "Data Science Course in Mumbai with Placement Support | Ivy Professional School",
       description: "Join Ivy Professional School’s Data Science Course in Mumbai with Machine Learning & AI. Industry projects, expert mentors, and career-focused learning.",
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
