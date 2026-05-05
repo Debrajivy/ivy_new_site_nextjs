@@ -2,5 +2,23 @@
   "title": "Data Engineering",
   "icon": "Layers",
   "color": "bg-cyan-600",
-  "description": "Build robust data pipelines"
+  "description": "Build robust data pipelines",
+  "subcategories": {
+    "data-warehouse-design": {
+      "title": "Data Warehouse Design",
+      "icon": "Database",
+      "color": "bg-cyan-500",
+      "topics": [
+        {
+          "id": "star-schema-vs-snowflake-schema",
+          "metaTitle": "Star Schema vs Snowflake Schema: Differences, SQL Examples & When to Use | Data Engineering | Ivy Pro School",
+          "title": "Star Schema vs Snowflake Schema: Differences, Use Cases, SQL Examples, and Choosing the Right Data Warehouse Model",
+          "description": "A complete guide to Star Schema and Snowflake Schema — key differences, SQL examples, performance trade-offs, and when to use each model in your data warehouse design.",
+          "duration": "15 min read",
+          "date": "May 5, 2026",
+          "content": {}
+        }
+      ]
+    }
+  }
 }

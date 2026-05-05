@@ -571,7 +571,7 @@ const courses: Course[] = [
     category: "Data Engineering",
     students: 1549,
     metaData: {
-      title: "Cloud Data Engineering Course | Build Job-Ready Data Pipelines",
+      title: "Data Engineering Course with Placement Support | Ivy Professional School",
       description: "Master cloud data engineering and big data analytics with hands-on training in Hadoop, Spark, Kafka, Hive, and modern data tools.",
       bio: "Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
 
@@ -2739,7 +2739,7 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-kolkata",
     metaData: {
-      title: "Data Engineering Course in Kolkata | Ivy Professional School",
+      title: "Data Engineering Course in Kolkata with Placement Support | Ivy Professional School",
       description: "Join Ivy Professional School’s Data Engineering Course in Kolkata with real-world projects, industry tools, expert mentors & career support. Enroll now!",
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
@@ -2978,7 +2978,7 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-delhi",
     metaData: {
-      title: "Data Engineering Course in Delhi | Ivy Professional School",
+      title: "Data Engineering Course in Delhi with Placement Support | Ivy Professional School",
       description: "Enroll in Ivy Professional School’s Data Engineering Course in Delhi with hands-on projects, big data tools, cloud training & career support.",
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
@@ -3450,7 +3450,7 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-mumbai",
     metaData: {
-      title: "Data Engineering Course in Mumbai | Ivy Professional School",
+      title: "Data Engineering Course in Mumbai with Placement Support | Ivy Professional School",
       description: "Join Ivy Professional School’s Data Engineering Course in Mumbai with hands-on projects, big data & cloud tools, expert mentors, and career support.",
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Mumbai by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
@@ -3685,7 +3685,7 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-pune",
     metaData: {
-      title: "Data Engineering Course in Pune | Ivy Professional School",
+      title: "Data Engineering Course in Pune with Placement Support | Ivy Professional Schoo",
       description: "Join Ivy Professional School’s Data Engineering Course in Pune with hands-on projects, big data & cloud tools, expert mentors, and career support.",
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Pune by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
@@ -3920,7 +3920,7 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-chennai",
     metaData: {
-      title: "Data Engineering Course in Chennai | Ivy Professional School",
+      title: "Data Engineering Course in Chennai with Placement Support | Ivy Professional School",
       description: "Enroll in Ivy Professional School’s Data Engineering Course in Chennai with hands-on projects, big data & cloud tools, expert mentors, and career support.",
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Chennai by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
