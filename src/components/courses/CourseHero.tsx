@@ -783,7 +783,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
 
                       if (
                         course.title ===
-                        "Generative AI Course"
+                        "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
                       ) {
                         syllabusUrl =
                           "https://drive.google.com/file/d/1cT9-gqqqifm-HvBE81WDsql0FxQIs8hP/preview";
@@ -796,7 +796,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                         course.title === " Data Engineering Course"
                       ) {
                         syllabusUrl =
-                          "https://drive.google.com/file/d/15dM1mZal1HjDpJYYj2z0MB41bJf7egi2/preview";
+                          "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
                       } else if (
                         course.title ===
                         "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
@@ -837,9 +837,9 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                           "https://drive.google.com/file/d/1X4593VFm1GOGoRlHrLOd0pqFq3wkhymF/preview";
                       }
 
-                      else if (course.title === "Data Engineering Course in Kolkata") {
+                      else if (course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai") {
                         syllabusUrl =
-                          "https://drive.google.com/file/d/1bHZMTFm-ESPIR5dr5ZbVEJPZjTRY_K5N/preview";
+                          "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
                       }
                       window.open(syllabusUrl, "_blank");
                     }}
