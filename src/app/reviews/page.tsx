@@ -56,7 +56,6 @@ interface WrittenReview {
   id: string;
   name: string;
   role: string;
-  prevRole: string;
   company: string;
   course: string;
   courseSlug: string;
@@ -168,15 +167,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w1",
     name: "Ankita Paul",
-    role: "Data Scientist",
-    prevRole: "HR Executive",
-    company: "Ipsos",
+    role: "Senior Analyst",
+    company: "HSBC",
     course: "Data Science with ML & AI",
     courseSlug: "data-science-course",
     image: AnkitaPaul,
     rating: 5,
     review:
-      "Switching from HR to Data Science felt impossible until I found Ivy Pro. The curriculum is designed for career switchers — no prior coding needed. I joined Ipsos 5 months after enrolling.",
+      "Moving from HR to Data Science felt difficult at first, but Ivy Pro made the transition possible. The course was structured for career switchers and did not require prior coding experience. Within 5 months of enrolling, I joined my first company.",
     location: "Kolkata",
     category: "Data Science",
     linkedin: "https://linkedin.com/in/ankita-paul-872713105/",
@@ -184,15 +182,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w2",
     name: "Debapriya Ghosh",
-    role: "Business Analyst",
-    prevRole: "Sales Manager",
-    company: "LinkedIn",
+    role: "Senior Associate",
+    company: "Clinton Health Access Initiative",
     course: "Data Analytics and Generative AI",
     courseSlug: "data-analytics-course",
     image: DebapriyaGhosh,
     rating: 5,
     review:
-      "The blended learning format — live classes + recorded sessions + mentor calls — fits a working professional's schedule perfectly. I never missed a beat while working full-time.",
+      "The blended learning format worked perfectly for me as a working professional. Live classes, recorded sessions, and mentor calls made it easy to stay consistent while managing a full-time job.",
     location: "Bangalore",
     category: "Data Analytics",
     linkedin: "https://linkedin.com/in/debapriya-ghosh/",
@@ -200,15 +197,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w3",
     name: "Satyajit Pramanik",
-    role: "ML Engineer",
-    prevRole: "Civil Engineer",
-    company: "Google",
+    role: "Associate Manager",
+    company: "EY",
     course: "Generative AI Course",
     courseSlug: "generative-ai-course",
     image: SatyajitPramanik,
     rating: 5,
     review:
-      "As a civil engineer, I was sceptical about AI. But the instructors made it approachable step by step. The IIT Guwahati certification is genuinely respected — Google hired me after seeing it.",
+      "Coming from a civil engineering background, I was initially unsure if AI was the right field for me. Ivy Pro’s instructors made the concepts simple, practical, and easy to follow. The IIT Guwahati certification added strong credibility to my profile, and it played an important role in helping me get noticed by Google.",
     location: "Hyderabad",
     category: "Generative AI",
     linkedin: "https://linkedin.com/in/satyajitpramanik/",
@@ -216,15 +212,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w4",
     name: "Sneha Baid",
-    role: "Data Analyst",
-    prevRole: "Operations Executive",
-    company: "Accenture",
+    role: "Senior Risk Analytics Consultan",
+    company: "Wells Fargo",
     course: "Data Analytics with Visualization",
     courseSlug: "data-analytics-visualization-course",
     image: SnehaBaid,
     rating: 5,
     review:
-      "The Tableau & Power BI modules are extremely hands-on. By week 3 I was building real dashboards. Accenture's panel appreciated my portfolio projects during the interview — Ivy Pro made those happen.",
+      "The Tableau and Power BI modules at Ivy Pro were extremely hands-on. By the third week, I was already building real dashboards and understanding how to present insights clearly. During my Accenture interview, the panel appreciated my portfolio projects, and Ivy Pro played a major role in helping me build them.",
     location: "Mumbai",
     category: "Data Analytics",
     linkedin: "https://linkedin.com/in/baidsneha/",
@@ -232,9 +227,8 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w5",
     name: "Sankhadiptya Paul",
-    role: "Data Engineer",
-    prevRole: "Software Tester",
-    company: "Cognizant",
+    role: "Assistant Director",
+    company: "HSBC",
     course: "Data Engineering Course",
     courseSlug: "data-engineering-course",
     image: SankhadiptyaPaul,
@@ -248,15 +242,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w6",
     name: "Sunanda Kumari",
-    role: "Product Analyst",
-    prevRole: "Fresher",
-    company: "Flipkart",
+    role: "Lead Associate",
+    company: "INDECOMM",
     course: "Data Science with ML & AI",
     courseSlug: "data-science-course",
     image: SunandaKumari,
     rating: 5,
     review:
-      "As a fresher with no work experience, I was worried. Ivy Pro's placement cell treated me like a priority. Resume workshops, LinkedIn optimisation, mock GDs — all included. Flipkart hired me fresh out of the course.",
+      "As a fresher with no work experience, I was unsure about my chances. Ivy Pro’s placement support made a real difference. From resume building and LinkedIn optimisation to mock GDs and interview preparation, everything was covered. I got hired soon after completing the course.",
     location: "Kolkata",
     category: "Data Science",
     linkedin: "https://linkedin.com/in/sunanda-kumari-07b9971a7/",
@@ -264,15 +257,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w7",
     name: "Balkrishna Agarwal",
-    role: "Senior Data Scientist",
-    prevRole: "Finance Analyst",
-    company: "Goldman Sachs",
+    role: " Senior Analyst",
+    company: "WNS Global Services",
     course: "Data Science with ML & AI",
     courseSlug: "data-science-course",
     image: BalkrishnaAgarwal,
     rating: 5,
     review:
-      "Finance to Data Science is a natural move but companies want proof of skills. The IIT Guwahati certificate + the 10+ projects I built at Ivy Pro gave me that proof. Goldman Sachs came through campus placement.",
+      " Coming from a finance background, I knew Data Science was a good career move, but I needed proof of practical skills. The IIT Guwahati certificate and 10+ hands-on projects from Ivy Pro helped me build that credibility. I was placed through campus placement.",
     location: "Mumbai",
     category: "Data Science",
     linkedin: "https://linkedin.com/in/balkrishnaagarwal/",
@@ -280,15 +272,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w8",
     name: "Uday Jaiswal",
-    role: "AI Engineer",
-    prevRole: "Content Writer",
-    company: "NASSCOM",
+    role: " Associate Director",
+    company: "Standard Chartered",
     course: "Generative AI Course",
     courseSlug: "generative-ai-course",
     image: UdayJaiswal,
     rating: 5,
     review:
-      "No tech background, was a content writer. Ivy Pro's GenAI course showed me how to use AI tools professionally — prompt engineering, LLM APIs, building bots. The NASSCOM co-branded certificate added great value.",
+      "I had no technical background and was working as a content writer before joining Ivy Pro. The GenAI course helped me understand how AI tools are used professionally, from prompt engineering and LLM APIs to building practical bots. The NASSCOM co-branded certificate gave my profile an extra edge.",
     location: "Delhi",
     category: "Generative AI",
     linkedin: "https://linkedin.com/in/uday-prakash-jaiswal-877501b7/",
@@ -296,15 +287,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w9",
     name: "Sayantani Choudhury",
-    role: "Data Scientist",
-    prevRole: "Pharmacist",
-    company: "Novartis",
+    role: "Stress testing Manager",
+    company: "HSBC",
     course: "Data Science with ML & AI",
     courseSlug: "data-science-course",
     image: SayantaniChoudhury,
     rating: 5,
     review:
-      "Pharmacy to Data Science sounds wild but Ivy Pro made it logical. Healthcare analytics is booming and Novartis picked me because I could combine domain knowledge with data science skills.",
+      "I moved from manual testing to data engineering within 6 months of joining Ivy Pro. The live project on building ETL pipelines was the biggest highlight for me. I explained the same project during my Cognizant interview, and it helped me prove that I had practical, job-ready skills.",
     location: "Kolkata",
     category: "Data Science",
     linkedin: "https://linkedin.com/in/sayantanichoudhury97/",
@@ -312,15 +302,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w10",
     name: "Sayan Nayak",
-    role: "Data Analyst",
-    prevRole: "BPO Executive",
-    company: "EY",
+    role: "Senior Analyst",
+    company: "HSBC",
     course: "Data Analytics and Generative AI",
     courseSlug: "data-analytics-course",
     image: SayanNayak,
     rating: 5,
     review:
-      "Was stuck in BPO for 4 years. Ivy Pro's evening batch was a lifesaver — classes after 7 PM so I could continue working. Got placed at EY within 4 months.",
+      "The Power BI dashboard I built during the course became the strongest part of my interview portfolio. HDFC Bank’s analytics team appreciated the project and fast-tracked my selection. In just 5 months, Ivy Pro helped me make a real career shift.",
     location: "Kolkata",
     category: "Data Analytics",
     linkedin: "https://linkedin.com/in/sayan-nayak-68b529135/",
@@ -328,15 +317,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w11",
     name: "Anindita Maity",
-    role: "ML Engineer",
-    prevRole: "School Teacher",
-    company: "TCS",
+    role: "Associate Consultant",
+    company: "IQVIA",
     course: "Data Science with ML & AI",
     courseSlug: "data-science-course",
     image: AninditaMaity,
     rating: 5,
     review:
-      "Teaching maths for 7 years gave me a strong foundation, but I needed practical skills. Ivy Pro's programme bridged that gap perfectly. TCS hired me for their AI team and I couldn't be happier.",
+      "6. After teaching mathematics for 7 years, I had the conceptual foundation but needed industry-ready skills. Ivy Pro helped me bridge that gap with practical training and projects. I got hired by TCS for their AI team, and I am extremely happy with the outcome.",
     location: "Kolkata",
     category: "Data Science",
     linkedin: "https://linkedin.com/in/anindita-maity-191758175/",
@@ -344,15 +332,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w12",
     name: "Pathikrit Ganguly",
-    role: "Senior Analyst",
-    prevRole: "Operations Manager",
-    company: "KPMG",
+    role: "Senior Associate",
+    company: "PWC",
     course: "Data Analytics and Generative AI",
     courseSlug: "data-analytics-course",
     image: PathikritGanguly,
     rating: 5,
     review:
-      "The faculty at Ivy Pro are industry practitioners — my Python instructor was a working data scientist at a Big 4. That industry connect translated directly into placement at KPMG.",
+      "What stood out for me at Ivy Pro was the quality of faculty. My Python instructor was a working data scientist at a Big 4 firm, so the learning was always connected to real industry expectations. That practical exposure helped me confidently prepare for interviews and eventually get placed at KPMG.",
     location: "Bangalore",
     category: "Data Analytics",
     linkedin: "https://linkedin.com/in/pathikrit-ganguly-kol/",
@@ -360,15 +347,14 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w13",
     name: "Shruti Banerjee",
-    role: "Data Engineer",
-    prevRole: "Java Developer",
-    company: "Infosys",
+    role: "Software Developer ",
+    company: "Cognizant",
     course: "Cloud Data Engineering",
     courseSlug: "cloud-data-engineering-course",
     image: ShrutiBanerjee,
     rating: 5,
     review:
-      "Moving from Java development to cloud data engineering was seamless with Ivy Pro. The Azure + Databricks modules are world-class. Infosys promoted me internally based on the new skills I brought back.",
+      "I was already working in Java development, but I wanted to move into cloud data engineering. Ivy Pro’s Azure and Databricks modules gave me the exact skills I needed to make that shift. The learning was practical, industry-relevant, and helped me earn an internal promotion at Infosys.",
     location: "Pune",
     category: "Data Engineering",
     linkedin: "https://linkedin.com/in/shruti-banerjee06/",
@@ -376,9 +362,8 @@ const writtenReviews: WrittenReview[] = [
   {
     id: "w14",
     name: "Naiwritа Boral",
-    role: "Business Intelligence Analyst",
-    prevRole: "Admin Executive",
-    company: "HDFC Bank",
+    role: "Associate",
+    company: "JPMorganChase",
     course: "Data Analytics with Visualization",
     courseSlug: "data-analytics-visualization-course",
     image: NaiwritaBoral,
@@ -656,8 +641,8 @@ export default function ReviewsPage() {
                   className="flex justify-center transition-transform duration-300 hover:scale-105"
                 >
                   <div className={`relative ${partner.name === "Accenture"
-                      ? "w-48 h-20 md:w-60 md:h-24" // Extra large for Accenture
-                      : "w-32 h-14 md:w-40 md:h-16" // Standard size for others
+                    ? "w-48 h-20 md:w-60 md:h-24" // Extra large for Accenture
+                    : "w-32 h-14 md:w-40 md:h-16" // Standard size for others
                     }`}>
                     <Image
                       src={partner.logo}
@@ -769,7 +754,7 @@ export default function ReviewsPage() {
                             className="flex-shrink-0"
                           >
                             <svg className="w-4 h-4 text-[#0077B5] hover:opacity-80 transition-opacity" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                             </svg>
                           </a>
                         )}
@@ -793,7 +778,6 @@ export default function ReviewsPage() {
           </div>
         </section>
 
-        {/* ── WRITTEN REVIEWS with Modern Masonry Layout ──────────────────────── */}
         <section id="written-reviews" className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
@@ -803,17 +787,31 @@ export default function ReviewsPage() {
               <p className="text-gray-500 mt-2 max-w-2xl mx-auto">Verified reviews from students who transformed their careers with Ivy Pro</p>
             </div>
 
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-0">
+            {/* Parent Container */}
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
               {filteredWrittenReviews.map((r) => (
-                <div key={r.id} className="break-inside-avoid bg-white rounded-2xl p-6 mb-6 shadow-md hover:shadow-xl transition-all border border-gray-100">
+                <div
+                  key={r.id}
+                  className="inline-block w-full break-inside-avoid bg-white rounded-2xl p-6 mb-6 shadow-md hover:shadow-xl transition-all border border-gray-100"
+                >
                   <div className="flex gap-1 mb-3">
                     {[1, 2, 3, 4, 5].map(s => (
                       <Star key={s} className={`w-4 h-4 ${s <= r.rating ? "fill-[#f7af34] text-[#f7af34]" : "text-gray-200"}`} />
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 text-sm leading-relaxed mb-5 italic">"{r.review}"</blockquote>
+
+                  <blockquote className="text-gray-700 text-sm leading-relaxed mb-5 italic">
+                    "{r.review}"
+                  </blockquote>
+
                   <div className="flex items-center gap-3 border-t border-gray-100 pt-4">
-                    <Image src={r.image} alt={r.name} width={44} height={44} className="rounded-full object-cover border-2 border-[#009fda]/20" />
+                    <Image
+                      src={r.image}
+                      alt={r.name}
+                      width={44}
+                      height={44}
+                      className="rounded-full object-cover border-2 border-[#009fda]/20"
+                    />
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
                         <p className="font-bold text-gray-900">{r.name}</p>
@@ -826,16 +824,15 @@ export default function ReviewsPage() {
                             className="flex-shrink-0"
                           >
                             <svg className="w-3.5 h-3.5 text-[#0077B5] hover:opacity-80 transition-opacity" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                             </svg>
                           </a>
                         )}
                       </div>
                       <p className="text-xs text-[#009fda] font-semibold">{r.role} · {r.company}</p>
                       <div className="flex items-center gap-1 mt-1">
-                        <span className="text-[10px] text-gray-400 line-through">{r.prevRole}</span>
                         <ArrowRight className="w-2.5 h-2.5 text-gray-300" />
-                        <span className="text-[10px] text-gray-500">{r.role}</span>
+                        {/* <span className="text-[10px] text-gray-500">{r.role}</span> */}
                       </div>
                     </div>
                   </div>
@@ -843,7 +840,6 @@ export default function ReviewsPage() {
               ))}
             </div>
 
-            {/* Watch Their Journey Button */}
 
           </div>
         </section>
