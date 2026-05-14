@@ -1,11 +1,20 @@
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { Course } from '@/lib/api';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Clock, FileText, CheckCircle, X, LayoutDashboard, Plus, Sparkles, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from "@/components/ui/button"
 import { Bot, Send, MessageSquare, Phone } from "lucide-react"
+import AdityaKumarBarikImg from '@/assests/alumni/AdityaKumarBarik.webp';
+import AdityaKumarBarikCurImg from '@/assests/company/AdityaKumarBarikCur.webp';
+import TanmayChakrabortyImg from '@/assests/alumni/TanmayChakraborty.webp';
+import TanmayChakrabortyCurImg from '@/assests/company/TanmayChakrabortyCur.webp';
+import TaniaLahaImg from '@/assests/alumni/TaniaLaha.webp';
+import TaniaLahaCurImg from '@/assests/company/TaniaLahaCur.webp';
+import SatyajitPramanikImg from '@/assests/alumni/SatyajitPramanik.webp';
+import SatyajitPramanikCurImg from '@/assests/company/SatyajitPramanikCur.webp';
 
 interface CourseCurriculumProps {
   course: Course;
@@ -16,6 +25,10 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
   const [showNumber, setShowNumber] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [showApplyModal, setShowApplyModal] = useState(false)
+  const [showAllComparison, setShowAllComparison] = useState(false)
+  const [showAllDeComparison, setShowAllDeComparison] = useState(false)
+  const [showAllAiEntreComparison, setShowAllAiEntreComparison] = useState(false)
+  const [showAllAiPmComparison, setShowAllAiPmComparison] = useState(false)
 
 
   const handleApplyClick = useCallback(() => {
@@ -563,6 +576,613 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                   </div>
                 )}
               </div>
+
+              {/* Comparison Section - Data Science with ML & AI only */}
+              {course.title === "Data Science with Machine Learning & AI Certification" && (
+                <div className="mt-14 w-full max-w-4xl mx-auto">
+                  {/* Section Header */}
+                  <div className="text-center mb-8">
+                    <span className="inline-block bg-blue-100 text-[#009fda] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                      Why Choose Us
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                      Ivy Professional School{" "}
+                      <span className="text-[#009fda]">vs</span>{" "}
+                      <span className="text-gray-500">Other Institutes</span>
+                    </h2>
+                    <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
+                      See why serious learners choose Ivy Pro School for their Data Science, ML &amp; AI journey
+                    </p>
+                  </div>
+
+                  {/* Table */}
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                    {/* Header Row */}
+                    <div className="grid grid-cols-[1fr_1.4fr_1.2fr] text-sm font-bold">
+                      <div className="bg-gray-700 text-white p-4 flex items-center">
+                        Comparison Factor
+                      </div>
+                      <div className="bg-[#009fda] text-white p-4 flex items-center justify-center gap-2 text-center">
+                        <span>Ivy Professional School</span>
+                        <span className="hidden sm:inline-block text-[10px] bg-white/20 px-2 py-0.5 rounded-full whitespace-nowrap">
+                          ★ Recommended
+                        </span>
+                      </div>
+                      <div className="bg-gray-500 text-white p-4 flex items-center justify-center text-center">
+                        Typical Institutes
+                      </div>
+                    </div>
+
+                    {/* Data Rows */}
+                    {[
+                      {
+                        factor: "Course Focus",
+                        ivy: "Covers Data Science, Machine Learning, AI, analytics thinking, and real business problem-solving",
+                        others: "Often focuses mainly on tools, coding syntax, or theory",
+                      },
+                      {
+                        factor: "Learning Approach",
+                        ivy: "Practical, project-based learning with real datasets, case studies, and industry-style assignments",
+                        others: "Many programs remain lecture-heavy with limited application",
+                      },
+                      {
+                        factor: "Machine Learning Depth",
+                        ivy: "Builds understanding of ML models, model evaluation, feature engineering, and practical implementation",
+                        others: "ML may be taught conceptually without enough hands-on practice",
+                      },
+                      {
+                        factor: "AI Readiness",
+                        ivy: "Includes modern AI and GenAI awareness so learners stay aligned with the evolving job market",
+                        others: "AI topics may be outdated or treated as optional add-ons",
+                      },
+                      {
+                        factor: "Career Orientation",
+                        ivy: "Designed for freshers, working professionals, and career switchers who want job-ready skills",
+                        others: "Often designed as a generic certification program",
+                      },
+                      {
+                        factor: "Project Portfolio",
+                        ivy: "Learners work on projects that can be added to resumes, LinkedIn profiles, and interview discussions",
+                        others: "Projects may be too basic or not portfolio-worthy",
+                      },
+                      {
+                        factor: "Placement Support",
+                        ivy: "Resume building, mock interviews, LinkedIn optimization, career guidance, and placement assistance",
+                        others: "Placement support may be limited to job postings or basic guidance",
+                      },
+                      {
+                        factor: "Certification Value",
+                        ivy: "Positioned with NASSCOM and IIT certification benefits on the Data Science course page",
+                        others: "Certification credibility varies widely across institutes",
+                      },
+                      {
+                        factor: "1:1 Doubt Clearing Support",
+                        ivy: "Learners get personalized 1:1 doubt-clearing sessions with teaching assistants to resolve coding, project, and concept-related doubts",
+                        others: "Doubt support may be limited to group sessions, chat replies, or trainer availability",
+                      },
+                      {
+                        factor: "Mentor & Academic Support",
+                        ivy: "Learners receive structured academic and career support throughout the journey",
+                        others: "Support may reduce after enrollment or vary by batch",
+                      },
+                      {
+                        factor: "Business Use Case Orientation",
+                        ivy: "Strong focus on solving business problems using data, ML, and AI",
+                        others: "Many institutes teach tools without connecting them to business decisions",
+                      },
+                      {
+                        factor: "Best Suited For",
+                        ivy: "Learners who want a serious career transition into Data Science, ML, AI, and analytics roles",
+                        others: "Learners looking only for a basic certificate or introductory exposure",
+                      },
+                    ]
+                      .slice(0, showAllComparison ? 12 : 4)
+                      .map((row, index) => (
+                        <div
+                          key={index}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
+                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                          }`}
+                        >
+                          <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
+                            {row.factor}
+                          </div>
+                          <div className="p-4 text-gray-700 border-r border-gray-100 flex items-start gap-2 leading-relaxed">
+                            <CheckCircle
+                              size={15}
+                              className="text-green-500 flex-shrink-0 mt-0.5"
+                            />
+                            <span>{row.ivy}</span>
+                          </div>
+                          <div className="p-4 text-gray-500 flex items-start gap-2 leading-relaxed">
+                            <X
+                              size={15}
+                              className="text-amber-400 flex-shrink-0 mt-0.5"
+                            />
+                            <span>{row.others}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+
+                  {/* View All / Hide toggle */}
+                  <div className="mt-3 text-center">
+                    <button
+                      onClick={() => setShowAllComparison(!showAllComparison)}
+                      className="inline-flex items-center gap-2 text-[#009fda] text-sm font-semibold hover:underline transition-all"
+                    >
+                      {showAllComparison ? (
+                        <>
+                          <X size={15} /> Hide
+                        </>
+                      ) : (
+                        <>
+                          <Plus size={15} /> View All 12 Factors
+                        </>
+                      )}
+                    </button>
+                  </div>
+
+                  {/* Bottom CTA */}
+                  <div className="mt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                      Ready to make the right choice for your career?
+                    </p>
+                    <button
+                      style={{ backgroundColor: "#009fda" }}
+                      className="px-8 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200"
+                      onClick={handleApplyClick}
+                    >
+                      Enroll at Ivy Professional School
+                    </button>
+                  </div>
+                </div>
+              )}
+
+            
+              {/* Comparison Section - Data Engineering courses only */}
+              {course.title.includes("Data Engineering") && (
+                <div className="mt-14 w-full max-w-4xl mx-auto">
+                  {/* Section Header */}
+                  <div className="text-center mb-8">
+                    <span className="inline-block bg-blue-100 text-[#009fda] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                      Why Choose Us
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                      Ivy Professional School{" "}
+                      <span className="text-[#009fda]">vs</span>{" "}
+                      <span className="text-gray-500">Other Institutes</span>
+                    </h2>
+                    <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
+                      See why serious learners choose Ivy Pro School for their Data Engineering journey
+                    </p>
+                  </div>
+
+                  {/* Table */}
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                    {/* Header Row */}
+                    <div className="grid grid-cols-[1fr_1.4fr_1.2fr] text-sm font-bold">
+                      <div className="bg-gray-700 text-white p-4 flex items-center">
+                        Comparison Factor
+                      </div>
+                      <div className="bg-[#009fda] text-white p-4 flex items-center justify-center gap-2 text-center">
+                        <span>Ivy Professional School</span>
+                        <span className="hidden sm:inline-block text-[10px] bg-white/20 px-2 py-0.5 rounded-full whitespace-nowrap">
+                          ★ Recommended
+                        </span>
+                      </div>
+                      <div className="bg-gray-500 text-white p-4 flex items-center justify-center text-center">
+                        Typical Institutes
+                      </div>
+                    </div>
+
+                    {/* Data Rows */}
+                    {[
+                      {
+                        factor: "Course Focus",
+                        ivy: "Focuses on data pipelines, databases, ETL, cloud concepts, big data workflows, and real data engineering use cases",
+                        others: "Often focuses only on SQL or isolated tools without full pipeline thinking",
+                      },
+                      {
+                        factor: "Practical Orientation",
+                        ivy: "Learners work on hands-on workflows involving data extraction, transformation, loading, and analysis-ready data preparation",
+                        others: "Many courses stay theoretical or tool-demo based",
+                      },
+                      {
+                        factor: "Industry Relevance",
+                        ivy: "Designed around the growing demand for professionals who can prepare, move, clean, and manage data for analytics and AI systems",
+                        others: "Curriculum may not reflect the latest data engineering expectations",
+                      },
+                      {
+                        factor: "SQL & Database Foundation",
+                        ivy: "Builds strong SQL, data modeling, and database understanding for real-world data environments",
+                        others: "SQL may be taught only at a query-writing level",
+                      },
+                      {
+                        factor: "ETL & Pipeline Thinking",
+                        ivy: "Emphasizes how data moves from source systems to warehouses, dashboards, and analytics teams",
+                        others: "Many institutes teach tools separately without explaining end-to-end flow",
+                      },
+                      {
+                        factor: "Cloud & Modern Stack Exposure",
+                        ivy: "Introduces learners to modern data engineering practices, cloud-based thinking, and scalable data workflows",
+                        others: "Cloud exposure may be limited or missing",
+                      },
+                      {
+                        factor: "Project Portfolio",
+                        ivy: "Learners build projects that demonstrate pipeline logic, data transformation, and business-ready datasets",
+                        others: "Projects may be too academic or not aligned with employer expectations",
+                      },
+                      {
+                        factor: "Placement Support",
+                        ivy: "Includes resume support, mock interviews, career guidance, and placement assistance for data engineering roles",
+                        others: "Placement support may be generic and not role-specific",
+                      },
+                      {
+                        factor: "Role Clarity",
+                        ivy: "Helps learners understand how Data Engineering differs from Data Analytics and Data Science",
+                        others: "Many institutes mix topics without clarifying the career path",
+                      },
+                      {
+                        factor: "1:1 Doubt Clearing Support",
+                        ivy: "Learners get personalized 1:1 doubt-clearing sessions with teaching assistants to resolve SQL, ETL, pipeline, database, cloud, and project-related doubts",
+                        others: "Doubt support may be limited to group sessions, delayed chat replies, or trainer availability",
+                      },
+                      {
+                        factor: "Support System",
+                        ivy: "Academic and career support help learners handle technical topics step by step",
+                        others: "Learners may be expected to self-manage difficult technical areas",
+                      },
+                      {
+                        factor: "Business Application",
+                        ivy: "Connects data engineering to reporting, dashboards, analytics, AI, and enterprise decision-making",
+                        others: "Courses may focus only on technical commands without business context",
+                      },
+                      {
+                        factor: "Best Suited For",
+                        ivy: "Learners who want to build a career in data pipelines, SQL, ETL, cloud data workflows, and backend analytics systems",
+                        others: "Learners looking only for basic SQL or tool-level training",
+                      },
+                    ]
+                      .slice(0, showAllDeComparison ? 13 : 4)
+                      .map((row, index) => (
+                        <div
+                          key={index}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
+                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                          }`}
+                        >
+                          <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
+                            {row.factor}
+                          </div>
+                          <div className="p-4 text-gray-700 border-r border-gray-100 flex items-start gap-2 leading-relaxed">
+                            <CheckCircle
+                              size={15}
+                              className="text-green-500 flex-shrink-0 mt-0.5"
+                            />
+                            <span>{row.ivy}</span>
+                          </div>
+                          <div className="p-4 text-gray-500 flex items-start gap-2 leading-relaxed">
+                            <X
+                              size={15}
+                              className="text-amber-400 flex-shrink-0 mt-0.5"
+                            />
+                            <span>{row.others}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+
+                  {/* View All / Hide toggle */}
+                  <div className="mt-3 text-center">
+                    <button
+                      onClick={() => setShowAllDeComparison(!showAllDeComparison)}
+                      className="inline-flex items-center gap-2 text-[#009fda] text-sm font-semibold hover:underline transition-all"
+                    >
+                      {showAllDeComparison ? (
+                        <>
+                          <X size={15} /> Hide
+                        </>
+                      ) : (
+                        <>
+                          <Plus size={15} /> View All 13 Factors
+                        </>
+                      )}
+                    </button>
+                  </div>
+
+                  {/* Bottom CTA */}
+                  <div className="mt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                      Ready to make the right choice for your career?
+                    </p>
+                    <button
+                      style={{ backgroundColor: "#009fda" }}
+                      className="px-8 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200"
+                      onClick={handleApplyClick}
+                    >
+                      Enroll at Ivy Professional School
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Comparison Section - AI for Entrepreneurs only */}
+              {course.title === "AI for Entrepreneurs" && (
+                <div className="mt-14 w-full max-w-4xl mx-auto">
+                  <div className="text-center mb-8">
+                    <span className="inline-block bg-blue-100 text-[#009fda] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                      Why Choose Us
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                      Ivy Professional School{" "}
+                      <span className="text-[#009fda]">vs</span>{" "}
+                      <span className="text-gray-500">Other Institutes</span>
+                    </h2>
+                    <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
+                      See why serious learners choose Ivy Pro School for their AI for Entrepreneurs journey
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                    <div className="grid grid-cols-[1fr_1.4fr_1.2fr] text-sm font-bold">
+                      <div className="bg-gray-700 text-white p-4 flex items-center">
+                        Comparison Factor
+                      </div>
+                      <div className="bg-[#009fda] text-white p-4 flex items-center justify-center gap-2 text-center">
+                        <span>Ivy Professional School</span>
+                        <span className="hidden sm:inline-block text-[10px] bg-white/20 px-2 py-0.5 rounded-full whitespace-nowrap">
+                          ★ Recommended
+                        </span>
+                      </div>
+                      <div className="bg-gray-500 text-white p-4 flex items-center justify-center text-center">
+                        Typical Institutes
+                      </div>
+                    </div>
+
+                    {[
+                      {
+                        factor: "Course Focus",
+                        ivy: "Focuses on practical AI adoption for business owners and entrepreneurs to automate, scale, and grow their ventures",
+                        others: "Often teaches general AI theory without connecting it to real business outcomes",
+                      },
+                      {
+                        factor: "Entrepreneurial AI Application",
+                        ivy: "Covers how to use AI for marketing, sales, customer service, product development, and operational efficiency",
+                        others: "May cover AI tools without explaining how to apply them in a business context",
+                      },
+                      {
+                        factor: "Practical Use Cases",
+                        ivy: "Includes real-world business scenarios, case studies, and hands-on implementation workshops",
+                        others: "Content may be theoretical or not aligned with real business challenges",
+                      },
+                      {
+                        factor: "No-Code & Low-Code AI Tools",
+                        ivy: "Teaches entrepreneurs to leverage no-code AI tools to build solutions without deep technical expertise",
+                        others: "May focus on technical programming skills that are not accessible to non-developers",
+                      },
+                      {
+                        factor: "Business Strategy Integration",
+                        ivy: "Helps learners build an AI roadmap, identify AI opportunities, and make data-driven decisions for their business",
+                        others: "May not connect AI capabilities with strategic business planning",
+                      },
+                      {
+                        factor: "Cost & ROI Awareness",
+                        ivy: "Trains learners to evaluate AI tool costs, vendor selection, and return on investment for their specific use case",
+                        others: "Cost optimization and vendor assessment may not be covered",
+                      },
+                      {
+                        factor: "Automation & Efficiency",
+                        ivy: "Covers workflow automation, AI-powered customer engagement, and productivity tools for small and growing businesses",
+                        others: "May focus only on large enterprise AI applications",
+                      },
+                      {
+                        factor: "1:1 Doubt Clearing Support",
+                        ivy: "Learners get personalized 1:1 doubt-clearing sessions to resolve doubts related to tool selection, AI implementation, business workflows, and automation strategies",
+                        others: "Doubt support may be limited to group sessions or community replies",
+                      },
+                      {
+                        factor: "Mentorship & Peer Network",
+                        ivy: "Includes mentorship, peer networking, and business-focused guidance for entrepreneurs at every stage",
+                        others: "Career support may be designed for job seekers rather than business builders",
+                      },
+                      {
+                        factor: "Best Suited For",
+                        ivy: "Business owners, founders, entrepreneurs, consultants, and professionals who want to leverage AI for business growth",
+                        others: "Learners looking only for general AI awareness or technical programming knowledge",
+                      },
+                    ]
+                      .slice(0, showAllAiEntreComparison ? 10 : 4)
+                      .map((row, index) => (
+                        <div
+                          key={index}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
+                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                          }`}
+                        >
+                          <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
+                            {row.factor}
+                          </div>
+                          <div className="p-4 text-gray-700 border-r border-gray-100 flex items-start gap-2 leading-relaxed">
+                            <CheckCircle size={15} className="text-green-500 flex-shrink-0 mt-0.5" />
+                            <span>{row.ivy}</span>
+                          </div>
+                          <div className="p-4 text-gray-500 flex items-start gap-2 leading-relaxed">
+                            <X size={15} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                            <span>{row.others}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+
+                  <div className="mt-3 text-center">
+                    <button
+                      onClick={() => setShowAllAiEntreComparison(!showAllAiEntreComparison)}
+                      className="inline-flex items-center gap-2 text-[#009fda] text-sm font-semibold hover:underline transition-all"
+                    >
+                      {showAllAiEntreComparison ? (
+                        <><X size={15} /> Hide</>
+                      ) : (
+                        <><Plus size={15} /> View All 10 Factors</>
+                      )}
+                    </button>
+                  </div>
+
+                  <div className="mt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                      Ready to make the right choice for your career?
+                    </p>
+                    <button
+                      style={{ backgroundColor: "#009fda" }}
+                      className="px-8 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200"
+                      onClick={handleApplyClick}
+                    >
+                      Enroll at Ivy Professional School
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Comparison Section - AI for Product Managers only */}
+              {course.title === "AI for Product Managers" && (
+                <div className="mt-14 w-full max-w-4xl mx-auto">
+                  <div className="text-center mb-8">
+                    <span className="inline-block bg-blue-100 text-[#009fda] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                      Why Choose Us
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                      Ivy Professional School{" "}
+                      <span className="text-[#009fda]">vs</span>{" "}
+                      <span className="text-gray-500">Other Institutes</span>
+                    </h2>
+                    <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
+                      See why serious learners choose Ivy Pro School for their AI Product Management journey
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                    <div className="grid grid-cols-[1fr_1.4fr_1.2fr] text-sm font-bold">
+                      <div className="bg-gray-700 text-white p-4 flex items-center">
+                        Comparison Factor
+                      </div>
+                      <div className="bg-[#009fda] text-white p-4 flex items-center justify-center gap-2 text-center">
+                        <span>Ivy Professional School</span>
+                        <span className="hidden sm:inline-block text-[10px] bg-white/20 px-2 py-0.5 rounded-full whitespace-nowrap">
+                          ★ Recommended
+                        </span>
+                      </div>
+                      <div className="bg-gray-500 text-white p-4 flex items-center justify-center text-center">
+                        Typical Product Management Institutes
+                      </div>
+                    </div>
+
+                    {[
+                      {
+                        factor: "Course Focus",
+                        ivy: "Focuses specifically on AI Product Management, helping learners build and ship AI-powered products end-to-end",
+                        others: "Often teaches general product management without enough focus on AI products",
+                      },
+                      {
+                        factor: "AI Product Thinking",
+                        ivy: "Covers AI opportunity discovery, AI UX, feasibility, prompt/model design, RAG, agents, metrics, and responsible AI delivery",
+                        others: "May cover product strategy but not the unique challenges of AI-driven products",
+                      },
+                      {
+                        factor: "Hands-on Learning",
+                        ivy: "Includes 20+ real-world projects, labs, and case studies to help learners apply AI-PM concepts practically",
+                        others: "Projects may be limited, theoretical, or not directly connected to AI product work",
+                      },
+                      {
+                        factor: "Modern AI Tool Exposure",
+                        ivy: "Includes tools and workflows around ChatGPT, Claude, Gemini, Figma, Jira, Productboard, Amplitude, Mixpanel, Retool, Flowise, LangGraph, and n8n",
+                        others: "Many institutes focus only on standard PM tools and do not integrate modern AI workflows",
+                      },
+                      {
+                        factor: "Business + Tech Balance",
+                        ivy: "Helps learners understand both product strategy and AI implementation realities like cost, latency, privacy, model risk, and guardrails",
+                        others: "Courses may be either too business-focused or too technical, without connecting both sides",
+                      },
+                      {
+                        factor: "AI Prototyping",
+                        ivy: "Learners explore no-code and low-code AI prototyping for building practical product concepts",
+                        others: "Prototyping may be limited to wireframes or traditional product mockups",
+                      },
+                      {
+                        factor: "Stakeholder Readiness",
+                        ivy: "Trains learners to write PRDs, define metrics, and work with engineering, design, data science, legal, and GTM teams",
+                        others: "Stakeholder management may be taught in a generic way",
+                      },
+                      {
+                        factor: "Responsible AI Focus",
+                        ivy: "Covers AI evaluation, risk, governance, human-in-the-loop workflows, and responsible AI delivery",
+                        others: "Responsible AI may be ignored or treated as a small theory topic",
+                      },
+                      {
+                        factor: "Career Support",
+                        ivy: "Includes certification, mentorship, resume reviews, and career assistance for AI PM roles",
+                        others: "Career support may be generic and not customized for AI product roles",
+                      },
+                      {
+                        factor: "1:1 Doubt Clearing Support",
+                        ivy: "Learners get personalized 1:1 doubt-clearing sessions with teaching assistants to resolve doubts related to AI product strategy, PRDs, tools, projects, prototyping, and implementation workflows",
+                        others: "Doubt support may be limited to group sessions, community replies, or trainer availability",
+                      },
+                      {
+                        factor: "Best Suited For",
+                        ivy: "Product managers, aspiring PMs, founders, business leaders, consultants, and professionals who want to lead AI product initiatives",
+                        others: "Learners looking only for basic product management certification",
+                      },
+                    ]
+                      .slice(0, showAllAiPmComparison ? 11 : 4)
+                      .map((row, index) => (
+                        <div
+                          key={index}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
+                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                          }`}
+                        >
+                          <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
+                            {row.factor}
+                          </div>
+                          <div className="p-4 text-gray-700 border-r border-gray-100 flex items-start gap-2 leading-relaxed">
+                            <CheckCircle size={15} className="text-green-500 flex-shrink-0 mt-0.5" />
+                            <span>{row.ivy}</span>
+                          </div>
+                          <div className="p-4 text-gray-500 flex items-start gap-2 leading-relaxed">
+                            <X size={15} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                            <span>{row.others}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+
+                  <div className="mt-3 text-center">
+                    <button
+                      onClick={() => setShowAllAiPmComparison(!showAllAiPmComparison)}
+                      className="inline-flex items-center gap-2 text-[#009fda] text-sm font-semibold hover:underline transition-all"
+                    >
+                      {showAllAiPmComparison ? (
+                        <><X size={15} /> Hide</>
+                      ) : (
+                        <><Plus size={15} /> View All 11 Factors</>
+                      )}
+                    </button>
+                  </div>
+
+                  <div className="mt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                      Ready to make the right choice for your career?
+                    </p>
+                    <button
+                      style={{ backgroundColor: "#009fda" }}
+                      className="px-8 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200"
+                      onClick={handleApplyClick}
+                    >
+                      Enroll at Ivy Professional School
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

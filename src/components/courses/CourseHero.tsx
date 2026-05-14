@@ -61,6 +61,14 @@ import Claude from "@/assests/casestudies/Claude.webp";
 import Netlify from "@/assests/casestudies/Netlify.webp";
 import N8n from "@/assests/casestudies/N8n.webp";
 import Eleven from "@/assests/casestudies/Eleven.webp";
+import AdityaKumarBarikImg from "@/assests/alumni/AdityaKumarBarik.webp";
+import AdityaKumarBarikCurImg from "@/assests/company/AdityaKumarBarikCur.webp";
+import TanmayChakrabortyImg from "@/assests/alumni/TanmayChakraborty.webp";
+import TanmayChakrabortyCurImg from "@/assests/company/TanmayChakrabortyCur.webp";
+import TaniaLahaImg from "@/assests/alumni/TaniaLaha.webp";
+import TaniaLahaCurImg from "@/assests/company/TaniaLahaCur.webp";
+import SatyajitPramanikImg from "@/assests/alumni/SatyajitPramanik.webp";
+import SatyajitPramanikCurImg from "@/assests/company/SatyajitPramanikCur.webp";
 interface CourseHeroProps {
   course: Course;
 }
@@ -681,6 +689,38 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
               )} */}
             </div>
 
+
+            {/* Alumni Cards - Data Science with ML & AI only */}
+            {course.title === "Data Science with Machine Learning & AI Certification" && (
+              <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {[
+                  { name: "Aditya Kumar Barik", role: "Data Scientist", location: "Bengaluru", image: AdityaKumarBarikImg, company: AdityaKumarBarikCurImg },
+                  { name: "Tanmay Chakraborty", role: "ML Engineer", location: "Kolkata", image: TanmayChakrabortyImg, company: TanmayChakrabortyCurImg },
+                  { name: "Tania Laha", role: "Decision Scientist", location: "Bangalore", image: TaniaLahaImg, company: TaniaLahaCurImg },
+                  { name: "Satyajit Pramanik", role: "Data Analyst", location: "Bangalore", image: SatyajitPramanikImg, company: SatyajitPramanikCurImg },
+                ].map((alumni, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/95 rounded-xl p-3 flex flex-col items-center text-center gap-2 shadow-md border border-white/30"
+                  >
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#009fda]/30 flex-shrink-0">
+                      <Image src={alumni.image} alt={alumni.name} fill className="object-cover" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-800 text-xs leading-snug">{alumni.name}</p>
+                      <p className="text-[11px] text-[#009fda] font-medium">{alumni.role}</p>
+                      <p className="text-[10px] text-gray-400">{alumni.location}</p>
+                    </div>
+                    <div className="mt-auto pt-2 border-t border-gray-100 w-full">
+                      <p className="text-[9px] text-gray-400 mb-1 uppercase tracking-wider">At</p>
+                      <div className="relative h-12 w-full">
+                        <Image src={alumni.company} alt={`${alumni.name} company`} fill className="object-contain" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* <div className="space-y-4 overflow-hidden py-4">
               <div className="text-white text-base font-semibold px-2">

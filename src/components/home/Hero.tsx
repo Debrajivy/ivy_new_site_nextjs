@@ -1,12 +1,13 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Award, Users } from 'lucide-react';
+import { Award, Users, CalendarCheck, BookOpen } from 'lucide-react';
 import { CheckCircle } from "lucide-react"
 
 import { useRouter } from 'next/navigation';
 import AutpPlayYoutube from '../AutoPlayYoutube';
 import Link from 'next/link';
+import RegisterModal from '@/components/shared/RegisterModal';
 
 const Hero = () => {
 
@@ -30,6 +31,7 @@ const Hero = () => {
   });
 
   // State for form submission status and message
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<any>(null);
   const [submitMessage, setSubmitMessage] = useState<any>('');
 
@@ -123,6 +125,7 @@ const Hero = () => {
     }
   };
   return (
+    <>
     <div className="relative bg-white py-8 md:py-12">
       <div className="container mx-auto px-4">
         {/* Centered Heading */}
@@ -203,8 +206,27 @@ const Hero = () => {
                 >
                   &nbsp;NASSCOM, IBM, Govt. of India (MEITY)
                 </Link>
-                that compiled as per National Occupation Standards.
+                 &nbsp;that compiled as per National Occupation Standards.
               </p>
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap gap-3 mt-5">
+                <button
+                  onClick={() => setShowRegisterModal(true)}
+                  className="flex items-center gap-2 px-5 py-3 text-white font-semibold rounded-xl shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 text-sm"
+                  style={{ background: 'linear-gradient(135deg, #013a81 0%, #01509e 100%)' }}
+                >
+                  <CalendarCheck size={17} />
+                  Book a Demo Class
+                </button>
+                <Link
+                  href="/courses"
+                  className="flex items-center gap-2 px-5 py-3 font-semibold rounded-xl shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 text-sm"
+                  style={{ background: 'linear-gradient(135deg, #009fda 0%, #00b8f0 100%)', color: 'white' }}
+                >
+                  <BookOpen size={17} />
+                  Explore Courses
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -364,10 +386,34 @@ const Hero = () => {
             <p className="text-sm md:text-base text-gray-700">
               Land high-paying jobs by choosing Ivy Pro's courses that are accredited by NASSCOM, IIT and Govt. of India (MEITY) and compiled as per National Occupation Standards.
             </p>
+            {/* Mobile CTA Buttons */}
+            <div className="flex gap-3 mt-4">
+              <button
+                onClick={() => setShowRegisterModal(true)}
+                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 text-white font-semibold rounded-xl shadow-md text-sm transition-all hover:-translate-y-0.5"
+                style={{ background: 'linear-gradient(135deg, #013a81 0%, #01509e 100%)' }}
+              >
+                <CalendarCheck size={16} />
+                Book Demo
+              </button>
+              <Link
+                href="/courses"
+                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 font-semibold rounded-xl shadow-md text-sm transition-all hover:-translate-y-0.5"
+                style={{ background: 'linear-gradient(135deg, #009fda 0%, #00b8f0 100%)', color: 'white' }}
+              >
+                <BookOpen size={16} />
+                Explore Courses
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    {showRegisterModal && (
+      <RegisterModal onClose={() => setShowRegisterModal(false)} />
+    )}
+    </>
   );
 };
 

@@ -566,7 +566,7 @@ const courses: Course[] = [
   {
     id: '3',
     title: " Data Engineering Course",
-    description: "Master data engineering and big data analytics with tools like Hadoop, Spark, Kafka, Hive, etc., to become a certified data engineer and get a guaranteed placement.",
+    description: "Data is growing faster than ever, but businesses need professionals who can collect, clean, transform, store, and move that data reliably. Ivy Professional School’s Data Engineering Course helps you learn the practical skills required to work with databases, ETL pipelines, cloud data systems, big data platforms, and production-ready data workflows. Designed for freshers, working professionals, developers, analysts, and career switchers, this course focuses on hands-on learning, industry-relevant projects, and placement preparation. You will learn how data moves from raw sources to dashboards, analytics systems, machine learning models, and business decision-making platforms. With Ivy’s experience in data and AI education since 2008, the program helps you build a strong foundation for roles in Data Engineering, Cloud Data Engineering, ETL Development, Big Data Engineering, and Data Pipeline Automation.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Engineering",
     students: 1549,
@@ -858,7 +858,7 @@ const courses: Course[] = [
   {
     id: '4',
     title: "Data Science with Machine Learning & AI Certification",
-    description: "Learn data science and machine learning skills with tools like Python, SQL, R, Tableau, etc., and get jobs for data scientist, analyst, or ML engineer roles.",
+    description: "Build a career in data science with a practical, project-driven program designed for today’s analytics, machine learning, and AI-driven job market.\n\n Ivy Professional School’s Data Science and Machine Learning Course helps learners build strong foundations in Python, statistics, SQL, data visualization, machine learning, business analytics, and applied AI. The program is designed for freshers, working professionals, engineers, analysts, business graduates, and career switchers who want to become job-ready for roles in data science, machine learning, analytics, and AI. \n\n With Ivy’s long-standing experience in data science and AI education since 2008, learners get structured training, practical projects, interview preparation, and career support to confidently transition into data roles.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -1366,7 +1366,7 @@ const courses: Course[] = [
   {
     id: '6',
     title: "Data Analytics With Visualization",
-    description: "Learn Data Analytics with hands-on projects, real-world datasets, and industry tools. Build in-demand skills, earn a recognized certification, and become job-ready with placement support in 12–14 months.",
+    description: "Every business today needs professionals who can turn raw data into clear insights and better decisions. Ivy Professional School’s Data Analytics Course with Visualization helps you build practical skills in data cleaning, analysis, visualization, reporting, and dashboard creation using industry-relevant tools. This course is designed for freshers, working professionals, graduates, and career switchers who want to enter the growing field of data analytics. You will learn how to work with business datasets, answer real business questions, create interactive dashboards, and present insights in a way that managers and decision-makers can act on. With Ivy’s experience in data science and AI education since 2008, the program focuses on hands-on learning, portfolio projects, interview preparation, and placement support to help you confidently build a career in analytics.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
