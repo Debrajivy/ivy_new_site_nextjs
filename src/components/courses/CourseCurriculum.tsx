@@ -29,6 +29,10 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
   const [showAllDeComparison, setShowAllDeComparison] = useState(false)
   const [showAllAiEntreComparison, setShowAllAiEntreComparison] = useState(false)
   const [showAllAiPmComparison, setShowAllAiPmComparison] = useState(false)
+  const [showAllGenAiComparison, setShowAllGenAiComparison] = useState(false)
+  const [showAllAiMlComparison, setShowAllAiMlComparison] = useState(false)
+  const [showAllDaGenAiComparison, setShowAllDaGenAiComparison] = useState(false)
+  const [showAllDaVizComparison, setShowAllDaVizComparison] = useState(false)
 
 
   const handleApplyClick = useCallback(() => {
@@ -1043,6 +1047,157 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                 </div>
               )}
 
+              {/* Comparison Section - Generative AI courses only */}
+              {course.title.includes("Generative AI Course") && (
+                <div className="mt-14 w-full max-w-4xl mx-auto">
+                  <div className="text-center mb-8">
+                    <span className="inline-block bg-blue-100 text-[#009fda] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                      Why Choose Us
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                      Ivy Professional School{" "}
+                      <span className="text-[#009fda]">vs</span>{" "}
+                      <span className="text-gray-500">Other Institutes</span>
+                    </h2>
+                    <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
+                      See why serious learners choose Ivy Pro School for their Generative AI journey
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                    <div className="grid grid-cols-[1fr_1.4fr_1.2fr] text-sm font-bold">
+                      <div className="bg-gray-700 text-white p-4 flex items-center">
+                        Comparison Factor
+                      </div>
+                      <div className="bg-[#009fda] text-white p-4 flex items-center justify-center gap-2 text-center">
+                        <span>Ivy Professional School</span>
+                        <span className="hidden sm:inline-block text-[10px] bg-white/20 px-2 py-0.5 rounded-full whitespace-nowrap">
+                          ★ Recommended
+                        </span>
+                      </div>
+                      <div className="bg-gray-500 text-white p-4 flex items-center justify-center text-center">
+                        Typical Generative AI Institutes
+                      </div>
+                    </div>
+
+                    {[
+                      {
+                        factor: "Course Focus",
+                        ivy: "Focuses on practical Generative AI skills, app-building, automation, and job readiness",
+                        others: "Often focuses mainly on prompt engineering or tool demonstrations",
+                      },
+                      {
+                        factor: "Learning Outcome",
+                        ivy: "Helps learners build functional AI applications and use GenAI for real business and career outcomes",
+                        others: "Many courses stop at explaining AI tools without deeper implementation",
+                      },
+                      {
+                        factor: "Hands-on Projects",
+                        ivy: "Learners work on practical GenAI projects that can be added to their portfolio",
+                        others: "Projects may be simple, repetitive, or not strong enough for interviews",
+                      },
+                      {
+                        factor: "Career Orientation",
+                        ivy: "Designed for learners who want to use GenAI for jobs, freelancing, automation, entrepreneurship, or workplace productivity",
+                        others: "Often designed as short-term awareness workshops",
+                      },
+                      {
+                        factor: "Tool Coverage",
+                        ivy: "Helps learners work with modern GenAI tools and workflows relevant to the current market",
+                        others: "Tool exposure may be limited to one or two popular platforms",
+                      },
+                      {
+                        factor: "Prompt Engineering Depth",
+                        ivy: "Goes beyond basic prompts and teaches structured prompting for problem-solving, content, research, automation, and productivity",
+                        others: "Many institutes teach only basic prompt examples",
+                      },
+                      {
+                        factor: "AI App-Building",
+                        ivy: "Emphasizes building useful AI-powered apps and workflows",
+                        others: "App-building may not be included or may require too much coding knowledge",
+                      },
+                      {
+                        factor: "Placement Support",
+                        ivy: "Includes placement assistance and career-focused guidance",
+                        others: "Career support may be limited or missing",
+                      },
+                      {
+                        factor: "Certification Positioning",
+                        ivy: "Offers a structured certification pathway associated with Ivy's GenAI course positioning",
+                        others: "Certification credibility varies widely across institutes",
+                      },
+                      {
+                        factor: "1:1 Doubt Clearing Support",
+                        ivy: "Learners get personalized 1:1 doubt-clearing sessions with teaching assistants to resolve doubts related to prompts, GenAI tools, AI app-building, automation workflows, projects, and implementation challenges",
+                        others: "Doubt support may be limited to group sessions, community replies, or trainer availability",
+                      },
+                      {
+                        factor: "Beginner to Advanced Journey",
+                        ivy: "Suitable for learners who want a guided journey from GenAI fundamentals to practical implementation",
+                        others: "Many programs are either too basic or too technical",
+                      },
+                      {
+                        factor: "Business Use Case Orientation",
+                        ivy: "Connects GenAI with real workplace use cases across functions and industries",
+                        others: "Courses may focus more on tool features than business application",
+                      },
+                      {
+                        factor: "Best Suited For",
+                        ivy: "Students, professionals, entrepreneurs, consultants, creators, analysts, and managers who want to use GenAI practically",
+                        others: "Learners looking only for introductory AI awareness",
+                      },
+                    ]
+                      .slice(0, showAllGenAiComparison ? 13 : 4)
+                      .map((row, index) => (
+                        <div
+                          key={index}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
+                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                          }`}
+                        >
+                          <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
+                            {row.factor}
+                          </div>
+                          <div className="p-4 text-gray-700 border-r border-gray-100 flex items-start gap-2 leading-relaxed">
+                            <CheckCircle size={15} className="text-green-500 flex-shrink-0 mt-0.5" />
+                            <span>{row.ivy}</span>
+                          </div>
+                          <div className="p-4 text-gray-500 flex items-start gap-2 leading-relaxed">
+                            <X size={15} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                            <span>{row.others}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+
+                  <div className="mt-3 text-center">
+                    <button
+                      onClick={() => setShowAllGenAiComparison(!showAllGenAiComparison)}
+                      className="inline-flex items-center gap-2 text-[#009fda] text-sm font-semibold hover:underline transition-all"
+                    >
+                      {showAllGenAiComparison ? (
+                        <><X size={15} /> Hide</>
+                      ) : (
+                        <><Plus size={15} /> View All 13 Factors</>
+                      )}
+                    </button>
+                  </div>
+
+                  <div className="mt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                      Ready to make the right choice for your career?
+                    </p>
+                    <button
+                      style={{ backgroundColor: "#009fda" }}
+                      className="px-8 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200"
+                      onClick={handleApplyClick}
+                    >
+                      Enroll at Ivy Professional School
+                    </button>
+                  </div>
+                </div>
+              )}
+
               {/* Comparison Section - AI for Product Managers only */}
               {course.title === "AI for Product Managers" && (
                 <div className="mt-14 w-full max-w-4xl mx-auto">
@@ -1165,6 +1320,454 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                         <><X size={15} /> Hide</>
                       ) : (
                         <><Plus size={15} /> View All 11 Factors</>
+                      )}
+                    </button>
+                  </div>
+
+                  <div className="mt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                      Ready to make the right choice for your career?
+                    </p>
+                    <button
+                      style={{ backgroundColor: "#009fda" }}
+                      className="px-8 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200"
+                      onClick={handleApplyClick}
+                    >
+                      Enroll at Ivy Professional School
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Comparison Section - Data Analytics With Visualization courses only */}
+              {course.title.includes("Data Analytics With Visualization") && (
+                <div className="mt-14 w-full max-w-4xl mx-auto">
+                  <div className="text-center mb-8">
+                    <span className="inline-block bg-blue-100 text-[#009fda] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                      Why Choose Us
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                      Ivy Professional School{" "}
+                      <span className="text-[#009fda]">vs</span>{" "}
+                      <span className="text-gray-500">Other Institutes</span>
+                    </h2>
+                    <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
+                      See why serious learners choose Ivy Pro School for their Data Analytics journey
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                    <div className="grid grid-cols-[1fr_1.4fr_1.2fr] text-sm font-bold">
+                      <div className="bg-gray-700 text-white p-4 flex items-center">
+                        Comparison Factor
+                      </div>
+                      <div className="bg-[#009fda] text-white p-4 flex items-center justify-center gap-2 text-center">
+                        <span>Ivy Professional School</span>
+                        <span className="hidden sm:inline-block text-[10px] bg-white/20 px-2 py-0.5 rounded-full whitespace-nowrap">
+                          ★ Recommended
+                        </span>
+                      </div>
+                      <div className="bg-gray-500 text-white p-4 flex items-center justify-center text-center">
+                        Typical Data Analytics Institutes
+                      </div>
+                    </div>
+
+                    {[
+                      {
+                        factor: "Course Focus",
+                        ivy: "Covers Excel, SQL, Power BI or visualization, dashboards, business analytics, and insight generation",
+                        others: "Often focuses mainly on tools without enough business interpretation",
+                      },
+                      {
+                        factor: "Business Problem-Solving",
+                        ivy: "Learners are trained to answer real business questions using data",
+                        others: "Many programs teach charts and formulas but not decision-making",
+                      },
+                      {
+                        factor: "Dashboard Building",
+                        ivy: "Strong focus on creating business dashboards that managers can use for tracking performance and taking decisions",
+                        others: "Dashboards may be taught as design exercises rather than business tools",
+                      },
+                      {
+                        factor: "Data Visualization",
+                        ivy: "Emphasizes clean, meaningful, and decision-oriented visualization",
+                        others: "Many institutes focus on making charts without teaching storytelling",
+                      },
+                      {
+                        factor: "Excel & SQL Foundation",
+                        ivy: "Builds practical Excel and SQL skills needed for analyst roles",
+                        others: "Excel and SQL may be treated as separate topics without connecting them to analysis",
+                      },
+                      {
+                        factor: "Power BI / BI Tool Application",
+                        ivy: "Helps learners create interactive dashboards and reporting solutions for real business scenarios",
+                        others: "BI tools may be taught at a feature level only",
+                      },
+                      {
+                        factor: "Insight Generation",
+                        ivy: "Focuses on moving from \"what happened\" to \"why it happened\" and \"what should be done next\"",
+                        others: "Many courses stop at report creation",
+                      },
+                      {
+                        factor: "Project Portfolio",
+                        ivy: "Learners create analytics projects that can be showcased in resumes, LinkedIn, and interviews",
+                        others: "Projects may be generic and not recruiter-friendly",
+                      },
+                      {
+                        factor: "Placement Support",
+                        ivy: "Resume guidance, mock interviews, LinkedIn support, and placement assistance for analytics roles",
+                        others: "Placement support may not be deeply aligned to analyst job expectations",
+                      },
+                      {
+                        factor: "1:1 Doubt Clearing Support",
+                        ivy: "Learners get personalized 1:1 doubt-clearing sessions with teaching assistants to resolve Excel, SQL, Power BI, dashboarding, and project-related doubts",
+                        others: "Doubt support may be limited to group sessions, delayed chat replies, or trainer availability",
+                      },
+                      {
+                        factor: "Beginner Friendliness",
+                        ivy: "Suitable for freshers, non-coders, working professionals, and career switchers",
+                        others: "Some institutes make the course either too basic or unnecessarily technical",
+                      },
+                      {
+                        factor: "Career Readiness",
+                        ivy: "Prepares learners for roles like Data Analyst, MIS Analyst, BI Analyst, and Business Analyst",
+                        others: "Many courses focus on certification completion rather than job readiness",
+                      },
+                      {
+                        factor: "Best Suited For",
+                        ivy: "Learners who want to enter analytics, reporting, dashboarding, and business intelligence roles",
+                        others: "Learners looking only for tool-level exposure",
+                      },
+                    ]
+                      .slice(0, showAllDaVizComparison ? 13 : 4)
+                      .map((row, index) => (
+                        <div
+                          key={index}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
+                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                          }`}
+                        >
+                          <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
+                            {row.factor}
+                          </div>
+                          <div className="p-4 text-gray-700 border-r border-gray-100 flex items-start gap-2 leading-relaxed">
+                            <CheckCircle size={15} className="text-green-500 flex-shrink-0 mt-0.5" />
+                            <span>{row.ivy}</span>
+                          </div>
+                          <div className="p-4 text-gray-500 flex items-start gap-2 leading-relaxed">
+                            <X size={15} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                            <span>{row.others}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+
+                  <div className="mt-3 text-center">
+                    <button
+                      onClick={() => setShowAllDaVizComparison(!showAllDaVizComparison)}
+                      className="inline-flex items-center gap-2 text-[#009fda] text-sm font-semibold hover:underline transition-all"
+                    >
+                      {showAllDaVizComparison ? (
+                        <><X size={15} /> Hide</>
+                      ) : (
+                        <><Plus size={15} /> View All 13 Factors</>
+                      )}
+                    </button>
+                  </div>
+
+                  <div className="mt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                      Ready to make the right choice for your career?
+                    </p>
+                    <button
+                      style={{ backgroundColor: "#009fda" }}
+                      className="px-8 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200"
+                      onClick={handleApplyClick}
+                    >
+                      Enroll at Ivy Professional School
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Comparison Section - Data Analytics and Generative AI Course only */}
+              {course.title === "Data Analytics and Generative AI Course" && (
+                <div className="mt-14 w-full max-w-4xl mx-auto">
+                  <div className="text-center mb-8">
+                    <span className="inline-block bg-blue-100 text-[#009fda] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                      Why Choose Us
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                      Ivy Professional School{" "}
+                      <span className="text-[#009fda]">vs</span>{" "}
+                      <span className="text-gray-500">Other Institutes</span>
+                    </h2>
+                    <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
+                      See why serious learners choose Ivy Pro School for their Data Analytics &amp; Generative AI journey
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                    <div className="grid grid-cols-[1fr_1.4fr_1.2fr] text-sm font-bold">
+                      <div className="bg-gray-700 text-white p-4 flex items-center">
+                        Comparison Factor
+                      </div>
+                      <div className="bg-[#009fda] text-white p-4 flex items-center justify-center gap-2 text-center">
+                        <span>Ivy Professional School</span>
+                        <span className="hidden sm:inline-block text-[10px] bg-white/20 px-2 py-0.5 rounded-full whitespace-nowrap">
+                          ★ Recommended
+                        </span>
+                      </div>
+                      <div className="bg-gray-500 text-white p-4 flex items-center justify-center text-center">
+                        Typical Data Analytics / AI Institutes
+                      </div>
+                    </div>
+
+                    {[
+                      {
+                        factor: "Integrated Focus",
+                        ivy: "Combines foundational data analytics (Excel, SQL, BI) with Generative AI (automation, prompt engineering, AI workflows, LLM apps)",
+                        others: "Most institutes teach analytics and AI separately or focus on only one discipline",
+                      },
+                      {
+                        factor: "Business Problem Orientation",
+                        ivy: "Teaches learners to solve business problems with analytics + AI insights and automate workflows for real business impact",
+                        others: "Analytics and AI are often taught as disconnected skills without a business lens",
+                      },
+                      {
+                        factor: "Hands-on Learning",
+                        ivy: "Project-based approach with real datasets, dashboards, and AI use-cases applicable to business scenarios",
+                        others: "Many programs remain lecture-heavy or tool-demo-based",
+                      },
+                      {
+                        factor: "AI + Analytics Balance",
+                        ivy: "Balanced coverage of data cleaning, visualization, BI reporting, and Generative AI applications such as content automation, RAG workflows, agents, and AI-enabled dashboards",
+                        others: "Courses may emphasize one aspect and only superficially cover the other",
+                      },
+                      {
+                        factor: "Tool Ecosystem Exposure",
+                        ivy: "Teaches analytics tools (Excel, SQL, Power BI/Tableau) plus GenAI platforms (LLMs, automation tools, AI APIs, agent builders)",
+                        others: "Tool coverage may be limited to either analytics tools or basic AI tools",
+                      },
+                      {
+                        factor: "Project Portfolio",
+                        ivy: "Learners build analytics dashboards, BI reports, and AI-powered solutions that can be used in resumes and interviews",
+                        others: "Projects are often basic, templated, or lack business applicability",
+                      },
+                      {
+                        factor: "Insight to Automation Pathway",
+                        ivy: "Teaches how to move from descriptive analytics to predictive insights and further to automated AI workflows",
+                        others: "Many courses stop at dashboards or beginner AI demos without applied automation",
+                      },
+                      {
+                        factor: "1:1 Doubt Clearing Support",
+                        ivy: "Learners get personalized 1:1 doubt-clearing sessions with teaching assistants to address analytics challenges, data modeling questions, AI prompts, workflow issues, and project obstacles",
+                        others: "Doubt support may be limited to group sessions, community boards, or delayed responses",
+                      },
+                      {
+                        factor: "Career Support",
+                        ivy: "Includes resume guidance, interview prep, LinkedIn positioning, and placement assistance oriented toward analytics + AI roles",
+                        others: "Career support may be generic or not tailored for hybrid analytics + AI opportunities",
+                      },
+                      {
+                        factor: "Business Use Case Orientation",
+                        ivy: "Strong focus on aligning dashboards, insights, and AI outputs with real business needs such as reporting automation, decision support, and productivity workflows",
+                        others: "Many institutes teach tools without explaining how to drive business value",
+                      },
+                      {
+                        factor: "Beginner Friendliness",
+                        ivy: "Suitable for freshers, working professionals, and career switchers with structured support for both analytics and AI learning curves",
+                        others: "Some programs are either too basic or too technical without bridging skill gaps",
+                      },
+                      {
+                        factor: "Best Suited For",
+                        ivy: "Learners who want to build careers that blend Analytics, BI, and Generative AI",
+                        others: "Learners looking only for basic analytics skills or introductory AI exposure",
+                      },
+                    ]
+                      .slice(0, showAllDaGenAiComparison ? 12 : 4)
+                      .map((row, index) => (
+                        <div
+                          key={index}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
+                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                          }`}
+                        >
+                          <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
+                            {row.factor}
+                          </div>
+                          <div className="p-4 text-gray-700 border-r border-gray-100 flex items-start gap-2 leading-relaxed">
+                            <CheckCircle size={15} className="text-green-500 flex-shrink-0 mt-0.5" />
+                            <span>{row.ivy}</span>
+                          </div>
+                          <div className="p-4 text-gray-500 flex items-start gap-2 leading-relaxed">
+                            <X size={15} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                            <span>{row.others}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+
+                  <div className="mt-3 text-center">
+                    <button
+                      onClick={() => setShowAllDaGenAiComparison(!showAllDaGenAiComparison)}
+                      className="inline-flex items-center gap-2 text-[#009fda] text-sm font-semibold hover:underline transition-all"
+                    >
+                      {showAllDaGenAiComparison ? (
+                        <><X size={15} /> Hide</>
+                      ) : (
+                        <><Plus size={15} /> View All 12 Factors</>
+                      )}
+                    </button>
+                  </div>
+
+                  <div className="mt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                      Ready to make the right choice for your career?
+                    </p>
+                    <button
+                      style={{ backgroundColor: "#009fda" }}
+                      className="px-8 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200"
+                      onClick={handleApplyClick}
+                    >
+                      Enroll at Ivy Professional School
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Comparison Section - AI and Machine Learning Course only */}
+              {course.title === "AI and Machine Learning Course" && (
+                <div className="mt-14 w-full max-w-4xl mx-auto">
+                  <div className="text-center mb-8">
+                    <span className="inline-block bg-blue-100 text-[#009fda] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
+                      Why Choose Us
+                    </span>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+                      Ivy Professional School{" "}
+                      <span className="text-[#009fda]">vs</span>{" "}
+                      <span className="text-gray-500">Other Institutes</span>
+                    </h2>
+                    <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
+                      See why serious learners choose Ivy Pro School for their AI &amp; Machine Learning journey
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                    <div className="grid grid-cols-[1fr_1.4fr_1.2fr] text-sm font-bold">
+                      <div className="bg-gray-700 text-white p-4 flex items-center">
+                        Comparison Factor
+                      </div>
+                      <div className="bg-[#009fda] text-white p-4 flex items-center justify-center gap-2 text-center">
+                        <span>Ivy Professional School</span>
+                        <span className="hidden sm:inline-block text-[10px] bg-white/20 px-2 py-0.5 rounded-full whitespace-nowrap">
+                          ★ Recommended
+                        </span>
+                      </div>
+                      <div className="bg-gray-500 text-white p-4 flex items-center justify-center text-center">
+                        Typical AI &amp; ML Institutes
+                      </div>
+                    </div>
+
+                    {[
+                      {
+                        factor: "Course Focus",
+                        ivy: "Covers AI, Machine Learning, and Deep Learning with a career-focused learning path",
+                        others: "Often focuses only on algorithms or Python notebooks",
+                      },
+                      {
+                        factor: "Practical Learning",
+                        ivy: "Emphasizes hands-on implementation, model-building, evaluation, and real-world use cases",
+                        others: "Many programs remain theory-heavy with limited project depth",
+                      },
+                      {
+                        factor: "AI + ML Balance",
+                        ivy: "Combines classical Machine Learning, AI concepts, and modern Deep Learning foundations",
+                        others: "Some institutes teach ML in isolation without connecting it to modern AI applications",
+                      },
+                      {
+                        factor: "Model Understanding",
+                        ivy: "Helps learners understand how models work, how to evaluate them, and when to use which approach",
+                        others: "Learners may memorize algorithms without understanding practical selection",
+                      },
+                      {
+                        factor: "Project Portfolio",
+                        ivy: "Learners can build portfolio projects useful for resumes, LinkedIn, and interview discussions",
+                        others: "Projects may be generic, copied, or too basic for job interviews",
+                      },
+                      {
+                        factor: "Business Application",
+                        ivy: "Connects ML models with real business problems such as prediction, classification, recommendation, forecasting, and automation",
+                        others: "Courses may focus on code without explaining business impact",
+                      },
+                      {
+                        factor: "Career Readiness",
+                        ivy: "Designed to prepare learners for AI, ML, analytics, and data-driven roles",
+                        others: "Many institutes focus mainly on course completion and certification",
+                      },
+                      {
+                        factor: "Deep Learning Exposure",
+                        ivy: "Includes Deep Learning as part of the AI and ML career pathway",
+                        others: "Deep Learning may be skipped or taught only at a surface level",
+                      },
+                      {
+                        factor: "Mentor Support",
+                        ivy: "Learners receive structured academic support to handle technical concepts step by step",
+                        others: "Support may depend heavily on individual trainer availability",
+                      },
+                      {
+                        factor: "1:1 Doubt Clearing Support",
+                        ivy: "Learners get personalized 1:1 doubt-clearing sessions with teaching assistants to resolve doubts related to Python, ML algorithms, model-building, Deep Learning, projects, and implementation challenges",
+                        others: "Doubt support may be limited to group sessions, delayed chat replies, or trainer availability",
+                      },
+                      {
+                        factor: "Interview Preparation",
+                        ivy: "Focuses on explaining projects, model choices, evaluation metrics, and business outcomes in interviews",
+                        others: "Interview preparation may be generic and not ML-specific",
+                      },
+                      {
+                        factor: "Placement Support",
+                        ivy: "Ivy's course ecosystem includes placement-focused support and career guidance",
+                        others: "Placement assistance may be limited to job notifications",
+                      },
+                      {
+                        factor: "Best Suited For",
+                        ivy: "Learners who want to build a serious foundation in AI, ML, Deep Learning, and applied model-building",
+                        others: "Learners looking only for basic Python or algorithm-level exposure",
+                      },
+                    ]
+                      .slice(0, showAllAiMlComparison ? 13 : 4)
+                      .map((row, index) => (
+                        <div
+                          key={index}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
+                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                          }`}
+                        >
+                          <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
+                            {row.factor}
+                          </div>
+                          <div className="p-4 text-gray-700 border-r border-gray-100 flex items-start gap-2 leading-relaxed">
+                            <CheckCircle size={15} className="text-green-500 flex-shrink-0 mt-0.5" />
+                            <span>{row.ivy}</span>
+                          </div>
+                          <div className="p-4 text-gray-500 flex items-start gap-2 leading-relaxed">
+                            <X size={15} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                            <span>{row.others}</span>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+
+                  <div className="mt-3 text-center">
+                    <button
+                      onClick={() => setShowAllAiMlComparison(!showAllAiMlComparison)}
+                      className="inline-flex items-center gap-2 text-[#009fda] text-sm font-semibold hover:underline transition-all"
+                    >
+                      {showAllAiMlComparison ? (
+                        <><X size={15} /> Hide</>
+                      ) : (
+                        <><Plus size={15} /> View All 13 Factors</>
                       )}
                     </button>
                   </div>

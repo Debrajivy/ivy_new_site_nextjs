@@ -348,7 +348,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <nav className="breadcrumbs">
                   <Link href="/">Home</Link>
                   <span>/</span>
-                  <Link href="/categories">Courses</Link>
+                  <Link href="/courses">Courses</Link>
                   <span>/</span>
                   <Link href={`/courses/${course.slug}`}>{course.slug}</Link>
                 </nav>

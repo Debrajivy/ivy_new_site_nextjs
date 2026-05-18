@@ -103,7 +103,7 @@ const courses: Course[] = [
   {
     id: '1',
     title: "Generative AI Course",
-    description: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks.",
+    description: "Generative AI is revolutionizing how businesses create content, automate processes, analyze data, and make smarter decisions. Ivy Professional School’s Generative AI Course teaches you to use AI tools like ChatGPT, Gemini, Claude, and AI agents to solve real-world business challenges.\n\n Designed for professionals, entrepreneurs, analysts, developers, and career switchers, this program focuses on hands-on applications. Learn to build AI solutions for automation, intelligent workflows, content generation, customer experience, and productivity enhancement. With Ivy’s decade-plus experience in AI and data education, this course equips you to lead AI initiatives, implement practical AI workflows, and gain a competitive edge in your career or business.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
@@ -1619,7 +1619,7 @@ const courses: Course[] = [
   {
     id: '7',
     title: "Data Analytics and Generative AI Course",
-    description: "Learn business analytics with advanced tools like Excel, SQL, Python, R, Tableau, etc., and become a data expert employers want to hire.",
+    description: "Data today drives business decisions, but the future belongs to professionals who can analyze data and use AI to generate insights, automate workflows, and solve real problems. Ivy Professional School’s Data Analytics and Generative AI Course equips you with practical skills in data analysis, visualization, dashboards, SQL, Power BI, and modern AI tools. This program is designed for freshers, working professionals, analysts, engineers, and career changers who want to build a strong analytics foundation while mastering generative AI techniques used in business, marketing, reporting, automation, and intelligent decision‑making. Learn how to turn data into insights, build compelling dashboards, automate analytics workflows, generate AI‑assisted reports, and apply generative AI tools to real business tasks. With Ivy’s decade‑plus experience in data and AI training and strong industry‑aligned curriculum, this course prepares you for data analyst, analytics specialist, business intelligence, and AI‑enabled roles.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -2043,7 +2043,7 @@ const courses: Course[] = [
   {
     id: '9',
     title: "AI for Product Managers",
-    description: "Get coached by industry experts through our AI product manager course, master essential AI product management skills, work on 20+ real-world projects, and become job-ready in just 6 weeks.",
+    description: "Ivy Professional School’s AI Product Manager Course equips you with the strategic, analytical, and practical skills needed to lead AI initiatives and build successful AI‑driven products. In this program, you’ll learn how to define AI product vision, prioritize features, work with datasets and models, translate data insights into product decisions, scale AI workflows, and collaborate effectively with engineering, data science, and design teams. You’ll also learn how to address ethical, fairness, and deployment challenges that are unique to AI products. This course is designed for current product managers, aspiring PMs, tech leaders, founders, and professionals who want to lead product strategy in the era of AI. With Ivy’s experience in data and AI education since 2008, the curriculum combines industry‑aligned frameworks, real case studies, hands‑on exercises, and practical tools that help you make products that users love and businesses rely on.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -2547,7 +2547,7 @@ const courses: Course[] = [
   {
     id: '10',
     title: "AI and Machine Learning Course",
-    description: "Learn Artificial Intelligence, Machine Learning, Deep Learning, and Generative AI through real-world projects designed by experts from IIT, IIM, and top analytics firms.",
+    description: "Ivy Professional School’s AI and Machine Learning Course helps you learn how AI models work, how to train them, evaluate them, and apply them across business, analytics, automation, and product development. This course is ideal for engineers, developers, analysts, data professionals, and career switchers who want hands‑on AI and ML skills, from the fundamentals of algorithms and neural networks to real projects and deployment workflows. You’ll learn how to work with Python‑based frameworks, build predictive models, use machine learning pipelines, and integrate AI capabilities into applications and decision systems. With Ivy’s experience in data and AI education since 2008, this program blends theory with practical implementation, project work, and career support, helping you build job‑ready AI skills that employers value.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "AI & Machine Learning",
     students: 1098,
@@ -8937,7 +8937,7 @@ const courses: Course[] = [
   {
     id: '22',
     title: "AI for Entrepreneurs",
-    description: "Master AI to automate operations, analyze data, and scale your business. Build 10+ no-code AI tools and launch your own AI Product Studio in 8 weeks.",
+    description: "AI is transforming the way businesses operate, but most entrepreneurs struggle to apply it strategically. Ivy Professional School’s AI for Entrepreneurs Course teaches you how to use modern AI tools, including ChatGPT, automation platforms, AI agents, and workflow builders, to solve real business problems. This program is designed for founders, business owners, consultants, freelancers, and leaders who want to use AI to increase productivity, automate repetitive tasks, enhance customer communication, analyze business data, and make smarter decisions. You don’t need a technical background. You’ll learn practical AI skills that help you create value, streamline operations, and grow your business faster. Build practical workflows, identify high‑impact use cases in your business, and learn how AI can support marketing, sales, operations, customer support, and internal processes. With Ivy’s experience in data and AI training since 2008, this course equips you to confidently integrate AI into your business strategy and workflows.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,
