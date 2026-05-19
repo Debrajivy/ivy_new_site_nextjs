@@ -129,8 +129,8 @@ const TC: Record<string, { bg: string; color: string }> = {
 const COURSES: Course[] = [
   {
     id: '1',
-    title: "Generative AI Course with IIT Guwahati",
-    description: "Master GPT-4, DALL·E, LangChain, RAG & Transformer architectures. Build and deploy production-ready GenAI applications under IIT Guwahati faculty guidance.",
+    title: "Generative AI Course",
+    description: "Master GPT-4, DALL·E, LangChain, RAG & Transformer architectures. Build and deploy production-ready GenAI applications under Ivy Professional Schoolfaculty guidance.",
     image: GA,
     category: "Gen AI",
     filterCategory: "Gen AI",
@@ -142,7 +142,7 @@ const COURSES: Course[] = [
     level: "Intermediate",
     rating: 4.9,
     reviewCount: 209,
-    slug: "iit-generative-ai-course",
+    slug: "generative-ai-course",
     keyFeatures: [
       "20+ real-world GenAI projects",
       "IIT Guwahati dual certification",
@@ -153,7 +153,7 @@ const COURSES: Course[] = [
   {
     id: '2',
     title: "Data Science with Machine Learning & AI",
-    description: "India's most comprehensive data science program — Excel, SQL, Python, R, Machine Learning, Deep Learning & visualization tools, taught by IIT & IIM faculty.",
+    description: "India's most comprehensive data science program — Excel, SQL, Python, R, Machine Learning, Deep Learning & visualization tools, taught by IIM faculty.",
     image: DSMAI,
     category: "Data Science",
     filterCategory: "Data Science",
@@ -777,7 +777,7 @@ export default function CoursesListing() {
               Book Free Demo Class
             </Link>
             <Link
-              href="/courses/iit-generative-ai-course"
+              href="/courses/generative-ai-course"
               onClick={() => window.scrollTo(0, 0)}
               className="px-8 py-4 border-2 border-white/60 text-white font-bold rounded-xl hover:bg-white/10 transition-all text-sm"
             >

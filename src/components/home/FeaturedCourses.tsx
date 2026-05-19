@@ -73,7 +73,7 @@ const featuredCourses: Course[] = [
     rating: 4.9,
     reviewCount: 209,
     isFeatured: true,
-    slug: "iit-generative-ai-course",
+    slug: "generative-ai-course",
     keyFeatures: [
       "20+ real-life project",
       "Live doubt-clearing sessions",
@@ -397,7 +397,7 @@ const FeaturedCourses = () => {
               </Link>
 
               <Link
-                href="/courses/iit-generative-ai-course"
+                href="/courses/generative-ai-course"
                 className="font-bold"
                 style={{ color: '#013a81' }}
               >

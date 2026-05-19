@@ -391,7 +391,7 @@ const Footer: React.FC<PageProps> = ({ navigate }) => {
                         <ul className="space-y-2 text-sm">
                             <li><NavLink href="/courses/data-science-and-ml-course"> Data Science</NavLink></li>
                             <li><NavLink href="/courses/data-engineering-course"> Data Engineering</NavLink></li>
-                            <li><NavLink href="/courses/iit-generative-ai-course"> Generative AI</NavLink></li>
+                            <li><NavLink href="/courses/generative-ai-course"> Generative AI</NavLink></li>
                             <li><NavLink href="/courses/ai-machine-learning-course">Machine Learning & AI</NavLink></li>
                             <li><NavLink href="/courses/data-analytics-course">Data Analytics</NavLink></li>
                             <li><NavLink href="/courses/no-upfront-fees-data-science-and-ml-course">Data Science (Pay after placement)</NavLink></li>

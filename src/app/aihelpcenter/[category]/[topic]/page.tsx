@@ -408,7 +408,7 @@ const addBacklinks = (text: string) => {
         .replace(
             /Generative AI/g,
             `<a 
-    href="https://ivyproschool.com/courses/iit-generative-ai-course"
+    href="https://ivyproschool.com/courses/generative-ai-course"
     class="text-[#f7af34] font-semibold underline decoration-[#f7af34]/40 underline-offset-4
            hover:text-[#3e69cc] hover:decoration-[#0f172a]/40 transition-colors duration-300">
     Generative AI
@@ -1563,7 +1563,7 @@ const TopicPage = ({ params }: PageProps) => {
                                         { name: "Data Engineering", link: "/courses/data-engineering-course" },
                                         { name: "Data Analytics", link: "/courses/data-analytics-course" },
                                         { name: "Data Analytics & Gen AI", link: "/courses/data-analytics-and-generative-ai-course" },
-                                        { name: "Generative AI", link: "/courses/iit-generative-ai-course" },
+                                        { name: "Generative AI", link: "/courses/generative-ai-course" },
                                         { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
                                         { name: "Data Science (Pay after placement)", link: "/courses/no-upfront-fees-data-science-and-ml-course" },
                                     ].map((course, index) => (

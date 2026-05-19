@@ -269,7 +269,7 @@ const WORKFLOW_STEPS = [
 const COURSES = [
   { name: "AI Product Manager", link: "/courses/ai-product-manager-course" },
   { name: "AI for Entrepreneurs", link: "/courses/ai-for-entrepreneurs-course" },
-  { name: "Generative AI (IIT)", link: "/courses/iit-generative-ai-course" },
+  { name: "Generative AI (IIT)", link: "/courses/generative-ai-course" },
   { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
   { name: "Data Science & ML", link: "/courses/data-science-and-ml-course" },
   { name: "Data Analytics", link: "/courses/data-analytics-course" },
@@ -1263,7 +1263,7 @@ export default function LowCodeAIWorkflowPage() {
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">The Future: AI as Your Default Workflow Layer</h2>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-5">
                 The biggest shift happening right now is that AI is no longer an add-on. It is becoming the default layer through which all workflows operate. Organizations leveraging{" "}
-                <a href="https://ivyproschool.com/courses/iit-generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
+                <a href="https://ivyproschool.com/courses/generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
                   Generative AI
                 </a>{" "}
                 and{" "}
@@ -1295,7 +1295,7 @@ export default function LowCodeAIWorkflowPage() {
                     Data Analytics &amp; Insights
                   </a>{" "}
                   will become foundational skills for every professional — not just data teams — as AI-driven workflows generate and consume data at unprecedented scale. Additionally, mastering{" "}
-                  <a href="https://ivyproschool.com/courses/iit-generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
+                  <a href="https://ivyproschool.com/courses/generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
                     Enterprise AI Integration
                   </a>{" "}
                   will differentiate leaders from followers in the years ahead.
@@ -1315,7 +1315,7 @@ export default function LowCodeAIWorkflowPage() {
                 </p>
                 <p>
                   Whether you are exploring{" "}
-                  <a href="https://ivyproschool.com/courses/iit-generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-white font-semibold underline hover:text-blue-100">
+                  <a href="https://ivyproschool.com/courses/generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-white font-semibold underline hover:text-blue-100">
                     Enterprise AI Integration
                   </a>{" "}
                   at scale or building your first{" "}
@@ -1323,7 +1323,7 @@ export default function LowCodeAIWorkflowPage() {
                     n8n AI Automation
                   </a>{" "}
                   workflow, the path forward is the same: start small, build, measure, and scale. Use{" "}
-                  <a href="https://ivyproschool.com/courses/iit-generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-white font-semibold underline hover:text-blue-100">
+                  <a href="https://ivyproschool.com/courses/generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-white font-semibold underline hover:text-blue-100">
                     Prompt Engineering
                   </a>{" "}
                   to get the best results from your AI steps.

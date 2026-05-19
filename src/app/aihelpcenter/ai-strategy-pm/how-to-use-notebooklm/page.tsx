@@ -266,7 +266,7 @@ const COURSES = [
   { name: "Data Engineering", link: "/courses/data-engineering-course" },
   { name: "Data Analytics", link: "/courses/data-analytics-course" },
   { name: "Data Analytics & Gen AI", link: "/courses/data-analytics-and-generative-ai-course" },
-  { name: "Generative AI", link: "/courses/iit-generative-ai-course" },
+  { name: "Generative AI", link: "/courses/generative-ai-course" },
   { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
   { name: "Data Science (Pay after placement)", link: "/courses/no-upfront-fees-data-science-and-ml-course" },
 ];
@@ -839,7 +839,7 @@ export default function NotebookLMPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Link href="/courses/iit-generative-ai-course" className="inline-flex items-center gap-2 rounded-xl bg-white text-[#013a81] font-bold text-sm px-5 py-2.5 hover:bg-blue-50 transition-colors shadow-sm">
+                <Link href="/courses/generative-ai-course" className="inline-flex items-center gap-2 rounded-xl bg-white text-[#013a81] font-bold text-sm px-5 py-2.5 hover:bg-blue-50 transition-colors shadow-sm">
                   Generative AI Course <ArrowUpRight size={14} />
                 </Link>
                 <a href="https://ivyproschool.com/bootcampregister" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-white/20 border border-white/30 text-white font-bold text-sm px-5 py-2.5 hover:bg-white/30 transition-colors">

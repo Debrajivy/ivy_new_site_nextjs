@@ -327,7 +327,7 @@ const COURSES = [
     name: "Data Analytics & Gen AI",
     link: "/courses/data-analytics-and-generative-ai-course",
   },
-  { name: "Generative AI", link: "/courses/iit-generative-ai-course" },
+  { name: "Generative AI", link: "/courses/generative-ai-course" },
   { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
   {
     name: "Data Science (Pay after placement)",
@@ -1328,7 +1328,7 @@ export default function ClaudeOpusVsMythosPage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/courses/iit-generative-ai-course"
+                  href="/courses/generative-ai-course"
                   className="inline-flex items-center gap-2 rounded-xl bg-white text-[#009fda] font-bold text-sm px-5 py-2.5 hover:bg-blue-50 transition-colors shadow-sm"
                 >
                   Generative AI Course <ArrowUpRight size={14} />

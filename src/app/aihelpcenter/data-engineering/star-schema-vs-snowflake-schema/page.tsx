@@ -121,7 +121,7 @@ const COURSES = [
   { name: "Data Science & ML", link: "/courses/data-science-and-ml-course" },
   { name: "Data Analytics", link: "/courses/data-analytics-course" },
   { name: "Data Analytics & Gen AI", link: "/courses/data-analytics-and-generative-ai-course" },
-  { name: "Generative AI", link: "/courses/iit-generative-ai-course" },
+  { name: "Generative AI", link: "/courses/generative-ai-course" },
   { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
 ];
 

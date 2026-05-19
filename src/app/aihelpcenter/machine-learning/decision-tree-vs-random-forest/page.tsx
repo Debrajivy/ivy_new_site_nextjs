@@ -169,7 +169,7 @@ const COURSES = [
   { name: "Data Engineering", link: "/courses/data-engineering-course" },
   { name: "Data Analytics", link: "/courses/data-analytics-course" },
   { name: "Data Analytics & Gen AI", link: "/courses/data-analytics-and-generative-ai-course" },
-  { name: "Generative AI", link: "/courses/iit-generative-ai-course" },
+  { name: "Generative AI", link: "/courses/generative-ai-course" },
   { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
   { name: "Data Science (Pay after placement)", link: "/courses/no-upfront-fees-data-science-and-ml-course" },
 ];

@@ -856,7 +856,7 @@ export default function ReviewsPage() {
               <Link href="/courses/data-science-and-ml-course" className="bg-white text-[#009fda] font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
                 Explore Data Science <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="courses/iit-generative-ai-course" className="bg-transparent border-2 border-white/50 text-white font-bold px-8 py-3 rounded-full hover:bg-white/10 transition-all flex items-center gap-2">
+              <Link href="courses/generative-ai-course" className="bg-transparent border-2 border-white/50 text-white font-bold px-8 py-3 rounded-full hover:bg-white/10 transition-all flex items-center gap-2">
                 Explore GenAI <ExternalLink className="w-4 h-4" />
               </Link>
             </div>

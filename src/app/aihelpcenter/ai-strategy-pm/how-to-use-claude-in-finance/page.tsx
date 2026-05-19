@@ -186,7 +186,7 @@ const COURSES = [
   { name: "Data Engineering", link: "/courses/data-engineering-course" },
   { name: "Data Analytics", link: "/courses/data-analytics-course" },
   { name: "Data Analytics & Gen AI", link: "/courses/data-analytics-and-generative-ai-course" },
-  { name: "Generative AI", link: "/courses/iit-generative-ai-course" },
+  { name: "Generative AI", link: "/courses/generative-ai-course" },
   { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
   { name: "Data Science (Pay after placement)", link: "/courses/no-upfront-fees-data-science-and-ml-course" },
 ];
@@ -397,7 +397,7 @@ export default function ClaudeInFinancePage() {
             </h1>
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               A complete guide to using Claude as an{" "}
-              <a href="https://ivyproschool.com/courses/iit-generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
+              <a href="https://ivyproschool.com/courses/generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
                 AI-powered
               </a>{" "}
               assistant inside Excel — from financial modeling and DCF analysis to dashboards, data cleaning, and formula automation.
@@ -566,7 +566,7 @@ export default function ClaudeInFinancePage() {
                 <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
                   <p>
                     Claude for Excel is an{" "}
-                    <a href="https://ivyproschool.com/courses/iit-generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
+                    <a href="https://ivyproschool.com/courses/generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
                       AI-powered
                     </a>{" "}
                     add-in that integrates directly into Excel and allows users to work with spreadsheets using natural language. Instead of relying only on formulas and manual navigation, users can ask questions, give instructions, and automate workflows inside their workbook.

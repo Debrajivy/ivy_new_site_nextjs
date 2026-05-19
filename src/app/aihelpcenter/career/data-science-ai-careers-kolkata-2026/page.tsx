@@ -120,7 +120,7 @@ const ROLES_DATA = [
     title: "AI Engineer",
     salary: "₹12 – 45 LPA",
     growth: "↑ 50%",
-    link: "https://ivyproschool.com/courses/iit-generative-ai-course",
+    link: "https://ivyproschool.com/courses/generative-ai-course",
     desc: "Works on cutting-edge AI systems including Natural Language Processing, computer vision, and generative AI. The fastest-growing and highest-paid role category in Kolkata's 2026 job market.",
   },
   {
@@ -751,13 +751,13 @@ export default function DataScienceAICareersKolkataPage() {
 
                 <div className="rounded-2xl border p-5" style={{ borderColor: "#ef444430", backgroundColor: "#fff1f2" }}>
                   <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
-                    <a href="https://ivyproschool.com/courses/iit-generative-ai-course" className="hover:underline" style={{ color: "#dc2626" }}>
+                    <a href="https://ivyproschool.com/courses/generative-ai-course" className="hover:underline" style={{ color: "#dc2626" }}>
                       Generative AI: The New Frontier
                     </a>
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     The explosive rise of{" "}
-                    <a href="https://ivyproschool.com/courses/iit-generative-ai-course" className="font-semibold underline underline-offset-2" style={{ color: "#dc2626" }}>
+                    <a href="https://ivyproschool.com/courses/generative-ai-course" className="font-semibold underline underline-offset-2" style={{ color: "#dc2626" }}>
                       Generative AI
                     </a>{" "}
                     — ChatGPT, Claude, Gemini, DALL-E, Midjourney — has created an entirely new category of roles that barely existed two years ago: Prompt Engineers, LLM Fine-tuning Specialists, AI Product Managers, and AI Ethics Researchers. Kolkata&apos;s companies are already recruiting for these roles, and candidates who can combine domain knowledge with AI skills are commanding premium salaries.
@@ -1212,7 +1212,7 @@ export default function DataScienceAICareersKolkataPage() {
                   { title: "Top 10 Python Libraries Every Data Scientist Must Know in 2026", link: "/aihelpcenter/career/how-to-build-a-data-science-portfolio-without-experience" },
                   { title: "Machine Learning vs Data Science: What's the Difference?", link: "/aihelpcenter/machine-learning" },
                   { title: "How to Build a Data Science Portfolio That Gets You Hired", link: "/aihelpcenter/career/how-to-build-a-data-science-portfolio-without-experience" },
-                  { title: "Generative AI Careers: The Next Big Opportunity for Indian Professionals", link: "https://ivyproschool.com/courses/iit-generative-ai-course" },
+                  { title: "Generative AI Careers: The Next Big Opportunity for Indian Professionals", link: "https://ivyproschool.com/courses/generative-ai-course" },
                   { title: "Is Data Science a Good Career for Commerce Students?", link: "/aihelpcenter/career/data-science-for-commerce-students" },
                 ].map((rel, i) => (
                   <Link

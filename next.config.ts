@@ -39,8 +39,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/iit-generative-ai-course",
-        destination: "/courses/iit-generative-ai-course",
+        source: "/generative-ai-course",
+        destination: "/courses/generative-ai-course",
         permanent: true,
       },
       {

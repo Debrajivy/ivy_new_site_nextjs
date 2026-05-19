@@ -41,15 +41,15 @@ interface AssessmentModalProps {
 const IVY_COURSES: Course[] = [
   {
     id: 'gen-ai-iitg',
-    name: 'Generative AI Course with IIT Guwahati',
-    description: 'Master the cutting-edge concepts of Generative AI, LLMs, and diffusion models with expert faculty from IIT Guwahati.',
+    name: 'Generative AI Course',
+    description: 'Master the cutting-edge concepts of Generative AI, LLMs, and diffusion models with expert faculty from Ivy Professional School.',
     keywords: ['generative ai', 'llm', 'diffusion models', 'ai content', 'advanced ai'],
-    link: '/courses/iit-generative-ai-course', // Replace with actual course link
+    link: '/courses/generative-ai-course', // Replace with actual course link
   },
   {
     id: 'ds-ai-iitg',
     name: 'Data Science with Machine Learning & AI Certification',
-    description: 'A comprehensive program covering data science, machine learning, and artificial intelligence, in collaboration with IIT Guwahati.',
+    description: 'A comprehensive program covering data science, machine learning, and artificial intelligence, in collaboration with Ivy Professional School.',
     keywords: ['data science', 'ai', 'machine learning', 'python', 'r', 'statistics', 'comprehensive'],
     link: '/courses/iit-data-science-course',
   },

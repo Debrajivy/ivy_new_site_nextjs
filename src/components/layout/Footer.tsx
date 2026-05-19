@@ -76,7 +76,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/courses/data-science-and-ml-course" className="text-gray-300 hover:text-white transition-colors"> Data Science</Link></li>
               <li><Link href="/courses/data-engineering-course"> Data Engineering</Link></li>
-              <li><Link href="/courses/iit-generative-ai-course" className="text-gray-300 hover:text-white transition-colors"> Generative AI</Link></li>
+              <li><Link href="/courses/generative-ai-course" className="text-gray-300 hover:text-white transition-colors"> Generative AI</Link></li>
               <li><Link href="/courses/ai-machine-learning-course" className="text-gray-300 hover:text-white transition-colors">Machine Learning & AI</Link></li>
               {/* <li><Link href="/courses/iit-data-engineering-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Engineering</Link></li> */}
               <li><Link href="/courses/data-analytics-course" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>

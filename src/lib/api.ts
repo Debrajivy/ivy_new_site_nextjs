@@ -117,7 +117,7 @@ const courses: Course[] = [
     rating: 4.9,
     reviewCount: 5567,
     isFeatured: true,
-    slug: "iit-generative-ai-course",
+    slug: "generative-ai-course",
     longDescription: "This Gen AI course teaches you programming fundamentals, introduces you to generative AI and machine learning, and helps you build advanced Gen AI apps with solid practical applications. For instance, you will build a chatbot that can converse like humans, develop an application that automates social media posting, and build an AI assistant that combines text, image, and voice generation.\n\nThis will not only help you gain practical experience but also build a solid portfolio that showcases your skills and expertise to employers. This way, the 18-week course will help you become a Gen AI expert and increase your chances of getting high-paying jobs. So, the opportunities are endless."
     , outcomes: [
       "Understand the foundations of Gen AI, ML, and LLMs through hands-on coding and real-world examples",

@@ -69,6 +69,118 @@ import TaniaLahaImg from "@/assests/alumni/TaniaLaha.webp";
 import TaniaLahaCurImg from "@/assests/company/TaniaLahaCur.webp";
 import SatyajitPramanikImg from "@/assests/alumni/SatyajitPramanik.webp";
 import SatyajitPramanikCurImg from "@/assests/company/SatyajitPramanikCur.webp";
+import PritiJhaCurImg from "@/assests/company/PritiJhaCur.webp";
+import AnishBanerjeeCurImg from "@/assests/company/AnishBanerjeeCur.webp";
+import PranabKumarPaulCurImg from "@/assests/company/PranabKumarPaulCur.webp";
+import KinjalDasguptaImg from "@/assests/alumni/KinjalDasgupta.webp";
+import KinjalDasguptaCurImg from "@/assests/company/KinjalDasguptaCur.webp";
+import RajdeepTaluckdarImg from "@/assests/alumni/RajdeepTaluckdar.webp";
+import RajdeepTaluckdarCurImg from "@/assests/company/RajdeepTaluckdarCur.webp";
+import SohiniDasImg from "@/assests/alumni/SohiniDas.webp";
+import SohiniDasCurImg from "@/assests/company/SohiniDasCur.webp";
+import AnimeshSinghImg from "@/assests/alumni/AnimeshSingh.webp";
+import AnimeshSinghCurImg from "@/assests/company/AnimeshSinghCur.webp";
+import MrinalDharImg from "@/assests/alumni/MrinalDhar.webp";
+import MrinalDharCurImg from "@/assests/company/MrinalDharCur.webp";
+import AnkitaPaulImg from "@/assests/alumni/AnkitaPaul.webp";
+import AnkitaPaulCurImg from "@/assests/company/AnkitaPaulCur.webp";
+import ArpanBasuImg from "@/assests/alumni/ArpanBasu.webp";
+import ArpanBasuCurImg from "@/assests/company/ArpanBasuCur.webp";
+import AbhinavSinhaImg from "@/assests/alumni/AbhinavSinha.webp";
+import AbhinavSinhaCurImg from "@/assests/company/AbhinavSinhaCur.webp";
+import SayanNayakImg from "@/assests/alumni/SayanNayak.webp";
+import SayanNayakCurImg from "@/assests/company/SayanNayakCur.webp";
+import SoumalyaDuttaImg from "@/assests/alumni/SoumalyaDutta.webp";
+import SoumalyaDuttaCurImg from "@/assests/company/SoumalyaDuttaCur.webp";
+import SenjutiDasImg from "@/assests/alumni/SenjutiDas.webp";
+import SenjutiDasCurImg from "@/assests/company/SenjutiDasCur.webp";
+import BalkrishnaAgarwalImg from "@/assests/alumni/BalkrishnaAgarwal.webp";
+import BalkrishnaAgarwalCurImg from "@/assests/company/BalkrishnaAgarwalCur.webp";
+import AbhishekBhadraImg from "@/assests/alumni/AbhishekBhadra.webp";
+import AbhishekBhadraCurImg from "@/assests/company/AbhishekBhadraCur.webp";
+import SamikBhattacharyyaImg from "@/assests/alumni/SamikBhattacharyya.webp";
+import SamikBhattacharyyaCurImg from "@/assests/company/SamikBhattacharyyaCur.webp";
+import SouvikBoseImg from "@/assests/alumni/SouvikBose.webp";
+import SouvikBoseCurImg from "@/assests/company/SouvikBosecur.webp";
+import type { StaticImageData } from "next/image";
+
+interface HeroAlumni {
+  name: string;
+  role: string;
+  image: StaticImageData;
+  company: StaticImageData;
+}
+
+const dsAlumni: HeroAlumni[] = [
+  { name: "Aditya Kumar Barik", role: "Data Scientist", image: AdityaKumarBarikImg, company: AdityaKumarBarikCurImg },
+  { name: "Tanmay Chakraborty", role: "ML Engineer", image: TanmayChakrabortyImg, company: TanmayChakrabortyCurImg },
+  { name: "Tania Laha", role: "Decision Scientist", image: TaniaLahaImg, company: TaniaLahaCurImg },
+  { name: "Satyajit Pramanik", role: "Data Analyst", image: SatyajitPramanikImg, company: SatyajitPramanikCurImg },
+];
+const genAIAlumni: HeroAlumni[] = [
+  { name: "Priti Jha", role: "Business Analyst", image: PritiJha, company: PritiJhaCurImg },
+  { name: "Anish Banerjee", role: "Associate", image: AnishBanerjee, company: AnishBanerjeeCurImg },
+  { name: "Pranab Kumar Paul", role: "Cloud Big-Data Engineer", image: PranabKumarPaul, company: PranabKumarPaulCurImg },
+  { name: "Kinjal Dasgupta", role: "Data Engineer (BI)", image: KinjalDasguptaImg, company: KinjalDasguptaCurImg },
+];
+const cloudDataEngAlumni: HeroAlumni[] = [
+  { name: "Rajdeep Taluckdar", role: "Data Engineer", image: RajdeepTaluckdarImg, company: RajdeepTaluckdarCurImg },
+  { name: "Pranab Kumar Paul", role: "Cloud Big-Data Engineer", image: PranabKumarPaul, company: PranabKumarPaulCurImg },
+  { name: "Kinjal Dasgupta", role: "Data Engineer (BI)", image: KinjalDasguptaImg, company: KinjalDasguptaCurImg },
+  { name: "Sohini Das", role: "Data Engineer", image: SohiniDasImg, company: SohiniDasCurImg },
+];
+const dataEngAlumni: HeroAlumni[] = [
+  { name: "Rajdeep Taluckdar", role: "Data Engineer", image: RajdeepTaluckdarImg, company: RajdeepTaluckdarCurImg },
+  { name: "Kinjal Dasgupta", role: "Data Engineer (BI)", image: KinjalDasguptaImg, company: KinjalDasguptaCurImg },
+  { name: "Sohini Das", role: "Data Engineer", image: SohiniDasImg, company: SohiniDasCurImg },
+  { name: "Animesh Singh", role: "Information Analyst II", image: AnimeshSinghImg, company: AnimeshSinghCurImg },
+];
+const dataVizAlumni: HeroAlumni[] = [
+  { name: "Sayan Nayak", role: "Senior Analyst-Decision Science", image: SayanNayakImg, company: SayanNayakCurImg },
+  { name: "Soumalya Dutta", role: "Research Associate", image: SoumalyaDuttaImg, company: SoumalyaDuttaCurImg },
+  { name: "Senjuti Das", role: "Senior Consultant", image: SenjutiDasImg, company: SenjutiDasCurImg },
+  { name: "Abhinav Sinha", role: "HR Analytics", image: AbhinavSinhaImg, company: AbhinavSinhaCurImg },
+];
+const dataAnalyticsGenAIAlumni: HeroAlumni[] = [
+  { name: "Mrinal Dhar", role: "Senior Analyst", image: MrinalDharImg, company: MrinalDharCurImg },
+  { name: "Ankita Paul", role: "Analyst", image: AnkitaPaulImg, company: AnkitaPaulCurImg },
+  { name: "Arpan Basu", role: "Analyst-MMA", image: ArpanBasuImg, company: ArpanBasuCurImg },
+  { name: "Abhinav Sinha", role: "HR Analytics", image: AbhinavSinhaImg, company: AbhinavSinhaCurImg },
+];
+const businessAnalyticsAlumni: HeroAlumni[] = [
+  { name: "Mrinal Dhar", role: "Senior Analyst", image: MrinalDharImg, company: MrinalDharCurImg },
+  { name: "Balkrishna Agarwal", role: "Analyst-Actuarial", image: BalkrishnaAgarwalImg, company: BalkrishnaAgarwalCurImg },
+  { name: "Abhishek Bhadra", role: "Senior Associate", image: AbhishekBhadraImg, company: AbhishekBhadraCurImg },
+  { name: "Ankita Paul", role: "Analyst", image: AnkitaPaulImg, company: AnkitaPaulCurImg },
+];
+const cybersecurityAlumni: HeroAlumni[] = [
+  { name: "Samik Bhattacharyya", role: "Manager - OT/IoT Cybersecurity", image: SamikBhattacharyyaImg, company: SamikBhattacharyyaCurImg },
+  { name: "Mrinal Dhar", role: "Senior Analyst", image: MrinalDharImg, company: MrinalDharCurImg },
+  { name: "Arpan Basu", role: "Analyst-MMA", image: ArpanBasuImg, company: ArpanBasuCurImg },
+  { name: "Souvik Bose", role: "Data Science Consultant", image: SouvikBoseImg, company: SouvikBoseCurImg },
+];
+
+const EXCLUDED_COURSES = ["AI for Entrepreneurs", "AI for Beginners", "AI for Product Managers"];
+
+function getHeroAlumni(courseTitle: string): HeroAlumni[] | null {
+  if (EXCLUDED_COURSES.includes(courseTitle)) return null;
+  const t = courseTitle;
+  if (
+    t === "Data Science with Machine Learning & AI Certification" ||
+    t.startsWith("Data Science with Machine Learning & AI Course") ||
+    t === "AI and Machine Learning Course" ||
+    t === "Data science course (Pay after Placement)"
+  ) return dsAlumni;
+  if (t === "Generative AI Course" || t.startsWith("Generative AI Course in")) return genAIAlumni;
+  if (t === "Cloud Data Engineering Course with IIT Guwahati") return cloudDataEngAlumni;
+  if (t === " Data Engineering Course" || t.startsWith("Data Engineering Course in")) return dataEngAlumni;
+  if (t === "Data Analytics With Visualization" || t.startsWith("Data Analytics With Visualization in")) return dataVizAlumni;
+  if (t === "Data Analytics and Generative AI Course") return dataAnalyticsGenAIAlumni;
+  if (t === "Business Analytics with Python") return businessAnalyticsAlumni;
+  if (t === "Cybersecurity Fundamentals") return cybersecurityAlumni;
+  return dsAlumni;
+}
+
 interface CourseHeroProps {
   course: Course;
 }
@@ -310,13 +422,6 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     "Cybersecurity Fundamentals": "170 Hours",
   };
 
-  // usage
-
-  const dataScienceAlumni = [
-    { name: "Priti Jha", studentImg: PritiJha, companyLogo: amazon },
-    { name: "Pranab Kumar Paul", studentImg: PranabKumarPaul, companyLogo: ibm },
-    { name: "Anish Banerjee", studentImg: AnishBanerjee, companyLogo: pwc },
-  ];
   // Determine if it's the specific IIT Guwahati course
   const isIITGuwahatiCourse =
     course.title === "Data Science with Machine Learning & AI Certification" ||
@@ -690,37 +795,43 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
             </div>
 
 
-            {/* Alumni Cards - Data Science with ML & AI only */}
-            {course.title === "Data Science with Machine Learning & AI Certification" && (
-              <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {[
-                  { name: "Aditya Kumar Barik", role: "Data Scientist", location: "Bengaluru", image: AdityaKumarBarikImg, company: AdityaKumarBarikCurImg },
-                  { name: "Tanmay Chakraborty", role: "ML Engineer", location: "Kolkata", image: TanmayChakrabortyImg, company: TanmayChakrabortyCurImg },
-                  { name: "Tania Laha", role: "Decision Scientist", location: "Bangalore", image: TaniaLahaImg, company: TaniaLahaCurImg },
-                  { name: "Satyajit Pramanik", role: "Data Analyst", location: "Bangalore", image: SatyajitPramanikImg, company: SatyajitPramanikCurImg },
-                ].map((alumni, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/95 rounded-xl p-3 flex flex-col items-center text-center gap-2 shadow-md border border-white/30"
-                  >
-                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#009fda]/30 flex-shrink-0">
-                      <Image src={alumni.image} alt={alumni.name} fill className="object-cover" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-800 text-xs leading-snug">{alumni.name}</p>
-                      <p className="text-[11px] text-[#009fda] font-medium">{alumni.role}</p>
-                      <p className="text-[10px] text-gray-400">{alumni.location}</p>
-                    </div>
-                    <div className="mt-auto pt-2 border-t border-gray-100 w-full">
-                      <p className="text-[9px] text-gray-400 mb-1 uppercase tracking-wider">At</p>
-                      <div className="relative h-12 w-full">
-                        <Image src={alumni.company} alt={`${alumni.name} company`} fill className="object-contain" />
+            {/* Alumni Cards - shown for all applicable courses */}
+            {(() => {
+              const heroAlumni = getHeroAlumni(course.title);
+              if (!heroAlumni) return null;
+              const cardStyles = [
+                { bg: "from-[#dff0fb] to-white", border: "border-[#a8d8f0]", ring: "ring-[#3aade0]", roleColor: "text-[#0077b6]" },
+                { bg: "from-[#eee6ff] to-white", border: "border-[#ccb8f7]", ring: "ring-[#8b5cf6]", roleColor: "text-[#6d28d9]" },
+                { bg: "from-[#d9f5e8] to-white", border: "border-[#9ddbbf]", ring: "ring-[#34c87a]", roleColor: "text-[#0e7c46]" },
+                { bg: "from-[#fff0d9] to-white", border: "border-[#f5cc88]", ring: "ring-[#f59e0b]", roleColor: "text-[#b45309]" },
+              ];
+              return (
+                <div className="mt-4 grid grid-cols-4 gap-2">
+                  {heroAlumni.map((alumni, index) => {
+                    const s = cardStyles[index % 4];
+                    return (
+                      <div
+                        key={index}
+                        className={`bg-gradient-to-b ${s.bg} rounded-xl p-2 flex flex-col items-center text-center gap-1.5 shadow-md border ${s.border}`}
+                      >
+                        <div className={`relative w-10 h-10 rounded-full overflow-hidden ring-2 ${s.ring} flex-shrink-0`}>
+                          <Image src={alumni.image} alt={alumni.name} fill className="object-cover" />
+                        </div>
+                        <div className="w-full">
+                          <p className="font-bold text-gray-800 text-[12px] leading-tight line-clamp-2">{alumni.name}</p>
+                          <p className={`text-[10px] font-semibold mt-0.5 line-clamp-1 ${s.roleColor}`}>{alumni.role}</p>
+                        </div>
+                        <div className={`w-full border-t ${s.border} pt-1`}>
+                          <div className="relative h-12 w-full">
+                            <Image src={alumni.company} alt="company" fill className="object-contain" />
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+                    );
+                  })}
+                </div>
+              );
+            })()}
 
             {/* <div className="space-y-4 overflow-hidden py-4">
               <div className="text-white text-base font-semibold px-2">

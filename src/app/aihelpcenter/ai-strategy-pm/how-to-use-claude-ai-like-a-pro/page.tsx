@@ -292,7 +292,7 @@ const COURSES = [
   { name: "Data Engineering", link: "/courses/data-engineering-course" },
   { name: "Data Analytics", link: "/courses/data-analytics-course" },
   { name: "Data Analytics & Gen AI", link: "/courses/data-analytics-and-generative-ai-course" },
-  { name: "Generative AI", link: "/courses/iit-generative-ai-course" },
+  { name: "Generative AI", link: "/courses/generative-ai-course" },
   { name: "AI & Machine Learning", link: "/courses/ai-machine-learning-course" },
   { name: "Data Science (Pay after placement)", link: "/courses/no-upfront-fees-data-science-and-ml-course" },
 ];
@@ -605,7 +605,7 @@ export default function ClaudeAILikeAProPage() {
               <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
                 <p>
                   Claude AI is a{" "}
-                  <a href="https://ivyproschool.com/courses/iit-generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
+                  <a href="https://ivyproschool.com/courses/generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">
                     Large Language Model (LLM)
                   </a>{" "}
                   developed by the company Anthropic. LLMs are AI systems trained on large amounts of text data that can understand language, generate responses, analyze information, and assist with various tasks.
@@ -773,7 +773,7 @@ export default function ClaudeAILikeAProPage() {
                 5. How to Write Better Prompts in Claude
               </h2>
               <p className="text-gray-500 text-sm sm:text-base mb-6">
-                <a href="https://ivyproschool.com/courses/iit-generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">Prompt engineering</a> is one of the most important skills when working with AI tools like Claude. The most effective framework follows a simple structure:
+                <a href="https://ivyproschool.com/courses/generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">Prompt engineering</a> is one of the most important skills when working with AI tools like Claude. The most effective framework follows a simple structure:
               </p>
               <div className="flex items-center gap-3 mb-6 p-4 rounded-xl bg-purple-50 border border-purple-100">
                 <div className="flex items-center gap-2 text-purple-700 font-bold text-base sm:text-lg">
@@ -1354,7 +1354,7 @@ export default function ClaudeAILikeAProPage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/courses/iit-generative-ai-course"
+                  href="/courses/generative-ai-course"
                   className="inline-flex items-center gap-2 rounded-xl bg-white text-[#013a81] font-bold text-sm px-5 py-2.5 hover:bg-blue-50 transition-colors shadow-sm"
                 >
                   Generative AI Course <ArrowUpRight size={14} />
