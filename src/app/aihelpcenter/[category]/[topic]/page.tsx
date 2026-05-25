@@ -615,7 +615,7 @@ const List = ({ items }: { items: string[] }) => (
         {items.map((item, idx) => (
             <li key={idx} className="flex items-start gap-2">
                 <div className="mt-2 h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: themeColors.primary }}></div>
-                <span className="text-gray-700 text-sm sm:text-base">{item}</span>
+                <span className="text-gray-700 text-sm sm:text-base" dangerouslySetInnerHTML={{ __html: item }} />
             </li>
         ))}
     </ul>
