@@ -998,7 +998,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                     </div>
                     <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
                       {(course.title === "Generative AI Course" || course.title === "Data Science with Machine Learning & AI Certification") ?
-                        "A stamp of approval from E&ICT Academy, tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
+                        "A stamp of approval from Ivy, tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
                         course.title === "Data Science Course in Kolkata" ?
                           "On successful completion, students receive a Data Science Certification from Ivy Professional School, validating their skills in analytics, machine learning, and AI. This certification strengthens resumes and improves employability in competitive job markets." :
                           course.title === "Data Science with Machine Learning & AI Course in Delhi" ?

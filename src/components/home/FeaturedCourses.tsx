@@ -77,7 +77,7 @@ const featuredCourses: Course[] = [
     keyFeatures: [
       "20+ real-life project",
       "Live doubt-clearing sessions",
-      "Learn Machine Learning, Deep Learning, Langchain, RAG, Transformer, LLM",
+      "Master LLMs, RAG, LoRA, LangChain,  AI Agents & Fine-Tuned LLMs",
       "Will I get a certificate after the course? Yes, upon completion.",
     ]
   },

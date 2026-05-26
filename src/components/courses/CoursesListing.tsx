@@ -145,8 +145,8 @@ const COURSES: Course[] = [
     slug: "generative-ai-course",
     keyFeatures: [
       "20+ real-world GenAI projects",
-      "IIT Guwahati dual certification",
       "Live sessions + lifetime recordings",
+      "Master LLMs, RAG, LoRA, LangChain,  AI Agents & Fine-Tuned LLMs"
     ],
     tools: ["Python", "LLM", "Transformer", "RAG", "LangChain", "ML"],
   },

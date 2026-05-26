@@ -1,5 +1,7 @@
 import { Figma } from "lucide-react";
 import { topics } from "./mockTopicsData";
+import { title } from "process";
+import Loading from "@/app/courses/[slug]/loading";
 
 // Mock API functions to simulate data fetching
 export interface Course {
@@ -125,7 +127,7 @@ const courses: Course[] = [
       "Design intelligent systems that generate text, images, audio, and automate business workflows",
       "Deploy end-to-end AI applications using Transformer models, RAG, and cloud platforms like Azure",
       "Work on 5+ capstone projects and build a strong portfolio that showcases real-world Gen AI skills",
-      "Earn prestigious IIT certifications and receive 1:1 mentorship and career guidance"
+      "Earn Ivy certifications and receive 1:1 mentorship and career guidance"
     ],
     prerequisites: [
       "Familiarity with basic digital tools and online platforms.",
@@ -137,64 +139,126 @@ const courses: Course[] = [
     curriculum: [
       {
         id: "m1",
-        title: "GenAI App Builder - Foundation Certificate Program",
-        duration: "24 hrs",
+        title: "GenAI Foundations & Development Setup",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
-          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
-          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
-          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
-          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
-          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
-          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
-          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+          { id: "t1", title: "Introduction to Generative AI: history, applications, industry impact", duration: "2 hrs" },
+          { id: "t2", title: "LLM ecosystem overview: GPT, Claude, Copilot, open-source models", duration: "2 hrs" },
+          { id: "t3", title: "Transformer architecture: attention, encoder-decoder, positional encoding", duration: "3 hrs" },
+          { id: "t4", title: "Python essentials: data types, control flow, functions, list comprehensions", duration: "2 hrs" },
+          { id: "t5", title: "Working with APIs: requests, JSON parsing, environment variables", duration: "2 hrs" },
+          { id: "t6", title: "Git & GitHub workflow: init, commit, branching, pull requests", duration: "2 hrs" },
+          { id: "t7", title: "Virtual environments: venv, requirements.txt, pip freeze", duration: "1 hr" },
+          { id: "t8", title: "Jupyter Notebooks and Google Colab setup for AI development", duration: "2 hrs" }
         ]
       },
       {
         id: "m2",
-        title: "Advanced GenAI and Machine Learning",
-        duration: "24 hrs",
+        title: "Large Language Models & Prompt Engineering",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
-          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
-          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
-          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
-          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
-          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
-          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+          { id: "t1", title: "BERT vs GPT vs T5 vs LLaMA — when to use which", duration: "2 hrs" },
+          { id: "t2", title: "Tokenisation: BPE, WordPiece, SentencePiece with HuggingFace", duration: "2 hrs" },
+          { id: "t3", title: "Text generation parameters: temperature, top-k, top-p, repetition penalty", duration: "2 hrs" },
+          { id: "t4", title: "Prompt basics: zero-shot, few-shot, chain-of-thought", duration: "2 hrs" },
+          { id: "t5", title: "Advanced prompting: ReAct, Tree-of-Thought, structured output", duration: "3 hrs" },
+          { id: "t6", title: "System prompts, role definitions, multi-turn conversation design", duration: "2 hrs" },
+          { id: "t7", title: "OpenAI API: chat completions, function calling, streaming", duration: "2 hrs" },
+          { id: "t8", title: "Token limits, context windows, cost estimation for production", duration: "1 hr" }
         ]
       },
       {
         id: "m3",
-        title: "Advanced AI Integration and Multimodal Applications",
-        duration: "30 hrs",
+        title: "Copilot, Claude & AI Development Workflows",
+        duration: "8 hrs",
         topics: [
-          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
-          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
-          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
-          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
-          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
-          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
-          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
-          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
-          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+          { id: "t1", title: "GitHub Copilot fundamentals: AI pair programming workflows", duration: "1.5 hrs" },
+          { id: "t2", title: "Copilot in VS Code: autocomplete, refactoring, test generation", duration: "1.5 hrs" },
+          { id: "t3", title: "Claude API: chatbot construction with Anthropic's SDK", duration: "2 hrs" },
+          { id: "t4", title: "Comparison of Copilot vs Claude across coding and conversation tasks", duration: "1 hr" },
+          { id: "t5", title: "Integrating AI assistance into developer workflows effectively", duration: "1 hr" },
+          { id: "t6", title: "Responsible use: validating AI-generated code, avoiding over-reliance", duration: "1 hr" }
         ]
       },
       {
         id: "m4",
-        title: "Mastering Multimodal Fusion and GenAI Frameworks",
-        duration: "14 hrs",
+        title: "Hugging Face Ecosystem & Fine-Tuning (LoRA / QLoRA)",
+        duration: "24 hrs",
         topics: [
-          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
-          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
-          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
-          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
-          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
-          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+          { id: "t1", title: "HuggingFace Hub, Transformers, Datasets, PEFT, Evaluate, Accelerate", duration: "3 hrs" },
+          { id: "t2", title: "Loading models: AutoModel, AutoTokenizer, pipeline()", duration: "2.5 hrs" },
+          { id: "t3", title: "Running local inference: text gen, classification, NER, summarisation", duration: "2.5 hrs" },
+          { id: "t4", title: "Full fine-tuning vs. PEFT — conceptual and practical comparison", duration: "2 hrs" },
+          { id: "t5", title: "LoRA: intuition, rank (r), alpha, target modules selection", duration: "3 hrs" },
+          { id: "t6", title: "QLoRA: 4-bit/8-bit quantisation with bitsandbytes + LoRA", duration: "3 hrs" },
+          { id: "t7", title: "Data preparation: instruction-following format, chat templates, ethical curation", duration: "3 hrs" },
+          { id: "t8", title: "Trainer API and SFTTrainer from TRL for supervised fine-tuning", duration: "3 hrs" },
+          { id: "t9", title: "Evaluation: BLEU, ROUGE, perplexity — quantitative model comparison", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "RAG Systems & Hybrid Search",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Why RAG: knowledge cutoff limitations and hallucination reduction", duration: "1 hr" },
+          { id: "t2", title: "RAG pipeline: ingestion → chunking → embedding → retrieval → generation", duration: "2 hrs" },
+          { id: "t3", title: "Embedding models: sentence-transformers, OpenAI, BGE, E5", duration: "2 hrs" },
+          { id: "t4", title: "Vector databases: FAISS (local), ChromaDB, Pinecone", duration: "2 hrs" },
+          { id: "t5", title: "Chunking strategies: fixed-size, sentence-based, semantic", duration: "1.5 hrs" },
+          { id: "t6", title: "Similarity search: cosine similarity, ANN algorithms", duration: "1.5 hrs" },
+          { id: "t7", title: "Hybrid search: dense (vector) + sparse (BM25/TF-IDF) retrieval", duration: "2 hrs" },
+          { id: "t8", title: "Re-ranking: cross-encoders, Cohere rerank API", duration: "1 hr" },
+          { id: "t9", title: "RAG evaluation: context relevance, faithfulness, answer relevancy", duration: "1 hr" },
+          { id: "t10", title: "LlamaIndex: document loaders, query engine, response synthesiser", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "LangChain, LangGraph & AI Agents",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to agents: multi-step reasoning and tool use", duration: "1.5 hrs" },
+          { id: "t2", title: "LangChain architecture: chains, prompts, memory, output parsers", duration: "2 hrs" },
+          { id: "t3", title: "LCEL: composing pipelines declaratively with | operators", duration: "2 hrs" },
+          { id: "t4", title: "Memory types: buffer, summary, and vector store memory", duration: "1.5 hrs" },
+          { id: "t5", title: "Creating custom tools and binding them to agents", duration: "2 hrs" },
+          { id: "t6", title: "Agent types: ReAct, OpenAI Functions Agent, Self-Ask", duration: "2 hrs" },
+          { id: "t7", title: "LangGraph: stateful multi-step workflows with branching and loops", duration: "2 hrs" },
+          { id: "t8", title: "Multi-agent patterns: supervisor, handoff, parallel execution", duration: "2 hrs" },
+          { id: "t9", title: "Error handling and fallback strategies in production agents", duration: "1 hr" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "AI Model Deployment & Scaling",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "FastAPI: routing, request/response models, async endpoints", duration: "2 hrs" },
+          { id: "t2", title: "Serving LLMs: APIs, microservices, inference pipelines", duration: "2 hrs" },
+          { id: "t3", title: "Docker: images, containers, Dockerfile, docker-compose", duration: "2 hrs" },
+          { id: "t4", title: "Production Dockerfiles for Python AI apps — multi-stage builds", duration: "2 hrs" },
+          { id: "t5", title: "Environment management: secrets, .env, GPU passthrough", duration: "1.5 hrs" },
+          { id: "t6", title: "Cloud deployment: HuggingFace Spaces / AWS EC2 / Render", duration: "2 hrs" },
+          { id: "t7", title: "Optimisation: quantisation, caching, lazy loading", duration: "1.5 hrs" },
+          { id: "t8", title: "Benchmarking: latency, throughput, cost-performance analysis", duration: "1.5 hrs" },
+          { id: "t9", title: "API security: rate limiting, API keys, input validation", duration: "1.5 hrs" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "Multimodal AI — Vision, Voice & Image Generation",
+        duration: "8 hrs",
+        topics: [
+          { id: "t1", title: "Vision-Language Models: GPT-4o, LLaVA, CLIP — how they work", duration: "1.5 hrs" },
+          { id: "t2", title: "Image understanding: captioning, VQA, OCR, document parsing", duration: "1.5 hrs" },
+          { id: "t3", title: "DALL-E and Stable Diffusion: prompt-to-image generation", duration: "1.5 hrs" },
+          { id: "t4", title: "OpenAI Whisper: transcription and translation pipelines", duration: "1.5 hrs" },
+          { id: "t5", title: "Text-to-Speech: ElevenLabs API, voice cloning basics", duration: "1 hr" },
+          { id: "t6", title: "Building multimodal pipelines: text + image input, structured output", duration: "1 hr" }
         ]
       }
     ]
-
 
     ,
 
@@ -566,7 +630,7 @@ const courses: Course[] = [
   {
     id: '3',
     title: " Data Engineering Course",
-    description: "Data is growing faster than ever, but businesses need professionals who can collect, clean, transform, store, and move that data reliably. Ivy Professional School’s Data Engineering Course helps you learn the practical skills required to work with databases, ETL pipelines, cloud data systems, big data platforms, and production-ready data workflows. Designed for freshers, working professionals, developers, analysts, and career switchers, this course focuses on hands-on learning, industry-relevant projects, and placement preparation. You will learn how data moves from raw sources to dashboards, analytics systems, machine learning models, and business decision-making platforms. With Ivy’s experience in data and AI education since 2008, the program helps you build a strong foundation for roles in Data Engineering, Cloud Data Engineering, ETL Development, Big Data Engineering, and Data Pipeline Automation.",
+    description: "Learn how to design cloud architecture, manage enterprise databases, and build reliable big data pipelines.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Engineering",
     students: 1549,
@@ -1366,7 +1430,7 @@ const courses: Course[] = [
   {
     id: '6',
     title: "Data Analytics With Visualization",
-    description: "Every business today needs professionals who can turn raw data into clear insights and better decisions. Ivy Professional School’s Data Analytics Course with Visualization helps you build practical skills in data cleaning, analysis, visualization, reporting, and dashboard creation using industry-relevant tools. This course is designed for freshers, working professionals, graduates, and career switchers who want to enter the growing field of data analytics. You will learn how to work with business datasets, answer real business questions, create interactive dashboards, and present insights in a way that managers and decision-makers can act on. With Ivy’s experience in data science and AI education since 2008, the program focuses on hands-on learning, portfolio projects, interview preparation, and placement support to help you confidently build a career in analytics.",
+    description: "Build practical skills to clean, analyze, model, and present business data using industry-standard visualization tools.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -1619,7 +1683,7 @@ const courses: Course[] = [
   {
     id: '7',
     title: "Data Analytics and Generative AI Course",
-    description: "Data today drives business decisions, but the future belongs to professionals who can analyze data and use AI to generate insights, automate workflows, and solve real problems. Ivy Professional School’s Data Analytics and Generative AI Course equips you with practical skills in data analysis, visualization, dashboards, SQL, Power BI, and modern AI tools. This program is designed for freshers, working professionals, analysts, engineers, and career changers who want to build a strong analytics foundation while mastering generative AI techniques used in business, marketing, reporting, automation, and intelligent decision‑making. Learn how to turn data into insights, build compelling dashboards, automate analytics workflows, generate AI‑assisted reports, and apply generative AI tools to real business tasks. With Ivy’s decade‑plus experience in data and AI training and strong industry‑aligned curriculum, this course prepares you for data analyst, analytics specialist, business intelligence, and AI‑enabled roles.",
+    description: "Future-proof your data career by blending core analytics tools with cutting-edge Generative AI automation workflows.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -2547,7 +2611,7 @@ const courses: Course[] = [
   {
     id: '10',
     title: "AI and Machine Learning Course",
-    description: "Ivy Professional School’s AI and Machine Learning Course helps you learn how AI models work, how to train them, evaluate them, and apply them across business, analytics, automation, and product development. This course is ideal for engineers, developers, analysts, data professionals, and career switchers who want hands‑on AI and ML skills, from the fundamentals of algorithms and neural networks to real projects and deployment workflows. You’ll learn how to work with Python‑based frameworks, build predictive models, use machine learning pipelines, and integrate AI capabilities into applications and decision systems. With Ivy’s experience in data and AI education since 2008, this program blends theory with practical implementation, project work, and career support, helping you build job‑ready AI skills that employers value.",
+    description: "Dive into core algorithmic engineering to build, evaluate, and deploy advanced machine learning models for industry applications.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "AI & Machine Learning",
     students: 1098,
@@ -8937,7 +9001,7 @@ const courses: Course[] = [
   {
     id: '22',
     title: "AI for Entrepreneurs",
-    description: "AI is transforming the way businesses operate, but most entrepreneurs struggle to apply it strategically. Ivy Professional School’s AI for Entrepreneurs Course teaches you how to use modern AI tools, including ChatGPT, automation platforms, AI agents, and workflow builders, to solve real business problems. This program is designed for founders, business owners, consultants, freelancers, and leaders who want to use AI to increase productivity, automate repetitive tasks, enhance customer communication, analyze business data, and make smarter decisions. You don’t need a technical background. You’ll learn practical AI skills that help you create value, streamline operations, and grow your business faster. Build practical workflows, identify high‑impact use cases in your business, and learn how AI can support marketing, sales, operations, customer support, and internal processes. With Ivy’s experience in data and AI training since 2008, this course equips you to confidently integrate AI into your business strategy and workflows.",
+    description: "Master high-converting AI tools to automate business operations, skyrocket productivity, and build custom no-code applications without a technical background.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,

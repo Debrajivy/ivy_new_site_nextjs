@@ -512,6 +512,217 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               {course.description}
             </p>
 
+            <div>
+              {
+                course.title === "AI for Entrepreneurs" ?
+                  <>
+                    <h2 className="text-4xl font-bold text-white mb-8">
+                      What You Will Learn
+                    </h2>
+
+                    <div className="space-y-6">
+
+                      <h3 className="text-xl font-normal text-white">
+                        {/* <span className="font-bold" style={{ color: '#2b2b2b' }}>•</span>{" "} */}
+                        Use ChatGPT, Claude, Gemini, and Grok for business
+                        communication, research, and executive reporting.
+                      </h3>
+
+                      <h3 className="text-xl font-normal text-white">
+                        {/* <span className="font-bold" style={{ color: '#2b2b2b' }}>•</span>{" "} */}
+                        Create brand messages, competitor insights, product photos,
+                        reels, and lead generation workflows.
+                      </h3>
+
+                      <h3 className="text-xl font-normal text-white">
+                        {/* <span className="font-bold" style={{ color: '#2b2b2b' }}>•</span>{" "} */}
+                        No-Code Automation:
+                        Build trigger-based workflows for customer inquiries,
+                        data entry, invoice processing, and back-office tasks.
+                      </h3>
+
+                      <h3 className="text-xl font-normal text-white">
+                        {/* <span className="font-bold" style={{ color: '#2b2b2b' }}>•</span>{" "} */}
+                        Data & Roadmaps:
+                        Analyze business data, create AI-assisted dashboards,
+                        and design a custom AI implementation roadmap.
+                      </h3>
+
+                    </div>
+                  </>
+                  :
+                  course.title === "Data Science with Machine Learning & AI Certification" ?
+                    <>
+                      <h2 className="text-4xl font-bold text-white mb-8">
+                        What You Will Learn
+                      </h2>
+
+                      <div className="space-y-6">
+
+                        <h3 className="text-xl font-normal text-white">
+                          {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            Analytics Core:
+                          </span>{" "} */}
+                          Master Advanced Excel, SQL, Tableau, Power BI, Python, R,
+                          statistics, and business reporting.
+                        </h3>
+
+                        <h3 className="text-xl font-normal text-white">
+                          {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            ML & Deep Learning:
+                          </span>{" "} */}
+                          Build predictive modeling, clustering, decision trees,
+                          ensemble techniques, NLP, and deep learning.
+                        </h3>
+
+                        <h3 className="text-xl font-normal text-white">
+                          {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            AI-Assisted Efficiency:
+                          </span>{" "} */}
+                          Use Generative AI for rapid SQL generation, automated EDA,
+                          dashboard insights, and documentation.
+                        </h3>
+
+                        <h3 className="text-xl font-normal text-white">
+                          {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            Portfolio & Career Prep:
+                          </span>{" "} */}
+                          Build hands-on projects across industry use cases with
+                          interview coaching and placement support.
+                        </h3>
+
+                      </div>
+                    </>
+                    :
+                    course.title === "Data Analytics and Generative AI Course" ?
+                      <>
+                        <h2 className="text-4xl font-bold text-white mb-8">
+                          What You Will Learn
+                        </h2>
+                        <div className="space-y-6">
+                          <h3 className="text-xl font-normal text-white">
+                            {/* <span className="font-bold"
+                              style={{ color: "#2b2b2b" }}
+                            >
+                              Core Analytics:
+                            </span>{" "} */}
+                            Master Excel, SQL, Power BI, and Power Pivot for data
+                            cleaning, dashboards, and reporting.
+                          </h3>
+
+                          <h3 className="text-xl font-normal text-white">
+                            {/* <span className="font-bold"
+                              style={{ color: "#2b2b2b" }}
+                            >
+                              GenAI Execution:
+                            </span>{" "} */}
+                            Leverage Generative AI for advanced business research,
+                            coding support, and workflow automation.
+                          </h3>
+
+                          <h3 className="text-xl font-normal text-white">
+
+                            Build your Python foundation to design and deploy custom
+                            GenAI applications using Streamlit.
+                          </h3>
+
+                          <h3 className="text-xl font-normal text-white">
+
+                            Combine analytics and GenAI to automate executive reports
+                            and solve complex business problems.
+                          </h3>
+                        </div>
+                      </>
+                      :
+                      course.title === "Data Analytics With Visualization" ?
+
+                        <>
+                          <h2 className="text-4xl font-bold text-white mb-8">
+                            What You Will Learn
+                          </h2>
+                          <div className="space-y-6">
+                            <h3 className="text-xl font-normal text-white">
+                              {/* <span className="font-bold"
+                              style={{ color: "#2b2b2b" }}
+                            >
+                              Core Analytics:
+                            </span>{" "} */}
+                              Learn executive business analysis, interactive pivot tables, dynamic dashboards, and AI-assisted workflows.
+                            </h3>
+
+                            <h3 className="text-xl font-normal text-white">
+                              {/* <span className="font-bold"
+                              style={{ color: "#2b2b2b" }}
+                            >
+                              GenAI Execution:
+                            </span>{" "} */}
+                              Manage corporate databases, write complex queries, and use AI tools to optimize SQL code.
+                            </h3>
+
+                            <h3 className="text-xl font-normal text-white">
+
+                              Build enterprise dashboards using Power Query, data modeling, advanced charts, and DAX formulas.
+                            </h3>
+
+                            <h3 className="text-xl font-normal text-white">
+
+                              Master data cleaning, predictive modeling, and automated EDA using Pandas, NumPy, and Seaborn.
+                            </h3>
+                          </div>
+                        </>
+
+
+                        :
+                        course.title === "AI and Machine Learning Course" ?
+                          <>
+
+                            <h2 className="text-4xl font-bold text-white mb-8">
+                              What You Will Learn
+                            </h2>
+                            <div className="space-y-6">
+                              <h3 className="text-xl font-normal text-white">
+                                {/* <span className="font-bold"
+                              style={{ color: "#2b2b2b" }}
+                            >
+                              Core Analytics:
+                            </span>{" "} */}
+                                Master probability distributions, exploratory data analysis, feature engineering, and statistical testing in Python.
+                              </h3>
+
+                              <h3 className="text-xl font-normal text-white">
+                                {/* <span className="font-bold"
+                              style={{ color: "#2b2b2b" }}
+                            >
+                              GenAI Execution:
+                            </span>{" "} */}
+                                Build and optimize machine learning models using Scikit-Learn, NumPy, Pandas, and Seaborn.                              </h3>
+
+                              <h3 className="text-xl font-normal text-white">
+
+                                Architect natural language processing solutions, decision trees, clustering, and deep learning networks.                              </h3>
+
+                              <h3 className="text-xl font-normal text-white">
+
+Deploy live web applications using Flask, Streamlit, automated EDA pipelines, and code documentation.                              </h3>
+                            </div>
+                          </>
+                          : null
+
+              }
+            </div>
+
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 {

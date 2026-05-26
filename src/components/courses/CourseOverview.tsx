@@ -117,7 +117,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
               </div>
 
               {
-                course.title === "AI for Entrepreneurs"  || course.title === "AI for Beginners" ?
+                course.title === "AI for Entrepreneurs" || course.title === "AI for Beginners" ?
 
                   <section className="py-10">
                     <div className="container mx-auto px-4">
@@ -419,7 +419,54 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                             </div>
                           </>
                         );
-                      } else {
+                      }
+                      else if (course.title === "Generative AI Course") {
+
+                        return (
+                          <>
+                            <div className="flex items-start">
+                              <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">Hiring Partners</div>
+                                <p className="text-sm text-gray-600"> 94% Placement Rate | 4-5 LPA avg salary | 17,000+ job openings in India</p>
+                              </div>
+
+                            </div>
+
+                            <div className="flex items-start">
+                              <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">Career Roles You'll Be Ready For: </div>
+                                <p className="text-sm text-gray-600"> AI Ops Engineer, LLM App Developer, ML Engineer, GenAI Engineer</p>
+                              </div>
+
+                            </div>
+                           
+                            <div className="flex items-start">
+                              <Users size={35} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div style={{ marginLeft: 1 }} className="font-medium">Alumni Network</div>
+                                <p className="text-sm text-gray-600">
+                                  Get <a href="https://ivyproschool.com/alumni" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">connected with alumni, </a>
+                                  Join over <a href="https://chat.whatsapp.com/ImcpUAYaD87FVwce6ZMaYN" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">WhatsApp Student Community </a>
+                                  and Lifetime <a href="https://youtu.be/HTTMGTCxd0Q?si=__QkZiVlXQM9t8A0" target="_blank" rel="noopener noreferrer" className="text-[#00a1db] font-semibold hover:underline">Placement Assistance</a>
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex items-start">
+                              <Award size={35} className="text-ivy-blue mr-3 mt-1" />
+                              <div>
+                                <div className="font-medium">Industry Recognition</div>
+                                <p className="text-sm text-gray-600">Fortune 500 hiring partners including Google, Microsoft, Accenture, IBM, Oracle, Cognizant</p>
+                              </div>
+                            </div>
+                          </>
+                        )
+                      }
+
+
+                      else {
                         /* Standard Course Logic (Default) */
                         return (
                           <>
