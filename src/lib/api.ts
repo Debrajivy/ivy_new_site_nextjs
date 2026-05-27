@@ -105,7 +105,7 @@ const courses: Course[] = [
   {
     id: '1',
     title: "Generative AI Course",
-    description: "Generative AI is revolutionizing how businesses create content, automate processes, analyze data, and make smarter decisions. Ivy Professional School’s Generative AI Course teaches you to use AI tools like ChatGPT, Gemini, Claude, and AI agents to solve real-world business challenges.\n\n Designed for professionals, entrepreneurs, analysts, developers, and career switchers, this program focuses on hands-on applications. Learn to build AI solutions for automation, intelligent workflows, content generation, customer experience, and productivity enhancement. With Ivy’s decade-plus experience in AI and data education, this course equips you to lead AI initiatives, implement practical AI workflows, and gain a competitive edge in your career or business.",
+    description: "Master cutting-edge GenAI tools, large language models (LLMs), RAG systems, and stateful AI agents to build and deploy production-grade automation workflows.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
     students: 5876,

@@ -508,7 +508,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               </div>
             </div>
 
-            <p style={{ marginTop: 10 }} className="text-lg opacity-90">
+            <p style={{ marginTop: 10 }} className="text-lg font-normal opacity-90">
               {course.description}
             </p>
 
@@ -715,10 +715,35 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
                               <h3 className="text-xl font-normal text-white">
 
-Deploy live web applications using Flask, Streamlit, automated EDA pipelines, and code documentation.                              </h3>
+                                Deploy live web applications using Flask, Streamlit, automated EDA pipelines, and code documentation.                              </h3>
                             </div>
                           </>
-                          : null
+                          :
+                          course.title === "Generative AI Course" ?
+                            <>
+
+
+                              <div className="space-y-6">
+                                <h3 style={{ fontSize: 17 }} className="font-normal text-white">
+
+                                  Master Python setup, Git workflows, prompt engineering (ReAct, Tree-of-Thought), tokenization, and advanced API integrations.                                </h3>
+                                <h3 style={{ fontSize: 17 }} className="font-normal text-white">
+
+                                  Implement open-source model fine-tuning using LoRA/QLoRA alongside robust vector database retrieval-augmented generation pipelines.                              </h3>
+
+                                <h3 style={{ fontSize: 17 }} className="font-normal text-white">
+
+                                  Architect multi-agent execution frameworks, custom tools, and complex stateful workflows using LangGraph and LCEL.
+                                </h3>
+                                <h3 style={{ fontSize: 17 }} className="font-normal text-white">
+
+Deploy scalable AI microservices via FastAPI and Docker, and build multi-sensory applications using Vision, Whisper, and Stable Diffusion.                                </h3>
+                              </div>
+                            </>
+                            :
+                            null
+
+
 
               }
             </div>
