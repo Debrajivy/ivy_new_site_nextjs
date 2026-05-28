@@ -906,6 +906,108 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       ? "Ivy Professional School Certification"
                       : ""}
               </div>
+
+              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                <Award size={16} className="mr-2" />
+                Placement Support
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4">
+
+              {
+                course.title != "AI for Beginners" ?
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="bg-white/10 text-white hover:bg-white/20"
+                    onClick={() => {
+                      let syllabusUrl = "";
+
+                      if (
+                        course.title ===
+                        "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
+                      ) {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1cT9-gqqqifm-HvBE81WDsql0FxQIs8hP/preview";
+                      } else if (
+                        course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
+                      ) {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1a1gYATYn33yUVxWXZOdp5aGjFkYXCCk4/preview";
+                      } else if (
+                        course.title === " Data Engineering Course"
+                      ) {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
+                      } else if (
+                        course.title ===
+                        "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
+                      ) {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/13LLhT-UYWyEtwOHa5ycbVoOGkgLAw3pr/preview";
+                      } else if (
+                        course.title === "Data Analytics and Generative AI Course"
+                      ) {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1Z7JSZ6hlidaSbNAX4so5eXBBJHlSmxJN/preview";
+                      } else if (
+                        course.title ===
+                        "Cloud Data Engineering Course with IIT Guwahati"
+                      ) {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1PrR-EKLovlmE3lxKFILL6eXhlCWeOmAB/preview";
+                      } else if (course.title === "AI for Product Managers") {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1lwkKAtfPeDvY1lU2h0CdD3RqqT2QLgEZ/preview";
+                      }
+                      else if (
+                        course.title === "Data science course (Pay after Placement)"
+                      ) {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/preview";
+                      }
+                      else if (
+                        course.title === "AI and Machine Learning Course"
+                      ) {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1p4d84pQ8c-HmIYD7fUH16HNPkmfQzN7r/preview";
+                      }
+                      else if (
+                        course.title === "AI for Entrepreneurs"
+                      ) {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1X4593VFm1GOGoRlHrLOd0pqFq3wkhymF/preview";
+                      }
+
+                      else if (course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai") {
+                        syllabusUrl =
+                          "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
+                      }
+                      window.open(syllabusUrl, "_blank");
+                    }}
+                  >
+                    Get Course Details                  </Button>
+                  :
+                  null
+
+              }
+
+
+
+
+
+              {course.title === "Data Science with Machine Learning & AI Certification" ? (
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "flex-end",
+                  }}
+                >
+                  Earn ₹8,000* from Govt. of India incentive program
+                </div>
+              ) : null}
             </div>
 
             <div className="space-y-2">
@@ -1078,6 +1180,8 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
             </div>
 
 
+
+
             {/* Alumni Cards - shown for all applicable courses */}
             {(() => {
               const heroAlumni = getHeroAlumni(course.title);
@@ -1204,103 +1308,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
 
 
 
-            <div className="flex flex-wrap items-center gap-4">
 
-              {
-                course.title != "AI for Beginners" ?
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="bg-white/10 text-white hover:bg-white/20"
-                    onClick={() => {
-                      let syllabusUrl = "";
-
-                      if (
-                        course.title ===
-                        "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
-                      ) {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1cT9-gqqqifm-HvBE81WDsql0FxQIs8hP/preview";
-                      } else if (
-                        course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
-                      ) {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1a1gYATYn33yUVxWXZOdp5aGjFkYXCCk4/preview";
-                      } else if (
-                        course.title === " Data Engineering Course"
-                      ) {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
-                      } else if (
-                        course.title ===
-                        "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
-                      ) {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/13LLhT-UYWyEtwOHa5ycbVoOGkgLAw3pr/preview";
-                      } else if (
-                        course.title === "Data Analytics and Generative AI Course"
-                      ) {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1Z7JSZ6hlidaSbNAX4so5eXBBJHlSmxJN/preview";
-                      } else if (
-                        course.title ===
-                        "Cloud Data Engineering Course with IIT Guwahati"
-                      ) {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1PrR-EKLovlmE3lxKFILL6eXhlCWeOmAB/preview";
-                      } else if (course.title === "AI for Product Managers") {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1lwkKAtfPeDvY1lU2h0CdD3RqqT2QLgEZ/preview";
-                      }
-                      else if (
-                        course.title === "Data science course (Pay after Placement)"
-                      ) {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/preview";
-                      }
-                      else if (
-                        course.title === "AI and Machine Learning Course"
-                      ) {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1p4d84pQ8c-HmIYD7fUH16HNPkmfQzN7r/preview";
-                      }
-                      else if (
-                        course.title === "AI for Entrepreneurs"
-                      ) {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1X4593VFm1GOGoRlHrLOd0pqFq3wkhymF/preview";
-                      }
-
-                      else if (course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai") {
-                        syllabusUrl =
-                          "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
-                      }
-                      window.open(syllabusUrl, "_blank");
-                    }}
-                  >
-                    Download Syllabus
-                  </Button>
-                  :
-                  null
-
-              }
-
-
-
-
-
-              {course.title === "Data Science with Machine Learning & AI Certification" ? (
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "flex-end",
-                  }}
-                >
-                  Earn ₹8,000* from Govt. of India incentive program
-                </div>
-              ) : null}
-            </div>
           </div>
 
           <div style={{ marginTop: 30 }}>
@@ -1495,7 +1503,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                           ? "Next batch starting from 10th April, 2026"
                           : course.title === "AI for Beginners"
                             ? "Batch Starting From 4th May, 2026"
-                            : "New batch starting 7th and 21st March, 2026"
+                            : "New batch starting 30th may and 13th june, 2026"
                       }
 
                     </span>
