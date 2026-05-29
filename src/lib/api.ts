@@ -922,7 +922,7 @@ const courses: Course[] = [
   {
     id: '4',
     title: "Data Science with Machine Learning & AI Certification",
-    description: "Build a career in data science with a practical, project-driven program designed for today’s analytics, machine learning, and AI-driven job market.\n\n Ivy Professional School’s Data Science and Machine Learning Course helps learners build strong foundations in Python, statistics, SQL, data visualization, machine learning, business analytics, and applied AI. The program is designed for freshers, working professionals, engineers, analysts, business graduates, and career switchers who want to become job-ready for roles in data science, machine learning, analytics, and AI. \n\n With Ivy’s long-standing experience in data science and AI education since 2008, learners get structured training, practical projects, interview preparation, and career support to confidently transition into data roles.",
+    description: "Launch a job-ready career in analytics, machine learning, and AI with a practical, project-driven training and placement program.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,

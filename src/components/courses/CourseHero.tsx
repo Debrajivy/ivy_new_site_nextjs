@@ -473,15 +473,12 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               }
 
 
-              <div
+              {/* <div
                 style={{ marginTop: 10 }}
                 className="flex items-center gap-4 w-full"
               >
                 {" "}
-                {/* Added w-full to make it full screen width */}
-                {/* <div className="flex items-center bg-white/40 rounded-full px-4 py-2 w-fit">
-                  <p className="text-[#221e1f] font-bold">Powered by </p>
-                </div> */}
+                
                 {course.title === "Data Science with Machine Learning & AI Certification" ||
                   course.title === "Data science course (Pay after Placement)" ? (
                   <Image
@@ -492,20 +489,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     src={NASSCOMNEW}
                     alt="NASSCOM Certification"
                   />
-                  // ) : course.title === " Data Engineering Course" || course.title === "Generative AI Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" ||
-                  //   course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" ||
-                  //   course.title === "Generative AI Course" ||
-                  //   course.title === "AI for Product Managers" || course.title === "AI and Machine Learning Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" ? (
-                  //   <Image
-                  //     loading="lazy"
-                  //     width={150}
-                  //     height={50}
-                  //     className="h-20 w-auto object-contain"
-                  //     src={ivy}
-                  //     alt="ivy"
-                  //   />
+                
                 ) : null}
-              </div>
+              </div> */}
             </div>
 
             <p style={{ marginTop: 10, fontSize: 20 }} className="text-lg font-bold opacity-90">
@@ -1503,7 +1489,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                           ? "Next batch starting from 10th April, 2026"
                           : course.title === "AI for Beginners"
                             ? "Batch Starting From 4th May, 2026"
-                            : "New batch starting 30th may and 13th june, 2026"
+                            : "New batch starting 30th May and 13th June, 2026"
                       }
 
                     </span>

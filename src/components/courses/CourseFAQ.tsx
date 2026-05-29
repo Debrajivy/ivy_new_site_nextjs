@@ -4185,7 +4185,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       {
         question: "What is this program about?",
         answer:
-          "The Executive Certification in Generative AI (IIT Guwahati + Ivy Pro School) is a comprehensive, application-driven program that helps learners design, build, and deploy AI-powered applications using OpenAI, DALL·E, Whisper, and LangChain. It blends programming, GenAI, deep learning, and multimodal integration through 4 levels of learning and real-world projects.",
+          "The Executive Certification in Generative AI (Ivy Pro School) is a comprehensive, application-driven program that helps learners design, build, and deploy AI-powered applications using OpenAI, DALL·E, Whisper, and LangChain. It blends programming, GenAI, deep learning, and multimodal integration through 4 levels of learning and real-world projects.",
         category: "program"
       },
       {
@@ -4251,7 +4251,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       {
         question: "What certification will I receive?",
         answer:
-          "Upon completion, you’ll earn an Executive Certification in Generative AI jointly from IIT Guwahati and Ivy Professional School. Interim certifications are also provided after each module.",
+          "Upon completion, you’ll earn an Executive Certification in Generative AI jointly from Ivy Professional School. Interim certifications are also provided after each module.",
         category: "certification"
       },
       {
