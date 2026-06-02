@@ -162,6 +162,34 @@ const cybersecurityAlumni: HeroAlumni[] = [
 
 const EXCLUDED_COURSES = ["AI for Entrepreneurs", "AI for Beginners", "AI for Product Managers"];
 
+const getAlumniCardId = (name: string) =>
+  `alumni-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+
+const heroAlumniReviews: Record<string, string> = {
+  "Aditya Kumar Barik": "Ivy helped me move from Python development into a Data Scientist role.",
+  "Tanmay Chakraborty": "The ML training helped me grow into a Machine Learning Engineer.",
+  "Tania Laha": "Ivy's data science learning path supported my move into decision science.",
+  "Satyajit Pramanik": "The program helped me transition from risk analysis to data analytics.",
+  "Priti Jha": "Ivy helped me build the analytics confidence for my Business Analyst role.",
+  "Anish Banerjee": "The training helped me move from data quality work into an Associate role.",
+  "Pranab Kumar Paul": "Ivy helped me shift from process operations into cloud big-data engineering.",
+  "Kinjal Dasgupta": "The data training helped me grow into a Data Engineer BI role.",
+  "Rajdeep Taluckdar": "Ivy helped me transition from risk operations to data engineering.",
+  "Sohini Das": "The program helped me move from market research into data engineering.",
+  "Animesh Singh": "Ivy's analytics training helped me step into an Information Analyst role.",
+  "Sayan Nayak": "The visualization training helped me grow in decision science analytics.",
+  "Soumalya Dutta": "Ivy helped me move from software testing into research analytics.",
+  "Senjuti Das": "The data visualization path supported my growth into consulting.",
+  "Mrinal Dhar": "Ivy helped me move from software development into analytics.",
+  "Ankita Paul": "The business analytics program strengthened my analyst career path.",
+  "Arpan Basu": "Ivy helped me grow from research work into an Analyst-MMA role.",
+  "Abhinav Sinha": "Ivy helped me turn HR experience into an analytics career.",
+  "Balkrishna Agarwal": "The analytics training supported my actuarial analyst journey.",
+  "Abhishek Bhadra": "Ivy helped me move from management trainee to senior associate.",
+  "Samik Bhattacharyya": "The analytics foundation helped me grow into cybersecurity leadership.",
+  "Souvik Bose": "Ivy helped me build the foundation for data science consulting.",
+};
+
 function getHeroAlumni(courseTitle: string): HeroAlumni[] | null {
   if (EXCLUDED_COURSES.includes(courseTitle)) return null;
   const t = courseTitle;
@@ -221,6 +249,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
   const [chatOpen, setChatOpen] = useState(false);
   const [showPulse, setShowPulse] = useState(true);
   const [videoPlaying, setVideoPlaying] = useState(false);
+  const [leadPopupOpen, setLeadPopupOpen] = useState(false);
+  const [pendingSyllabusUrl, setPendingSyllabusUrl] = useState("");
 
   useEffect(() => {
     const t = setTimeout(() => setShowPulse(false), 5000);
@@ -374,7 +404,20 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
         if (result && result.Status === "Success") {
           setSubmitStatus("success");
-          setSubmitMessage("Form submitted successfully!");
+          setSubmitMessage(
+            pendingSyllabusUrl
+              ? "Thank you! Opening course details..."
+              : "Form submitted successfully!"
+          );
+
+          if (pendingSyllabusUrl) {
+            setTimeout(() => {
+              window.open(pendingSyllabusUrl, "_blank", "noopener,noreferrer");
+              setLeadPopupOpen(false);
+              setPendingSyllabusUrl("");
+            }, 1000);
+            return;
+          }
 
           // ✅ Redirect to Thank You page after submission
           setTimeout(() => {
@@ -669,112 +712,232 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           </div>
                         </>
                         :
-                        course.title === "Data science course (Pay after Placement)" ?
-                          <div className="space-y-6">
 
-                            <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
-                              {/* <span
+
+                        course.title === "AI for Beginners" ?
+                          <>
+                            {/* <h2 className="text-4xl font-bold text-white mb-8">
+                        What You Will Learn
+                      </h2> */}
+
+                            <div className="space-y-6">
+
+                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
+                                {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
                           >
                             Analytics Core:
                           </span>{" "} */}
-                              ⦿ Master Advanced Excel, SQL, Tableau, Power BI, Python, R,
-                              statistics, and business reporting.
-                            </h3>
+                                ⦿ Master the anatomy of effective prompts, prompt chaining, fact-checking protocols, and citation-backed research using Perplexity AI and NotebookLM.
+                              </h3>
 
-                            <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
-                              {/* <span
+                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
                           >
                             ML & Deep Learning:
                           </span>{" "} */}
-                              ⦿ Build predictive modeling, clustering, decision trees,
-                              ensemble techniques, NLP, and deep learning.
-                            </h3>
+                                ⦿ Create stunning digital assets by learning text-to-image styling, automated video production, and custom music composition using Suno.
+                              </h3>
 
-                            <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
-                              {/* <span
+                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
                           >
                             AI-Assisted Efficiency:
                           </span>{" "} */}
-                              ⦿ Use Generative AI for rapid SQL generation, automated EDA,
-                              dashboard insights, and documentation.
-                            </h3>
+                                ⦿ Build functional, interactive web applications from scratch using natural language, basic coding logic, and modern no-code platforms like Lovable.
+                              </h3>
 
-                            <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
-                              {/* <span
+                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
                           >
                             Portfolio & Career Prep:
                           </span>{" "} */}
-                              ⦿ Build hands-on projects across industry use cases with
-                              interview coaching and placement support.
-                            </h3>
+                                ⦿ Automate data visualization and formulas in Google Sheets, draft unbiased surveys, and generate professional presentations, emails, and AI voiceovers.
+                              </h3>
 
-                          </div>
+                            </div>
+                          </> :
+                          course.title === "Data science course (Pay after Placement)" ?
+                            <div className="space-y-6">
 
-                          :
-                          course.title === "AI and Machine Learning Course" ?
-                            <>
+                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
+                                {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            Analytics Core:
+                          </span>{" "} */}
+                                ⦿ Master Advanced Excel, SQL, Tableau, Power BI, Python, R,
+                                statistics, and business reporting.
+                              </h3>
 
+                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            ML & Deep Learning:
+                          </span>{" "} */}
+                                ⦿ Build predictive modeling, clustering, decision trees,
+                                ensemble techniques, NLP, and deep learning.
+                              </h3>
 
+                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            AI-Assisted Efficiency:
+                          </span>{" "} */}
+                                ⦿ Use Generative AI for rapid SQL generation, automated EDA,
+                                dashboard insights, and documentation.
+                              </h3>
+
+                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            Portfolio & Career Prep:
+                          </span>{" "} */}
+                                ⦿ Build hands-on projects across industry use cases with
+                                interview coaching and placement support.
+                              </h3>
+
+                            </div>
+
+                            :
+
+                            course.title === "AI for Product Managers" ?
                               <div className="space-y-6">
+
+                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
+                                  {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            Analytics Core:
+                          </span>{" "} */}
+                                  ⦿	Learn the "Build vs. Prompt vs. Buy" framework, evaluate problem feasibility via the AI Opportunity Matrix, and differentiate between foundational AI and feature-based AI.
+                                </h3>
+
                                 <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
-                                  {/* <span className="font-bold"
+                                  {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            ML & Deep Learning:
+                          </span>{" "} */}
+                                  ⦿ Apply advanced prompt engineering styles (CoT, few-shot) to automate internal operations like Zendesk support triage, in-product copywriting, and PRD generation.
+                                </h3>
+
+                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                  {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            AI-Assisted Efficiency:
+                          </span>{" "} */}
+                                  ⦿ Evaluate multi-agent orchestration platforms and Retrieval-Augmented Generation (RAG) architectures to securely connect enterprise data to customer support and compliance systems.
+                                </h3>
+
+                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                  {/* <span
+                            className="font-bold"
+                            style={{ color: "#2b2b2b" }}
+                          >
+                            Portfolio & Career Prep:
+                          </span>{" "} */}
+                                  ⦿ Build testable stakeholder prototypes using no-code AI tools, while designing "LLM-as-a-judge" evaluation pipelines to monitor prompt drift, hallucinations, and compliance risk.
+                                </h3>
+
+                              </div>
+
+
+                              :
+                              course.title === "AI and Machine Learning Course" ?
+                                <>
+
+
+                                  <div className="space-y-6">
+                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                      {/* <span className="font-bold"
                               style={{ color: "#2b2b2b" }}
                             >
                               Core Analytics:
                             </span>{" "} */}
-                                  ⦿ Master probability distributions, exploratory data analysis, feature engineering, and statistical testing in Python.
-                                </h3>
+                                      ⦿ Master probability distributions, exploratory data analysis, feature engineering, and statistical testing in Python.
+                                    </h3>
 
-                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
-                                  {/* <span className="font-bold"
+                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                      {/* <span className="font-bold"
                               style={{ color: "#2b2b2b" }}
                             >
                               GenAI Execution:
                             </span>{" "} */}
-                                  ⦿ Build and optimize machine learning models using Scikit-Learn, NumPy, Pandas, and Seaborn.                              </h3>
+                                      ⦿ Build and optimize machine learning models using Scikit-Learn, NumPy, Pandas, and Seaborn.                              </h3>
 
-                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                  ⦿ Architect natural language processing solutions, decision trees, clustering, and deep learning networks.                              </h3>
+                                      ⦿ Architect natural language processing solutions, decision trees, clustering, and deep learning networks.                              </h3>
 
-                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                  ⦿ Deploy live web applications using Flask, Streamlit, automated EDA pipelines, and code documentation.                              </h3>
-                              </div>
-                            </>
-                            :
-                            course.title === "Generative AI Course" ?
-                              <>
+                                      ⦿ Deploy live web applications using Flask, Streamlit, automated EDA pipelines, and code documentation.                              </h3>
+                                  </div>
+                                </>
+                                :
+                                course.title === "Generative AI Course" ?
+                                  <>
 
 
-                                <div style={{ marginTop: 50 }} className="space-y-6">
-                                  <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <div style={{ marginTop: 50 }} className="space-y-6">
+                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                    ⦿ Master Python setup, Git workflows, prompt engineering (ReAct, Tree-of-Thought), tokenization, and advanced API integrations.                                </h3>
-                                  <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                        ⦿ Master Python setup, Git workflows, prompt engineering (ReAct, Tree-of-Thought), tokenization, and advanced API integrations.                                </h3>
+                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                    ⦿ Implement open-source model fine-tuning using LoRA/QLoRA alongside robust vector database retrieval-augmented generation pipelines.                              </h3>
+                                        ⦿ Implement open-source model fine-tuning using LoRA/QLoRA alongside robust vector database retrieval-augmented generation pipelines.                              </h3>
 
-                                  <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                    ⦿ Architect multi-agent execution frameworks, custom tools, and complex stateful workflows using LangGraph and LCEL.
-                                  </h3>
-                                  <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                        ⦿ Architect multi-agent execution frameworks, custom tools, and complex stateful workflows using LangGraph and LCEL.
+                                      </h3>
+                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                    ⦿ Deploy scalable AI microservices via FastAPI and Docker, and build multi-sensory applications using Vision, Whisper, and Stable Diffusion.                                </h3>
-                                </div>
-                              </>
-                              :
+                                        ⦿ Deploy scalable AI microservices via FastAPI and Docker, and build multi-sensory applications using Vision, Whisper, and Stable Diffusion.                                </h3>
+                                    </div>
+                                  </>
+                                  :
 
-                              null
+                                 
+                                  <>
+
+
+                                    <div style={{ marginTop: 50 }} className="space-y-6">
+                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+
+                                        ⦿ Master MySQL database operations, advanced query writing, window functions, and Python data manipulation.                                </h3>
+                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+
+                                        ⦿ Process large-scale data using distributed computing, HDFS, YARN, MapReduce, and Hive optimization                             </h3>
+
+                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+
+                                        ⦿ Build scalable live pipelines using Apache Spark, Spark SQL, RDDs, and Apache Kafka workflows.
+                                      </h3>
+                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+
+                                        ⦿ Design secure data pipelines using Azure Data Factory, Blob Storage, Data Lake, and Databricks.                              </h3>
+                                    </div>
+                                  </>
 
 
 
@@ -893,10 +1056,13 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       : ""}
               </div>
 
-              <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
+              <Link
+                href="/alumni"
+                className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#013a81] shadow-sm transition-all hover:bg-blue-100 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#013a81]"
+              >
                 <Award size={16} className="mr-2" />
                 Placement Support
-              </div>
+              </Link>
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -906,8 +1072,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="bg-white/10 text-white hover:bg-white/20"
-                    onClick={() => {
+className="bg-blue-100 text-[#013a81] hover:bg-[#013a81] hover:text-white"                   onClick={() => {
                       let syllabusUrl = "";
 
                       if (
@@ -925,7 +1090,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         course.title === " Data Engineering Course"
                       ) {
                         syllabusUrl =
-                          "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
+                          "https://drive.google.com/file/d/16M3RbkXd00VOpyluTVGcN0rFDDvC4uVx/preview";
                       } else if (
                         course.title ===
                         "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
@@ -1179,13 +1344,23 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                 { bg: "from-[#fff0d9] to-white", border: "border-[#f5cc88]", ring: "ring-[#f59e0b]", roleColor: "text-[#b45309]" },
               ];
               return (
-                <div className="mt-4 grid grid-cols-4 gap-2">
+                <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {heroAlumni.map((alumni, index) => {
                     const s = cardStyles[index % 4];
                     return (
                       <div
-                        key={index}
-                        className={`bg-gradient-to-b ${s.bg} rounded-xl p-2 flex flex-col items-center text-center gap-1.5 shadow-md border ${s.border}`}
+                        key={alumni.name}
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => router.push(`/alumni#${getAlumniCardId(alumni.name)}`)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            router.push(`/alumni#${getAlumniCardId(alumni.name)}`);
+                          }
+                        }}
+                        className={`bg-gradient-to-b ${s.bg} rounded-xl p-2 flex flex-col items-center text-center gap-1.5 shadow-md border ${s.border} cursor-pointer transition-all hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white`}
+                        aria-label={`View ${alumni.name} on alumni page`}
                       >
                         <div className={`relative w-10 h-10 rounded-full overflow-hidden ring-2 ${s.ring} flex-shrink-0`}>
                           <Image src={alumni.image} alt={alumni.name} fill className="object-cover" />
@@ -1199,6 +1374,16 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                             <Image src={alumni.company} alt="company" fill className="object-contain" />
                           </div>
                         </div>
+                        <p className="min-h-[34px] text-[10px] leading-snug text-gray-600 line-clamp-2">
+                          &ldquo;{heroAlumniReviews[alumni.name] || "Ivy helped me build practical skills for my career move."}&rdquo;
+                        </p>
+                        <Link
+                          href="/reviews"
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-[10px] font-bold text-[#013a81] hover:underline"
+                        >
+                          Show more reviews
+                        </Link>
                       </div>
                     );
                   })}

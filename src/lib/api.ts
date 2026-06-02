@@ -115,7 +115,7 @@ const courses: Course[] = [
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
-    duration: "225 Hours",
+    duration: "150 Hours",
     rating: 4.9,
     reviewCount: 5567,
     isFeatured: true,
@@ -2107,7 +2107,7 @@ const courses: Course[] = [
   {
     id: '9',
     title: "AI for Product Managers",
-    description: "Ivy Professional School’s AI Product Manager Course equips you with the strategic, analytical, and practical skills needed to lead AI initiatives and build successful AI‑driven products. In this program, you’ll learn how to define AI product vision, prioritize features, work with datasets and models, translate data insights into product decisions, scale AI workflows, and collaborate effectively with engineering, data science, and design teams. You’ll also learn how to address ethical, fairness, and deployment challenges that are unique to AI products. This course is designed for current product managers, aspiring PMs, tech leaders, founders, and professionals who want to lead product strategy in the era of AI. With Ivy’s experience in data and AI education since 2008, the curriculum combines industry‑aligned frameworks, real case studies, hands‑on exercises, and practical tools that help you make products that users love and businesses rely on.",
+    description: "Master the strategic frameworks, rapid prototyping tools, and evaluation metrics needed to define AI product vision, deploy intelligent workflows, and lead successful AI-driven products.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -7696,7 +7696,7 @@ const courses: Course[] = [
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
-    duration: "225 Hours",
+    duration: "150 Hours",
     rating: 4.9,
     reviewCount: 5567,
     isFeatured: true,
@@ -7916,7 +7916,7 @@ const courses: Course[] = [
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
-    duration: "225 Hours",
+    duration: "150 Hours",
     rating: 4.9,
     reviewCount: 5567,
     isFeatured: true,
@@ -8134,7 +8134,7 @@ const courses: Course[] = [
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
-    duration: "225 Hours",
+    duration: "150 Hours",
     rating: 4.9,
     reviewCount: 5567,
     isFeatured: true,
@@ -8352,7 +8352,7 @@ const courses: Course[] = [
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
-    duration: "225 Hours",
+    duration: "150 Hours",
     rating: 4.9,
     reviewCount: 5567,
     isFeatured: true,
@@ -8571,7 +8571,7 @@ const courses: Course[] = [
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
-    duration: "225 Hours",
+    duration: "150 Hours",
     rating: 4.9,
     reviewCount: 5567,
     isFeatured: true,
@@ -8791,7 +8791,7 @@ const courses: Course[] = [
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },
-    duration: "225 Hours",
+    duration: "150 Hours",
     rating: 4.9,
     reviewCount: 5567,
     isFeatured: true,
@@ -9010,7 +9010,7 @@ const courses: Course[] = [
       description: "Scale your business with GenAI. Learn to automate workflows, build custom AI agents, and drive ROI. 18-week strategic program for founders & leaders.",
       bio: "Master the ROI of Generative AI. Learn to build AI-driven operations, automate marketing, and lead your industry as an AI-first entrepreneur in just 6 weeks."
     },
-    duration: "225 Hours",
+    duration: "150 Hours",
     rating: 4.9,
     reviewCount: 5567,
     isFeatured: true,
@@ -9242,7 +9242,7 @@ const courses: Course[] = [
   {
     id: '23',
     title: "AI for Beginners",
-    description: "Explore, create, and build with 15+ AI tools. A hands-on program for everyone who want to learn — no prior experience needed.",
+    description: "Explore, create, and build with more than 15 cutting-edge AI tools in a hands-on, foundational program designed for everyone with absolutely no prior experience required.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,

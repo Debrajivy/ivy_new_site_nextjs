@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { Search, ArrowRight, ChevronDown, ChevronUp } from "lucide-react"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +13,9 @@ import AlumniProfileSidebar from "@/components/AlumniProfileSidebar"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import Placeholder from "@/assests/placeholder.png"
+
+const getAlumniCardId = (name: string) =>
+  `alumni-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
 
 const FAQ_DATA = [
   {
@@ -120,6 +123,33 @@ const Alumni = () => {
 
   const displayedAlumni = filteredAlumni.slice(0, visibleCount);
 
+  useEffect(() => {
+    const showAndScrollToHashAlumni = () => {
+      const targetId = window.location.hash.replace("#", "");
+      if (!targetId.startsWith("alumni-")) return;
+
+      const targetIndex = allAlumni.findIndex(
+        (alumni) => getAlumniCardId(alumni.name) === targetId
+      );
+      if (targetIndex === -1) return;
+
+      setSelectedFilters([]);
+      setSearchTerm("");
+      setVisibleCount((count) => Math.max(count, targetIndex + 1));
+
+      window.setTimeout(() => {
+        document.getElementById(targetId)?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 100);
+    };
+
+    showAndScrollToHashAlumni();
+    window.addEventListener("hashchange", showAndScrollToHashAlumni);
+    return () => window.removeEventListener("hashchange", showAndScrollToHashAlumni);
+  }, []);
+
   return (
     <>
       {/* Schema Markup Injection */}
@@ -180,7 +210,11 @@ const Alumni = () => {
         <div id="alumni-grid" className="max-w-7xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayedAlumni.map((alumni, index) => (
-              <div key={index} className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-lg transition-all flex flex-col group">
+              <div
+                id={getAlumniCardId(alumni.name)}
+                key={alumni.name}
+                className="scroll-mt-28 bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-lg transition-all flex flex-col group target:ring-4 target:ring-[#009fda]/30 target:border-[#009fda]"
+              >
                 <div className="flex items-center gap-4 mb-6">
                   <Image
                     loading="lazy"
