@@ -479,14 +479,15 @@ export default function CoursesListing() {
           HERO BANNER
       ══════════════════════════════════ */}
       <div className="w-full">
-      <Image
-        src={coursehero}
-        alt="Course Hero"
-        priority
-        className="w-full h-auto object-cover"
-        sizes="100vw"
-      />
-    </div>
+        <h1 className="sr-only">All Data Science, AI, Data Engineering and Analytics Courses</h1>
+        <Image
+          src={coursehero}
+          alt="Course Hero"
+          priority
+          className="w-full h-auto object-cover"
+          sizes="100vw"
+        />
+      </div>
       {/* ══════════════════════════════════
           HIRING PARTNERS MARQUEE
       ══════════════════════════════════ */}

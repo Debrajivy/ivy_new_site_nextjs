@@ -1805,7 +1805,14 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
               {chatOpen ? (
                 <X className="w-6 h-6 text-white" />
               ) : (
-                <WhatsAppIcon size={window?.innerWidth < 640 ? 24 : 28} />
+                <>
+                  <span className="sm:hidden">
+                    <WhatsAppIcon size={24} />
+                  </span>
+                  <span className="hidden sm:inline">
+                    <WhatsAppIcon size={28} />
+                  </span>
+                </>
               )}
             </button>
           </div>

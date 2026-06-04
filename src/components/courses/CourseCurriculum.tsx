@@ -1491,7 +1491,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
               )}
 
               {/* Comparison Section - Data Analytics and Generative AI Course only */}
-              {course.title === "Data Analytics and Generative AI Course" && (
+              {/* {course.title === "Data Analytics and Generative AI Course" && (
                 <div className="mt-14 w-full max-w-4xl mx-auto">
                   <div className="text-center mb-8">
                     <span className="inline-block bg-blue-100 text-[#009fda] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
@@ -1634,7 +1634,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                     </button>
                   </div>
                 </div>
-              )}
+              )} */}
 
               {/* Comparison Section - AI and Machine Learning Course only */}
               {course.title === "AI and Machine Learning Course" && (
