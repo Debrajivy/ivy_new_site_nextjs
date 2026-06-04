@@ -225,6 +225,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     city: "",
     program: "",
     branch: "",
+    captchaAnswer: "",
   });
 
   // State for form submission status and message
@@ -251,6 +252,31 @@ const CourseHero = ({ course }: CourseHeroProps) => {
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [leadPopupOpen, setLeadPopupOpen] = useState(false);
   const [pendingSyllabusUrl, setPendingSyllabusUrl] = useState("");
+  const [captchaCode, setCaptchaCode] = useState("7KQ4");
+
+  const createCaptchaCode = () => {
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    return Array.from({ length: 5 }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
+  };
+
+  const refreshCaptcha = () => {
+    setCaptchaCode(createCaptchaCode());
+    setFormData((prevData) => ({
+      ...prevData,
+      captchaAnswer: "",
+    }));
+  };
+
+  const closeLeadPopup = () => {
+    setLeadPopupOpen(false);
+    setPendingSyllabusUrl("");
+    setSubmitStatus(null);
+    setSubmitMessage("");
+    setFormData((prevData) => ({
+      ...prevData,
+      captchaAnswer: "",
+    }));
+  };
 
   useEffect(() => {
     const t = setTimeout(() => setShowPulse(false), 5000);
@@ -304,6 +330,13 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+
+    if (pendingSyllabusUrl && formData.captchaAnswer.trim().toUpperCase() !== captchaCode) {
+      setSubmitStatus("error");
+      setSubmitMessage("Please enter the verification code exactly as shown.");
+      refreshCaptcha();
+      return;
+    }
 
     setSubmitStatus("submitting");
     setSubmitMessage("Submitting your details...");
@@ -415,6 +448,10 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               window.open(pendingSyllabusUrl, "_blank", "noopener,noreferrer");
               setLeadPopupOpen(false);
               setPendingSyllabusUrl("");
+              setFormData((prevData) => ({
+                ...prevData,
+                captchaAnswer: "",
+              }));
             }, 1000);
             return;
           }
@@ -1135,7 +1172,20 @@ className="bg-blue-100 text-[#013a81] hover:bg-[#013a81] hover:text-white"      
                         syllabusUrl =
                           "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
                       }
-                      window.open(syllabusUrl, "_blank");
+                      if (!syllabusUrl) {
+                        setSubmitStatus("error");
+                        setSubmitMessage("Course details are not available for this course yet.");
+                        return;
+                      }
+                      setPendingSyllabusUrl(syllabusUrl);
+                      setLeadPopupOpen(true);
+                      setCaptchaCode(createCaptchaCode());
+                      setFormData((prevData) => ({
+                        ...prevData,
+                        captchaAnswer: "",
+                      }));
+                      setSubmitStatus(null);
+                      setSubmitMessage("");
                     }}
                   >
                     Get Course Details                  </Button>
@@ -1549,6 +1599,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
               </div>
 
               <form
+                id="course-lead-form"
                 style={{ color: "black" }}
                 className="space-y-4 flex-grow"
                 onSubmit={handleSubmit}
@@ -1650,7 +1701,9 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                   >
                     {submitStatus === "submitting"
                       ? "Applying..."
-                      : "Register Now"}
+                      : pendingSyllabusUrl
+                        ? "Submit & Open Course Details"
+                        : "Register Now"}
                   </Button>
 
                   {submitMessage && (
@@ -1717,6 +1770,144 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
 
       {/* ── WhatsApp floating widget ── */}
       {/* ── WhatsApp floating widget ── */}
+      {leadPopupOpen && pendingSyllabusUrl && (
+        <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-slate-950/70 px-4 py-6 backdrop-blur-sm">
+          <div className="relative max-h-[calc(100vh-32px)] w-full max-w-md overflow-y-auto rounded-2xl bg-white shadow-2xl">
+            <div className="bg-gradient-to-r from-[#013a81] via-[#009fda] to-[#f7af34] px-6 py-5 text-white">
+              <button
+                type="button"
+                onClick={closeLeadPopup}
+                className="absolute right-4 top-4 rounded-full bg-white/15 p-1.5 text-white transition-colors hover:bg-white/25"
+                aria-label="Close course details form"
+              >
+                <X className="h-4 w-4" />
+              </button>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/80">
+                Course Details
+              </p>
+              <h2 className="mt-2 pr-8 text-2xl font-extrabold leading-tight">
+                Get the syllabus brochure
+              </h2>
+              <p className="mt-2 text-sm text-white/85 line-clamp-2">
+                {course.title}
+              </p>
+            </div>
+
+            <form className="space-y-3 p-6 text-slate-900" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Enter your Name*"
+                className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm transition-all focus:border-[#009fda] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#009fda]/20"
+                required
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+              />
+              <input
+                type="email"
+                placeholder="Enter your Email*"
+                className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm transition-all focus:border-[#009fda] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#009fda]/20"
+                required
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <input
+                type="tel"
+                placeholder="Enter your phone*"
+                className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm transition-all focus:border-[#009fda] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#009fda]/20"
+                required
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+              <select
+                className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 transition-all focus:border-[#009fda] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#009fda]/20"
+                required
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+              >
+                <option value="" disabled>
+                  Select your city*
+                </option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Pune">Pune</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Chennai">Chennai</option>
+              </select>
+
+              <div className="rounded-xl border border-dashed border-[#009fda]/45 bg-gradient-to-br from-sky-50 via-white to-amber-50 p-4">
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-slate-500">
+                      Human Check
+                    </p>
+                    <p className="text-sm font-semibold text-slate-800">
+                      Type the code shown below
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={refreshCaptcha}
+                    className="rounded-full border border-[#009fda]/30 bg-white px-3 py-1.5 text-xs font-bold text-[#013a81] shadow-sm transition-colors hover:bg-sky-100"
+                  >
+                    Refresh
+                  </button>
+                </div>
+
+                <div className="relative mb-3 overflow-hidden rounded-lg border border-slate-200 bg-[#fff7df] px-4 py-3 shadow-inner">
+                  <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "repeating-linear-gradient(135deg, #009fda 0 2px, transparent 2px 12px)" }} />
+                  <div className="relative flex select-none items-center justify-center gap-1 font-mono text-3xl font-black tracking-[0.35em] text-[#013a81]">
+                    {captchaCode.split("").map((char, index) => (
+                      <span
+                        key={`${char}-${index}`}
+                        className={index % 2 === 0 ? "-rotate-6 text-[#013a81]" : "rotate-6 text-[#bc4e00]"}
+                      >
+                        {char}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <input
+                  type="text"
+                  placeholder="Enter verification code*"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm uppercase tracking-widest transition-all focus:border-[#009fda] focus:outline-none focus:ring-2 focus:ring-[#009fda]/20"
+                  required
+                  name="captchaAnswer"
+                  value={formData.captchaAnswer}
+                  onChange={handleChange}
+                  autoComplete="off"
+                />
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full py-3 text-white"
+                style={{ backgroundColor: "#013a81" }}
+                disabled={submitStatus === "submitting"}
+              >
+                {submitStatus === "submitting" ? "Submitting..." : "Submit & Open Course Details"}
+              </Button>
+
+              {submitMessage && (
+                <p
+                  className={`text-center text-sm font-medium ${
+                    submitStatus === "success" ? "text-green-600" : "text-red-600"
+                  }`}
+                >
+                  {submitMessage}
+                </p>
+              )}
+            </form>
+          </div>
+        </div>
+      )}
+
       <div className="fixed bottom-4 right-4 z-[9999] flex flex-col items-end gap-3" style={{ pointerEvents: "none" }}>
 
         {/* Expandable panel */}

@@ -520,53 +520,81 @@ const Navbar = () => {
                     Resources
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    {/* Set a dark background for the entire dropdown content */}
-                    {/* Added 'items-stretch' to the grid to ensure all items fill the available height */}
                     <ul
-                      className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2 items-stretch"
-                      style={{ backgroundColor: '#013a81' }}
+                      className="grid gap-3 p-4 md:w-[460px] lg:w-[560px] lg:grid-cols-2 items-stretch rounded-xl border border-sky-100 bg-gradient-to-br from-sky-50 via-white to-amber-50 shadow-2xl"
                     >
-                      <li className="">
+                      <li>
                         <NavigationMenuLink asChild>
-                          {/* Ensured Link/Card takes up full height of the list item (which now stretches) */}
                           <Link
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-white p-6 no-underline outline-none transition-all duration-300 transform hover:scale-[1.02] shadow-2xl hover:bg-gray-50"
-                            href="/casestudies"
+                            className="group flex h-full w-full select-none flex-col rounded-lg border border-[#009fda]/25 bg-sky-50 p-5 no-underline outline-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#009fda]/60 hover:bg-sky-100 hover:shadow-lg"
+                            href="/aihelpcenter"
                           >
-                            <div className="mb-2 mt-4 text-lg font-medium text-[#000B19]">
-                              Case Studies
+                            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#009fda]/10 text-[#009fda] transition-colors group-hover:bg-[#009fda] group-hover:text-white">
+                              <BookOpen className="h-5 w-5" />
                             </div>
-                            <p className="text-sm leading-tight text-gray-700">
-                              Explore our case studies, discover real-world applications and transformations.
+                            <div className="mb-2 text-base font-bold text-slate-900">
+                              AI Help Center
+                            </div>
+                            <p className="text-sm leading-snug text-slate-600">
+                              Master the trending AI topics everyone is talking about.
                             </p>
                           </Link>
                         </NavigationMenuLink>
                       </li>
-                      {/* Updated ListItem for Bootcamp - assuming ListItem itself renders a div that fills its space */}
-                      <ListItem
-                        href="/bootcamp"
-                        title="Bootcamp"
-                        // Adding h-full here might help if ListItem accepts this prop for its container
-                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02] h-full"
-                      >
-                        Unlock Your Potential with Expert-led Bootcamps.
-
-                      </ListItem>
-                      {/* New ListItem for Blog */}
-                      <ListItem
-                        href="https://ivyproschool.com/blog"
-                        title="Blog"
-                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02] h-full"
-                      >
-                        Explore the Future of Data, Gen AI, Analytics & Career Growth with Ivy's Insights
-                      </ListItem>
-                      <ListItem
-                        href="/aihelpcenter"
-                        title="AI Help Center"
-                        className="bg-white text-[#000B19] shadow-2xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-[1.02] h-full"
-                      >
-                        Master the Trending AI Topics Everyone's Talking About
-                      </ListItem>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a
+                            className="group flex h-full w-full select-none flex-col rounded-lg border border-[#f7af34]/30 bg-amber-50 p-5 no-underline outline-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#f7af34]/70 hover:bg-amber-100 hover:shadow-lg"
+                            href="https://ivyproschool.com/blog"
+                          >
+                            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#f7af34]/15 text-[#bc4e00] transition-colors group-hover:bg-[#f7af34] group-hover:text-white">
+                              <NotebookPen className="h-5 w-5" />
+                            </div>
+                            <div className="mb-2 text-base font-bold text-slate-900">
+                              Blog
+                            </div>
+                            <p className="text-sm leading-snug text-slate-600">
+                              Explore data, Gen AI, analytics, and career growth insights.
+                            </p>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            className="group flex h-full w-full select-none flex-col rounded-lg border border-indigo-200 bg-indigo-50 p-5 no-underline outline-none transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-400 hover:bg-indigo-100 hover:shadow-lg"
+                            href="/casestudies"
+                          >
+                            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
+                              <Briefcase className="h-5 w-5" />
+                            </div>
+                            <div className="mb-2 text-base font-bold text-slate-900">
+                              Case Studies
+                            </div>
+                            <p className="text-sm leading-snug text-slate-600">
+                              Discover real-world applications and business transformations.
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            className="group flex h-full w-full select-none flex-col rounded-lg border border-blue-200 bg-blue-50 p-5 no-underline outline-none transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-100 hover:shadow-lg"
+                            href="/bootcamp"
+                          >
+                            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                              <GraduationCap className="h-5 w-5" />
+                            </div>
+                            <div className="mb-2 text-base font-bold text-slate-900">
+                              Bootcamp
+                            </div>
+                            <p className="text-sm leading-snug text-slate-600">
+                              Unlock your potential with expert-led intensive bootcamps.
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>

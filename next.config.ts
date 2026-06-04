@@ -44,6 +44,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/placement",
+        destination: "/alumni",
+        permanent: true,
+      },
+      {
       source: "/courses/iit-generative-ai-course",
       destination: "/courses/generative-ai-course",
       permanent: true, // Returns a 308 status code

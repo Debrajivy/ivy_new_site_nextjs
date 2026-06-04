@@ -3,6 +3,7 @@
 
 import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { ArrowLeft, Eye, EyeOff, Building2, BookOpen, Database, CheckCircle2, ChevronRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Navbar from '@/components/layout/Navbar';
@@ -17,6 +18,14 @@ import Case4 from "../../assests/casestudies/Case4.webp";
 // ============================================================
 type ActiveCategory = 'corporate' | 'learning';
 type Difficulty = 'Beginner' | 'Intermediate' | 'Advanced';
+
+const slugifyCaseStudyTitle = (value: string) =>
+  value
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
 
 // ============================================================
 // CORPORATE CASE STUDIES DATA
@@ -1596,6 +1605,28 @@ group by customer_id;`,
   },
 };
 
+const corporateCaseStudySlugMap = Object.fromEntries(
+  Object.values(corporateCaseStudies).map((caseStudy) => [
+    slugifyCaseStudyTitle(caseStudy.title),
+    caseStudy,
+  ])
+);
+
+const sqlDrillSlugMap = Object.fromEntries(
+  Object.values(sqlDrills).map((drill) => [
+    slugifyCaseStudyTitle(drill.title),
+    drill,
+  ])
+);
+
+const normalizeCaseStudySlug = (slug: string) => {
+  try {
+    return slugifyCaseStudyTitle(decodeURIComponent(slug));
+  } catch {
+    return slugifyCaseStudyTitle(slug);
+  }
+};
+
 // ============================================================
 // HELPER COMPONENTS
 // ============================================================
@@ -1675,6 +1706,7 @@ type CorporateCaseStudy = typeof corporateCaseStudies['case-study-1'];
 const CorporateDetailView: React.FC<{ caseStudy: CorporateCaseStudy; onBack: () => void }> = ({ caseStudy, onBack }) => {
   const { fullContent, title, businessType, image, subtitle } = caseStudy;
   const { situation, problem, solution, impact } = fullContent;
+  const detailSlug = slugifyCaseStudyTitle(title);
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -1685,6 +1717,18 @@ const CorporateDetailView: React.FC<{ caseStudy: CorporateCaseStudy; onBack: () 
             <ArrowLeft className="h-4 w-4" />
             Back to Case Studies
           </button>
+          <Badge
+            style={{ backgroundColor: 'rgba(78,174,195,0.15)', color: '#7dd3e8', border: '1px solid rgba(78,174,195,0.3)' }}
+            className="mb-4 font-normal"
+          >
+            <nav className="flex items-center gap-1 text-xs">
+              <Link href="/" className="hover:underline">Home</Link>
+              <ChevronRight className="h-3 w-3" />
+              <Link href="/casestudies" className="hover:underline">Case Studies</Link>
+              <ChevronRight className="h-3 w-3" />
+              <Link href={`/casestudies/${detailSlug}`} className="font-semibold text-white hover:underline">{title}</Link>
+            </nav>
+          </Badge>
           <div className="flex items-center gap-2 mb-4">
             <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-xs font-medium text-slate-200 border border-white/20">
               <Building2 className="h-3.5 w-3.5" />
@@ -1787,6 +1831,7 @@ type SqlDrill = typeof sqlDrills[keyof typeof sqlDrills];
 
 const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ drill, onBack }) => {
   const [showSolution, setShowSolution] = useState(false);
+  const detailSlug = slugifyCaseStudyTitle(drill.title);
 
   const sampleTables = (drill as any).sampleTables as Array<{ name: string; rowCount: string; headers: string[]; rows: (string | number)[][] }> | undefined;
   const deptRows = !sampleTables ? drill.departmentData.map((r: any) => [r.id, r.name]) : [];
@@ -1801,6 +1846,18 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
             <ArrowLeft className="h-4 w-4" />
             Back to Case Studies
           </button>
+          <Badge
+            style={{ backgroundColor: 'rgba(99,102,241,0.18)', color: '#c7d2fe', border: '1px solid rgba(129,140,248,0.35)' }}
+            className="mb-4 font-normal"
+          >
+            <nav className="flex items-center gap-1 text-xs">
+              <Link href="/" className="hover:underline">Home</Link>
+              <ChevronRight className="h-3 w-3" />
+              <Link href="/casestudies" className="hover:underline">Case Studies</Link>
+              <ChevronRight className="h-3 w-3" />
+              <Link href={`/casestudies/${detailSlug}`} className="font-semibold text-white hover:underline">{drill.title}</Link>
+            </nav>
+          </Badge>
           <div className="flex items-center gap-2 mb-4">
             <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-xs font-medium text-slate-200 border border-white/20">
               <BookOpen className="h-3.5 w-3.5" />
@@ -2055,10 +2112,15 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
 // ============================================================
 // MAIN PAGE
 // ============================================================
-const CaseStudiesPage = () => {
+const CaseStudiesPage = (props: any = {}) => {
+  const { initialSlug } = props as { initialSlug?: string };
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState<ActiveCategory>('corporate');
   const [selectedCorporateSlug, setSelectedCorporateSlug] = useState<string | null>(null);
   const [selectedDrillId, setSelectedDrillId] = useState<string | null>(null);
+  const normalizedInitialSlug = initialSlug ? normalizeCaseStudySlug(initialSlug) : null;
+  const initialCorporateCaseStudy = normalizedInitialSlug ? corporateCaseStudySlugMap[normalizedInitialSlug] : null;
+  const initialDrill = normalizedInitialSlug ? sqlDrillSlugMap[normalizedInitialSlug] : null;
 
   const handleCorporateCardClick = (slug: string) => {
     setSelectedCorporateSlug(slug);
@@ -2071,10 +2133,41 @@ const CaseStudiesPage = () => {
   };
 
   const handleBack = useCallback(() => {
+    if (initialSlug) {
+      router.push('/casestudies');
+      return;
+    }
+
     setSelectedCorporateSlug(null);
     setSelectedDrillId(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+  }, [initialSlug, router]);
+
+  if (initialCorporateCaseStudy) {
+    return (
+      <>
+        <Navbar />
+        <CorporateDetailView
+          caseStudy={initialCorporateCaseStudy as CorporateCaseStudy}
+          onBack={handleBack}
+        />
+        <Footer />
+      </>
+    );
+  }
+
+  if (initialDrill) {
+    return (
+      <>
+        <Navbar />
+        <DrillDetailView
+          drill={initialDrill as SqlDrill}
+          onBack={handleBack}
+        />
+        <Footer />
+      </>
+    );
+  }
 
   // Detail views
   if (selectedCorporateSlug && corporateCaseStudies[selectedCorporateSlug as keyof typeof corporateCaseStudies]) {
@@ -2184,9 +2277,9 @@ const CaseStudiesPage = () => {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {corporateList.map((cs) => (
-                  <div
+                  <Link
                     key={cs.id}
-                    onClick={() => handleCorporateCardClick(cs.id)}
+                    href={`/casestudies/${slugifyCaseStudyTitle(cs.title)}`}
                     className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg hover:border-[#4eaec3]/40 transition-all duration-300 cursor-pointer group"
                   >
                     <div className="w-full aspect-video overflow-hidden">
@@ -2211,7 +2304,7 @@ const CaseStudiesPage = () => {
                         <ChevronRight className="h-4 w-4" />
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -2227,9 +2320,9 @@ const CaseStudiesPage = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {drillList.map((drill) => (
-                  <div
+                  <Link
                     key={drill.id}
-                    onClick={() => handleDrillCardClick(drill.id)}
+                    href={`/casestudies/${slugifyCaseStudyTitle(drill.title)}`}
                     className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all duration-300 cursor-pointer group"
                   >
                     {/* Card Header */}
@@ -2260,7 +2353,7 @@ const CaseStudiesPage = () => {
                         <ChevronRight className="h-4 w-4" />
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
 
