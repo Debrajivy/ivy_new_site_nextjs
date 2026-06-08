@@ -97,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-981187918"
-          
+
           strategy="afterInteractive"
         />
         <Script
@@ -157,7 +157,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
         {children}
-
+        {/* Facebook Pixel Noscript Fallback */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1435433223444500&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
         {/* LeadSquared Tracking - lazyOnload so it never blocks rendering */}
         <Script
           id="leadsquared-tracker"

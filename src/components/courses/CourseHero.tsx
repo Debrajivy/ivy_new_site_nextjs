@@ -1165,7 +1165,7 @@ className="bg-blue-100 text-[#013a81] hover:bg-[#013a81] hover:text-white"      
                         course.title === "AI for Entrepreneurs"
                       ) {
                         syllabusUrl =
-                          "https://drive.google.com/file/d/1X4593VFm1GOGoRlHrLOd0pqFq3wkhymF/preview";
+                          "https://drive.google.com/file/d/1FiGWxinmHnSiZAOna9sZUP29ayX8GMT_/preview";
                       }
 
                       else if (course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai") {
@@ -1786,7 +1786,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                 Course Details
               </p>
               <h2 className="mt-2 pr-8 text-2xl font-extrabold leading-tight">
-                Get the syllabus brochure
+                Get the brochure
               </h2>
               <p className="mt-2 text-sm text-white/85 line-clamp-2">
                 {course.title}

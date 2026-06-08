@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#013A81"/>
+  <rect x="64" y="64" width="1072" height="502" rx="28" fill="#FFFFFF"/>
+  <rect x="64" y="64" width="1072" height="502" rx="28" stroke="#009FDA" stroke-width="10"/>
+  <text x="104" y="145" fill="#013A81" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Ivy Professional School</text>
+  <text x="104" y="246" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">Get placed in</text>
+  <text x="104" y="318" fill="#009FDA" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">Data Science &amp; GenAI</text>
+  <text x="104" y="382" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">IIT Certified | NASSCOM Accredited | Pay After Placement</text>
+  <rect x="104" y="432" width="250" height="92" rx="18" fill="#F1F5F9"/>
+  <text x="130" y="474" fill="#013A81" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">37,500+</text>
+  <text x="130" y="504" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">alumni trained</text>
+  <rect x="386" y="432" width="250" height="92" rx="18" fill="#F1F5F9"/>
+  <text x="412" y="474" fill="#013A81" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">82%</text>
+  <text x="412" y="504" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">placement rate</text>
+  <rect x="668" y="432" width="250" height="92" rx="18" fill="#F1F5F9"/>
+  <text x="694" y="474" fill="#013A81" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800">17+ yrs</text>
+  <text x="694" y="504" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">since 2008</text>
+  <rect x="954" y="432" width="92" height="92" rx="46" fill="#F7AF34"/>
+  <text x="984" y="490" fill="#013A81" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="900">I</text>
+</svg>
