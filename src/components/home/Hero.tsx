@@ -101,6 +101,7 @@ const Hero = () => {
 
       if (response.ok) {
         const result = await response.json();
+        console.log("result is", result)
 
         if (result && result.Status === "Success") {
           setSubmitStatus('success');
@@ -115,6 +116,7 @@ const Hero = () => {
           setSubmitMessage(result.Message || 'An error occurred during submission. Please try again.');
         }
       } else {
+        console.log ("respose is ", response);
         setSubmitStatus('error');
         setSubmitMessage(`Failed to submit form. Server responded with status: ${response.status}`);
       }
