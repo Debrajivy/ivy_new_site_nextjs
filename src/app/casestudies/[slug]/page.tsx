@@ -19,6 +19,12 @@ const caseStudySlugs = [
   "inventory-vs-sales-demand-alignment",
   "web-event-analysis",
   "advertisement-analysis",
+  "department-salary-analysis",
+  "departments-with-less-than-2-employees",
+  "department-wise-salary-ranking",
+  "vehicle-capacity-allocation",
+  "quarter-wise-salesman-bonus-analysis",
+  "daily-employee-salary-calculation",
 ];
 
 const titleFromSlug = (slug: string) => {

@@ -206,7 +206,7 @@ const COURSES: Course[] = [
     badge: "Popular 🚀",
     badgeColor: "#013a81",
     students: 855,
-    duration: "7 Months",
+    duration: "8 Months",
     mode: "Online + Hybrid",
     level: "Beginner to Intermediate",
     rating: 4.7,

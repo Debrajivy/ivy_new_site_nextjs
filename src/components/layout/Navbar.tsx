@@ -116,7 +116,7 @@ const courseCategories = {
   // ],
   "Generative AI": [
     {
-      title: "Generative AI Course",
+      title: "Advanced Generative AI Course",
       href: "/courses/generative-ai-course",
       description: "5-month advanced program to master Generative AI, from app building to multimodal AI integration and frameworks.",
       image: GA,
@@ -152,7 +152,7 @@ const allCourses = [
     image: AIPM,
   },
   {
-    title: "Generative AI Course",
+    title: " Advanced Generative AI Course",
     href: "/courses/generative-ai-course",
     description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
     image: GA,

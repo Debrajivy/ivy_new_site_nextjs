@@ -64,7 +64,7 @@ const featuredCourses: Course[] = [
   },
   {
     id: '1',
-    title: "Generative AI Course",
+    title: " Advanced Generative AI Course",
     description: "Learn to build and deploy GenAI models like GPT, DALL·E, and more",
     image: GA,
     category: "Generative AI",
@@ -138,17 +138,17 @@ const featuredCourses: Course[] = [
   {
     id: '5',
     title: "Data Analytics and Generative AI Course",
-    description: "Deep dive into Excel, SQL, Tableau, Power BI techniques",
+    description: "Deep dive into Excel, SQL, Gen AI, Power BI techniques",
     image: DAGA,
     category: "Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Analytics and Generative AI Course" which contradicts. If you want this to be a Data Analytics and Generative AI Course, the description should be updated. I'll keep the description as is but noted this discrepancy.
     students: 855,
-    duration: "7 months",
+    duration: "8 months",
     rating: 4.7,
     reviewCount: 212,
     isFeatured: true,
     slug: "data-visualization-course",
     keyFeatures: [
-      "Master Tableau, Power BI, VBA",
+      "Master Tableau, Power BI, Python",
       "Create interactive dashboards",
       "Storytelling with data"
     ]

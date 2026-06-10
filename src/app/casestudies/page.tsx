@@ -1603,6 +1603,871 @@ group by customer_id;`,
       ] as Record<string, string>[],
     },
   },
+  'sql-drill-11': {
+    id: 'sql-drill-11',
+    number: 11,
+    title: 'Department Salary Analysis',
+    tool: 'SQL' as const,
+    difficulty: 'Beginner' as Difficulty,
+    skills: ['INNER JOIN', 'GROUP BY', 'SUM', 'Department Analysis'],
+    description: 'Find the total salary paid by each department using SQL joins and aggregation.',
+    setup: "Your dataset contains two tables from a company's HR database:\n\n1. A Department table with the ID and name of each department\n2. An Employee table with the ID, name, salary, joining date, and department reference for each employee\n\nAnalyze department-wise salary cost using employee and department data.",
+    schema: {
+      Department: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+      ],
+      Employee: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+        { name: 'salary', type: 'DECIMAL(10,2)', constraint: '' },
+        { name: 'joining_date', type: 'DATE', constraint: '' },
+        { name: 'department_id', type: 'INT', constraint: 'FK' },
+      ],
+    },
+    departmentData: [
+      { id: 1, name: 'HR' },
+      { id: 2, name: 'Engineering' },
+      { id: 3, name: 'Marketing' },
+      { id: 4, name: 'Sales' },
+      { id: 5, name: 'IT' },
+      { id: 6, name: 'Finance' },
+      { id: 7, name: 'Graphic Designer' },
+      { id: 8, name: 'Data Analyst' },
+    ],
+    employeeData: [
+      { id: 1, name: 'Alice', salary: '70000', joining_date: '2020-01-15', department_id: 1 },
+      { id: 2, name: 'Bob', salary: '85000', joining_date: '2019-03-22', department_id: 2 },
+      { id: 3, name: 'Charlie', salary: '60000', joining_date: '2021-05-18', department_id: 1 },
+      { id: 4, name: 'David', salary: '95000', joining_date: '2018-07-11', department_id: 3 },
+      { id: 5, name: 'Eva', salary: '80000', joining_date: '2017-09-09', department_id: 2 },
+      { id: 6, name: 'Frank', salary: '75000', joining_date: '2016-11-14', department_id: 3 },
+      { id: 7, name: 'Grace', salary: '90000', joining_date: '2015-02-23', department_id: 1 },
+      { id: 8, name: 'Henry', salary: '68000', joining_date: '2021-04-30', department_id: 2 },
+      { id: 9, name: 'Irene', salary: '72000', joining_date: '2020-06-25', department_id: 1 },
+      { id: 10, name: 'Jack', salary: '78000', joining_date: '2019-08-19', department_id: 3 },
+      { id: 11, name: 'Karen', salary: '83000', joining_date: '2018-10-07', department_id: 4 },
+      { id: 12, name: 'Leo', salary: '95000', joining_date: '2017-12-13', department_id: 1 },
+      { id: 13, name: 'Mona', salary: '87000', joining_date: '2016-03-21', department_id: 2 },
+      { id: 14, name: 'Nick', salary: '63000', joining_date: '2015-05-29', department_id: 5 },
+      { id: 15, name: 'Olivia', salary: '77000', joining_date: '2014-07-15', department_id: 1 },
+      { id: 16, name: 'Peter', salary: '82000', joining_date: '2021-01-18', department_id: 2 },
+      { id: 17, name: 'Quinn', salary: '91000', joining_date: '2020-03-12', department_id: 6 },
+      { id: 18, name: 'Rachel', salary: '88000', joining_date: '2019-09-28', department_id: 1 },
+      { id: 19, name: 'Steve', salary: '93000', joining_date: '2018-11-06', department_id: 2 },
+      { id: 20, name: 'Tina', salary: '76000', joining_date: '2017-04-16', department_id: 3 },
+    ],
+    task: 'Department Salary Analysis: What is the total salary for each department?\n\nThe result table should have department_name and total_salary columns.',
+    outputColumns: ['department_name', 'total_salary'],
+    expectedOutputPreview: [
+      { department_name: 'Engineering', total_salary: '495000' },
+      { department_name: 'Finance', total_salary: '91000' },
+      { department_name: 'HR', total_salary: '552000' },
+    ] as Record<string, string>[],
+    hint: [
+      'Join Department and Employee using Employee.department_id = Department.id.',
+      'Use SUM(e.salary) to calculate department-wise salary cost.',
+      'Use GROUP BY d.name so the salary is aggregated per department.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Department Salary Analysis
+
+Question:
+Based on the given information, find the total salary for each department.
+The result table should have department_name and total_salary columns. */
+
+select
+    d.name as department_name,
+    sum(e.salary) as total_salary
+from department d
+inner join employee e
+    on e.department_id = d.id
+group by d.name;`,
+      howItWorks: [
+        'The Department table stores department names.',
+        'The Employee table stores employee salary and department reference.',
+        'INNER JOIN connects employees with their respective departments using department_id.',
+        'SUM(e.salary) calculates the total salary paid within each department.',
+        'GROUP BY d.name ensures the salary is aggregated department-wise.',
+        'Departments with no employees will not appear because an INNER JOIN is used.',
+      ],
+      commonMistake: undefined as { title: string; points: string[] } | undefined,
+      observation: {
+        title: 'Optional: Include Departments With No Employees',
+        points: [
+          'If you want to show all departments, including departments with no employees, use LEFT JOIN instead of INNER JOIN.',
+          'Use COALESCE(SUM(e.salary), 0) so Graphic Designer and Data Analyst appear with salary as 0.',
+          `select
+    d.name as department_name,
+    coalesce(sum(e.salary), 0) as total_salary
+from department d
+left join employee e
+    on e.department_id = d.id
+group by d.name;`,
+        ],
+      } as { title: string; points: string[] } | undefined,
+      result: [
+        { department_name: 'Engineering', total_salary: '495000' },
+        { department_name: 'Finance', total_salary: '91000' },
+        { department_name: 'HR', total_salary: '552000' },
+        { department_name: 'IT', total_salary: '63000' },
+        { department_name: 'Marketing', total_salary: '324000' },
+        { department_name: 'Sales', total_salary: '83000' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-12': {
+    id: 'sql-drill-12',
+    number: 12,
+    title: 'Departments With Less Than 2 Employees',
+    tool: 'SQL' as const,
+    difficulty: 'Beginner' as Difficulty,
+    skills: ['RIGHT JOIN', 'LEFT JOIN', 'GROUP BY', 'HAVING', 'COUNT', 'Department Analysis'],
+    description: 'Identify departments that have fewer than 2 employees using SQL joins, grouping, and filtering.',
+    setup: "Your dataset contains two tables from a company's HR database:\n\n1. A Department table with the ID and name of each department\n2. An Employee table with the ID, name, salary, joining date, and department reference for each employee\n\nAnalyze employee count department-wise and identify departments with very low employee strength.",
+    schema: {
+      Department: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+      ],
+      Employee: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+        { name: 'salary', type: 'DECIMAL(10,2)', constraint: '' },
+        { name: 'joining_date', type: 'DATE', constraint: '' },
+        { name: 'department_id', type: 'INT', constraint: 'FK' },
+      ],
+    },
+    departmentData: [
+      { id: 1, name: 'HR' },
+      { id: 2, name: 'Engineering' },
+      { id: 3, name: 'Marketing' },
+      { id: 4, name: 'Sales' },
+      { id: 5, name: 'IT' },
+      { id: 6, name: 'Finance' },
+      { id: 7, name: 'Graphic Designer' },
+      { id: 8, name: 'Data Analyst' },
+    ],
+    employeeData: [
+      { id: 1, name: 'Alice', salary: '70000', joining_date: '2020-01-15', department_id: 1 },
+      { id: 2, name: 'Bob', salary: '85000', joining_date: '2019-03-22', department_id: 2 },
+      { id: 3, name: 'Charlie', salary: '60000', joining_date: '2021-05-18', department_id: 1 },
+      { id: 4, name: 'David', salary: '95000', joining_date: '2018-07-11', department_id: 3 },
+      { id: 5, name: 'Eva', salary: '80000', joining_date: '2017-09-09', department_id: 2 },
+      { id: 6, name: 'Frank', salary: '75000', joining_date: '2016-11-14', department_id: 3 },
+      { id: 7, name: 'Grace', salary: '90000', joining_date: '2015-02-23', department_id: 1 },
+      { id: 8, name: 'Henry', salary: '68000', joining_date: '2021-04-30', department_id: 2 },
+      { id: 9, name: 'Irene', salary: '72000', joining_date: '2020-06-25', department_id: 1 },
+      { id: 10, name: 'Jack', salary: '78000', joining_date: '2019-08-19', department_id: 3 },
+      { id: 11, name: 'Karen', salary: '83000', joining_date: '2018-10-07', department_id: 4 },
+      { id: 12, name: 'Leo', salary: '95000', joining_date: '2017-12-13', department_id: 1 },
+      { id: 13, name: 'Mona', salary: '87000', joining_date: '2016-03-21', department_id: 2 },
+      { id: 14, name: 'Nick', salary: '63000', joining_date: '2015-05-29', department_id: 5 },
+      { id: 15, name: 'Olivia', salary: '77000', joining_date: '2014-07-15', department_id: 1 },
+      { id: 16, name: 'Peter', salary: '82000', joining_date: '2021-01-18', department_id: 2 },
+      { id: 17, name: 'Quinn', salary: '91000', joining_date: '2020-03-12', department_id: 6 },
+      { id: 18, name: 'Rachel', salary: '88000', joining_date: '2019-09-28', department_id: 1 },
+      { id: 19, name: 'Steve', salary: '93000', joining_date: '2018-11-06', department_id: 2 },
+      { id: 20, name: 'Tina', salary: '76000', joining_date: '2017-04-16', department_id: 3 },
+    ],
+    task: 'Departments With Less Than 2 Employees: Which departments have fewer than 2 employees?\n\nThe final result table should have department_name and count_of_employees columns.',
+    outputColumns: ['department_name', 'count_of_employees'],
+    expectedOutputPreview: [
+      { department_name: 'Sales', count_of_employees: '1' },
+      { department_name: 'IT', count_of_employees: '1' },
+      { department_name: 'Finance', count_of_employees: '1' },
+    ] as Record<string, string>[],
+    hint: [
+      'Use an outer join so departments with zero employees are not removed.',
+      'COUNT(e.id) counts only matching employee rows, so departments with no employees return 0.',
+      'Use HAVING after GROUP BY because the filter depends on an aggregate count.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Departments With Less Than 2 Employees
+
+Question:
+Find out the names of the departments which have less than 2 employees.
+The final result table should have department_name and count_of_employees. */
+
+select
+    d.name as department_name,
+    count(e.id) as count_of_employees
+from employee e
+right join department d
+    on e.department_id = d.id
+group by d.name
+having count(e.id) < 2;`,
+      howItWorks: [
+        'The Department table contains all departments in the company.',
+        'The Employee table contains employee details and the department each employee belongs to.',
+        'RIGHT JOIN ensures all departments are included, even if no employee belongs to that department.',
+        'COUNT(e.id) counts the number of employees in each department.',
+        'GROUP BY d.name groups the result department-wise.',
+        'HAVING count(e.id) < 2 filters only those departments where the employee count is less than 2.',
+        'Departments with zero employees are also included because of the outer join.',
+      ],
+      commonMistake: undefined as { title: string; points: string[] } | undefined,
+      observation: {
+        title: 'Alternative Recommended Query',
+        points: [
+          'A LEFT JOIN from Department to Employee is usually easier to read because the analysis starts from the department table.',
+          `select
+    d.name as department_name,
+    count(e.id) as count_of_employees
+from department d
+left join employee e
+    on e.department_id = d.id
+group by d.name
+having count(e.id) < 2;`,
+          'This gives the same result and is generally the cleaner approach for this type of question.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      result: [
+        { department_name: 'Sales', count_of_employees: '1' },
+        { department_name: 'IT', count_of_employees: '1' },
+        { department_name: 'Finance', count_of_employees: '1' },
+        { department_name: 'Graphic Designer', count_of_employees: '0' },
+        { department_name: 'Data Analyst', count_of_employees: '0' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-13': {
+    id: 'sql-drill-13',
+    number: 13,
+    title: 'Department-wise Salary Ranking',
+    tool: 'SQL' as const,
+    difficulty: 'Intermediate' as Difficulty,
+    skills: ['Window Functions', 'DENSE_RANK', 'CTE', 'INNER JOIN', 'Salary Analysis'],
+    description: 'Identify the employees with the second highest salary and third lowest salary in each department using SQL ranking functions.',
+    setup: "Your dataset contains two tables from a company's HR database:\n\n1. A Department table with the ID and name of each department\n2. An Employee table with the ID, name, salary, joining date, and department reference for each employee\n\nAnalyze department-wise salary rankings and identify specific salary positions within each department.",
+    schema: {
+      Department: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+      ],
+      Employee: [
+        { name: 'id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+        { name: 'salary', type: 'DECIMAL(10,2)', constraint: '' },
+        { name: 'joining_date', type: 'DATE', constraint: '' },
+        { name: 'department_id', type: 'INT', constraint: 'FK' },
+      ],
+    },
+    departmentData: [
+      { id: 1, name: 'HR' },
+      { id: 2, name: 'Engineering' },
+      { id: 3, name: 'Marketing' },
+      { id: 4, name: 'Sales' },
+      { id: 5, name: 'IT' },
+      { id: 6, name: 'Finance' },
+      { id: 7, name: 'Graphic Designer' },
+      { id: 8, name: 'Data Analyst' },
+    ],
+    employeeData: [
+      { id: 1, name: 'Alice', salary: '70000', joining_date: '2020-01-15', department_id: 1 },
+      { id: 2, name: 'Bob', salary: '85000', joining_date: '2019-03-22', department_id: 2 },
+      { id: 3, name: 'Charlie', salary: '60000', joining_date: '2021-05-18', department_id: 1 },
+      { id: 4, name: 'David', salary: '95000', joining_date: '2018-07-11', department_id: 3 },
+      { id: 5, name: 'Eva', salary: '80000', joining_date: '2017-09-09', department_id: 2 },
+      { id: 6, name: 'Frank', salary: '75000', joining_date: '2016-11-14', department_id: 3 },
+      { id: 7, name: 'Grace', salary: '90000', joining_date: '2015-02-23', department_id: 1 },
+      { id: 8, name: 'Henry', salary: '68000', joining_date: '2021-04-30', department_id: 2 },
+      { id: 9, name: 'Irene', salary: '72000', joining_date: '2020-06-25', department_id: 1 },
+      { id: 10, name: 'Jack', salary: '78000', joining_date: '2019-08-19', department_id: 3 },
+      { id: 11, name: 'Karen', salary: '83000', joining_date: '2018-10-07', department_id: 4 },
+      { id: 12, name: 'Leo', salary: '95000', joining_date: '2017-12-13', department_id: 1 },
+      { id: 13, name: 'Mona', salary: '87000', joining_date: '2016-03-21', department_id: 2 },
+      { id: 14, name: 'Nick', salary: '63000', joining_date: '2015-05-29', department_id: 5 },
+      { id: 15, name: 'Olivia', salary: '77000', joining_date: '2014-07-15', department_id: 1 },
+      { id: 16, name: 'Peter', salary: '82000', joining_date: '2021-01-18', department_id: 2 },
+      { id: 17, name: 'Quinn', salary: '91000', joining_date: '2020-03-12', department_id: 6 },
+      { id: 18, name: 'Rachel', salary: '88000', joining_date: '2019-09-28', department_id: 1 },
+      { id: 19, name: 'Steve', salary: '93000', joining_date: '2018-11-06', department_id: 2 },
+      { id: 20, name: 'Tina', salary: '76000', joining_date: '2017-04-16', department_id: 3 },
+    ],
+    task: 'Department-wise Salary Ranking: Which employees have the second highest salary and third lowest salary in their respective departments?\n\nThe final result table should have department_name, second_highest, and third_lowest columns.',
+    outputColumns: ['department_name', 'second_highest', 'third_lowest'],
+    expectedOutputPreview: [
+      { department_name: 'Engineering', second_highest: 'Mona', third_lowest: 'Peter' },
+      { department_name: 'HR', second_highest: 'Grace', third_lowest: 'Irene' },
+      { department_name: 'Marketing', second_highest: 'Jack', third_lowest: 'Jack' },
+    ] as Record<string, string>[],
+    hint: [
+      'Create one CTE to rank salaries from highest to lowest within each department.',
+      'Create another CTE to rank salaries from lowest to highest within each department.',
+      'Use DENSE_RANK() with PARTITION BY department so ranking restarts for every department.',
+      'Join both ranked CTEs on department name, then filter rank_desc = 2 and rank_asc = 3.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Department-wise Salary Ranking
+
+Question:
+List the employees who have the second highest salary and the third lowest salary
+in their respective departments.
+
+The final result table should have:
+department_name | second_highest | third_lowest */
+
+with cte as (
+    select
+        e.name,
+        d.name as dept,
+        salary,
+        dense_rank() over (
+            partition by d.name
+            order by salary desc
+        ) as rank_desc
+    from employee e
+    inner join department d
+        on e.department_id = d.id
+    group by 1, 2, 3
+),
+
+cte2 as (
+    select
+        e.name,
+        d.name as dept,
+        salary,
+        dense_rank() over (
+            partition by d.name
+            order by salary asc
+        ) as rank_asc
+    from employee e
+    inner join department d
+        on e.department_id = d.id
+    group by 1, 2, 3
+)
+
+select
+    c.dept as department_name,
+    c.name as second_highest,
+    d.name as third_lowest
+from cte c
+inner join cte2 d
+    on d.dept = c.dept
+where rank_desc = 2
+  and rank_asc = 3;`,
+      howItWorks: [
+        'The first CTE ranks employees department-wise from highest salary to lowest salary.',
+        'DENSE_RANK() OVER (PARTITION BY d.name ORDER BY salary DESC) assigns salary rank within each department.',
+        'The second CTE ranks employees department-wise from lowest salary to highest salary.',
+        'DENSE_RANK() OVER (PARTITION BY d.name ORDER BY salary ASC) identifies the lowest salary ranks within each department.',
+        'The two CTEs are joined on department name.',
+        'rank_desc = 2 filters the employee with the second highest salary in each department.',
+        'rank_asc = 3 filters the employee with the third lowest salary in each department.',
+        'Departments that do not have enough employees for both ranking positions are not shown in the final result.',
+      ],
+      commonMistake: {
+        title: 'Ranking Without Partitioning',
+        points: [
+          'If you forget PARTITION BY d.name, SQL ranks all employees across the company instead of ranking within each department.',
+          'DENSE_RANK() is useful when salaries tie because tied salaries receive the same rank without creating rank gaps.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: undefined as { title: string; points: string[] } | undefined,
+      result: [
+        { department_name: 'Engineering', second_highest: 'Mona', third_lowest: 'Peter' },
+        { department_name: 'HR', second_highest: 'Grace', third_lowest: 'Irene' },
+        { department_name: 'Marketing', second_highest: 'Jack', third_lowest: 'Jack' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-14': {
+    id: 'sql-drill-14',
+    number: 14,
+    title: 'Vehicle Capacity Allocation',
+    tool: 'SQL' as const,
+    difficulty: 'Intermediate' as Difficulty,
+    skills: ['Window Functions', 'Running Total', 'SUM OVER', 'GROUP_CONCAT', 'CTE', 'Capacity Analysis'],
+    description: 'Find the list of packages each vehicle can carry without exceeding its fixed capacity.',
+    setup: "Your dataset contains two logistics tables:\n\n1. A Vehicle table with the vehicle ID and maximum carrying capacity\n2. A Packages table with each package ID, package weight, and the vehicle assigned to carry it\n\nAnalyze whether assigned packages can be loaded into each vehicle without crossing the vehicle's capacity.",
+    schema: {
+      Vehicle: [
+        { name: 'ID', type: 'INT', constraint: 'PK' },
+        { name: 'Capacity', type: 'INT', constraint: '' },
+      ],
+      Packages: [
+        { name: 'ID', type: 'INT', constraint: 'PK' },
+        { name: 'Weight', type: 'INT', constraint: '' },
+        { name: 'vehicle_ID', type: 'INT', constraint: 'FK' },
+      ],
+    },
+    sampleTables: [
+      {
+        name: 'Vehicle',
+        rowCount: '4 rows',
+        headers: ['ID', 'Capacity'],
+        rows: [
+          [1, 550],
+          [2, 650],
+          [3, 500],
+          [4, 600],
+        ],
+      },
+      {
+        name: 'Packages',
+        rowCount: '30 rows',
+        headers: ['ID', 'Weight', 'vehicle_ID'],
+        rows: [
+          [1, 55, 1],
+          [2, 60, 1],
+          [3, 65, 2],
+          [4, 70, 2],
+          [5, 75, 3],
+          [6, 80, 3],
+          [7, 85, 4],
+          [8, 90, 4],
+          [9, 95, 1],
+          [10, 100, 2],
+          [11, 52, 3],
+          [12, 57, 4],
+          [13, 62, 1],
+          [14, 67, 2],
+          [15, 72, 3],
+          [16, 77, 4],
+          [17, 82, 1],
+          [18, 87, 2],
+          [19, 92, 3],
+          [20, 97, 4],
+          [21, 54, 1],
+          [22, 59, 2],
+          [23, 64, 3],
+          [24, 69, 4],
+          [25, 74, 1],
+          [26, 79, 2],
+          [27, 84, 3],
+          [28, 89, 4],
+          [29, 94, 1],
+          [30, 99, 2],
+        ],
+      },
+    ],
+    departmentData: [] as { id: number; name: string }[],
+    employeeData: [] as { id: number; name: string; salary: string; joining_date: string; department_id: number }[],
+    task: 'Vehicle Capacity Allocation: What is the comma-separated list of packages each vehicle can carry without exceeding its capacity?\n\nThe packages should be selected in ascending order of their weight.\n\nThe final result table should have vehicle_id and packages columns.',
+    outputColumns: ['vehicle_id', 'packages'],
+    expectedOutputPreview: [
+      { vehicle_id: '1', packages: '21,1,2,13,25,17,29' },
+      { vehicle_id: '2', packages: '22,3,14,4,26,18,30' },
+      { vehicle_id: '3', packages: '11,23,15,5,6,27' },
+    ] as Record<string, string>[],
+    hint: [
+      'Join Packages with Vehicle so every package row also has its assigned vehicle capacity.',
+      'Use SUM(Weight) OVER (PARTITION BY vehicle_ID ORDER BY Weight) to calculate a running total per vehicle.',
+      'Filter rows where the running total is less than or equal to the vehicle capacity.',
+      'Use GROUP_CONCAT to combine the selected package IDs into one comma-separated list per vehicle.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Vehicle Capacity Allocation
+
+Question:
+Write a query to find a comma-separated list of all the packages that each vehicle can carry
+without exceeding its capacity.
+
+The packages should be selected in ascending order of their weight.
+
+The final result table should have:
+vehicle_id | packages */
+
+with cte as (
+    select
+        p.ID,
+        p.Weight,
+        p.vehicle_ID,
+        v.Capacity,
+        sum(p.Weight) over (
+            partition by p.vehicle_ID
+            order by p.Weight
+        ) as CumulativeWeight
+    from packages p
+    inner join vehicle v
+        on p.vehicle_ID = v.ID
+)
+
+select
+    vehicle_ID as vehicle_id,
+    group_concat(ID order by ID asc) as packages
+from cte
+where CumulativeWeight <= Capacity
+group by vehicle_ID
+order by vehicle_ID;`,
+      howItWorks: [
+        "The Vehicle table stores each vehicle's maximum carrying capacity.",
+        'The Packages table stores package weight and the vehicle assigned to that package.',
+        'The CTE joins packages with their assigned vehicle capacity.',
+        'SUM(p.Weight) OVER (PARTITION BY p.vehicle_ID ORDER BY p.Weight) calculates the running total of package weight for each vehicle.',
+        'Packages are considered in ascending order of weight.',
+        "WHERE CumulativeWeight <= Capacity keeps only those packages that can be loaded without crossing the vehicle's capacity.",
+        'GROUP_CONCAT(ID ORDER BY ID ASC) combines the selected package IDs into a comma-separated list for each vehicle.',
+        'GROUP BY vehicle_ID returns one row per vehicle.',
+      ],
+      commonMistake: {
+        title: 'Ordering Running Totals',
+        points: [
+          'The running total must be ordered by Weight because the problem asks packages to be selected in ascending order of weight.',
+          'GROUP_CONCAT in the final output is ordered by package ID as requested in the provided solution output.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: undefined as { title: string; points: string[] } | undefined,
+      result: [
+        { vehicle_id: '1', packages: '21,1,2,13,25,17,29' },
+        { vehicle_id: '2', packages: '22,3,14,4,26,18,30' },
+        { vehicle_id: '3', packages: '11,23,15,5,6,27' },
+        { vehicle_id: '4', packages: '12,24,16,7,28,8' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-15': {
+    id: 'sql-drill-15',
+    number: 15,
+    title: 'Quarter-wise Salesman Bonus Analysis',
+    tool: 'SQL' as const,
+    difficulty: 'Intermediate' as Difficulty,
+    skills: ['CASE WHEN', 'CTE', 'Conditional Aggregation', 'GROUP BY', 'Pivot Output', 'Business Rules'],
+    description: 'Calculate the bonus earned by each salesman in each quarter based on sales targets and car make bonus rules.',
+    setup: "Your dataset contains two sales performance tables:\n\n1. A Sales table with car make, type, style, sale value, purchase date, and salesman reference\n2. A Salesman table with salesman IDs and names\n\nAnalyze quarter-wise bonus earned by each salesman based on sales performance, car make bonus, and quarterly target achievement.",
+    schema: {
+      Sales: [
+        { name: 'sale_id', type: 'INT', constraint: 'PK' },
+        { name: 'make', type: 'VARCHAR(50)', constraint: '' },
+        { name: 'type', type: 'VARCHAR(50)', constraint: '' },
+        { name: 'style', type: 'VARCHAR(50)', constraint: '' },
+        { name: 'cost_$', type: 'DECIMAL(10,2)', constraint: '' },
+        { name: 'purchased_date', type: 'DATE', constraint: '' },
+        { name: 'salesman_id', type: 'INT', constraint: 'FK' },
+      ],
+      Salesman: [
+        { name: 'salesman_id', type: 'INT', constraint: 'PK' },
+        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
+      ],
+    },
+    sampleTables: [
+      {
+        name: 'Salesman',
+        rowCount: '4 rows',
+        headers: ['salesman_id', 'name'],
+        rows: [
+          [101, 'John Doe'],
+          [102, 'Jane Smith'],
+          [103, 'Robert Brown'],
+          [104, 'Emily Davis'],
+        ],
+      },
+      {
+        name: 'Sales',
+        rowCount: '9 rows',
+        headers: ['sale_id', 'make', 'type', 'style', 'cost_$', 'purchased_date', 'salesman_id'],
+        rows: [
+          [1, 'Honda', 'Sedan', 'Accord', 2800, '2023-05-15', 104],
+          [2, 'BMW', 'SUV', 'X5', 6000, '2023-02-20', 102],
+          [3, 'Audi', 'Sedan', 'A4', 45000, '2022-11-13', 104],
+          [4, 'Ford', 'Truck', 'F-150', 40000, '2023-07-24', 103],
+          [5, 'Nissan', 'Hatchback', 'Civic', 2200, '2023-03-30', 103],
+          [6, 'Mercedes', 'Sedan', 'C-Class', 45000, '2022-09-17', 101],
+          [7, 'Toyota', 'SUV', 'GLC', 52000, '2023-01-05', 102],
+          [8, 'Audi', 'SUV', 'Q5', 55000, '2022-08-21', 101],
+          [9, 'BMW', 'Truck', 'Frontier', 28000, '2023-04-18', 104],
+        ],
+      },
+      {
+        name: 'Car Make Bonus',
+        rowCount: '7 rules',
+        headers: ['Car Make', 'Bonus per Sale'],
+        rows: [
+          ['Honda', 200],
+          ['Ford', 350],
+          ['Audi', 400],
+          ['Nissan', 120],
+          ['Toyota', 270],
+          ['BMW', 600],
+          ['Mercedes', 590],
+        ],
+      },
+      {
+        name: 'Quarterly Sales Target',
+        rowCount: '4 rules',
+        headers: ['Quarter', 'Months', 'Sales Target'],
+        rows: [
+          ['Q1', 'January, February, March', 100000],
+          ['Q2', 'April, May, June', 60000],
+          ['Q3', 'July, August, September', 1000000],
+          ['Q4', 'October, November, December', 1000000],
+        ],
+      },
+    ],
+    departmentData: [] as { id: number; name: string }[],
+    employeeData: [] as { id: number; name: string; salary: string; joining_date: string; department_id: number }[],
+    task: 'Quarter-wise Salesman Bonus Analysis: What is the total bonus received by each salesman in each quarter?\n\nBonus rule: Bonus = 10% of total sales + car make bonus. If a salesman does not meet the sales target for a quarter, they receive only the car make bonus for that quarter.\n\nThe final result table should have name, q1, q2, q3, and q4 columns.',
+    outputColumns: ['name', 'q1', 'q2', 'q3', 'q4'],
+    expectedOutputPreview: [
+      { name: 'Emily Davis', q1: '0', q2: '800', q3: '0', q4: '400' },
+      { name: 'Jane Smith', q1: '870', q2: '0', q3: '0', q4: '0' },
+      { name: 'John Doe', q1: '0', q2: '0', q3: '990', q4: '0' },
+    ] as Record<string, string>[],
+    hint: [
+      'Use MONTH(purchased_date) to convert every sale into a quarter number.',
+      'Use CASE WHEN to calculate the make bonus for each car sale.',
+      'Aggregate total sales and make bonus by salesman_id and quarter.',
+      'Compare total_sales with the quarter target before deciding whether to add the 10% sales bonus.',
+      'Use conditional aggregation to pivot quarter-wise bonus rows into q1, q2, q3, and q4 columns.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Quarter-wise Salesman Bonus Analysis
+
+Question:
+Find the total bonus received by each salesman in each quarter.
+
+The final result table should have:
+name | q1 | q2 | q3 | q4 */
+
+with cte1 as
+(
+    with cte as
+    (
+        select
+            salesman_id,
+            case
+                when month(purchased_date) between 1 and 3 then 1
+                when month(purchased_date) between 4 and 6 then 2
+                when month(purchased_date) between 7 and 9 then 3
+                when month(purchased_date) between 10 and 12 then 4
+            end as quarters,
+
+            round(sum(cost_$), 0) as Total_sales,
+
+            sum(
+                case
+                    when make = 'Honda' then 200
+                    when make = 'Ford' then 350
+                    when make = 'Audi' then 400
+                    when make = 'Nissan' then 120
+                    when make = 'Toyota' then 270
+                    when make = 'BMW' then 600
+                    when make = 'Mercedes' then 590
+                    else 0
+                end
+            ) as make_bonus
+
+        from sales
+        group by 1, 2
+        order by 2
+    )
+
+    select
+        *,
+        if(
+            quarters = 1, 100000,
+            if(quarters = 2, 60000, 1000000)
+        ) as sales_target
+    from cte
+)
+
+select
+    name,
+    sum(case when quarters = 1 then bonus else 0 end) as q1,
+    sum(case when quarters = 2 then bonus else 0 end) as q2,
+    sum(case when quarters = 3 then bonus else 0 end) as q3,
+    sum(case when quarters = 4 then bonus else 0 end) as q4
+from
+(
+    select
+        salesman_id,
+        quarters,
+        if(
+            total_sales >= sales_target,
+            (total_sales * 0.1) + make_bonus,
+            make_bonus
+        ) as bonus
+    from cte1
+) c
+inner join salesman
+    using(salesman_id)
+group by 1
+order by 1;`,
+      howItWorks: [
+        'The inner CTE identifies the quarter for each sale using MONTH(purchased_date).',
+        'SUM(cost_$) calculates total quarterly sales for each salesman.',
+        'The CASE WHEN logic assigns the correct car make bonus for each sale.',
+        'The second CTE assigns the quarterly sales target based on the quarter number.',
+        'The bonus is calculated using the rule: if quarterly sales meet the target, bonus is 10% of total sales plus make bonus; otherwise, only make bonus is given.',
+        'The final query joins the bonus data with the Salesman table to get salesman names.',
+        'Conditional aggregation converts quarter-wise rows into columns using SUM(CASE WHEN quarters = ... THEN bonus ELSE 0 END).',
+        'The final output shows one row per salesman with bonus values for Q1, Q2, Q3, and Q4.',
+      ],
+      commonMistake: {
+        title: 'Pivoting Before Applying Business Rules',
+        points: [
+          'Calculate the bonus at the salesman-quarter level first, then pivot the result into q1, q2, q3, and q4 columns.',
+          'If you pivot too early, it becomes easier to apply the wrong target or add the make bonus in the wrong quarter.',
+          'Remember that Q3 and Q4 both use a target of 1000000 in this dataset.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: undefined as { title: string; points: string[] } | undefined,
+      result: [
+        { name: 'Emily Davis', q1: '0', q2: '800', q3: '0', q4: '400' },
+        { name: 'Jane Smith', q1: '870', q2: '0', q3: '0', q4: '0' },
+        { name: 'John Doe', q1: '0', q2: '0', q3: '990', q4: '0' },
+        { name: 'Robert Brown', q1: '120', q2: '0', q3: '350', q4: '0' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-16': {
+    id: 'sql-drill-16',
+    number: 16,
+    title: 'Daily Employee Salary Calculation',
+    tool: 'SQL' as const,
+    difficulty: 'Intermediate' as Difficulty,
+    skills: ['Window Functions', 'LEAD', 'CTE', 'TIMESTAMPDIFF', 'Date Conversion', 'Salary Analysis'],
+    description: 'Calculate daily salary of each employee based on login-logout swipe activity and hourly salary rate.',
+    setup: "Your dataset contains two employee attendance and compensation tables:\n\n1. A Salary table with employee name and hourly salary rate\n2. A Swipe table with login and logout swipe activity timestamps\n\nAnalyze employee swipe activity and calculate salary earned by each employee on a daily basis.",
+    schema: {
+      Salary: [
+        { name: 'employee_id', type: 'INT', constraint: '' },
+        { name: 'name', type: 'VARCHAR(100)', constraint: '' },
+        { name: 'salary_per_hour_$', type: 'FLOAT', constraint: '' },
+      ],
+      Swipe: [
+        { name: 'employee_id', type: 'INT', constraint: 'FK' },
+        { name: 'activity_type', type: 'VARCHAR(10)', constraint: '' },
+        { name: 'activity_time', type: 'DATETIME', constraint: '' },
+      ],
+    },
+    sampleTables: [
+      {
+        name: 'Salary',
+        rowCount: '4 rows',
+        headers: ['employee_id', 'name', 'salary_per_hour_$'],
+        rows: [
+          [1, 'Jeremy', 16.78],
+          [2, 'Nicole', 25.87],
+          [3, 'Naomi', 22.45],
+          [4, 'Lyanne', 19.27],
+        ],
+      },
+      {
+        name: 'Swipe',
+        rowCount: '20 rows',
+        headers: ['employee_id', 'activity_type', 'activity_time'],
+        rows: [
+          [1, 'login', '2024-07-23 08:00:00'],
+          [1, 'logout', '2024-07-23 12:00:00'],
+          [1, 'login', '2024-07-23 13:00:00'],
+          [1, 'logout', '2024-07-23 17:00:00'],
+          [2, 'login', '2024-07-23 09:00:00'],
+          [2, 'logout', '2024-07-23 11:00:00'],
+          [2, 'login', '2024-07-23 12:00:00'],
+          [2, 'logout', '2024-07-23 15:00:00'],
+          [1, 'login', '2024-07-24 08:30:00'],
+          [1, 'logout', '2024-07-24 12:30:00'],
+          [2, 'login', '2024-07-24 09:30:00'],
+          [2, 'logout', '2024-07-24 10:30:00'],
+          [3, 'login', '2024-07-24 09:00:00'],
+          [3, 'logout', '2024-07-24 13:45:00'],
+          [3, 'login', '2024-07-24 14:30:00'],
+          [3, 'logout', '2024-07-24 17:30:00'],
+          [4, 'login', '2024-07-23 10:30:00'],
+          [4, 'logout', '2024-07-23 15:00:00'],
+          [4, 'login', '2024-07-23 16:30:00'],
+          [4, 'logout', '2024-07-23 19:00:00'],
+        ],
+      },
+    ],
+    departmentData: [] as { id: number; name: string }[],
+    employeeData: [] as { id: number; name: string; salary: string; joining_date: string; department_id: number }[],
+    task: 'Daily Employee Salary Calculation: What is the total salary of each employee for each working day?\n\nThe final result table should have name, activity_date, and salary columns.',
+    outputColumns: ['name', 'activity_date', 'salary'],
+    expectedOutputPreview: [
+      { name: 'Jeremy', activity_date: '2024-07-23', salary: '134.24' },
+      { name: 'Jeremy', activity_date: '2024-07-24', salary: '67.12' },
+      { name: 'Lyanne', activity_date: '2024-07-23', salary: '134.89' },
+    ] as Record<string, string>[],
+    hint: [
+      'Use CAST(activity_time AS DATE) to group swipes by working date.',
+      'Use LEAD(activity_time) to pair each login row with the next swipe timestamp.',
+      'Filter only login rows after calculating the next swipe time.',
+      'Use TIMESTAMPDIFF(minute, login_time, logout_time) / 60 to calculate working hours.',
+      'Multiply total daily working hours by salary_per_hour_$ and round to two decimals.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Daily Employee Salary Calculation
+
+Question:
+Find the total salary of each employee on a daily basis.
+
+The final result table should have:
+name | activity_date | salary */
+
+with cte1 as
+(
+    with cte as
+    (
+        select
+            employee_id,
+            activity_type,
+            cast(activity_time as date) as activity_date,
+            activity_time as login_time,
+            lead(activity_time, 1) over (
+                partition by cast(activity_time as date), employee_id
+                order by activity_time
+            ) as logout_time
+        from swipe
+    )
+
+    select
+        *,
+        timestampdiff(minute, login_time, logout_time) / 60 as working_hour
+    from cte
+    where activity_type = 'login'
+)
+
+select distinct
+    name,
+    activity_date,
+    round(
+        sum(working_hour) over (
+            partition by activity_date, employee_id
+        ) * salary_per_hour_$,
+        2
+    ) as salary
+from cte1
+right join salary
+    using(employee_id);`,
+      howItWorks: [
+        'The Salary table stores the hourly salary rate of each employee.',
+        'The Swipe table stores every login and logout activity recorded by the card punching machine.',
+        'CAST(activity_time AS DATE) extracts the date from the swipe timestamp.',
+        'LEAD(activity_time) fetches the next swipe time for the same employee on the same date.',
+        'For every login row, the next swipe time becomes the matching logout_time.',
+        'TIMESTAMPDIFF(minute, login_time, logout_time) / 60 calculates working hours accurately, including partial hours.',
+        'The query filters only login rows because working duration is calculated from login to the next logout.',
+        'SUM(working_hour) OVER (PARTITION BY activity_date, employee_id) calculates total daily working hours for each employee.',
+        'The final salary is calculated as total working hours multiplied by hourly salary rate.',
+        'ROUND(..., 2) shows salary up to two decimal places.',
+      ],
+      commonMistake: {
+        title: 'Filtering Login Rows Too Early',
+        points: [
+          'Do not filter to activity_type = "login" before LEAD() runs. LEAD() needs to see both login and logout rows so it can pair each login with the next swipe.',
+          'Partition by both activity date and employee_id so the next swipe belongs to the same employee on the same working day.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: undefined as { title: string; points: string[] } | undefined,
+      result: [
+        { name: 'Jeremy', activity_date: '2024-07-23', salary: '134.24' },
+        { name: 'Jeremy', activity_date: '2024-07-24', salary: '67.12' },
+        { name: 'Lyanne', activity_date: '2024-07-23', salary: '134.89' },
+        { name: 'Naomi', activity_date: '2024-07-24', salary: '173.99' },
+        { name: 'Nicole', activity_date: '2024-07-23', salary: '129.35' },
+        { name: 'Nicole', activity_date: '2024-07-24', salary: '25.87' },
+      ] as Record<string, string>[],
+    },
+  },
 };
 
 const corporateCaseStudySlugMap = Object.fromEntries(

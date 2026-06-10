@@ -104,7 +104,7 @@ export interface Testimonial {
 const courses: Course[] = [
   {
     id: '1',
-    title: "Generative AI Course",
+    title: " Advanced Generative AI Course",
     description: "Master cutting-edge GenAI tools, large language models (LLMs), RAG systems, and stateful AI agents to build and deploy production-grade automation workflows.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Science",
@@ -1223,14 +1223,14 @@ const courses: Course[] = [
   {
     id: '5',
     title: "Data Analytics and Generative AI Course",
-    description: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Excel, VBA, Tableau, PowerBI, and more.",
+    description: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Excel, VBA, PowerBI, and more.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
     metaData: {
       title: "Data Analytics and Generative AI Course Course in Tableau & Power BI",
       description: "Join IBM Certified Data Science course with Visualization. Work on 25+ real-world projects. Mentors from IIT, IIM, & US universities. Get placement support.",
-      bio: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Python, R, Tableau, PowerBI, and more."
+      bio: "Learn data science and visualization skills to analyze data, uncover hidden patterns, and tell powerful stories using MySQL, Python, PowerBI, and more."
 
     },
     duration: "14 weeks",
@@ -1238,7 +1238,7 @@ const courses: Course[] = [
     reviewCount: 298,
     isFeatured: true,
     slug: "data-visualization-course",
-    longDescription: "This course will teach you how to use the most popular data science and visualization tools, like Excel, MySQL, R, Python, Tableau, and Power BI.\n\n You will not only learn high-earning skills like data analytics, dashboarding, business statistics, data manipulation, visualization, etc., but you will also gain practical experience in solving real-world problems.\n\n That’s why, after 184 hours of live training, you will spend about 100 hours on 50+ assignments, 10+ projects, and 30+ case studies. This will help you apply all the knowledge you learn to solve business problems and become a confident problem-solver.\n\n The course will make you an industry-ready data science and visualization expert in just 12 months. This course is perfect if you are starting your career as a college graduate or if you want to advance your skills as a working professional."
+    longDescription: "The Data Analytics and Generative AI Course is designed to help you build in-demand skills analysis, visualization, automation, and AI using tools like Excel, SQL, Python, PowerBI, Power Query, and Generative AI applications.\n\n In today’s fast-changing digital world, organizations depend on data-driven decision-making more than ever. This course teaches you how to analyze data, uncover insights, create dashboards, and solve real business problems with practical, hands-on learning.\n\n You will work on assignments, projects, and case studies that help you apply your knowledge in real-world business scenarios. The focus is not just on theory, but on building confidence and industry-ready problem-solving skills.\n\n Whether you are a college student, a fresher, or a working professional looking to upskill, this course can help you prepare for high-growth careers in analytics, business intelligence, reporting, and AI-powered decision-making."
     , instructors: [
       {
         id: "i1",
@@ -1258,11 +1258,11 @@ const courses: Course[] = [
       }
     ],
     outcomes: [
-      "Analyze data and uncover insights using Excel, MySQL.",
-      "Create interactive dashboards and visuals with Tableau and Power BI",
-      "Work on 10+ industry projects and 30+ case studies across domains like retail, finance, and healthcare",
-      "Master data storytelling and communication to deliver compelling business insights",
-      "Get certified by Ivy, along with 1:1 mentorship and lifetime placement support"
+      "Analyze and interpret data using Excel, SQL, Python, and AI-powered analytics concepts",
+      "Create interactive dashboards and business reports using Power BI and advanced visualization techniques",
+      "Work on 10+ industry projects and 30+ real-world case studies across retail, finance, healthcare, and more",
+      "Learn data storytelling, automation, and insight generation to solve real business problems confidently",
+      "Get certified by Ivy with 1:1 mentorship, career guidance, and lifetime placement assistance"
     ],
     curriculum: [
 
