@@ -2,5 +2,573 @@
   "title": "SQL & DB",
   "icon": "Database",
   "color": "bg-orange-500",
-  "description": "Database management and SQL queries"
+  "description": "Database management and SQL queries",
+  "subcategories": {
+    "embedded-databases": {
+      "title": "Embedded Databases",
+      "icon": "Database",
+      "color": "bg-orange-500",
+      "topics": [
+        {
+          "id": "duckdb-vs-sqlite",
+          "metaTitle": "DuckDB vs SQLite: Practical Comparison for AI, ML & Analytics | Ivy Pro School",
+          "title": "DuckDB vs SQLite",
+          "description": "A practical comparison of DuckDB and SQLite for AI, ML, data analytics, Python workflows, local storage, CSV analysis, and feature engineering.",
+          "duration": "14 min read",
+          "date": "June 10, 2026",
+          "content": {
+            "hero": {
+              "title": "DuckDB vs SQLite: A Practical Comparison for AI, ML, and Data Analytics Workflows",
+              "author": "Prateek Agarwal",
+              "date": "June 10, 2026",
+              "readTime": "14 min read"
+            },
+            "sections": [
+              {
+                "id": "intro",
+                "title": "Introduction",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "hasBar": true,
+                    "text": "AI and machine learning teams often work with local datasets before moving anything to production. They clean CSV files, explore customer data, engineer features, test SQL logic, build quick dashboards, and create model-ready datasets."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "For this kind of work, using a full database server is often unnecessary. This is where embedded databases become useful. <strong>SQLite</strong> and <strong>DuckDB</strong> both run inside your application without requiring a separate database server, but they solve different problems."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "SQLite is excellent for lightweight application storage and transactional workloads. DuckDB is designed for fast analytical processing on large local datasets. Understanding the difference helps developers, analysts, and AI teams choose the right tool at the right stage of a project."
+                  }
+                ]
+              },
+              {
+                "id": "toc",
+                "type": "toc",
+                "title": "Table of Contents",
+                "content": [
+                  { "id": "what-is-sqlite", "label": "What is SQLite?" },
+                  { "id": "what-is-duckdb", "label": "What is DuckDB?" },
+                  { "id": "quick-comparison", "label": "DuckDB vs SQLite: Quick Comparison" },
+                  { "id": "architecture", "label": "Architecture: Row-Based vs Columnar Storage" },
+                  { "id": "execution", "label": "Query Execution: Row Processing vs Vectorized Processing" },
+                  { "id": "sqlite-python", "label": "Python Example Using SQLite" },
+                  { "id": "duckdb-python", "label": "Python Example Using DuckDB" },
+                  { "id": "duckdb-files", "label": "Querying CSV and Pandas DataFrames with DuckDB" },
+                  { "id": "performance", "label": "Performance and Use Case Differences" },
+                  { "id": "when-sqlite", "label": "When Should You Use SQLite?" },
+                  { "id": "when-duckdb", "label": "When Should You Use DuckDB?" },
+                  { "id": "ai-ml", "label": "SQLite vs DuckDB for AI and ML Projects" },
+                  { "id": "verdict", "label": "Final Verdict" },
+                  { "id": "faq", "label": "Frequently Asked Questions" }
+                ]
+              },
+              {
+                "id": "core-analogy",
+                "type": "analogy",
+                "title": "The Simple Mental Model",
+                "icon": "Database",
+                "content": {
+                  "main": "Think of SQLite as a dependable local filing cabinet for application records, and DuckDB as a fast analytical workbench for scanning, joining, and summarizing data files.",
+                  "cards": [
+                    {
+                      "title": "SQLite",
+                      "content": "Best when the app needs to store, update, and retrieve individual records reliably."
+                    },
+                    {
+                      "title": "DuckDB",
+                      "content": "Best when the analyst or ML team needs to scan files, aggregate data, and create model-ready datasets quickly."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "what-is-sqlite",
+                "title": "1. What is SQLite?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "SQLite is a lightweight, embedded relational database engine. It is not a separate database server like MySQL, PostgreSQL, or SQL Server. Instead, SQLite runs as a library inside your application. The entire database is usually stored in a single file on disk."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "SQLite is widely used because it is small, reliable, portable, and easy to deploy. In practical terms, SQLite is useful when your application needs to store structured data locally, such as user preferences, offline data, transaction history, cached content, logs, or configuration."
+                  },
+                  {
+                    "type": "table",
+                    "title": "Key Features of SQLite",
+                    "headers": ["Feature", "Explanation"],
+                    "rows": [
+                      ["Serverless", "No separate database server is required."],
+                      ["Single-file storage", "The database is stored in one file."],
+                      ["Lightweight", "Very small footprint and easy to distribute."],
+                      ["ACID transactions", "Supports reliable transactions."],
+                      ["Row-oriented storage", "Efficient for reading, inserting, updating, or deleting individual records."],
+                      ["Broad language support", "Supported in Python, JavaScript, Java, C, C++, PHP, Android, iOS, and more."]
+                    ]
+                  },
+                  {
+                    "type": "note",
+                    "title": "Best fit",
+                    "content": "SQLite is a strong choice when you need simple, reliable local storage for an application."
+                  }
+                ]
+              },
+              {
+                "id": "what-is-duckdb",
+                "title": "2. What is DuckDB?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "DuckDB is also an embedded database, but it is built for analytics rather than transactional application storage. It is often described as an analytical database that runs inside your application, notebook, or data workflow."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "DuckDB is popular among data analysts, data scientists, and AI developers because it can query CSV, Parquet, JSON, Arrow, and Pandas DataFrames directly. Instead of loading everything into a traditional database first, you can directly run SQL queries on files."
+                  },
+                  {
+                    "type": "code",
+                    "title": "query_csv_with_duckdb.sql",
+                    "language": "sql",
+                    "borderColor": "amber",
+                    "code": "SELECT region, AVG(sales)\nFROM 'sales_data.csv'\nGROUP BY region;"
+                  },
+                  {
+                    "type": "table",
+                    "title": "Key Features of DuckDB",
+                    "headers": ["Feature", "Explanation"],
+                    "rows": [
+                      ["Embedded analytics database", "Runs inside Python, R, or other applications."],
+                      ["Columnar storage", "Optimized for analytical queries."],
+                      ["Vectorized execution", "Processes data in batches for better performance."],
+                      ["Direct file querying", "Can query CSV, Parquet, JSON, and Arrow files."],
+                      ["Pandas integration", "Can query DataFrames directly using SQL."],
+                      ["Multi-threaded execution", "Can use multiple CPU cores for analytical queries."],
+                      ["Strong for local analytics", "Useful for notebooks, prototypes, feature engineering, and data exploration."]
+                    ]
+                  },
+                  {
+                    "type": "note",
+                    "title": "Best fit",
+                    "content": "DuckDB is best seen as a local analytical engine rather than a traditional application database."
+                  }
+                ]
+              },
+              {
+                "id": "quick-comparison",
+                "title": "3. DuckDB vs SQLite: Quick Comparison Table",
+                "content": [
+                  {
+                    "type": "table",
+                    "title": "DuckDB vs SQLite",
+                    "headers": ["Aspect", "SQLite", "DuckDB"],
+                    "rows": [
+                      ["Primary purpose", "Local transactional database", "Local analytical database"],
+                      ["Best for", "App storage, small transactions, CRUD operations", "Data analysis, aggregations, joins, feature engineering"],
+                      ["Storage model", "Row-oriented", "Columnar"],
+                      ["Query execution", "Row-at-a-time processing", "Vectorized batch processing"],
+                      ["Typical workload", "Insert, update, delete, simple lookup", "Scan, group, aggregate, join large datasets"],
+                      ["File support", "Stores data in SQLite database file", "Can query CSV, Parquet, JSON, Arrow directly"],
+                      ["Python support", "Built into Python through sqlite3", "Install using pip install duckdb"],
+                      ["Pandas integration", "Requires manual loading or conversion", "Can query Pandas DataFrames directly"],
+                      ["Performance strength", "Fast for small record-level operations", "Fast for analytical queries"],
+                      ["Memory usage", "Very low by default", "Uses memory aggressively for speed"],
+                      ["Use in ML workflows", "Good for metadata or experiment records", "Good for feature engineering and dataset exploration"],
+                      ["License", "Public domain", "MIT open source"]
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "architecture",
+                "title": "4. Architecture Difference: Row-Based vs Columnar Storage",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "The biggest difference between SQLite and DuckDB is how they store and process data. SQLite is row-oriented, which means values belonging to the same row are stored together. This is useful when the system frequently needs to fetch or update an entire record."
+                  },
+                  {
+                    "type": "code",
+                    "title": "sqlite_style_lookup.sql",
+                    "language": "sql",
+                    "borderColor": "blue",
+                    "code": "SELECT *\nFROM customers\nWHERE customer_id = 1;"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "DuckDB is column-oriented, which means values from the same column are stored together. All customer_id values are stored together, all city values are stored together, and all purchase_amount values are stored together. This is useful for analytics."
+                  },
+                  {
+                    "type": "code",
+                    "title": "duckdb_style_analytics.sql",
+                    "language": "sql",
+                    "borderColor": "amber",
+                    "code": "SELECT AVG(purchase_amount)\nFROM customers;"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "DuckDB does not need to read every column for this query. It can focus mainly on the purchase_amount column. This reduces unnecessary data reading and improves performance for aggregations, filtering, grouping, and scanning large datasets."
+                  }
+                ]
+              },
+              {
+                "id": "execution",
+                "title": "5. Query Execution: Row Processing vs Vectorized Processing",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "SQLite processes queries in a traditional row-at-a-time manner. This is efficient for simple, small, transactional operations."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "DuckDB uses vectorized query execution. Instead of processing one row at a time, it processes batches of values together. This is more efficient for modern CPUs because the engine can perform repeated operations on chunks of data."
+                  },
+                  {
+                    "type": "code",
+                    "title": "large_sales_aggregation.sql",
+                    "language": "sql",
+                    "borderColor": "purple",
+                    "code": "SELECT category, SUM(revenue)\nFROM sales\nGROUP BY category;"
+                  },
+                  {
+                    "type": "note",
+                    "title": "Why it matters",
+                    "content": "For a large sales table, DuckDB can scan relevant columns in batches, perform calculations efficiently, and use multiple CPU cores where possible."
+                  }
+                ]
+              },
+              {
+                "id": "sqlite-python",
+                "title": "6. Python Example Using SQLite",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "SQLite is built into Python, so you do not need to install a separate package."
+                  },
+                  {
+                    "type": "code",
+                    "title": "sqlite_users.py",
+                    "language": "python",
+                    "borderColor": "blue",
+                    "code": "import sqlite3\n\n# Connect to SQLite database\n# If the file does not exist, SQLite will create it\nconn = sqlite3.connect(\"users.db\")\n\ncursor = conn.cursor()\n\ncursor.execute(\"\"\"\nCREATE TABLE IF NOT EXISTS users (\n    user_id INTEGER PRIMARY KEY,\n    name TEXT,\n    age INTEGER,\n    city TEXT\n);\n\"\"\")\n\ncursor.execute(\"\"\"\nINSERT INTO users (name, age, city)\nVALUES (?, ?, ?);\n\"\"\", (\"Asha\", 28, \"Kolkata\"))\n\ncursor.execute(\"\"\"\nINSERT INTO users (name, age, city)\nVALUES (?, ?, ?);\n\"\"\", (\"Rahul\", 35, \"Mumbai\"))\n\ncursor.execute(\"\"\"\nINSERT INTO users (name, age, city)\nVALUES (?, ?, ?);\n\"\"\", (\"Neha\", 31, \"Delhi\"))\n\nconn.commit()\n\ncursor.execute(\"\"\"\nSELECT name, city\nFROM users\nWHERE age > 30;\n\"\"\")\n\nrows = cursor.fetchall()\n\nfor row in rows:\n    print(row)\n\nconn.close()"
+                  },
+                  {
+                    "type": "code",
+                    "title": "expected_output.txt",
+                    "language": "text",
+                    "borderColor": "emerald",
+                    "code": "('Rahul', 'Mumbai')\n('Neha', 'Delhi')"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This example shows SQLite's strength. You can create a database file, create a table, insert rows, and query records using simple SQL. SQLite is a good option when your application needs local structured storage."
+                  }
+                ]
+              },
+              {
+                "id": "duckdb-python",
+                "title": "7. Python Example Using DuckDB",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "DuckDB requires installation first."
+                  },
+                  {
+                    "type": "code",
+                    "title": "install_duckdb.sh",
+                    "language": "bash",
+                    "borderColor": "amber",
+                    "code": "pip install duckdb pandas"
+                  },
+                  {
+                    "type": "code",
+                    "title": "duckdb_users.py",
+                    "language": "python",
+                    "borderColor": "amber",
+                    "code": "import duckdb\n\nconn = duckdb.connect()\n\nconn.execute(\"\"\"\nCREATE TABLE users (\n    user_id INTEGER,\n    name VARCHAR,\n    age INTEGER,\n    city VARCHAR\n);\n\"\"\")\n\nconn.execute(\"\"\"\nINSERT INTO users VALUES\n(1, 'Asha', 28, 'Kolkata'),\n(2, 'Rahul', 35, 'Mumbai'),\n(3, 'Neha', 31, 'Delhi');\n\"\"\")\n\nresult = conn.execute(\"\"\"\nSELECT name, city\nFROM users\nWHERE age > 30;\n\"\"\").fetchall()\n\nprint(result)"
+                  },
+                  {
+                    "type": "code",
+                    "title": "expected_output.txt",
+                    "language": "text",
+                    "borderColor": "emerald",
+                    "code": "[('Rahul', 'Mumbai'), ('Neha', 'Delhi')]"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "For small examples, SQLite and DuckDB look similar. Both allow you to create tables, insert rows, and run SQL queries. The major difference becomes visible when you work with larger analytical datasets."
+                  }
+                ]
+              },
+              {
+                "id": "duckdb-files",
+                "title": "8. Querying CSV and Pandas DataFrames with DuckDB",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "DuckDB becomes especially powerful when working with files and DataFrames. You can create a sample sales dataset, save it as CSV, and query that file directly using SQL."
+                  },
+                  {
+                    "type": "code",
+                    "title": "create_sales_data.py",
+                    "language": "python",
+                    "borderColor": "purple",
+                    "code": "import pandas as pd\nimport numpy as np\n\nnp.random.seed(42)\n\nsales_data = pd.DataFrame({\n    \"order_id\": range(1, 10001),\n    \"region\": np.random.choice([\"East\", \"West\", \"North\", \"South\"], size=10000),\n    \"category\": np.random.choice([\"Electronics\", \"Clothing\", \"Furniture\", \"Books\"], size=10000),\n    \"revenue\": np.random.randint(500, 50000, size=10000),\n    \"discount\": np.random.uniform(0.05, 0.30, size=10000)\n})\n\nsales_data.to_csv(\"sales_data.csv\", index=False)\n\nprint(sales_data.head())"
+                  },
+                  {
+                    "type": "code",
+                    "title": "query_sales_csv.py",
+                    "language": "python",
+                    "borderColor": "amber",
+                    "code": "import duckdb\n\nresult = duckdb.sql(\"\"\"\nSELECT\n    region,\n    category,\n    COUNT(*) AS total_orders,\n    SUM(revenue) AS total_revenue,\n    AVG(discount) AS avg_discount\nFROM 'sales_data.csv'\nGROUP BY region, category\nORDER BY total_revenue DESC;\n\"\"\").df()\n\nprint(result.head())"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This is where DuckDB feels different from SQLite. You do not need to first create a database table and import the CSV manually. DuckDB can directly query the file."
+                  },
+                  {
+                    "type": "code",
+                    "title": "query_pandas_dataframe.py",
+                    "language": "python",
+                    "borderColor": "emerald",
+                    "code": "import duckdb\n\nhigh_value_orders = duckdb.sql(\"\"\"\nSELECT\n    region,\n    COUNT(*) AS high_value_order_count,\n    AVG(revenue) AS avg_revenue\nFROM sales_data\nWHERE revenue > 30000\nGROUP BY region\nORDER BY high_value_order_count DESC;\n\"\"\").df()\n\nprint(high_value_orders)"
+                  },
+                  {
+                    "type": "note",
+                    "title": "Why AI and ML teams like this",
+                    "content": "DuckDB can query data already sitting in CSV files or Pandas DataFrames, so teams can mix SQL and Python naturally during exploration, cleaning, and feature engineering."
+                  }
+                ]
+              },
+              {
+                "id": "performance",
+                "title": "9. Performance and Use Case Differences",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "SQLite is fast, but its speed is optimized for lightweight transactional tasks. DuckDB is built for analytical tasks such as scanning files, grouping data, joining datasets, and preparing features."
+                  },
+                  {
+                    "type": "table",
+                    "title": "SQLite Suitability",
+                    "headers": ["Task", "SQLite Suitability"],
+                    "rows": [
+                      ["Insert one user record", "Excellent"],
+                      ["Update a mobile app setting", "Excellent"],
+                      ["Store local form submissions", "Excellent"],
+                      ["Maintain small app tables", "Excellent"],
+                      ["Run large group-by analysis on millions of rows", "Not ideal"],
+                      ["Query Parquet files directly", "Not built for this"]
+                    ]
+                  },
+                  {
+                    "type": "table",
+                    "title": "DuckDB Suitability",
+                    "headers": ["Task", "DuckDB Suitability"],
+                    "rows": [
+                      ["Run aggregation on large CSV files", "Excellent"],
+                      ["Query Parquet files directly", "Excellent"],
+                      ["Join multiple analytical datasets", "Excellent"],
+                      ["Prepare ML features", "Excellent"],
+                      ["Store mobile app user settings", "Not ideal"],
+                      ["Handle frequent small row updates", "Not its main strength"]
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "when-sqlite",
+                "title": "10. When Should You Use SQLite?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Use SQLite when your main requirement is simple local data storage. SQLite should be your default choice when you need a small, dependable transactional database."
+                  },
+                  {
+                    "type": "checklist",
+                    "items": [
+                      "You are building a mobile app.",
+                      "You need to store user preferences.",
+                      "You need a local database for a desktop application.",
+                      "Your workload has frequent inserts, updates, and deletes.",
+                      "Your data size is small or moderate.",
+                      "You need a stable, proven, low-maintenance database.",
+                      "You want something already available in Python.",
+                      "You are storing application state, logs, or configuration."
+                    ]
+                  },
+                  {
+                    "type": "table",
+                    "title": "Example Use Cases for SQLite",
+                    "headers": ["Scenario", "Why SQLite Fits"],
+                    "rows": [
+                      ["Mobile app database", "Small, embedded, reliable"],
+                      ["Offline-first application", "Stores data locally"],
+                      ["IoT device storage", "Low resource requirement"],
+                      ["Browser or desktop app storage", "Easy local persistence"],
+                      ["Small internal tool", "No need for separate database server"],
+                      ["Prototype application backend", "Simple and fast to set up"]
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "when-duckdb",
+                "title": "11. When Should You Use DuckDB?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Use DuckDB when your main requirement is fast local analytics. DuckDB is especially useful when your dataset is too large or too slow for normal Pandas operations, but you do not want to set up a full data warehouse."
+                  },
+                  {
+                    "type": "checklist",
+                    "items": [
+                      "You are working with CSV or Parquet files.",
+                      "You want to run SQL on Pandas DataFrames.",
+                      "You are doing exploratory data analysis.",
+                      "You are preparing features for machine learning.",
+                      "You are joining large local datasets.",
+                      "You need faster group-by, filter, and aggregation operations.",
+                      "You are working in Jupyter notebooks.",
+                      "You want an alternative to slow Pandas operations.",
+                      "You are building a local analytical pipeline."
+                    ]
+                  },
+                  {
+                    "type": "table",
+                    "title": "Example Use Cases for DuckDB",
+                    "headers": ["Scenario", "Why DuckDB Fits"],
+                    "rows": [
+                      ["Feature engineering for ML", "Fast aggregations and joins"],
+                      ["Querying large CSV files", "Direct file querying"],
+                      ["Working with Parquet datasets", "Native analytical workflow"],
+                      ["Notebook-based analytics", "Works smoothly with Python"],
+                      ["Replacing some Pandas operations", "SQL can be simpler and faster"],
+                      ["Local BI-style analysis", "Strong analytical query engine"]
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ai-ml",
+                "title": "12. SQLite vs DuckDB for AI and ML Projects",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "For AI and ML developers, the decision is usually not SQLite or DuckDB forever. A more practical view is that both can be used at different stages."
+                  },
+                  {
+                    "type": "table",
+                    "title": "AI/ML Workflow Stage",
+                    "headers": ["Workflow Stage", "Better Tool", "Reason"],
+                    "rows": [
+                      ["Store experiment metadata", "SQLite", "Lightweight transactional storage"],
+                      ["Store user feedback records", "SQLite", "Frequent row-level inserts"],
+                      ["Clean large CSV files", "DuckDB", "Direct file querying and fast filtering"],
+                      ["Create training features", "DuckDB", "Fast joins and aggregations"],
+                      ["Explore Parquet datasets", "DuckDB", "Native support for analytical files"],
+                      ["Build a local prototype app", "SQLite", "Simple embedded app database"],
+                      ["Analyze model prediction logs", "DuckDB", "Fast analytical queries"],
+                      ["Maintain app configuration", "SQLite", "Simple persistent storage"]
+                    ]
+                  },
+                  {
+                    "type": "table",
+                    "title": "Practical Combined Architecture",
+                    "headers": ["Requirement", "Tool"],
+                    "rows": [
+                      ["Store app users and settings", "SQLite"],
+                      ["Process raw data files", "DuckDB"],
+                      ["Generate model features", "DuckDB"],
+                      ["Save experiment summary", "SQLite"],
+                      ["Export processed dataset", "DuckDB to Parquet or CSV"]
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "title": "Best of both worlds",
+                    "content": "Use SQLite for dependable application state and metadata. Use DuckDB for fast local analytics, feature engineering, and data preparation."
+                  }
+                ]
+              },
+              {
+                "id": "verdict",
+                "title": "13. Final Verdict",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "SQLite and DuckDB are both excellent embedded databases, but they are built with different priorities."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "SQLite is best for reliable local storage and transactional operations. It is small, mature, widely supported, and ideal for applications that need to store and retrieve structured data without a separate server."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "DuckDB is best for local analytics. It is designed for scanning, filtering, aggregating, and joining larger datasets. Its ability to query CSV, Parquet, Arrow, and Pandas DataFrames directly makes it especially useful for AI, ML, and data analytics workflows."
+                  },
+                  {
+                    "type": "table",
+                    "title": "Simple Decision Rule",
+                    "headers": ["Need", "Choose"],
+                    "rows": [
+                      ["Application database", "SQLite"],
+                      ["Local analytics engine", "DuckDB"],
+                      ["Frequent inserts and updates", "SQLite"],
+                      ["Large aggregations and joins", "DuckDB"],
+                      ["Mobile or IoT storage", "SQLite"],
+                      ["Data science notebook work", "DuckDB"],
+                      ["Query files directly", "DuckDB"],
+                      ["Minimal local storage", "SQLite"]
+                    ]
+                  },
+                  {
+                    "type": "quote",
+                    "text": "In short, SQLite is the better embedded database for applications. DuckDB is the better embedded database for analytics."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "For modern AI and ML workflows, DuckDB is often the stronger choice during data preparation and feature engineering. But for application state, metadata, and transactional storage, SQLite remains one of the most dependable tools available."
+                  }
+                ]
+              },
+              {
+                "id": "faq",
+                "title": "Frequently Asked Questions",
+                "content": [
+                  {
+                    "type": "faq",
+                    "items": [
+                      {
+                        "question": "Is DuckDB a replacement for SQLite?",
+                        "answer": "Not exactly. DuckDB is better for analytics, while SQLite is better for application storage and transactional workloads."
+                      },
+                      {
+                        "question": "Can I use DuckDB and SQLite in the same AI project?",
+                        "answer": "Yes. A practical setup is to use DuckDB for data exploration and feature engineering, and SQLite for metadata, settings, user feedback, or experiment records."
+                      },
+                      {
+                        "question": "Which is better for Pandas workflows?",
+                        "answer": "DuckDB is usually better because it can query Pandas DataFrames directly with SQL and can also read files such as CSV and Parquet without manual loading."
+                      },
+                      {
+                        "question": "Which database should I use for a mobile app?",
+                        "answer": "SQLite is the stronger choice for mobile apps because it is lightweight, mature, and optimized for local transactional storage."
+                      },
+                      {
+                        "question": "Which database is better for feature engineering?",
+                        "answer": "DuckDB is usually better for feature engineering because it is optimized for joins, aggregations, filtering, and large local analytical datasets."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
 }
