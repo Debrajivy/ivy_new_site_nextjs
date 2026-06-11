@@ -51,7 +51,7 @@ const CallToAction: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/categories">
+                <Link href="/courses">
                   Explore Courses
                 </Link>
               </Button>

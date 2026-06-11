@@ -2468,6 +2468,787 @@ right join salary
       ] as Record<string, string>[],
     },
   },
+  'sql-drill-17': {
+    id: 'sql-drill-17',
+    number: 17,
+    title: 'Yearly Product Sales Report',
+    tool: 'SQL' as const,
+    difficulty: 'Intermediate' as Difficulty,
+    skills: ['Date Functions', 'CASE WHEN', 'DATEDIFF', 'YEAR', 'UNION', 'JOIN', 'Sales Analysis'],
+    description: 'Calculate yearly sales amount for each product when sales periods may start and end across different years.',
+    setup: "Your dataset contains two sales analysis tables:\n\n1. A Product table with product IDs and product names\n2. A Sales table with product sales periods and average daily sales amount\n\nPrepare a yearly sales report for all products between 2018 and 2020 based on the number of applicable sales days.",
+    schema: {
+      Product: [
+        { name: 'product_id', type: 'INT', constraint: 'PK' },
+        { name: 'product_name', type: 'VARCHAR(255)', constraint: '' },
+      ],
+      Sales: [
+        { name: 'product_id', type: 'INT', constraint: 'PK, FK' },
+        { name: 'period_start', type: 'DATE', constraint: '' },
+        { name: 'period_end', type: 'DATE', constraint: '' },
+        { name: 'average_daily_sales', type: 'INT', constraint: '' },
+      ],
+    },
+    sampleTables: [
+      {
+        name: 'Product',
+        rowCount: '5 rows',
+        headers: ['product_id', 'product_name'],
+        rows: [
+          [1, 'Mouse'],
+          [2, 'Keyboard'],
+          [3, 'Ram'],
+          [4, 'Processor'],
+          [5, 'Graphic Card'],
+        ],
+      },
+      {
+        name: 'Sales',
+        rowCount: '10 rows',
+        headers: ['product_id', 'period_start', 'period_end', 'average_daily_sales'],
+        rows: [
+          [1, '2018-11-15', '2019-01-15', 120],
+          [2, '2019-03-01', '2019-03-31', 80],
+          [5, '2020-01-01', '2020-12-31', 5],
+          [4, '2018-07-01', '2018-12-31', 70],
+          [3, '2019-06-15', '2020-01-15', 120],
+          [1, '2020-02-01', '2020-06-30', 120],
+          [2, '2020-07-01', '2020-12-31', 80],
+          [3, '2019-08-01', '2019-12-31', 45],
+          [4, '2019-01-01', '2019-06-30', 25],
+          [5, '2018-10-01', '2019-03-31', 15],
+        ],
+      },
+    ],
+    departmentData: [] as { id: number; name: string }[],
+    employeeData: [] as { id: number; name: string; salary: string; joining_date: string; department_id: number }[],
+    task: 'Yearly Product Sales Report: What is the total sales amount of each product for each year based on the number of applicable sales days?\n\nThe sales years are between 2018 and 2020.\n\nThe final result table should have product_id, product_name, report_year, and total_amount columns.',
+    outputColumns: ['product_id', 'product_name', 'report_year', 'total_amount'],
+    expectedOutputPreview: [
+      { product_id: '1', product_name: 'Mouse', report_year: '2018', total_amount: '5640' },
+      { product_id: '1', product_name: 'Mouse', report_year: '2019', total_amount: '1800' },
+      { product_id: '1', product_name: 'Mouse', report_year: '2020', total_amount: '18120' },
+    ] as Record<string, string>[],
+    hint: [
+      'Create one reporting row per product for each year from 2018 to 2020.',
+      'Use CASE WHEN to calculate how many days of each sales period fall inside the reporting year.',
+      'Remember that DATEDIFF returns the gap between dates, so add 1 when you need inclusive day counts.',
+      'Filter out product-year combinations where the calculated amount is 0.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Yearly Product Sales Report
+
+Question:
+Write an SQL query to report the total sales amount of each item for each year,
+with corresponding product_id, product_name, report_year and total_amount.
+
+The sales years are between 2018 and 2020.
+Return the result table ordered by product_id and report_year. */
+
+SELECT
+    b.product_id,
+    a.product_name,
+    a.yr AS report_year,
+    CASE
+        WHEN YEAR(b.period_start) = YEAR(b.period_end)
+             AND a.yr = YEAR(b.period_start)
+        THEN DATEDIFF(b.period_end, b.period_start) + 1
+
+        WHEN a.yr = YEAR(b.period_start)
+        THEN DATEDIFF(DATE_FORMAT(b.period_start, '%Y-12-31'), b.period_start) + 1
+
+        WHEN a.yr = YEAR(b.period_end)
+        THEN DAYOFYEAR(b.period_end)
+
+        WHEN a.yr > YEAR(b.period_start)
+             AND a.yr < YEAR(b.period_end)
+        THEN 365
+
+        ELSE 0
+    END * average_daily_sales AS total_amount
+FROM
+    (
+        SELECT product_id, product_name, '2018' AS yr FROM Product
+        UNION
+        SELECT product_id, product_name, '2019' AS yr FROM Product
+        UNION
+        SELECT product_id, product_name, '2020' AS yr FROM Product
+    ) a
+JOIN Sales b
+    ON a.product_id = b.product_id
+HAVING total_amount > 0
+ORDER BY b.product_id, a.yr;`,
+      howItWorks: [
+        'The Product table stores product names.',
+        'The Sales table stores the sales period and average daily sales for each product.',
+        'The derived table a creates one row for every product for each reporting year: 2018, 2019, and 2020.',
+        'The query joins this year-wise product list with the Sales table using product_id.',
+        'The CASE WHEN logic calculates how many days of the sales period fall inside each reporting year.',
+        'If the sales period starts and ends in the same year, DATEDIFF(period_end, period_start) + 1 calculates the number of inclusive days.',
+        'If the reporting year is the start year, the query counts days from period_start to December 31 of that year.',
+        'If the reporting year is the end year, DAYOFYEAR(period_end) counts days from January 1 to period_end.',
+        'The number of applicable days is multiplied by average_daily_sales to calculate total_amount.',
+        'HAVING total_amount > 0 removes product-year combinations where no sales happened.',
+        'The final result is ordered by product_id and report_year.',
+      ],
+      commonMistake: {
+        title: 'Inclusive Date Counts',
+        points: [
+          'DATEDIFF(period_end, period_start) excludes the starting day from the count, so add 1 for inclusive sales periods.',
+          'When the period spans years, calculate only the portion that belongs to the reporting year before multiplying by average_daily_sales.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: undefined as { title: string; points: string[] } | undefined,
+      result: [
+        { product_id: '1', product_name: 'Mouse', report_year: '2018', total_amount: '5640' },
+        { product_id: '1', product_name: 'Mouse', report_year: '2019', total_amount: '1800' },
+        { product_id: '1', product_name: 'Mouse', report_year: '2020', total_amount: '18120' },
+        { product_id: '2', product_name: 'Keyboard', report_year: '2019', total_amount: '2480' },
+        { product_id: '2', product_name: 'Keyboard', report_year: '2020', total_amount: '14720' },
+        { product_id: '3', product_name: 'Ram', report_year: '2019', total_amount: '24000' },
+        { product_id: '3', product_name: 'Ram', report_year: '2019', total_amount: '6885' },
+        { product_id: '3', product_name: 'Ram', report_year: '2020', total_amount: '1800' },
+        { product_id: '4', product_name: 'Processor', report_year: '2018', total_amount: '12880' },
+        { product_id: '4', product_name: 'Processor', report_year: '2019', total_amount: '4525' },
+        { product_id: '5', product_name: 'Graphic Card', report_year: '2018', total_amount: '1380' },
+        { product_id: '5', product_name: 'Graphic Card', report_year: '2019', total_amount: '1350' },
+        { product_id: '5', product_name: 'Graphic Card', report_year: '2020', total_amount: '1830' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-18': {
+    id: 'sql-drill-18',
+    number: 18,
+    title: 'Batch-wise Order Packaging Allocation',
+    tool: 'SQL' as const,
+    difficulty: 'Advanced' as Difficulty,
+    skills: ['Recursive CTE', 'ROW_NUMBER', 'LEFT JOIN', 'GROUP BY', 'Allocation Logic', 'Inventory Analysis'],
+    description: 'Find which order was packaged from which batch and in what quantity using recursive CTEs and row-wise allocation logic.',
+    setup: "Your dataset contains two packaging allocation tables:\n\n1. A Batches table with batch IDs and available quantity in each batch\n2. An Orders table with order numbers and required quantity for each order\n\nThe packaging company uses batches sequentially. It starts from the first batch, and only after that batch is exhausted, it moves to the next batch.",
+    schema: {
+      Batches: [
+        { name: 'batch_id', type: 'VARCHAR(10)', constraint: '' },
+        { name: 'quantity', type: 'INT', constraint: '' },
+      ],
+      Orders: [
+        { name: 'order_number', type: 'VARCHAR(10)', constraint: '' },
+        { name: 'quantity', type: 'INT', constraint: '' },
+      ],
+    },
+    sampleTables: [
+      {
+        name: 'Batches',
+        rowCount: '10 rows',
+        headers: ['batch_id', 'quantity'],
+        rows: [
+          ['BA', 10],
+          ['BB', 12],
+          ['BC', 10],
+          ['BD', 16],
+          ['BE', 15],
+          ['BF', 13],
+          ['BG', 19],
+          ['BH', 10],
+          ['BI', 14],
+          ['BJ', 16],
+        ],
+      },
+      {
+        name: 'Orders',
+        rowCount: '20 rows',
+        headers: ['order_number', 'quantity'],
+        rows: [
+          ['OA', 5],
+          ['OB', 4],
+          ['OC', 2],
+          ['OD', 8],
+          ['OE', 7],
+          ['OF', 10],
+          ['OG', 12],
+          ['OH', 6],
+          ['OI', 12],
+          ['OJ', 10],
+          ['OK', 8],
+          ['OL', 16],
+          ['OM', 8],
+          ['ON', 5],
+          ['OO', 3],
+          ['OP', 4],
+          ['OQ', 12],
+          ['OR', 9],
+          ['OS', 6],
+          ['OT', 10],
+        ],
+      },
+    ],
+    departmentData: [] as { id: number; name: string }[],
+    employeeData: [] as { id: number; name: string; salary: string; joining_date: string; department_id: number }[],
+    task: 'Batch-wise Order Packaging Allocation: Which order was packaged from which batch and in what quantity?\n\nThe final result table should have order_number, batch_id, and quantity columns.',
+    outputColumns: ['order_number', 'batch_id', 'quantity'],
+    expectedOutputPreview: [
+      { order_number: 'OA', batch_id: 'BA', quantity: '5' },
+      { order_number: 'OB', batch_id: 'BA', quantity: '4' },
+      { order_number: 'OC', batch_id: 'BA', quantity: '1' },
+      { order_number: 'OC', batch_id: 'BB', quantity: '1' },
+    ] as Record<string, string>[],
+    hint: [
+      'Use recursive CTEs to split each batch and each order into unit-level rows.',
+      'Assign ROW_NUMBER() to batch units and order units to create a common sequence.',
+      'Join order units to batch units by row number to simulate sequential allocation.',
+      'Aggregate the unit-level matches back to order_number and batch_id.',
+      'Use LEFT JOIN so any unfulfilled order units remain visible with a NULL batch_id.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Batch-wise Order Packaging Allocation
+
+Question:
+Find out which order, in what quantity, was packaged from which batch.
+
+The final result table should have:
+order_number | batch_id | quantity */
+
+with batch_cte as
+(
+    select
+        *,
+        row_number() over(order by batch_id) as rn
+    from
+    (
+        with recursive batch_split as
+        (
+            select
+                batch_id,
+                1 as quantity
+            from batches
+
+            union all
+
+            select
+                b.batch_id,
+                (cte.quantity + 1) as quantity
+            from batch_split cte
+            join batches b
+                on b.batch_id = cte.batch_id
+               and b.quantity > cte.quantity
+        )
+
+        select
+            batch_id,
+            1 as quantity
+        from batch_split
+    ) x
+),
+
+order_cte as
+(
+    select
+        *,
+        row_number() over(order by order_number) as rn
+    from
+    (
+        with recursive order_split as
+        (
+            select
+                order_number,
+                1 as quantity
+            from orders
+
+            union all
+
+            select
+                o.order_number,
+                (cte.quantity + 1) as quantity
+            from order_split cte
+            join orders o
+                on o.order_number = cte.order_number
+               and o.quantity > cte.quantity
+        )
+
+        select
+            order_number,
+            1 as quantity
+        from order_split
+    ) x
+)
+
+select
+    o.order_number,
+    b.batch_id,
+    sum(o.quantity) as quantity
+from order_cte o
+left join batch_cte b
+    on o.rn = b.rn
+group by
+    o.order_number,
+    b.batch_id
+order by
+    o.order_number,
+    b.batch_id;`,
+      howItWorks: [
+        'The Batches table stores the quantity available in each batch.',
+        'The Orders table stores the quantity required for each order.',
+        'The recursive CTE batch_split breaks each batch quantity into unit-level rows. For example, a batch with quantity 10 becomes 10 rows.',
+        'ROW_NUMBER() OVER(ORDER BY batch_id) assigns a running sequence number to every available unit across all batches.',
+        'The recursive CTE order_split breaks each order quantity into unit-level rows. For example, an order with quantity 5 becomes 5 rows.',
+        'ROW_NUMBER() OVER(ORDER BY order_number) assigns a running sequence number to every required unit across all orders.',
+        'The query joins order units with batch units using the row number. This simulates sequential allocation from batches to orders.',
+        'SUM(o.quantity) aggregates unit-level matches back into order-batch level quantities.',
+        'The final output shows how much of each order was fulfilled from each batch.',
+        'If total order quantity is higher than total batch quantity, the remaining order quantity appears with a NULL batch_id.',
+      ],
+      commonMistake: {
+        title: 'Losing Unfulfilled Orders',
+        points: [
+          'Use LEFT JOIN from order_cte to batch_cte. An INNER JOIN would hide order units that could not be matched to available batch quantity.',
+          'The row number ordering controls allocation order, so use the required sequential order consistently for both batches and orders.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: undefined as { title: string; points: string[] } | undefined,
+      result: [
+        { order_number: 'OA', batch_id: 'BA', quantity: '5' },
+        { order_number: 'OB', batch_id: 'BA', quantity: '4' },
+        { order_number: 'OC', batch_id: 'BA', quantity: '1' },
+        { order_number: 'OC', batch_id: 'BB', quantity: '1' },
+        { order_number: 'OD', batch_id: 'BB', quantity: '8' },
+        { order_number: 'OE', batch_id: 'BB', quantity: '3' },
+        { order_number: 'OE', batch_id: 'BC', quantity: '4' },
+        { order_number: 'OF', batch_id: 'BC', quantity: '6' },
+        { order_number: 'OF', batch_id: 'BD', quantity: '4' },
+        { order_number: 'OG', batch_id: 'BD', quantity: '12' },
+        { order_number: 'OH', batch_id: 'BE', quantity: '6' },
+        { order_number: 'OI', batch_id: 'BE', quantity: '9' },
+        { order_number: 'OI', batch_id: 'BF', quantity: '3' },
+        { order_number: 'OJ', batch_id: 'BF', quantity: '10' },
+        { order_number: 'OK', batch_id: 'BG', quantity: '8' },
+        { order_number: 'OL', batch_id: 'BG', quantity: '11' },
+        { order_number: 'OL', batch_id: 'BH', quantity: '5' },
+        { order_number: 'OM', batch_id: 'BH', quantity: '5' },
+        { order_number: 'OM', batch_id: 'BI', quantity: '3' },
+        { order_number: 'ON', batch_id: 'BI', quantity: '5' },
+        { order_number: 'OO', batch_id: 'BI', quantity: '3' },
+        { order_number: 'OP', batch_id: 'BI', quantity: '3' },
+        { order_number: 'OP', batch_id: 'BJ', quantity: '1' },
+        { order_number: 'OQ', batch_id: 'BJ', quantity: '12' },
+        { order_number: 'OR', batch_id: 'BJ', quantity: '3' },
+        { order_number: 'OR', batch_id: 'NULL', quantity: '6' },
+        { order_number: 'OS', batch_id: 'NULL', quantity: '6' },
+        { order_number: 'OT', batch_id: 'NULL', quantity: '10' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-19': {
+    id: 'sql-drill-19',
+    number: 19,
+    title: 'Ropeway Station Route Analysis',
+    tool: 'SQL' as const,
+    difficulty: 'Advanced' as Difficulty,
+    skills: ['CTE', 'SELF JOIN', 'CASE WHEN', 'INNER JOIN', 'Route Analysis', 'Graph-style Query'],
+    description: 'Find valid ropeway transportation routes where altitude decreases from start point to middle point to end point.',
+    setup: "Your dataset contains two ropeway network tables:\n\n1. A Ropeway_Stations table with station IDs, station names, and altitude\n2. A Stations table with directly connected ropeway station pairs\n\nAnalyze the ropeway station network and identify valid transportation routes for moving rocks from a higher-altitude point to a lower-altitude point. Each route in the Stations table is bidirectional.",
+    schema: {
+      Ropeway_Stations: [
+        { name: 'id', type: 'INTEGER', constraint: '' },
+        { name: 'name', type: 'VARCHAR(40)', constraint: '' },
+        { name: 'altitude', type: 'INTEGER', constraint: '' },
+      ],
+      Stations: [
+        { name: 'point1', type: 'INTEGER', constraint: '' },
+        { name: 'point2', type: 'INTEGER', constraint: '' },
+      ],
+    },
+    sampleTables: [
+      {
+        name: 'Ropeway_Stations',
+        rowCount: '5 rows',
+        headers: ['id', 'name', 'altitude'],
+        rows: [
+          [1, 'Girijesh', 1900],
+          [2, 'Gandhamadhan', 2100],
+          [3, 'Himadri', 1600],
+          [4, 'Indrakeel', 782],
+          [5, 'Nagaja', 1370],
+        ],
+      },
+      {
+        name: 'Stations',
+        rowCount: '5 rows',
+        headers: ['point1', 'point2'],
+        rows: [
+          [1, 3],
+          [3, 2],
+          [3, 5],
+          [4, 5],
+          [1, 5],
+        ],
+      },
+    ],
+    departmentData: [] as { id: number; name: string }[],
+    employeeData: [] as { id: number; name: string; salary: string; joining_date: string; department_id: number }[],
+    task: 'Ropeway Route Analysis: Which triplets of stations can be used as startpt, middlept, and endpt, where altitude decreases at every step?\n\nThe route should satisfy: start point altitude > middle point altitude > end point altitude.\n\nThe final result table should have startpt, middlept, and endpt columns.',
+    outputColumns: ['startpt', 'middlept', 'endpt'],
+    expectedOutputPreview: [
+      { startpt: 'Girijesh', middlept: 'Himadri', endpt: 'Nagaja' },
+      { startpt: 'Gandhamadhan', middlept: 'Himadri', endpt: 'Nagaja' },
+      { startpt: 'Himadri', middlept: 'Nagaja', endpt: 'Indrakeel' },
+    ] as Record<string, string>[],
+    hint: [
+      'Treat every connection in the Stations table as bidirectional.',
+      'First standardize each direct connection so it points from the higher-altitude station to the lower-altitude station.',
+      'Use CASE WHEN to choose the downhill start and end point for each edge.',
+      'Self join the standardized downhill edges to find two-step routes where the first edge ends where the second edge starts.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Ropeway Route Analysis
+
+Question:
+Create a query that finds all triplets:
+startpt | middlept | endpt
+
+The route should satisfy:
+start point altitude > middle point altitude > end point altitude.
+
+Each route in the stations table is bidirectional. */
+
+with cte_1 as
+(
+    select
+        t1.point1 as start_point,
+        h1.name as start_point_name,
+        h1.altitude as start_point_altitude,
+        t1.point2 as end_point
+    from ropeway_stations h1
+    inner join stations t1
+        on t1.point1 = h1.id
+),
+
+cte_2 as
+(
+    select
+        t2.*,
+        h2.name as end_point_name,
+        h2.altitude as end_point_altitude,
+        case
+            when start_point_altitude > h2.altitude then 1
+            else 0
+        end as altitude_flag
+    from cte_1 t2
+    inner join ropeway_stations h2
+        on h2.id = t2.end_point
+),
+
+cte_final as
+(
+    select
+        case
+            when altitude_flag = 1 then start_point
+            else end_point
+        end as start_point,
+
+        case
+            when altitude_flag = 1 then start_point_name
+            else end_point_name
+        end as start_point_name,
+
+        case
+            when altitude_flag = 1 then end_point
+            else start_point
+        end as end_point,
+
+        case
+            when altitude_flag = 1 then end_point_name
+            else start_point_name
+        end as end_point_name
+    from cte_2
+)
+
+select
+    c1.start_point_name as startpt,
+    c1.end_point_name as middlept,
+    c2.end_point_name as endpt
+from cte_final c1
+inner join cte_final c2
+    on c1.end_point = c2.start_point;`,
+      howItWorks: [
+        'The ropeway_stations table contains the station name and altitude.',
+        'The stations table contains directly connected station pairs.',
+        'Since the routes are bidirectional, each connection must first be understood in terms of altitude direction.',
+        'cte_1 joins each route with the altitude of the first point.',
+        'cte_2 adds the altitude of the second point and checks whether the first point is higher than the second point.',
+        'altitude_flag identifies whether the direction already follows a higher-to-lower route.',
+        'cte_final standardizes every direct connection as a downhill route, where start_point is always higher than end_point.',
+        'The final query joins cte_final with itself to find two connected downhill segments.',
+        'The first segment gives startpt to middlept, and the second segment gives middlept to endpt.',
+        'The final output contains valid three-station routes where altitude decreases from start point to middle point to end point.',
+      ],
+      commonMistake: {
+        title: 'Forgetting Bidirectional Routes',
+        points: [
+          'A row such as 3 to 2 does not mean the only possible direction is Himadri to Gandhamadhan. The route is bidirectional, so altitude determines the valid downhill direction.',
+          'Standardize every edge as higher altitude to lower altitude before self joining routes.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: undefined as { title: string; points: string[] } | undefined,
+      result: [
+        { startpt: 'Girijesh', middlept: 'Himadri', endpt: 'Nagaja' },
+        { startpt: 'Gandhamadhan', middlept: 'Himadri', endpt: 'Nagaja' },
+        { startpt: 'Himadri', middlept: 'Nagaja', endpt: 'Indrakeel' },
+        { startpt: 'Girijesh', middlept: 'Nagaja', endpt: 'Indrakeel' },
+      ] as Record<string, string>[],
+    },
+  },
+  'sql-drill-20': {
+    id: 'sql-drill-20',
+    number: 20,
+    title: 'Student Screening and Failed Subject Analysis',
+    tool: 'SQL' as const,
+    difficulty: 'Advanced' as Difficulty,
+    skills: ['CTE', 'UNION ALL', 'CASE WHEN', 'GROUP_CONCAT', 'Conditional Logic', 'Ranking', 'Screening Analysis'],
+    description: 'Identify students who cleared all subjects, calculate their percentage, and list failed subjects for students who did not qualify.',
+    setup: "Your dataset contains three student screening tables:\n\n1. A Students table with roll numbers and student names\n2. A Scores table with marks across six subjects\n3. A Subjects table with subject names and pass marks\n\nOnly students who pass all six subjects will be considered for the interview round. The company also wants to know the subjects failed by students who did not qualify. There is an option between Subject5 and Subject6. If a student has taken both, the higher score between Subject5 and Subject6 should be considered while calculating total percentage.",
+    schema: {
+      Students: [
+        { name: 'Roll_No', type: 'VARCHAR(20)', constraint: '' },
+        { name: 'Name', type: 'VARCHAR(100)', constraint: '' },
+      ],
+      Scores: [
+        { name: 'Student_ID', type: 'VARCHAR(20)', constraint: '' },
+        { name: 'Subject1', type: 'INT', constraint: '' },
+        { name: 'Subject2', type: 'INT', constraint: '' },
+        { name: 'Subject3', type: 'INT', constraint: '' },
+        { name: 'Subject4', type: 'INT', constraint: '' },
+        { name: 'Subject5', type: 'INT', constraint: '' },
+        { name: 'Subject6', type: 'INT', constraint: '' },
+      ],
+      Subjects: [
+        { name: 'ID', type: 'VARCHAR(10)', constraint: '' },
+        { name: 'Subject', type: 'VARCHAR(100)', constraint: '' },
+        { name: 'Pass_Marks', type: 'INT', constraint: '' },
+      ],
+    },
+    sampleTables: [
+      {
+        name: 'Subjects',
+        rowCount: '6 rows',
+        headers: ['ID', 'Subject', 'Pass_Marks'],
+        rows: [
+          ['S1', 'Excel', 50],
+          ['S2', 'SQL', 50],
+          ['S3', 'Python', 40],
+          ['S4', 'Hadoop', 35],
+          ['S5', 'Power BI', 40],
+          ['S6', 'Tableau', 40],
+        ],
+      },
+      {
+        name: 'Students',
+        rowCount: '6 rows',
+        headers: ['Roll_No', 'Name'],
+        rows: [
+          ['2GR5CS011', 'Aarav Sharma'],
+          ['2GR5CS012', 'Priya Gupta'],
+          ['2GR5CS013', 'Rohit Singh'],
+          ['2GR5CS014', 'Anjali Patel'],
+          ['2GR5CS015', 'Karan Mehta'],
+          ['2GR5CS016', 'Nisha Reddy'],
+        ],
+      },
+      {
+        name: 'Scores',
+        rowCount: '6 rows',
+        headers: ['Student_ID', 'Subject1', 'Subject2', 'Subject3', 'Subject4', 'Subject5', 'Subject6'],
+        rows: [
+          ['2GR5CS011', 75, 30, 57, 44, 35, 6],
+          ['2GR5CS012', 70, 21, 44, 63, 99, 85],
+          ['2GR5CS013', 21, 9, 66, 87, 91, 78],
+          ['2GR5CS014', 84, 46, 20, 34, 100, 38],
+          ['2GR5CS015', 31, 90, 63, 60, 90, 80],
+          ['2GR5CS016', 95, 51, 9, 26, 26, 21],
+        ],
+      },
+    ],
+    departmentData: [] as { id: number; name: string }[],
+    employeeData: [] as { id: number; name: string; salary: string; joining_date: string; department_id: number }[],
+    task: 'Student Screening Analysis: Which students passed the screening test, what percentage did they score, and which subjects did failed students fail in?\n\nThe final result table should have Roll_No, Name, Percentage_marks, Failed_subjects, and Status columns.',
+    outputColumns: ['Roll_No', 'Name', 'Percentage_marks', 'Failed_subjects', 'Status'],
+    expectedOutputPreview: [
+      { Roll_No: '2GR5CSxxx', Name: 'Student Name', Percentage_marks: '00.00', Failed_subjects: 'NULL', Status: 'Passed' },
+      { Roll_No: '2GR5CSxxx', Name: 'Student Name', Percentage_marks: '00.00', Failed_subjects: 'SQL, Python', Status: 'Failed' },
+    ] as Record<string, string>[],
+    hint: [
+      'Use UNION ALL to unpivot Subject1 through Subject6 into subject-wise rows.',
+      'Join the unpivoted marks with Subjects to compare each score with its pass mark.',
+      'Use GREATEST(Subject5, Subject6) while calculating percentage because Subject5 and Subject6 are optional alternatives.',
+      'Use GROUP_CONCAT with CASE WHEN to list only failed subjects.',
+      'Order passed students first, then sort passed students by percentage in descending order.',
+    ] as string[] | undefined,
+    hintTitle: 'Before You Solve' as string | undefined,
+    solution: {
+      sql: `/* Student Screening and Failed Subject Analysis
+
+Question:
+Find the Roll_No, Name, percentage_marks, failed_subjects and status of each student.
+
+The final result table should have:
+Roll_No | Name | Percentage_marks | Failed_subjects | Status
+
+The output should show hired candidates in descending order of percentage marks.
+Failed students can be ordered in any way. */
+
+with score_unpivot as
+(
+    select
+        Student_ID,
+        'S1' as subject_id,
+        Subject1 as marks
+    from Scores
+
+    union all
+
+    select
+        Student_ID,
+        'S2' as subject_id,
+        Subject2 as marks
+    from Scores
+
+    union all
+
+    select
+        Student_ID,
+        'S3' as subject_id,
+        Subject3 as marks
+    from Scores
+
+    union all
+
+    select
+        Student_ID,
+        'S4' as subject_id,
+        Subject4 as marks
+    from Scores
+
+    union all
+
+    select
+        Student_ID,
+        'S5' as subject_id,
+        Subject5 as marks
+    from Scores
+
+    union all
+
+    select
+        Student_ID,
+        'S6' as subject_id,
+        Subject6 as marks
+    from Scores
+),
+
+student_result as
+(
+    select
+        st.Roll_No,
+        st.Name,
+
+        round(
+            (
+                sc.Subject1 +
+                sc.Subject2 +
+                sc.Subject3 +
+                sc.Subject4 +
+                greatest(sc.Subject5, sc.Subject6)
+            ) / 5,
+            2
+        ) as Percentage_marks,
+
+        group_concat(
+            case
+                when su.marks < sub.Pass_Marks then sub.Subject
+            end
+            order by sub.ID
+            separator ', '
+        ) as Failed_subjects,
+
+        case
+            when count(
+                case
+                    when su.marks < sub.Pass_Marks then 1
+                end
+            ) = 0
+            then 'Passed'
+            else 'Failed'
+        end as Status
+
+    from Students st
+
+    inner join Scores sc
+        on sc.Student_ID = st.Roll_No
+
+    inner join score_unpivot su
+        on su.Student_ID = st.Roll_No
+
+    inner join Subjects sub
+        on sub.ID = su.subject_id
+
+    group by
+        st.Roll_No,
+        st.Name,
+        sc.Subject1,
+        sc.Subject2,
+        sc.Subject3,
+        sc.Subject4,
+        sc.Subject5,
+        sc.Subject6
+)
+
+select
+    Roll_No,
+    Name,
+    Percentage_marks,
+    Failed_subjects,
+    Status
+from student_result
+order by
+    case when Status = 'Passed' then 1 else 2 end,
+    case when Status = 'Passed' then Percentage_marks end desc;`,
+      howItWorks: [
+        'The Students table stores the roll number and name of each student.',
+        'The Scores table stores subject-wise marks in separate columns.',
+        'The Subjects table stores subject names and passing marks.',
+        'The first CTE, score_unpivot, converts the six subject columns into row format using UNION ALL.',
+        "This makes it easier to compare each student's subject marks with the corresponding passing marks.",
+        'GREATEST(Subject5, Subject6) is used while calculating percentage because Subject5 and Subject6 are optional alternatives.',
+        'The percentage is calculated using Subject1 to Subject4 plus the higher score between Subject5 and Subject6.',
+        'GROUP_CONCAT() creates a comma-separated list of subjects where the student scored below the pass marks.',
+        'The CASE WHEN logic assigns Passed only when the student has no failed subject.',
+        'The final ORDER BY places passed candidates first and ranks them by percentage in descending order.',
+        'Failed students are shown after the passed candidates.',
+      ],
+      commonMistake: {
+        title: 'Mixing Percentage Logic With Pass Logic',
+        points: [
+          'Subject5 and Subject6 are alternatives only for percentage calculation, where the higher score is considered.',
+          'The failed subject list is still produced by comparing each unpivoted subject score against that subject pass mark in the provided solution.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      observation: {
+        title: 'Sample Dataset Note',
+        points: [
+          'In the given sample rows, every student fails at least one subject, so all rows appear with Status = Failed.',
+        ],
+      } as { title: string; points: string[] } | undefined,
+      result: [
+        { Roll_No: '2GR5CS011', Name: 'Aarav Sharma', Percentage_marks: '48.20', Failed_subjects: 'SQL, Power BI, Tableau', Status: 'Failed' },
+        { Roll_No: '2GR5CS012', Name: 'Priya Gupta', Percentage_marks: '59.40', Failed_subjects: 'SQL', Status: 'Failed' },
+        { Roll_No: '2GR5CS013', Name: 'Rohit Singh', Percentage_marks: '54.80', Failed_subjects: 'Excel, SQL', Status: 'Failed' },
+        { Roll_No: '2GR5CS014', Name: 'Anjali Patel', Percentage_marks: '56.80', Failed_subjects: 'SQL, Python, Hadoop, Tableau', Status: 'Failed' },
+        { Roll_No: '2GR5CS015', Name: 'Karan Mehta', Percentage_marks: '66.80', Failed_subjects: 'Excel', Status: 'Failed' },
+        { Roll_No: '2GR5CS016', Name: 'Nisha Reddy', Percentage_marks: '41.40', Failed_subjects: 'Python, Hadoop, Power BI, Tableau', Status: 'Failed' },
+      ] as Record<string, string>[],
+    },
+  },
 };
 
 const corporateCaseStudySlugMap = Object.fromEntries(
@@ -2561,6 +3342,78 @@ const DataTable: React.FC<{ headers: string[]; rows: (string | number)[][] }> = 
       </tbody>
     </table>
   </div>
+);
+
+const difficultyOrder: Difficulty[] = ['Beginner', 'Intermediate', 'Advanced'];
+
+const difficultySectionStyles: Record<Difficulty, {
+  eyebrow: string;
+  title: string;
+  description: string;
+  panel: string;
+  accent: string;
+  button: string;
+}> = {
+  Beginner: {
+    eyebrow: 'Start here',
+    title: 'Beginner Drills',
+    description: 'Core SQL practice for joins, grouping, filtering, and clear query structure.',
+    panel: 'border-emerald-200 bg-emerald-50/50',
+    accent: 'bg-emerald-500',
+    button: 'border-emerald-200 text-emerald-700 hover:bg-emerald-50',
+  },
+  Intermediate: {
+    eyebrow: 'Build fluency',
+    title: 'Intermediate Drills',
+    description: 'Business-style SQL problems with dates, windows, CTEs, and reporting logic.',
+    panel: 'border-amber-200 bg-amber-50/50',
+    accent: 'bg-amber-500',
+    button: 'border-amber-200 text-amber-700 hover:bg-amber-50',
+  },
+  Advanced: {
+    eyebrow: 'Stretch skills',
+    title: 'Advanced Drills',
+    description: 'Complex analytical SQL using recursive logic, graph-style joins, and screening workflows.',
+    panel: 'border-red-200 bg-red-50/50',
+    accent: 'bg-red-500',
+    button: 'border-red-200 text-red-700 hover:bg-red-50',
+  },
+};
+
+const DRILLS_PER_BATCH = 3;
+
+const DrillCard: React.FC<{ drill: SqlDrill }> = ({ drill }) => (
+  <Link
+    href={`/casestudies/${slugifyCaseStudyTitle(drill.title)}`}
+    className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all duration-300 cursor-pointer group"
+  >
+    <div className="relative bg-[#013a81] px-6 pt-6 pb-8 overflow-hidden">
+      <div className="relative">
+        <span className="text-slate-400 text-xs font-mono font-semibold uppercase tracking-widest">
+          SQL Data Drill
+        </span>
+        <div className="text-7xl font-black text-white/10 font-mono leading-none mt-1 select-none">
+          #{drill.number}
+        </div>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          <ToolBadge tool={drill.tool} />
+          <DifficultyBadge difficulty={drill.difficulty} />
+        </div>
+      </div>
+    </div>
+
+    <div className="p-5">
+      <h3 className="text-lg font-bold text-slate-800 mb-2">{drill.title}</h3>
+      <p className="text-sm text-slate-500 leading-relaxed mb-4">{drill.description}</p>
+      <div className="flex flex-wrap gap-1.5 mb-5">
+        {drill.skills.map((s) => <SkillChip key={s} skill={s} />)}
+      </div>
+      <div className="flex items-center gap-1 text-sm font-semibold text-indigo-600 group-hover:gap-2 transition-all">
+        Attempt Drill
+        <ChevronRight className="h-4 w-4" />
+      </div>
+    </div>
+  </Link>
 );
 
 // ============================================================
@@ -2983,6 +3836,11 @@ const CaseStudiesPage = (props: any = {}) => {
   const [activeCategory, setActiveCategory] = useState<ActiveCategory>('corporate');
   const [selectedCorporateSlug, setSelectedCorporateSlug] = useState<string | null>(null);
   const [selectedDrillId, setSelectedDrillId] = useState<string | null>(null);
+  const [visibleDrillCounts, setVisibleDrillCounts] = useState<Record<Difficulty, number>>({
+    Beginner: DRILLS_PER_BATCH,
+    Intermediate: DRILLS_PER_BATCH,
+    Advanced: DRILLS_PER_BATCH,
+  });
   const normalizedInitialSlug = initialSlug ? normalizeCaseStudySlug(initialSlug) : null;
   const initialCorporateCaseStudy = normalizedInitialSlug ? corporateCaseStudySlugMap[normalizedInitialSlug] : null;
   const initialDrill = normalizedInitialSlug ? sqlDrillSlugMap[normalizedInitialSlug] : null;
@@ -2995,6 +3853,13 @@ const CaseStudiesPage = (props: any = {}) => {
   const handleDrillCardClick = (id: string) => {
     setSelectedDrillId(id);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleViewMoreDrills = (difficulty: Difficulty) => {
+    setVisibleDrillCounts((current) => ({
+      ...current,
+      [difficulty]: current[difficulty] + DRILLS_PER_BATCH,
+    }));
   };
 
   const handleBack = useCallback(() => {
@@ -3064,6 +3929,17 @@ const CaseStudiesPage = (props: any = {}) => {
   // List view
   const corporateList = Object.values(corporateCaseStudies);
   const drillList = Object.values(sqlDrills).sort((a, b) => a.number - b.number);
+  const drillGroups = difficultyOrder.map((difficulty) => {
+    const drills = drillList.filter((drill) => drill.difficulty === difficulty);
+    const visibleCount = visibleDrillCounts[difficulty];
+
+    return {
+      difficulty,
+      drills,
+      visibleDrills: drills.slice(0, visibleCount),
+      hiddenCount: Math.max(drills.length - visibleCount, 0),
+    };
+  });
 
   return (
     <>
@@ -3178,55 +4054,89 @@ const CaseStudiesPage = (props: any = {}) => {
           {/* ─── LEARNING TAB ─── */}
           {activeCategory === 'learning' && (
             <div>
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-slate-800 mb-1">SQL Data Drills</h2>
-                <p className="text-slate-500">Hands-on SQL challenges to sharpen your data skills with real-world problems.</p>
+              <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                <div>
+                  <h2 className="text-2xl font-bold text-slate-800 mb-1">SQL Data Drills</h2>
+                  <p className="text-slate-500 max-w-2xl">
+                    Hands-on SQL challenges organized by difficulty, so learners can progress from fundamentals to advanced analytical problem solving.
+                  </p>
+                </div>
+                <div className="grid grid-cols-3 gap-2 sm:min-w-[360px]">
+                  {difficultyOrder.map((difficulty) => {
+                    const count = drillList.filter((drill) => drill.difficulty === difficulty).length;
+                    return (
+                      <div key={difficulty} className="rounded-xl border border-slate-200 bg-white px-3 py-3 text-center shadow-sm">
+                        <p className="text-lg font-black text-slate-800 leading-none">{count}</p>
+                        <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">{difficulty}</p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {drillList.map((drill) => (
-                  <Link
-                    key={drill.id}
-                    href={`/casestudies/${slugifyCaseStudyTitle(drill.title)}`}
-                    className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all duration-300 cursor-pointer group"
-                  >
-                    {/* Card Header */}
-                    <div className="relative bg-[#013a81] px-6 pt-6 pb-8 overflow-hidden">
-                      <div className="relative">
-                        <span className="text-slate-400 text-xs font-mono font-semibold uppercase tracking-widest">
-                          SQL Data Drill
-                        </span>
-                        <div className="text-7xl font-black text-white/10 font-mono leading-none mt-1 select-none">
-                          #{drill.number}
-                        </div>
-                        <div className="mt-2 flex flex-wrap gap-1.5">
-                          <ToolBadge tool={drill.tool} />
-                          <DifficultyBadge difficulty={drill.difficulty} />
-                        </div>
-                      </div>
-                    </div>
+              <div className="space-y-8">
+                {drillGroups.map(({ difficulty, drills, visibleDrills, hiddenCount }) => {
+                  if (drills.length === 0) return null;
 
-                    {/* Card Body */}
-                    <div className="p-5">
-                      <h3 className="text-lg font-bold text-slate-800 mb-2">{drill.title}</h3>
-                      <p className="text-sm text-slate-500 leading-relaxed mb-4">{drill.description}</p>
-                      <div className="flex flex-wrap gap-1.5 mb-5">
-                        {drill.skills.map((s) => <SkillChip key={s} skill={s} />)}
+                  const section = difficultySectionStyles[difficulty];
+
+                  return (
+                    <section key={difficulty} className={`rounded-2xl border p-5 md:p-6 ${section.panel}`}>
+                      <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                        <div className="flex items-start gap-3">
+                          <span className={`mt-1 h-10 w-1.5 rounded-full ${section.accent}`} />
+                          <div>
+                            <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">{section.eyebrow}</p>
+                            <h3 className="mt-1 text-xl font-bold text-slate-800">{section.title}</h3>
+                            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-slate-600">{section.description}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2 md:justify-end">
+                          <DifficultyBadge difficulty={difficulty} />
+                          <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-600 border border-slate-200">
+                            Showing {visibleDrills.length} of {drills.length}
+                          </span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1 text-sm font-semibold text-indigo-600 group-hover:gap-2 transition-all">
-                        Attempt Drill
-                        <ChevronRight className="h-4 w-4" />
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                        {visibleDrills.map((drill) => (
+                          <DrillCard key={drill.id} drill={drill as SqlDrill} />
+                        ))}
                       </div>
-                    </div>
-                  </Link>
-                ))}
+
+                      {hiddenCount > 0 && (
+                        <div className="mt-6 flex justify-center">
+                          <button
+                            type="button"
+                            onClick={() => handleViewMoreDrills(difficulty)}
+                            className={`inline-flex items-center gap-2 rounded-full border bg-white px-5 py-2.5 text-sm font-bold shadow-sm transition-colors ${section.button}`}
+                          >
+                            View more {difficulty} drills
+                            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-500">
+                              +{Math.min(DRILLS_PER_BATCH, hiddenCount)}
+                            </span>
+                          </button>
+                        </div>
+                      )}
+                    </section>
+                  );
+                })}
               </div>
 
-              {/* Coming Soon placeholder */}
-              <div className="mt-8 rounded-2xl border-2 border-dashed border-slate-200 p-10 text-center">
-                <Database className="h-10 w-10 text-slate-300 mx-auto mb-3" />
-                <p className="text-slate-400 font-medium">More drills coming soon</p>
-                <p className="text-slate-300 text-sm mt-1">Python, Excel, Power BI and more</p>
+              <div className="mt-8 rounded-2xl border border-indigo-100 bg-white p-6 shadow-sm">
+                <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                  <div className="flex items-start gap-3">
+                    <Database className="mt-1 h-5 w-5 text-indigo-500" />
+                    <div>
+                      <p className="font-bold text-slate-800">More learning formats coming soon</p>
+                      <p className="text-sm text-slate-500 mt-1">Python, Excel, Power BI and additional analytics drills will be added here.</p>
+                    </div>
+                  </div>
+                  <span className="w-fit rounded-full bg-indigo-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-indigo-600">
+                    Learning Hub
+                  </span>
+                </div>
               </div>
             </div>
           )}

@@ -43,6 +43,7 @@ import smalltm from "../../assests/placement/TM.webp";
 import smallveedol from "../../assests/placement/Veedol.webp";
 import smallventra from "../../assests/placement/VENTRA.webp";
 import smallwipro from "../../assests/placement/Wipro.webp";
+import DAGACC from "../../assests/DAGACC.webp";
 import Bavc from "../../assests/Bavc.jpg";
 import Cdec from "../../assests/Cdec.jpg";
 import Davc from "../../assests/Davc.jpg";
@@ -1042,7 +1043,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       course.title === " Advanced Generative AI Course" || course.title === "Advanced Generative AI Course in Kolkata" || course.title === "Advanced Generative AI Course in Delhi" || course.title === "Advanced Generative AI Course in Pune" || course.title === "Advanced Generative AI Course in Chennai" || course.title === "Advanced Generative AI Course in Bangalore" || course.title === "Advanced Generative AI Course in Mumbai" ? genaicertificate :
                         course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" ? NASSCOMML :
                           course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ? Cdec :
-                            course.title === "Data Analytics and Generative AI Course" ? Dsvc :
+                            course.title === "Data Analytics and Generative AI Course" ?  DAGACC:
                               course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Pune" ? Davc :
                                 course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
                                   course.title === "AI for Product Managers" || course.title === "AI for Entrepreneurs" ? Pmc :

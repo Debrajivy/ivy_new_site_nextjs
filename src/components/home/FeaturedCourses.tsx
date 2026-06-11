@@ -16,6 +16,7 @@ import ML from "@/assests/ML.webp";
 import GA from "@/assests/GAI.webp";
 import AIPM from "@/assests/AIPM.webp";
 import DAGA from "@/assests/DAGA.webp";
+import DAGAC from "@/assests/DAGAC.webp";
 import DA from "@/assests/DA.webp";
 import BA from "@/assests/BA.webp";
 import DV from "@/assests/DV.webp";
@@ -139,8 +140,8 @@ const featuredCourses: Course[] = [
     id: '5',
     title: "Data Analytics and Generative AI Course",
     description: "Deep dive into Excel, SQL, Gen AI, Power BI techniques",
-    image: DAGA,
-    category: "Visualization", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Analytics and Generative AI Course" which contradicts. If you want this to be a Data Analytics and Generative AI Course, the description should be updated. I'll keep the description as is but noted this discrepancy.
+    image: DAGAC,
+    category: "Data Analytics", // This seems like a mismatch with the description. It's listed as "Deep Learning" but the description is "Deep dive into neural networks and advanced ML techniques" which is appropriate but the title is "Data Analytics and Generative AI Course" which contradicts. If you want this to be a Data Analytics and Generative AI Course, the description should be updated. I'll keep the description as is but noted this discrepancy.
     students: 855,
     duration: "8 months",
     rating: 4.7,

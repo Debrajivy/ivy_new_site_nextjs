@@ -25,6 +25,10 @@ const caseStudySlugs = [
   "vehicle-capacity-allocation",
   "quarter-wise-salesman-bonus-analysis",
   "daily-employee-salary-calculation",
+  "yearly-product-sales-report",
+  "batch-wise-order-packaging-allocation",
+  "ropeway-station-route-analysis",
+  "student-screening-and-failed-subject-analysis",
 ];
 
 const titleFromSlug = (slug: string) => {
