@@ -961,18 +961,18 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                                     <div style={{ marginTop: 50 }} className="space-y-6">
                                       <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                        ⦿ Master MySQL database operations, advanced query writing, window functions, and Python data manipulation.                                </h3>
+                                        ⦿ Master Python setup, Git workflows, prompt engineering (ReAct, Tree-of-Thought), tokenization, and advanced API integrations.                               </h3>
                                       <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                        ⦿ Process large-scale data using distributed computing, HDFS, YARN, MapReduce, and Hive optimization                             </h3>
+                                        ⦿ Implement open-source model fine-tuning using LoRA/QLoRA alongside robust vector database retrieval-augmented generation pipelines.                            </h3>
 
                                       <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                        ⦿ Build scalable live pipelines using Apache Spark, Spark SQL, RDDs, and Apache Kafka workflows.
+                                        ⦿ Architect multi-agent execution frameworks, custom tools, and complex stateful workflows using LangGraph and LCEL.
                                       </h3>
                                       <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                        ⦿ Design secure data pipelines using Azure Data Factory, Blob Storage, Data Lake, and Databricks.                              </h3>
+                                        ⦿ Deploy scalable AI microservices via FastAPI and Docker, and build multi-sensory applications using Vision, Whisper, and Stable Diffusion.                              </h3>
                                     </div>
                                   </>
 

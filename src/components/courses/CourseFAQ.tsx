@@ -5546,7 +5546,24 @@ const defaultData = {
 
 
 const CourseFAQ = ({ course }: CourseHeroProps) => {
-  const data = useMemo(() => courseData[course.title] || defaultData, [course.title]);
+  const data = useMemo(() => {
+    // try exact title, then trimmed title, then slug-based lookup as a fallback
+    if (courseData[course.title]) return courseData[course.title];
+    const trimmed = course.title?.trim();
+    if (trimmed && courseData[trimmed]) return courseData[trimmed];
+
+    // slug -> words (e.g. "generative-ai-course" -> "generative ai course")
+    const slugKey = (course.slug || "").replace(/-/g, " ").toLowerCase();
+    const foundBySlug = Object.keys(courseData).find(k => k.toLowerCase().includes(slugKey));
+    if (foundBySlug) return courseData[foundBySlug];
+
+    // fuzzy: check if all words from slug appear in a key
+    const slugWords = slugKey.split(/\s+/).filter(Boolean);
+    const fuzzy = Object.keys(courseData).find(k => slugWords.every(w => k.toLowerCase().includes(w)));
+    if (fuzzy) return courseData[fuzzy];
+
+    return defaultData;
+  }, [course.title, course.slug]);
   const [activeFilter, setActiveFilter] = useState<string>('program');
   const [isMobile, setIsMobile] = useState(false);
 
