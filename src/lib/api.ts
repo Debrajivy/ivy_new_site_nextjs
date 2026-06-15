@@ -2828,129 +2828,186 @@ const courses: Course[] = [
       }
     ],
 
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "SQL Queries & Relational Database Management",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        ]
-      }
-      ,
-
-      {
-        "id": "m2",
-        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
-        "duration": "8 hrs",
+        "id": "m1",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
         "topics": [
-          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
-          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
-          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
-          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
-          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
-          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
-          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
-          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
-          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
-          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
-          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
         ]
       },
-
+      {
+        "id": "m2",
+        "title": "Python programming for Beginners",
+        "duration": "20 hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
+        ]
+      },
       {
         "id": "m3",
-        "title": "Hadoop Framework & Architecture",
-        "duration": "4 hrs",
+        "title": "Big Data Terminologies",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
+          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
+          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
+          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
+          { "id": "t5", "title": "File Compressions Techniques" },
+          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
         ]
       },
       {
         "id": "m4",
-        "title": "Apache Spark Architecture & Programming",
-        "duration": "8 hrs",
+        "title": "Data Warehousing",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
-          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
-          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
-          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
-          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
-          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
-          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+          { "id": "t1", "title": "Facts" },
+          { "id": "t2", "title": "OLAPS" },
+          { "id": "t3", "title": "Dimensions" },
+          { "id": "t4", "title": "Star Schema" },
+          { "id": "t5", "title": "Snowflake Schema" },
+          { "id": "t6", "title": "Data Model Types" },
+          { "id": "t7", "title": "Data Integrity" },
+          { "id": "t8", "title": "Metadata" },
+          { "id": "t9", "title": "Slowly Changing Dimensions" },
+          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
+          { "id": "t11", "title": "Understanding of all theoretical concepts" },
+          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
         ]
-      }
-      ,
+      },
       {
         "id": "m5",
-        "title": "MongoDB for Developers & Admins",
-        "duration": "2 hrs",
+        "title": "Hadoop",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
-          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
-          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
-          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Map-Reduce Functioning" },
+          { "id": "t3", "title": "HDFS" },
+          { "id": "t4", "title": "YARN" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
+          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
+          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
         ]
-      }
-      ,
+      },
       {
         "id": "m6",
-        "title": "Apache Kafka Basics",
-        "duration": "2 hrs",
+        "title": "Apache Hive",
+        "duration": "12 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
-          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
-          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+          { "id": "t1", "title": "Hive Installation" },
+          { "id": "t2", "title": "Query Syntax" },
+          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
+          { "id": "t4", "title": "Internal Vs External Tables" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning" },
+          { "id": "t6", "title": "Bucketing" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
+          { "id": "t8", "title": "Hive SerDe" },
+          { "id": "t9", "title": "UDF's in Hive" },
+          { "id": "t10", "title": "Query Optimization" },
+          { "id": "t11", "title": "Setup hive in local machine" },
+          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
+          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
+          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
         ]
       },
       {
-        "id": "m7",
-        "title": "Apache Hive for Data Warehousing",
-        "duration": "4 hrs",
+        "id": "m8",
+        "title": "Spark",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
-          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
-          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
-          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
-          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
-          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Spark Core" },
+          { "id": "t3", "title": "RDDs" },
+          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
+          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
+          { "id": "t6", "title": "Spark Read/Write operations" },
+          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
+          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
+          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
+          { "id": "t10", "title": "Spark Submit Command Options" },
+          { "id": "t11", "title": "Job optimization techniques" },
+          { "id": "t12", "title": "Spark Catalyst Optimizer" },
+          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
+          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
+          { "id": "t15", "title": "Setup spark in local mode" },
+          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
+          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
         ]
       },
-      ,
+      {
+        "id": "m9",
+        "title": "Kafka",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Producer" },
+          { "id": "t2", "title": "Consumer" },
+          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
+          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
+          { "id": "t5", "title": "Consumer Group" },
+          { "id": "t6", "title": "ZooKeeper" },
+          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
+        ]
+      },
+      {
+        "id": "m10",
+        "title": "Cloud Essentials & Fundamentals of AZURE",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
+          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
+          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
+          { "id": "t4", "title": "Microsoft Azure Key Vault" },
+          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
+          { "id": "t6", "title": "Azure CLI Commands" },
+          { "id": "t7", "title": "Azure Virtual Machine" }
+        ]
+      },
+      {
+        "id": "m11",
+        "title": "BigData in AZURE",
+        "duration": "10 hrs",
 
-
-
+        "topics": [
+          { "id": "t1", "title": "Azure Blob/queue/table" },
+          { "id": "t2", "title": "Azure SQL database" },
+          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
+          { "id": "t4", "title": "Azure Synapse analytics" },
+          { "id": "t5", "title": "Azure Cosmos DB" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
+          { "id": "t7", "title": "Azure Event Hubs" },
+          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
+          { "id": "t9", "title": "Azure Scaling and Monitoring" },
+          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
+          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
+          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
+          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
+        ]
+      }
     ]
     ,
     projects: [
@@ -3067,129 +3124,186 @@ const courses: Course[] = [
       }
     ],
 
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "SQL Queries & Relational Database Management",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        ]
-      }
-      ,
-
-      {
-        "id": "m2",
-        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
-        "duration": "8 hrs",
+        "id": "m1",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
         "topics": [
-          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
-          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
-          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
-          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
-          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
-          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
-          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
-          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
-          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
-          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
-          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
         ]
       },
-
+      {
+        "id": "m2",
+        "title": "Python programming for Beginners",
+        "duration": "20 hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
+        ]
+      },
       {
         "id": "m3",
-        "title": "Hadoop Framework & Architecture",
-        "duration": "4 hrs",
+        "title": "Big Data Terminologies",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
+          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
+          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
+          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
+          { "id": "t5", "title": "File Compressions Techniques" },
+          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
         ]
       },
       {
         "id": "m4",
-        "title": "Apache Spark Architecture & Programming",
-        "duration": "8 hrs",
+        "title": "Data Warehousing",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
-          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
-          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
-          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
-          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
-          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
-          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+          { "id": "t1", "title": "Facts" },
+          { "id": "t2", "title": "OLAPS" },
+          { "id": "t3", "title": "Dimensions" },
+          { "id": "t4", "title": "Star Schema" },
+          { "id": "t5", "title": "Snowflake Schema" },
+          { "id": "t6", "title": "Data Model Types" },
+          { "id": "t7", "title": "Data Integrity" },
+          { "id": "t8", "title": "Metadata" },
+          { "id": "t9", "title": "Slowly Changing Dimensions" },
+          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
+          { "id": "t11", "title": "Understanding of all theoretical concepts" },
+          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
         ]
-      }
-      ,
+      },
       {
         "id": "m5",
-        "title": "MongoDB for Developers & Admins",
-        "duration": "2 hrs",
+        "title": "Hadoop",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
-          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
-          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
-          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Map-Reduce Functioning" },
+          { "id": "t3", "title": "HDFS" },
+          { "id": "t4", "title": "YARN" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
+          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
+          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
         ]
-      }
-      ,
+      },
       {
         "id": "m6",
-        "title": "Apache Kafka Basics",
-        "duration": "2 hrs",
+        "title": "Apache Hive",
+        "duration": "12 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
-          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
-          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+          { "id": "t1", "title": "Hive Installation" },
+          { "id": "t2", "title": "Query Syntax" },
+          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
+          { "id": "t4", "title": "Internal Vs External Tables" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning" },
+          { "id": "t6", "title": "Bucketing" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
+          { "id": "t8", "title": "Hive SerDe" },
+          { "id": "t9", "title": "UDF's in Hive" },
+          { "id": "t10", "title": "Query Optimization" },
+          { "id": "t11", "title": "Setup hive in local machine" },
+          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
+          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
+          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
         ]
       },
       {
-        "id": "m7",
-        "title": "Apache Hive for Data Warehousing",
-        "duration": "4 hrs",
+        "id": "m8",
+        "title": "Spark",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
-          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
-          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
-          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
-          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
-          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Spark Core" },
+          { "id": "t3", "title": "RDDs" },
+          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
+          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
+          { "id": "t6", "title": "Spark Read/Write operations" },
+          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
+          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
+          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
+          { "id": "t10", "title": "Spark Submit Command Options" },
+          { "id": "t11", "title": "Job optimization techniques" },
+          { "id": "t12", "title": "Spark Catalyst Optimizer" },
+          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
+          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
+          { "id": "t15", "title": "Setup spark in local mode" },
+          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
+          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
         ]
       },
-      ,
+      {
+        "id": "m9",
+        "title": "Kafka",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Producer" },
+          { "id": "t2", "title": "Consumer" },
+          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
+          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
+          { "id": "t5", "title": "Consumer Group" },
+          { "id": "t6", "title": "ZooKeeper" },
+          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
+        ]
+      },
+      {
+        "id": "m10",
+        "title": "Cloud Essentials & Fundamentals of AZURE",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
+          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
+          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
+          { "id": "t4", "title": "Microsoft Azure Key Vault" },
+          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
+          { "id": "t6", "title": "Azure CLI Commands" },
+          { "id": "t7", "title": "Azure Virtual Machine" }
+        ]
+      },
+      {
+        "id": "m11",
+        "title": "BigData in AZURE",
+        "duration": "10 hrs",
 
-
-
+        "topics": [
+          { "id": "t1", "title": "Azure Blob/queue/table" },
+          { "id": "t2", "title": "Azure SQL database" },
+          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
+          { "id": "t4", "title": "Azure Synapse analytics" },
+          { "id": "t5", "title": "Azure Cosmos DB" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
+          { "id": "t7", "title": "Azure Event Hubs" },
+          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
+          { "id": "t9", "title": "Azure Scaling and Monitoring" },
+          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
+          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
+          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
+          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
+        ]
+      }
     ]
     ,
     projects: [
@@ -3305,129 +3419,186 @@ const courses: Course[] = [
       }
     ],
 
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "SQL Queries & Relational Database Management",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        ]
-      }
-      ,
-
-      {
-        "id": "m2",
-        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
-        "duration": "8 hrs",
+        "id": "m1",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
         "topics": [
-          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
-          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
-          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
-          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
-          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
-          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
-          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
-          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
-          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
-          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
-          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
         ]
       },
-
+      {
+        "id": "m2",
+        "title": "Python programming for Beginners",
+        "duration": "20 hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
+        ]
+      },
       {
         "id": "m3",
-        "title": "Hadoop Framework & Architecture",
-        "duration": "4 hrs",
+        "title": "Big Data Terminologies",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
+          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
+          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
+          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
+          { "id": "t5", "title": "File Compressions Techniques" },
+          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
         ]
       },
       {
         "id": "m4",
-        "title": "Apache Spark Architecture & Programming",
-        "duration": "8 hrs",
+        "title": "Data Warehousing",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
-          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
-          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
-          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
-          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
-          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
-          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+          { "id": "t1", "title": "Facts" },
+          { "id": "t2", "title": "OLAPS" },
+          { "id": "t3", "title": "Dimensions" },
+          { "id": "t4", "title": "Star Schema" },
+          { "id": "t5", "title": "Snowflake Schema" },
+          { "id": "t6", "title": "Data Model Types" },
+          { "id": "t7", "title": "Data Integrity" },
+          { "id": "t8", "title": "Metadata" },
+          { "id": "t9", "title": "Slowly Changing Dimensions" },
+          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
+          { "id": "t11", "title": "Understanding of all theoretical concepts" },
+          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
         ]
-      }
-      ,
+      },
       {
         "id": "m5",
-        "title": "MongoDB for Developers & Admins",
-        "duration": "2 hrs",
+        "title": "Hadoop",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
-          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
-          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
-          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Map-Reduce Functioning" },
+          { "id": "t3", "title": "HDFS" },
+          { "id": "t4", "title": "YARN" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
+          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
+          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
         ]
-      }
-      ,
+      },
       {
         "id": "m6",
-        "title": "Apache Kafka Basics",
-        "duration": "2 hrs",
+        "title": "Apache Hive",
+        "duration": "12 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
-          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
-          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+          { "id": "t1", "title": "Hive Installation" },
+          { "id": "t2", "title": "Query Syntax" },
+          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
+          { "id": "t4", "title": "Internal Vs External Tables" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning" },
+          { "id": "t6", "title": "Bucketing" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
+          { "id": "t8", "title": "Hive SerDe" },
+          { "id": "t9", "title": "UDF's in Hive" },
+          { "id": "t10", "title": "Query Optimization" },
+          { "id": "t11", "title": "Setup hive in local machine" },
+          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
+          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
+          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
         ]
       },
       {
-        "id": "m7",
-        "title": "Apache Hive for Data Warehousing",
-        "duration": "4 hrs",
+        "id": "m8",
+        "title": "Spark",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
-          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
-          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
-          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
-          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
-          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Spark Core" },
+          { "id": "t3", "title": "RDDs" },
+          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
+          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
+          { "id": "t6", "title": "Spark Read/Write operations" },
+          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
+          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
+          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
+          { "id": "t10", "title": "Spark Submit Command Options" },
+          { "id": "t11", "title": "Job optimization techniques" },
+          { "id": "t12", "title": "Spark Catalyst Optimizer" },
+          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
+          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
+          { "id": "t15", "title": "Setup spark in local mode" },
+          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
+          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
         ]
       },
-      ,
+      {
+        "id": "m9",
+        "title": "Kafka",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Producer" },
+          { "id": "t2", "title": "Consumer" },
+          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
+          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
+          { "id": "t5", "title": "Consumer Group" },
+          { "id": "t6", "title": "ZooKeeper" },
+          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
+        ]
+      },
+      {
+        "id": "m10",
+        "title": "Cloud Essentials & Fundamentals of AZURE",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
+          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
+          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
+          { "id": "t4", "title": "Microsoft Azure Key Vault" },
+          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
+          { "id": "t6", "title": "Azure CLI Commands" },
+          { "id": "t7", "title": "Azure Virtual Machine" }
+        ]
+      },
+      {
+        "id": "m11",
+        "title": "BigData in AZURE",
+        "duration": "10 hrs",
 
-
-
+        "topics": [
+          { "id": "t1", "title": "Azure Blob/queue/table" },
+          { "id": "t2", "title": "Azure SQL database" },
+          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
+          { "id": "t4", "title": "Azure Synapse analytics" },
+          { "id": "t5", "title": "Azure Cosmos DB" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
+          { "id": "t7", "title": "Azure Event Hubs" },
+          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
+          { "id": "t9", "title": "Azure Scaling and Monitoring" },
+          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
+          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
+          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
+          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
+        ]
+      }
     ]
     ,
     projects: [
@@ -3539,129 +3710,186 @@ const courses: Course[] = [
       }
     ],
 
-    curriculum: [
+   "curriculum": [
       {
-        id: "m1",
-        title: "SQL Queries & Relational Database Management",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        ]
-      }
-      ,
-
-      {
-        "id": "m2",
-        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
-        "duration": "8 hrs",
+        "id": "m1",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
         "topics": [
-          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
-          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
-          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
-          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
-          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
-          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
-          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
-          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
-          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
-          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
-          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
         ]
       },
-
+      {
+        "id": "m2",
+        "title": "Python programming for Beginners",
+        "duration": "20 hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
+        ]
+      },
       {
         "id": "m3",
-        "title": "Hadoop Framework & Architecture",
-        "duration": "4 hrs",
+        "title": "Big Data Terminologies",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
+          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
+          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
+          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
+          { "id": "t5", "title": "File Compressions Techniques" },
+          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
         ]
       },
       {
         "id": "m4",
-        "title": "Apache Spark Architecture & Programming",
-        "duration": "8 hrs",
+        "title": "Data Warehousing",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
-          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
-          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
-          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
-          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
-          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
-          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+          { "id": "t1", "title": "Facts" },
+          { "id": "t2", "title": "OLAPS" },
+          { "id": "t3", "title": "Dimensions" },
+          { "id": "t4", "title": "Star Schema" },
+          { "id": "t5", "title": "Snowflake Schema" },
+          { "id": "t6", "title": "Data Model Types" },
+          { "id": "t7", "title": "Data Integrity" },
+          { "id": "t8", "title": "Metadata" },
+          { "id": "t9", "title": "Slowly Changing Dimensions" },
+          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
+          { "id": "t11", "title": "Understanding of all theoretical concepts" },
+          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
         ]
-      }
-      ,
+      },
       {
         "id": "m5",
-        "title": "MongoDB for Developers & Admins",
-        "duration": "2 hrs",
+        "title": "Hadoop",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
-          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
-          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
-          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Map-Reduce Functioning" },
+          { "id": "t3", "title": "HDFS" },
+          { "id": "t4", "title": "YARN" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
+          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
+          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
         ]
-      }
-      ,
+      },
       {
         "id": "m6",
-        "title": "Apache Kafka Basics",
-        "duration": "2 hrs",
+        "title": "Apache Hive",
+        "duration": "12 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
-          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
-          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+          { "id": "t1", "title": "Hive Installation" },
+          { "id": "t2", "title": "Query Syntax" },
+          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
+          { "id": "t4", "title": "Internal Vs External Tables" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning" },
+          { "id": "t6", "title": "Bucketing" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
+          { "id": "t8", "title": "Hive SerDe" },
+          { "id": "t9", "title": "UDF's in Hive" },
+          { "id": "t10", "title": "Query Optimization" },
+          { "id": "t11", "title": "Setup hive in local machine" },
+          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
+          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
+          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
         ]
       },
       {
-        "id": "m7",
-        "title": "Apache Hive for Data Warehousing",
-        "duration": "4 hrs",
+        "id": "m8",
+        "title": "Spark",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
-          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
-          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
-          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
-          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
-          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Spark Core" },
+          { "id": "t3", "title": "RDDs" },
+          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
+          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
+          { "id": "t6", "title": "Spark Read/Write operations" },
+          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
+          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
+          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
+          { "id": "t10", "title": "Spark Submit Command Options" },
+          { "id": "t11", "title": "Job optimization techniques" },
+          { "id": "t12", "title": "Spark Catalyst Optimizer" },
+          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
+          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
+          { "id": "t15", "title": "Setup spark in local mode" },
+          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
+          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
         ]
       },
-      ,
+      {
+        "id": "m9",
+        "title": "Kafka",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Producer" },
+          { "id": "t2", "title": "Consumer" },
+          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
+          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
+          { "id": "t5", "title": "Consumer Group" },
+          { "id": "t6", "title": "ZooKeeper" },
+          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
+        ]
+      },
+      {
+        "id": "m10",
+        "title": "Cloud Essentials & Fundamentals of AZURE",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
+          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
+          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
+          { "id": "t4", "title": "Microsoft Azure Key Vault" },
+          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
+          { "id": "t6", "title": "Azure CLI Commands" },
+          { "id": "t7", "title": "Azure Virtual Machine" }
+        ]
+      },
+      {
+        "id": "m11",
+        "title": "BigData in AZURE",
+        "duration": "10 hrs",
 
-
-
+        "topics": [
+          { "id": "t1", "title": "Azure Blob/queue/table" },
+          { "id": "t2", "title": "Azure SQL database" },
+          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
+          { "id": "t4", "title": "Azure Synapse analytics" },
+          { "id": "t5", "title": "Azure Cosmos DB" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
+          { "id": "t7", "title": "Azure Event Hubs" },
+          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
+          { "id": "t9", "title": "Azure Scaling and Monitoring" },
+          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
+          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
+          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
+          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
+        ]
+      }
     ]
     ,
     projects: [
@@ -3774,129 +4002,186 @@ const courses: Course[] = [
       }
     ],
 
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "SQL Queries & Relational Database Management",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        ]
-      }
-      ,
-
-      {
-        "id": "m2",
-        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
-        "duration": "8 hrs",
+        "id": "m1",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
         "topics": [
-          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
-          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
-          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
-          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
-          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
-          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
-          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
-          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
-          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
-          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
-          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
         ]
       },
-
+      {
+        "id": "m2",
+        "title": "Python programming for Beginners",
+        "duration": "20 hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
+        ]
+      },
       {
         "id": "m3",
-        "title": "Hadoop Framework & Architecture",
-        "duration": "4 hrs",
+        "title": "Big Data Terminologies",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
+          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
+          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
+          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
+          { "id": "t5", "title": "File Compressions Techniques" },
+          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
         ]
       },
       {
         "id": "m4",
-        "title": "Apache Spark Architecture & Programming",
-        "duration": "8 hrs",
+        "title": "Data Warehousing",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
-          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
-          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
-          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
-          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
-          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
-          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+          { "id": "t1", "title": "Facts" },
+          { "id": "t2", "title": "OLAPS" },
+          { "id": "t3", "title": "Dimensions" },
+          { "id": "t4", "title": "Star Schema" },
+          { "id": "t5", "title": "Snowflake Schema" },
+          { "id": "t6", "title": "Data Model Types" },
+          { "id": "t7", "title": "Data Integrity" },
+          { "id": "t8", "title": "Metadata" },
+          { "id": "t9", "title": "Slowly Changing Dimensions" },
+          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
+          { "id": "t11", "title": "Understanding of all theoretical concepts" },
+          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
         ]
-      }
-      ,
+      },
       {
         "id": "m5",
-        "title": "MongoDB for Developers & Admins",
-        "duration": "2 hrs",
+        "title": "Hadoop",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
-          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
-          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
-          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Map-Reduce Functioning" },
+          { "id": "t3", "title": "HDFS" },
+          { "id": "t4", "title": "YARN" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
+          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
+          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
         ]
-      }
-      ,
+      },
       {
         "id": "m6",
-        "title": "Apache Kafka Basics",
-        "duration": "2 hrs",
+        "title": "Apache Hive",
+        "duration": "12 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
-          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
-          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+          { "id": "t1", "title": "Hive Installation" },
+          { "id": "t2", "title": "Query Syntax" },
+          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
+          { "id": "t4", "title": "Internal Vs External Tables" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning" },
+          { "id": "t6", "title": "Bucketing" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
+          { "id": "t8", "title": "Hive SerDe" },
+          { "id": "t9", "title": "UDF's in Hive" },
+          { "id": "t10", "title": "Query Optimization" },
+          { "id": "t11", "title": "Setup hive in local machine" },
+          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
+          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
+          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
         ]
       },
       {
-        "id": "m7",
-        "title": "Apache Hive for Data Warehousing",
-        "duration": "4 hrs",
+        "id": "m8",
+        "title": "Spark",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
-          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
-          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
-          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
-          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
-          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Spark Core" },
+          { "id": "t3", "title": "RDDs" },
+          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
+          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
+          { "id": "t6", "title": "Spark Read/Write operations" },
+          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
+          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
+          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
+          { "id": "t10", "title": "Spark Submit Command Options" },
+          { "id": "t11", "title": "Job optimization techniques" },
+          { "id": "t12", "title": "Spark Catalyst Optimizer" },
+          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
+          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
+          { "id": "t15", "title": "Setup spark in local mode" },
+          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
+          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
         ]
       },
-      ,
+      {
+        "id": "m9",
+        "title": "Kafka",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Producer" },
+          { "id": "t2", "title": "Consumer" },
+          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
+          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
+          { "id": "t5", "title": "Consumer Group" },
+          { "id": "t6", "title": "ZooKeeper" },
+          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
+        ]
+      },
+      {
+        "id": "m10",
+        "title": "Cloud Essentials & Fundamentals of AZURE",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
+          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
+          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
+          { "id": "t4", "title": "Microsoft Azure Key Vault" },
+          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
+          { "id": "t6", "title": "Azure CLI Commands" },
+          { "id": "t7", "title": "Azure Virtual Machine" }
+        ]
+      },
+      {
+        "id": "m11",
+        "title": "BigData in AZURE",
+        "duration": "10 hrs",
 
-
-
+        "topics": [
+          { "id": "t1", "title": "Azure Blob/queue/table" },
+          { "id": "t2", "title": "Azure SQL database" },
+          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
+          { "id": "t4", "title": "Azure Synapse analytics" },
+          { "id": "t5", "title": "Azure Cosmos DB" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
+          { "id": "t7", "title": "Azure Event Hubs" },
+          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
+          { "id": "t9", "title": "Azure Scaling and Monitoring" },
+          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
+          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
+          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
+          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
+        ]
+      }
     ]
     ,
     projects: [
@@ -4009,129 +4294,186 @@ const courses: Course[] = [
       }
     ],
 
-    curriculum: [
+   "curriculum": [
       {
-        id: "m1",
-        title: "SQL Queries & Relational Database Management",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        ]
-      }
-      ,
-
-      {
-        "id": "m2",
-        "title": "Cloud Essentials, Fundamentals & Bigdata in Azure",
-        "duration": "8 hrs",
+        "id": "m1",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
         "topics": [
-          { "id": "t1", "title": "Blob / Queue / Table Storage", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "Azure SQL Database", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "Data Lake (Gen1 & Gen2)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "Synapse Analytics", "duration": "0.5 hrs" },
-          { "id": "t5", "title": "Azure Cosmos DB", "duration": "0.5 hrs" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)", "duration": "0.5 hrs" },
-          { "id": "t7", "title": "Azure Event Hubs", "duration": "0.4 hrs" },
-          { "id": "t8", "title": "Databricks (Data Processing)", "duration": "0.5 hrs" },
-          { "id": "t9", "title": "Scaling and Monitoring", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Azure Service Models (IaaS, PaaS, SaaS)", "duration": "0.4 hrs" },
-          { "id": "t11", "title": "Managed Identity & Active Directory", "duration": "0.4 hrs" },
-          { "id": "t12", "title": "Network Security Group (Public, Private, Hybrid)", "duration": "0.4 hrs" },
-          { "id": "t13", "title": "Azure Key Vault", "duration": "0.4 hrs" },
-          { "id": "t14", "title": "Azure Monitor & Cost Calculator", "duration": "0.4 hrs" },
-          { "id": "t15", "title": "CLI Commands", "duration": "0.4 hrs" },
-          { "id": "t16", "title": "Azure Virtual Machine", "duration": "0.4 hrs" }
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
         ]
       },
-
+      {
+        "id": "m2",
+        "title": "Python programming for Beginners",
+        "duration": "20 hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
+        ]
+      },
       {
         "id": "m3",
-        "title": "Hadoop Framework & Architecture",
-        "duration": "4 hrs",
+        "title": "Big Data Terminologies",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Complete Hadoop Architecture", "duration": "0.5 hrs" },
-          { "id": "t2", "title": "MapReduce Functioning", "duration": "0.5 hrs" },
-          { "id": "t3", "title": "HDFS (Hadoop Distributed File System)", "duration": "0.5 hrs" },
-          { "id": "t4", "title": "YARN (Yet Another Resource Negotiator)", "duration": "0.4 hrs" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High Availability", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Hadoop Daemons - NameNode, DataNode, Secondary NameNode, Standby NameNode", "duration": "1.1 hrs" }
+          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
+          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
+          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
+          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
+          { "id": "t5", "title": "File Compressions Techniques" },
+          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
         ]
       },
       {
         "id": "m4",
-        "title": "Apache Spark Architecture & Programming",
-        "duration": "8 hrs",
+        "title": "Data Warehousing",
+        "duration": "5 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Spark Architecture & Core Concepts", "duration": "1.0 hrs" },
-          { "id": "t2", "title": "RDDs, Actions & Transformations", "duration": "1.0 hrs" },
-          { "id": "t3", "title": "Lineage, Lazy Eval, Broadcaster, Accumulator", "duration": "1.0 hrs" },
-          { "id": "t4", "title": "Spark SQL: Structs, Joins, Optimization", "duration": "1.0 hrs" },
-          { "id": "t5", "title": "Read/Write, Spark Submit, Resource Allocation", "duration": "1.0 hrs" },
-          { "id": "t6", "title": "Spark UI: Stages, Tasks, Debugging", "duration": "1.0 hrs" },
-          { "id": "t7", "title": "Memory Mgmt: Cache, Persist, Serialization", "duration": "1.0 hrs" },
-          { "id": "t8", "title": "Spark Streaming, GraphX Integration", "duration": "1.0 hrs" }
+          { "id": "t1", "title": "Facts" },
+          { "id": "t2", "title": "OLAPS" },
+          { "id": "t3", "title": "Dimensions" },
+          { "id": "t4", "title": "Star Schema" },
+          { "id": "t5", "title": "Snowflake Schema" },
+          { "id": "t6", "title": "Data Model Types" },
+          { "id": "t7", "title": "Data Integrity" },
+          { "id": "t8", "title": "Metadata" },
+          { "id": "t9", "title": "Slowly Changing Dimensions" },
+          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
+          { "id": "t11", "title": "Understanding of all theoretical concepts" },
+          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
         ]
-      }
-      ,
+      },
       {
         "id": "m5",
-        "title": "MongoDB for Developers & Admins",
-        "duration": "2 hrs",
+        "title": "Hadoop",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Introduction to MongoDB and its Architecture", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Data Modeling with MongoDB - Schema Design & Relationships", "duration": "0.4 hrs" },
-          { "id": "t3", "title": "Advanced Features - Aggregation, Text Search, Geospatial Queries", "duration": "0.4 hrs" },
-          { "id": "t4", "title": "MongoDB Administration - Deployment & Configuration", "duration": "0.45 hrs" },
-          { "id": "t5", "title": "Scaling MongoDB - Sharding & Distributed Cluster Management", "duration": "0.45 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Map-Reduce Functioning" },
+          { "id": "t3", "title": "HDFS" },
+          { "id": "t4", "title": "YARN" },
+          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
+          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
+          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
         ]
-      }
-      ,
+      },
       {
         "id": "m6",
-        "title": "Apache Kafka Basics",
-        "duration": "2 hrs",
+        "title": "Apache Hive",
+        "duration": "12 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Producer & Consumer", "duration": "0.3 hrs" },
-          { "id": "t2", "title": "Kafka Cluster Setup & Brokers", "duration": "0.25 hrs" },
-          { "id": "t3", "title": "Topics, Partitioning, Offset, Polling", "duration": "0.45 hrs" },
-          { "id": "t4", "title": "Data Replication & Data Retention", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Consumer Group", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "ZooKeeper", "duration": "0.3 hrs" }
+          { "id": "t1", "title": "Hive Installation" },
+          { "id": "t2", "title": "Query Syntax" },
+          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
+          { "id": "t4", "title": "Internal Vs External Tables" },
+          { "id": "t5", "title": "Static & Dynamic Partitioning" },
+          { "id": "t6", "title": "Bucketing" },
+          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
+          { "id": "t8", "title": "Hive SerDe" },
+          { "id": "t9", "title": "UDF's in Hive" },
+          { "id": "t10", "title": "Query Optimization" },
+          { "id": "t11", "title": "Setup hive in local machine" },
+          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
+          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
+          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
         ]
       },
       {
-        "id": "m7",
-        "title": "Apache Hive for Data Warehousing",
-        "duration": "4 hrs",
+        "id": "m8",
+        "title": "Spark",
+        "duration": "10 hrs",
+
         "topics": [
-          { "id": "t1", "title": "Hive Installation", "duration": "0.25 hrs" },
-          { "id": "t2", "title": "Query Syntax", "duration": "0.35 hrs" },
-          { "id": "t3", "title": "Bulk Data Load", "duration": "0.25 hrs" },
-          { "id": "t4", "title": "Internal vs External Tables", "duration": "0.3 hrs" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning", "duration": "0.4 hrs" },
-          { "id": "t6", "title": "Bucketing", "duration": "0.3 hrs" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join, and Sort Merge Bucket Join", "duration": "0.5 hrs" },
-          { "id": "t8", "title": "Hive SerDe", "duration": "0.3 hrs" },
-          { "id": "t9", "title": "User Defined Functions (UDFs) in Hive", "duration": "0.4 hrs" },
-          { "id": "t10", "title": "Query Optimization", "duration": "0.35 hrs" }
+          { "id": "t1", "title": "Complete Architecture" },
+          { "id": "t2", "title": "Spark Core" },
+          { "id": "t3", "title": "RDDs" },
+          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
+          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
+          { "id": "t6", "title": "Spark Read/Write operations" },
+          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
+          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
+          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
+          { "id": "t10", "title": "Spark Submit Command Options" },
+          { "id": "t11", "title": "Job optimization techniques" },
+          { "id": "t12", "title": "Spark Catalyst Optimizer" },
+          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
+          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
+          { "id": "t15", "title": "Setup spark in local mode" },
+          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
+          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
         ]
       },
-      ,
+      {
+        "id": "m9",
+        "title": "Kafka",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Producer" },
+          { "id": "t2", "title": "Consumer" },
+          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
+          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
+          { "id": "t5", "title": "Consumer Group" },
+          { "id": "t6", "title": "ZooKeeper" },
+          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
+        ]
+      },
+      {
+        "id": "m10",
+        "title": "Cloud Essentials & Fundamentals of AZURE",
+        "duration": "5 hrs",
 
+        "topics": [
+          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
+          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
+          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
+          { "id": "t4", "title": "Microsoft Azure Key Vault" },
+          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
+          { "id": "t6", "title": "Azure CLI Commands" },
+          { "id": "t7", "title": "Azure Virtual Machine" }
+        ]
+      },
+      {
+        "id": "m11",
+        "title": "BigData in AZURE",
+        "duration": "10 hrs",
 
-
-
+        "topics": [
+          { "id": "t1", "title": "Azure Blob/queue/table" },
+          { "id": "t2", "title": "Azure SQL database" },
+          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
+          { "id": "t4", "title": "Azure Synapse analytics" },
+          { "id": "t5", "title": "Azure Cosmos DB" },
+          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
+          { "id": "t7", "title": "Azure Event Hubs" },
+          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
+          { "id": "t9", "title": "Azure Scaling and Monitoring" },
+          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
+          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
+          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
+          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
+        ]
+      }
     ]
     ,
     projects: [
@@ -6536,38 +6878,27 @@ const courses: Course[] = [
       "Create interactive dashboards using Power BI / Tableau",
       "Prepare for Data Analyst roles in Kolkata’s job market"
     ],
-    curriculum: [
+      curriculum: [
       {
-        id: "m1",
-        title: "Advance Excel",
-        duration: "28 hrs",
-        topics: [
-          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
       },
 
       {
         id: "m2",
-        title: "SQL Queries & Relational Database Management",
+        title: "SQL",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
@@ -6580,80 +6911,108 @@ const courses: Course[] = [
           { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
           { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
           { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+
         ]
       },
 
       {
-        id: "m3",
-        title: "Data Visualization Using Tableau (Addon module with extra charges)",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        "id": "m3",
+        "title": "Python programming for Beginners",
+        "duration": "2O hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", "duration": "1.5 hrs" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", "duration": "2.5 hrs" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions", "duration": "3 hrs" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling", "duration": "2.5 hrs" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", "duration": "3 hrs" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", "duration": "4 hrs" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", "duration": "2 hrs" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
-      }
+      },
       ,
 
       {
         id: "m4",
-        title: "Data Visualization Using Power BI",
-        duration: "28 hrs",
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
       }
       ,
 
       {
-        id: "m5",
-        title: "Python for Data Science",
-        duration: "36 hrs",
+        "id": "m5",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
+
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
+
+
+        ]
+      },
+      ,
+      {
+        id: "m6",
+        title: "Power BI",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+          { id: "t1", title: "Introduction: Data Visualization, Interface, and Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, and Merging", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Star Schemas, Relationships, and Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, and Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, and Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, and Key Influencers", duration: "2.5 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, and RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections and Custom Queries", duration: "2 hrs" },
+          { id: "p1", title: "Project: Subscription Revenue & Churn Tracker", duration: "3.5 hrs" },
+          { id: "p2", title: "Project: E-commerce Sales & Customer 360 Dashboard", duration: "4 hrs" }
         ]
       }
       ,
       {
-        id: "m6",
-        title: "4 Months PrepAI",
-        duration: "120 days",
+        id: "m7",
+        title: "Prep AI 4 months Premium Subscription",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
-          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
-          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
-          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
-          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
+          { id: "t1", title: "Diagnose: Unlimited Interview Readiness Quizzes & Instant Feedback", duration: "3.5 hrs" },
+          { id: "t2", title: "Personalized Learning: Gap Analysis & Contextual Learning from Uploaded Files", duration: "4.5 hrs" },
+          { id: "t3", title: "Resume Excellence: ATS-Friendly Builder & Skills Matching Score", duration: "4 hrs" },
+          { id: "t4", title: "Recruiter Sync: Resume-to-Recruiter Matching & Strategic Networking", duration: "3 hrs" },
+          { id: "t5", title: "AI Tutor: Unlimited Real-Time Technical Doubt Clearing", duration: "5 hrs" },
+          { id: "t6", title: "Live Simulation: Unlimited Speech-to-Speech Mock Interviews", duration: "6.5 hrs" },
+          { id: "t7", title: "Company Prep: Tailored Recruiter Queries & Strategic Interview Prep", duration: "3.5 hrs" },
+          { id: "t8", title: "AI Career Coach: 1:1 Personalized Mentoring & Career Query Support", duration: "4.5 hrs" }
         ]
       }
     ],
@@ -6775,38 +7134,27 @@ const courses: Course[] = [
       "Clean, analyze, and visualize real data from business cases",
       "Build a professional portfolio"
     ],
-    curriculum: [
+      curriculum: [
       {
-        id: "m1",
-        title: "Advance Excel",
-        duration: "28 hrs",
-        topics: [
-          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
       },
 
       {
         id: "m2",
-        title: "SQL Queries & Relational Database Management",
+        title: "SQL",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
@@ -6819,80 +7167,108 @@ const courses: Course[] = [
           { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
           { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
           { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+
         ]
       },
 
       {
-        id: "m3",
-        title: "Data Visualization Using Tableau (Addon module with extra charges)",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        "id": "m3",
+        "title": "Python programming for Beginners",
+        "duration": "2O hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", "duration": "1.5 hrs" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", "duration": "2.5 hrs" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions", "duration": "3 hrs" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling", "duration": "2.5 hrs" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", "duration": "3 hrs" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", "duration": "4 hrs" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", "duration": "2 hrs" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
-      }
+      },
       ,
 
       {
         id: "m4",
-        title: "Data Visualization Using Power BI",
-        duration: "28 hrs",
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
       }
       ,
 
       {
-        id: "m5",
-        title: "Python for Data Science",
-        duration: "36 hrs",
+        "id": "m5",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
+
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
+
+
+        ]
+      },
+      ,
+      {
+        id: "m6",
+        title: "Power BI",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+          { id: "t1", title: "Introduction: Data Visualization, Interface, and Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, and Merging", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Star Schemas, Relationships, and Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, and Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, and Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, and Key Influencers", duration: "2.5 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, and RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections and Custom Queries", duration: "2 hrs" },
+          { id: "p1", title: "Project: Subscription Revenue & Churn Tracker", duration: "3.5 hrs" },
+          { id: "p2", title: "Project: E-commerce Sales & Customer 360 Dashboard", duration: "4 hrs" }
         ]
       }
       ,
       {
-        id: "m6",
-        title: "4 Months PrepAI",
-        duration: "120 days",
+        id: "m7",
+        title: "Prep AI 4 months Premium Subscription",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
-          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
-          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
-          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
-          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
+          { id: "t1", title: "Diagnose: Unlimited Interview Readiness Quizzes & Instant Feedback", duration: "3.5 hrs" },
+          { id: "t2", title: "Personalized Learning: Gap Analysis & Contextual Learning from Uploaded Files", duration: "4.5 hrs" },
+          { id: "t3", title: "Resume Excellence: ATS-Friendly Builder & Skills Matching Score", duration: "4 hrs" },
+          { id: "t4", title: "Recruiter Sync: Resume-to-Recruiter Matching & Strategic Networking", duration: "3 hrs" },
+          { id: "t5", title: "AI Tutor: Unlimited Real-Time Technical Doubt Clearing", duration: "5 hrs" },
+          { id: "t6", title: "Live Simulation: Unlimited Speech-to-Speech Mock Interviews", duration: "6.5 hrs" },
+          { id: "t7", title: "Company Prep: Tailored Recruiter Queries & Strategic Interview Prep", duration: "3.5 hrs" },
+          { id: "t8", title: "AI Career Coach: 1:1 Personalized Mentoring & Career Query Support", duration: "4.5 hrs" }
         ]
       }
     ],
@@ -7013,38 +7389,27 @@ const courses: Course[] = [
       "Perform data cleaning, preprocessing, and exploratory data analysis (EDA)",
       "Apply statistical concepts for business decision-making"
     ],
-    curriculum: [
+     curriculum: [
       {
-        id: "m1",
-        title: "Advance Excel",
-        duration: "28 hrs",
-        topics: [
-          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
       },
 
       {
         id: "m2",
-        title: "SQL Queries & Relational Database Management",
+        title: "SQL",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
@@ -7057,80 +7422,108 @@ const courses: Course[] = [
           { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
           { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
           { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+
         ]
       },
 
       {
-        id: "m3",
-        title: "Data Visualization Using Tableau (Addon module with extra charges)",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        "id": "m3",
+        "title": "Python programming for Beginners",
+        "duration": "2O hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", "duration": "1.5 hrs" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", "duration": "2.5 hrs" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions", "duration": "3 hrs" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling", "duration": "2.5 hrs" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", "duration": "3 hrs" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", "duration": "4 hrs" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", "duration": "2 hrs" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
-      }
+      },
       ,
 
       {
         id: "m4",
-        title: "Data Visualization Using Power BI",
-        duration: "28 hrs",
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
       }
       ,
 
       {
-        id: "m5",
-        title: "Python for Data Science",
-        duration: "36 hrs",
+        "id": "m5",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
+
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
+
+
+        ]
+      },
+      ,
+      {
+        id: "m6",
+        title: "Power BI",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+          { id: "t1", title: "Introduction: Data Visualization, Interface, and Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, and Merging", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Star Schemas, Relationships, and Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, and Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, and Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, and Key Influencers", duration: "2.5 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, and RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections and Custom Queries", duration: "2 hrs" },
+          { id: "p1", title: "Project: Subscription Revenue & Churn Tracker", duration: "3.5 hrs" },
+          { id: "p2", title: "Project: E-commerce Sales & Customer 360 Dashboard", duration: "4 hrs" }
         ]
       }
       ,
       {
-        id: "m6",
-        title: "4 Months PrepAI",
-        duration: "120 days",
+        id: "m7",
+        title: "Prep AI 4 months Premium Subscription",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
-          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
-          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
-          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
-          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
+          { id: "t1", title: "Diagnose: Unlimited Interview Readiness Quizzes & Instant Feedback", duration: "3.5 hrs" },
+          { id: "t2", title: "Personalized Learning: Gap Analysis & Contextual Learning from Uploaded Files", duration: "4.5 hrs" },
+          { id: "t3", title: "Resume Excellence: ATS-Friendly Builder & Skills Matching Score", duration: "4 hrs" },
+          { id: "t4", title: "Recruiter Sync: Resume-to-Recruiter Matching & Strategic Networking", duration: "3 hrs" },
+          { id: "t5", title: "AI Tutor: Unlimited Real-Time Technical Doubt Clearing", duration: "5 hrs" },
+          { id: "t6", title: "Live Simulation: Unlimited Speech-to-Speech Mock Interviews", duration: "6.5 hrs" },
+          { id: "t7", title: "Company Prep: Tailored Recruiter Queries & Strategic Interview Prep", duration: "3.5 hrs" },
+          { id: "t8", title: "AI Career Coach: 1:1 Personalized Mentoring & Career Query Support", duration: "4.5 hrs" }
         ]
       }
     ],
@@ -7251,38 +7644,27 @@ const courses: Course[] = [
       "Apply business intelligence techniques to convert business problems into data‑driven solutions.",
       "Work on real‑world industry datasets and projects to build a job‑ready analytics portfolio."
     ],
-    curriculum: [
+     curriculum: [
       {
-        id: "m1",
-        title: "Advance Excel",
-        duration: "28 hrs",
-        topics: [
-          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
       },
 
       {
         id: "m2",
-        title: "SQL Queries & Relational Database Management",
+        title: "SQL",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
@@ -7295,80 +7677,108 @@ const courses: Course[] = [
           { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
           { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
           { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+
         ]
       },
 
       {
-        id: "m3",
-        title: "Data Visualization Using Tableau (Addon module with extra charges)",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        "id": "m3",
+        "title": "Python programming for Beginners",
+        "duration": "2O hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", "duration": "1.5 hrs" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", "duration": "2.5 hrs" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions", "duration": "3 hrs" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling", "duration": "2.5 hrs" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", "duration": "3 hrs" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", "duration": "4 hrs" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", "duration": "2 hrs" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
-      }
+      },
       ,
 
       {
         id: "m4",
-        title: "Data Visualization Using Power BI",
-        duration: "28 hrs",
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
       }
       ,
 
       {
-        id: "m5",
-        title: "Python for Data Science",
-        duration: "36 hrs",
+        "id": "m5",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
+
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
+
+
+        ]
+      },
+      ,
+      {
+        id: "m6",
+        title: "Power BI",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+          { id: "t1", title: "Introduction: Data Visualization, Interface, and Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, and Merging", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Star Schemas, Relationships, and Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, and Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, and Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, and Key Influencers", duration: "2.5 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, and RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections and Custom Queries", duration: "2 hrs" },
+          { id: "p1", title: "Project: Subscription Revenue & Churn Tracker", duration: "3.5 hrs" },
+          { id: "p2", title: "Project: E-commerce Sales & Customer 360 Dashboard", duration: "4 hrs" }
         ]
       }
       ,
       {
-        id: "m6",
-        title: "4 Months PrepAI",
-        duration: "120 days",
+        id: "m7",
+        title: "Prep AI 4 months Premium Subscription",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
-          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
-          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
-          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
-          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
+          { id: "t1", title: "Diagnose: Unlimited Interview Readiness Quizzes & Instant Feedback", duration: "3.5 hrs" },
+          { id: "t2", title: "Personalized Learning: Gap Analysis & Contextual Learning from Uploaded Files", duration: "4.5 hrs" },
+          { id: "t3", title: "Resume Excellence: ATS-Friendly Builder & Skills Matching Score", duration: "4 hrs" },
+          { id: "t4", title: "Recruiter Sync: Resume-to-Recruiter Matching & Strategic Networking", duration: "3 hrs" },
+          { id: "t5", title: "AI Tutor: Unlimited Real-Time Technical Doubt Clearing", duration: "5 hrs" },
+          { id: "t6", title: "Live Simulation: Unlimited Speech-to-Speech Mock Interviews", duration: "6.5 hrs" },
+          { id: "t7", title: "Company Prep: Tailored Recruiter Queries & Strategic Interview Prep", duration: "3.5 hrs" },
+          { id: "t8", title: "AI Career Coach: 1:1 Personalized Mentoring & Career Query Support", duration: "4.5 hrs" }
         ]
       }
     ],
@@ -7490,38 +7900,27 @@ const courses: Course[] = [
       "Understand key analytics principles like data structures, sampling techniques, probability, and descriptive statistics.",
 
     ],
-    curriculum: [
+     curriculum: [
       {
-        id: "m1",
-        title: "Advance Excel",
-        duration: "28 hrs",
-        topics: [
-          { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-          { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-          { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-          { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-          { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-          { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-          { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-          { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-          { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-          { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-          { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-          { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-          { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-          { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-          { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-          { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-          { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-          { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-          { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-          { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
       },
 
       {
         id: "m2",
-        title: "SQL Queries & Relational Database Management",
+        title: "SQL",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
@@ -7534,80 +7933,108 @@ const courses: Course[] = [
           { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
           { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
           { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+
         ]
       },
 
       {
-        id: "m3",
-        title: "Data Visualization Using Tableau (Addon module with extra charges)",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-          { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-          { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-          { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-          { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-          { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-          { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-          { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-          { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-          { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-          { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-          { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-          { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
+        "id": "m3",
+        "title": "Python programming for Beginners",
+        "duration": "2O hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", "duration": "1.5 hrs" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", "duration": "2.5 hrs" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions", "duration": "3 hrs" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling", "duration": "2.5 hrs" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", "duration": "3 hrs" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", "duration": "4 hrs" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", "duration": "2 hrs" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
-      }
+      },
       ,
 
       {
         id: "m4",
-        title: "Data Visualization Using Power BI",
-        duration: "28 hrs",
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-          { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-          { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
       }
       ,
 
       {
-        id: "m5",
-        title: "Python for Data Science",
-        duration: "36 hrs",
+        "id": "m5",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
+
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
+
+
+        ]
+      },
+      ,
+      {
+        id: "m6",
+        title: "Power BI",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-          { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-          { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-          { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-          { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-          { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-          { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-          { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-          { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-          { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-          { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-          { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-          { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
+          { id: "t1", title: "Introduction: Data Visualization, Interface, and Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, and Merging", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Star Schemas, Relationships, and Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, and Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, and Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, and Key Influencers", duration: "2.5 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, and RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections and Custom Queries", duration: "2 hrs" },
+          { id: "p1", title: "Project: Subscription Revenue & Churn Tracker", duration: "3.5 hrs" },
+          { id: "p2", title: "Project: E-commerce Sales & Customer 360 Dashboard", duration: "4 hrs" }
         ]
       }
       ,
       {
-        id: "m6",
-        title: "4 Months PrepAI",
-        duration: "120 days",
+        id: "m7",
+        title: "Prep AI 4 months Premium Subscription",
+        duration: "24 HOURS",
         topics: [
-          { id: "t1", title: "Unlimited Mock Interviews (Speech-to-Speech)", duration: "6.5 hrs" },
-          { id: "t2", title: "ATS-Friendly Resume Builder", duration: "8.25 hrs" },
-          { id: "t3", title: "Unlimited Doubt Clearing (AI Tutor)", duration: "6.75 hrs" },
-          { id: "t4", title: "Personalized Learning Plans", duration: "4.5 hrs" },
-          { id: "t5", title: "1:1 AI Career Coaching", duration: "4.5 hrs" }
+          { id: "t1", title: "Diagnose: Unlimited Interview Readiness Quizzes & Instant Feedback", duration: "3.5 hrs" },
+          { id: "t2", title: "Personalized Learning: Gap Analysis & Contextual Learning from Uploaded Files", duration: "4.5 hrs" },
+          { id: "t3", title: "Resume Excellence: ATS-Friendly Builder & Skills Matching Score", duration: "4 hrs" },
+          { id: "t4", title: "Recruiter Sync: Resume-to-Recruiter Matching & Strategic Networking", duration: "3 hrs" },
+          { id: "t5", title: "AI Tutor: Unlimited Real-Time Technical Doubt Clearing", duration: "5 hrs" },
+          { id: "t6", title: "Live Simulation: Unlimited Speech-to-Speech Mock Interviews", duration: "6.5 hrs" },
+          { id: "t7", title: "Company Prep: Tailored Recruiter Queries & Strategic Interview Prep", duration: "3.5 hrs" },
+          { id: "t8", title: "AI Career Coach: 1:1 Personalized Mentoring & Career Query Support", duration: "4.5 hrs" }
         ]
       }
     ],

@@ -617,7 +617,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     </div>
                   </>
                   :
-                  course.title === "Data Science with Machine Learning & AI Certification" ?
+                  course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata"  || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Pune" ?
                     <>
                       {/* <h2 className="text-4xl font-bold text-white mb-8">
                         What You Will Learn
@@ -712,7 +712,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         </div>
                       </>
                       :
-                      course.title === "Data Analytics With Visualization" ?
+                      course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata"  || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Pune" ?
 
                         <>
                           {/* <h2 className="text-4xl font-bold text-white mb-8">
@@ -931,7 +931,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                                   </div>
                                 </>
                                 :
-                                course.title === "Generative AI Course" ?
+                                course.title === " Advanced Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Mumbai" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Pune" ?
                                   <>
 
 
@@ -953,30 +953,29 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                                     </div>
                                   </>
                                   :
+                                   <div className="space-y-6">
 
-                                 
-                                  <>
+                                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
 
+                                          ⦿	Master MySQL database operations, advanced query writing, window functions, and Python data manipulation.
+                                        </h3>
 
-                                    <div style={{ marginTop: 50 }} className="space-y-6">
-                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                        ⦿ Master Python setup, Git workflows, prompt engineering (ReAct, Tree-of-Thought), tokenization, and advanced API integrations.                               </h3>
-                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                          ⦿ Process large-scale data using distributed computing, HDFS, YARN, MapReduce, and Hive optimization.
+                                        </h3>
 
-                                        ⦿ Implement open-source model fine-tuning using LoRA/QLoRA alongside robust vector database retrieval-augmented generation pipelines.                            </h3>
+                                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                          ⦿ Build scalable live pipelines using Apache Spark, Spark SQL, RDDs, and Apache Kafka workflows.
+                                        </h3>
 
-                                        ⦿ Architect multi-agent execution frameworks, custom tools, and complex stateful workflows using LangGraph and LCEL.
-                                      </h3>
-                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                        ⦿ Deploy scalable AI microservices via FastAPI and Docker, and build multi-sensory applications using Vision, Whisper, and Stable Diffusion.                              </h3>
-                                    </div>
-                                  </>
+                                          ⦿ Design secure data pipelines using Azure Data Factory, Blob Storage, Data Lake, and Databricks.
+                                        </h3>
 
-
+                                      </div>
 
               }
             </div>
@@ -991,7 +990,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     ? "720 students"
                     :
                     course.title === "AI for Entrepreneurs" ? "100 students"
-                      : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
+                      : course.title === "Advanced Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
                         ? "1220 students"
                         :
                         course.title === "AI for Beginners" ? "15+ AI Tools"
@@ -1012,7 +1011,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                                         : course.title === "AI and Machine Learning Course" ? "658 students"
                                           : course.title === "Data science course (Pay after Placement)"
                                             ? "430 students"
-                                            : "N/A"}
+                                            : "1220 students"}
                 </span>
               </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
@@ -1034,7 +1033,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <span> {course.title === "AI for Product Managers"
                   ? "4.7 (195 reviews)"
                   : course.title === "AI for Entrepreneurs" ? "4.8 (90 reviews)"
-                    : course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
+                    : course.title === "Advanced Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
                       ? "4.9 (209 reviews)" :
                       course.title === "AI for Beginners" ? "4.8 (25 reviews)"
                         : course.title === "Data Science with Machine Learning & AI Certification"
@@ -1054,7 +1053,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                                       : course.title === "AI and Machine Learning Course" ? "4.8 (230 reviews)"
                                         : course.title === "Data science course (Pay after Placement)"
                                           ? "4.8 (109 reviews)"
-                                          : "N/A"}</span>
+                                          : "4.9 (209 reviews)"}</span>
               </div>
 
 
@@ -1090,7 +1089,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       course.title === "Data Analytics and Generative AI Course" ||
                       course.title === "AI for Beginners" ? "Ivy Professional School Certification" : course.title === "AI for Product Managers" || course.title === "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" || course.title === "AI and Machine Learning Course" || course.title === "AI for Entrepreneurs"
                       ? "Ivy Professional School Certification"
-                      : ""}
+                      : "Ivy Professional School Certification"}
               </div>
 
               <Link
@@ -1109,7 +1108,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   <Button
                     variant="outline"
                     size="lg"
-className="bg-blue-100 text-[#013a81] hover:bg-[#013a81] hover:text-white"                   onClick={() => {
+                    className="bg-blue-100 text-[#013a81] hover:bg-[#013a81] hover:text-white" onClick={() => {
                       let syllabusUrl = "";
 
                       if (
@@ -1896,9 +1895,8 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
 
               {submitMessage && (
                 <p
-                  className={`text-center text-sm font-medium ${
-                    submitStatus === "success" ? "text-green-600" : "text-red-600"
-                  }`}
+                  className={`text-center text-sm font-medium ${submitStatus === "success" ? "text-green-600" : "text-red-600"
+                    }`}
                 >
                   {submitMessage}
                 </p>
