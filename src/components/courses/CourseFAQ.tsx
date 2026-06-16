@@ -2970,6 +2970,96 @@ const courseData: { [key: string]: CourseFAQData } = {
       }
     ]
   },
+   "Data Analytics With Visualization in Chennai": {
+    categories: [
+      { id: "program", name: "Program" },
+      { id: "eligibility", name: "Eligibility" },
+      { id: "data-analytics", name: "Data Analytics" },
+      { id: "job and career", name: "Job And Career" },
+      { id: "certification", name: "Certification" },
+      { id: "projects", name: "Projects" },
+      { id: "placement", name: "Placement" },
+      { id: "opportunities", name: "Opportunities" },
+      { id: "support", name: "Support" }
+    ],
+    faqs: [
+      {
+        question: "Who should consider the Data Analytics course in Chennai?",
+        answer: "This course is ideal for graduates, software professionals, startup employees, engineers, and working professionals in Chennai aiming to build strong analytics and data-driven decision-making skills.",
+        category: "eligibility"
+      },
+      {
+        question: "Is this Data Analytics course suitable for non-programmers?",
+        answer: "Yes. The course begins with fundamentals and does not assume prior programming knowledge, making it suitable for learners from non-coding backgrounds.",
+        category: "eligibility"
+      },
+      {
+        question: "What is the expected duration of the Data Analytics course in Chennai?",
+        answer: "The program is designed to be completed within 6 to 8 months, depending on learning pace, batch schedule, and project submissions.",
+        category: "program"
+      },
+      {
+        question: "Can professionals working in Chennai attend this course?",
+        answer: "Yes. The course offers flexible learning schedules including weekend and evening batches, suitable for professionals working in tech and non-tech roles.",
+        category: "program"
+      },
+      {
+        question: "Which tools and analytics techniques are covered?",
+        answer: "Learners gain hands-on experience with Excel, SQL, Python for analytics, Power BI or Tableau, and core statistical techniques used in data analysis.",
+        category: "data-analytics"
+      },
+      {
+        question: "Are industry-relevant projects part of the curriculum?",
+        answer: "Yes. The course includes guided assignments, practical projects, and a capstone project aligned with real business and analytics scenarios.",
+        category: "projects"
+      },
+      {
+        question: "Does the course offer placement or career guidance?",
+        answer: "Yes. Learners receive career support through resume building, mock interviews, interview preparation, and guidance on analytics career paths.",
+        category: "placement"
+      },
+      {
+        question: "What job roles can I target after completing the course?",
+        answer: "Graduates of the program can apply for roles such as Data Analyst, Business Analyst, Reporting Analyst, MIS Analyst, and entry-level analytics roles.",
+        category: "job and career"
+      },
+      {
+        question: "Is certification provided after completing the course?",
+        answer: "Yes. Learners receive a Data Analytics certification from Ivy Professional School after successful completion of the program.",
+        category: "certification"
+      },
+      {
+        question: "How relevant is this certification for Chennai’s job market?",
+        answer: "The certification is valued by employers across Chennai’s tech and business ecosystem as it reflects practical analytics skills and project experience.",
+        category: "certification"
+      },
+      {
+        question: "What learning modes are available for this course?",
+        answer: "Learners can choose between classroom sessions, live online instructor-led training, or a hybrid learning format.",
+        category: "program"
+      },
+      {
+        question: "Is there any minimum qualification required to enroll?",
+        answer: "There are no strict qualification requirements. Graduates from engineering, science, commerce, management, and other disciplines are welcome.",
+        category: "eligibility"
+      },
+      {
+        question: "What kind of academic support is available during the course?",
+        answer: "Learners receive continuous academic support through doubt-clearing sessions, mentor interactions, structured feedback, and guided learning.",
+        category: "support"
+      },
+      {
+        question: "Why choose this Data Analytics course in Chennai?",
+        answer: "The course focuses on practical analytics skills, business-oriented projects, structured mentorship, and career readiness aligned with industry needs.",
+        category: "program"
+      },
+      {
+        question: "Can this course help in transitioning to analytics roles?",
+        answer: "Yes. The learning pathway is designed to help learners from diverse backgrounds transition into data analytics roles with confidence.",
+        category: "opportunities"
+      }
+    ]
+  },
 
 
   "Cloud Data Engineering Course with IIT Guwahati": {

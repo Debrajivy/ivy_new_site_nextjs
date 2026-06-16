@@ -232,7 +232,7 @@ const Footer = () => {
                   <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Bangalore</Link></li>
                   <li><Link href="/courses/data-analytics-course-mumbai" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Mumbai</Link></li>
                   <li><Link href="/courses/data-analytics-course-pune" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Pune</Link></li>
-                  {/* <li><Link href="/courses/data-analytics-course-chennai" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Chennai</Link></li> */}
+                  <li><Link href="/courses/data-analytics-course-chennai" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Chennai</Link></li>
            
 
                 </ul>

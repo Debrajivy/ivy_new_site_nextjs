@@ -182,7 +182,7 @@ const courses: Course[] = [
       },
       {
         id: "m4",
-        title: "Hugging Face Ecosystem & Fine-Tuning (LoRA / QLoRA)",
+        title: "Hugging Face Ecosystem & Fine-Tuning ",
         duration: "24 hrs",
         topics: [
           { id: "t1", title: "HuggingFace Hub, Transformers, Datasets, PEFT, Evaluate, Accelerate", duration: "3 hrs" },
@@ -1766,7 +1766,7 @@ const courses: Course[] = [
       },
 
       {
-        id: "m6",
+        id: "m3",
         title: "Power BI",
         duration: "24 HOURS",
         topics: [
@@ -1815,7 +1815,7 @@ const courses: Course[] = [
       ,
       {
         id: "m5",
-        title: "Gen AI",
+        title: "Gen AI for Beginners",
         duration: "12 hrs",
         // topics: [
         //   { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
@@ -1824,53 +1824,34 @@ const courses: Course[] = [
         //   { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
         // ]
         topics: [
-          { id: "t1", title: "Tokenization", duration: "" },
-          { id: "t2", title: "Word Embedding", duration: "" },
-          { id: "t3", title: "GANs (Generative Adversarial Networks)", duration: "" },
-          { id: "t4", title: "Transformer Models", duration: "" },
-          { id: "t5", title: "BERT (Bidirectional Encoder Representations from Transformers)", duration: "" }
+          { "id": "t1", "title": "Foundations of Artificial Intelligence, Machine Learning & Generative AI", "duration": "" },
+          { "id": "t2", "title": "Understanding Large Language Models (LLMs) and how tools like ChatGPT work", "duration": "" },
+          { "id": "t3", "title": "Prompt Engineering for effective AI interactions and content generation", "duration": "" },
+          { "id": "t4", "title": "AI-powered research, summarization and knowledge management", "duration": "" },
+          { "id": "t5", "title": "Creating text, presentations, reports and professional documents using AI", "duration": "" },
+          { "id": "t6", "title": "Image generation and visual content creation with Generative AI tools", "duration": "" },
+          { "id": "t7", "title": "AI for productivity, workplace automation and task optimization", "duration": "" },
+          { "id": "t8", "title": "Building custom AI assistants and no-code AI applications", "duration": "" },
+          { "id": "t9", "title": "AI for data analysis, insights generation and decision support", "duration": "" },
+          { "id": "t10", "title": "Responsible AI, ethics, privacy and best practices", "duration": "" }
         ]
 
       },
       {
-        id: "m6",
-        title: "Python",
-        duration: "20 hrs",
-        // topics: [
-        //   { id: "t1", title: "Making Macro Do Automated Tasks for You", duration: "6.5 hrs" },
-        //   { id: "t2", title: "Programming Concepts (Variables, Loops, Conditions)", duration: "8.25 hrs" },
-        //   { id: "t3", title: "Analysis Using VBA (Data Cleaning, PivotTables)", duration: "6.75 hrs" },
-        //   { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Python", duration: "" },
-          { id: "t2", title: "Strings", duration: "" },
-          { id: "t3", title: "Lists", duration: "" },
-          { id: "t4", title: "Dictionary", duration: "" },
-          { id: "t5", title: "User Input", duration: "" },
-          { id: "t6", title: "Conditional Statements", duration: "" },
-          { id: "t7", title: "If Else", duration: "" },
-          { id: "t8", title: "Tuples", duration: "" },
-          { id: "t9", title: "Sets", duration: "" },
-          { id: "t10", title: "Loops", duration: "" },
-          { id: "t11", title: "For Loop", duration: "" },
-          { id: "t12", title: "While Loop", duration: "" },
-          { id: "t13", title: "Break", duration: "" },
-          { id: "t14", title: "Continue", duration: "" },
-          { id: "t15", title: "Try Except", duration: "" },
-          { id: "t16", title: "Dictionary Comprehension", duration: "" },
-          { id: "t17", title: "Streamlit", duration: "" },
-          { id: "t18", title: "Gen AI App", duration: "" },
-          { id: "t19", title: "AI Cover Letter", duration: "" },
-          { id: "t20", title: "GitHub", duration: "" },
-          { id: "t21", title: "Functions", duration: "" },
-          { id: "t22", title: "User Defined Functions", duration: "" },
-          { id: "t23", title: "Packages", duration: "" },
-          { id: "t24", title: "Modules", duration: "" }
+        "id": "m6",
+        "title": "Python programming for Beginners",
+        "duration": "20 hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
         ]
-
-
-      }
+      },
     ],
     projects: [
       {
@@ -3710,7 +3691,7 @@ const courses: Course[] = [
       }
     ],
 
-   "curriculum": [
+    "curriculum": [
       {
         "id": "m1",
         "title": "Advanced SQL",
@@ -4294,7 +4275,7 @@ const courses: Course[] = [
       }
     ],
 
-   "curriculum": [
+    "curriculum": [
       {
         "id": "m1",
         "title": "Advanced SQL",
@@ -4598,261 +4579,185 @@ const courses: Course[] = [
 
 
 
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "Advanced Excel",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
-          { id: "t2", title: "Data Analysis", duration: "" },
-          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
-          { id: "t4", title: "Data Visualization", duration: "" },
-          { id: "t5", title: "Data Cleaning", duration: "" },
-          { id: "t6", title: "Dashboarding", duration: "" },
-          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
-
-        // topics: [
-        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
-        // ]
+      },
+      {
+        "id": "m2",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+        ]
       },
 
-
-      {
-        id: "m2",
-        title: "MySQL",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Database Management", duration: "" },
-          { id: "t2", title: "SQL Queries", duration: "" },
-          { id: "t3", title: "Data Retrieval", duration: "" },
-          { id: "t4", title: "Database Design", duration: "" },
-          { id: "t5", title: "Performance Optimization", duration: "" },
-          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
-        ]
-
-        // topics: [
-        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        // ]
-      },
 
       {
         id: "m3",
-        title: " Tableau",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
-        // ]
+        title: "Python programming for Beginners",
+        duration: "2O hrs",
         topics: [
-          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
-          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
-          { id: "t3", title: "Data Connection and Blending", duration: "" },
-          { id: "t4", title: "Calculations and Expressions", duration: "" },
-          { id: "t5", title: "Chart Types", duration: "" },
-          { id: "t6", title: "Parameters", duration: "" },
-          { id: "t7", title: "Dashboard Actions", duration: "" },
-          { id: "t8", title: "Story and Tableau Prep", duration: "" },
-          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+          { id: "t1", title: "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", duration: "1.5 hrs" },
+          { id: "t2", title: "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", duration: "2.5 hrs" },
+          { id: "t3", title: "Collections & Iterations: Lists, Tuples, Sets, Dictionaries, and Comprehensions", duration: "3 hrs" },
+          { id: "t4", title: "Control Flow: Conditionals, Loops, and Exception Handling", duration: "2.5 hrs" },
+          { id: "t5", title: "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", duration: "3 hrs" },
+          { id: "t6", title: "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", duration: "4 hrs" },
+          { id: "p1", title: "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", duration: "2 hrs" },
+          { id: "p2", title: "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", duration: "2 hrs" },
         ]
-
-      }
-      ,
-
+      },
       {
-        id: "m4",
-        title: "Business Statistics",
-        duration: "8 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
-        // ]
-        topics: [
-          { id: "t1", title: "Probability Distributions", duration: "" },
-          { id: "t2", title: "EDA", duration: "" },
-          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
-          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
-          { id: "t5", title: "Data Preprocessing", duration: "" },
-          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        "id": "m4",
+        "title": "Tableau",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Visualization Fundamentals – Design principles, chart selection, and best practices" },
+          { "id": "t2", "title": "Build Interactive Dashboards – Filters, actions, parameters, and dynamic KPI tracking" },
+          { "id": "t3", "title": "Work with Real Data – Data connection, joins, blending, and data preparation techniques" },
+          { "id": "t4", "title": "Advanced Tableau Techniques – Calculated fields, LOD expressions, table calculations" },
+          { "id": "t5", "title": "Create Impactful Visuals – Heatmaps, treemaps, waterfall charts, maps, and advanced charts" },
+          { "id": "t6", "title": "Storytelling with Data – Dashboard design, annotations, and business storytelling" },
+          { "id": "t7", "title": "AI in Tableau – Use Explain Data, Ask Data, and Tableau GPT for faster insights" },
+          { "id": "p1", "title": "Project: Interactive Sales Dashboard \n Designed an Interactive Sales Dashboard with filters and storyboards for management." },
+          { "id": "p2", "title": "Project: Customer Segmentation Report \n Created a Customer Segmentation Report using clustering insights and visuals." }
         ]
-
-      }
-      ,
+      },
 
       {
         id: "m5",
-        title: "R",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
-        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
-        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
-        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
-        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
-        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
-        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
-        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
-        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
-        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
-        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
-        // ]
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
-          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
-          { id: "t4", title: "Statistical Analysis", duration: "" },
-          { id: "t5", title: "Predictive Modeling in R", duration: "" },
-          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
-          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
+      },
+      {
+        "id": "m6",
+        "title": "R Language",
+        "duration": "40 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Handling in R – Data cleaning, transformation, and working with structured datasets" },
+          { "id": "t2", "title": "Exploratory Data Analysis & Visualization – Statistical summaries, correlations, and visualizations" },
+          { "id": "t3", "title": "Predictive Modeling – Linear & Logistic Regression, model evaluation, and validation techniques" },
+          { "id": "t4", "title": "Time Series Analysis – ARIMA models, trend analysis, and forecasting" },
+          { "id": "t5", "title": "Feature Engineering – PCA and dimensionality reduction for improving model performance" },
+          { "id": "t6", "title": "Statistical Thinking for Business Problems – Applying data-driven methods to real-world scenarios" },
+          { "id": "t7", "title": "AI in R – Use generative AI tools for code automation, visualization, and model interpretation" },
+          { "id": "p1", "title": "Project: Sales Forecasting \n Conducted Sales Forecasting using Time Series Analysis and ARIMA models." },
+          { "id": "p2", "title": "Project: Employee Attrition Predictor \n Built an Employee Attrition Predictor using Logistic Regression and tidyverse tools." }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
 
-      }
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
 
-      ,
+
+        ]
+      },
+      {
+        "id": "m8",
+        "title": "Machine Learning",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Machine Learning Foundations: Supervised vs unsupervised learning, model evaluation, and bias-variance tradeoff" },
+          { "id": "t2", "title": "Predictive Modeling & Algorithms: Regression, classification, decision trees, SVM, KNN, and Naïve Bayes" },
+          { "id": "t3", "title": "Clustering & Dimensionality Reduction: K-Means, Hierarchical, DBSCAN, PCA" },
+          { "id": "t4", "title": "Ensemble Techniques: Random Forest, XGBoost and model improvement strategies" },
+          { "id": "t5", "title": "Model Optimization: Hyperparameter tuning using GridSearchCV & RandomizedSearchCV" },
+          { "id": "t6", "title": "Natural Language Processing (NLP): Text classification, sentiment analysis, topic modeling, and BERT fundamentals" },
+          { "id": "t7", "title": "Deep Learning: Neural networks, CNNs, RNNs, LSTMs and TensorFlow" },
+          { "id": "t8", "title": "AI Projects & Deployment: Build and deploy Image, Text, and Time-Series models using Flask/Streamlit" },
+          { "id": "t9", "title": "AI-Powered Workflows: Use AI tools to accelerate model building, analysis, and documentation" },
+          { "id": "p1", "title": "Project: Image Classification Model \n Build a CNN using TensorFlow to identify objects or handwritten digits." },
+          { "id": "p2", "title": "Project: Stock Price Prediction \n Use LSTM networks to forecast time-series data and visualize trend accuracy." }
+        ]
+      },
+
 
       {
-        id: "m6",
-        title: "Python",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
-          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
-          { id: "t4", title: "ML Fundamentals", duration: "" },
-          { id: "t5", title: "Predictive Modeling", duration: "" },
-          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
-          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        "id": "m9",
+        "title": "CV Building",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Career Planning & Resume Strategy: Strategic alignment for job readiness and career mapping" },
+          { "id": "t2", "title": "Resume & CV Architecture: Drafting high-impact documents for both Freshers and Professionals" },
+          { "id": "t3", "title": "ATS Optimization: Keyword research techniques and formatting for Applicant Tracking Systems" },
+          { "id": "t4", "title": "Multi-Platform Job Search: Mastering LinkedIn, Naukri, Indeed, and emerging portals" },
+          { "id": "t5", "title": "Advanced Customization: Role-based resume tailoring and shortlisting strategies" },
+          { "id": "t6", "title": "Interview Simulation: Using PrepAI for dynamic question generation and mock practice" },
+          { "id": "t7", "title": "Job Search Execution: End-to-end placement preparation and tracking using PrepAI" },
+          { "id": "p1", "title": "Project: Professional Portfolio Build \n Construct an ATS-optimized resume and LinkedIn profile tailored to a target job description." }
         ]
-
-      }
-      ,
+      },
       {
-        id: "m7",
-        title: "ML, DL & AI",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
-        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
-        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
-        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
-        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
-        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
-        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
-        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
-        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
-        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
-        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
-        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
-        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
-        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Predictive Modeling", duration: "" },
-          { id: "t2", title: "Clustering", duration: "" },
-          { id: "t3", title: "Decision Trees", duration: "" },
-          { id: "t4", title: "Ensemble Techniques", duration: "" },
-          { id: "t5", title: "Optimization", duration: "" },
-          { id: "t6", title: "NLP", duration: "" },
-          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
-          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        "id": "m10",
+        "title": "Analytical Problem Solving (APS)",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to APS: Understanding the role of analytical thinking in modern job functions" },
+          { "id": "t2", "title": "Problem Solving Frameworks: Applying structured logic to complex business scenarios" },
+          { "id": "t3", "title": "Domain-Specific Case Studies: Analyzing Sales, Operations, and Manufacturing use cases" },
+          { "id": "t4", "title": "Root Cause Analysis (RCA): Techniques for identifying core issues in real-world problems" },
+          { "id": "t5", "title": "Data-Driven Decision Making: Leveraging quantitative insights to drive business strategy" },
+          { "id": "t6", "title": "Structured Interview Prep: Navigating case-based questions and workplace logic scenarios" },
+          { "id": "t7", "title": "PrepAI APS Practice: Solving simulated business cases with AI-driven feedback" },
+          { "id": "p1", "title": "Project: Business Impact Case Study \n Perform a Root Cause Analysis on a manufacturing or sales bottleneck and present a data-backed solution." }
         ]
-
       }
 
-
-      // ,
-
-      // {
-      //   id: "m8",
-      //   title: "Statistics",
-      //   duration: "8 hrs",
-      //   topics: [
-      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
-      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
-      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
-      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
-      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
-      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
-      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
-      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
-      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
-      //   ]
-      // }
-
-      // ,
-      // {
-      //   "id": "m9",
-      //   "title": "Excel VBA Automation",
-      //   "duration": "26 hrs",
-      //   "topics": [
-      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
-      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
-      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
-      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
-      //   ]
-      // }
 
 
     ],
@@ -4977,262 +4882,185 @@ const courses: Course[] = [
     ],
 
 
-
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "Advanced Excel",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
-          { id: "t2", title: "Data Analysis", duration: "" },
-          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
-          { id: "t4", title: "Data Visualization", duration: "" },
-          { id: "t5", title: "Data Cleaning", duration: "" },
-          { id: "t6", title: "Dashboarding", duration: "" },
-          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
-
-        // topics: [
-        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
-        // ]
+      },
+      {
+        "id": "m2",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+        ]
       },
 
-
-      {
-        id: "m2",
-        title: "MySQL",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Database Management", duration: "" },
-          { id: "t2", title: "SQL Queries", duration: "" },
-          { id: "t3", title: "Data Retrieval", duration: "" },
-          { id: "t4", title: "Database Design", duration: "" },
-          { id: "t5", title: "Performance Optimization", duration: "" },
-          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
-        ]
-
-        // topics: [
-        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        // ]
-      },
 
       {
         id: "m3",
-        title: " Tableau",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
-        // ]
+        title: "Python programming for Beginners",
+        duration: "2O hrs",
         topics: [
-          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
-          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
-          { id: "t3", title: "Data Connection and Blending", duration: "" },
-          { id: "t4", title: "Calculations and Expressions", duration: "" },
-          { id: "t5", title: "Chart Types", duration: "" },
-          { id: "t6", title: "Parameters", duration: "" },
-          { id: "t7", title: "Dashboard Actions", duration: "" },
-          { id: "t8", title: "Story and Tableau Prep", duration: "" },
-          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+          { id: "t1", title: "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", duration: "1.5 hrs" },
+          { id: "t2", title: "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", duration: "2.5 hrs" },
+          { id: "t3", title: "Collections & Iterations: Lists, Tuples, Sets, Dictionaries, and Comprehensions", duration: "3 hrs" },
+          { id: "t4", title: "Control Flow: Conditionals, Loops, and Exception Handling", duration: "2.5 hrs" },
+          { id: "t5", title: "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", duration: "3 hrs" },
+          { id: "t6", title: "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", duration: "4 hrs" },
+          { id: "p1", title: "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", duration: "2 hrs" },
+          { id: "p2", title: "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", duration: "2 hrs" },
         ]
-
-      }
-      ,
-
+      },
       {
-        id: "m4",
-        title: "Business Statistics",
-        duration: "8 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
-        // ]
-        topics: [
-          { id: "t1", title: "Probability Distributions", duration: "" },
-          { id: "t2", title: "EDA", duration: "" },
-          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
-          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
-          { id: "t5", title: "Data Preprocessing", duration: "" },
-          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        "id": "m4",
+        "title": "Tableau",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Visualization Fundamentals – Design principles, chart selection, and best practices" },
+          { "id": "t2", "title": "Build Interactive Dashboards – Filters, actions, parameters, and dynamic KPI tracking" },
+          { "id": "t3", "title": "Work with Real Data – Data connection, joins, blending, and data preparation techniques" },
+          { "id": "t4", "title": "Advanced Tableau Techniques – Calculated fields, LOD expressions, table calculations" },
+          { "id": "t5", "title": "Create Impactful Visuals – Heatmaps, treemaps, waterfall charts, maps, and advanced charts" },
+          { "id": "t6", "title": "Storytelling with Data – Dashboard design, annotations, and business storytelling" },
+          { "id": "t7", "title": "AI in Tableau – Use Explain Data, Ask Data, and Tableau GPT for faster insights" },
+          { "id": "p1", "title": "Project: Interactive Sales Dashboard \n Designed an Interactive Sales Dashboard with filters and storyboards for management." },
+          { "id": "p2", "title": "Project: Customer Segmentation Report \n Created a Customer Segmentation Report using clustering insights and visuals." }
         ]
-
-      }
-      ,
+      },
 
       {
         id: "m5",
-        title: "R",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
-        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
-        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
-        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
-        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
-        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
-        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
-        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
-        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
-        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
-        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
-        // ]
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
-          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
-          { id: "t4", title: "Statistical Analysis", duration: "" },
-          { id: "t5", title: "Predictive Modeling in R", duration: "" },
-          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
-          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
+      },
+      {
+        "id": "m6",
+        "title": "R Language",
+        "duration": "40 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Handling in R – Data cleaning, transformation, and working with structured datasets" },
+          { "id": "t2", "title": "Exploratory Data Analysis & Visualization – Statistical summaries, correlations, and visualizations" },
+          { "id": "t3", "title": "Predictive Modeling – Linear & Logistic Regression, model evaluation, and validation techniques" },
+          { "id": "t4", "title": "Time Series Analysis – ARIMA models, trend analysis, and forecasting" },
+          { "id": "t5", "title": "Feature Engineering – PCA and dimensionality reduction for improving model performance" },
+          { "id": "t6", "title": "Statistical Thinking for Business Problems – Applying data-driven methods to real-world scenarios" },
+          { "id": "t7", "title": "AI in R – Use generative AI tools for code automation, visualization, and model interpretation" },
+          { "id": "p1", "title": "Project: Sales Forecasting \n Conducted Sales Forecasting using Time Series Analysis and ARIMA models." },
+          { "id": "p2", "title": "Project: Employee Attrition Predictor \n Built an Employee Attrition Predictor using Logistic Regression and tidyverse tools." }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
 
-      }
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
 
-      ,
+
+        ]
+      },
+      {
+        "id": "m8",
+        "title": "Machine Learning",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Machine Learning Foundations: Supervised vs unsupervised learning, model evaluation, and bias-variance tradeoff" },
+          { "id": "t2", "title": "Predictive Modeling & Algorithms: Regression, classification, decision trees, SVM, KNN, and Naïve Bayes" },
+          { "id": "t3", "title": "Clustering & Dimensionality Reduction: K-Means, Hierarchical, DBSCAN, PCA" },
+          { "id": "t4", "title": "Ensemble Techniques: Random Forest, XGBoost and model improvement strategies" },
+          { "id": "t5", "title": "Model Optimization: Hyperparameter tuning using GridSearchCV & RandomizedSearchCV" },
+          { "id": "t6", "title": "Natural Language Processing (NLP): Text classification, sentiment analysis, topic modeling, and BERT fundamentals" },
+          { "id": "t7", "title": "Deep Learning: Neural networks, CNNs, RNNs, LSTMs and TensorFlow" },
+          { "id": "t8", "title": "AI Projects & Deployment: Build and deploy Image, Text, and Time-Series models using Flask/Streamlit" },
+          { "id": "t9", "title": "AI-Powered Workflows: Use AI tools to accelerate model building, analysis, and documentation" },
+          { "id": "p1", "title": "Project: Image Classification Model \n Build a CNN using TensorFlow to identify objects or handwritten digits." },
+          { "id": "p2", "title": "Project: Stock Price Prediction \n Use LSTM networks to forecast time-series data and visualize trend accuracy." }
+        ]
+      },
+
 
       {
-        id: "m6",
-        title: "Python",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
-          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
-          { id: "t4", title: "ML Fundamentals", duration: "" },
-          { id: "t5", title: "Predictive Modeling", duration: "" },
-          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
-          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        "id": "m9",
+        "title": "CV Building",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Career Planning & Resume Strategy: Strategic alignment for job readiness and career mapping" },
+          { "id": "t2", "title": "Resume & CV Architecture: Drafting high-impact documents for both Freshers and Professionals" },
+          { "id": "t3", "title": "ATS Optimization: Keyword research techniques and formatting for Applicant Tracking Systems" },
+          { "id": "t4", "title": "Multi-Platform Job Search: Mastering LinkedIn, Naukri, Indeed, and emerging portals" },
+          { "id": "t5", "title": "Advanced Customization: Role-based resume tailoring and shortlisting strategies" },
+          { "id": "t6", "title": "Interview Simulation: Using PrepAI for dynamic question generation and mock practice" },
+          { "id": "t7", "title": "Job Search Execution: End-to-end placement preparation and tracking using PrepAI" },
+          { "id": "p1", "title": "Project: Professional Portfolio Build \n Construct an ATS-optimized resume and LinkedIn profile tailored to a target job description." }
         ]
-
-      }
-      ,
+      },
       {
-        id: "m7",
-        title: "ML, DL & AI",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
-        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
-        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
-        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
-        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
-        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
-        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
-        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
-        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
-        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
-        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
-        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
-        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
-        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Predictive Modeling", duration: "" },
-          { id: "t2", title: "Clustering", duration: "" },
-          { id: "t3", title: "Decision Trees", duration: "" },
-          { id: "t4", title: "Ensemble Techniques", duration: "" },
-          { id: "t5", title: "Optimization", duration: "" },
-          { id: "t6", title: "NLP", duration: "" },
-          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
-          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        "id": "m10",
+        "title": "Analytical Problem Solving (APS)",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to APS: Understanding the role of analytical thinking in modern job functions" },
+          { "id": "t2", "title": "Problem Solving Frameworks: Applying structured logic to complex business scenarios" },
+          { "id": "t3", "title": "Domain-Specific Case Studies: Analyzing Sales, Operations, and Manufacturing use cases" },
+          { "id": "t4", "title": "Root Cause Analysis (RCA): Techniques for identifying core issues in real-world problems" },
+          { "id": "t5", "title": "Data-Driven Decision Making: Leveraging quantitative insights to drive business strategy" },
+          { "id": "t6", "title": "Structured Interview Prep: Navigating case-based questions and workplace logic scenarios" },
+          { "id": "t7", "title": "PrepAI APS Practice: Solving simulated business cases with AI-driven feedback" },
+          { "id": "p1", "title": "Project: Business Impact Case Study \n Perform a Root Cause Analysis on a manufacturing or sales bottleneck and present a data-backed solution." }
         ]
-
       }
 
-
-      // ,
-
-      // {
-      //   id: "m8",
-      //   title: "Statistics",
-      //   duration: "8 hrs",
-      //   topics: [
-      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
-      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
-      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
-      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
-      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
-      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
-      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
-      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
-      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
-      //   ]
-      // }
-
-      // ,
-      // {
-      //   "id": "m9",
-      //   "title": "Excel VBA Automation",
-      //   "duration": "26 hrs",
-      //   "topics": [
-      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
-      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
-      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
-      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
-      //   ]
-      // }
 
 
     ],
@@ -5358,261 +5186,185 @@ const courses: Course[] = [
 
 
 
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "Advanced Excel",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
-          { id: "t2", title: "Data Analysis", duration: "" },
-          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
-          { id: "t4", title: "Data Visualization", duration: "" },
-          { id: "t5", title: "Data Cleaning", duration: "" },
-          { id: "t6", title: "Dashboarding", duration: "" },
-          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
-
-        // topics: [
-        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
-        // ]
+      },
+      {
+        "id": "m2",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+        ]
       },
 
-
-      {
-        id: "m2",
-        title: "MySQL",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Database Management", duration: "" },
-          { id: "t2", title: "SQL Queries", duration: "" },
-          { id: "t3", title: "Data Retrieval", duration: "" },
-          { id: "t4", title: "Database Design", duration: "" },
-          { id: "t5", title: "Performance Optimization", duration: "" },
-          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
-        ]
-
-        // topics: [
-        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        // ]
-      },
 
       {
         id: "m3",
-        title: " Tableau",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
-        // ]
+        title: "Python programming for Beginners",
+        duration: "2O hrs",
         topics: [
-          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
-          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
-          { id: "t3", title: "Data Connection and Blending", duration: "" },
-          { id: "t4", title: "Calculations and Expressions", duration: "" },
-          { id: "t5", title: "Chart Types", duration: "" },
-          { id: "t6", title: "Parameters", duration: "" },
-          { id: "t7", title: "Dashboard Actions", duration: "" },
-          { id: "t8", title: "Story and Tableau Prep", duration: "" },
-          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+          { id: "t1", title: "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", duration: "1.5 hrs" },
+          { id: "t2", title: "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", duration: "2.5 hrs" },
+          { id: "t3", title: "Collections & Iterations: Lists, Tuples, Sets, Dictionaries, and Comprehensions", duration: "3 hrs" },
+          { id: "t4", title: "Control Flow: Conditionals, Loops, and Exception Handling", duration: "2.5 hrs" },
+          { id: "t5", title: "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", duration: "3 hrs" },
+          { id: "t6", title: "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", duration: "4 hrs" },
+          { id: "p1", title: "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", duration: "2 hrs" },
+          { id: "p2", title: "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", duration: "2 hrs" },
         ]
-
-      }
-      ,
-
+      },
       {
-        id: "m4",
-        title: "Business Statistics",
-        duration: "8 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
-        // ]
-        topics: [
-          { id: "t1", title: "Probability Distributions", duration: "" },
-          { id: "t2", title: "EDA", duration: "" },
-          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
-          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
-          { id: "t5", title: "Data Preprocessing", duration: "" },
-          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        "id": "m4",
+        "title": "Tableau",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Visualization Fundamentals – Design principles, chart selection, and best practices" },
+          { "id": "t2", "title": "Build Interactive Dashboards – Filters, actions, parameters, and dynamic KPI tracking" },
+          { "id": "t3", "title": "Work with Real Data – Data connection, joins, blending, and data preparation techniques" },
+          { "id": "t4", "title": "Advanced Tableau Techniques – Calculated fields, LOD expressions, table calculations" },
+          { "id": "t5", "title": "Create Impactful Visuals – Heatmaps, treemaps, waterfall charts, maps, and advanced charts" },
+          { "id": "t6", "title": "Storytelling with Data – Dashboard design, annotations, and business storytelling" },
+          { "id": "t7", "title": "AI in Tableau – Use Explain Data, Ask Data, and Tableau GPT for faster insights" },
+          { "id": "p1", "title": "Project: Interactive Sales Dashboard \n Designed an Interactive Sales Dashboard with filters and storyboards for management." },
+          { "id": "p2", "title": "Project: Customer Segmentation Report \n Created a Customer Segmentation Report using clustering insights and visuals." }
         ]
-
-      }
-      ,
+      },
 
       {
         id: "m5",
-        title: "R",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
-        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
-        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
-        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
-        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
-        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
-        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
-        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
-        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
-        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
-        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
-        // ]
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
-          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
-          { id: "t4", title: "Statistical Analysis", duration: "" },
-          { id: "t5", title: "Predictive Modeling in R", duration: "" },
-          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
-          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
+      },
+      {
+        "id": "m6",
+        "title": "R Language",
+        "duration": "40 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Handling in R – Data cleaning, transformation, and working with structured datasets" },
+          { "id": "t2", "title": "Exploratory Data Analysis & Visualization – Statistical summaries, correlations, and visualizations" },
+          { "id": "t3", "title": "Predictive Modeling – Linear & Logistic Regression, model evaluation, and validation techniques" },
+          { "id": "t4", "title": "Time Series Analysis – ARIMA models, trend analysis, and forecasting" },
+          { "id": "t5", "title": "Feature Engineering – PCA and dimensionality reduction for improving model performance" },
+          { "id": "t6", "title": "Statistical Thinking for Business Problems – Applying data-driven methods to real-world scenarios" },
+          { "id": "t7", "title": "AI in R – Use generative AI tools for code automation, visualization, and model interpretation" },
+          { "id": "p1", "title": "Project: Sales Forecasting \n Conducted Sales Forecasting using Time Series Analysis and ARIMA models." },
+          { "id": "p2", "title": "Project: Employee Attrition Predictor \n Built an Employee Attrition Predictor using Logistic Regression and tidyverse tools." }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
 
-      }
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
 
-      ,
+
+        ]
+      },
+      {
+        "id": "m8",
+        "title": "Machine Learning",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Machine Learning Foundations: Supervised vs unsupervised learning, model evaluation, and bias-variance tradeoff" },
+          { "id": "t2", "title": "Predictive Modeling & Algorithms: Regression, classification, decision trees, SVM, KNN, and Naïve Bayes" },
+          { "id": "t3", "title": "Clustering & Dimensionality Reduction: K-Means, Hierarchical, DBSCAN, PCA" },
+          { "id": "t4", "title": "Ensemble Techniques: Random Forest, XGBoost and model improvement strategies" },
+          { "id": "t5", "title": "Model Optimization: Hyperparameter tuning using GridSearchCV & RandomizedSearchCV" },
+          { "id": "t6", "title": "Natural Language Processing (NLP): Text classification, sentiment analysis, topic modeling, and BERT fundamentals" },
+          { "id": "t7", "title": "Deep Learning: Neural networks, CNNs, RNNs, LSTMs and TensorFlow" },
+          { "id": "t8", "title": "AI Projects & Deployment: Build and deploy Image, Text, and Time-Series models using Flask/Streamlit" },
+          { "id": "t9", "title": "AI-Powered Workflows: Use AI tools to accelerate model building, analysis, and documentation" },
+          { "id": "p1", "title": "Project: Image Classification Model \n Build a CNN using TensorFlow to identify objects or handwritten digits." },
+          { "id": "p2", "title": "Project: Stock Price Prediction \n Use LSTM networks to forecast time-series data and visualize trend accuracy." }
+        ]
+      },
+
 
       {
-        id: "m6",
-        title: "Python",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
-          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
-          { id: "t4", title: "ML Fundamentals", duration: "" },
-          { id: "t5", title: "Predictive Modeling", duration: "" },
-          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
-          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        "id": "m9",
+        "title": "CV Building",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Career Planning & Resume Strategy: Strategic alignment for job readiness and career mapping" },
+          { "id": "t2", "title": "Resume & CV Architecture: Drafting high-impact documents for both Freshers and Professionals" },
+          { "id": "t3", "title": "ATS Optimization: Keyword research techniques and formatting for Applicant Tracking Systems" },
+          { "id": "t4", "title": "Multi-Platform Job Search: Mastering LinkedIn, Naukri, Indeed, and emerging portals" },
+          { "id": "t5", "title": "Advanced Customization: Role-based resume tailoring and shortlisting strategies" },
+          { "id": "t6", "title": "Interview Simulation: Using PrepAI for dynamic question generation and mock practice" },
+          { "id": "t7", "title": "Job Search Execution: End-to-end placement preparation and tracking using PrepAI" },
+          { "id": "p1", "title": "Project: Professional Portfolio Build \n Construct an ATS-optimized resume and LinkedIn profile tailored to a target job description." }
         ]
-
-      }
-      ,
+      },
       {
-        id: "m7",
-        title: "ML, DL & AI",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
-        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
-        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
-        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
-        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
-        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
-        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
-        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
-        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
-        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
-        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
-        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
-        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
-        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Predictive Modeling", duration: "" },
-          { id: "t2", title: "Clustering", duration: "" },
-          { id: "t3", title: "Decision Trees", duration: "" },
-          { id: "t4", title: "Ensemble Techniques", duration: "" },
-          { id: "t5", title: "Optimization", duration: "" },
-          { id: "t6", title: "NLP", duration: "" },
-          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
-          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        "id": "m10",
+        "title": "Analytical Problem Solving (APS)",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to APS: Understanding the role of analytical thinking in modern job functions" },
+          { "id": "t2", "title": "Problem Solving Frameworks: Applying structured logic to complex business scenarios" },
+          { "id": "t3", "title": "Domain-Specific Case Studies: Analyzing Sales, Operations, and Manufacturing use cases" },
+          { "id": "t4", "title": "Root Cause Analysis (RCA): Techniques for identifying core issues in real-world problems" },
+          { "id": "t5", "title": "Data-Driven Decision Making: Leveraging quantitative insights to drive business strategy" },
+          { "id": "t6", "title": "Structured Interview Prep: Navigating case-based questions and workplace logic scenarios" },
+          { "id": "t7", "title": "PrepAI APS Practice: Solving simulated business cases with AI-driven feedback" },
+          { "id": "p1", "title": "Project: Business Impact Case Study \n Perform a Root Cause Analysis on a manufacturing or sales bottleneck and present a data-backed solution." }
         ]
-
       }
 
-
-      // ,
-
-      // {
-      //   id: "m8",
-      //   title: "Statistics",
-      //   duration: "8 hrs",
-      //   topics: [
-      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
-      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
-      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
-      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
-      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
-      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
-      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
-      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
-      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
-      //   ]
-      // }
-
-      // ,
-      // {
-      //   "id": "m9",
-      //   "title": "Excel VBA Automation",
-      //   "duration": "26 hrs",
-      //   "topics": [
-      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
-      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
-      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
-      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
-      //   ]
-      // }
 
 
     ],
@@ -5739,261 +5491,185 @@ const courses: Course[] = [
 
 
 
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "Advanced Excel",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
-          { id: "t2", title: "Data Analysis", duration: "" },
-          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
-          { id: "t4", title: "Data Visualization", duration: "" },
-          { id: "t5", title: "Data Cleaning", duration: "" },
-          { id: "t6", title: "Dashboarding", duration: "" },
-          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
-
-        // topics: [
-        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
-        // ]
+      },
+      {
+        "id": "m2",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+        ]
       },
 
-
-      {
-        id: "m2",
-        title: "MySQL",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Database Management", duration: "" },
-          { id: "t2", title: "SQL Queries", duration: "" },
-          { id: "t3", title: "Data Retrieval", duration: "" },
-          { id: "t4", title: "Database Design", duration: "" },
-          { id: "t5", title: "Performance Optimization", duration: "" },
-          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
-        ]
-
-        // topics: [
-        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        // ]
-      },
 
       {
         id: "m3",
-        title: " Tableau",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
-        // ]
+        title: "Python programming for Beginners",
+        duration: "2O hrs",
         topics: [
-          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
-          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
-          { id: "t3", title: "Data Connection and Blending", duration: "" },
-          { id: "t4", title: "Calculations and Expressions", duration: "" },
-          { id: "t5", title: "Chart Types", duration: "" },
-          { id: "t6", title: "Parameters", duration: "" },
-          { id: "t7", title: "Dashboard Actions", duration: "" },
-          { id: "t8", title: "Story and Tableau Prep", duration: "" },
-          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+          { id: "t1", title: "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", duration: "1.5 hrs" },
+          { id: "t2", title: "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", duration: "2.5 hrs" },
+          { id: "t3", title: "Collections & Iterations: Lists, Tuples, Sets, Dictionaries, and Comprehensions", duration: "3 hrs" },
+          { id: "t4", title: "Control Flow: Conditionals, Loops, and Exception Handling", duration: "2.5 hrs" },
+          { id: "t5", title: "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", duration: "3 hrs" },
+          { id: "t6", title: "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", duration: "4 hrs" },
+          { id: "p1", title: "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", duration: "2 hrs" },
+          { id: "p2", title: "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", duration: "2 hrs" },
         ]
-
-      }
-      ,
-
+      },
       {
-        id: "m4",
-        title: "Business Statistics",
-        duration: "8 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
-        // ]
-        topics: [
-          { id: "t1", title: "Probability Distributions", duration: "" },
-          { id: "t2", title: "EDA", duration: "" },
-          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
-          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
-          { id: "t5", title: "Data Preprocessing", duration: "" },
-          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        "id": "m4",
+        "title": "Tableau",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Visualization Fundamentals – Design principles, chart selection, and best practices" },
+          { "id": "t2", "title": "Build Interactive Dashboards – Filters, actions, parameters, and dynamic KPI tracking" },
+          { "id": "t3", "title": "Work with Real Data – Data connection, joins, blending, and data preparation techniques" },
+          { "id": "t4", "title": "Advanced Tableau Techniques – Calculated fields, LOD expressions, table calculations" },
+          { "id": "t5", "title": "Create Impactful Visuals – Heatmaps, treemaps, waterfall charts, maps, and advanced charts" },
+          { "id": "t6", "title": "Storytelling with Data – Dashboard design, annotations, and business storytelling" },
+          { "id": "t7", "title": "AI in Tableau – Use Explain Data, Ask Data, and Tableau GPT for faster insights" },
+          { "id": "p1", "title": "Project: Interactive Sales Dashboard \n Designed an Interactive Sales Dashboard with filters and storyboards for management." },
+          { "id": "p2", "title": "Project: Customer Segmentation Report \n Created a Customer Segmentation Report using clustering insights and visuals." }
         ]
-
-      }
-      ,
+      },
 
       {
         id: "m5",
-        title: "R",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
-        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
-        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
-        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
-        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
-        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
-        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
-        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
-        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
-        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
-        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
-        // ]
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
-          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
-          { id: "t4", title: "Statistical Analysis", duration: "" },
-          { id: "t5", title: "Predictive Modeling in R", duration: "" },
-          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
-          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
+      },
+      {
+        "id": "m6",
+        "title": "R Language",
+        "duration": "40 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Handling in R – Data cleaning, transformation, and working with structured datasets" },
+          { "id": "t2", "title": "Exploratory Data Analysis & Visualization – Statistical summaries, correlations, and visualizations" },
+          { "id": "t3", "title": "Predictive Modeling – Linear & Logistic Regression, model evaluation, and validation techniques" },
+          { "id": "t4", "title": "Time Series Analysis – ARIMA models, trend analysis, and forecasting" },
+          { "id": "t5", "title": "Feature Engineering – PCA and dimensionality reduction for improving model performance" },
+          { "id": "t6", "title": "Statistical Thinking for Business Problems – Applying data-driven methods to real-world scenarios" },
+          { "id": "t7", "title": "AI in R – Use generative AI tools for code automation, visualization, and model interpretation" },
+          { "id": "p1", "title": "Project: Sales Forecasting \n Conducted Sales Forecasting using Time Series Analysis and ARIMA models." },
+          { "id": "p2", "title": "Project: Employee Attrition Predictor \n Built an Employee Attrition Predictor using Logistic Regression and tidyverse tools." }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
 
-      }
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
 
-      ,
+
+        ]
+      },
+      {
+        "id": "m8",
+        "title": "Machine Learning",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Machine Learning Foundations: Supervised vs unsupervised learning, model evaluation, and bias-variance tradeoff" },
+          { "id": "t2", "title": "Predictive Modeling & Algorithms: Regression, classification, decision trees, SVM, KNN, and Naïve Bayes" },
+          { "id": "t3", "title": "Clustering & Dimensionality Reduction: K-Means, Hierarchical, DBSCAN, PCA" },
+          { "id": "t4", "title": "Ensemble Techniques: Random Forest, XGBoost and model improvement strategies" },
+          { "id": "t5", "title": "Model Optimization: Hyperparameter tuning using GridSearchCV & RandomizedSearchCV" },
+          { "id": "t6", "title": "Natural Language Processing (NLP): Text classification, sentiment analysis, topic modeling, and BERT fundamentals" },
+          { "id": "t7", "title": "Deep Learning: Neural networks, CNNs, RNNs, LSTMs and TensorFlow" },
+          { "id": "t8", "title": "AI Projects & Deployment: Build and deploy Image, Text, and Time-Series models using Flask/Streamlit" },
+          { "id": "t9", "title": "AI-Powered Workflows: Use AI tools to accelerate model building, analysis, and documentation" },
+          { "id": "p1", "title": "Project: Image Classification Model \n Build a CNN using TensorFlow to identify objects or handwritten digits." },
+          { "id": "p2", "title": "Project: Stock Price Prediction \n Use LSTM networks to forecast time-series data and visualize trend accuracy." }
+        ]
+      },
+
 
       {
-        id: "m6",
-        title: "Python",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
-          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
-          { id: "t4", title: "ML Fundamentals", duration: "" },
-          { id: "t5", title: "Predictive Modeling", duration: "" },
-          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
-          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        "id": "m9",
+        "title": "CV Building",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Career Planning & Resume Strategy: Strategic alignment for job readiness and career mapping" },
+          { "id": "t2", "title": "Resume & CV Architecture: Drafting high-impact documents for both Freshers and Professionals" },
+          { "id": "t3", "title": "ATS Optimization: Keyword research techniques and formatting for Applicant Tracking Systems" },
+          { "id": "t4", "title": "Multi-Platform Job Search: Mastering LinkedIn, Naukri, Indeed, and emerging portals" },
+          { "id": "t5", "title": "Advanced Customization: Role-based resume tailoring and shortlisting strategies" },
+          { "id": "t6", "title": "Interview Simulation: Using PrepAI for dynamic question generation and mock practice" },
+          { "id": "t7", "title": "Job Search Execution: End-to-end placement preparation and tracking using PrepAI" },
+          { "id": "p1", "title": "Project: Professional Portfolio Build \n Construct an ATS-optimized resume and LinkedIn profile tailored to a target job description." }
         ]
-
-      }
-      ,
+      },
       {
-        id: "m7",
-        title: "ML, DL & AI",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
-        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
-        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
-        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
-        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
-        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
-        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
-        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
-        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
-        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
-        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
-        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
-        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
-        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Predictive Modeling", duration: "" },
-          { id: "t2", title: "Clustering", duration: "" },
-          { id: "t3", title: "Decision Trees", duration: "" },
-          { id: "t4", title: "Ensemble Techniques", duration: "" },
-          { id: "t5", title: "Optimization", duration: "" },
-          { id: "t6", title: "NLP", duration: "" },
-          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
-          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        "id": "m10",
+        "title": "Analytical Problem Solving (APS)",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to APS: Understanding the role of analytical thinking in modern job functions" },
+          { "id": "t2", "title": "Problem Solving Frameworks: Applying structured logic to complex business scenarios" },
+          { "id": "t3", "title": "Domain-Specific Case Studies: Analyzing Sales, Operations, and Manufacturing use cases" },
+          { "id": "t4", "title": "Root Cause Analysis (RCA): Techniques for identifying core issues in real-world problems" },
+          { "id": "t5", "title": "Data-Driven Decision Making: Leveraging quantitative insights to drive business strategy" },
+          { "id": "t6", "title": "Structured Interview Prep: Navigating case-based questions and workplace logic scenarios" },
+          { "id": "t7", "title": "PrepAI APS Practice: Solving simulated business cases with AI-driven feedback" },
+          { "id": "p1", "title": "Project: Business Impact Case Study \n Perform a Root Cause Analysis on a manufacturing or sales bottleneck and present a data-backed solution." }
         ]
-
       }
 
-
-      // ,
-
-      // {
-      //   id: "m8",
-      //   title: "Statistics",
-      //   duration: "8 hrs",
-      //   topics: [
-      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
-      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
-      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
-      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
-      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
-      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
-      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
-      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
-      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
-      //   ]
-      // }
-
-      // ,
-      // {
-      //   "id": "m9",
-      //   "title": "Excel VBA Automation",
-      //   "duration": "26 hrs",
-      //   "topics": [
-      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
-      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
-      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
-      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
-      //   ]
-      // }
 
 
     ],
@@ -6120,261 +5796,185 @@ const courses: Course[] = [
 
 
 
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "Advanced Excel",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
-          { id: "t2", title: "Data Analysis", duration: "" },
-          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
-          { id: "t4", title: "Data Visualization", duration: "" },
-          { id: "t5", title: "Data Cleaning", duration: "" },
-          { id: "t6", title: "Dashboarding", duration: "" },
-          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
-
-        // topics: [
-        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
-        // ]
+      },
+      {
+        "id": "m2",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+        ]
       },
 
-
-      {
-        id: "m2",
-        title: "MySQL",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Database Management", duration: "" },
-          { id: "t2", title: "SQL Queries", duration: "" },
-          { id: "t3", title: "Data Retrieval", duration: "" },
-          { id: "t4", title: "Database Design", duration: "" },
-          { id: "t5", title: "Performance Optimization", duration: "" },
-          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
-        ]
-
-        // topics: [
-        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        // ]
-      },
 
       {
         id: "m3",
-        title: " Tableau",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
-        // ]
+        title: "Python programming for Beginners",
+        duration: "2O hrs",
         topics: [
-          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
-          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
-          { id: "t3", title: "Data Connection and Blending", duration: "" },
-          { id: "t4", title: "Calculations and Expressions", duration: "" },
-          { id: "t5", title: "Chart Types", duration: "" },
-          { id: "t6", title: "Parameters", duration: "" },
-          { id: "t7", title: "Dashboard Actions", duration: "" },
-          { id: "t8", title: "Story and Tableau Prep", duration: "" },
-          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+          { id: "t1", title: "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", duration: "1.5 hrs" },
+          { id: "t2", title: "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", duration: "2.5 hrs" },
+          { id: "t3", title: "Collections & Iterations: Lists, Tuples, Sets, Dictionaries, and Comprehensions", duration: "3 hrs" },
+          { id: "t4", title: "Control Flow: Conditionals, Loops, and Exception Handling", duration: "2.5 hrs" },
+          { id: "t5", title: "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", duration: "3 hrs" },
+          { id: "t6", title: "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", duration: "4 hrs" },
+          { id: "p1", title: "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", duration: "2 hrs" },
+          { id: "p2", title: "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", duration: "2 hrs" },
         ]
-
-      }
-      ,
-
+      },
       {
-        id: "m4",
-        title: "Business Statistics",
-        duration: "8 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
-        // ]
-        topics: [
-          { id: "t1", title: "Probability Distributions", duration: "" },
-          { id: "t2", title: "EDA", duration: "" },
-          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
-          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
-          { id: "t5", title: "Data Preprocessing", duration: "" },
-          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        "id": "m4",
+        "title": "Tableau",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Visualization Fundamentals – Design principles, chart selection, and best practices" },
+          { "id": "t2", "title": "Build Interactive Dashboards – Filters, actions, parameters, and dynamic KPI tracking" },
+          { "id": "t3", "title": "Work with Real Data – Data connection, joins, blending, and data preparation techniques" },
+          { "id": "t4", "title": "Advanced Tableau Techniques – Calculated fields, LOD expressions, table calculations" },
+          { "id": "t5", "title": "Create Impactful Visuals – Heatmaps, treemaps, waterfall charts, maps, and advanced charts" },
+          { "id": "t6", "title": "Storytelling with Data – Dashboard design, annotations, and business storytelling" },
+          { "id": "t7", "title": "AI in Tableau – Use Explain Data, Ask Data, and Tableau GPT for faster insights" },
+          { "id": "p1", "title": "Project: Interactive Sales Dashboard \n Designed an Interactive Sales Dashboard with filters and storyboards for management." },
+          { "id": "p2", "title": "Project: Customer Segmentation Report \n Created a Customer Segmentation Report using clustering insights and visuals." }
         ]
-
-      }
-      ,
+      },
 
       {
         id: "m5",
-        title: "R",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
-        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
-        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
-        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
-        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
-        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
-        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
-        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
-        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
-        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
-        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
-        // ]
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
-          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
-          { id: "t4", title: "Statistical Analysis", duration: "" },
-          { id: "t5", title: "Predictive Modeling in R", duration: "" },
-          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
-          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
+      },
+      {
+        "id": "m6",
+        "title": "R Language",
+        "duration": "40 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Handling in R – Data cleaning, transformation, and working with structured datasets" },
+          { "id": "t2", "title": "Exploratory Data Analysis & Visualization – Statistical summaries, correlations, and visualizations" },
+          { "id": "t3", "title": "Predictive Modeling – Linear & Logistic Regression, model evaluation, and validation techniques" },
+          { "id": "t4", "title": "Time Series Analysis – ARIMA models, trend analysis, and forecasting" },
+          { "id": "t5", "title": "Feature Engineering – PCA and dimensionality reduction for improving model performance" },
+          { "id": "t6", "title": "Statistical Thinking for Business Problems – Applying data-driven methods to real-world scenarios" },
+          { "id": "t7", "title": "AI in R – Use generative AI tools for code automation, visualization, and model interpretation" },
+          { "id": "p1", "title": "Project: Sales Forecasting \n Conducted Sales Forecasting using Time Series Analysis and ARIMA models." },
+          { "id": "p2", "title": "Project: Employee Attrition Predictor \n Built an Employee Attrition Predictor using Logistic Regression and tidyverse tools." }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
 
-      }
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
 
-      ,
+
+        ]
+      },
+      {
+        "id": "m8",
+        "title": "Machine Learning",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Machine Learning Foundations: Supervised vs unsupervised learning, model evaluation, and bias-variance tradeoff" },
+          { "id": "t2", "title": "Predictive Modeling & Algorithms: Regression, classification, decision trees, SVM, KNN, and Naïve Bayes" },
+          { "id": "t3", "title": "Clustering & Dimensionality Reduction: K-Means, Hierarchical, DBSCAN, PCA" },
+          { "id": "t4", "title": "Ensemble Techniques: Random Forest, XGBoost and model improvement strategies" },
+          { "id": "t5", "title": "Model Optimization: Hyperparameter tuning using GridSearchCV & RandomizedSearchCV" },
+          { "id": "t6", "title": "Natural Language Processing (NLP): Text classification, sentiment analysis, topic modeling, and BERT fundamentals" },
+          { "id": "t7", "title": "Deep Learning: Neural networks, CNNs, RNNs, LSTMs and TensorFlow" },
+          { "id": "t8", "title": "AI Projects & Deployment: Build and deploy Image, Text, and Time-Series models using Flask/Streamlit" },
+          { "id": "t9", "title": "AI-Powered Workflows: Use AI tools to accelerate model building, analysis, and documentation" },
+          { "id": "p1", "title": "Project: Image Classification Model \n Build a CNN using TensorFlow to identify objects or handwritten digits." },
+          { "id": "p2", "title": "Project: Stock Price Prediction \n Use LSTM networks to forecast time-series data and visualize trend accuracy." }
+        ]
+      },
+
 
       {
-        id: "m6",
-        title: "Python",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
-          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
-          { id: "t4", title: "ML Fundamentals", duration: "" },
-          { id: "t5", title: "Predictive Modeling", duration: "" },
-          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
-          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        "id": "m9",
+        "title": "CV Building",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Career Planning & Resume Strategy: Strategic alignment for job readiness and career mapping" },
+          { "id": "t2", "title": "Resume & CV Architecture: Drafting high-impact documents for both Freshers and Professionals" },
+          { "id": "t3", "title": "ATS Optimization: Keyword research techniques and formatting for Applicant Tracking Systems" },
+          { "id": "t4", "title": "Multi-Platform Job Search: Mastering LinkedIn, Naukri, Indeed, and emerging portals" },
+          { "id": "t5", "title": "Advanced Customization: Role-based resume tailoring and shortlisting strategies" },
+          { "id": "t6", "title": "Interview Simulation: Using PrepAI for dynamic question generation and mock practice" },
+          { "id": "t7", "title": "Job Search Execution: End-to-end placement preparation and tracking using PrepAI" },
+          { "id": "p1", "title": "Project: Professional Portfolio Build \n Construct an ATS-optimized resume and LinkedIn profile tailored to a target job description." }
         ]
-
-      }
-      ,
+      },
       {
-        id: "m7",
-        title: "ML, DL & AI",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
-        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
-        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
-        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
-        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
-        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
-        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
-        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
-        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
-        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
-        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
-        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
-        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
-        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Predictive Modeling", duration: "" },
-          { id: "t2", title: "Clustering", duration: "" },
-          { id: "t3", title: "Decision Trees", duration: "" },
-          { id: "t4", title: "Ensemble Techniques", duration: "" },
-          { id: "t5", title: "Optimization", duration: "" },
-          { id: "t6", title: "NLP", duration: "" },
-          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
-          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        "id": "m10",
+        "title": "Analytical Problem Solving (APS)",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to APS: Understanding the role of analytical thinking in modern job functions" },
+          { "id": "t2", "title": "Problem Solving Frameworks: Applying structured logic to complex business scenarios" },
+          { "id": "t3", "title": "Domain-Specific Case Studies: Analyzing Sales, Operations, and Manufacturing use cases" },
+          { "id": "t4", "title": "Root Cause Analysis (RCA): Techniques for identifying core issues in real-world problems" },
+          { "id": "t5", "title": "Data-Driven Decision Making: Leveraging quantitative insights to drive business strategy" },
+          { "id": "t6", "title": "Structured Interview Prep: Navigating case-based questions and workplace logic scenarios" },
+          { "id": "t7", "title": "PrepAI APS Practice: Solving simulated business cases with AI-driven feedback" },
+          { "id": "p1", "title": "Project: Business Impact Case Study \n Perform a Root Cause Analysis on a manufacturing or sales bottleneck and present a data-backed solution." }
         ]
-
       }
 
-
-      // ,
-
-      // {
-      //   id: "m8",
-      //   title: "Statistics",
-      //   duration: "8 hrs",
-      //   topics: [
-      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
-      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
-      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
-      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
-      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
-      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
-      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
-      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
-      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
-      //   ]
-      // }
-
-      // ,
-      // {
-      //   "id": "m9",
-      //   "title": "Excel VBA Automation",
-      //   "duration": "26 hrs",
-      //   "topics": [
-      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
-      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
-      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
-      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
-      //   ]
-      // }
 
 
     ],
@@ -6502,265 +6102,188 @@ const courses: Course[] = [
 
 
 
-    curriculum: [
+    "curriculum": [
       {
-        id: "m1",
-        title: "Advanced Excel",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Basic to Advanced Functions", duration: "" },
-          { id: "t2", title: "Data Analysis", duration: "" },
-          { id: "t3", title: "Reporting using Pivot Tables", duration: "" },
-          { id: "t4", title: "Data Visualization", duration: "" },
-          { id: "t5", title: "Data Cleaning", duration: "" },
-          { id: "t6", title: "Dashboarding", duration: "" },
-          { id: "t7", title: "AI and ChatGPT Integration", duration: "" }
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
         ]
-
-        // topics: [
-        //   { id: "t1", title: "Data Hygiene – Clean, structure, and prepare your dataset", duration: "1.25 hrs" },
-        //   { id: "t2", title: "Formatting – Number and table formatting for clarity", duration: "1.25 hrs" },
-        //   { id: "t3", title: "Filtering & Sorting – Auto filters, advanced filters, custom sorting", duration: "1.5 hrs" },
-        //   { id: "t4", title: "Cell Referencing – Relative, absolute references & formula handling", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Basic Functions – SUM, AVERAGE, COUNT, PRODUCT, etc.", duration: "1.75 hrs" },
-        //   { id: "t6", title: "Date Functions – TODAY, DATEDIF, EOMONTH, WEEKDAY, etc.", duration: "1.5 hrs" },
-        //   { id: "t7", title: "Conditional Functions – SUMIFS, COUNTIFS, AVERAGEIFS", duration: "2 hrs" },
-        //   { id: "t8", title: "Database Functions – DSUM, DAVERAGE using criteria tables", duration: "1.25 hrs" },
-        //   { id: "t9", title: "Dynamic Arrays (Google Sheets) – FILTER, SORT, UNIQUE, TEXTJOIN", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Pivot Tables – Layout, grouping, calculated fields, summarizing", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Charts – Chart creation, types, usage, sparklines", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboards – Planning, business insights, slicers, summaries", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Logical Functions – IF, AND, OR, IFERROR, SWITCH etc", duration: "1.75 hrs" },
-        //   { id: "t14", title: "Lookup Functions – VLOOKUP, XLOOKUP, MATCH, INDIRECT etc", duration: "2.25 hrs" },
-        //   { id: "t15", title: "Text Functions – LEFT, MID, FIND, SUBSTITUTE, CONCAT etc", duration: "1.5 hrs" },
-        //   { id: "t16", title: "Conditional Formatting – Color scales, data bars, formulas", duration: "1.25 hrs" },
-        //   { id: "t17", title: "Data Validation – Lists, error alerts, dependent dropdowns", duration: "1 hr" },
-        //   { id: "t18", title: "Goal Seek & Solver – Solve optimization and reverse calculations", duration: "1.25 hrs" },
-        //   { id: "t19", title: "Gen AI - How to Use Gen AI in Microsoft Excel, Use Lab.Generative", duration: "0.75 hrs" },
-        //   { id: "t20", title: "ChatGPT - How to use Prompt engineering for Data Analysis", duration: "0.75 hrs" }
-        // ]
+      },
+      {
+        "id": "m2",
+        "title": "Advanced SQL",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
+          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
+          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
+          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
+          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
+          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
+          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
+          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+        ]
       },
 
-
-      {
-        id: "m2",
-        title: "MySQL",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Database Management", duration: "" },
-          { id: "t2", title: "SQL Queries", duration: "" },
-          { id: "t3", title: "Data Retrieval", duration: "" },
-          { id: "t4", title: "Database Design", duration: "" },
-          { id: "t5", title: "Performance Optimization", duration: "" },
-          { id: "t6", title: "AI Tools to Auto Generate and Optimize Queries", duration: "" }
-        ]
-
-        // topics: [
-        //   { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
-        //   { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
-        //   { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
-        //   { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
-        //   { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
-        //   { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
-        //   { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
-        //   { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
-        //   { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" }
-        // ]
-      },
 
       {
         id: "m3",
-        title: " Tableau",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Tableau: Approaching Business Problems, Interface Overview", duration: "2 hrs" },
-        //   { id: "t2", title: "Connecting and Shaping Data: Data Sources, Pivoting, Calculated Fields, Dimensions/Measures", duration: "3 hrs" },
-        //   { id: "t3", title: "Introduction to Basic Charts: Bars, Lines, Scatter Plots, Maps", duration: "2 hrs" },
-        //   { id: "t4", title: "Working With Marks Card: Color, Size, Label, Detail, Tooltip", duration: "1.5 hrs" },
-        //   { id: "t5", title: "Different Filters in Tableau: Quick Filters, Context Filters, Data Source Filters", duration: "2 hrs" },
-        //   { id: "t6", title: "Calculated Fields: Summarization, String Manipulation, Date, Logical Functions", duration: "2.5 hrs" },
-        //   { id: "t7", title: "Combining Tables: Joins, Unions, Blending", duration: "2 hrs" },
-        //   { id: "t8", title: "Table Calculations: Primary and Secondary Calculations", duration: "1.5 hrs" },
-        //   { id: "t9", title: "Parameters: Dimension, Measure, Sort, TopN, Date", duration: "1.5 hrs" },
-        //   { id: "t10", title: "Groups & Sets: Creating and Applying", duration: "1 hr" },
-        //   { id: "t11", title: "Analytics: Forecasting, Trend Lines, Clustering", duration: "2 hrs" },
-        //   { id: "t12", title: "Dashboard Building & Actions: Filters, Highlights, Navigation", duration: "2.5 hrs" },
-        //   { id: "t13", title: "Projects: RFM Analysis, Customer Retention Dashboard", duration: "1.5 hrs" }
-        // ]
+        title: "Python programming for Beginners",
+        duration: "2O hrs",
         topics: [
-          { id: "t1", title: "Introduction to Data Visualization", duration: "" },
-          { id: "t2", title: "Creating Interactive Dashboards", duration: "" },
-          { id: "t3", title: "Data Connection and Blending", duration: "" },
-          { id: "t4", title: "Calculations and Expressions", duration: "" },
-          { id: "t5", title: "Chart Types", duration: "" },
-          { id: "t6", title: "Parameters", duration: "" },
-          { id: "t7", title: "Dashboard Actions", duration: "" },
-          { id: "t8", title: "Story and Tableau Prep", duration: "" },
-          { id: "t9", title: "AI in Tableau: Explain Data, Ask Data, AI-driven Insights with Tableau GPT", duration: "" }
+          { id: "t1", title: "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", duration: "1.5 hrs" },
+          { id: "t2", title: "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", duration: "2.5 hrs" },
+          { id: "t3", title: "Collections & Iterations: Lists, Tuples, Sets, Dictionaries, and Comprehensions", duration: "3 hrs" },
+          { id: "t4", title: "Control Flow: Conditionals, Loops, and Exception Handling", duration: "2.5 hrs" },
+          { id: "t5", title: "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", duration: "3 hrs" },
+          { id: "t6", title: "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", duration: "4 hrs" },
+          { id: "p1", title: "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", duration: "2 hrs" },
+          { id: "p2", title: "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", duration: "2 hrs" },
         ]
-
-      }
-      ,
-
+      },
       {
-        id: "m4",
-        title: "Business Statistics",
-        duration: "8 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction: Data Visualization, Interface, Business Problem-Solving", duration: "3 hrs" },
-        //   { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, Append/Merge", duration: "4.5 hrs" },
-        //   { id: "t3", title: "Data Modeling: Normalization, Relationships, Filter Flow", duration: "4 hrs" },
-        //   { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, Time Intelligence", duration: "6 hrs" },
-        //   { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, Drillthroughs", duration: "5 hrs" },
-        //   { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, Key Influencers", duration: "2 hrs" },
-        //   { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, RLS", duration: "2.5 hrs" },
-        //   { id: "t8", title: "SQL Integration: Database Connections, Custom Queries", duration: "1 hr" }
-        // ]
-        topics: [
-          { id: "t1", title: "Probability Distributions", duration: "" },
-          { id: "t2", title: "EDA", duration: "" },
-          { id: "t3", title: "Statistical Analysis Using Python", duration: "" },
-          { id: "t4", title: "Feature Engineering Techniques", duration: "" },
-          { id: "t5", title: "Data Preprocessing", duration: "" },
-          { id: "t6", title: "Advanced Statistical Methods", duration: "" }
+        "id": "m4",
+        "title": "Tableau",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Visualization Fundamentals – Design principles, chart selection, and best practices" },
+          { "id": "t2", "title": "Build Interactive Dashboards – Filters, actions, parameters, and dynamic KPI tracking" },
+          { "id": "t3", "title": "Work with Real Data – Data connection, joins, blending, and data preparation techniques" },
+          { "id": "t4", "title": "Advanced Tableau Techniques – Calculated fields, LOD expressions, table calculations" },
+          { "id": "t5", "title": "Create Impactful Visuals – Heatmaps, treemaps, waterfall charts, maps, and advanced charts" },
+          { "id": "t6", "title": "Storytelling with Data – Dashboard design, annotations, and business storytelling" },
+          { "id": "t7", "title": "AI in Tableau – Use Explain Data, Ask Data, and Tableau GPT for faster insights" },
+          { "id": "p1", "title": "Project: Interactive Sales Dashboard \n Designed an Interactive Sales Dashboard with filters and storyboards for management." },
+          { "id": "p2", "title": "Project: Customer Segmentation Report \n Created a Customer Segmentation Report using clustering insights and visuals." }
         ]
-
-      }
-      ,
+      },
 
       {
         id: "m5",
-        title: "R",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to R: R Console, RStudio Interface", duration: "1.5 hrs" },
-        //   { id: "t2", title: "R Data Structures: Vectors and Matrices", duration: "2 hrs" },
-        //   { id: "t3", title: "Programming Basics: Conditions, Loops, Functions", duration: "2.5 hrs" },
-        //   { id: "t4", title: "DataFrames: Creation and Manipulation", duration: "2 hrs" },
-        //   { id: "t5", title: "Advanced Programming: dplyr and Essential Packages", duration: "2.5 hrs" },
-        //   { id: "t6", title: "Statistics: Probability Distributions, Hypothesis Testing", duration: "2 hrs" },
-        //   { id: "t7", title: "Data Visualization: ggplot2 Fundamentals", duration: "1.5 hrs" },
-        //   { id: "t8", title: "Linear Regression: Academic Performance Prediction Project", duration: "2 hrs" },
-        //   { id: "t9", title: "Logistic Regression: Telecom Customer Churn Project", duration: "2 hrs" },
-        //   { id: "t10", title: "Decision Trees: Loan Approval Prediction Project", duration: "2 hrs" },
-        //   { id: "t11", title: "Time Series & Clustering: Sales Forecasting and Customer Segmentation Projects", duration: "2 hrs" }
-        // ]
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
         topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation with dplyr", duration: "" },
-          { id: "t3", title: "Data Visualization with ggplot2", duration: "" },
-          { id: "t4", title: "Statistical Analysis", duration: "" },
-          { id: "t5", title: "Predictive Modeling in R", duration: "" },
-          { id: "t6", title: "Machine Learning Algorithms in R", duration: "" },
-          { id: "t7", title: "AI in R: Generative AI Assistants for R Code Automation, ggplot Customization, Model Interpretation", duration: "" }
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
         ]
+      },
+      {
+        "id": "m6",
+        "title": "R Language",
+        "duration": "40 hrs",
+        "topics": [
+          { "id": "t1", "title": "Data Handling in R – Data cleaning, transformation, and working with structured datasets" },
+          { "id": "t2", "title": "Exploratory Data Analysis & Visualization – Statistical summaries, correlations, and visualizations" },
+          { "id": "t3", "title": "Predictive Modeling – Linear & Logistic Regression, model evaluation, and validation techniques" },
+          { "id": "t4", "title": "Time Series Analysis – ARIMA models, trend analysis, and forecasting" },
+          { "id": "t5", "title": "Feature Engineering – PCA and dimensionality reduction for improving model performance" },
+          { "id": "t6", "title": "Statistical Thinking for Business Problems – Applying data-driven methods to real-world scenarios" },
+          { "id": "t7", "title": "AI in R – Use generative AI tools for code automation, visualization, and model interpretation" },
+          { "id": "p1", "title": "Project: Sales Forecasting \n Conducted Sales Forecasting using Time Series Analysis and ARIMA models." },
+          { "id": "p2", "title": "Project: Employee Attrition Predictor \n Built an Employee Attrition Predictor using Logistic Regression and tidyverse tools." }
+        ]
+      },
+      {
+        "id": "m7",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
 
-      }
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
 
-      ,
+
+        ]
+      },
+      {
+        "id": "m8",
+        "title": "Machine Learning",
+        "duration": "28 hrs",
+        "topics": [
+          { "id": "t1", "title": "Machine Learning Foundations: Supervised vs unsupervised learning, model evaluation, and bias-variance tradeoff" },
+          { "id": "t2", "title": "Predictive Modeling & Algorithms: Regression, classification, decision trees, SVM, KNN, and Naïve Bayes" },
+          { "id": "t3", "title": "Clustering & Dimensionality Reduction: K-Means, Hierarchical, DBSCAN, PCA" },
+          { "id": "t4", "title": "Ensemble Techniques: Random Forest, XGBoost and model improvement strategies" },
+          { "id": "t5", "title": "Model Optimization: Hyperparameter tuning using GridSearchCV & RandomizedSearchCV" },
+          { "id": "t6", "title": "Natural Language Processing (NLP): Text classification, sentiment analysis, topic modeling, and BERT fundamentals" },
+          { "id": "t7", "title": "Deep Learning: Neural networks, CNNs, RNNs, LSTMs and TensorFlow" },
+          { "id": "t8", "title": "AI Projects & Deployment: Build and deploy Image, Text, and Time-Series models using Flask/Streamlit" },
+          { "id": "t9", "title": "AI-Powered Workflows: Use AI tools to accelerate model building, analysis, and documentation" },
+          { "id": "p1", "title": "Project: Image Classification Model \n Build a CNN using TensorFlow to identify objects or handwritten digits." },
+          { "id": "p2", "title": "Project: Stock Price Prediction \n Use LSTM networks to forecast time-series data and visualize trend accuracy." }
+        ]
+      },
+
 
       {
-        id: "m6",
-        title: "Python",
-        duration: "40 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Python: Installation, IDEs (VS Code, Jupyter)", duration: "2 hrs" },
-        //   { id: "t2", title: "Core Data Types: Numbers, Strings, Booleans", duration: "3 hrs" },
-        //   { id: "t3", title: "Advanced Data Structures: Lists, Tuples, Sets, Dictionaries", duration: "4 hrs" },
-        //   { id: "t4", title: "Program Control: Conditionals, Loops, Comprehensions", duration: "3 hrs" },
-        //   { id: "t5", title: "Functions & NumPy: Custom Functions, Vectorized Operations", duration: "3.5 hrs" },
-        //   { id: "t6", title: "Pandas Basics: DataFrame Operations, Data Cleaning", duration: "4 hrs" },
-        //   { id: "t7", title: "Pandas Advanced: GroupBy, Merging, Pivoting", duration: "3.5 hrs" },
-        //   { id: "t8", title: "EDA: Univariate/Bivariate Analysis, Correlation", duration: "3 hrs" },
-        //   { id: "t9", title: "Linear Regression: Ad Revenue Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t10", title: "Logistic Regression: Click-Through Rate Prediction Project", duration: "2.5 hrs" },
-        //   { id: "t11", title: "Decision Trees: Used Car Pricing Project", duration: "2 hrs" },
-        //   { id: "t12", title: "Time Series: Retail Sales Forecasting Project", duration: "2 hrs" },
-        //   { id: "t13", title: "Deployment: API Integration, GitHub, Model Serving", duration: "2 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Basics to Advanced", duration: "" },
-          { id: "t2", title: "Data Manipulation (NumPy, Pandas)", duration: "" },
-          { id: "t3", title: "Visualization (Matplotlib, Seaborn)", duration: "" },
-          { id: "t4", title: "ML Fundamentals", duration: "" },
-          { id: "t5", title: "Predictive Modeling", duration: "" },
-          { id: "t6", title: "Evaluation and Feature Engineering", duration: "" },
-          { id: "t7", title: "AI in Python: Prompt-based model interpretation, automated EDA with AI tools, and model documentation using Copilot", duration: "" }
+        "id": "m9",
+        "title": "CV Building",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Career Planning & Resume Strategy: Strategic alignment for job readiness and career mapping" },
+          { "id": "t2", "title": "Resume & CV Architecture: Drafting high-impact documents for both Freshers and Professionals" },
+          { "id": "t3", "title": "ATS Optimization: Keyword research techniques and formatting for Applicant Tracking Systems" },
+          { "id": "t4", "title": "Multi-Platform Job Search: Mastering LinkedIn, Naukri, Indeed, and emerging portals" },
+          { "id": "t5", "title": "Advanced Customization: Role-based resume tailoring and shortlisting strategies" },
+          { "id": "t6", "title": "Interview Simulation: Using PrepAI for dynamic question generation and mock practice" },
+          { "id": "t7", "title": "Job Search Execution: End-to-end placement preparation and tracking using PrepAI" },
+          { "id": "p1", "title": "Project: Professional Portfolio Build \n Construct an ATS-optimized resume and LinkedIn profile tailored to a target job description." }
         ]
-
-      }
-      ,
+      },
       {
-        id: "m7",
-        title: "ML, DL & AI",
-        duration: "28 hrs",
-        // topics: [
-        //   { id: "t1", title: "Introduction to Machine Learning: Concepts, Workflow, and Applications", duration: "2 hrs" },
-        //   { id: "t2", title: "Recap: Linear/Logistic Regression, Decision Trees (Project: Car Price Prediction)", duration: "3 hrs" },
-        //   { id: "t3", title: "Ensemble Learning: Random Forest (Project: Loan Risk Prediction)", duration: "3 hrs" },
-        //   { id: "t4", title: "Boosting: Gradient Boost, AdaBoost, XGBoost (Projects: House Prices & Disease Diagnosis)", duration: "4 hrs" },
-        //   { id: "t5", title: "Support Vector Machines (Project: YouTube Video Analysis)", duration: "2 hrs" },
-        //   { id: "t6", title: "Naive Bayes (Project: Customer Churn Prediction)", duration: "2 hrs" },
-        //   { id: "t7", title: "K-Nearest Neighbors (Project: Feedback Categorization)", duration: "2 hrs" },
-        //   { id: "t8", title: "Dimensionality Reduction & Clustering: PCA, K-Means, Hierarchical, DBSCAN (Project: Retail Profiling)", duration: "3 hrs" },
-        //   { id: "t9", title: "Text Preprocessing: Regex, Tokenization, Cleaning", duration: "2 hrs" },
-        //   { id: "t10", title: "Text Mining: Word Clouds, Sentiment Analysis (Project: Indigo Tweets)", duration: "2 hrs" },
-        //   { id: "t11", title: "NLP Classification (Project: IT Ticket Classification)", duration: "2 hrs" },
-        //   { id: "t12", title: "Gen AI: Custom Text Classification with Transformers", duration: "2 hrs" },
-        //   { id: "t13", title: "Neural Networks (Projects: Customer Lifetime Value & Credit Risk)", duration: "2 hrs" },
-        //   { id: "t14", title: "Advanced Networks: RNN/LSTM (Stock Prediction), CNN (Face Classification)", duration: "3 hrs" }
-        // ]
-        topics: [
-          { id: "t1", title: "Predictive Modeling", duration: "" },
-          { id: "t2", title: "Clustering", duration: "" },
-          { id: "t3", title: "Decision Trees", duration: "" },
-          { id: "t4", title: "Ensemble Techniques", duration: "" },
-          { id: "t5", title: "Optimization", duration: "" },
-          { id: "t6", title: "NLP", duration: "" },
-          { id: "t7", title: "Deep Learning - from models to tuning and deployment", duration: "" },
-          { id: "t8", title: "AI in ML: Image, Text, and Time-Series projects using Flask/Streamlit integration", duration: "" }
+        "id": "m10",
+        "title": "Analytical Problem Solving (APS)",
+        "duration": "4 hrs",
+        "topics": [
+          { "id": "t1", "title": "Introduction to APS: Understanding the role of analytical thinking in modern job functions" },
+          { "id": "t2", "title": "Problem Solving Frameworks: Applying structured logic to complex business scenarios" },
+          { "id": "t3", "title": "Domain-Specific Case Studies: Analyzing Sales, Operations, and Manufacturing use cases" },
+          { "id": "t4", "title": "Root Cause Analysis (RCA): Techniques for identifying core issues in real-world problems" },
+          { "id": "t5", "title": "Data-Driven Decision Making: Leveraging quantitative insights to drive business strategy" },
+          { "id": "t6", "title": "Structured Interview Prep: Navigating case-based questions and workplace logic scenarios" },
+          { "id": "t7", "title": "PrepAI APS Practice: Solving simulated business cases with AI-driven feedback" },
+          { "id": "p1", "title": "Project: Business Impact Case Study \n Perform a Root Cause Analysis on a manufacturing or sales bottleneck and present a data-backed solution." }
         ]
-
       }
 
-
-      // ,
-
-      // {
-      //   id: "m8",
-      //   title: "Statistics",
-      //   duration: "8 hrs",
-      //   topics: [
-      //     { id: "t1", title: "Types of Data: Nominal, Ordinal, Interval, Ratio", duration: "0.75 hrs" },
-      //     { id: "t2", title: "Correlation: Pearson, Spearman, Visualization", duration: "1 hr" },
-      //     { id: "t3", title: "Measures of Central Tendency: Mean, Median, Mode", duration: "0.75 hrs" },
-      //     { id: "t4", title: "Measures of Dispersion: Range, Variance, Std Dev, IQR", duration: "1 hr" },
-      //     { id: "t5", title: "Probability: Basics, Rules, Bayes' Theorem", duration: "1 hr" },
-      //     { id: "t6", title: "Probability Distributions: Normal, Binomial, Poisson", duration: "1.25 hrs" },
-      //     { id: "t7", title: "Sampling and Estimation: CLT, Confidence Intervals", duration: "1 hr" },
-      //     { id: "t8", title: "Hypothesis Testing: p-values, t-tests, Chi-square", duration: "1.25 hrs" },
-      //     { id: "t9", title: "Data Modeling: Linear Regression Basics", duration: "1 hr" }
-      //   ]
-      // }
-
-      // ,
-      // {
-      //   "id": "m9",
-      //   "title": "Excel VBA Automation",
-      //   "duration": "26 hrs",
-      //   "topics": [
-      //     { "id": "t1", "title": "Making Macro Do Automated Tasks for You", "duration": "6.5 hrs" },
-      //     { "id": "t2", "title": "Programming Concepts (Variables, Loops, Conditions)", "duration": "8.25 hrs" },
-      //     { "id": "t3", "title": "Analysis Using VBA (Data Cleaning, PivotTables)", "duration": "6.75 hrs" },
-      //     { "id": "t4", "title": "Creating Dashboards (Forms, Dynamic Charts)", "duration": "4.5 hrs" }
-      //   ]
-      // }
 
 
     ],
-
     projects: [
       {
         id: "p1",
@@ -6878,7 +6401,7 @@ const courses: Course[] = [
       "Create interactive dashboards using Power BI / Tableau",
       "Prepare for Data Analyst roles in Kolkata’s job market"
     ],
-      curriculum: [
+    curriculum: [
       {
         "id": "m1",
         "title": "Advanced Excel",
@@ -7134,7 +6657,7 @@ const courses: Course[] = [
       "Clean, analyze, and visualize real data from business cases",
       "Build a professional portfolio"
     ],
-      curriculum: [
+    curriculum: [
       {
         "id": "m1",
         "title": "Advanced Excel",
@@ -7389,7 +6912,7 @@ const courses: Course[] = [
       "Perform data cleaning, preprocessing, and exploratory data analysis (EDA)",
       "Apply statistical concepts for business decision-making"
     ],
-     curriculum: [
+    curriculum: [
       {
         "id": "m1",
         "title": "Advanced Excel",
@@ -7644,7 +7167,7 @@ const courses: Course[] = [
       "Apply business intelligence techniques to convert business problems into data‑driven solutions.",
       "Work on real‑world industry datasets and projects to build a job‑ready analytics portfolio."
     ],
-     curriculum: [
+    curriculum: [
       {
         "id": "m1",
         "title": "Advanced Excel",
@@ -7900,7 +7423,7 @@ const courses: Course[] = [
       "Understand key analytics principles like data structures, sampling techniques, probability, and descriptive statistics.",
 
     ],
-     curriculum: [
+    curriculum: [
       {
         "id": "m1",
         "title": "Advanced Excel",
@@ -8148,60 +7671,123 @@ const courses: Course[] = [
     curriculum: [
       {
         id: "m1",
-        title: "GenAI App Builder - Foundation Certificate Program",
-        duration: "24 hrs",
+        title: "GenAI Foundations & Development Setup",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
-          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
-          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
-          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
-          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
-          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
-          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
-          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+          { id: "t1", title: "Introduction to Generative AI: history, applications, industry impact", duration: "2 hrs" },
+          { id: "t2", title: "LLM ecosystem overview: GPT, Claude, Copilot, open-source models", duration: "2 hrs" },
+          { id: "t3", title: "Transformer architecture: attention, encoder-decoder, positional encoding", duration: "3 hrs" },
+          { id: "t4", title: "Python essentials: data types, control flow, functions, list comprehensions", duration: "2 hrs" },
+          { id: "t5", title: "Working with APIs: requests, JSON parsing, environment variables", duration: "2 hrs" },
+          { id: "t6", title: "Git & GitHub workflow: init, commit, branching, pull requests", duration: "2 hrs" },
+          { id: "t7", title: "Virtual environments: venv, requirements.txt, pip freeze", duration: "1 hr" },
+          { id: "t8", title: "Jupyter Notebooks and Google Colab setup for AI development", duration: "2 hrs" }
         ]
       },
       {
         id: "m2",
-        title: "Advanced GenAI and Machine Learning",
-        duration: "24 hrs",
+        title: "Large Language Models & Prompt Engineering",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
-          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
-          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
-          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
-          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
-          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
-          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+          { id: "t1", title: "BERT vs GPT vs T5 vs LLaMA — when to use which", duration: "2 hrs" },
+          { id: "t2", title: "Tokenisation: BPE, WordPiece, SentencePiece with HuggingFace", duration: "2 hrs" },
+          { id: "t3", title: "Text generation parameters: temperature, top-k, top-p, repetition penalty", duration: "2 hrs" },
+          { id: "t4", title: "Prompt basics: zero-shot, few-shot, chain-of-thought", duration: "2 hrs" },
+          { id: "t5", title: "Advanced prompting: ReAct, Tree-of-Thought, structured output", duration: "3 hrs" },
+          { id: "t6", title: "System prompts, role definitions, multi-turn conversation design", duration: "2 hrs" },
+          { id: "t7", title: "OpenAI API: chat completions, function calling, streaming", duration: "2 hrs" },
+          { id: "t8", title: "Token limits, context windows, cost estimation for production", duration: "1 hr" }
         ]
       },
       {
         id: "m3",
-        title: "Advanced AI Integration and Multimodal Applications",
-        duration: "30 hrs",
+        title: "Copilot, Claude & AI Development Workflows",
+        duration: "8 hrs",
         topics: [
-          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
-          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
-          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
-          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
-          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
-          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
-          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
-          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
-          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+          { id: "t1", title: "GitHub Copilot fundamentals: AI pair programming workflows", duration: "1.5 hrs" },
+          { id: "t2", title: "Copilot in VS Code: autocomplete, refactoring, test generation", duration: "1.5 hrs" },
+          { id: "t3", title: "Claude API: chatbot construction with Anthropic's SDK", duration: "2 hrs" },
+          { id: "t4", title: "Comparison of Copilot vs Claude across coding and conversation tasks", duration: "1 hr" },
+          { id: "t5", title: "Integrating AI assistance into developer workflows effectively", duration: "1 hr" },
+          { id: "t6", title: "Responsible use: validating AI-generated code, avoiding over-reliance", duration: "1 hr" }
         ]
       },
       {
         id: "m4",
-        title: "Mastering Multimodal Fusion and GenAI Frameworks",
-        duration: "14 hrs",
+        title: "Hugging Face Ecosystem & Fine-Tuning ",
+        duration: "24 hrs",
         topics: [
-          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
-          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
-          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
-          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
-          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
-          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+          { id: "t1", title: "HuggingFace Hub, Transformers, Datasets, PEFT, Evaluate, Accelerate", duration: "3 hrs" },
+          { id: "t2", title: "Loading models: AutoModel, AutoTokenizer, pipeline()", duration: "2.5 hrs" },
+          { id: "t3", title: "Running local inference: text gen, classification, NER, summarisation", duration: "2.5 hrs" },
+          { id: "t4", title: "Full fine-tuning vs. PEFT — conceptual and practical comparison", duration: "2 hrs" },
+          { id: "t5", title: "LoRA: intuition, rank (r), alpha, target modules selection", duration: "3 hrs" },
+          { id: "t6", title: "QLoRA: 4-bit/8-bit quantisation with bitsandbytes + LoRA", duration: "3 hrs" },
+          { id: "t7", title: "Data preparation: instruction-following format, chat templates, ethical curation", duration: "3 hrs" },
+          { id: "t8", title: "Trainer API and SFTTrainer from TRL for supervised fine-tuning", duration: "3 hrs" },
+          { id: "t9", title: "Evaluation: BLEU, ROUGE, perplexity — quantitative model comparison", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "RAG Systems & Hybrid Search",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Why RAG: knowledge cutoff limitations and hallucination reduction", duration: "1 hr" },
+          { id: "t2", title: "RAG pipeline: ingestion → chunking → embedding → retrieval → generation", duration: "2 hrs" },
+          { id: "t3", title: "Embedding models: sentence-transformers, OpenAI, BGE, E5", duration: "2 hrs" },
+          { id: "t4", title: "Vector databases: FAISS (local), ChromaDB, Pinecone", duration: "2 hrs" },
+          { id: "t5", title: "Chunking strategies: fixed-size, sentence-based, semantic", duration: "1.5 hrs" },
+          { id: "t6", title: "Similarity search: cosine similarity, ANN algorithms", duration: "1.5 hrs" },
+          { id: "t7", title: "Hybrid search: dense (vector) + sparse (BM25/TF-IDF) retrieval", duration: "2 hrs" },
+          { id: "t8", title: "Re-ranking: cross-encoders, Cohere rerank API", duration: "1 hr" },
+          { id: "t9", title: "RAG evaluation: context relevance, faithfulness, answer relevancy", duration: "1 hr" },
+          { id: "t10", title: "LlamaIndex: document loaders, query engine, response synthesiser", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "LangChain, LangGraph & AI Agents",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to agents: multi-step reasoning and tool use", duration: "1.5 hrs" },
+          { id: "t2", title: "LangChain architecture: chains, prompts, memory, output parsers", duration: "2 hrs" },
+          { id: "t3", title: "LCEL: composing pipelines declaratively with | operators", duration: "2 hrs" },
+          { id: "t4", title: "Memory types: buffer, summary, and vector store memory", duration: "1.5 hrs" },
+          { id: "t5", title: "Creating custom tools and binding them to agents", duration: "2 hrs" },
+          { id: "t6", title: "Agent types: ReAct, OpenAI Functions Agent, Self-Ask", duration: "2 hrs" },
+          { id: "t7", title: "LangGraph: stateful multi-step workflows with branching and loops", duration: "2 hrs" },
+          { id: "t8", title: "Multi-agent patterns: supervisor, handoff, parallel execution", duration: "2 hrs" },
+          { id: "t9", title: "Error handling and fallback strategies in production agents", duration: "1 hr" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "AI Model Deployment & Scaling",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "FastAPI: routing, request/response models, async endpoints", duration: "2 hrs" },
+          { id: "t2", title: "Serving LLMs: APIs, microservices, inference pipelines", duration: "2 hrs" },
+          { id: "t3", title: "Docker: images, containers, Dockerfile, docker-compose", duration: "2 hrs" },
+          { id: "t4", title: "Production Dockerfiles for Python AI apps — multi-stage builds", duration: "2 hrs" },
+          { id: "t5", title: "Environment management: secrets, .env, GPU passthrough", duration: "1.5 hrs" },
+          { id: "t6", title: "Cloud deployment: HuggingFace Spaces / AWS EC2 / Render", duration: "2 hrs" },
+          { id: "t7", title: "Optimisation: quantisation, caching, lazy loading", duration: "1.5 hrs" },
+          { id: "t8", title: "Benchmarking: latency, throughput, cost-performance analysis", duration: "1.5 hrs" },
+          { id: "t9", title: "API security: rate limiting, API keys, input validation", duration: "1.5 hrs" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "Multimodal AI — Vision, Voice & Image Generation",
+        duration: "8 hrs",
+        topics: [
+          { id: "t1", title: "Vision-Language Models: GPT-4o, LLaVA, CLIP — how they work", duration: "1.5 hrs" },
+          { id: "t2", title: "Image understanding: captioning, VQA, OCR, document parsing", duration: "1.5 hrs" },
+          { id: "t3", title: "DALL-E and Stable Diffusion: prompt-to-image generation", duration: "1.5 hrs" },
+          { id: "t4", title: "OpenAI Whisper: transcription and translation pipelines", duration: "1.5 hrs" },
+          { id: "t5", title: "Text-to-Speech: ElevenLabs API, voice cloning basics", duration: "1 hr" },
+          { id: "t6", title: "Building multimodal pipelines: text + image input, structured output", duration: "1 hr" }
         ]
       }
     ]
@@ -8368,60 +7954,123 @@ const courses: Course[] = [
     curriculum: [
       {
         id: "m1",
-        title: "GenAI App Builder - Foundation Certificate Program",
-        duration: "24 hrs",
+        title: "GenAI Foundations & Development Setup",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
-          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
-          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
-          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
-          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
-          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
-          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
-          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+          { id: "t1", title: "Introduction to Generative AI: history, applications, industry impact", duration: "2 hrs" },
+          { id: "t2", title: "LLM ecosystem overview: GPT, Claude, Copilot, open-source models", duration: "2 hrs" },
+          { id: "t3", title: "Transformer architecture: attention, encoder-decoder, positional encoding", duration: "3 hrs" },
+          { id: "t4", title: "Python essentials: data types, control flow, functions, list comprehensions", duration: "2 hrs" },
+          { id: "t5", title: "Working with APIs: requests, JSON parsing, environment variables", duration: "2 hrs" },
+          { id: "t6", title: "Git & GitHub workflow: init, commit, branching, pull requests", duration: "2 hrs" },
+          { id: "t7", title: "Virtual environments: venv, requirements.txt, pip freeze", duration: "1 hr" },
+          { id: "t8", title: "Jupyter Notebooks and Google Colab setup for AI development", duration: "2 hrs" }
         ]
       },
       {
         id: "m2",
-        title: "Advanced GenAI and Machine Learning",
-        duration: "24 hrs",
+        title: "Large Language Models & Prompt Engineering",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
-          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
-          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
-          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
-          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
-          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
-          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+          { id: "t1", title: "BERT vs GPT vs T5 vs LLaMA — when to use which", duration: "2 hrs" },
+          { id: "t2", title: "Tokenisation: BPE, WordPiece, SentencePiece with HuggingFace", duration: "2 hrs" },
+          { id: "t3", title: "Text generation parameters: temperature, top-k, top-p, repetition penalty", duration: "2 hrs" },
+          { id: "t4", title: "Prompt basics: zero-shot, few-shot, chain-of-thought", duration: "2 hrs" },
+          { id: "t5", title: "Advanced prompting: ReAct, Tree-of-Thought, structured output", duration: "3 hrs" },
+          { id: "t6", title: "System prompts, role definitions, multi-turn conversation design", duration: "2 hrs" },
+          { id: "t7", title: "OpenAI API: chat completions, function calling, streaming", duration: "2 hrs" },
+          { id: "t8", title: "Token limits, context windows, cost estimation for production", duration: "1 hr" }
         ]
       },
       {
         id: "m3",
-        title: "Advanced AI Integration and Multimodal Applications",
-        duration: "30 hrs",
+        title: "Copilot, Claude & AI Development Workflows",
+        duration: "8 hrs",
         topics: [
-          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
-          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
-          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
-          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
-          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
-          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
-          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
-          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
-          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+          { id: "t1", title: "GitHub Copilot fundamentals: AI pair programming workflows", duration: "1.5 hrs" },
+          { id: "t2", title: "Copilot in VS Code: autocomplete, refactoring, test generation", duration: "1.5 hrs" },
+          { id: "t3", title: "Claude API: chatbot construction with Anthropic's SDK", duration: "2 hrs" },
+          { id: "t4", title: "Comparison of Copilot vs Claude across coding and conversation tasks", duration: "1 hr" },
+          { id: "t5", title: "Integrating AI assistance into developer workflows effectively", duration: "1 hr" },
+          { id: "t6", title: "Responsible use: validating AI-generated code, avoiding over-reliance", duration: "1 hr" }
         ]
       },
       {
         id: "m4",
-        title: "Mastering Multimodal Fusion and GenAI Frameworks",
-        duration: "14 hrs",
+        title: "Hugging Face Ecosystem & Fine-Tuning ",
+        duration: "24 hrs",
         topics: [
-          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
-          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
-          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
-          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
-          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
-          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+          { id: "t1", title: "HuggingFace Hub, Transformers, Datasets, PEFT, Evaluate, Accelerate", duration: "3 hrs" },
+          { id: "t2", title: "Loading models: AutoModel, AutoTokenizer, pipeline()", duration: "2.5 hrs" },
+          { id: "t3", title: "Running local inference: text gen, classification, NER, summarisation", duration: "2.5 hrs" },
+          { id: "t4", title: "Full fine-tuning vs. PEFT — conceptual and practical comparison", duration: "2 hrs" },
+          { id: "t5", title: "LoRA: intuition, rank (r), alpha, target modules selection", duration: "3 hrs" },
+          { id: "t6", title: "QLoRA: 4-bit/8-bit quantisation with bitsandbytes + LoRA", duration: "3 hrs" },
+          { id: "t7", title: "Data preparation: instruction-following format, chat templates, ethical curation", duration: "3 hrs" },
+          { id: "t8", title: "Trainer API and SFTTrainer from TRL for supervised fine-tuning", duration: "3 hrs" },
+          { id: "t9", title: "Evaluation: BLEU, ROUGE, perplexity — quantitative model comparison", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "RAG Systems & Hybrid Search",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Why RAG: knowledge cutoff limitations and hallucination reduction", duration: "1 hr" },
+          { id: "t2", title: "RAG pipeline: ingestion → chunking → embedding → retrieval → generation", duration: "2 hrs" },
+          { id: "t3", title: "Embedding models: sentence-transformers, OpenAI, BGE, E5", duration: "2 hrs" },
+          { id: "t4", title: "Vector databases: FAISS (local), ChromaDB, Pinecone", duration: "2 hrs" },
+          { id: "t5", title: "Chunking strategies: fixed-size, sentence-based, semantic", duration: "1.5 hrs" },
+          { id: "t6", title: "Similarity search: cosine similarity, ANN algorithms", duration: "1.5 hrs" },
+          { id: "t7", title: "Hybrid search: dense (vector) + sparse (BM25/TF-IDF) retrieval", duration: "2 hrs" },
+          { id: "t8", title: "Re-ranking: cross-encoders, Cohere rerank API", duration: "1 hr" },
+          { id: "t9", title: "RAG evaluation: context relevance, faithfulness, answer relevancy", duration: "1 hr" },
+          { id: "t10", title: "LlamaIndex: document loaders, query engine, response synthesiser", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "LangChain, LangGraph & AI Agents",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to agents: multi-step reasoning and tool use", duration: "1.5 hrs" },
+          { id: "t2", title: "LangChain architecture: chains, prompts, memory, output parsers", duration: "2 hrs" },
+          { id: "t3", title: "LCEL: composing pipelines declaratively with | operators", duration: "2 hrs" },
+          { id: "t4", title: "Memory types: buffer, summary, and vector store memory", duration: "1.5 hrs" },
+          { id: "t5", title: "Creating custom tools and binding them to agents", duration: "2 hrs" },
+          { id: "t6", title: "Agent types: ReAct, OpenAI Functions Agent, Self-Ask", duration: "2 hrs" },
+          { id: "t7", title: "LangGraph: stateful multi-step workflows with branching and loops", duration: "2 hrs" },
+          { id: "t8", title: "Multi-agent patterns: supervisor, handoff, parallel execution", duration: "2 hrs" },
+          { id: "t9", title: "Error handling and fallback strategies in production agents", duration: "1 hr" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "AI Model Deployment & Scaling",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "FastAPI: routing, request/response models, async endpoints", duration: "2 hrs" },
+          { id: "t2", title: "Serving LLMs: APIs, microservices, inference pipelines", duration: "2 hrs" },
+          { id: "t3", title: "Docker: images, containers, Dockerfile, docker-compose", duration: "2 hrs" },
+          { id: "t4", title: "Production Dockerfiles for Python AI apps — multi-stage builds", duration: "2 hrs" },
+          { id: "t5", title: "Environment management: secrets, .env, GPU passthrough", duration: "1.5 hrs" },
+          { id: "t6", title: "Cloud deployment: HuggingFace Spaces / AWS EC2 / Render", duration: "2 hrs" },
+          { id: "t7", title: "Optimisation: quantisation, caching, lazy loading", duration: "1.5 hrs" },
+          { id: "t8", title: "Benchmarking: latency, throughput, cost-performance analysis", duration: "1.5 hrs" },
+          { id: "t9", title: "API security: rate limiting, API keys, input validation", duration: "1.5 hrs" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "Multimodal AI — Vision, Voice & Image Generation",
+        duration: "8 hrs",
+        topics: [
+          { id: "t1", title: "Vision-Language Models: GPT-4o, LLaVA, CLIP — how they work", duration: "1.5 hrs" },
+          { id: "t2", title: "Image understanding: captioning, VQA, OCR, document parsing", duration: "1.5 hrs" },
+          { id: "t3", title: "DALL-E and Stable Diffusion: prompt-to-image generation", duration: "1.5 hrs" },
+          { id: "t4", title: "OpenAI Whisper: transcription and translation pipelines", duration: "1.5 hrs" },
+          { id: "t5", title: "Text-to-Speech: ElevenLabs API, voice cloning basics", duration: "1 hr" },
+          { id: "t6", title: "Building multimodal pipelines: text + image input, structured output", duration: "1 hr" }
         ]
       }
     ]
@@ -8586,60 +8235,123 @@ const courses: Course[] = [
     curriculum: [
       {
         id: "m1",
-        title: "GenAI App Builder - Foundation Certificate Program",
-        duration: "24 hrs",
+        title: "GenAI Foundations & Development Setup",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
-          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
-          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
-          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
-          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
-          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
-          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
-          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+          { id: "t1", title: "Introduction to Generative AI: history, applications, industry impact", duration: "2 hrs" },
+          { id: "t2", title: "LLM ecosystem overview: GPT, Claude, Copilot, open-source models", duration: "2 hrs" },
+          { id: "t3", title: "Transformer architecture: attention, encoder-decoder, positional encoding", duration: "3 hrs" },
+          { id: "t4", title: "Python essentials: data types, control flow, functions, list comprehensions", duration: "2 hrs" },
+          { id: "t5", title: "Working with APIs: requests, JSON parsing, environment variables", duration: "2 hrs" },
+          { id: "t6", title: "Git & GitHub workflow: init, commit, branching, pull requests", duration: "2 hrs" },
+          { id: "t7", title: "Virtual environments: venv, requirements.txt, pip freeze", duration: "1 hr" },
+          { id: "t8", title: "Jupyter Notebooks and Google Colab setup for AI development", duration: "2 hrs" }
         ]
       },
       {
         id: "m2",
-        title: "Advanced GenAI and Machine Learning",
-        duration: "24 hrs",
+        title: "Large Language Models & Prompt Engineering",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
-          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
-          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
-          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
-          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
-          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
-          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+          { id: "t1", title: "BERT vs GPT vs T5 vs LLaMA — when to use which", duration: "2 hrs" },
+          { id: "t2", title: "Tokenisation: BPE, WordPiece, SentencePiece with HuggingFace", duration: "2 hrs" },
+          { id: "t3", title: "Text generation parameters: temperature, top-k, top-p, repetition penalty", duration: "2 hrs" },
+          { id: "t4", title: "Prompt basics: zero-shot, few-shot, chain-of-thought", duration: "2 hrs" },
+          { id: "t5", title: "Advanced prompting: ReAct, Tree-of-Thought, structured output", duration: "3 hrs" },
+          { id: "t6", title: "System prompts, role definitions, multi-turn conversation design", duration: "2 hrs" },
+          { id: "t7", title: "OpenAI API: chat completions, function calling, streaming", duration: "2 hrs" },
+          { id: "t8", title: "Token limits, context windows, cost estimation for production", duration: "1 hr" }
         ]
       },
       {
         id: "m3",
-        title: "Advanced AI Integration and Multimodal Applications",
-        duration: "30 hrs",
+        title: "Copilot, Claude & AI Development Workflows",
+        duration: "8 hrs",
         topics: [
-          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
-          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
-          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
-          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
-          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
-          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
-          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
-          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
-          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+          { id: "t1", title: "GitHub Copilot fundamentals: AI pair programming workflows", duration: "1.5 hrs" },
+          { id: "t2", title: "Copilot in VS Code: autocomplete, refactoring, test generation", duration: "1.5 hrs" },
+          { id: "t3", title: "Claude API: chatbot construction with Anthropic's SDK", duration: "2 hrs" },
+          { id: "t4", title: "Comparison of Copilot vs Claude across coding and conversation tasks", duration: "1 hr" },
+          { id: "t5", title: "Integrating AI assistance into developer workflows effectively", duration: "1 hr" },
+          { id: "t6", title: "Responsible use: validating AI-generated code, avoiding over-reliance", duration: "1 hr" }
         ]
       },
       {
         id: "m4",
-        title: "Mastering Multimodal Fusion and GenAI Frameworks",
-        duration: "14 hrs",
+        title: "Hugging Face Ecosystem & Fine-Tuning ",
+        duration: "24 hrs",
         topics: [
-          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
-          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
-          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
-          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
-          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
-          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+          { id: "t1", title: "HuggingFace Hub, Transformers, Datasets, PEFT, Evaluate, Accelerate", duration: "3 hrs" },
+          { id: "t2", title: "Loading models: AutoModel, AutoTokenizer, pipeline()", duration: "2.5 hrs" },
+          { id: "t3", title: "Running local inference: text gen, classification, NER, summarisation", duration: "2.5 hrs" },
+          { id: "t4", title: "Full fine-tuning vs. PEFT — conceptual and practical comparison", duration: "2 hrs" },
+          { id: "t5", title: "LoRA: intuition, rank (r), alpha, target modules selection", duration: "3 hrs" },
+          { id: "t6", title: "QLoRA: 4-bit/8-bit quantisation with bitsandbytes + LoRA", duration: "3 hrs" },
+          { id: "t7", title: "Data preparation: instruction-following format, chat templates, ethical curation", duration: "3 hrs" },
+          { id: "t8", title: "Trainer API and SFTTrainer from TRL for supervised fine-tuning", duration: "3 hrs" },
+          { id: "t9", title: "Evaluation: BLEU, ROUGE, perplexity — quantitative model comparison", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "RAG Systems & Hybrid Search",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Why RAG: knowledge cutoff limitations and hallucination reduction", duration: "1 hr" },
+          { id: "t2", title: "RAG pipeline: ingestion → chunking → embedding → retrieval → generation", duration: "2 hrs" },
+          { id: "t3", title: "Embedding models: sentence-transformers, OpenAI, BGE, E5", duration: "2 hrs" },
+          { id: "t4", title: "Vector databases: FAISS (local), ChromaDB, Pinecone", duration: "2 hrs" },
+          { id: "t5", title: "Chunking strategies: fixed-size, sentence-based, semantic", duration: "1.5 hrs" },
+          { id: "t6", title: "Similarity search: cosine similarity, ANN algorithms", duration: "1.5 hrs" },
+          { id: "t7", title: "Hybrid search: dense (vector) + sparse (BM25/TF-IDF) retrieval", duration: "2 hrs" },
+          { id: "t8", title: "Re-ranking: cross-encoders, Cohere rerank API", duration: "1 hr" },
+          { id: "t9", title: "RAG evaluation: context relevance, faithfulness, answer relevancy", duration: "1 hr" },
+          { id: "t10", title: "LlamaIndex: document loaders, query engine, response synthesiser", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "LangChain, LangGraph & AI Agents",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to agents: multi-step reasoning and tool use", duration: "1.5 hrs" },
+          { id: "t2", title: "LangChain architecture: chains, prompts, memory, output parsers", duration: "2 hrs" },
+          { id: "t3", title: "LCEL: composing pipelines declaratively with | operators", duration: "2 hrs" },
+          { id: "t4", title: "Memory types: buffer, summary, and vector store memory", duration: "1.5 hrs" },
+          { id: "t5", title: "Creating custom tools and binding them to agents", duration: "2 hrs" },
+          { id: "t6", title: "Agent types: ReAct, OpenAI Functions Agent, Self-Ask", duration: "2 hrs" },
+          { id: "t7", title: "LangGraph: stateful multi-step workflows with branching and loops", duration: "2 hrs" },
+          { id: "t8", title: "Multi-agent patterns: supervisor, handoff, parallel execution", duration: "2 hrs" },
+          { id: "t9", title: "Error handling and fallback strategies in production agents", duration: "1 hr" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "AI Model Deployment & Scaling",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "FastAPI: routing, request/response models, async endpoints", duration: "2 hrs" },
+          { id: "t2", title: "Serving LLMs: APIs, microservices, inference pipelines", duration: "2 hrs" },
+          { id: "t3", title: "Docker: images, containers, Dockerfile, docker-compose", duration: "2 hrs" },
+          { id: "t4", title: "Production Dockerfiles for Python AI apps — multi-stage builds", duration: "2 hrs" },
+          { id: "t5", title: "Environment management: secrets, .env, GPU passthrough", duration: "1.5 hrs" },
+          { id: "t6", title: "Cloud deployment: HuggingFace Spaces / AWS EC2 / Render", duration: "2 hrs" },
+          { id: "t7", title: "Optimisation: quantisation, caching, lazy loading", duration: "1.5 hrs" },
+          { id: "t8", title: "Benchmarking: latency, throughput, cost-performance analysis", duration: "1.5 hrs" },
+          { id: "t9", title: "API security: rate limiting, API keys, input validation", duration: "1.5 hrs" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "Multimodal AI — Vision, Voice & Image Generation",
+        duration: "8 hrs",
+        topics: [
+          { id: "t1", title: "Vision-Language Models: GPT-4o, LLaVA, CLIP — how they work", duration: "1.5 hrs" },
+          { id: "t2", title: "Image understanding: captioning, VQA, OCR, document parsing", duration: "1.5 hrs" },
+          { id: "t3", title: "DALL-E and Stable Diffusion: prompt-to-image generation", duration: "1.5 hrs" },
+          { id: "t4", title: "OpenAI Whisper: transcription and translation pipelines", duration: "1.5 hrs" },
+          { id: "t5", title: "Text-to-Speech: ElevenLabs API, voice cloning basics", duration: "1 hr" },
+          { id: "t6", title: "Building multimodal pipelines: text + image input, structured output", duration: "1 hr" }
         ]
       }
     ]
@@ -8805,64 +8517,126 @@ const courses: Course[] = [
     curriculum: [
       {
         id: "m1",
-        title: "GenAI App Builder - Foundation Certificate Program",
-        duration: "24 hrs",
+        title: "GenAI Foundations & Development Setup",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
-          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
-          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
-          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
-          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
-          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
-          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
-          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+          { id: "t1", title: "Introduction to Generative AI: history, applications, industry impact", duration: "2 hrs" },
+          { id: "t2", title: "LLM ecosystem overview: GPT, Claude, Copilot, open-source models", duration: "2 hrs" },
+          { id: "t3", title: "Transformer architecture: attention, encoder-decoder, positional encoding", duration: "3 hrs" },
+          { id: "t4", title: "Python essentials: data types, control flow, functions, list comprehensions", duration: "2 hrs" },
+          { id: "t5", title: "Working with APIs: requests, JSON parsing, environment variables", duration: "2 hrs" },
+          { id: "t6", title: "Git & GitHub workflow: init, commit, branching, pull requests", duration: "2 hrs" },
+          { id: "t7", title: "Virtual environments: venv, requirements.txt, pip freeze", duration: "1 hr" },
+          { id: "t8", title: "Jupyter Notebooks and Google Colab setup for AI development", duration: "2 hrs" }
         ]
       },
       {
         id: "m2",
-        title: "Advanced GenAI and Machine Learning",
-        duration: "24 hrs",
+        title: "Large Language Models & Prompt Engineering",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
-          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
-          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
-          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
-          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
-          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
-          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+          { id: "t1", title: "BERT vs GPT vs T5 vs LLaMA — when to use which", duration: "2 hrs" },
+          { id: "t2", title: "Tokenisation: BPE, WordPiece, SentencePiece with HuggingFace", duration: "2 hrs" },
+          { id: "t3", title: "Text generation parameters: temperature, top-k, top-p, repetition penalty", duration: "2 hrs" },
+          { id: "t4", title: "Prompt basics: zero-shot, few-shot, chain-of-thought", duration: "2 hrs" },
+          { id: "t5", title: "Advanced prompting: ReAct, Tree-of-Thought, structured output", duration: "3 hrs" },
+          { id: "t6", title: "System prompts, role definitions, multi-turn conversation design", duration: "2 hrs" },
+          { id: "t7", title: "OpenAI API: chat completions, function calling, streaming", duration: "2 hrs" },
+          { id: "t8", title: "Token limits, context windows, cost estimation for production", duration: "1 hr" }
         ]
       },
       {
         id: "m3",
-        title: "Advanced AI Integration and Multimodal Applications",
-        duration: "30 hrs",
+        title: "Copilot, Claude & AI Development Workflows",
+        duration: "8 hrs",
         topics: [
-          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
-          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
-          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
-          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
-          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
-          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
-          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
-          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
-          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+          { id: "t1", title: "GitHub Copilot fundamentals: AI pair programming workflows", duration: "1.5 hrs" },
+          { id: "t2", title: "Copilot in VS Code: autocomplete, refactoring, test generation", duration: "1.5 hrs" },
+          { id: "t3", title: "Claude API: chatbot construction with Anthropic's SDK", duration: "2 hrs" },
+          { id: "t4", title: "Comparison of Copilot vs Claude across coding and conversation tasks", duration: "1 hr" },
+          { id: "t5", title: "Integrating AI assistance into developer workflows effectively", duration: "1 hr" },
+          { id: "t6", title: "Responsible use: validating AI-generated code, avoiding over-reliance", duration: "1 hr" }
         ]
       },
       {
         id: "m4",
-        title: "Mastering Multimodal Fusion and GenAI Frameworks",
-        duration: "14 hrs",
+        title: "Hugging Face Ecosystem & Fine-Tuning ",
+        duration: "24 hrs",
         topics: [
-          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
-          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
-          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
-          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
-          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
-          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+          { id: "t1", title: "HuggingFace Hub, Transformers, Datasets, PEFT, Evaluate, Accelerate", duration: "3 hrs" },
+          { id: "t2", title: "Loading models: AutoModel, AutoTokenizer, pipeline()", duration: "2.5 hrs" },
+          { id: "t3", title: "Running local inference: text gen, classification, NER, summarisation", duration: "2.5 hrs" },
+          { id: "t4", title: "Full fine-tuning vs. PEFT — conceptual and practical comparison", duration: "2 hrs" },
+          { id: "t5", title: "LoRA: intuition, rank (r), alpha, target modules selection", duration: "3 hrs" },
+          { id: "t6", title: "QLoRA: 4-bit/8-bit quantisation with bitsandbytes + LoRA", duration: "3 hrs" },
+          { id: "t7", title: "Data preparation: instruction-following format, chat templates, ethical curation", duration: "3 hrs" },
+          { id: "t8", title: "Trainer API and SFTTrainer from TRL for supervised fine-tuning", duration: "3 hrs" },
+          { id: "t9", title: "Evaluation: BLEU, ROUGE, perplexity — quantitative model comparison", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "RAG Systems & Hybrid Search",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Why RAG: knowledge cutoff limitations and hallucination reduction", duration: "1 hr" },
+          { id: "t2", title: "RAG pipeline: ingestion → chunking → embedding → retrieval → generation", duration: "2 hrs" },
+          { id: "t3", title: "Embedding models: sentence-transformers, OpenAI, BGE, E5", duration: "2 hrs" },
+          { id: "t4", title: "Vector databases: FAISS (local), ChromaDB, Pinecone", duration: "2 hrs" },
+          { id: "t5", title: "Chunking strategies: fixed-size, sentence-based, semantic", duration: "1.5 hrs" },
+          { id: "t6", title: "Similarity search: cosine similarity, ANN algorithms", duration: "1.5 hrs" },
+          { id: "t7", title: "Hybrid search: dense (vector) + sparse (BM25/TF-IDF) retrieval", duration: "2 hrs" },
+          { id: "t8", title: "Re-ranking: cross-encoders, Cohere rerank API", duration: "1 hr" },
+          { id: "t9", title: "RAG evaluation: context relevance, faithfulness, answer relevancy", duration: "1 hr" },
+          { id: "t10", title: "LlamaIndex: document loaders, query engine, response synthesiser", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "LangChain, LangGraph & AI Agents",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to agents: multi-step reasoning and tool use", duration: "1.5 hrs" },
+          { id: "t2", title: "LangChain architecture: chains, prompts, memory, output parsers", duration: "2 hrs" },
+          { id: "t3", title: "LCEL: composing pipelines declaratively with | operators", duration: "2 hrs" },
+          { id: "t4", title: "Memory types: buffer, summary, and vector store memory", duration: "1.5 hrs" },
+          { id: "t5", title: "Creating custom tools and binding them to agents", duration: "2 hrs" },
+          { id: "t6", title: "Agent types: ReAct, OpenAI Functions Agent, Self-Ask", duration: "2 hrs" },
+          { id: "t7", title: "LangGraph: stateful multi-step workflows with branching and loops", duration: "2 hrs" },
+          { id: "t8", title: "Multi-agent patterns: supervisor, handoff, parallel execution", duration: "2 hrs" },
+          { id: "t9", title: "Error handling and fallback strategies in production agents", duration: "1 hr" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "AI Model Deployment & Scaling",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "FastAPI: routing, request/response models, async endpoints", duration: "2 hrs" },
+          { id: "t2", title: "Serving LLMs: APIs, microservices, inference pipelines", duration: "2 hrs" },
+          { id: "t3", title: "Docker: images, containers, Dockerfile, docker-compose", duration: "2 hrs" },
+          { id: "t4", title: "Production Dockerfiles for Python AI apps — multi-stage builds", duration: "2 hrs" },
+          { id: "t5", title: "Environment management: secrets, .env, GPU passthrough", duration: "1.5 hrs" },
+          { id: "t6", title: "Cloud deployment: HuggingFace Spaces / AWS EC2 / Render", duration: "2 hrs" },
+          { id: "t7", title: "Optimisation: quantisation, caching, lazy loading", duration: "1.5 hrs" },
+          { id: "t8", title: "Benchmarking: latency, throughput, cost-performance analysis", duration: "1.5 hrs" },
+          { id: "t9", title: "API security: rate limiting, API keys, input validation", duration: "1.5 hrs" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "Multimodal AI — Vision, Voice & Image Generation",
+        duration: "8 hrs",
+        topics: [
+          { id: "t1", title: "Vision-Language Models: GPT-4o, LLaVA, CLIP — how they work", duration: "1.5 hrs" },
+          { id: "t2", title: "Image understanding: captioning, VQA, OCR, document parsing", duration: "1.5 hrs" },
+          { id: "t3", title: "DALL-E and Stable Diffusion: prompt-to-image generation", duration: "1.5 hrs" },
+          { id: "t4", title: "OpenAI Whisper: transcription and translation pipelines", duration: "1.5 hrs" },
+          { id: "t5", title: "Text-to-Speech: ElevenLabs API, voice cloning basics", duration: "1 hr" },
+          { id: "t6", title: "Building multimodal pipelines: text + image input, structured output", duration: "1 hr" }
         ]
       }
     ]
-
 
     ,
 
@@ -9024,60 +8798,123 @@ const courses: Course[] = [
     curriculum: [
       {
         id: "m1",
-        title: "GenAI App Builder - Foundation Certificate Program",
-        duration: "24 hrs",
+        title: "GenAI Foundations & Development Setup",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
-          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
-          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
-          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
-          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
-          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
-          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
-          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+          { id: "t1", title: "Introduction to Generative AI: history, applications, industry impact", duration: "2 hrs" },
+          { id: "t2", title: "LLM ecosystem overview: GPT, Claude, Copilot, open-source models", duration: "2 hrs" },
+          { id: "t3", title: "Transformer architecture: attention, encoder-decoder, positional encoding", duration: "3 hrs" },
+          { id: "t4", title: "Python essentials: data types, control flow, functions, list comprehensions", duration: "2 hrs" },
+          { id: "t5", title: "Working with APIs: requests, JSON parsing, environment variables", duration: "2 hrs" },
+          { id: "t6", title: "Git & GitHub workflow: init, commit, branching, pull requests", duration: "2 hrs" },
+          { id: "t7", title: "Virtual environments: venv, requirements.txt, pip freeze", duration: "1 hr" },
+          { id: "t8", title: "Jupyter Notebooks and Google Colab setup for AI development", duration: "2 hrs" }
         ]
       },
       {
         id: "m2",
-        title: "Advanced GenAI and Machine Learning",
-        duration: "24 hrs",
+        title: "Large Language Models & Prompt Engineering",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
-          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
-          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
-          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
-          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
-          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
-          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+          { id: "t1", title: "BERT vs GPT vs T5 vs LLaMA — when to use which", duration: "2 hrs" },
+          { id: "t2", title: "Tokenisation: BPE, WordPiece, SentencePiece with HuggingFace", duration: "2 hrs" },
+          { id: "t3", title: "Text generation parameters: temperature, top-k, top-p, repetition penalty", duration: "2 hrs" },
+          { id: "t4", title: "Prompt basics: zero-shot, few-shot, chain-of-thought", duration: "2 hrs" },
+          { id: "t5", title: "Advanced prompting: ReAct, Tree-of-Thought, structured output", duration: "3 hrs" },
+          { id: "t6", title: "System prompts, role definitions, multi-turn conversation design", duration: "2 hrs" },
+          { id: "t7", title: "OpenAI API: chat completions, function calling, streaming", duration: "2 hrs" },
+          { id: "t8", title: "Token limits, context windows, cost estimation for production", duration: "1 hr" }
         ]
       },
       {
         id: "m3",
-        title: "Advanced AI Integration and Multimodal Applications",
-        duration: "30 hrs",
+        title: "Copilot, Claude & AI Development Workflows",
+        duration: "8 hrs",
         topics: [
-          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
-          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
-          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
-          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
-          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
-          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
-          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
-          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
-          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+          { id: "t1", title: "GitHub Copilot fundamentals: AI pair programming workflows", duration: "1.5 hrs" },
+          { id: "t2", title: "Copilot in VS Code: autocomplete, refactoring, test generation", duration: "1.5 hrs" },
+          { id: "t3", title: "Claude API: chatbot construction with Anthropic's SDK", duration: "2 hrs" },
+          { id: "t4", title: "Comparison of Copilot vs Claude across coding and conversation tasks", duration: "1 hr" },
+          { id: "t5", title: "Integrating AI assistance into developer workflows effectively", duration: "1 hr" },
+          { id: "t6", title: "Responsible use: validating AI-generated code, avoiding over-reliance", duration: "1 hr" }
         ]
       },
       {
         id: "m4",
-        title: "Mastering Multimodal Fusion and GenAI Frameworks",
-        duration: "14 hrs",
+        title: "Hugging Face Ecosystem & Fine-Tuning ",
+        duration: "24 hrs",
         topics: [
-          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
-          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
-          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
-          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
-          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
-          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+          { id: "t1", title: "HuggingFace Hub, Transformers, Datasets, PEFT, Evaluate, Accelerate", duration: "3 hrs" },
+          { id: "t2", title: "Loading models: AutoModel, AutoTokenizer, pipeline()", duration: "2.5 hrs" },
+          { id: "t3", title: "Running local inference: text gen, classification, NER, summarisation", duration: "2.5 hrs" },
+          { id: "t4", title: "Full fine-tuning vs. PEFT — conceptual and practical comparison", duration: "2 hrs" },
+          { id: "t5", title: "LoRA: intuition, rank (r), alpha, target modules selection", duration: "3 hrs" },
+          { id: "t6", title: "QLoRA: 4-bit/8-bit quantisation with bitsandbytes + LoRA", duration: "3 hrs" },
+          { id: "t7", title: "Data preparation: instruction-following format, chat templates, ethical curation", duration: "3 hrs" },
+          { id: "t8", title: "Trainer API and SFTTrainer from TRL for supervised fine-tuning", duration: "3 hrs" },
+          { id: "t9", title: "Evaluation: BLEU, ROUGE, perplexity — quantitative model comparison", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "RAG Systems & Hybrid Search",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Why RAG: knowledge cutoff limitations and hallucination reduction", duration: "1 hr" },
+          { id: "t2", title: "RAG pipeline: ingestion → chunking → embedding → retrieval → generation", duration: "2 hrs" },
+          { id: "t3", title: "Embedding models: sentence-transformers, OpenAI, BGE, E5", duration: "2 hrs" },
+          { id: "t4", title: "Vector databases: FAISS (local), ChromaDB, Pinecone", duration: "2 hrs" },
+          { id: "t5", title: "Chunking strategies: fixed-size, sentence-based, semantic", duration: "1.5 hrs" },
+          { id: "t6", title: "Similarity search: cosine similarity, ANN algorithms", duration: "1.5 hrs" },
+          { id: "t7", title: "Hybrid search: dense (vector) + sparse (BM25/TF-IDF) retrieval", duration: "2 hrs" },
+          { id: "t8", title: "Re-ranking: cross-encoders, Cohere rerank API", duration: "1 hr" },
+          { id: "t9", title: "RAG evaluation: context relevance, faithfulness, answer relevancy", duration: "1 hr" },
+          { id: "t10", title: "LlamaIndex: document loaders, query engine, response synthesiser", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "LangChain, LangGraph & AI Agents",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to agents: multi-step reasoning and tool use", duration: "1.5 hrs" },
+          { id: "t2", title: "LangChain architecture: chains, prompts, memory, output parsers", duration: "2 hrs" },
+          { id: "t3", title: "LCEL: composing pipelines declaratively with | operators", duration: "2 hrs" },
+          { id: "t4", title: "Memory types: buffer, summary, and vector store memory", duration: "1.5 hrs" },
+          { id: "t5", title: "Creating custom tools and binding them to agents", duration: "2 hrs" },
+          { id: "t6", title: "Agent types: ReAct, OpenAI Functions Agent, Self-Ask", duration: "2 hrs" },
+          { id: "t7", title: "LangGraph: stateful multi-step workflows with branching and loops", duration: "2 hrs" },
+          { id: "t8", title: "Multi-agent patterns: supervisor, handoff, parallel execution", duration: "2 hrs" },
+          { id: "t9", title: "Error handling and fallback strategies in production agents", duration: "1 hr" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "AI Model Deployment & Scaling",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "FastAPI: routing, request/response models, async endpoints", duration: "2 hrs" },
+          { id: "t2", title: "Serving LLMs: APIs, microservices, inference pipelines", duration: "2 hrs" },
+          { id: "t3", title: "Docker: images, containers, Dockerfile, docker-compose", duration: "2 hrs" },
+          { id: "t4", title: "Production Dockerfiles for Python AI apps — multi-stage builds", duration: "2 hrs" },
+          { id: "t5", title: "Environment management: secrets, .env, GPU passthrough", duration: "1.5 hrs" },
+          { id: "t6", title: "Cloud deployment: HuggingFace Spaces / AWS EC2 / Render", duration: "2 hrs" },
+          { id: "t7", title: "Optimisation: quantisation, caching, lazy loading", duration: "1.5 hrs" },
+          { id: "t8", title: "Benchmarking: latency, throughput, cost-performance analysis", duration: "1.5 hrs" },
+          { id: "t9", title: "API security: rate limiting, API keys, input validation", duration: "1.5 hrs" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "Multimodal AI — Vision, Voice & Image Generation",
+        duration: "8 hrs",
+        topics: [
+          { id: "t1", title: "Vision-Language Models: GPT-4o, LLaVA, CLIP — how they work", duration: "1.5 hrs" },
+          { id: "t2", title: "Image understanding: captioning, VQA, OCR, document parsing", duration: "1.5 hrs" },
+          { id: "t3", title: "DALL-E and Stable Diffusion: prompt-to-image generation", duration: "1.5 hrs" },
+          { id: "t4", title: "OpenAI Whisper: transcription and translation pipelines", duration: "1.5 hrs" },
+          { id: "t5", title: "Text-to-Speech: ElevenLabs API, voice cloning basics", duration: "1 hr" },
+          { id: "t6", title: "Building multimodal pipelines: text + image input, structured output", duration: "1 hr" }
         ]
       }
     ]
@@ -9243,64 +9080,126 @@ const courses: Course[] = [
     curriculum: [
       {
         id: "m1",
-        title: "GenAI App Builder - Foundation Certificate Program",
-        duration: "24 hrs",
+        title: "GenAI Foundations & Development Setup",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Programming Fundamentals – Python, Data Types, Loops, Functions", duration: "3 hrs" },
-          { id: "t2", title: "Important Libraries – Pandas, NumPy, Virtual Environments", duration: "2 hrs" },
-          { id: "t3", title: "Data Cleaning and Preprocessing – Hands-on using Pandas", duration: "2 hrs" },
-          { id: "t4", title: "Exploratory Data Analysis and Statistical Inference", duration: "2 hrs" },
-          { id: "t5", title: "Introduction to Generative AI – Concepts, Types, OpenAI APIs", duration: "2 hrs" },
-          { id: "t6", title: "Working with OpenAI API – Text Generation with Python", duration: "2.5 hrs" },
-          { id: "t7", title: "Hands-on Projects – Text Generation using Python and OpenAI", duration: "2.5 hrs" },
-          { id: "t8", title: "Capstone Project – Build AI App for Text Generation", duration: "3 hrs" }
+          { id: "t1", title: "Introduction to Generative AI: history, applications, industry impact", duration: "2 hrs" },
+          { id: "t2", title: "LLM ecosystem overview: GPT, Claude, Copilot, open-source models", duration: "2 hrs" },
+          { id: "t3", title: "Transformer architecture: attention, encoder-decoder, positional encoding", duration: "3 hrs" },
+          { id: "t4", title: "Python essentials: data types, control flow, functions, list comprehensions", duration: "2 hrs" },
+          { id: "t5", title: "Working with APIs: requests, JSON parsing, environment variables", duration: "2 hrs" },
+          { id: "t6", title: "Git & GitHub workflow: init, commit, branching, pull requests", duration: "2 hrs" },
+          { id: "t7", title: "Virtual environments: venv, requirements.txt, pip freeze", duration: "1 hr" },
+          { id: "t8", title: "Jupyter Notebooks and Google Colab setup for AI development", duration: "2 hrs" }
         ]
       },
       {
         id: "m2",
-        title: "Advanced GenAI and Machine Learning",
-        duration: "24 hrs",
+        title: "Large Language Models & Prompt Engineering",
+        duration: "16 hrs",
         topics: [
-          { id: "t1", title: "Machine Learning Fundamentals – Linear, Decision Trees, k-NN", duration: "2.5 hrs" },
-          { id: "t2", title: "Model Building – Classification and Regression Models", duration: "2 hrs" },
-          { id: "t3", title: "Deep Learning Concepts – MLP, CNN, RNN, LSTM, GRU", duration: "3 hrs" },
-          { id: "t4", title: "Build ChatPal AI – Design Workflow, Prompting, LLMs", duration: "3.5 hrs" },
-          { id: "t5", title: "Hands-on – Build and Fine-tune a Chatbot", duration: "2.5 hrs" },
-          { id: "t6", title: "Deploy Chatbot with OpenAI API Integration", duration: "2 hrs" },
-          { id: "t7", title: "Capstone Project – Build and Deploy ChatPal AI", duration: "3.5 hrs" }
+          { id: "t1", title: "BERT vs GPT vs T5 vs LLaMA — when to use which", duration: "2 hrs" },
+          { id: "t2", title: "Tokenisation: BPE, WordPiece, SentencePiece with HuggingFace", duration: "2 hrs" },
+          { id: "t3", title: "Text generation parameters: temperature, top-k, top-p, repetition penalty", duration: "2 hrs" },
+          { id: "t4", title: "Prompt basics: zero-shot, few-shot, chain-of-thought", duration: "2 hrs" },
+          { id: "t5", title: "Advanced prompting: ReAct, Tree-of-Thought, structured output", duration: "3 hrs" },
+          { id: "t6", title: "System prompts, role definitions, multi-turn conversation design", duration: "2 hrs" },
+          { id: "t7", title: "OpenAI API: chat completions, function calling, streaming", duration: "2 hrs" },
+          { id: "t8", title: "Token limits, context windows, cost estimation for production", duration: "1 hr" }
         ]
       },
       {
         id: "m3",
-        title: "Advanced AI Integration and Multimodal Applications",
-        duration: "30 hrs",
+        title: "Copilot, Claude & AI Development Workflows",
+        duration: "8 hrs",
         topics: [
-          { id: "t1", title: "SocioGenie AI – Social Media Automation with LangChain", duration: "3 hrs" },
-          { id: "t2", title: "Content Generation – Text and Image Automation", duration: "2.5 hrs" },
-          { id: "t3", title: "ResumeGen AI – Resume Creation using OpenAI API", duration: "2.5 hrs" },
-          { id: "t4", title: "Styling & Formatting – PDF generation with Python", duration: "2 hrs" },
-          { id: "t5", title: "EcommImageCraft AI – Image Generation using DALL-E", duration: "3 hrs" },
-          { id: "t6", title: "Automated Uploads and Optimization – Cloud and Python Scripts", duration: "3 hrs" },
-          { id: "t7", title: "VoiceMate AI – Speech Recognition, TTS, Whisper API", duration: "3.5 hrs" },
-          { id: "t8", title: "Newsify AI – Aggregation, Summarization, Deployment", duration: "3.5 hrs" },
-          { id: "t9", title: "Capstone Project – Build and Deploy a Multimodal App", duration: "4 hrs" }
+          { id: "t1", title: "GitHub Copilot fundamentals: AI pair programming workflows", duration: "1.5 hrs" },
+          { id: "t2", title: "Copilot in VS Code: autocomplete, refactoring, test generation", duration: "1.5 hrs" },
+          { id: "t3", title: "Claude API: chatbot construction with Anthropic's SDK", duration: "2 hrs" },
+          { id: "t4", title: "Comparison of Copilot vs Claude across coding and conversation tasks", duration: "1 hr" },
+          { id: "t5", title: "Integrating AI assistance into developer workflows effectively", duration: "1 hr" },
+          { id: "t6", title: "Responsible use: validating AI-generated code, avoiding over-reliance", duration: "1 hr" }
         ]
       },
       {
         id: "m4",
-        title: "Mastering Multimodal Fusion and GenAI Frameworks",
-        duration: "14 hrs",
+        title: "Hugging Face Ecosystem & Fine-Tuning ",
+        duration: "24 hrs",
         topics: [
-          { id: "t1", title: "Fusion Techniques – Early, Late, Hybrid with ChatGPT, DALL-E, Whisper", duration: "2 hrs" },
-          { id: "t2", title: "Attention Mechanisms & Vision-Language Transformers", duration: "2 hrs" },
-          { id: "t3", title: "Progressive GANs, StyleGAN, Meta-learning", duration: "2 hrs" },
-          { id: "t4", title: "Model Compression, Knowledge Distillation", duration: "2 hrs" },
-          { id: "t5", title: "Hands-on – Creative Collaboration with DALL-E", duration: "2 hrs" },
-          { id: "t6", title: "Capstone Project – Unified GenAI Assistant App", duration: "4 hrs" }
+          { id: "t1", title: "HuggingFace Hub, Transformers, Datasets, PEFT, Evaluate, Accelerate", duration: "3 hrs" },
+          { id: "t2", title: "Loading models: AutoModel, AutoTokenizer, pipeline()", duration: "2.5 hrs" },
+          { id: "t3", title: "Running local inference: text gen, classification, NER, summarisation", duration: "2.5 hrs" },
+          { id: "t4", title: "Full fine-tuning vs. PEFT — conceptual and practical comparison", duration: "2 hrs" },
+          { id: "t5", title: "LoRA: intuition, rank (r), alpha, target modules selection", duration: "3 hrs" },
+          { id: "t6", title: "QLoRA: 4-bit/8-bit quantisation with bitsandbytes + LoRA", duration: "3 hrs" },
+          { id: "t7", title: "Data preparation: instruction-following format, chat templates, ethical curation", duration: "3 hrs" },
+          { id: "t8", title: "Trainer API and SFTTrainer from TRL for supervised fine-tuning", duration: "3 hrs" },
+          { id: "t9", title: "Evaluation: BLEU, ROUGE, perplexity — quantitative model comparison", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "RAG Systems & Hybrid Search",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Why RAG: knowledge cutoff limitations and hallucination reduction", duration: "1 hr" },
+          { id: "t2", title: "RAG pipeline: ingestion → chunking → embedding → retrieval → generation", duration: "2 hrs" },
+          { id: "t3", title: "Embedding models: sentence-transformers, OpenAI, BGE, E5", duration: "2 hrs" },
+          { id: "t4", title: "Vector databases: FAISS (local), ChromaDB, Pinecone", duration: "2 hrs" },
+          { id: "t5", title: "Chunking strategies: fixed-size, sentence-based, semantic", duration: "1.5 hrs" },
+          { id: "t6", title: "Similarity search: cosine similarity, ANN algorithms", duration: "1.5 hrs" },
+          { id: "t7", title: "Hybrid search: dense (vector) + sparse (BM25/TF-IDF) retrieval", duration: "2 hrs" },
+          { id: "t8", title: "Re-ranking: cross-encoders, Cohere rerank API", duration: "1 hr" },
+          { id: "t9", title: "RAG evaluation: context relevance, faithfulness, answer relevancy", duration: "1 hr" },
+          { id: "t10", title: "LlamaIndex: document loaders, query engine, response synthesiser", duration: "2 hrs" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "LangChain, LangGraph & AI Agents",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "Introduction to agents: multi-step reasoning and tool use", duration: "1.5 hrs" },
+          { id: "t2", title: "LangChain architecture: chains, prompts, memory, output parsers", duration: "2 hrs" },
+          { id: "t3", title: "LCEL: composing pipelines declaratively with | operators", duration: "2 hrs" },
+          { id: "t4", title: "Memory types: buffer, summary, and vector store memory", duration: "1.5 hrs" },
+          { id: "t5", title: "Creating custom tools and binding them to agents", duration: "2 hrs" },
+          { id: "t6", title: "Agent types: ReAct, OpenAI Functions Agent, Self-Ask", duration: "2 hrs" },
+          { id: "t7", title: "LangGraph: stateful multi-step workflows with branching and loops", duration: "2 hrs" },
+          { id: "t8", title: "Multi-agent patterns: supervisor, handoff, parallel execution", duration: "2 hrs" },
+          { id: "t9", title: "Error handling and fallback strategies in production agents", duration: "1 hr" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "AI Model Deployment & Scaling",
+        duration: "16 hrs",
+        topics: [
+          { id: "t1", title: "FastAPI: routing, request/response models, async endpoints", duration: "2 hrs" },
+          { id: "t2", title: "Serving LLMs: APIs, microservices, inference pipelines", duration: "2 hrs" },
+          { id: "t3", title: "Docker: images, containers, Dockerfile, docker-compose", duration: "2 hrs" },
+          { id: "t4", title: "Production Dockerfiles for Python AI apps — multi-stage builds", duration: "2 hrs" },
+          { id: "t5", title: "Environment management: secrets, .env, GPU passthrough", duration: "1.5 hrs" },
+          { id: "t6", title: "Cloud deployment: HuggingFace Spaces / AWS EC2 / Render", duration: "2 hrs" },
+          { id: "t7", title: "Optimisation: quantisation, caching, lazy loading", duration: "1.5 hrs" },
+          { id: "t8", title: "Benchmarking: latency, throughput, cost-performance analysis", duration: "1.5 hrs" },
+          { id: "t9", title: "API security: rate limiting, API keys, input validation", duration: "1.5 hrs" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "Multimodal AI — Vision, Voice & Image Generation",
+        duration: "8 hrs",
+        topics: [
+          { id: "t1", title: "Vision-Language Models: GPT-4o, LLaVA, CLIP — how they work", duration: "1.5 hrs" },
+          { id: "t2", title: "Image understanding: captioning, VQA, OCR, document parsing", duration: "1.5 hrs" },
+          { id: "t3", title: "DALL-E and Stable Diffusion: prompt-to-image generation", duration: "1.5 hrs" },
+          { id: "t4", title: "OpenAI Whisper: transcription and translation pipelines", duration: "1.5 hrs" },
+          { id: "t5", title: "Text-to-Speech: ElevenLabs API, voice cloning basics", duration: "1 hr" },
+          { id: "t6", title: "Building multimodal pipelines: text + image input, structured output", duration: "1 hr" }
         ]
       }
     ]
-
 
     ,
 
@@ -9849,6 +9748,263 @@ const courses: Course[] = [
       //   difficulty: "Beginner to Intermediate",
       //   videoId: "4cx9_OSv4Fo"
       // },
+      {
+        id: "p6",
+        title: "Analyzing Netflix Originals & IMDB Scores",
+        description: "Analyze Netflix Originals data with SQL, utilizing Window Functions, CTEs, and various SQL queries to explore trends and uncover insights in the dataset.",
+        image: "https://img.youtube.com/vi/Wt8jyPvdGRo/0.jpg",
+        skills: ["SQL Queries", "Window Functions", "Common Table Expressions (CTEs)", "Date Functions", "JOINs", "GROUP BY", "HAVING", "ORDER BY", "String Functions", "SQL Aggregates"],
+        difficulty: "Intermediate",
+        videoId: "Wt8jyPvdGRo"
+      }
+      // {
+      //   id: "p6",
+      //   title: "Employee Promotion Prediction",
+      //   description: " Build a machine learning model to predict employee promotions based on performance and profile attributes",
+      //   image: "https://img.youtube.com/vi/vRsoANUaAhI/0.jpg",
+      //   skills: ["Classification Models", "Feature Engineering", "Model Evaluation using Python"],
+      //   difficulty: "Advanced",
+      //   videoId: "vRsoANUaAhI"
+      // }
+    ]
+
+  },
+
+
+  {
+    id: '24',
+    title: "Data Analytics With Visualization in Chennai",
+    description: "  Start your journey in analytics with Ivy Professional School’s Chennai-based program. Learn industry-relevant tools and techniques, build real projects, and gain job-focused training to thrive in data roles.",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    category: "Deep Learning",
+    students: 1243,
+    metaData: {
+      title: "Data Analytics Training in Chennai + Placement Support | Ivy Professional School",
+      description: "Join Ivy Professional School’s Data Analytics With Visualization in Chennai - Learn top tools with hands-on projects & career support.",
+      bio: "Learn to analyze and visualize data, work on industry projects, earn a prestigious certificate, and become a job-ready data analyst within 12-14 months."
+
+    },
+    duration: "14 weeks",
+    rating: 4.8,
+    reviewCount: 298,
+    isFeatured: true,
+    slug: "data-analytics-course-chennai",
+    longDescription: "Ivy Professional School’s Data Analytics Course in Chennai is crafted to help aspiring analysts and professionals build a strong foundation in data interpretation, business intelligence, and analytical modeling. \n\n With Chennai emerging as a major hub for IT, finance, and consulting, the need for skilled data analysts continues to grow. Our course combines foundational learning with advanced practical exposure to ensure you're ready for real-world challenges. \n\n The course emphasizes hands-on experience by covering Python for data transformation and automation, SQL for extracting insights from structured databases, Excel for applied business analytics, Tableau and Power BI for dashboarding and visualization, and statistics and predictive modelling for data-driven decision-making."
+    , instructors: [
+      {
+        id: "i1",
+        name: "Prateek Agrawal",
+        role: "Founder and Director of Ivy Professional School",
+        image: "/assets/pratilk.webp",
+        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+        isFounder: true
+      },
+      {
+        id: "i2",
+        name: "Eeshani Agrawal",
+        role: "Director of Ivy Professional School",
+        image: "/assets/eeshani.webp",
+        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+        , isDirector: true
+      }
+    ],
+    outcomes: [
+      "Build a portfolio of analytics projects that reflect real business challenges and solutions.",
+      "Solve business case problems using data analysis and predictive models.",
+      "Design and publish business dashboards using Tableau and Power BI.",
+      "Use Python libraries such as Pandas and Matplotlib to clean and visualize large datasets.",
+      "Write and optimize SQL queries to retrieve and manipulate data from relational databases.",
+      "Understand key analytics principles like data structures, sampling techniques, probability, and descriptive statistics.",
+
+    ],
+    curriculum: [
+      {
+        "id": "m1",
+        "title": "Advanced Excel",
+        "duration": "32 hrs",
+        "topics": [
+          { "id": "t1", "title": "Excel Essentials – Cell Referencing, Formula Structuring" },
+          { "id": "t2", "title": "Data Analysis in Excel - Pivot Tables, Pivot Charts, Slicers, and Dynamic Arrays (FILTER, SORT, UNIQUE)" },
+          { "id": "t3", "title": "Advanced Excel Functions - XLOOKUP, INDEX-MATCH, IF, IFS, SWITCH, AND, OR" },
+          { "id": "t4", "title": "Data Cleaning & Preparation - Text & Date Functions, Data Validation, Conditional Formatting" },
+          { "id": "t5", "title": "Dashboarding & Reporting - KPI Design, Interactive Dashboards, Charts & Visualization Best Practices" },
+          { "id": "t6", "title": "Scenario Analysis - Goal Seek, Solver, and What-if Analysis" },
+          { "id": "t7", "title": "AI in Excel (ChatGPT & Copilot) - Formula generation, data summarization, and task automation" },
+          { "id": "p1", "title": "Project: Sales Performance Dashboard \n Built a Sales Performance Dashboard using Pivot Tables and conditional formatting." },
+          { "id": "p2", "title": "Project: Expense Tracking \n Automated Expense Tracking and Budget Analysis with formulas and dynamic charts." }
+        ]
+      },
+
+      {
+        id: "m2",
+        title: "SQL",
+        duration: "24 hrs",
+        topics: [
+          { id: "t1", title: "SQL Basics: Introduction to Database Management System (DBMS), Introduction to Google BigQuery and MySQL, CRUD Operations", duration: "3 hrs" },
+          { id: "t2", title: "Data Manipulation and Transformation: Logical, Numerical, and Mathematical Operators, Conditional Statements", duration: "2.5 hrs" },
+          { id: "t3", title: "Data Cleaning: Type Casting, Date/Time Formatting, Text Formatting", duration: "2 hrs" },
+          { id: "t4", title: "Pattern Matching: LIKE Operator, REGEXP Functions", duration: "1.5 hrs" },
+          { id: "t5", title: "Joins and Relational Databases: Keys, Join Types, Indexing, Normalization", duration: "4 hrs" },
+          { id: "t6", title: "Aggregation and Grouping: Aggregate Functions, GROUP BY, CTEs, Variables", duration: "3.5 hrs" },
+          { id: "t7", title: "Window Functions: RANK, DENSE_RANK, ROW_NUMBER, LEAD/LAG", duration: "2.5 hrs" },
+          { id: "t8", title: "Data Reusability: Views, Stored Procedures, UDFs", duration: "2 hrs" },
+          { id: "t9", title: "Subqueries: Simple, EXISTS/NOT EXISTS, Correlated", duration: "1.5 hrs" },
+          { id: "t10", title: "Cloud Services: BigQuery Querying, Sharing Results, Permissions, Scheduling", duration: "1.5 hrs" },
+          { id: "t11", title: "Online SQL Platforms: MySQL Workbench, Online IDEs, Cloud Storage Integration", duration: "0.5 hrs" },
+          { "id": "p1", "title": "Project: Customer Insights Database \n Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
+          { "id": "p2", "title": "Project: Sales Trend Analyzer \n Built a Sales Trend Analyzer with window functions and aggregate queries." }
+
+        ]
+      },
+
+      {
+        "id": "m3",
+        "title": "Python programming for Beginners",
+        "duration": "2O hrs",
+        "topics": [
+          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments", "duration": "1.5 hrs" },
+          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions", "duration": "2.5 hrs" },
+          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions", "duration": "3 hrs" },
+          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling", "duration": "2.5 hrs" },
+          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging", "duration": "3 hrs" },
+          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps", "duration": "4 hrs" },
+          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)", "duration": "2 hrs" },
+          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
+        ]
+      },
+      ,
+
+      {
+        id: "m4",
+        title: "Business Statistics- Recorded",
+        duration: "10 hrs",
+        topics: [
+          { id: "t1", title: "Foundations: Data Types, Measurement Scales, and Descriptive Statistics", duration: "3 hrs" },
+          { id: "t2", title: "Probability Distributions: Binomial, Poisson, and Normal Distributions", duration: "4 hrs" },
+          { id: "t3", title: "Sampling Theory: Central Limit Theorem and Sampling Distributions", duration: "3.5 hrs" },
+          { id: "t4", title: "Inferential Statistics: Estimation, Hypothesis Testing (t-test, z-test, Chi-square, ANOVA)", duration: "6 hrs" },
+          { id: "t5", title: "Predictive Foundations: Correlation, Regression Basics, and Residual Analysis", duration: "4.5 hrs" },
+          { id: "t6", title: "Time Series Basics: Decomposition and Simple Forecasting Techniques", duration: "3.5 hrs" }
+        ]
+      }
+      ,
+
+      {
+        "id": "m5",
+        "title": "Python Predictive Modeling & Basic Machine Learning",
+        "duration": "40 hrs",
+        "topics": [
+          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
+          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
+          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
+          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
+          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
+          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
+          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
+          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
+          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
+          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
+
+          { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
+          { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
+          { id: "t3", title: "Exploratory Data Analysis (EDA): Visualization and Insight Generation with Matplotlib/Seaborn", duration: "3.5 hrs" },
+          { id: "t4", title: "Feature Engineering & Pipelines: Encoding, Binning, and Workflow Automation", duration: "3 hrs" },
+          { id: "t5", title: "Supervised Learning: Linear & Logistic Regression, Decision Trees, KNN, and Naïve Bayes", duration: "5 hrs" },
+          { id: "t6", title: "Ensemble Techniques: Random Forest, Gradient Boosting, Bagging, and Stacking", duration: "4.5 hrs" },
+          { id: "t7", title: "Model Evaluation: Cross-Validation, Confusion Matrix, ROC-AUC, and F1-Score", duration: "3 hrs" },
+          { id: "t8", title: "Explainability & Deployment: SHAP Values, Feature Importance, and Flask/Streamlit Intro", duration: "3 hrs" },
+          { id: "t9", title: "AI in ML: Prompt-based Interpretation, Automated EDA, and Copilot Documentation", duration: "2.5 hrs" },
+          { id: "p1", title: "Project: Sales Forecasting Model (Regression and Time-Based Engineering)", duration: "3 hrs" },
+          { id: "p2", title: "Project: Customer Churn Prediction (Classification for Retention)", duration: "3 hrs" },
+
+
+        ]
+      },
+      ,
+      {
+        id: "m6",
+        title: "Power BI",
+        duration: "24 HOURS",
+        topics: [
+          { id: "t1", title: "Introduction: Data Visualization, Interface, and Business Problem-Solving", duration: "3 hrs" },
+          { id: "t2", title: "Connecting & Shaping Data: Power Query Cleaning, Transformation, and Merging", duration: "4.5 hrs" },
+          { id: "t3", title: "Data Modeling: Normalization, Star Schemas, Relationships, and Filter Flow", duration: "4 hrs" },
+          { id: "t4", title: "DAX Analysis: Calculated Columns/Measures, Functions, and Time Intelligence", duration: "6 hrs" },
+          { id: "t5", title: "Visualization: Interactive Reports, Charts, Slicers, and Drillthroughs", duration: "5 hrs" },
+          { id: "t6", title: "AI & Custom Visuals: Decomposition Trees, Q&A, and Key Influencers", duration: "2.5 hrs" },
+          { id: "t7", title: "Deployment & Security: Power BI Service, Refresh Schedules, and RLS", duration: "2.5 hrs" },
+          { id: "t8", title: "SQL Integration: Database Connections and Custom Queries", duration: "2 hrs" },
+          { id: "p1", title: "Project: Subscription Revenue & Churn Tracker", duration: "3.5 hrs" },
+          { id: "p2", title: "Project: E-commerce Sales & Customer 360 Dashboard", duration: "4 hrs" }
+        ]
+      }
+      ,
+      {
+        id: "m7",
+        title: "Prep AI 4 months Premium Subscription",
+        duration: "24 HOURS",
+        topics: [
+          { id: "t1", title: "Diagnose: Unlimited Interview Readiness Quizzes & Instant Feedback", duration: "3.5 hrs" },
+          { id: "t2", title: "Personalized Learning: Gap Analysis & Contextual Learning from Uploaded Files", duration: "4.5 hrs" },
+          { id: "t3", title: "Resume Excellence: ATS-Friendly Builder & Skills Matching Score", duration: "4 hrs" },
+          { id: "t4", title: "Recruiter Sync: Resume-to-Recruiter Matching & Strategic Networking", duration: "3 hrs" },
+          { id: "t5", title: "AI Tutor: Unlimited Real-Time Technical Doubt Clearing", duration: "5 hrs" },
+          { id: "t6", title: "Live Simulation: Unlimited Speech-to-Speech Mock Interviews", duration: "6.5 hrs" },
+          { id: "t7", title: "Company Prep: Tailored Recruiter Queries & Strategic Interview Prep", duration: "3.5 hrs" },
+          { id: "t8", title: "AI Career Coach: 1:1 Personalized Mentoring & Career Query Support", duration: "4.5 hrs" }
+        ]
+      }
+    ],
+
+    projects: [
+      {
+        id: "p1",
+        title: "How To Choose Ideal Residence Using SQL",
+        description: "Master SQL for real estate data analysis. Learn how to use SELECT statements, create databases, and import/export data, while performing calculations and reporting in SQL.",
+        image: "https://img.youtube.com/vi/hzxawPxuks8/0.jpg",
+        skills: ["SQL ", "SELECT", "CREATE DATABASE", "MySQL Connections", "MySQL Connections", "Data Export", "Excel to MySQL", "CSV Conversion", "SQL LIMIT", "SQL COUNT", "SQL COUNT", "Data Summarization", "Reporting in SQL"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "hzxawPxuks8"
+      },
+      {
+        id: "p2",
+        title: "Power BI Live Case Study | Web Analytics",
+        description: "Learn to create a Power BI dashboard from scratch. Explore website click analysis, data visualization techniques, filters, fields, and Power Query transformations in Power BI.",
+        image: "https://img.youtube.com/vi/-XUN_3Hama0/0.jpg",
+        skills: ["Power BI", "Power Query", "Data Transformation", "Filters", "Fields in Power BI", "Power BI Cards", "Power BI Charts", "Bar Charts", "Slicers", "Data Visualization", "Power BI Dashboard", "Date Handling in Power BI"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "-XUN_3Hama0"
+      },
+      {
+        id: "p3",
+        title: "Tableau Live Case | WPL Dataset | Identify the Strategies used in WPL Auctions",
+        description: "Analyze the Women's Premier League (WPL) auction strategies using Tableau. Learn to create interactive dashboards and visualize key data points for team performance insights.",
+        image: "https://img.youtube.com/vi/THyEuZ0xHC8/0.jpg",
+        skills: ["Tableau", "Tableau Dashboard", "Tableau Drag and Drop", "Tableau Sheets", "Data Source in Tableau", "Tableau Live and Extract", "Tableau Stories", "Tableau Filters", "Tableau Visualizations", "Tableau Functions", "Tableau Headers"],
+        difficulty: "Beginner to Intermediate",
+        isPractice: true,
+        videoId: "THyEuZ0xHC8"
+      },
+      {
+        id: "p4",
+        title: "Analyze Sales of Smartphones on Amazon",
+        description: "Analyze smartphone sales data using Excel. Learn to create dashboards, perform quarterly revenue analysis, and uncover insights using key Excel functions.",
+        image: "https://img.youtube.com/vi/oWy7ZkS3axE/0.jpg",
+        skills: ["Excel Dashboards", "PivotTables", "PivotCharts", " VLOOKUP", "SUMIF", "Data Validation", "Conditional Formatting", "Excel Formulas", " Data Analysis", "Revenue Analysis", "Excel Charts"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "oWy7ZkS3axE"
+      },
+      {
+        id: "p5",
+        title: "AirBNB Business Case Study - Tableau Dashboarding",
+        description: "Analyze AirBNB business data and create insightful visualizations using Tableau. Learn key techniques for dashboarding, filtering, and data presentation to drive business decisions.",
+        image: "https://img.youtube.com/vi/4cx9_OSv4Fo/0.jpg",
+        skills: ["Tableau", "Tableau Dashboarding", "Tableau Dashboarding", "Filters", "Tableau Calculations", "Interactive Dashboards", "Data Connections", "Data Blending", "Tableau Filters"],
+        difficulty: "Beginner to Intermediate",
+        videoId: "4cx9_OSv4Fo"
+      },
       {
         id: "p6",
         title: "Analyzing Netflix Originals & IMDB Scores",
