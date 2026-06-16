@@ -48,11 +48,7 @@ const nextConfig: NextConfig = {
         destination: "/alumni",
         permanent: true,
       },
-      {
-      source: "/courses/iit-generative-ai-course",
-      destination: "/courses/generative-ai-course",
-      permanent: true, // Returns a 308 status code
-    },
+      
       {
         source: "/data-science-and-ml-course",
         destination: "/courses/data-science-and-ml-course",
