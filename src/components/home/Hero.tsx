@@ -292,7 +292,7 @@ const Hero = () => {
                     <option value="Mumbai">Mumbai</option>
                     <option value="Bangalore">Bangalore</option>
                     <option value="Pune">Pune</option>
-                    <option value="Hyderabad">Hyderabad</option>
+                    {/* <option value="Hyderabad">Hyderabad</option> */}
                     <option value="Chennai">Chennai</option>
                   </select>
                 </div>

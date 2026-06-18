@@ -617,7 +617,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                     </div>
                   </>
                   :
-                  course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata"  || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Pune" ?
+                  course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Pune" ?
                     <>
                       {/* <h2 className="text-4xl font-bold text-white mb-8">
                         What You Will Learn
@@ -712,7 +712,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         </div>
                       </>
                       :
-                      course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata"  || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Pune" ?
+                      course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Pune" ?
 
                         <>
                           {/* <h2 className="text-4xl font-bold text-white mb-8">
@@ -953,29 +953,29 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                                     </div>
                                   </>
                                   :
-                                   <div className="space-y-6">
+                                  <div className="space-y-6">
 
-                                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
+                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
 
-                                          ⦿	Master MySQL database operations, advanced query writing, window functions, and Python data manipulation.
-                                        </h3>
+                                      ⦿	Master MySQL database operations, advanced query writing, window functions, and Python data manipulation.
+                                    </h3>
 
-                                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                          ⦿ Process large-scale data using distributed computing, HDFS, YARN, MapReduce, and Hive optimization.
-                                        </h3>
+                                      ⦿ Process large-scale data using distributed computing, HDFS, YARN, MapReduce, and Hive optimization.
+                                    </h3>
 
-                                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                          ⦿ Build scalable live pipelines using Apache Spark, Spark SQL, RDDs, and Apache Kafka workflows.
-                                        </h3>
+                                      ⦿ Build scalable live pipelines using Apache Spark, Spark SQL, RDDs, and Apache Kafka workflows.
+                                    </h3>
 
-                                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                          ⦿ Design secure data pipelines using Azure Data Factory, Blob Storage, Data Lake, and Databricks.
-                                        </h3>
+                                      ⦿ Design secure data pipelines using Azure Data Factory, Blob Storage, Data Lake, and Databricks.
+                                    </h3>
 
-                                      </div>
+                                  </div>
 
               }
             </div>
@@ -1022,11 +1022,12 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                   ? "80 Hours" :
                   course.title === "AI for Beginners" ? "20 Hours" :
                     course.title === "AI for Entrepreneurs" ? "20 Hours" :
-                      course.title === "Data Science with Machine Learning & AI Certification"
+                      course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
                         ? "232 Hours"
                         : course.title === "AI for Product Managers"
                           ? "24 Hours"
-                          : "225 Hours"
+                          :
+                            "160 Hours"
                 }              </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Star size={16} className="mr-2" />
@@ -1652,7 +1653,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                     <option value="Mumbai">Mumbai</option>
                     <option value="Bangalore">Bangalore</option>
                     <option value="Pune">Pune</option>
-                    <option value="Hyderabad">Hyderabad</option>
+                    {/* <option value="Hyderabad">Hyderabad</option> */}
                     <option value="Chennai">Chennai</option>
                   </select>
                 </div>
@@ -1835,7 +1836,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                 <option value="Mumbai">Mumbai</option>
                 <option value="Bangalore">Bangalore</option>
                 <option value="Pune">Pune</option>
-                <option value="Hyderabad">Hyderabad</option>
+                {/* <option value="Hyderabad">Hyderabad</option> */}
                 <option value="Chennai">Chennai</option>
               </select>
 

@@ -266,9 +266,9 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
                       <option value="Pune" className="text-gray-800">
                         Pune
                       </option>
-                      <option value="Hyderabad" className="text-gray-800">
+                      {/* <option value="Hyderabad" className="text-gray-800">
                         Hyderabad
-                      </option>
+                      </option> */}
                       <option value="Chennai" className="text-gray-800">
                         Chennai
                       </option>

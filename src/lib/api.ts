@@ -1526,7 +1526,6 @@ const courses: Course[] = [
           { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
       },
-      ,
 
       {
         id: "m4",
@@ -1548,16 +1547,7 @@ const courses: Course[] = [
         "title": "Python Predictive Modeling & Basic Machine Learning",
         "duration": "40 hrs",
         "topics": [
-          // { "id": "t1", "title": "Python Programming Fundamentals: Core syntax, data structures, functions, and working with real datasets" },
-          // { "id": "t2", "title": "Data Analysis with Pandas & NumPy: Data cleaning, transformation, merging, and large dataset handling" },
-          // { "id": "t3", "title": "Exploratory Data Analysis (EDA): Visualization and insight generation using real-world datasets" },
-          // { "id": "t4", "title": "Feature Engineering & Data Preparation: Handling missing data, encoding, scaling, and preparing data for modelling" },
-          // { "id": "t5", "title": "Machine Learning Models: Regression, classification, decision trees, and real-world algorithms" },
-          // { "id": "t6", "title": "Model Evaluation & Validation: Cross-validation, ROC-AUC, confusion matrix, and performance metrics" },
-          // { "id": "t7", "title": "Model Explainability & Deployment: Feature importance, basic deployment using Flask/Streamlit, API" },
-          // { "id": "t8", "title": "AI in Python & ML: Using ChatGPT & Copilot for coding, debugging, EDA, and model interpretation" },
-          // { "id": "p1", "title": "Project: Expense Tracker \n Build a small console app to record, categorize, and summarize daily expenses using lists and dictionaries." },
-          // { "id": "p2", "title": "Project: Customer Churn Prediction \n Build a classification model to identify customers likely to discontinue a service." }
+         
 
           { id: "t1", title: "Advanced Pandas: Merge, Join, GroupBy, Pivot, and Data Aggregation", duration: "4 hrs" },
           { id: "t2", title: "Data Preprocessing: Imputation, Outlier Detection, Scaling, and Normalization", duration: "3.5 hrs" },
@@ -1574,7 +1564,6 @@ const courses: Course[] = [
 
         ]
       },
-      ,
       {
         id: "m6",
         title: "Power BI",
@@ -2774,7 +2763,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Kolkata",
-    description: "The Data Engineering Course in Kolkata is a comprehensive, job-oriented program focused on designing, building, and maintaining scalable data systems used by modern enterprises. This course emphasizes practical implementation of data pipelines, big data frameworks, cloud platforms, and distributed processing systems.In Kolkata’s evolving tech ecosystem, organizations increasingly require professionals who can manage high-volume, high-velocity, and high-variety data. This program prepares learners to handle real-world data challenges using tools such as SQL, Python, Hadoop, Spark, and cloud-based data platforms",
+    description: "Build a job-ready career in data engineering with practical training in cloud architecture, enterprise databases, and reliable big data pipelines. Learn MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks through hands-on projects and placement-focused guidance in Kolkata.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -3070,7 +3059,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Delhi",
-    description: "The Data Engineering Course in Delhi provides comprehensive training on building scalable, reliable, and high-performance data pipelines. The course focuses on real-world data engineering workflows, enabling learners to work with structured and unstructured data at scale. With Delhi witnessing rapid adoption of data-driven decision-making across sectors such as BFSI, consulting, e-governance, and IT services, this course aligns closely with current industry requirements. Learners gain exposure to batch and real-time data processing, cloud-based data architectures, and distributed computing systems.",
+    description: "Prepare for high-demand data engineering roles in Delhi NCR with a practical, project-driven course focused on enterprise databases, cloud data platforms, and scalable data pipelines. Master MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks with structured placement support.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -3365,7 +3354,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Bangalore",
-    description: "The Data Engineering Course in Bangalore by Ivy Professional School is designed for professionals and fresh graduates who want to build a strong career in data engineering and big data technologies. Known as the Silicon Valley of India, Bangalore offers immense opportunities for data engineers, and this program is crafted to meet the hiring demands of top tech companies.This course focuses on building scalable data pipelines, managing large datasets, and working with modern data engineering tools used across industries such as IT services, product companies, fintech, and startups.",
+    description: "Launch your data engineering career in India’s technology hub with hands-on training in cloud architecture, big data systems, and production-ready data pipelines. Learn MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks through real-world projects built for modern tech teams.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -3656,7 +3645,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Mumbai",
-    description: "The Data Engineering Course in Mumbai by Ivy Professional School is designed to prepare learners for high-demand data engineering roles across BFSI, consulting, media, e-commerce, and technology sectors. As India’s financial capital, Mumbai offers vast opportunities for data engineers skilled in building scalable, secure, and high-performance data systems.This program equips students with practical expertise in data pipelines, big data frameworks, and cloud-based data platforms used by leading enterprises.",
+    description: "Build practical data engineering skills for analytics, BFSI, consulting, and enterprise technology roles in Mumbai. Learn how to manage databases, design cloud data architecture, and build reliable big data pipelines using MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -3948,7 +3937,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Pune",
-    description: "The Data Engineering Course in Pune by Ivy Professional School is designed to help learners build industry-ready skills in data engineering, big data technologies, and modern data platforms. Pune is a fast-growing IT and analytics hub with strong presence of software companies, startups, and global delivery centers, creating high demand for skilled data engineers. This program focuses on practical, job-oriented training that prepares students to design, develop, and manage scalable data pipelines used by modern organizations.",
+    description: "Develop job-ready data engineering capabilities for Pune’s growing IT, analytics, and product ecosystem. Gain hands-on experience in MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks while learning to design scalable databases, cloud architecture, and big data pipelines.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -4240,7 +4229,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Chennai",
-    description: "The Data Engineering Course in Chennai by Ivy Professional School is designed for learners who want to build a strong career in data engineering and big data technologies. Chennai is a major hub for IT services, SaaS companies, manufacturing analytics, and global delivery centers, making it an ideal city for aspiring data engineers. This program equips students with industry-relevant skills to design, develop, and manage scalable data pipelines and data platforms used by modern enterprises.",
+    description: "Start a career-ready journey in data engineering with practical training designed for Chennai’s IT, manufacturing, BFSI, and enterprise analytics sectors. Learn to manage databases, process large-scale data, and build secure cloud pipelines using MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -4533,7 +4522,7 @@ const courses: Course[] = [
   {
     id: '12',
     title: "Data Science with Machine Learning & AI Course in Kolkata",
-    description: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training. \n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India.",
+    description: "Launch a job-ready career in data science, machine learning, and AI with Ivy Professional School’s practical, project-driven training and placement support in Kolkata. Learn analytics, Python, SQL, Power BI, machine learning, and Generative AI through hands-on projects designed for real business applications.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -4837,7 +4826,7 @@ const courses: Course[] = [
   {
     id: '13',
     title: "Data Science with Machine Learning & AI Course in Delhi",
-    description: "If you are searching for a job-oriented data science course in Delhi, Ivy Professional School offers a comprehensive, industry-relevant program designed to help learners build strong foundations in analytics, machine learning, and artificial intelligence. As one of India’s largest professional and corporate hubs, Delhi NCR hosts a wide range of opportunities across IT services, consulting, fintech, and analytics-driven organizations. This course equips learners with practical, in-demand data science skills aligned with real business needs.",
+    description: "Build a career-ready foundation in data science, machine learning, and AI with a practical certification program designed for Delhi NCR learners and working professionals. Gain hands-on experience in analytics, Python, SQL, Power BI, machine learning, and Generative AI with structured placement support.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -5140,7 +5129,7 @@ const courses: Course[] = [
   {
     id: '14',
     title: "Data Science with Machine Learning & AI Course in Pune",
-    description: "If you are looking for a career-focused data science course in Pune, Ivy Professional School offers a comprehensive program designed to help learners master analytics, machine learning, and artificial intelligence with real-world relevance. Pune is widely recognized as one of India’s leading IT and technology hubs, hosting global IT firms, startups, and analytics-driven organizations. This program is ideal for learners who want to build data science expertise aligned with Pune’s thriving tech ecosystem.",
+    description: "Develop job-ready skills in data science, machine learning, and AI with a practical, project-based certification program for Pune students and professionals. Learn analytics, Python, SQL, Power BI, ML models, and Generative AI applications through industry-relevant training and placement preparation.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -5444,7 +5433,7 @@ const courses: Course[] = [
   {
     id: '15',
     title: "Data Science with Machine Learning & AI Course in Chennai",
-    description: "If you are searching for a career-driven data science course in Chennai, Ivy Professional School offers a comprehensive program designed to help learners gain in-demand skills in analytics, machine learning, and artificial intelligence.Chennai is a major hub for IT services, manufacturing analytics, fintech, and enterprise technology, making it an excellent city to build a long-term career in data science. This program prepares learners to meet industry expectations through practical learning and real-world exposure",
+    description: "Build a strong career path in analytics, machine learning, and AI with a practical certification program designed for Chennai learners and working professionals. Gain hands-on skills in Python, SQL, Power BI, statistics, machine learning, and Generative AI with real-world projects and placement support",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -5748,7 +5737,7 @@ const courses: Course[] = [
   {
     id: '16',
     title: "Data Science with Machine Learning & AI Course in Bangalore",
-    description: "Ivy Professional School’s Data Science Course in Bangalore with Machine Learning and Gen AI is designed to help you break into this high-growth field with confidence. Whether you’re a fresher or a working professional, this program focuses on what actually gets you hired. Learn through a hands-on, industry-driven curriculum covering Excel, SQL, Python, Machine Learning, and AI, combined with real-world projects and business case studies. Build a strong portfolio, gain practical experience, and develop the skills companies actively look for. With dedicated career support, mentorship, and placement assistance, you’ll be prepared for roles like Data Analyst, Data Scientist, and Machine Learning Engineer.",
+    description: "Prepare for data-driven roles in India’s technology hub with a practical Data Science, Machine Learning & AI Certification. Learn Python, SQL, analytics, Power BI, machine learning, and Generative AI through project-based training built for business, product, and technology careers.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -6054,7 +6043,7 @@ const courses: Course[] = [
   {
     id: '17',
     title: "Data Science with Machine Learning & AI Course in Mumbai",
-    description: "Mumbai is India’s financial capital and a major hub for BFSI, media, e-commerce, consulting, and technology-driven enterprises. The Data Science with Machine Learning & AI Course in Mumbai by Ivy Professional School is designed to help learners build industry-ready data science skills aligned with the needs of Mumbai’s fast-paced, data-driven business ecosystem. This comprehensive data science program integrates statistics, Python programming, machine learning, and AI with hands-on projects and real-world case studies. Whether you are a graduate, working professional, or domain expert looking to transition into analytics, this Mumbai-focused data science course prepares you for high-growth roles across industries",
+    description: "Start your career transition into analytics, machine learning, and AI with a job-focused certification program for Mumbai learners and professionals. Master Python, SQL, Power BI, statistics, machine learning, and Generative AI through practical projects, business cases, and placement support.",
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1243,
@@ -6456,7 +6445,6 @@ const courses: Course[] = [
           { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
       },
-      ,
 
       {
         id: "m4",
@@ -6504,7 +6492,6 @@ const courses: Course[] = [
 
         ]
       },
-      ,
       {
         id: "m6",
         title: "Power BI",
@@ -6712,7 +6699,6 @@ const courses: Course[] = [
           { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
       },
-      ,
 
       {
         id: "m4",
@@ -6760,7 +6746,6 @@ const courses: Course[] = [
 
         ]
       },
-      ,
       {
         id: "m6",
         title: "Power BI",
@@ -6967,7 +6952,6 @@ const courses: Course[] = [
           { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
       },
-      ,
 
       {
         id: "m4",
@@ -7015,7 +6999,6 @@ const courses: Course[] = [
 
         ]
       },
-      ,
       {
         id: "m6",
         title: "Power BI",
@@ -7222,7 +7205,6 @@ const courses: Course[] = [
           { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
       },
-      ,
 
       {
         id: "m4",
@@ -7270,7 +7252,6 @@ const courses: Course[] = [
 
         ]
       },
-      ,
       {
         id: "m6",
         title: "Power BI",
@@ -7478,7 +7459,6 @@ const courses: Course[] = [
           { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
       },
-      ,
 
       {
         id: "m4",
@@ -7526,7 +7506,6 @@ const courses: Course[] = [
 
         ]
       },
-      ,
       {
         id: "m6",
         title: "Power BI",
@@ -9872,7 +9851,6 @@ const courses: Course[] = [
           { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)", "duration": "2 hrs" },
         ]
       },
-      ,
 
       {
         id: "m4",
@@ -9920,7 +9898,6 @@ const courses: Course[] = [
 
         ]
       },
-      ,
       {
         id: "m6",
         title: "Power BI",
