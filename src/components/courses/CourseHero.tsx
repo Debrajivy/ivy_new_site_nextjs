@@ -1117,7 +1117,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         "Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai"
                       ) {
                         syllabusUrl =
-                          "https://drive.google.com/file/d/1cT9-gqqqifm-HvBE81WDsql0FxQIs8hP/preview";
+                          "https://drive.google.com/file/d/1y6iqAqiIPd7_DAAirOBVb2sKLeJKdQF5/preview";
                       } else if (
                         course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
                       ) {
@@ -1127,7 +1127,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         course.title === " Data Engineering Course"
                       ) {
                         syllabusUrl =
-                          "https://drive.google.com/file/d/16M3RbkXd00VOpyluTVGcN0rFDDvC4uVx/preview";
+                          "https://drive.google.com/file/d/1Pyygn3rr0vlwyxShgYolK99q6rRb1Ncv/preview";
                       } else if (
                         course.title ===
                         "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai"
@@ -1153,7 +1153,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         course.title === "Data science course (Pay after Placement)"
                       ) {
                         syllabusUrl =
-                          "https://drive.google.com/file/d/1GzZjPir-BJYQDuVYiiBu6RxU5LsUuC7_/preview";
+                          "https://drive.google.com/file/d/1a1gYATYn33yUVxWXZOdp5aGjFkYXCCk4/preview";
                       }
                       else if (
                         course.title === "AI and Machine Learning Course"
@@ -1165,12 +1165,15 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         course.title === "AI for Entrepreneurs"
                       ) {
                         syllabusUrl =
-                          "https://drive.google.com/file/d/1FiGWxinmHnSiZAOna9sZUP29ayX8GMT_/preview";
+                          "https://drive.google.com/file/d/1gVuaONPzZV3gCU-MWCZmkAKh-V-csTqk/preview";
                       }
 
                       else if (course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai") {
                         syllabusUrl =
                           "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
+                      }
+                      else{
+                        syllabusUrl = "https://drive.google.com/file/d/1y6iqAqiIPd7_DAAirOBVb2sKLeJKdQF5/preview";
                       }
                       if (!syllabusUrl) {
                         setSubmitStatus("error");
