@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   title: "#1 Data Science & GenAI Training Institute | Placement Assistance | Ivy Professional School",
   description:
-    "Advance your career in GenAI & Data Science with Ivy Pro, trusted by 37,500+ alumni across 500+ firms. Rated 4.9/5. Backed by IIT Guwahati, NASSCOM & IBM since 2008.",
+    "Advance your career in Data Science with Ivy Pro, trusted by 37,500+ alumni across 500+ firms. Rated 4.9/5. Industry-led training since 2008.",
   authors: [{ name: "Ivy Professional School" }],
   keywords: [
     "GenAI Courses",
@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     "Ivy Professional School",
     "Analytics Training",
     "AI Training",
-    "IIT Guwahati",
     "NASSCOM",
     "IBM",
     "MEITY",
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "#1 Data Science & GenAI Training Institute | Placement Assistance | Ivy Professional School",
     description:
-      "JLearn Data Science, GenAI & AI from IIT-certified instructors. Pay After Placement. 4.8★ (1300+ reviews). Placements at Amazon, IBM, Deloitte. Kolkata & Bangalore. Apply Now!",
+      "Advance your career in Data Science with Ivy Pro, trusted by 37,500+ alumni across 500+ firms. Rated 4.9/5. Industry-led training since 2008.",
     url: "https://ivyproschool.com/",
     type: "website",
     siteName: "Ivy Professional School",
@@ -42,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "#1 Data Science & GenAI Training Institute | Placement Assistance | Ivy Professional School",
     description:
-      "JLearn Data Science, GenAI & AI from IIT-certified instructors. Pay After Placement. 4.8★ (1300+ reviews). Placements at Amazon, IBM, Deloitte. Kolkata & Bangalore. Apply Now!",
+      "Advance your career in Data Science with Ivy Pro, trusted by 37,500+ alumni across 500+ firms. Rated 4.9/5. Industry-led training since 2008.",
     site: "@IvyProSchool",
     images: ["https://ivyproschool.com/assets/logo.webp"],
   },
@@ -64,7 +63,7 @@ const schemaData = {
     "https://www.instagram.com/ivyproschool",
   ],
   description:
-    "JLearn Data Science, GenAI & AI from IIT-certified instructors. Pay After Placement. 4.8★ (1300+ reviews). Placements at Amazon, IBM, Deloitte. Kolkata & Bangalore. Apply Now!",
+    "Advance your career in Data Science with Ivy Pro, trusted by 37,500+ alumni across 500+ firms. Rated 4.9/5. Industry-led training since 2008.",
   foundingDate: "2008",
   address: {
     "@type": "PostalAddress",

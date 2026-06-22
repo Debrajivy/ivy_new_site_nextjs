@@ -386,7 +386,7 @@ const Hero = () => {
           {/* Description - Shown only on mobile after the form */}
           <div className="lg:hidden w-full mt-6">
             <p className="text-sm md:text-base text-gray-700">
-              Land high-paying jobs by choosing Ivy Pro's courses that are accredited by NASSCOM, IIT and Govt. of India (MEITY) and compiled as per National Occupation Standards.
+              Land high-paying jobs by choosing Ivy Pro's courses that are accredited by NASSCOM and Govt. of India (MEITY) and compiled as per National Occupation Standards.
             </p>
             {/* Mobile CTA Buttons */}
             <div className="flex gap-3 mt-4">
