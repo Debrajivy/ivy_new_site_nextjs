@@ -1170,7 +1170,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
                       else if (course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai") {
                         syllabusUrl =
-                          "https://drive.google.com/file/d/1bh4z-fUmfOp_7_M4HnxOulZkGRF9U19Y/preview";
+                          "https://drive.google.com/file/d/1Pyygn3rr0vlwyxShgYolK99q6rRb1Ncv/preview";
                       }
                       else{
                         syllabusUrl = "https://drive.google.com/file/d/1y6iqAqiIPd7_DAAirOBVb2sKLeJKdQF5/preview";
