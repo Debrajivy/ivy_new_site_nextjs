@@ -8,6 +8,7 @@ import { ArrowLeft, Eye, EyeOff, Building2, BookOpen, Database, CheckCircle2, Ch
 import { Badge } from '@/components/ui/badge';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { pythonDrills } from './pythonDrills';
 
 import Case1 from "../../assests/casestudies/Case1.webp";
 import Case2 from "../../assests/casestudies/Case2.webp";
@@ -16,7 +17,8 @@ import Case4 from "../../assests/casestudies/Case4.webp";
 // ============================================================
 // TYPES
 // ============================================================
-type ActiveCategory = 'corporate' | 'learning';
+type ActiveCategory = 'corporate' | 'sql' | 'python';
+type LearningCategory = Exclude<ActiveCategory, 'corporate'>;
 type Difficulty = 'Beginner' | 'Intermediate' | 'Advanced';
 
 const slugifyCaseStudyTitle = (value: string) =>
@@ -3265,6 +3267,23 @@ const sqlDrillSlugMap = Object.fromEntries(
   ])
 );
 
+const pythonDrillSlugMap = Object.fromEntries(
+  Object.values(pythonDrills).map((drill) => [
+    slugifyCaseStudyTitle(drill.title),
+    drill,
+  ])
+);
+
+const learningDrills = {
+  ...sqlDrills,
+  ...pythonDrills,
+};
+
+const learningDrillSlugMap = {
+  ...sqlDrillSlugMap,
+  ...pythonDrillSlugMap,
+};
+
 const normalizeCaseStudySlug = (slug: string) => {
   try {
     return slugifyCaseStudyTitle(decodeURIComponent(slug));
@@ -3303,13 +3322,13 @@ const SkillChip: React.FC<{ skill: string }> = ({ skill }) => (
   </span>
 );
 
-const CodeBlock: React.FC<{ code: string }> = ({ code }) => (
+const CodeBlock: React.FC<{ code: string; label?: string }> = ({ code, label = 'query.sql' }) => (
   <div className="rounded-xl overflow-hidden border border-slate-700 shadow-lg">
     <div className="flex items-center gap-2 bg-slate-800 px-4 py-2.5 border-b border-slate-700">
       <span className="w-3 h-3 rounded-full bg-red-500" />
       <span className="w-3 h-3 rounded-full bg-yellow-500" />
       <span className="w-3 h-3 rounded-full bg-green-500" />
-      <span className="ml-2 text-xs text-slate-400 font-mono">query.sql</span>
+      <span className="ml-2 text-xs text-slate-400 font-mono">{label}</span>
     </div>
     <pre className="bg-slate-900 p-5 overflow-x-auto text-sm font-mono text-slate-100 leading-relaxed">
       <code>{code}</code>
@@ -3357,7 +3376,7 @@ const difficultySectionStyles: Record<Difficulty, {
   Beginner: {
     eyebrow: 'Start here',
     title: 'Beginner Drills',
-    description: 'Core SQL practice for joins, grouping, filtering, and clear query structure.',
+    description: 'Core practice for data manipulation, grouping, aggregation, and clear analytical structure.',
     panel: 'border-emerald-200 bg-emerald-50/50',
     accent: 'bg-emerald-500',
     button: 'border-emerald-200 text-emerald-700 hover:bg-emerald-50',
@@ -3365,7 +3384,7 @@ const difficultySectionStyles: Record<Difficulty, {
   Intermediate: {
     eyebrow: 'Build fluency',
     title: 'Intermediate Drills',
-    description: 'Business-style SQL problems with dates, windows, CTEs, and reporting logic.',
+    description: 'Business-style problems with conditional logic, ranking, date handling, and reporting workflows.',
     panel: 'border-amber-200 bg-amber-50/50',
     accent: 'bg-amber-500',
     button: 'border-amber-200 text-amber-700 hover:bg-amber-50',
@@ -3373,7 +3392,7 @@ const difficultySectionStyles: Record<Difficulty, {
   Advanced: {
     eyebrow: 'Stretch skills',
     title: 'Advanced Drills',
-    description: 'Complex analytical SQL using recursive logic, graph-style joins, and screening workflows.',
+    description: 'Complex analytical drills that combine multiple concepts into end-to-end decision workflows.',
     panel: 'border-red-200 bg-red-50/50',
     accent: 'bg-red-500',
     button: 'border-red-200 text-red-700 hover:bg-red-50',
@@ -3382,7 +3401,9 @@ const difficultySectionStyles: Record<Difficulty, {
 
 const DRILLS_PER_BATCH = 3;
 
-const DrillCard: React.FC<{ drill: SqlDrill }> = ({ drill }) => (
+type LearningDrill = typeof learningDrills[keyof typeof learningDrills];
+
+const DrillCard: React.FC<{ drill: LearningDrill }> = ({ drill }) => (
   <Link
     href={`/casestudies/${slugifyCaseStudyTitle(drill.title)}`}
     className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all duration-300 cursor-pointer group"
@@ -3390,7 +3411,7 @@ const DrillCard: React.FC<{ drill: SqlDrill }> = ({ drill }) => (
     <div className="relative bg-[#013a81] px-6 pt-6 pb-8 overflow-hidden">
       <div className="relative">
         <span className="text-slate-400 text-xs font-mono font-semibold uppercase tracking-widest">
-          SQL Data Drill
+          {drill.tool} Data Drill
         </span>
         <div className="text-7xl font-black text-white/10 font-mono leading-none mt-1 select-none">
           #{drill.number}
@@ -3543,11 +3564,10 @@ const CorporateDetailView: React.FC<{ caseStudy: CorporateCaseStudy; onBack: () 
 };
 
 // ============================================================
-// SQL DRILL DETAIL VIEW
+// LEARNING DRILL DETAIL VIEW
 // ============================================================
-type SqlDrill = typeof sqlDrills[keyof typeof sqlDrills];
 
-const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ drill, onBack }) => {
+const DrillDetailView: React.FC<{ drill: LearningDrill; onBack: () => void }> = ({ drill, onBack }) => {
   const [showSolution, setShowSolution] = useState(false);
   const detailSlug = slugifyCaseStudyTitle(drill.title);
 
@@ -3582,7 +3602,7 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
               Learning
             </span>
             <span className="text-slate-400 text-xs">/</span>
-            <span className="text-slate-300 text-xs font-mono">SQL Data Drill #{drill.number}</span>
+            <span className="text-slate-300 text-xs font-mono">{drill.tool} Data Drill #{drill.number}</span>
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white mb-3">
             {drill.title}
@@ -3635,7 +3655,7 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
                     <tr className="bg-slate-50 border-b border-slate-200">
                       <th className="px-3 py-2 text-left text-slate-500 font-semibold uppercase tracking-wider">Column</th>
                       <th className="px-3 py-2 text-left text-slate-500 font-semibold uppercase tracking-wider">Type</th>
-                      <th className="px-3 py-2 text-left text-slate-500 font-semibold uppercase tracking-wider">Key</th>
+                      <th className="px-3 py-2 text-left text-slate-500 font-semibold uppercase tracking-wider">Key / Notes</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">
@@ -3645,11 +3665,15 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
                         <td className="px-3 py-2 font-mono text-slate-500">{col.type}</td>
                         <td className="px-3 py-2">
                           {col.constraint && (
-                            <span className={`px-1.5 py-0.5 rounded text-xs font-bold ${
-                              col.constraint === 'PK' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700'
-                            }`}>
-                              {col.constraint}
-                            </span>
+                            col.constraint === 'PK' || col.constraint === 'FK' ? (
+                              <span className={`px-1.5 py-0.5 rounded text-xs font-bold ${
+                                col.constraint === 'PK' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700'
+                              }`}>
+                                {col.constraint}
+                              </span>
+                            ) : (
+                              <span className="text-slate-500">{col.constraint}</span>
+                            )
                           )}
                         </td>
                       </tr>
@@ -3753,8 +3777,10 @@ const DrillDetailView: React.FC<{ drill: SqlDrill; onBack: () => void }> = ({ dr
             <div className="px-7 pb-7 space-y-6 border-t border-slate-100 pt-6">
               {/* SQL */}
               <div>
-                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">SQL Query</p>
-                <CodeBlock code={drill.solution.sql} />
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">
+                  {drill.tool === 'SQL' ? 'SQL Query' : drill.tool === 'Python' ? 'Python Code' : 'Case Solution'}
+                </p>
+                <CodeBlock code={drill.solution.sql} label={drill.tool === 'SQL' ? 'query.sql' : drill.tool === 'Python' ? 'analysis.py' : 'strategy.txt'} />
               </div>
 
               {/* How It Works */}
@@ -3836,14 +3862,21 @@ const CaseStudiesPage = (props: any = {}) => {
   const [activeCategory, setActiveCategory] = useState<ActiveCategory>('corporate');
   const [selectedCorporateSlug, setSelectedCorporateSlug] = useState<string | null>(null);
   const [selectedDrillId, setSelectedDrillId] = useState<string | null>(null);
-  const [visibleDrillCounts, setVisibleDrillCounts] = useState<Record<Difficulty, number>>({
-    Beginner: DRILLS_PER_BATCH,
-    Intermediate: DRILLS_PER_BATCH,
-    Advanced: DRILLS_PER_BATCH,
+  const [visibleDrillCounts, setVisibleDrillCounts] = useState<Record<LearningCategory, Record<Difficulty, number>>>({
+    sql: {
+      Beginner: DRILLS_PER_BATCH,
+      Intermediate: DRILLS_PER_BATCH,
+      Advanced: DRILLS_PER_BATCH,
+    },
+    python: {
+      Beginner: DRILLS_PER_BATCH,
+      Intermediate: DRILLS_PER_BATCH,
+      Advanced: DRILLS_PER_BATCH,
+    },
   });
   const normalizedInitialSlug = initialSlug ? normalizeCaseStudySlug(initialSlug) : null;
   const initialCorporateCaseStudy = normalizedInitialSlug ? corporateCaseStudySlugMap[normalizedInitialSlug] : null;
-  const initialDrill = normalizedInitialSlug ? sqlDrillSlugMap[normalizedInitialSlug] : null;
+  const initialDrill = normalizedInitialSlug ? learningDrillSlugMap[normalizedInitialSlug] : null;
 
   const handleCorporateCardClick = (slug: string) => {
     setSelectedCorporateSlug(slug);
@@ -3855,10 +3888,13 @@ const CaseStudiesPage = (props: any = {}) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleViewMoreDrills = (difficulty: Difficulty) => {
+  const handleViewMoreDrills = (category: LearningCategory, difficulty: Difficulty) => {
     setVisibleDrillCounts((current) => ({
       ...current,
-      [difficulty]: current[difficulty] + DRILLS_PER_BATCH,
+      [category]: {
+        ...current[category],
+        [difficulty]: current[category][difficulty] + DRILLS_PER_BATCH,
+      },
     }));
   };
 
@@ -3891,7 +3927,7 @@ const CaseStudiesPage = (props: any = {}) => {
       <>
         <Navbar />
         <DrillDetailView
-          drill={initialDrill as SqlDrill}
+          drill={initialDrill as LearningDrill}
           onBack={handleBack}
         />
         <Footer />
@@ -3913,12 +3949,12 @@ const CaseStudiesPage = (props: any = {}) => {
     );
   }
 
-  if (selectedDrillId && sqlDrills[selectedDrillId as keyof typeof sqlDrills]) {
+  if (selectedDrillId && learningDrills[selectedDrillId as keyof typeof learningDrills]) {
     return (
       <>
         <Navbar />
         <DrillDetailView
-          drill={sqlDrills[selectedDrillId as keyof typeof sqlDrills]}
+          drill={learningDrills[selectedDrillId as keyof typeof learningDrills] as LearningDrill}
           onBack={handleBack}
         />
         <Footer />
@@ -3928,10 +3964,17 @@ const CaseStudiesPage = (props: any = {}) => {
 
   // List view
   const corporateList = Object.values(corporateCaseStudies);
-  const drillList = Object.values(sqlDrills).sort((a, b) => a.number - b.number);
+  const sqlDrillList = Object.values(sqlDrills).sort((a, b) => a.number - b.number);
+  const pythonDrillList = Object.values(pythonDrills).sort((a, b) => a.number - b.number);
+  const activeLearningCategory = activeCategory === 'python' ? 'python' : 'sql';
+  const drillList = activeLearningCategory === 'python' ? pythonDrillList : sqlDrillList;
+  const activeLearningTitle = activeLearningCategory === 'python' ? 'Python Data Drills' : 'SQL Data Drills';
+  const activeLearningDescription = activeLearningCategory === 'python'
+    ? 'Hands-on Python, Pandas, ML, and statistics drills organized by difficulty for applied analytics practice.'
+    : 'Hands-on SQL challenges organized by difficulty, so learners can progress from fundamentals to advanced analytical problem solving.';
   const drillGroups = difficultyOrder.map((difficulty) => {
     const drills = drillList.filter((drill) => drill.difficulty === difficulty);
-    const visibleCount = visibleDrillCounts[difficulty];
+    const visibleCount = visibleDrillCounts[activeLearningCategory][difficulty];
 
     return {
       difficulty,
@@ -3986,19 +4029,35 @@ const CaseStudiesPage = (props: any = {}) => {
               </span>
             </button>
             <button
-              onClick={() => setActiveCategory('learning')}
+              onClick={() => setActiveCategory('sql')}
               className={`flex items-center gap-2 px-5 py-4 text-sm font-semibold border-b-2 transition-colors ${
-                activeCategory === 'learning'
+                activeCategory === 'sql'
                   ? 'border-indigo-500 text-indigo-600'
                   : 'border-transparent text-slate-500 hover:text-slate-700'
               }`}
             >
               <BookOpen className="h-4 w-4" />
-              Learning
+              SQL
               <span className={`ml-1 px-1.5 py-0.5 rounded-full text-xs font-bold ${
-                activeCategory === 'learning' ? 'bg-indigo-100 text-indigo-600' : 'bg-slate-100 text-slate-500'
+                activeCategory === 'sql' ? 'bg-indigo-100 text-indigo-600' : 'bg-slate-100 text-slate-500'
               }`}>
-                {drillList.length}
+                {sqlDrillList.length}
+              </span>
+            </button>
+            <button
+              onClick={() => setActiveCategory('python')}
+              className={`flex items-center gap-2 px-5 py-4 text-sm font-semibold border-b-2 transition-colors ${
+                activeCategory === 'python'
+                  ? 'border-emerald-500 text-emerald-600'
+                  : 'border-transparent text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              <Database className="h-4 w-4" />
+              Python
+              <span className={`ml-1 px-1.5 py-0.5 rounded-full text-xs font-bold ${
+                activeCategory === 'python' ? 'bg-emerald-100 text-emerald-600' : 'bg-slate-100 text-slate-500'
+              }`}>
+                {pythonDrillList.length}
               </span>
             </button>
           </div>
@@ -4051,14 +4110,14 @@ const CaseStudiesPage = (props: any = {}) => {
             </div>
           )}
 
-          {/* ─── LEARNING TAB ─── */}
-          {activeCategory === 'learning' && (
+          {/* ─── LEARNING DRILLS TABS ─── */}
+          {(activeCategory === 'sql' || activeCategory === 'python') && (
             <div>
               <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold text-slate-800 mb-1">SQL Data Drills</h2>
+                  <h2 className="text-2xl font-bold text-slate-800 mb-1">{activeLearningTitle}</h2>
                   <p className="text-slate-500 max-w-2xl">
-                    Hands-on SQL challenges organized by difficulty, so learners can progress from fundamentals to advanced analytical problem solving.
+                    {activeLearningDescription}
                   </p>
                 </div>
                 <div className="grid grid-cols-3 gap-2 sm:min-w-[360px]">
@@ -4101,7 +4160,7 @@ const CaseStudiesPage = (props: any = {}) => {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {visibleDrills.map((drill) => (
-                          <DrillCard key={drill.id} drill={drill as SqlDrill} />
+                          <DrillCard key={drill.id} drill={drill as LearningDrill} />
                         ))}
                       </div>
 
@@ -4109,10 +4168,10 @@ const CaseStudiesPage = (props: any = {}) => {
                         <div className="mt-6 flex justify-center">
                           <button
                             type="button"
-                            onClick={() => handleViewMoreDrills(difficulty)}
+                            onClick={() => handleViewMoreDrills(activeLearningCategory, difficulty)}
                             className={`inline-flex items-center gap-2 rounded-full border bg-white px-5 py-2.5 text-sm font-bold shadow-sm transition-colors ${section.button}`}
                           >
-                            View more {difficulty} drills
+                            View more {difficulty} {activeLearningCategory === 'python' ? 'Python' : 'SQL'} drills
                             <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-500">
                               +{Math.min(DRILLS_PER_BATCH, hiddenCount)}
                             </span>
@@ -4129,8 +4188,10 @@ const CaseStudiesPage = (props: any = {}) => {
                   <div className="flex items-start gap-3">
                     <Database className="mt-1 h-5 w-5 text-indigo-500" />
                     <div>
-                      <p className="font-bold text-slate-800">More learning formats coming soon</p>
-                      <p className="text-sm text-slate-500 mt-1">Python, Excel, Power BI and additional analytics drills will be added here.</p>
+                      <p className="font-bold text-slate-800">Learning library index</p>
+                      <p className="text-sm text-slate-500 mt-1">
+                        Currently indexed: {sqlDrillList.length} SQL drills and {pythonDrillList.length} Python drills.
+                      </p>
                     </div>
                   </div>
                   <span className="w-fit rounded-full bg-indigo-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-indigo-600">

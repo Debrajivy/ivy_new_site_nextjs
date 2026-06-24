@@ -29,6 +29,18 @@ const caseStudySlugs = [
   "batch-wise-order-packaging-allocation",
   "ropeway-station-route-analysis",
   "student-screening-and-failed-subject-analysis",
+  "retail-sales-revenue-analysis",
+  "employee-performance-analysis",
+  "student-performance-and-scholarship-analysis",
+  "customer-profitability-and-loyalty-analysis",
+  "bank-loan-risk-analysis",
+  "hospital-patient-visit-analysis",
+  "food-delivery-performance-analysis",
+  "website-traffic-quality-analysis",
+  "insurance-claim-severity-analysis",
+  "hotel-booking-cancellation-analysis",
+  "customer-churn-prediction-strategy",
+  "subscription-pricing-a-b-test-analysis",
 ];
 
 const titleFromSlug = (slug: string) => {

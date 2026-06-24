@@ -2,5 +2,346 @@
   "title": "Copilot & M365",
   "icon": "Layout",
   "color": "bg-sky-500",
-  "description": "Microsoft Copilot and Office 365"
+  "description": "Microsoft Copilot and Office 365",
+  "subcategories": {
+    "excel-copilot": {
+      "title": "Excel Copilot",
+      "icon": "Table",
+      "topics": [
+        {
+          "id": "how-to-use-microsoft-copilot-to-automate-excel-data-cleaning",
+          "title": "How to use Microsoft Copilot to automate Excel data cleaning",
+          "description": "Learn how to prepare Excel data for Microsoft Copilot, remove duplicates, standardize text, fix data-entry issues, handle missing values, and generate formulas with natural-language prompts.",
+          "duration": "12 min read",
+          "date": "June 24, 2026",
+          "content": {
+            "hero": {
+              "title": "How to use Microsoft Copilot to automate Excel data cleaning",
+              "date": "June 24, 2026",
+              "readTime": "12 min read"
+            },
+            "sections": [
+              {
+                "id": "intro",
+                "title": "Introduction",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "hasBar": true,
+                    "text": "Imagine sitting down with a massive, chaotic spreadsheet first thing on a Monday morning. You have thousands of rows filled with duplicate entries, inconsistent date formats, missing values, and mixed-up text casing. Traditionally, fixing this meant hours of manual cleanup, complex nested formulas, or wrestling with Power Query."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Microsoft Copilot in Excel changes that workflow. Think of Copilot not just as an automated tool, but as a collaborative partner. Instead of memorizing syntax or clicking through endless menus, you can talk to your data using everyday language and ask Copilot to transform messy data into analysis-ready tables."
+                  }
+                ]
+              },
+              {
+                "id": "toc",
+                "type": "toc",
+                "title": "What You Will Learn",
+                "content": [
+                  {
+                    "id": "setup",
+                    "label": "Set up Excel correctly for Copilot"
+                  },
+                  {
+                    "id": "automate-cleaning",
+                    "label": "Use Copilot prompts for common cleaning tasks"
+                  },
+                  {
+                    "id": "data-entry-errors",
+                    "label": "Identify and fix data-entry errors"
+                  },
+                  {
+                    "id": "advanced-automation",
+                    "label": "Generate formulas and conditional logic"
+                  },
+                  {
+                    "id": "best-practices",
+                    "label": "Follow best practices for AI-assisted cleaning"
+                  }
+                ]
+              },
+              {
+                "id": "setup",
+                "title": "The Prerequisites: Setting Up Your Workspace for Success",
+                "phase": "Step 1",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Before letting Copilot work on your data, make sure your file is set up properly. AI is powerful, but it needs a structured environment to understand the columns, rows, and context of your spreadsheet."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Access and subscriptions"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "To use Copilot in Excel, you need a Microsoft 365 Copilot subscription or a Copilot Pro license. Your Excel workbook also needs to be connected to OneDrive or SharePoint because Copilot uses cloud-based computation. Keep AutoSave turned on so the workbook is synced."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Convert your range into an Excel Table"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Copilot works best with official Excel Tables, not loose grids of cells. Click inside your data range, press Ctrl + T, confirm that My table has headers is checked, and click OK. This gives Copilot a clear map of your dataset."
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Click inside your data range",
+                        "description": "Select any cell inside the dataset you want Copilot to clean."
+                      },
+                      {
+                        "title": "Press Ctrl + T",
+                        "description": "Or go to Home and choose Format as Table."
+                      },
+                      {
+                        "title": "Confirm headers",
+                        "description": "Make sure My table has headers is checked before clicking OK."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "note",
+                    "title": "Why this matters",
+                    "content": "By wrapping your data in a formal Excel Table, you give Copilot clear boundaries and column names. That makes natural-language prompts much more reliable."
+                  }
+                ]
+              },
+              {
+                "id": "automate-cleaning",
+                "title": "How to Use Microsoft Copilot to Automate Excel Data Cleaning",
+                "phase": "Step 2",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Once your workbook is ready, open the Copilot pane from the Home tab of the Excel ribbon. Data cleaning usually follows a sequence: identifying structural issues, fixing formatting, removing duplicate records, and filling missing values."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "1. Remove duplicates and extra spaces"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Duplicate records and accidental trailing spaces are common in raw data. They may look harmless, but they can break formulas like VLOOKUP, XLOOKUP, and lookup-based dashboards."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Prompt examples",
+                    "borderColor": "blue",
+                    "code": "Look at the Customer ID column and highlight any duplicate rows.\n\nRemove all duplicate rows based on the Customer ID column.\n\nClean up the text in the Product Name column by removing extra spaces at the beginning and end."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Copilot can scan the relevant column, preview duplicate rows, apply conditional formatting, or remove duplicate records based on your instruction."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "2. Standardize inconsistent text"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "If names or product labels are written in a mix of uppercase, lowercase, and sentence case, the sheet looks unprofessional and becomes harder to sort or group."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Prompt example",
+                    "borderColor": "emerald",
+                    "code": "Format the names in the Employee Name column so that only the first letter of each word is capitalized."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Copilot can recognize that this requires proper case formatting and may suggest a new calculated column. Review the preview, then insert the column if it looks correct."
+                  }
+                ]
+              },
+              {
+                "id": "data-entry-errors",
+                "title": "Can Microsoft Copilot Identify and Fix Data Entry Errors?",
+                "phase": "Step 3",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Yes. This is where Copilot starts to feel like a real assistant. Human data entry often creates inconsistent formats, misspellings, wrong data types, and values in the wrong columns."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Catch outliers and mismatched formats"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Suppose a Price column should contain numbers, but a few rows contain values like TBD or Pending. Or maybe dates appear in multiple formats across the same column. Copilot can help you find these anomalies."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Prompt examples",
+                    "borderColor": "amber",
+                    "code": "Scan the Price column and highlight any cells that do not contain numbers.\n\nReplace any text values in the Price column with a blank space.\n\nStandardize all dates in the Invoice Date column to the MM/DD/YYYY format."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Handle missing data intelligently"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Blank cells can damage analysis, charts, and summary reports. Copilot can fill blanks based on simple replacement rules or more contextual business logic."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Prompt examples",
+                    "borderColor": "purple",
+                    "code": "Find all blank cells in the Quantity column and fill them with 0.\n\nFor any missing values in the Regional Sales column, fill them with the average value of that specific region."
+                  },
+                  {
+                    "type": "warning",
+                    "title": "Review before accepting",
+                    "content": "Missing-value rules can change your analysis. Always review Copilot's preview and confirm that the replacement logic matches your business context."
+                  }
+                ]
+              },
+              {
+                "id": "advanced-automation",
+                "title": "Advanced Automation: Generating Formulas and Conditional Logic",
+                "phase": "Step 4",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Cleaning data is not only about deleting errors. Often you need to restructure a dataset so it can support reporting, filtering, dashboards, and analysis. Copilot can generate calculated columns from simple descriptions."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Split and combine columns without Flash Fill"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "If a Full Address column contains street, city, and zip code in one field, you can ask Copilot to extract the part you need into a new column."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Prompt example",
+                    "borderColor": "blue",
+                    "code": "Create a new column that extracts the zip code from the Full Address column."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Apply conditional flags"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Sometimes data cleaning means categorizing records so they are easier to filter, audit, or review. Copilot can translate business rules into IF-style logic."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Prompt example",
+                    "borderColor": "emerald",
+                    "code": "Add a column named Audit Status. If the Order Amount is greater than $10,000, set the value to Review Required. Otherwise, set it to Approved."
+                  },
+                  {
+                    "type": "explanation",
+                    "title": "What Copilot is doing",
+                    "borderColor": "blue",
+                    "content": "Copilot interprets the business rule, generates a formula or transformation, previews the output, and lets you approve the change before it is applied to the Excel Table."
+                  }
+                ]
+              },
+              {
+                "id": "best-practices",
+                "title": "Best Practices for Cleaning Data with AI",
+                "phase": "Step 5",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Working with AI is a conversational process. To get accurate results and protect your data, use clear prompts and review each proposed transformation carefully."
+                  },
+                  {
+                    "type": "checklist",
+                    "items": [
+                      {
+                        "checked": true,
+                        "text": "Be explicit and specific: Instead of saying Fix the dates, say Format the Shipping Date column to show full month names, day, and year."
+                      },
+                      {
+                        "checked": true,
+                        "text": "Review previews closely: Read Copilot's explanation and inspect highlighted cells or new formulas before committing changes."
+                      },
+                      {
+                        "checked": true,
+                        "text": "Use Undo confidently: Excel's Ctrl + Z shortcut can revert changes if a Copilot result is not what you expected."
+                      },
+                      {
+                        "checked": true,
+                        "text": "Keep original data safe: For critical business data, keep a backup copy of the raw file before making major transformations."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "table",
+                    "title": "Common Cleaning Tasks and Copilot Prompts",
+                    "headers": [
+                      "Task",
+                      "Prompt"
+                    ],
+                    "rows": [
+                      [
+                        "Find duplicate records",
+                        "Highlight duplicate rows based on Customer ID."
+                      ],
+                      [
+                        "Remove extra spaces",
+                        "Clean Product Name by removing leading and trailing spaces."
+                      ],
+                      [
+                        "Fix mixed text casing",
+                        "Convert Employee Name to proper case."
+                      ],
+                      [
+                        "Find non-numeric values",
+                        "Highlight cells in Price that do not contain numbers."
+                      ],
+                      [
+                        "Fill missing values",
+                        "Fill blank Quantity cells with 0."
+                      ],
+                      [
+                        "Create audit flags",
+                        "Mark orders above $10,000 as Review Required."
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ],
+            "conclusion": {
+              "title": "Elevating Your Productivity",
+              "content": "By shifting the burden of syntax and formatting to Microsoft Copilot, you turn data cleaning from a frustrating chore into a quick conversation. You no longer need to let messy formatting stall your projects or spend afternoons troubleshooting broken formulas.",
+              "checklist": [
+                {
+                  "item": "Prepare",
+                  "text": "Sync the workbook and convert data to an Excel Table"
+                },
+                {
+                  "item": "Prompt",
+                  "text": "Ask Copilot for specific cleaning actions"
+                },
+                {
+                  "item": "Review",
+                  "text": "Check previews before applying transformations"
+                },
+                {
+                  "item": "Protect",
+                  "text": "Keep a raw-data backup for important files"
+                }
+              ],
+              "finalNote": "Open your most frustrating spreadsheet, convert it into a table, and start talking to Copilot.",
+              "finalParagraph": "When you automate the mechanics of data preparation, you free up time to focus on the stories and insights hidden inside your data."
+            }
+          }
+        }
+      ]
+    }
+  }
 }
