@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { Course } from '@/lib/api';
+import type { Course } from '@/lib/api';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Clock, FileText, CheckCircle, X, LayoutDashboard, Plus, Sparkles, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';

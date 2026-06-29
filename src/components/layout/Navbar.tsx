@@ -443,19 +443,24 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between h-16 px-4 md:px-6">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <img
-                src={typeof icon === "string" ? icon : icon.src}
+              <Image
+                src={icon}
                 alt="Ivy Professional School"
-                className="h-9"
+                width={160}
+                height={36}
+                priority
+                className="h-9 w-auto"
               />
             </Link>
 
             <div className="hidden lg:flex items-center px-3 py-2 col-span-2 md:col-span-1">
               <div className="flex flex-col items-start ml-2">
                 <div className="flex items-center px-3 py-2 rounded-lg col-span-2 md:col-span-1">
-                  <img
-                    src={typeof review === "string" ? review : review?.src || "/placeholder.svg"}
+                  <Image
+                    src={review}
                     alt="Rating"
+                    width={144}
+                    height={36}
                     className="w-36 h-9 border-2 border-white object-cover"
                   />
                 </div>
@@ -464,9 +469,11 @@ const Navbar = () => {
 
             <div className="lg:hidden flex items-center space-x-2 ml-2">
               <div className="flex items-center  py-2 rounded-lg col-span-2 md:col-span-1">
-                <img
-                  src={typeof review === "string" ? review : review?.src || "/placeholder.svg"}
+                <Image
+                  src={review}
                   alt="Rating"
+                  width={128}
+                  height={32}
                   className="w-32 h-8 md:w-48 md:h-12 border-2 border-white object-cover"
                 />
               </div>

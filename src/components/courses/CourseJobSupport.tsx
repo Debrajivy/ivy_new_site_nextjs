@@ -49,7 +49,7 @@ import Cdec from "../../assests/Cdec.jpg";
 import Davc from "../../assests/Davc.jpg";
 import Dsvc from "../../assests/Dsvc.jpg";
 import Nc from "../../assests/Nc.jpg";
-import { Course } from '@/lib/api';
+import type { Course } from '@/lib/api';
 import Pmc from "../../assests/PMC.png";
 import Iitc from "../../assests/Iitc.jpg";
 import PAPC from "../../assests/PAPC.jpeg";

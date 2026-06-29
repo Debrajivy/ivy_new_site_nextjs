@@ -8,7 +8,6 @@ import CourseProjects from "@/components/courses/CourseProjects"
 import CourseAlumni from "@/components/courses/CourseAlumni"
 import CourseFAQ from "@/components/courses/CourseFAQ"
 import CourseAccreditation from "@/components/courses/CourseAccreditation"
-import CourseTestimonials from "@/components/courses/CourseTestimonials"
 import CourseEnrollCTA from "@/components/courses/CourseEnrollCTA"
 import CourseJobSupport from "@/components/courses/CourseJobSupport"
 import type { Metadata } from "next"
@@ -76,31 +75,28 @@ export default async function CoursePage({ params }: AsyncPageProps) {
           <div id="course-accreditation-section">
             <CourseAccreditation />
           </div>
-          <div id="course-overview-section">
+          <div id="course-overview-section" className="course-deferred-section">
             <CourseOverview course={course} />
           </div>
-          <div id="course-curriculum-section">
+          <div id="course-curriculum-section" className="course-deferred-section">
             <CourseCurriculum course={course} />
           </div>
-          <div id="course-projects-section">
+          <div id="course-projects-section" className="course-deferred-section">
             <CourseProjects course={course} />
           </div>
-          <div id="course-jobsupport-section">
+          <div id="course-jobsupport-section" className="course-deferred-section">
             <CourseJobSupport course={course} />
           </div>
-          <div id="course-alumni-section">
+          <div id="course-alumni-section" className="course-deferred-section">
             <CourseAlumni courseId={course.id} />
           </div>
-          <div id="course-testimonials-section">
-            <CourseTestimonials courseId={course.id} />
-          </div>
-          <div id="course-faq-section">
+          <div id="course-faq-section" className="course-deferred-section">
             <CourseFAQ course={course} />
           </div>
-          <div id="course-enrollcta-section">
+          <div id="course-enrollcta-section" className="course-deferred-section">
             <CourseEnrollCTA course={course} />
           </div>
-          <div id="course-enrollcta-section">
+          <div className="course-deferred-section">
             <MicroLinkFAQ course={course} />
           </div>
         </main>

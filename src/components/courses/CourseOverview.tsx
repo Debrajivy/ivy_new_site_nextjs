@@ -1,5 +1,5 @@
 import React from 'react';
-import { Course } from '@/lib/api';
+import type { Course } from '@/lib/api';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { CheckCircle, Users, Award, Briefcase, Brain, TrendingUp, Factory, Zap, Rocket, Target, Linkedin, Layers, BookOpen } from 'lucide-react';

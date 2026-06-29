@@ -86,8 +86,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         {/* Resource hints — load critical third-party origins early */}
-        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-        <link rel="preconnect" href="https://i.ytimg.com" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />
@@ -97,11 +95,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-981187918"
 
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script
           id="google-ads"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -121,7 +119,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* GTM - Google Tag Manager */}
         <Script
           id="google-tag-manager"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

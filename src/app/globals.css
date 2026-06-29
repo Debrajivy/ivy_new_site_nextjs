@@ -102,6 +102,12 @@
 .phone-button-container * {
   overflow: visible !important;
 }
+
+/* Skip layout and paint work for course sections until they approach the viewport. */
+.course-deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
 @layer base {
   * {
     @apply border-border;

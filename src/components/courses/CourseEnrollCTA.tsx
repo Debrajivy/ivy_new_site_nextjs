@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Course } from '@/lib/api';
+import type { Course } from '@/lib/api';
 import { CheckCircle, Calendar, CreditCard, BookOpen, Award, BarChart4, Building } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 

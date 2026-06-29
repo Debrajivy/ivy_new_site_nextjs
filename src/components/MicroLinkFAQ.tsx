@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Course } from '@/lib/api';
+import type { Course } from '@/lib/api';
 
 interface LinkData {
   anchorText: string;

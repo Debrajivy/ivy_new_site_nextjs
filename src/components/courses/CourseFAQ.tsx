@@ -3,7 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
-import { Course } from '@/lib/api';
+import type { Course } from '@/lib/api';
 
 interface CourseHeroProps {
   course: Course;

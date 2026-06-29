@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Star, Award, CheckCircle, X, ChevronRight, NotebookPen, Wrench } from "lucide-react";
+import { Clock, Users, Star, Award, X, ChevronRight, NotebookPen, Wrench } from "lucide-react";
 
 /* Official WhatsApp logo path from SimpleIcons */
 const WhatsAppIcon = ({ size = 28 }: { size?: number }) => (
@@ -11,16 +11,11 @@ const WhatsAppIcon = ({ size = 28 }: { size?: number }) => (
     <path fill="#ffffff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
   </svg>
 );
-import { Course } from "@/lib/api";
-import E from "@/assests/E&ICT.webp";
+import type { Course } from "@/lib/api";
 import ibm from "@/assests/IBM2.webp";
 import deloitte from "@/assests/deloitte.webp";
 import pwc from "@/assests/pwc.webp";
 import amazon from "@/assests/amazon.webp";
-import NASSCOM from "@/assests/NASSCOM.png";
-import ivy from "@/assests/ivy.png";
-import IIT_logo from "@/assests/IIT_logo.jpg"; // Import the IIT_logo
-import IIT_BACKGROUND from "@/assests/IIT_BACKGROUND.webp";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -507,12 +502,6 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     course.title === "Data Science with Machine Learning & AI Certification" ||
     course.title === "Generative AI Course" ||
     course.title === "Cloud Data Engineering Course with IIT Guwahati";
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
   return (
     <section
       style={{ marginTop: -30 }}
@@ -588,31 +577,31 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
                     <div className="space-y-6">
 
-                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                      <p style={{ fontSize: 17 }} className="font-normal  text-white">
                         {/* <span className="font-bold" style={{ color: '#2b2b2b' }}>•</span>{" "} */}
                         ⦿ Use ChatGPT, Claude, Gemini, and Grok for business
                         communication, research, and executive reporting.
-                      </h3>
+                      </p>
 
-                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                      <p style={{ fontSize: 17 }} className="font-normal  text-white">
                         {/* <span className="font-bold" style={{ color: '#2b2b2b' }}>•</span>{" "} */}
                         ⦿ Create brand messages, competitor insights, product photos,
                         reels, and lead generation workflows.
-                      </h3>
+                      </p>
 
-                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                      <p style={{ fontSize: 17 }} className="font-normal  text-white">
                         {/* <span className="font-bold" style={{ color: '#2b2b2b' }}>•</span>{" "} */}
                         ⦿ No-Code Automation:
                         Build trigger-based workflows for customer inquiries,
                         data entry, invoice processing, and back-office tasks.
-                      </h3>
+                      </p>
 
-                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                      <p style={{ fontSize: 17 }} className="font-normal  text-white">
                         {/* <span className="font-bold" style={{ color: '#2b2b2b' }}>•</span>{" "} */}
                         ⦿ Data & Roadmaps:
                         Analyze business data, create AI-assisted dashboards,
                         and design a custom AI implementation roadmap.
-                      </h3>
+                      </p>
 
                     </div>
                   </>
@@ -625,7 +614,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
                       <div className="space-y-6">
 
-                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
+                        <p style={{ fontSize: 17 }} className="font-normal  text-white" >
                           {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -634,9 +623,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           </span>{" "} */}
                           ⦿ Master Advanced Excel, SQL, Tableau, Power BI, Python, R,
                           statistics, and business reporting.
-                        </h3>
+                        </p>
 
-                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                        <p style={{ fontSize: 17 }} className="font-normal  text-white">
                           {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -645,9 +634,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           </span>{" "} */}
                           ⦿ Build predictive modeling, clustering, decision trees,
                           ensemble techniques, NLP, and deep learning.
-                        </h3>
+                        </p>
 
-                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                        <p style={{ fontSize: 17 }} className="font-normal  text-white">
                           {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -656,9 +645,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           </span>{" "} */}
                           ⦿ Use Generative AI for rapid SQL generation, automated EDA,
                           dashboard insights, and documentation.
-                        </h3>
+                        </p>
 
-                        <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                        <p style={{ fontSize: 17 }} className="font-normal  text-white">
                           {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -667,7 +656,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           </span>{" "} */}
                           ⦿ Build hands-on projects across industry use cases with
                           interview coaching and placement support.
-                        </h3>
+                        </p>
 
                       </div>
                     </>
@@ -678,7 +667,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           What You Will Learn
                         </h2> */}
                         <div className="space-y-6">
-                          <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                          <p style={{ fontSize: 17 }} className="font-normal  text-white">
                             {/* <span className="font-bold"
                               style={{ color: "#2b2b2b" }}
                             >
@@ -686,9 +675,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             </span>{" "} */}
                             ⦿ Master Excel, SQL, Power BI, and Power Pivot for data
                             cleaning, dashboards, and reporting.
-                          </h3>
+                          </p>
 
-                          <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                          <p style={{ fontSize: 17 }} className="font-normal  text-white">
                             {/* <span className="font-bold"
                               style={{ color: "#2b2b2b" }}
                             >
@@ -696,19 +685,19 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             </span>{" "} */}
                             ⦿ Leverage Generative AI for advanced business research,
                             coding support, and workflow automation.
-                          </h3>
+                          </p>
 
-                          <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                          <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
                             ⦿ Build your Python foundation to design and deploy custom
                             GenAI applications using Streamlit.
-                          </h3>
+                          </p>
 
-                          <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                          <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
                             ⦿ Combine analytics and GenAI to automate executive reports
                             and solve complex business problems.
-                          </h3>
+                          </p>
                         </div>
                       </>
                       :
@@ -719,33 +708,33 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             What You Will Learn
                           </h2> */}
                           <div className="space-y-6">
-                            <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                            <p style={{ fontSize: 17 }} className="font-normal  text-white">
                               {/* <span className="font-bold"
                               style={{ color: "#2b2b2b" }}
                             >
                               Core Analytics:
                             </span>{" "} */}
                               ⦿ Learn executive business analysis, interactive pivot tables, dynamic dashboards, and AI-assisted workflows.
-                            </h3>
+                            </p>
 
-                            <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                            <p style={{ fontSize: 17 }} className="font-normal  text-white">
                               {/* <span className="font-bold"
                               style={{ color: "#2b2b2b" }}
                             >
                               GenAI Execution:
                             </span>{" "} */}
                               ⦿ Manage corporate databases, write complex queries, and use AI tools to optimize SQL code.
-                            </h3>
+                            </p>
 
-                            <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                            <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
                               ⦿ Build enterprise dashboards using Power Query, data modeling, advanced charts, and DAX formulas.
-                            </h3>
+                            </p>
 
-                            <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                            <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
                               ⦿ Master data cleaning, predictive modeling, and automated EDA using Pandas, NumPy, and Seaborn.
-                            </h3>
+                            </p>
                           </div>
                         </>
                         :
@@ -759,7 +748,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
                             <div className="space-y-6">
 
-                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
+                              <p style={{ fontSize: 17 }} className="font-normal  text-white" >
                                 {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -767,9 +756,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             Analytics Core:
                           </span>{" "} */}
                                 ⦿ Master the anatomy of effective prompts, prompt chaining, fact-checking protocols, and citation-backed research using Perplexity AI and NotebookLM.
-                              </h3>
+                              </p>
 
-                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                              <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                 {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -777,9 +766,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             ML & Deep Learning:
                           </span>{" "} */}
                                 ⦿ Create stunning digital assets by learning text-to-image styling, automated video production, and custom music composition using Suno.
-                              </h3>
+                              </p>
 
-                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                              <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                 {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -787,9 +776,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             AI-Assisted Efficiency:
                           </span>{" "} */}
                                 ⦿ Build functional, interactive web applications from scratch using natural language, basic coding logic, and modern no-code platforms like Lovable.
-                              </h3>
+                              </p>
 
-                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                              <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                 {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -797,14 +786,14 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             Portfolio & Career Prep:
                           </span>{" "} */}
                                 ⦿ Automate data visualization and formulas in Google Sheets, draft unbiased surveys, and generate professional presentations, emails, and AI voiceovers.
-                              </h3>
+                              </p>
 
                             </div>
                           </> :
                           course.title === "Data science course (Pay after Placement)" ?
                             <div className="space-y-6">
 
-                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
+                              <p style={{ fontSize: 17 }} className="font-normal  text-white" >
                                 {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -813,9 +802,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           </span>{" "} */}
                                 ⦿ Master Advanced Excel, SQL, Tableau, Power BI, Python, R,
                                 statistics, and business reporting.
-                              </h3>
+                              </p>
 
-                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                              <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                 {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -824,9 +813,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           </span>{" "} */}
                                 ⦿ Build predictive modeling, clustering, decision trees,
                                 ensemble techniques, NLP, and deep learning.
-                              </h3>
+                              </p>
 
-                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                              <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                 {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -835,9 +824,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           </span>{" "} */}
                                 ⦿ Use Generative AI for rapid SQL generation, automated EDA,
                                 dashboard insights, and documentation.
-                              </h3>
+                              </p>
 
-                              <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                              <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                 {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -846,7 +835,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                           </span>{" "} */}
                                 ⦿ Build hands-on projects across industry use cases with
                                 interview coaching and placement support.
-                              </h3>
+                              </p>
 
                             </div>
 
@@ -855,7 +844,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             course.title === "AI for Product Managers" ?
                               <div className="space-y-6">
 
-                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
+                                <p style={{ fontSize: 17 }} className="font-normal  text-white" >
                                   {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -863,9 +852,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             Analytics Core:
                           </span>{" "} */}
                                   ⦿	Learn the "Build vs. Prompt vs. Buy" framework, evaluate problem feasibility via the AI Opportunity Matrix, and differentiate between foundational AI and feature-based AI.
-                                </h3>
+                                </p>
 
-                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                   {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -873,9 +862,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             ML & Deep Learning:
                           </span>{" "} */}
                                   ⦿ Apply advanced prompt engineering styles (CoT, few-shot) to automate internal operations like Zendesk support triage, in-product copywriting, and PRD generation.
-                                </h3>
+                                </p>
 
-                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                   {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -883,9 +872,9 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             AI-Assisted Efficiency:
                           </span>{" "} */}
                                   ⦿ Evaluate multi-agent orchestration platforms and Retrieval-Augmented Generation (RAG) architectures to securely connect enterprise data to customer support and compliance systems.
-                                </h3>
+                                </p>
 
-                                <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                   {/* <span
                             className="font-bold"
                             style={{ color: "#2b2b2b" }}
@@ -893,7 +882,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                             Portfolio & Career Prep:
                           </span>{" "} */}
                                   ⦿ Build testable stakeholder prototypes using no-code AI tools, while designing "LLM-as-a-judge" evaluation pipelines to monitor prompt drift, hallucinations, and compliance risk.
-                                </h3>
+                                </p>
 
                               </div>
 
@@ -904,30 +893,30 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
 
                                   <div className="space-y-6">
-                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                       {/* <span className="font-bold"
                               style={{ color: "#2b2b2b" }}
                             >
                               Core Analytics:
                             </span>{" "} */}
                                       ⦿ Master probability distributions, exploratory data analysis, feature engineering, and statistical testing in Python.
-                                    </h3>
+                                    </p>
 
-                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <p style={{ fontSize: 17 }} className="font-normal  text-white">
                                       {/* <span className="font-bold"
                               style={{ color: "#2b2b2b" }}
                             >
                               GenAI Execution:
                             </span>{" "} */}
-                                      ⦿ Build and optimize machine learning models using Scikit-Learn, NumPy, Pandas, and Seaborn.                              </h3>
+                                      ⦿ Build and optimize machine learning models using Scikit-Learn, NumPy, Pandas, and Seaborn.                              </p>
 
-                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                      ⦿ Architect natural language processing solutions, decision trees, clustering, and deep learning networks.                              </h3>
+                                      ⦿ Architect natural language processing solutions, decision trees, clustering, and deep learning networks.                              </p>
 
-                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                      ⦿ Deploy live web applications using Flask, Streamlit, automated EDA pipelines, and code documentation.                              </h3>
+                                      ⦿ Deploy live web applications using Flask, Streamlit, automated EDA pipelines, and code documentation.                              </p>
                                   </div>
                                 </>
                                 :
@@ -936,44 +925,44 @@ const CourseHero = ({ course }: CourseHeroProps) => {
 
 
                                     <div style={{ marginTop: 50 }} className="space-y-6">
-                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                      <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                        ⦿ Master Python setup, Git workflows, prompt engineering (ReAct, Tree-of-Thought), tokenization, and advanced API integrations.                                </h3>
-                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                        ⦿ Master Python setup, Git workflows, prompt engineering (ReAct, Tree-of-Thought), tokenization, and advanced API integrations.                                </p>
+                                      <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                        ⦿ Implement open-source model fine-tuning using LoRA/QLoRA alongside robust vector database retrieval-augmented generation pipelines.                              </h3>
+                                        ⦿ Implement open-source model fine-tuning using LoRA/QLoRA alongside robust vector database retrieval-augmented generation pipelines.                              </p>
 
-                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                      <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
                                         ⦿ Architect multi-agent execution frameworks, custom tools, and complex stateful workflows using LangGraph and LCEL.
-                                      </h3>
-                                      <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                      </p>
+                                      <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
-                                        ⦿ Deploy scalable AI microservices via FastAPI and Docker, and build multi-sensory applications using Vision, Whisper, and Stable Diffusion.                                </h3>
+                                        ⦿ Deploy scalable AI microservices via FastAPI and Docker, and build multi-sensory applications using Vision, Whisper, and Stable Diffusion.                                </p>
                                     </div>
                                   </>
                                   :
                                   <div className="space-y-6">
 
-                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white" >
+                                    <p style={{ fontSize: 17 }} className="font-normal  text-white" >
 
                                       ⦿	Master MySQL database operations, advanced query writing, window functions, and Python data manipulation.
-                                    </h3>
+                                    </p>
 
-                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
                                       ⦿ Process large-scale data using distributed computing, HDFS, YARN, MapReduce, and Hive optimization.
-                                    </h3>
+                                    </p>
 
-                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
                                       ⦿ Build scalable live pipelines using Apache Spark, Spark SQL, RDDs, and Apache Kafka workflows.
-                                    </h3>
+                                    </p>
 
-                                    <h3 style={{ fontSize: 17 }} className="font-normal  text-white">
+                                    <p style={{ fontSize: 17 }} className="font-normal  text-white">
 
                                       ⦿ Design secure data pipelines using Azure Data Factory, Blob Storage, Data Lake, and Databricks.
-                                    </h3>
+                                    </p>
 
                                   </div>
 
@@ -1416,7 +1405,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                         aria-label={`View ${alumni.name} on alumni page`}
                       >
                         <div className={`relative w-10 h-10 rounded-full overflow-hidden ring-2 ${s.ring} flex-shrink-0`}>
-                          <Image src={alumni.image} alt={alumni.name} fill className="object-cover" />
+                          <Image src={alumni.image} alt={alumni.name} fill sizes="40px" className="object-cover" />
                         </div>
                         <div className="w-full">
                           <p className="font-bold text-gray-800 text-[12px] leading-tight line-clamp-2">{alumni.name}</p>
@@ -1424,7 +1413,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                         </div>
                         <div className={`w-full border-t ${s.border} pt-1`}>
                           <div className="relative h-12 w-full">
-                            <Image src={alumni.company} alt="company" fill className="object-contain" />
+                            <Image src={alumni.company} alt={`${alumni.name}'s company`} fill sizes="140px" className="object-contain" />
                           </div>
                         </div>
                         <p className="min-h-[34px] text-[10px] leading-snug text-gray-600 line-clamp-2">

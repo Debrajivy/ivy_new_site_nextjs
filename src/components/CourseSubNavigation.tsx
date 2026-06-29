@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react'; // Removed Menu as it's no longer used for mobile sub-nav
-import { Course } from '@/lib/api';
+import type { Course } from '@/lib/api';
 
 interface CourseOverviewProps {
   course: Course;
@@ -28,7 +28,7 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
   const isEntrepreneurCourse = course.title === "AI for Entrepreneurs";
 
   // Full list of navigation items for desktop
-  const navItems = [
+  const navItems = useMemo(() => [
     { name: 'Overview & Faculty', id: 'course-overview-section' },
     { name: 'Curriculum & Fees', id: 'course-curriculum-section' },
     // Only show Projects if NOT AI for Entrepreneurs
@@ -39,10 +39,10 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
     },
     { name: 'Review', id: 'course-alumni-section' },
     { name: 'FAQ', id: 'course-faq-section' },
-  ];
+  ], [isEntrepreneurCourse]);
 
   // Filtered list for mobile
-  const mobileNavItems = [
+  const mobileNavItems = useMemo(() => [
     { name: 'Curriculum & Fees', mobileName: 'Curriculum', id: 'course-curriculum-section' },
     // Only show Projects if NOT AI for Entrepreneurs
     ...(!isEntrepreneurCourse ? [{ name: 'Projects', mobileName: 'Projects', id: 'course-projects-section' }] : []),
@@ -52,7 +52,7 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
       id: 'course-jobsupport-section' 
     },
     { name: 'Review', mobileName: 'Review', id: 'course-alumni-section' },
-  ];
+  ], [isEntrepreneurCourse]);
 
   const NAVBAR_HEIGHT = 60;
   const SUBNAV_HEIGHT = 60;
@@ -83,44 +83,52 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
 
   // Effect for handling scroll logic and popup visibility
   useEffect(() => {
+    let frameId: number | null = null;
+
     const handleScroll = () => {
-      const scrollThreshold = 700;
-      setIsSubNavSticky(window.scrollY > scrollThreshold);
+      if (frameId !== null) return;
 
-      const popupThreshold = 300;
+      frameId = window.requestAnimationFrame(() => {
+        frameId = null;
+        const scrollThreshold = 700;
+        setIsSubNavSticky(window.scrollY > scrollThreshold);
 
-      if (
-        canShowPopupAfterDelay &&
-        window.scrollY > popupThreshold &&
-        !showFixedPopup &&
-        !hasPopupBeenDismissed
-      ) {
-        setShowFixedPopup(true);
-      } else if (window.scrollY <= popupThreshold && showFixedPopup) {
-        setShowFixedPopup(false);
-      }
+        const popupThreshold = 300;
+
+        if (
+          canShowPopupAfterDelay &&
+          window.scrollY > popupThreshold &&
+          !showFixedPopup &&
+          !hasPopupBeenDismissed
+        ) {
+          setShowFixedPopup(true);
+        } else if (window.scrollY <= popupThreshold && showFixedPopup) {
+          setShowFixedPopup(false);
+        }
 
       // Logic to update activeMobileNavItem based on scroll position
       // This is a common pattern for "scrollspy"
-      let currentActiveId = '';
-      for (let i = mobileNavItems.length - 1; i >= 0; i--) {
-        const item = mobileNavItems[i];
-        const element = document.getElementById(item.id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // Consider an item "active" if its top is within the viewport,
-          // with a slight offset to account for sticky headers/padding
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            currentActiveId = item.id;
-            break;
+        let currentActiveId = '';
+        for (let i = mobileNavItems.length - 1; i >= 0; i--) {
+          const item = mobileNavItems[i];
+          const element = document.getElementById(item.id);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+              currentActiveId = item.id;
+              break;
+            }
           }
         }
-      }
-      setActiveMobileNavItem(currentActiveId);
+        setActiveMobileNavItem(currentActiveId);
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (frameId !== null) window.cancelAnimationFrame(frameId);
+    };
   }, [showFixedPopup, canShowPopupAfterDelay, hasPopupBeenDismissed, mobileNavItems]); // Add mobileNavItems to dependencies
 
   const handleClosePopup = () => {
