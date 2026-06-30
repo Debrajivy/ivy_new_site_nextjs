@@ -1016,7 +1016,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         : course.title === "AI for Product Managers"
                           ? "24 Hours"
                           :
-                            "160 Hours"
+                          "160 Hours"
                 }              </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Star size={16} className="mr-2" />
@@ -1161,7 +1161,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         syllabusUrl =
                           "https://drive.google.com/file/d/1Pyygn3rr0vlwyxShgYolK99q6rRb1Ncv/preview";
                       }
-                      else{
+                      else {
                         syllabusUrl = "https://drive.google.com/file/d/1y6iqAqiIPd7_DAAirOBVb2sKLeJKdQF5/preview";
                       }
                       if (!syllabusUrl) {
@@ -1531,6 +1531,46 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                   <iframe
                     width="100%"
                     height="340"
+                    src="https://www.youtube.com/embed/jnygCU3KFHg?autoplay=1"
+                    title="AI for Entrepreneurs"
+                    style={{ border: "none" }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full"
+                  />
+                ) : (
+                  <div
+                    className="relative cursor-pointer group"
+                    onClick={() => setVideoPlaying(true)}
+                  >
+                    <img
+                      src="https://img.youtube.com/vi/jnygCU3KFHg/hqdefault.jpg"
+                      alt="AI for Entrepreneurs video thumbnail"
+                      className="w-full object-cover"
+                      style={{ height: 340 }}
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                      <div className="bg-red-600 rounded-full p-4 shadow-xl group-hover:scale-110 transition-transform">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="white"
+                          className="w-8 h-8"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+            {/* {course.title === "AI for Entrepreneurs" && (
+              <div className="mb-4 rounded-xl overflow-hidden shadow-lg">
+                {videoPlaying ? (
+                  <iframe
+                    width="100%"
+                    height="340"
                     src="https://www.youtube.com/embed/_Z2Dw0id6dA?autoplay=1"
                     title="AI for Entrepreneurs"
                     style={{ border: "none" }}
@@ -1564,7 +1604,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                   </div>
                 )}
               </div>
-            )}
+            )} */}
             <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-6 w-full h-full flex flex-col">
               <div className="text-center mb-6">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
