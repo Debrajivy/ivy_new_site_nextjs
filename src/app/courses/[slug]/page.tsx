@@ -15,6 +15,7 @@ import { fetchCourseById } from "@/lib/api"
 // Prefer the alias to avoid fragile relatives
 import CourseSubNavigation from "@/components/CourseSubNavigation"
 import MicroLinkFAQ from "@/components/MicroLinkFAQ"
+import CourseAIAdvisor from "@/components/courses/CourseAIAdvisor"
 
 // Types that match Next's generated PageProps
 type Params = { slug: string }
@@ -71,6 +72,7 @@ export default async function CoursePage({ params }: AsyncPageProps) {
 
           {/* Sticky sub-nav */}
           <CourseSubNavigation course={course} />
+          <CourseAIAdvisor courseTitle={course.title} courseSlug={course.slug} />
           {/* Anchor targets */}
           <div id="course-accreditation-section">
             <CourseAccreditation />
