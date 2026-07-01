@@ -69,6 +69,17 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
     return null;
   }
 
+  const certificateImage =
+    course.title === " Advanced Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ? genaicertificate :
+      course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" ? NASSCOMML :
+        course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ? Cdec :
+          course.title === "Data Analytics and Generative AI Course" ? DAGACC :
+            course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Pune" || course.title === "Data Analytics With Visualization in Chennai" ? Davc :
+              course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
+                course.title === "AI for Product Managers" || course.title === "AI for Entrepreneurs" ? Pmc :
+                  course.title === "AI and Machine Learning Course" ? AIML :
+                    course.title === "Data science course (Pay after Placement)" ? PAPC : null;
+
   const partners = [
     { name: 'Accenture', logo: smallaccenture },
     { name: 'Aditya Birla', logo: smalladityabirla },
@@ -1038,28 +1049,19 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                   alignItems: 'center',
                   gap: '24px'
                 }}>
-                  <Image
-                    src={
-                      course.title === " Advanced Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ? genaicertificate :
-                        course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" ? NASSCOMML :
-                          course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" ? Cdec :
-                            course.title === "Data Analytics and Generative AI Course" ?  DAGACC:
-                              course.title === "Data Analytics With Visualization" || course.title === "Data Analytics With Visualization in Kolkata" || course.title === "Data Analytics With Visualization in Delhi" || course.title === "Data Analytics With Visualization in Bangalore" || course.title === "Data Analytics With Visualization in Mumbai" || course.title === "Data Analytics With Visualization in Pune"  || course.title === "Data Analytics With Visualization in Chennai" ? Davc :
-                                course.title === "Cloud Data Engineering Course with IIT Guwahati" ? Nc :
-                                  course.title === "AI for Product Managers" || course.title === "AI for Entrepreneurs" ? Pmc :
-                                    course.title === "AI and Machine Learning Course" ? AIML :
-                                      course.title === "Data science course (Pay after Placement)" ? PAPC : ""
-                    }
-                    alt="Certificate"
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      objectFit: 'contain',
-                      borderRadius: '12px',
-                      boxShadow: '0 6px 20px rgba(0, 0, 0, 0.1)',
-
-                    }}
-                  />
+                  {certificateImage && (
+                    <Image
+                      src={certificateImage}
+                      alt="Certificate"
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'contain',
+                        borderRadius: '12px',
+                        boxShadow: '0 6px 20px rgba(0, 0, 0, 0.1)',
+                      }}
+                    />
+                  )}
 
                   <a
                     href="/verify-certificate"

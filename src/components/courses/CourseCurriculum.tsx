@@ -161,7 +161,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
   };
 
   return (
-    <section style={{ marginTop: -30, paddingBottom: 20 }} className="bg-gray-50">
+    <section style={{  paddingBottom: 20 }} className="bg-gray-50">
       {/* Main Curriculum Content */}
       <div className="container mx-auto px-4">
 
