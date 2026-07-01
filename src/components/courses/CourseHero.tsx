@@ -1525,7 +1525,48 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
           </div>
 
           <div style={{ marginTop: 30 }}>
+
             {course.title === "AI for Entrepreneurs" && (
+  <div className="mb-4 rounded-xl overflow-hidden shadow-lg">
+    {videoPlaying ? (
+      <iframe
+        width="100%"
+        height="340"
+        src="https://www.youtube.com/embed/7xAibAQFCRA?autoplay=1"
+        title="AI for Entrepreneurs"
+        style={{ border: "none" }}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full"
+      />
+    ) : (
+      <div
+        className="relative cursor-pointer group"
+        onClick={() => setVideoPlaying(true)}
+      >
+        <img
+          src="https://img.youtube.com/vi/7xAibAQFCRA/hqdefault.jpg"
+          alt="AI for Entrepreneurs video thumbnail"
+          className="w-full object-cover"
+          style={{ height: 340 }}
+        />
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+          <div className="bg-red-600 rounded-full p-4 shadow-xl group-hover:scale-110 transition-transform">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="white"
+              className="w-8 h-8"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+)}
+            {/* {course.title === "AI for Entrepreneurs" && (
               <div className="mb-4 rounded-xl overflow-hidden shadow-lg">
                 {videoPlaying ? (
                   <iframe
@@ -1564,7 +1605,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                   </div>
                 )}
               </div>
-            )}
+            )} */}
             {/* {course.title === "AI for Entrepreneurs" && (
               <div className="mb-4 rounded-xl overflow-hidden shadow-lg">
                 {videoPlaying ? (
