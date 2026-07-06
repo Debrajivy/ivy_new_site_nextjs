@@ -134,7 +134,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     'Data Science with Machine Learning & AI Course in Mumbai': { courseFee: 56000, registration: 10000, emi: 5111, months: 9 },
     // Removed duplicate 'Data Analytics and Generative AI Course' key to fix error
     ' Data Engineering Course': { courseFee: 58500, registration: 10000, emi: 5389, months: 9 },
-    'AI for Entrepreneurs': { courseFee: 35900, registration: 14950, emi: 5389, months: 9 },
+    'AI for Entrepreneurs': { courseFee: 34900, registration: 14950, emi: 5389, months: 9 },
     'Data Engineering Course in Kolkata': { courseFee: 58500, registration: 10000, emi: 5389, months: 9 },
     'Data Engineering Course in Delhi': { courseFee: 58500, registration: 10000, emi: 5389, months: 9 },
     'Data Engineering Course in Bangalore': { courseFee: 58500, registration: 10000, emi: 5389, months: 9 },
@@ -384,6 +384,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                           <div className="text-center">
                             <p className="text-4xl font-bold">₹{price.courseFee.toLocaleString()}</p>
                             <p className="text-sm mt-1 opacity-90">+ GST applicable</p>
+                            {course.title==="AI for Entrepreneurs" ? <p className="text-sm mt-1 opacity-90">( Includes tuition fee, lab access and learning materials)</p>:null}
                           </div>
                         </div>
                       );
@@ -408,8 +409,13 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                           <CheckCircle className="text-blue-500 mr-2 h-5 w-5" />
                           {course.title === "AI for Beginners" ? <span>Capstone Showcase + personalized portfolio feedback</span> : <span>Career support services</span>}
                         </li>
+                        
+                        
                       </ul>
                     </div>
+
+
+                    
                   </div>
 
                   {/* Right Column - Payment Options */}

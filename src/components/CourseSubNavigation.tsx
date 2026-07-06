@@ -287,7 +287,7 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
                   </Button>
                   <div className="flex items-center justify-center gap-2 pt-2">
                     <p className="text-sm font-semibold text-center">
-                      New batch starting 30th May and 13th June, 2026
+                      New batch starting 18th July, 2026
                       <span className="inline-block w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                       <span className="text-red-600">&nbsp;Limited seats left!</span>
                     </p>

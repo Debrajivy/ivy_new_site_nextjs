@@ -16,6 +16,7 @@ import { fetchCourseById } from "@/lib/api"
 import CourseSubNavigation from "@/components/CourseSubNavigation"
 import MicroLinkFAQ from "@/components/MicroLinkFAQ"
 import CourseAIAdvisor from "@/components/courses/CourseAIAdvisor"
+import CourseEntrepreneurDetails from "@/components/courses/CourseEntrepreneurDetails"
 
 // Types that match Next's generated PageProps
 type Params = { slug: string }
@@ -86,9 +87,11 @@ export default async function CoursePage({ params }: AsyncPageProps) {
           <div id="course-projects-section" className="course-deferred-section">
             <CourseProjects course={course} />
           </div>
+                    {course.title === "AI for Entrepreneurs" && <CourseEntrepreneurDetails />}
           <div id="course-jobsupport-section" className="course-deferred-section">
             <CourseJobSupport course={course} />
           </div>
+
           <div id="course-alumni-section" className="course-deferred-section">
             <CourseAlumni courseId={course.id} />
           </div>

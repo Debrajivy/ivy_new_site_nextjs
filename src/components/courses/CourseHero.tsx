@@ -1797,10 +1797,10 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                     <span className="text-[#1a98cb] font-medium">
                       {
                         course.title === "AI for Entrepreneurs"
-                          ? "Next batch starting from 10th April, 2026"
+                          ? "Next batch starting from mid August, 2026"
                           : course.title === "AI for Beginners"
                             ? "Batch Starting From 4th May, 2026"
-                            : "New batch starting 30th May and 13th June, 2026"
+                            : "New batch starting 18th July, 2026"
                       }
 
                     </span>
