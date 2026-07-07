@@ -5654,7 +5654,8 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
 
     return defaultData;
   }, [course.title, course.slug]);
-  const [activeFilter, setActiveFilter] = useState<string>('program');
+  const defaultFilter = data.categories[0]?.id ?? 'program';
+  const [activeFilter, setActiveFilter] = useState<string>(defaultFilter);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -5663,6 +5664,15 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
     window.addEventListener("resize", checkIfMobile);
     return () => window.removeEventListener("resize", checkIfMobile);
   }, []);
+
+  // Dynamic course navigation can preserve this component's state. If the
+  // previous category does not exist for the new course, select its first
+  // real category instead of rendering an empty FAQ panel.
+  useEffect(() => {
+    if (!data.categories.some(category => category.id === activeFilter)) {
+      setActiveFilter(defaultFilter);
+    }
+  }, [activeFilter, data.categories, defaultFilter]);
 
   // SEO/AEO: Generate JSON-LD Schema for ALL FAQs in this course
   const faqSchema = useMemo(() => ({
@@ -5846,7 +5856,7 @@ const CourseFAQ = ({ course }: CourseHeroProps) => {
                     </h3>
                   </div>
 
-                  <Accordion type="single" collapsible className="w-full">
+                  <Accordion type="single" collapsible defaultValue="item-0" className="w-full">
                     {filteredFaqs.map((faq, index) => (
                       <AccordionItem key={index} value={`item-${index}`} className="border-b last:border-0">
                         <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left transition-all">

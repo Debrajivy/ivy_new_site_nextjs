@@ -11,16 +11,27 @@ import CourseAccreditation from "@/components/courses/CourseAccreditation"
 import CourseEnrollCTA from "@/components/courses/CourseEnrollCTA"
 import CourseJobSupport from "@/components/courses/CourseJobSupport"
 import type { Metadata } from "next"
-import { fetchCourseById } from "@/lib/api"
+import { fetchCourseById, fetchCourses } from "@/lib/api"
 // Prefer the alias to avoid fragile relatives
 import CourseSubNavigation from "@/components/CourseSubNavigation"
-import MicroLinkFAQ from "@/components/MicroLinkFAQ"
+import CourseRelatedLinks from "@/components/courses/CourseRelatedLinks"
 import CourseAIAdvisor from "@/components/courses/CourseAIAdvisor"
 import CourseEntrepreneurDetails from "@/components/courses/CourseEntrepreneurDetails"
 
 // Types that match Next's generated PageProps
 type Params = { slug: string }
 type AsyncPageProps = { params: Promise<Params> }
+
+// Course data is local and changes only when the application is deployed.
+// Pre-render every known course (including city pages) so crawlers always
+// receive the complete page in the initial HTML response.
+export const dynamic = "force-static"
+export const dynamicParams = false
+
+export async function generateStaticParams(): Promise<Params[]> {
+  const courses = await fetchCourses()
+  return courses.map(({ slug }) => ({ slug }))
+}
 
 export async function generateMetadata(
   { params }: AsyncPageProps
@@ -102,7 +113,7 @@ export default async function CoursePage({ params }: AsyncPageProps) {
             <CourseEnrollCTA course={course} />
           </div>
           <div className="course-deferred-section">
-            <MicroLinkFAQ course={course} />
+            <CourseRelatedLinks course={course} />
           </div>
         </main>
         <Footer />
