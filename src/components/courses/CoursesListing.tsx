@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
 import { CheckCircle, Users, Clock, Star, ArrowRight, Award, BookOpen, ShieldCheck, TrendingUp, GraduationCap, Briefcase, CalendarCheck } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import coursehero from "@/assests/coursehero.jpg";
+import coursehero from "@/assests/coursehero.jpeg";
 /* ── Course Images ── */
 import GA    from "@/assests/GAI.webp";
 import CDE   from "@/assests/CDE.webp";
