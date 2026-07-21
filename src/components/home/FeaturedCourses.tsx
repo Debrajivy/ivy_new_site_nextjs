@@ -249,7 +249,7 @@ const featuredCourses: Course[] = [
     title: "AI for Entrepreneurs",
     description: "Automate, Analyze, and Scale Your Business with AI",
     image: AIE,
-    category: "New Course",
+    category: "AI & Technology",
     students:100 ,
     duration: "6 weeks",
     rating: 4.8,

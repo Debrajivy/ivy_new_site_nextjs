@@ -15,10 +15,10 @@ interface CourseAIAdvisorProps {
 }
 
 const QUICK_QUESTIONS = [
-  "Is this course right for me?",
-  "What will I learn?",
+  "What is the course fee?",
+  "What is the exact duration?",
+  "What is covered in the curriculum?",
   "What are the prerequisites?",
- 
 ]
 
 export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdvisorProps) {

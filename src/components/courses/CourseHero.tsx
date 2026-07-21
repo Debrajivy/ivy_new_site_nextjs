@@ -1651,11 +1651,11 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                   Join Two Classes for{" "}
                   <span className="text-[#1a98cb]">No Cost</span>
-                  {course.title === "AI for Entrepreneurs" && (
+                  {/* {course.title === "AI for Entrepreneurs" && (
                     <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-sm md:text-base font-bold bg-amber-100 text-amber-600 animate-pulse border border-amber-200">
                       (New Course)
                     </span>
-                  )}
+                  )} */}
                 </h2>
                 {
                   course.title != "AI for Beginners" ?

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { fetchCourseById } from "@/lib/api"
+import { getCoursePricing } from "@/lib/coursePricing"
 
 type SafeMessage = {
   role: "user" | "assistant"
@@ -46,23 +47,47 @@ function buildCourseContext(course: Awaited<ReturnType<typeof fetchCourseById>>)
     : "Not provided"
 
   const projects = Array.isArray(course.projects)
-    ? course.projects.slice(0, 8).map((project) => project.title).join(", ")
+    ? course.projects.slice(0, 12).map((project) =>
+      `${project.title}${project.description ? `: ${project.description}` : ""}`,
+    ).join("\n")
+    : "Not provided"
+
+  const pricing = getCoursePricing(course.title)
+  const instructors = Array.isArray(course.instructors)
+    ? course.instructors.map((instructor) =>
+      `${instructor.name} (${instructor.role})${instructor.bio ? `: ${instructor.bio}` : ""}`,
+    ).join("\n")
+    : "Not provided"
+  const features = Array.isArray(course.aiFeatures)
+    ? course.aiFeatures.map((feature) => `${feature.title}: ${feature.description}`).join("\n")
+    : "Not provided"
+  const faqs = Array.isArray(course.faq)
+    ? course.faq.map((faq) => `Q: ${faq.question}\nA: ${faq.answer}`).join("\n")
     : "Not provided"
 
   const context = `
 Course: ${course.title.trim()}
 Category: ${course.category}
 Duration: ${course.duration}
+Fee: ${pricing ? `₹${pricing.courseFee.toLocaleString("en-IN")} + applicable GST` : "Not provided"}
+Registration amount: ${pricing ? `₹${pricing.registration.toLocaleString("en-IN")}` : "Not provided"}
+EMI: ${pricing ? `₹${pricing.emi.toLocaleString("en-IN")} per month for ${pricing.months} months` : "Not provided"}
 Description: ${course.description}
 Overview: ${course.longDescription || "Not provided"}
 Learning outcomes: ${(course.outcomes || []).slice(0, 8).join("; ") || "Not provided"}
 Prerequisites: ${(course.prerequisites || []).slice(0, 8).join("; ") || "Not provided"}
 Projects: ${projects || "Not provided"}
+Instructors:
+${instructors || "Not provided"}
+Learning features and tools:
+${features || "Not provided"}
 Curriculum:
 ${curriculum}
+FAQs:
+${faqs || "Not provided"}
   `
 
-  return context.replace(/\s+/g, " ").slice(0, 6_000)
+  return context.trim().slice(0, 14_000)
 }
 
 export async function POST(request: NextRequest) {
@@ -102,13 +127,18 @@ export async function POST(request: NextRequest) {
         .filter((item: SafeMessage) => item.content)
       : []
 
-    const systemPrompt = `You are Ivy Course Assistant for this course.
+    const systemPrompt = `You are Ivy's course-specific AI assistant for ${course.title.trim()}.
 
-Answer only from COURSE DATA. Use all available course-page sections, including curriculum, eligibility, duration, tools, projects, faculty, benefits, FAQs, and outcomes.
+Your job is to directly answer the user's question using only COURSE DATA below. Treat COURSE DATA as the single source of truth. Never use general knowledge, the internet, assumptions, invented figures, or details from another Ivy course.
 
-Keep answers helpful, friendly, accurate, and under 80 words.
-
-If a detail is not in COURSE DATA, say it is not listed and suggest confirming with an Ivy counsellor.
+ANSWERING RULES:
+1. First identify every relevant fact in COURSE DATA, including facts in the description, overview, curriculum modules, projects, instructors, learning features, and FAQs.
+2. Answer the exact question immediately. For fees, state the exact fee, GST note, registration amount, and EMI only when supplied. For duration or timeline, quote the exact stated duration and relevant module durations. For curriculum, summarize the actual named modules/topics. For eligibility, use prerequisites and relevant FAQs. Do not replace an available answer with a counsellor referral.
+3. Understand natural phrasing, spelling errors, shorthand, and follow-up questions such as "what is the fee", "how long", "syllabus", "what do I learn", or "is it for me".
+4. When several COURSE DATA fields answer the question, combine them into one clear response. If two fields conflict, state both exactly and note the difference; do not choose or invent one.
+5. Keep the response concise and conversational: normally 2-5 sentences or short bullets, under 120 words. Use Indian number formatting for rupee amounts.
+6. Only when the requested fact is genuinely absent after checking all COURSE DATA, say: "That detail is not listed on this course page." You may then suggest contacting an Ivy counsellor. Never say "I don't know" when COURSE DATA contains the answer.
+7. Do not claim to have browsed the live page or the internet.
 
 If asked about anything unrelated, reply:
 "I can only help with questions about ${course.title.trim()}. Ask me about its curriculum, eligibility, projects, duration, or outcomes."
