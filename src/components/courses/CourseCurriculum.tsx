@@ -124,7 +124,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
 
 
   return (
-    <section style={{  paddingBottom: 20 }} className="bg-gray-50">
+    <section style={{ paddingBottom: 20 }} className="bg-gray-50">
       {/* Main Curriculum Content */}
       <div className="container mx-auto px-4">
 
@@ -347,7 +347,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                           <div className="text-center">
                             <p className="text-4xl font-bold">₹{price.courseFee.toLocaleString()}</p>
                             <p className="text-sm mt-1 opacity-90">+ GST applicable</p>
-                            {course.title==="AI for Entrepreneurs" ? <p className="text-sm mt-1 opacity-90">( Includes tuition fee, lab access and learning materials)</p>:null}
+                            {course.title === "AI for Entrepreneurs" ? <p className="text-sm mt-1 opacity-90">( Includes tuition fee, lab access and learning materials)</p> : null}
                           </div>
                         </div>
                       );
@@ -372,13 +372,13 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                           <CheckCircle className="text-blue-500 mr-2 h-5 w-5" />
                           {course.title === "AI for Beginners" ? <span>Capstone Showcase + personalized portfolio feedback</span> : <span>Career support services</span>}
                         </li>
-                        
-                        
+
+
                       </ul>
                     </div>
 
 
-                    
+
                   </div>
 
                   {/* Right Column - Payment Options */}
@@ -405,7 +405,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                             <>
 
                               <div className="bg-blue-50 p-4 rounded-lg">
-                                {
+                                {/* {
                                   course.title != "AI for Beginners" ?
                                     <h3 className="text-lg font-semibold text-gray-800 mb-2">Flexible Payment Options</h3>
                                     :
@@ -420,7 +420,31 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                                       :
                                       null
                                   }
-                                </div>
+                                </div> */}
+
+                               {
+  /* Merit-Based Discount ONLY for "AI for Beginners" */
+  course.title === "AI for Beginners" ? (
+    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+      Merit-Based Discount Available
+    </h3>
+  ) : (
+    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+      Flexible Payment Options
+    </h3>
+  )
+}
+
+<div className="space-y-3">
+  {
+    /* Installments hidden for BOTH "AI for Beginners" and "AI for Entrepreneurs" */
+    !["AI for Beginners", "AI for Entrepreneurs"].includes(course.title) && (
+      <span className="text-sm font-medium text-gray-700">
+        Installment available
+      </span>
+    )
+  }
+</div>
                               </div>
                             </>
                         }
@@ -497,11 +521,11 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                   onClick={() => setShowContactOptions(!showContactOptions)}
                 >
                   {
-                      course.title != "AI for Entrepreneurs" && course.title !== "AI for Beginners" ?
-                        "Pick your own customized course"
-                        :
-                        "Book your call with our counsellor"
-                    }
+                    course.title != "AI for Entrepreneurs" && course.title !== "AI for Beginners" ?
+                      "Pick your own customized course"
+                      :
+                      "Book your call with our counsellor"
+                  }
                 </Button>
 
                 {showContactOptions && (
@@ -655,9 +679,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                       .map((row, index) => (
                         <div
                           key={index}
-                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
-                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                          }`}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                            }`}
                         >
                           <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
                             {row.factor}
@@ -714,7 +737,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                 </div>
               )}
 
-            
+
               {/* Comparison Section - Data Engineering courses only */}
               {course.title.includes("Data Engineering") && (
                 <div className="mt-14 w-full max-w-4xl mx-auto">
@@ -823,9 +846,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                       .map((row, index) => (
                         <div
                           key={index}
-                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
-                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                          }`}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                            }`}
                         >
                           <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
                             {row.factor}
@@ -971,9 +993,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                       .map((row, index) => (
                         <div
                           key={index}
-                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
-                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                          }`}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                            }`}
                         >
                           <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
                             {row.factor}
@@ -1122,9 +1143,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                       .map((row, index) => (
                         <div
                           key={index}
-                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
-                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                          }`}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                            }`}
                         >
                           <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
                             {row.factor}
@@ -1263,9 +1283,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                       .map((row, index) => (
                         <div
                           key={index}
-                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
-                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                          }`}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                            }`}
                         >
                           <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
                             {row.factor}
@@ -1414,9 +1433,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                       .map((row, index) => (
                         <div
                           key={index}
-                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
-                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                          }`}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                            }`}
                         >
                           <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
                             {row.factor}
@@ -1711,9 +1729,8 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                       .map((row, index) => (
                         <div
                           key={index}
-                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${
-                            index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
-                          }`}
+                          className={`grid grid-cols-[1fr_1.4fr_1.2fr] text-sm border-t border-gray-100 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/70"
+                            }`}
                         >
                           <div className="p-4 font-semibold text-gray-800 border-r border-gray-100 flex items-start leading-snug">
                             {row.factor}

@@ -5617,6 +5617,19 @@ const courseData: { [key: string]: CourseFAQData } = {
 
 };
 
+export function getCoursePageFaqs(courseTitle: string, courseSlug: string): FAQ[] {
+  const exact = courseData[courseTitle] || courseData[courseTitle.trim()];
+  if (exact) return exact.faqs;
+
+  const slugKey = courseSlug.replace(/-/g, " ").toLowerCase();
+  const bySlug = Object.keys(courseData).find(key => key.toLowerCase().includes(slugKey));
+  if (bySlug) return courseData[bySlug].faqs;
+
+  const words = slugKey.split(/\s+/).filter(Boolean);
+  const fuzzy = Object.keys(courseData).find(key => words.every(word => key.toLowerCase().includes(word)));
+  return fuzzy ? courseData[fuzzy].faqs : [];
+}
+
 const defaultData = {
   categories: [
     { id: "program", name: "Program" },

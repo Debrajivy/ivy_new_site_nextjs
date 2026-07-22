@@ -3,6 +3,7 @@
 import { FormEvent, useRef, useState } from "react"
 import { Bot, Loader2, Send, Sparkles, X } from "lucide-react"
 import ReactMarkdown from "react-markdown"
+import { getCoursePageFaqs } from "@/components/courses/CourseFAQ"
 
 type ChatMessage = {
   role: "user" | "assistant"
@@ -51,6 +52,7 @@ export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdv
           courseSlug,
           message: trimmedQuestion,
           history: previousMessages,
+          courseFaqs: getCoursePageFaqs(courseTitle, courseSlug),
         }),
       })
 

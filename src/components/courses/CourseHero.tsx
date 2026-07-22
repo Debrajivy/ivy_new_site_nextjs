@@ -12,6 +12,7 @@ const WhatsAppIcon = ({ size = 28 }: { size?: number }) => (
   </svg>
 );
 import type { Course } from "@/lib/api";
+import { getCourseDurationHours } from "@/lib/coursePageFacts";
 import ibm from "@/assests/IBM2.webp";
 import deloitte from "@/assests/deloitte.webp";
 import pwc from "@/assests/pwc.webp";
@@ -1007,17 +1008,8 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                 <Clock size={16} className="mr-2" />
 
                 {/* <span>{courseHours[course.title] || "225 Hours"}</span> */}
-                {course.title === "AI and Machine Learning Course"
-                  ? "80 Hours" :
-                  course.title === "AI for Beginners" ? "20 Hours" :
-                    course.title === "AI for Entrepreneurs" ? "20 Hours" :
-                      course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai"
-                        ? "232 Hours"
-                        : course.title === "AI for Product Managers"
-                          ? "24 Hours"
-                          :
-                          "160 Hours"
-                }              </div>
+                {getCourseDurationHours(course.title)}
+              </div>
               <div className="flex items-center bg-white/20 rounded-full px-4 py-2">
                 <Star size={16} className="mr-2" />
                 <span> {course.title === "AI for Product Managers"
