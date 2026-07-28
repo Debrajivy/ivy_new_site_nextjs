@@ -70,11 +70,10 @@ function buildCourseContext(course: Awaited<ReturnType<typeof fetchCourseById>>,
     : "Not provided"
 
   const pricing = getCoursePricing(course.title)
-  const instructors = Array.isArray(course.instructors)
-    ? course.instructors.map((instructor) =>
-      `${instructor.name} (${instructor.role})${instructor.bio ? `: ${instructor.bio}` : ""}`,
-    ).join("\n")
-    : "Not provided"
+  const instructors = [
+    "Prateek Agrawal (Founder and Director of Ivy Professional School): 20+ years of experience as a Data and AI Consultant. M.S. (Texas), B.E.",
+    "Eeshani Agrawal (Director of Ivy Professional School): 20+ years of experience as a Data and AI Consultant. M.S. (Texas), B.Tech.",
+  ].join("\n")
   const features = Array.isArray(course.aiFeatures)
     ? course.aiFeatures.map((feature) => `${feature.title}: ${feature.description}`).join("\n")
     : "Not provided"
