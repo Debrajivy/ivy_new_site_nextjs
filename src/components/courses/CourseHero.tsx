@@ -465,6 +465,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
         }
       } else {
         setSubmitStatus("error");
+        console.log ("response is error", response)
         setSubmitMessage(
           `Failed to submit form. Server responded with status: ${response.status}`
         );
