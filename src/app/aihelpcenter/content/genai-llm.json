@@ -4,6 +4,418 @@
   "color": "bg-indigo-600",
   "description": "Generative AI and Large Language Models",
   "subcategories": {
+    "generative-ai-basics": {
+      "title": "Generative AI Beginner Guides",
+      "icon": "BookOpen",
+      "color": "bg-indigo-600",
+      "topics": [
+        {
+          "id": "what-is-generative-ai",
+          "metaTitle": "What Is Generative AI? Beginner's Guide + Hands-On Exercise | Ivy Pro School",
+          "title": "Generative AI Beginner's Guide: Your First Hands-On Exercise",
+          "description": "Learn what generative AI is, how it differs from traditional AI, where LLMs fit in, and complete your first practical experiment.",
+          "duration": "10–12 min read",
+          "date": "July 29, 2026",
+          "content": {
+            "hero": {
+              "title": "What Is Generative AI? A Beginner's Guide With Your First Hands-On Exercise",
+              "author": "Prateek Agarwal",
+              "date": "July 29, 2026",
+              "readTime": "10–12 minutes"
+            },
+            "video": {
+              "youtubeId": "sUemPHucvrc",
+              "title": "Generative AI for Beginners"
+            },
+            "sections": [
+              {
+                "id": "intro",
+                "title": "What Is Generative AI?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "<strong>Quick answer:</strong> Generative AI is a category of artificial intelligence that creates new content—text, images, code, audio, and video—instead of only analysing or classifying existing data. It works by learning statistical patterns from enormous datasets and then producing original outputs that follow those patterns. Tools like ChatGPT, Claude, and Gemini are generative AI applications built on large language models (LLMs).",
+                    "hasBar": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This beginner-friendly guide gives you the vocabulary, mental model, and practical experience you need to start using generative AI with confidence. No coding experience is required."
+                  }
+                ]
+              },
+              {
+                "id": "toc",
+                "type": "toc",
+                "title": "Table of Contents",
+                "content": [
+                  { "id": "meaning", "label": "What Generative AI Actually Means" },
+                  { "id": "traditional-vs-generative", "label": "Generative AI vs Traditional AI" },
+                  { "id": "family-tree", "label": "The Generative AI Family Tree" },
+                  { "id": "how-it-works", "label": "How Generative AI Works" },
+                  { "id": "everyday-uses", "label": "Where You Already Use Generative AI" },
+                  { "id": "hands-on-exercise", "label": "Hands-On Exercise" },
+                  { "id": "misconceptions", "label": "Common Misconceptions" },
+                  { "id": "faq", "label": "Frequently Asked Questions" },
+                  { "id": "whats-next", "label": "What's Next in This Series" }
+                ]
+              },
+              {
+                "id": "meaning",
+                "title": "1. What Generative AI Actually Means",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Artificial intelligence has existed as a field since the 1950s, but for most of its history, AI systems were built to <strong>recognise and decide</strong>: Is this email spam or not? Will this customer default on a loan? Which product should we recommend?"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Generative AI flips the direction. Instead of taking content in and producing a label, it takes an instruction in and produces <strong>content out</strong>: a paragraph, a Python function, a product image, or a financial summary."
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "info",
+                    "icon": "✨",
+                    "title": "The formal definition",
+                    "content": "Generative AI refers to machine learning models that learn the underlying distribution of their training data well enough to generate new samples from it. In plain English, the model has read so much text—or seen so many images—that it can produce new content that plausibly could have existed in that data, but did not."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "What makes today's generative AI different?"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "<strong>Scale:</strong> Modern models are trained on trillions of words, unlocking fluent, general-purpose output.",
+                      "<strong>Generality:</strong> One model can handle translation, summarisation, coding, and analysis; earlier AI needed a separate model for each task.",
+                      "<strong>Accessibility:</strong> You interact in plain English, Hindi, Bengali, and many other languages. No programming is required to get value."
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "That accessibility matters most for learners: generative AI is the first AI technology where <strong>using it well is a skill anyone can build</strong>, independent of technical background. That skill is often called prompt engineering."
+                  }
+                ]
+              },
+              {
+                "id": "traditional-vs-generative",
+                "title": "2. Generative AI vs Traditional AI: The Core Difference",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "The cleanest way to understand generative AI is to contrast it with what came before, often called discriminative or predictive AI. Traditional AI analyses an input and returns a label, score, or prediction. Generative AI takes an instruction and creates a new output."
+                  },
+                  {
+                    "type": "table",
+                    "title": "Traditional AI vs Generative AI",
+                    "headers": ["Dimension", "Traditional AI", "Generative AI"],
+                    "rows": [
+                      ["Core job", "Classify, predict, rank", "Create new content"],
+                      ["Output", "A label, score, or number", "Text, images, code, or audio"],
+                      ["Example", "Loan approval model", "ChatGPT drafting a loan policy"],
+                      ["Training goal", "Learn boundaries between categories", "Learn the full patterns of data"],
+                      ["Typical user", "A data scientist building the model", "Anyone using a chat interface"]
+                    ]
+                  },
+                  {
+                    "type": "note",
+                    "title": "Important nuance",
+                    "content": "Generative AI did not replace traditional AI. Banks still use predictive models for fraud detection, and e-commerce platforms still use recommendation engines. Generative AI added a new creative layer; the most valuable professionals understand both."
+                  }
+                ]
+              },
+              {
+                "id": "family-tree",
+                "title": "3. The Generative AI Family Tree",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "\"Generative AI,\" \"LLM,\" \"ChatGPT,\" and \"AI agent\" are often used interchangeably, but they are not the same thing. The hierarchy is: <strong>Artificial Intelligence → Machine Learning → Deep Learning → Generative AI</strong>."
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Generative AI",
+                        "description": "The broad category of models that create content, including language, image, audio, and video models."
+                      },
+                      {
+                        "title": "Large Language Models (LLMs)",
+                        "description": "A type of generative AI specialised in language, code, and increasingly complex reasoning. Examples include GPT, Claude, Gemini, and Llama."
+                      },
+                      {
+                        "title": "Applications",
+                        "description": "Products such as ChatGPT, Claude.ai, and Copilot that are built on top of language models."
+                      },
+                      {
+                        "title": "AI Agents",
+                        "description": "LLMs given tools and autonomy so they can search, run code, update systems, and decide the next action."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "💡",
+                    "title": "Remember this",
+                    "content": "An LLM is one type of generative AI. ChatGPT is a product, not a model. An AI agent is an LLM-powered system that can take actions using tools."
+                  }
+                ]
+              },
+              {
+                "id": "how-it-works",
+                "title": "4. How Does Generative AI Work? The 3-Step Mental Model",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "You do not need the mathematics to use generative AI well, but you do need an accurate mental model. The simplest useful model is <strong>Train → Prompt → Generate → Refine</strong>."
+                  },
+                  {
+                    "type": "steps",
+                    "items": [
+                      {
+                        "title": "Training",
+                        "description": "The model reads enormous amounts of data and learns patterns by repeatedly predicting what comes next."
+                      },
+                      {
+                        "title": "Prompting",
+                        "description": "You provide a starting context. Your instruction, examples, constraints, and background information shape the response."
+                      },
+                      {
+                        "title": "Generation",
+                        "description": "The model produces a response one token—roughly three-quarters of a word—at a time, based on everything before it."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "warning",
+                    "title": "Fluent does not always mean factual",
+                    "content": "The model does not simply look up answers in a database; it reconstructs them from learned patterns. This is why it can sometimes state incorrect information confidently, known as hallucination. Never treat an unverified LLM output as fact."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Because the prompt is the model's immediate context, a specific and well-structured prompt reliably outperforms a vague one. This is the foundation of prompt engineering."
+                  }
+                ]
+              },
+              {
+                "id": "everyday-uses",
+                "title": "5. Where You Already Use Generative AI",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Generative AI is not a future technology. It is already embedded in tools Indian professionals use every day:"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "<strong>Writing and communication:</strong> Gmail's Help me write, LinkedIn post suggestions, and WhatsApp Business auto-replies.",
+                      "<strong>Coding:</strong> GitHub Copilot completing functions and explaining unfamiliar code.",
+                      "<strong>Analytics and business:</strong> Excel Copilot generating formulas, ChatGPT analysing uploaded sales data, and AI-drafted board summaries.",
+                      "<strong>Design and marketing:</strong> Canva Magic Studio, AI ad copy, and generated product photography backgrounds.",
+                      "<strong>Customer service:</strong> Banking and e-commerce chatbots handling first-line queries."
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "🎯",
+                    "title": "The pattern to notice",
+                    "content": "The human sets direction and reviews the output while AI produces the first draft. Generative AI is a draft engine, not a decision engine."
+                  }
+                ]
+              },
+              {
+                "id": "hands-on-exercise",
+                "title": "6. Hands-On Exercise: Run Your First Structured AI Experiment",
+                "phase": "20-minute practical exercise",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Reading about generative AI teaches you only part of it. Deliberate practice teaches the rest. This experiment demonstrates the most important beginner lesson: <strong>prompt specificity changes everything</strong>."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "What you need"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Free access to any one—ideally two—of <a href=\"https://chatgpt.com\" target=\"_blank\" rel=\"noopener noreferrer\">ChatGPT</a>, <a href=\"https://claude.ai\" target=\"_blank\" rel=\"noopener noreferrer\">Claude</a>, or <a href=\"https://gemini.google.com\" target=\"_blank\" rel=\"noopener noreferrer\">Gemini</a>. No paid plan is required."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Round 1 — Vague prompt"
+                  },
+                  {
+                    "type": "quote",
+                    "text": "Write about data science careers."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Save the output by copying it into a document."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Round 2 — Specific prompt"
+                  },
+                  {
+                    "type": "quote",
+                    "text": "Write a 200-word overview of data science career paths in India for a final-year commerce student with no coding background. Cover 3 realistic entry roles, typical starting salaries in INR, and the first skill to learn for each."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Round 3 — Specific prompt + role + format"
+                  },
+                  {
+                    "type": "quote",
+                    "text": "You are a career counsellor at a data science institute in Kolkata. A final-year B.Com student with no coding background asks whether data science is realistic for them. Reply in a warm, honest tone. Structure: (1) a direct yes/no answer with reasoning, (2) a table of 3 entry roles with starting salary ranges in INR and the first skill for each, (3) one common mistake to avoid. Keep it under 250 words."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Score your results"
+                  },
+                  {
+                    "type": "table",
+                    "title": "Prompt Experiment Scorecard",
+                    "headers": ["Criterion", "Round 1", "Round 2", "Round 3"],
+                    "rows": [
+                      ["Relevance to a real reader", "1–5", "1–5", "1–5"],
+                      ["Specificity: numbers, names, actions", "1–5", "1–5", "1–5"],
+                      ["Usable as-is without editing", "1–5", "1–5", "1–5"],
+                      ["Correct tone for the audience", "1–5", "1–5", "1–5"]
+                    ]
+                  },
+                  {
+                    "type": "callout",
+                    "variant": "tip",
+                    "icon": "🧪",
+                    "title": "What you should observe",
+                    "content": "Round 3 will usually score much higher than Round 1 using the same model, at the same cost, in the same minute. The model did not get smarter; your instruction did. Specificity, role assignment, and output format are the foundations of prompt engineering."
+                  },
+                  {
+                    "type": "note",
+                    "title": "Bonus experiment",
+                    "content": "Run Round 3 in a second tool and compare the responses. Each model has distinct strengths and a different voice, which is why professionals learn to work across models."
+                  }
+                ]
+              },
+              {
+                "id": "misconceptions",
+                "title": "7. Common Misconceptions",
+                "content": [
+                  {
+                    "type": "subtitle",
+                    "text": "\"Generative AI understands what it says.\""
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "It models language statistically. The outputs can look like understanding, but the mechanism is pattern prediction—which is why verification remains your responsibility."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "\"It will replace data scientists, analysts, and developers.\""
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "AI is more likely to reshape tasks than erase every role. The practical risk is falling behind peers who learn to use AI fluently and responsibly."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "\"You need to know Python to use it.\""
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "You do not need Python to consume generative AI effectively. Coding becomes useful when you start building applications such as RAG systems, agents, and custom integrations."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "\"A bigger model is always better.\""
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Model choice depends on the task, speed, privacy, and cost. A smaller, faster model with a strong prompt can outperform a frontier model given a vague instruction."
+                  }
+                ]
+              },
+              {
+                "id": "faq",
+                "title": "8. Frequently Asked Questions",
+                "content": [
+                  {
+                    "type": "faq",
+                    "items": [
+                      {
+                        "question": "What is generative AI in simple words?",
+                        "answer": "Generative AI is software that creates new content—text, images, code, or audio—from instructions you give it in plain language, based on patterns learned from massive training datasets."
+                      },
+                      {
+                        "question": "Is ChatGPT the same as generative AI?",
+                        "answer": "No. ChatGPT is one application of generative AI built on OpenAI's GPT language models. Generative AI is the broader category that also includes image, audio, and video generation."
+                      },
+                      {
+                        "question": "What is the difference between AI and generative AI?",
+                        "answer": "AI is the entire field of machines performing intelligent tasks. Generative AI is a subset focused on creating new content rather than only classifying or predicting from existing data."
+                      },
+                      {
+                        "question": "Do I need coding skills to learn generative AI?",
+                        "answer": "Not to use it effectively; prompting is a plain-language skill. Coding, mainly Python, becomes useful when you build applications on top of AI models."
+                      },
+                      {
+                        "question": "Is generative AI a good career skill?",
+                        "answer": "Yes. Generative AI is becoming useful across technology, analytics, consulting, finance, marketing, manufacturing, and many business roles. Combining domain knowledge with responsible AI fluency is especially valuable."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "whats-next",
+                "title": "9. What's Next in This Series",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "You now have the vocabulary, the mental model—train, prompt, generate—and practical evidence that prompting is a real skill."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "<strong>Next up:</strong> How LLMs Actually Work: Tokens, Training, and Why AI Hallucinates. You will learn what tokens are, how models are trained and aligned, what a context window is, and why hallucinations happen."
+                  },
+                  {
+                    "type": "checklist",
+                    "items": [
+                      { "checked": true, "text": "What Is Generative AI? — You are here" },
+                      { "checked": false, "text": "How LLMs Actually Work" },
+                      { "checked": false, "text": "Prompt Engineering Basics" },
+                      { "checked": false, "text": "Advanced Prompting Techniques" },
+                      { "checked": false, "text": "Embeddings and Vector Databases" },
+                      { "checked": false, "text": "RAG Explained" },
+                      { "checked": false, "text": "Fine-Tuning vs RAG" },
+                      { "checked": false, "text": "Function Calling and Tool Use" },
+                      { "checked": false, "text": "AI Agents Fundamentals" },
+                      { "checked": false, "text": "Multi-Agent Systems" },
+                      { "checked": false, "text": "Evaluating and Testing LLM Outputs" },
+                      { "checked": false, "text": "Building Your First AI App End-to-End" }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "conclusion": {
+              "title": "Your Generative AI Journey Starts Here",
+              "content": "Generative AI creates new content by learning patterns from massive datasets. It is most useful when a human provides clear direction, reviews the output, and verifies important facts.",
+              "checklist": [
+                { "item": "Remember", "text": "Generative AI creates; traditional AI predicts" },
+                { "item": "Understand", "text": "An LLM is one type of generative AI" },
+                { "item": "Apply", "text": "Specific prompts produce more useful output" },
+                { "item": "Verify", "text": "Fluent AI responses can still be wrong" },
+                { "item": "Practise", "text": "Run the three-round prompt experiment" }
+              ],
+              "finalNote": "The fastest way to become confident with generative AI is to combine a clear mental model with deliberate hands-on practice.",
+              "finalParagraph": "Ivy Professional School has helped thousands of learners build practical data and AI skills. Continue through the series to move from confident AI user to capable AI builder."
+            }
+          }
+        }
+      ]
+    },
     "rag-finetuning": {
       "title": "RAG & Fine-Tuning",
       "icon": "Cpu",
