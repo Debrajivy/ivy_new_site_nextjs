@@ -3554,10 +3554,16 @@ const CorporateDetailView: React.FC<{ caseStudy: CorporateCaseStudy; onBack: () 
           </ul>
         </div>
 
-        <button onClick={onBack} className="flex items-center gap-2 text-[#4eaec3] hover:text-[#3d9db2] font-semibold transition-colors pt-2">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Case Studies
-        </button>
+        <div className="flex flex-col sm:flex-row gap-3 pt-2">
+          <button onClick={onBack} className="flex items-center justify-center gap-2 text-[#4eaec3] hover:text-[#3d9db2] font-semibold transition-colors px-5 py-3">
+            <ArrowLeft className="h-4 w-4" />
+            Back to Case Studies
+          </button>
+          <Link href="/enterprise" className="flex items-center justify-center gap-2 rounded-xl bg-[#013a81] px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-[#009fda]">
+            Explore Enterprise Solutions
+            <ChevronRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -3844,10 +3850,16 @@ const DrillDetailView: React.FC<{ drill: LearningDrill; onBack: () => void }> = 
           )}
         </div>
 
-        <button onClick={onBack} className="flex items-center gap-2 text-[#4eaec3] hover:text-[#3d9db2] font-semibold transition-colors pt-2">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Case Studies
-        </button>
+        <div className="flex flex-col sm:flex-row gap-3 pt-2">
+          <button onClick={onBack} className="flex items-center justify-center gap-2 text-[#4eaec3] hover:text-[#3d9db2] font-semibold transition-colors px-5 py-3">
+            <ArrowLeft className="h-4 w-4" />
+            Back to Case Studies
+          </button>
+          <Link href="/enterprise" className="flex items-center justify-center gap-2 rounded-xl bg-[#013a81] px-6 py-3 font-semibold text-white shadow-md transition-colors hover:bg-[#009fda]">
+            Explore Enterprise Solutions
+            <ChevronRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </div>
   );

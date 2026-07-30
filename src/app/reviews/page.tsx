@@ -67,6 +67,15 @@ interface WrittenReview {
   linkedin?: string;
 }
 
+interface FeaturedLinkedInReview {
+  name: string;
+  role: string;
+  company?: string;
+  review: string;
+  linkedin: string;
+  linkedinHandle: string;
+}
+
 // ─── VIDEO REVIEW DATA ────────────────────────────────────────────────────────
 // videoId: null = placeholder (video not yet linked); add YouTube ID when available
 const videoReviews: VideoReview[] = [
@@ -373,6 +382,45 @@ const writtenReviews: WrittenReview[] = [
     location: "Kolkata",
     category: "Data Analytics",
     linkedin: "https://linkedin.com/in/naiwrita-boral/",
+  },
+];
+
+const featuredLinkedInReviews: FeaturedLinkedInReview[] = [
+  {
+    name: "Menakshi Naskar",
+    role: "Analyst",
+    company: "Genpact",
+    review: "The course is well-structured, practical, and easy to follow, making complex concepts simple to understand. Throughout my learning journey, the mentors and teaching assistants were incredibly supportive, providing valuable guidance during projects and helping me build confidence in applying my skills.",
+    linkedin: "https://www.linkedin.com/in/menakshi-naskar/",
+    linkedinHandle: "menakshi-naskar",
+  },
+  {
+    name: "Swarnava Mitra",
+    role: "Data Analyst Expert",
+    review: "I completed the Data Science and Visualization Certification from Ivy Professional School, where I built strong foundations in Python, SQL, Power BI, Tableau, Excel, and analytics.",
+    linkedin: "https://www.linkedin.com/in/swarnava-mitra-3b7244221/",
+    linkedinHandle: "swarnava-mitra-3b7244221",
+  },
+  {
+    name: "Siddhartha Das",
+    role: "Results-Driven Business Analyst",
+    review: "The Data Visualization & Reporting program at Ivy Professional School, Kolkata, covering Advanced Excel, Power BI, SQL, VBA, and Tableau, has significantly strengthened my analytical and reporting skills. The practical, industry-oriented training has enabled me to automate reports, create interactive dashboards, analyze business data, and deliver actionable insights with confidence in my day-to-day work.",
+    linkedin: "https://www.linkedin.com/in/siddhartha4das/",
+    linkedinHandle: "siddhartha4das",
+  },
+  {
+    name: "Pallavi Roy",
+    role: "Data Analyst",
+    review: "Ivy’s structured classroom program and real-time assistance from teachers and mentors helped me develop a fundamental knowledge of analytics. From assignments to hands-on industry-driven projects, the Data Analytics with Visualization program has helped me strengthen my professional portfolio with an extra edge.",
+    linkedin: "https://www.linkedin.com/in/pallavi-roy93/",
+    linkedinHandle: "pallavi-roy93",
+  },
+  {
+    name: "Sanjana Gupta",
+    role: "Data Analyst",
+    review: "I am grateful to Ivy Professional School for providing me with a strong foundation in Data Science and Analytics. The well-structured curriculum, hands-on projects, and practical training in Advanced Excel, SQL, Python, Power BI, and Tableau helped me build both technical skills and confidence.",
+    linkedin: "https://www.linkedin.com/in/sanjana-gupta-027614307/",
+    linkedinHandle: "sanjana-gupta-027614307",
   },
 ];
 
@@ -690,6 +738,41 @@ export default function ReviewsPage() {
             <Link href="/alumni" className="hidden md:flex items-center gap-2 text-[#009fda] font-semibold hover:gap-3 transition-all">
               View All Alumni <ExternalLink className="w-4 h-4" />
             </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {featuredLinkedInReviews.map((review) => (
+              <article key={review.linkedinHandle} className="flex flex-col rounded-2xl border border-[#009fda]/15 bg-gradient-to-br from-white to-cyan-50/60 p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="h-4 w-4 fill-[#f7af34] text-[#f7af34]" />
+                  ))}
+                </div>
+                <blockquote className="flex-1 text-sm leading-relaxed text-slate-700">
+                  “{review.review}”
+                </blockquote>
+                <a href={review.linkedin} target="_blank" rel="noopener noreferrer" className="mt-6 flex items-center gap-3 border-t border-[#009fda]/10 pt-4 group/profile">
+                  <span className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[#009fda] to-[#013a81] text-sm font-bold text-white ring-2 ring-cyan-100">
+                    {review.name.split(" ").map((part) => part[0]).join("").slice(0, 2)}
+                    <img
+                      src={`https://unavatar.io/linkedin/${review.linkedinHandle}`}
+                      alt={`${review.name} LinkedIn profile`}
+                      className="absolute inset-0 h-full w-full object-cover"
+                      onError={(event) => { event.currentTarget.style.display = "none"; }}
+                    />
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="flex items-center gap-2 font-bold text-[#013a81] group-hover/profile:text-[#009fda]">
+                      {review.name}
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="block text-xs font-semibold text-slate-600">
+                      {review.role}{review.company ? ` · ${review.company}` : ""}
+                    </span>
+                  </span>
+                </a>
+              </article>
+            ))}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

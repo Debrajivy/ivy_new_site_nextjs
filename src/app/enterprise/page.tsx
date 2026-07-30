@@ -485,7 +485,7 @@ const Enterprise = () => {
       return timer;
     };
 
-    const timer1 = animateCounter(setAlumniCount, 32500, 2000);
+    const timer1 = animateCounter(setAlumniCount, 37500, 2000);
     const timer2 = animateCounter(setFirmsCount, 400, 2000);
     const timer3 = animateCounter(setSavingsCount, 85, 2000);
 
@@ -537,11 +537,11 @@ const Enterprise = () => {
         {/* HERO SECTION - Updated with 3 buttons and contact form */}
 
 
-        <section className="relative bg-gradient-to-br from-[#0a1a5f] via-[#1c2b4e] to-[#040a22] text-white min-h-screen lg:min-h-[90vh] flex items-center overflow-x-hidden">
+        <section className="relative bg-gradient-to-br from-[#013a81] via-[#075fa8] to-[#009fda] text-white min-h-screen lg:min-h-[90vh] flex items-center overflow-x-hidden">
           {/* Abstract Background Elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
-            <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-600 rounded-full blur-[120px]"></div>
-            <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-blue-900 rounded-full blur-[120px]"></div>
+            <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-cyan-300 rounded-full blur-[120px]"></div>
+            <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-[#f7af34] rounded-full blur-[120px]"></div>
           </div>
 
           <div className="container mx-auto px-4 sm:px-6 py-12 lg:py-20 relative z-10">
@@ -560,11 +560,11 @@ const Enterprise = () => {
                   <span className="block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400">Real Business Adoption</span>
                 </h1>
 
-                <p className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed border-l-2 border-blue-600 pl-4 md:pl-6 max-w-2xl">
+                <p className="text-sm sm:text-base md:text-lg text-blue-50 leading-relaxed border-l-2 border-cyan-200 pl-4 md:pl-6 max-w-2xl">
                   We help enterprise teams move from <span className="text-white font-semibold">AI awareness to practical, role-based adoption</span> across sales, operations, analytics, and leadership teams.
                 </p>
 
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed italic">
+                <p className="text-xs sm:text-sm text-blue-100 leading-relaxed italic">
                   Delivered across multiple enterprise teams with a focus on measurable productivity and decision-making outcomes.
                 </p>
 
@@ -598,11 +598,11 @@ const Enterprise = () => {
                 </div>
 
                 {/* Logo Section */}
-                <div className="mt-8">
-                  <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">
+                <div className="mt-8 rounded-2xl border border-white/25 bg-[#013a81]/45 p-5 shadow-lg backdrop-blur-sm">
+                  <p className="text-xs font-bold uppercase tracking-widest text-cyan-100 mb-1">
                     Enterprise AI Enablement Across Global Organizations
                   </p>
-                  <p className="text-[10px] sm:text-xs text-slate-600 mb-5">
+                  <p className="text-[10px] sm:text-xs text-blue-50 mb-5">
                     Partnered with enterprise teams to drive practical adoption of Data, AI & GenAI across real business functions.
                   </p>
 
@@ -648,18 +648,18 @@ const Enterprise = () => {
                 </div>
 
                 {/* 2. Form Section (Separate Card) */}
-                <div className="bg-[#0f172a] border border-slate-800 rounded-3xl shadow-2xl p-6 sm:p-8">
+                <div className="bg-white border border-cyan-100 rounded-3xl shadow-2xl p-6 sm:p-8">
                   <div className="mb-6">
-                    <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">Enterprise Solutions</h2>
-                    <p className="text-slate-400 text-xs mt-1">Book a strategy call with our senior advisors.</p>
+                    <h2 className="text-xl sm:text-2xl font-bold text-[#013a81] tracking-tight">Enterprise Solutions</h2>
+                    <p className="text-slate-600 text-xs mt-1">Book a strategy call with our senior advisors.</p>
                   </div>
 
                   <form onSubmit={handleHeroFormSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
-                        <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Full Name</label>
+                        <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#013a81] ml-1 block">Full Name</label>
                         <Input
-                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 rounded-xl text-sm w-full py-5 sm:py-6"
+                          className="bg-cyan-50/60 border-cyan-200 text-slate-900 placeholder:text-slate-400 focus:ring-[#009fda] rounded-xl text-sm w-full py-5 sm:py-6"
                           placeholder="John Doe"
                           value={heroFormData.name}
                           onChange={(e) => setHeroFormData({ ...heroFormData, name: e.target.value })}
@@ -667,10 +667,10 @@ const Enterprise = () => {
                         />
                       </div>
                       <div className="space-y-1.5">
-                        <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Work Email</label>
+                        <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#013a81] ml-1 block">Work Email</label>
                         <Input
                           type="email"
-                          className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 rounded-xl text-sm w-full py-5 sm:py-6"
+                          className="bg-cyan-50/60 border-cyan-200 text-slate-900 placeholder:text-slate-400 focus:ring-[#009fda] rounded-xl text-sm w-full py-5 sm:py-6"
                           placeholder="john@enterprise.com"
                           value={heroFormData.email}
                           onChange={(e) => setHeroFormData({ ...heroFormData, email: e.target.value })}
@@ -680,9 +680,9 @@ const Enterprise = () => {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Company / Organization</label>
+                      <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#013a81] ml-1 block">Company / Organization</label>
                       <Input
-                        className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 rounded-xl text-sm w-full py-5 sm:py-6"
+                        className="bg-cyan-50/60 border-cyan-200 text-slate-900 placeholder:text-slate-400 focus:ring-[#009fda] rounded-xl text-sm w-full py-5 sm:py-6"
                         placeholder="e.g. Fortune 500 Co."
                         value={heroFormData.company}
                         onChange={(e) => setHeroFormData({ ...heroFormData, company: e.target.value })}
@@ -691,9 +691,9 @@ const Enterprise = () => {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-500 ml-1 block">Training Requirements</label>
+                      <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#013a81] ml-1 block">Training Requirements</label>
                       <Textarea
-                        className="bg-slate-900/50 border-slate-800 text-white placeholder:text-slate-600 focus:ring-blue-500 rounded-xl resize-none text-sm w-full"
+                        className="bg-cyan-50/60 border-cyan-200 text-slate-900 placeholder:text-slate-400 focus:ring-[#009fda] rounded-xl resize-none text-sm w-full"
                         placeholder="How can we help your team?"
                         rows={3}
                         value={heroFormData.message}
@@ -704,7 +704,7 @@ const Enterprise = () => {
 
                     <Button
                       type="submit"
-                      className="w-full bg-blue-600 hover:bg-blue-500 py-6 sm:py-7 text-sm font-bold rounded-xl transition-all shadow-lg shadow-blue-900/20 group"
+                      className="w-full bg-[#009fda] hover:bg-[#013a81] text-white py-6 sm:py-7 text-sm font-bold rounded-xl transition-all shadow-lg shadow-cyan-200 group"
                       disabled={isHeroSubmitting}
                     >
                       {isHeroSubmitting ? (
