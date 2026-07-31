@@ -488,7 +488,6 @@ const TOTAL_REVIEWS = 1300;
 export default function ReviewsPage() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
 
   const filteredVideoReviews = useMemo(
     () =>
@@ -777,50 +776,10 @@ export default function ReviewsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredVideoReviews.map((review) => (
-              <div key={review.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">
-                <div className="relative aspect-video bg-gradient-to-br from-[#009fda]/20 to-[#013a81]/20 overflow-hidden">
-                  {review.videoId ? (
-                    playingVideo === review.id ? (
-                      <iframe
-                        className="absolute inset-0 w-full h-full"
-                        src={`https://www.youtube-nocookie.com/embed/${review.videoId}?autoplay=1&rel=0`}
-                        title={`${review.name} — Ivy Pro School video review`}
-                        allow="autoplay; encrypted-media"
-                        allowFullScreen
-                      />
-                    ) : (
-                      <>
-                        <Image
-                          src={`https://img.youtube.com/vi/${review.videoId}/hqdefault.jpg`}
-                          alt={`${review.name} video testimonial thumbnail`}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                          unoptimized
-                        />
-                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/50 transition-all">
-                          <button
-                            onClick={() => setPlayingVideo(review.id)}
-                            className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform"
-                            aria-label={`Play ${review.name}'s testimonial video`}
-                          >
-                            <Play className="w-7 h-7 text-[#009fda] fill-[#009fda] ml-1" />
-                          </button>
-                        </div>
-                      </>
-                    )
-                  ) : (
-                    <div className="flex flex-col items-center justify-center gap-3 p-6 text-center w-full h-full bg-gradient-to-br from-gray-50 to-gray-100">
-                      <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-md">
-                        <Image src={review.image} alt={review.name} width={80} height={80} className="object-cover" />
-                      </div>
-                      <p className="text-xs text-gray-500">Full video coming soon on our YouTube</p>
-                      <a href="https://www.youtube.com/@ivyproschool" target="_blank" rel="noopener noreferrer" className="text-[#009fda] text-xs font-semibold hover:underline">Watch more →</a>
-                    </div>
-                  )}
+              <div key={review.id} className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">
                   <span className="absolute top-3 right-3 bg-[#f7af34] text-[#013a81] text-[10px] font-extrabold px-2.5 py-1 rounded-full shadow-md">
                     {review.hikeLabel}
                   </span>
-                </div>
 
                 <div className="p-5 flex-1">
                   <div className="flex items-center gap-3 mb-4">
