@@ -1898,182 +1898,182 @@ const courses: Course[] = [
 
 
   },
-  {
-    id: '8',
-    title: "Cloud Data Engineering Course with IIT Guwahati",
-    description: "Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks.",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    category: "Deep Learning",
-    students: 1243,
-    metaData: {
-      title: "Cloud Data Engineering Course with IIT Guwahati",
-      description: "Join IIT Guwahati certified Data Engineering course. Learn Cloud, Azure, Python, SQL, Spark, & work on 30+ projects with lifetime placement support.",
-      bio: "Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
-    },
-    duration: "14 weeks",
-    rating: 4.8,
-    reviewCount: 298,
-    isFeatured: true,
-    slug: "iit-data-engineering-course",
-    longDescription: "This course is made in collaboration with E&ICT Academy IIT Guwahati. You will be taught directly by professors of IIT Guwahati, attend a special 3-day program at the IIT campus, and get networking opportunities with IIT alumni.\n\n The syllabus is divided into four major sections exploring four primary topics- SQL for data engineering, Python essentials for data, Big Data Processing, and Azure Cloud Engineering.\n\n One of the best data engineering courses in India, it will teach you to build a complete ETL data pipeline on the cloud with in-demand tools like Azure, Hive, MongoDB, Spark, Hadoop, etc. You will also work on 30+ real-life and industry capstone projects to get the ability and confidence to solve actual business problems.\n\n This 45-week program is perfect for both college graduates starting their data journey and working professionals looking to level up their skills. It takes you from the basics to advanced data engineering concepts, helping you land your dream job."
-    , instructors: [
-      {
-        id: "i1",
-        name: "Prateek Agrawal",
-        role: "Founder and Director of Ivy Professional School",
-        image: "/assets/pratilk.webp",
-        bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
-        isFounder: true
-      },
-      {
-        id: "i2",
-        name: "Eeshani Agrawal",
-        role: "Director of Ivy Professional School",
-        image: "/assets/eeshani.webp",
-        bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
-        , isDirector: true
-      }
-    ],
+  // {
+  //   id: '8',
+  //   title: "Cloud Data Engineering Course with IIT Guwahati",
+  //   description: "Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks.",
+  //   image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+  //   category: "Deep Learning",
+  //   students: 1243,
+  //   metaData: {
+  //     title: "Cloud Data Engineering Course with IIT Guwahati",
+  //     description: "Join IIT Guwahati certified Data Engineering course. Learn Cloud, Azure, Python, SQL, Spark, & work on 30+ projects with lifetime placement support.",
+  //     bio: "Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
+  //   },
+  //   duration: "14 weeks",
+  //   rating: 4.8,
+  //   reviewCount: 298,
+  //   isFeatured: true,
+  //   slug: "iit-data-engineering-course",
+  //   longDescription: "This course is made in collaboration with E&ICT Academy IIT Guwahati. You will be taught directly by professors of IIT Guwahati, attend a special 3-day program at the IIT campus, and get networking opportunities with IIT alumni.\n\n The syllabus is divided into four major sections exploring four primary topics- SQL for data engineering, Python essentials for data, Big Data Processing, and Azure Cloud Engineering.\n\n One of the best data engineering courses in India, it will teach you to build a complete ETL data pipeline on the cloud with in-demand tools like Azure, Hive, MongoDB, Spark, Hadoop, etc. You will also work on 30+ real-life and industry capstone projects to get the ability and confidence to solve actual business problems.\n\n This 45-week program is perfect for both college graduates starting their data journey and working professionals looking to level up their skills. It takes you from the basics to advanced data engineering concepts, helping you land your dream job."
+  //   , instructors: [
+  //     {
+  //       id: "i1",
+  //       name: "Prateek Agrawal",
+  //       role: "Founder and Director of Ivy Professional School",
+  //       image: "/assets/pratilk.webp",
+  //       bio: "Dr. Sharma has over 15 years of experience in data science and machine learning. Before founding Ivy Professional School, he worked as a Senior Data Scientist at Google and Amazon. He holds a Ph.D. in Computer Science from MIT.",
+  //       isFounder: true
+  //     },
+  //     {
+  //       id: "i2",
+  //       name: "Eeshani Agrawal",
+  //       role: "Director of Ivy Professional School",
+  //       image: "/assets/eeshani.webp",
+  //       bio: "Dr. Desai is a machine learning expert with experience at Microsoft and IBM. She specializes in deep learning and natural language processing. She holds a Ph.D. in AI from Stanford University."
+  //       , isDirector: true
+  //     }
+  //   ],
 
-    curriculum: [
-      {
-        id: "m1",
-        title: "SQL for Data Engineering",
-        duration: "28 hrs",
-        topics: [
-          { id: "t1", title: "Basic SQL Queries – SELECT, Filtering, Sorting, Cleaning, Aggregation", duration: "2.5 hrs" },
-          { id: "t2", title: "Window Functions – RANK, DENSE_RANK, LEAD, LAG", duration: "2 hrs" },
-          { id: "t3", title: "Pattern Matching, LIKE, REGEX, Wildcards", duration: "1.5 hrs" },
-          { id: "t4", title: "Advanced Joins, ROLLUP, CUBE, PIVOT, UNPIVOT", duration: "2 hrs" },
-          { id: "t5", title: "Subqueries and CTEs – EXISTS, Common Expressions", duration: "2.5 hrs" },
-          { id: "t6", title: "Advanced Table Expressions – Derived Tables, Joins, Performance", duration: "2.5 hrs" },
-          { id: "t7", title: "Stored Procedures and UDFs", duration: "1.5 hrs" },
-          { id: "t8", title: "Capstone Projects – eCommerce, BFSI, Retail Data", duration: "2.5 hrs" },
-          { id: "t9", title: "Final Project and Recap – Real-World Cloud SQL Use Case", duration: "2 hrs" }
-        ]
-      },
-      {
-        id: "m2",
-        title: "Python Essentials for Data Engineering",
-        duration: "24 hrs",
-        topics: [
-          { id: "t1", title: "Python Foundations – Data Types, Operators, Logic", duration: "3 hrs" },
-          { id: "t2", title: "Loops and Conditional Structures – For, While, If-Else", duration: "2 hrs" },
-          { id: "t3", title: "Functions and OOP Concepts", duration: "3 hrs" },
-          { id: "t4", title: "Numpy and Data Structures – Arrays, Indexing", duration: "2 hrs" },
-          { id: "t5", title: "Data Wrangling with Pandas and SQLAlchemy", duration: "3 hrs" },
-          { id: "t6", title: "Advanced DataFrame Operations – Merge, GroupBy, Filtering", duration: "3 hrs" },
-          { id: "t7", title: "Memory & Parallel Processing – Efficient Use, Dask", duration: "2 hrs" },
-          { id: "t8", title: "Capstone Project – Database Connections, Analysis", duration: "3 hrs" }
-        ]
-      },
-      {
-        id: "m3",
-        title: "Big Data Processing",
-        duration: "32 hrs",
-        topics: [
-          { id: "t1", title: "Big Data Concepts – Formats, Scaling, Compression", duration: "2 hrs" },
-          { id: "t2", title: "Hadoop – HDFS, YARN, Architecture, Daemons", duration: "3 hrs" },
-          { id: "t3", title: "MapReduce and Hands-On Word Count", duration: "2.5 hrs" },
-          { id: "t4", title: "Apache Hive – Tables, Partitioning, SerDe, UDF", duration: "3 hrs" },
-          { id: "t5", title: "Apache Spark Core – RDD, DataFrames, SQL", duration: "4 hrs" },
-          { id: "t6", title: "Spark Structured API – Datasets, Schema, Aggregations", duration: "4 hrs" },
-          { id: "t7", title: "Spark Optimizations – Resource, Memory, Joins", duration: "3 hrs" },
-          { id: "t8", title: "Spark Streaming – DStreams, Stateless vs Stateful", duration: "3 hrs" },
-          { id: "t9", title: "Kafka Integration and Real-Time Pipelines", duration: "3 hrs" },
-          { id: "t10", title: "MongoDB for Real-Time Pipelines – CRUD, Indexing, Querying", duration: "3.5 hrs" }
-        ]
-      },
-      {
-        id: "m4",
-        title: "Azure Cloud Engineering",
-        duration: "26 hrs",
-        topics: [
-          { id: "t1", title: "Azure Fundamentals – AD, RBAC, CLI, Identity", duration: "2 hrs" },
-          { id: "t2", title: "Virtual Machines, Storage, and Databases – Blob, SQL, Cosmos", duration: "2.5 hrs" },
-          { id: "t3", title: "Azure Data Factory – Pipelines, Triggers, Mapping Flows", duration: "3 hrs" },
-          { id: "t4", title: "Azure Databricks – Collaborative Processing, Analytics", duration: "2.5 hrs" },
-          { id: "t5", title: "Azure Event Hubs and Real-Time Integration", duration: "2 hrs" },
-          { id: "t6", title: "Hybrid Cloud – Governance, Federation, Compliance", duration: "3 hrs" },
-          { id: "t7", title: "Azure DevOps and Containers – CI/CD, Docker, AKS", duration: "3 hrs" },
-          { id: "t8", title: "Azure Functions and Serverless Computing", duration: "2 hrs" },
-          { id: "t9", title: "Azure Security Center and Sentinel – Monitoring, Threat Management", duration: "3 hrs" },
-          { id: "t10", title: "Capstone Project – Secure and Scalable Azure Deployment", duration: "3 hrs" }
-        ]
-      }
+  //   curriculum: [
+  //     {
+  //       id: "m1",
+  //       title: "SQL for Data Engineering",
+  //       duration: "28 hrs",
+  //       topics: [
+  //         { id: "t1", title: "Basic SQL Queries – SELECT, Filtering, Sorting, Cleaning, Aggregation", duration: "2.5 hrs" },
+  //         { id: "t2", title: "Window Functions – RANK, DENSE_RANK, LEAD, LAG", duration: "2 hrs" },
+  //         { id: "t3", title: "Pattern Matching, LIKE, REGEX, Wildcards", duration: "1.5 hrs" },
+  //         { id: "t4", title: "Advanced Joins, ROLLUP, CUBE, PIVOT, UNPIVOT", duration: "2 hrs" },
+  //         { id: "t5", title: "Subqueries and CTEs – EXISTS, Common Expressions", duration: "2.5 hrs" },
+  //         { id: "t6", title: "Advanced Table Expressions – Derived Tables, Joins, Performance", duration: "2.5 hrs" },
+  //         { id: "t7", title: "Stored Procedures and UDFs", duration: "1.5 hrs" },
+  //         { id: "t8", title: "Capstone Projects – eCommerce, BFSI, Retail Data", duration: "2.5 hrs" },
+  //         { id: "t9", title: "Final Project and Recap – Real-World Cloud SQL Use Case", duration: "2 hrs" }
+  //       ]
+  //     },
+  //     {
+  //       id: "m2",
+  //       title: "Python Essentials for Data Engineering",
+  //       duration: "24 hrs",
+  //       topics: [
+  //         { id: "t1", title: "Python Foundations – Data Types, Operators, Logic", duration: "3 hrs" },
+  //         { id: "t2", title: "Loops and Conditional Structures – For, While, If-Else", duration: "2 hrs" },
+  //         { id: "t3", title: "Functions and OOP Concepts", duration: "3 hrs" },
+  //         { id: "t4", title: "Numpy and Data Structures – Arrays, Indexing", duration: "2 hrs" },
+  //         { id: "t5", title: "Data Wrangling with Pandas and SQLAlchemy", duration: "3 hrs" },
+  //         { id: "t6", title: "Advanced DataFrame Operations – Merge, GroupBy, Filtering", duration: "3 hrs" },
+  //         { id: "t7", title: "Memory & Parallel Processing – Efficient Use, Dask", duration: "2 hrs" },
+  //         { id: "t8", title: "Capstone Project – Database Connections, Analysis", duration: "3 hrs" }
+  //       ]
+  //     },
+  //     {
+  //       id: "m3",
+  //       title: "Big Data Processing",
+  //       duration: "32 hrs",
+  //       topics: [
+  //         { id: "t1", title: "Big Data Concepts – Formats, Scaling, Compression", duration: "2 hrs" },
+  //         { id: "t2", title: "Hadoop – HDFS, YARN, Architecture, Daemons", duration: "3 hrs" },
+  //         { id: "t3", title: "MapReduce and Hands-On Word Count", duration: "2.5 hrs" },
+  //         { id: "t4", title: "Apache Hive – Tables, Partitioning, SerDe, UDF", duration: "3 hrs" },
+  //         { id: "t5", title: "Apache Spark Core – RDD, DataFrames, SQL", duration: "4 hrs" },
+  //         { id: "t6", title: "Spark Structured API – Datasets, Schema, Aggregations", duration: "4 hrs" },
+  //         { id: "t7", title: "Spark Optimizations – Resource, Memory, Joins", duration: "3 hrs" },
+  //         { id: "t8", title: "Spark Streaming – DStreams, Stateless vs Stateful", duration: "3 hrs" },
+  //         { id: "t9", title: "Kafka Integration and Real-Time Pipelines", duration: "3 hrs" },
+  //         { id: "t10", title: "MongoDB for Real-Time Pipelines – CRUD, Indexing, Querying", duration: "3.5 hrs" }
+  //       ]
+  //     },
+  //     {
+  //       id: "m4",
+  //       title: "Azure Cloud Engineering",
+  //       duration: "26 hrs",
+  //       topics: [
+  //         { id: "t1", title: "Azure Fundamentals – AD, RBAC, CLI, Identity", duration: "2 hrs" },
+  //         { id: "t2", title: "Virtual Machines, Storage, and Databases – Blob, SQL, Cosmos", duration: "2.5 hrs" },
+  //         { id: "t3", title: "Azure Data Factory – Pipelines, Triggers, Mapping Flows", duration: "3 hrs" },
+  //         { id: "t4", title: "Azure Databricks – Collaborative Processing, Analytics", duration: "2.5 hrs" },
+  //         { id: "t5", title: "Azure Event Hubs and Real-Time Integration", duration: "2 hrs" },
+  //         { id: "t6", title: "Hybrid Cloud – Governance, Federation, Compliance", duration: "3 hrs" },
+  //         { id: "t7", title: "Azure DevOps and Containers – CI/CD, Docker, AKS", duration: "3 hrs" },
+  //         { id: "t8", title: "Azure Functions and Serverless Computing", duration: "2 hrs" },
+  //         { id: "t9", title: "Azure Security Center and Sentinel – Monitoring, Threat Management", duration: "3 hrs" },
+  //         { id: "t10", title: "Capstone Project – Secure and Scalable Azure Deployment", duration: "3 hrs" }
+  //       ]
+  //     }
 
-    ]
-    ,
-    projects: [
-      {
-        id: "p1",
-        title: "Build Cloud Data Pipeline Using Databricks",
-        description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
-        image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
-        skills: ["Apache ", "Big Data", "Azure"],
-        difficulty: "Advanced",
-        isPractice: true,
-        videoId: "aNja1KSqczo"
-      },
-      {
-        id: "p2",
-        title: "How to Create End-to-End ETL Pipeline",
-        description: "Dive deep into practical data solutions using Azure by setting up a complete data pipeline, from storing CSV files in Azure Blob Storage to efficiently transferring data into SQL databases.",
-        image: "https://img.youtube.com/vi/yYbU_Bihvdc/0.jpg",
-        skills: ["Virtual Machines ", "Azure", "SQL"],
-        difficulty: "Advanced",
-        isPractice: true,
-        videoId: "yYbU_Bihvdc"
-      },
-      {
-        id: "p3",
-        title: "Data Engineering Career Roadmap 2025",
-        description: "Get comprehensive roadmap for anyone looking to start or grow their career in Data Engineering in 2025. You'll understand the real-world data pipeline, in-demand tools (SQL, Python, Spark, Docker, Cloud).",
-        image: "https://img.youtube.com/vi/QbI60IMgO_g/0.jpg",
-        skills: ["SQL", "Python", "Spark", "Docker", "Cloud"],
-        difficulty: "Advanced",
-        isPractice: true,
-        videoId: "QbI60IMgO_g"
-      },
-      // {
-      //   id: "p4",
-      //   title: "Superstore Sales Analysis Using Excel ",
-      //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
-      //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
-      //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
-      //   difficulty: "Beginner to Intermediate",
-      //   videoId: "KGrApiKUR4M"
-      // },
-      // {
-      //   id: "p5",
-      //   title: "Predicting Car Sales using Linear Regression in R",
-      //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
-      //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
-      //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
-      //   difficulty: "Intermediate",
-      //   videoId: "8nNgJJH7pMk"
-      // },
-      // {
-      //   id: "p6",
-      //   title: "Crime Intelligence Dashboard in Power BI",
-      //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
-      //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
-      //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
-      //   difficulty: "Intermediate",
-      //   videoId: "sVXjAIa7YBs"
-      // }
-    ],
-    outcomes: [
-      "Design and build robust data pipelines using Azure, Spark, Hive, Hadoop, and MongoDB",
-      "Manage and manipulate structured and unstructured data with advanced SQL and Python",
-      "Implement scalable big data architectures to solve real business challenges",
-      "Build your portfolio with 30+ real-life projects and capstone case studies across industries",
-      "get certified by IVY Guwahati and boost your professional credibility",
-      "Receive 1:1 mentorship, resume support, and lifetime placement assistance to land top jobs"
-    ],
+  //   ]
+  //   ,
+  //   projects: [
+  //     {
+  //       id: "p1",
+  //       title: "Build Cloud Data Pipeline Using Databricks",
+  //       description: "This video provides an in-depth introduction with real-world project experience, it outlines the career path, key technologies (Hadoop, Spark, Azure), curriculum breakdown, and practical use cases for aspiring data engineers.",
+  //       image: "https://img.youtube.com/vi/aNja1KSqczo/0.jpg",
+  //       skills: ["Apache ", "Big Data", "Azure"],
+  //       difficulty: "Advanced",
+  //       isPractice: true,
+  //       videoId: "aNja1KSqczo"
+  //     },
+  //     {
+  //       id: "p2",
+  //       title: "How to Create End-to-End ETL Pipeline",
+  //       description: "Dive deep into practical data solutions using Azure by setting up a complete data pipeline, from storing CSV files in Azure Blob Storage to efficiently transferring data into SQL databases.",
+  //       image: "https://img.youtube.com/vi/yYbU_Bihvdc/0.jpg",
+  //       skills: ["Virtual Machines ", "Azure", "SQL"],
+  //       difficulty: "Advanced",
+  //       isPractice: true,
+  //       videoId: "yYbU_Bihvdc"
+  //     },
+  //     {
+  //       id: "p3",
+  //       title: "Data Engineering Career Roadmap 2025",
+  //       description: "Get comprehensive roadmap for anyone looking to start or grow their career in Data Engineering in 2025. You'll understand the real-world data pipeline, in-demand tools (SQL, Python, Spark, Docker, Cloud).",
+  //       image: "https://img.youtube.com/vi/QbI60IMgO_g/0.jpg",
+  //       skills: ["SQL", "Python", "Spark", "Docker", "Cloud"],
+  //       difficulty: "Advanced",
+  //       isPractice: true,
+  //       videoId: "QbI60IMgO_g"
+  //     },
+  //     // {
+  //     //   id: "p4",
+  //     //   title: "Superstore Sales Analysis Using Excel ",
+  //     //   description: "Explore Superstore sales data and generate key business insights using Excel. Analyze product lines, profitable cities, gender-based sales performance, month-on-month growth, and create a dashboard to track critical metrics.",
+  //     //   image: "https://img.youtube.com/vi/KGrApiKUR4M/0.jpg",
+  //     //   skills: ["Excel", "Data Analysis", "Business Analytics", "Sales Analytics", "Dashboard", "Business Insights"],
+  //     //   difficulty: "Beginner to Intermediate",
+  //     //   videoId: "KGrApiKUR4M"
+  //     // },
+  //     // {
+  //     //   id: "p5",
+  //     //   title: "Predicting Car Sales using Linear Regression in R",
+  //     //   description: "Analyze Superstore sales data in Excel to uncover insights on product lines, profitable cities, gender-based performance, month-on-month growth, and create a dashboard to track key metrics.",
+  //     //   image: "https://img.youtube.com/vi/8nNgJJH7pMk/0.jpg",
+  //     //   skills: ["R", "Linear Regression", "Car Sales Prediction", "Data Analysis", "Model Evaluation", "Variable Significance"],
+  //     //   difficulty: "Intermediate",
+  //     //   videoId: "8nNgJJH7pMk"
+  //     // },
+  //     // {
+  //     //   id: "p6",
+  //     //   title: "Crime Intelligence Dashboard in Power BI",
+  //     //   description: "Create an interactive, data-driven crime intelligence dashboard using real-world data from the Manchester Police Department. Learn to transform data, set up KPIs, design visualizations, and implement geospatial mapping to analyze crime trends and improve law enforcement efficiency.",
+  //     //   image: "https://img.youtube.com/vi/sVXjAIa7YBs/0.jpg",
+  //     //   skills: ["Power BI", "DAX", "KPI Cards", "Data Transformation", "Data Visualization", "Crime Analysis"],
+  //     //   difficulty: "Intermediate",
+  //     //   videoId: "sVXjAIa7YBs"
+  //     // }
+  //   ],
+  //   outcomes: [
+  //     "Design and build robust data pipelines using Azure, Spark, Hive, Hadoop, and MongoDB",
+  //     "Manage and manipulate structured and unstructured data with advanced SQL and Python",
+  //     "Implement scalable big data architectures to solve real business challenges",
+  //     "Build your portfolio with 30+ real-life projects and capstone case studies across industries",
+  //     "get certified by IVY Guwahati and boost your professional credibility",
+  //     "Receive 1:1 mentorship, resume support, and lifetime placement assistance to land top jobs"
+  //   ],
 
 
-  },
+  // },
   {
     id: '9',
     title: "AI for Product Managers",

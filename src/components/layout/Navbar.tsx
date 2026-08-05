@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap, NotebookPen, Building, Trophy } from "lucide-react"
+import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap, NotebookPen, Building, Trophy, Users } from "lucide-react"
 import review from "../../assests/review.webp"
 import Image, { StaticImageData } from "next/image"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -193,12 +193,12 @@ const allCourses = [
     description: "Strategic AI implementation for executives and managers",
     image: BA,
   },
-  {
-    title: "Cloud Data Engineering Course with IIT Guwahati",
-    href: "/courses/iit-data-engineering-course",
-    description: "Image processing and recognition with deep learning",
-    image: CDI,
-  },
+  // {
+  //   title: "Cloud Data Engineering Course with IIT Guwahati",
+  //   href: "/courses/iit-data-engineering-course",
+  //   description: "Image processing and recognition with deep learning",
+  //   image: CDI,
+  // },
   {
     title: "AI and Machine Learning Course",
     href: "/courses/ai-machine-learning-course",
@@ -613,6 +613,11 @@ const Navbar = () => {
                   </Link>
                 </NavigationMenuItem> */}
                 <NavigationMenuItem>
+                  <Link href="/about" className="flex items-center px-3 py-2 text-sm font-medium">
+                    About Us
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
                   <Link href="/enterprise" className="flex items-center px-3 py-2 text-sm font-medium">
                     Enterprise
                   </Link>
@@ -694,7 +699,15 @@ const Navbar = () => {
                 Quick Links
               </h2>
               <div className="flex flex-col space-y-2">
-                {/* Alumni & Reviews */}
+                {/* About, Alumni & Reviews */}
+                <Link
+                  href="/about"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-ivy-blue transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Users className="h-5 w-5 text-ivy-blue" />
+                  <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">About Us</span>
+                </Link>
                 <Link
                   href="/alumni"
                   className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 hover:border-ivy-blue transition-colors"

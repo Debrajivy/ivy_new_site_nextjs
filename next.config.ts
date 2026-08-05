@@ -33,11 +33,11 @@ const nextConfig: NextConfig = {
         destination: "/courses/iit-data-science-course",
         permanent: true, // 308 redirect
       },
-      {
-        source: "/iit-data-engineering-course",
-        destination: "/courses/iit-data-engineering-course",
-        permanent: true,
-      },
+      // {
+      //   source: "/iit-data-engineering-course",
+      //   destination: "/courses/iit-data-engineering-course",
+      //   permanent: true,
+      // },
       {
         source: "/generative-ai-course",
         destination: "/courses/generative-ai-course",
