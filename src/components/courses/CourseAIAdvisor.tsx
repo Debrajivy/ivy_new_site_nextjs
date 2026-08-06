@@ -1,6 +1,6 @@
 "use client"
 
-import { FormEvent, useRef, useState } from "react"
+import { FormEvent, useEffect, useRef, useState } from "react"
 import { Bot, Loader2, Send, Sparkles, X } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import { getCoursePageFaqs } from "@/components/courses/CourseFAQ"
@@ -17,14 +17,10 @@ interface CourseAIAdvisorProps {
 }
 
 const QUICK_QUESTIONS = [
-  "How do I enroll?",
   "What is the course fee?",
   "What is the exact duration?",
   "What is covered in the curriculum?",
   "What are the prerequisites?",
-  "Which alumni are from this course?",
-  "What placement support and results are listed?",
-  "What do the FAQs say?",
 ]
 
 export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdvisorProps) {
@@ -33,6 +29,16 @@ export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdv
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
+  const chatScrollRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const chat = chatScrollRef.current
+    if (!isOpen || !chat) return
+
+    window.requestAnimationFrame(() => {
+      chat.scrollTo({ top: chat.scrollHeight, behavior: "smooth" })
+    })
+  }, [isOpen, isLoading, messages])
 
   const openAssistant = () => {
     setIsOpen(true)
@@ -147,7 +153,7 @@ export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdv
             </div>
           ) : (
             <div className="mt-4">
-              <div className="max-h-72 space-y-3 overflow-y-auto rounded-xl border border-slate-100 bg-white/80 p-3 sm:p-4">
+              <div ref={chatScrollRef} className="max-h-72 space-y-3 overflow-y-auto rounded-xl border border-slate-100 bg-white/80 p-3 sm:p-4">
                 {messages.length === 0 && (
                   <div className="rounded-lg bg-[#009fda]/5 p-3 text-sm text-slate-700">
                     Hi! Ask me anything about this course—curriculum, eligibility, projects, alumni, placement support, FAQs, or outcomes.
