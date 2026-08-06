@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { fetchCourseById } from "@/lib/api"
 import { getCoursePricing } from "@/lib/coursePricing"
 import { ENTREPRENEUR_PROJECTS, getCourseDurationHours, hasCourseEmi } from "@/lib/coursePageFacts"
+import { COURSE_ENROLLMENT_ANSWER, isCourseEnrollmentQuestion } from "@/lib/courseAssistant"
 
 type SafeMessage = {
   role: "user" | "assistant"
@@ -114,10 +115,6 @@ ${faqs || "Not provided"}
 
 export async function POST(request: NextRequest) {
   try {
-    if (!process.env.OPENAI_API_KEY) {
-      return NextResponse.json({ error: "AI assistant is not configured" }, { status: 503 })
-    }
-
     const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown"
     if (isRateLimited(ip)) {
       return NextResponse.json(
@@ -133,6 +130,17 @@ export async function POST(request: NextRequest) {
 
     if (!courseSlug || !message) {
       return NextResponse.json({ error: "Course and question are required" }, { status: 400 })
+    }
+
+    if (isCourseEnrollmentQuestion(message)) {
+      return NextResponse.json(
+        { answer: COURSE_ENROLLMENT_ANSWER },
+        { headers: { "Cache-Control": "no-store" } },
+      )
+    }
+
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ error: "AI assistant is not configured" }, { status: 503 })
     }
 
     const course = await fetchCourseById(courseSlug);
@@ -162,6 +170,7 @@ ANSWERING RULES:
 5. Keep the response concise and conversational: normally 2-5 sentences or short bullets, under 120 words. Use Indian number formatting for rupee amounts.
 6. Only when the requested fact is genuinely absent after checking all COURSE DATA, say: "That detail is not listed on this course page." You may then suggest contacting an Ivy counsellor. Never say "I don't know" when COURSE DATA contains the answer.
 7. Do not claim to have browsed the live page or the internet.
+8. For any question asking how or where to enroll, register, apply, join, or sign up, answer exactly: "${COURSE_ENROLLMENT_ANSWER}"
 
 If asked about anything unrelated, reply:
 "I can only help with questions about ${course.title.trim()}. Ask me about its curriculum, eligibility, projects, duration, or outcomes."

@@ -4,6 +4,7 @@ import { FormEvent, useRef, useState } from "react"
 import { Bot, Loader2, Send, Sparkles, X } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import { getCoursePageFaqs } from "@/components/courses/CourseFAQ"
+import { COURSE_ENROLLMENT_ANSWER, isCourseEnrollmentQuestion } from "@/lib/courseAssistant"
 
 type ChatMessage = {
   role: "user" | "assistant"
@@ -16,6 +17,7 @@ interface CourseAIAdvisorProps {
 }
 
 const QUICK_QUESTIONS = [
+  "How do I enroll?",
   "What is the course fee?",
   "What is the exact duration?",
   "What is covered in the curriculum?",
@@ -42,6 +44,15 @@ export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdv
     setIsOpen(true)
     setInput("")
     setMessages((current) => [...current, { role: "user", content: trimmedQuestion }])
+
+    if (isCourseEnrollmentQuestion(trimmedQuestion)) {
+      setMessages((current) => [
+        ...current,
+        { role: "assistant", content: COURSE_ENROLLMENT_ANSWER },
+      ])
+      return
+    }
+
     setIsLoading(true)
 
     try {
