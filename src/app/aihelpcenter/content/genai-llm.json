@@ -10,6 +10,23 @@
       "color": "bg-indigo-600",
       "topics": [
         {
+          "id": "harness-engineering-in-ai",
+          "metaTitle": "Harness Engineering in AI: A Guide to Reliable AI Agents",
+          "title": "Harness Engineering in AI",
+          "description": "Learn how AI agent harnesses combine context, tools, memory, controls and evaluation to turn capable models into reliable systems.",
+          "duration": "20 min read",
+          "date": "August 6, 2026",
+          "content": {
+            "hero": {
+              "title": "Harness Engineering in AI",
+              "author": "Ivy Professional School",
+              "date": "August 6, 2026",
+              "readTime": "20 minutes"
+            },
+            "sections": []
+          }
+        },
+        {
           "id": "what-is-generative-ai",
           "metaTitle": "What Is Generative AI? Beginner's Guide + Hands-On Exercise | Ivy Pro School",
           "title": "Generative AI Beginner's Guide: Your First Hands-On Exercise",

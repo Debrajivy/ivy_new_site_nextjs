@@ -1769,7 +1769,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                       ? "Applying..."
                       : pendingSyllabusUrl
                         ? "Submit & Open Course Details"
-                        : "Register Now"}
+                        : "Book Demo Classes"}
                   </Button>
 
                   {submitMessage && (

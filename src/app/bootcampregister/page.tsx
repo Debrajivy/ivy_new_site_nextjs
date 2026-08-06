@@ -455,7 +455,7 @@ const BootcampRegister = () => {
                     type="submit"
                     className="w-full bg-white text-blue-700 hover:bg-gray-100 font-bold py-4 px-6 rounded-lg transition-colors shadow-lg text-lg"
                   >
-                    Register Now
+                    Book Demo Classes
                   </button>
                 </div>
               </form>

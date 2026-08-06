@@ -13,6 +13,7 @@ import { pythonDrills } from './pythonDrills';
 import Case1 from "../../assests/casestudies/Case1.webp";
 import Case2 from "../../assests/casestudies/Case2.webp";
 import Case4 from "../../assests/casestudies/Case4.webp";
+import Workshop from "../../assests/workshop.jpeg";
 
 // ============================================================
 // TYPES
@@ -4037,7 +4038,7 @@ const CaseStudiesPage = (props: any = {}) => {
               <span className={`ml-1 px-1.5 py-0.5 rounded-full text-xs font-bold ${
                 activeCategory === 'corporate' ? 'bg-[#4eaec3]/15 text-[#4eaec3]' : 'bg-slate-100 text-slate-500'
               }`}>
-                {corporateList.length}
+                {corporateList.length + 1}
               </span>
             </button>
             <button
@@ -4088,6 +4089,20 @@ const CaseStudiesPage = (props: any = {}) => {
                 <p className="text-slate-500">Real-world enterprise training engagements and their outcomes.</p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <Link
+                  href="/casestudies/ai-workshop-for-entrepreneurs"
+                  className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg hover:border-[#4eaec3]/40 transition-all duration-300 cursor-pointer group"
+                >
+                  <div className="w-full aspect-video overflow-hidden">
+                    <img src={Workshop.src} alt="Entrepreneurs participating in Ivy Professional School’s hands-on AI workshop with trainer Prateek Agrawal" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-5">
+                    <span className="text-xs font-semibold text-[#4eaec3] uppercase tracking-wider">Business Transformation</span>
+                    <h3 className="mt-2 text-base font-bold text-slate-800 leading-snug">AI Workshop for Entrepreneurs: From Chatbots to Predictive AI</h3>
+                    <p className="mt-2 text-sm text-slate-500 leading-relaxed line-clamp-2">How 50 business owners, founders and CXOs converted AI experimentation into implementation-ready business outcomes.</p>
+                    <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-[#4eaec3] group-hover:gap-2 transition-all">Read Case Study<ChevronRight className="h-4 w-4" /></div>
+                  </div>
+                </Link>
                 {corporateList.map((cs) => (
                   <Link
                     key={cs.id}

@@ -283,7 +283,7 @@ const CourseSubNavigation = ({ course }: CourseOverviewProps) => {  const [isSub
                     </select>
                   </div>
                   <Button type="submit" className="w-full py-3" style={{ backgroundColor: '#013a81' }}>
-                   Register Now
+                   Book Demo Classes
                   </Button>
                   <div className="flex items-center justify-center gap-2 pt-2">
                     <p className="text-sm font-semibold text-center">

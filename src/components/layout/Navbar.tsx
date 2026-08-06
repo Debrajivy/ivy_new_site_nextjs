@@ -483,7 +483,7 @@ const Navbar = () => {
                 className="bg-gradient-to-r from-ivy-blue text-white px-1.5 py-1 text-sm"
                 onClick={handleApplyClick}
               >
-                Register Now
+                Book a Demo
 
               </Button>
             </div>
@@ -646,7 +646,7 @@ const Navbar = () => {
                   textShadow: '0px -1px 1px #eb6200'
                 }}
               >
-                Register Now
+                Book a Demo
               </Button>
             </div>
           </div>

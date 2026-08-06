@@ -22,6 +22,9 @@ const QUICK_QUESTIONS = [
   "What is the exact duration?",
   "What is covered in the curriculum?",
   "What are the prerequisites?",
+  "Which alumni are from this course?",
+  "What placement support and results are listed?",
+  "What do the FAQs say?",
 ]
 
 export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdvisorProps) {
@@ -147,7 +150,7 @@ export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdv
               <div className="max-h-72 space-y-3 overflow-y-auto rounded-xl border border-slate-100 bg-white/80 p-3 sm:p-4">
                 {messages.length === 0 && (
                   <div className="rounded-lg bg-[#009fda]/5 p-3 text-sm text-slate-700">
-                    Hi! Ask me anything about this course—curriculum, eligibility, projects, or outcomes.
+                    Hi! Ask me anything about this course—curriculum, eligibility, projects, alumni, placement support, FAQs, or outcomes.
                   </div>
                 )}
                 {messages.map((message, index) => (
