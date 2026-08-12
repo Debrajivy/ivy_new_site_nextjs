@@ -246,12 +246,12 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://ivyproschool.com/courses/data-visualization-course</loc>
     <lastmod>2025-08-14</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
-  </url>
+  </url> -->
   <url>
     <loc>https://ivyproschool.com/courses/generative-ai-course</loc>
     <lastmod>2025-08-14</lastmod>

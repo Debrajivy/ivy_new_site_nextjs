@@ -177,7 +177,7 @@ const allCourses = [
   },
   {
     title: "Data Analytics and Generative AI Course",
-    href: "/courses/data-visualization-course",
+    href: "/courses/data-analytics-and-generative-ai-course",
     description: "Deep dive into neural networks and advanced ML techniques",
     image: DV,
   },

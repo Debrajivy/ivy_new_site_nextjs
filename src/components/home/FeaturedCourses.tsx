@@ -147,7 +147,7 @@ const featuredCourses: Course[] = [
     rating: 4.7,
     reviewCount: 212,
     isFeatured: true,
-    slug: "data-visualization-course",
+    slug: "data-analytics-and-generative-ai-course",
     keyFeatures: [
       "Master Tableau, Power BI, Python",
       "Create interactive dashboards",

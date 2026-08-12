@@ -211,7 +211,7 @@ const COURSES: Course[] = [
     level: "Beginner to Intermediate",
     rating: 4.7,
     reviewCount: 212,
-    slug: "data-visualization-course",
+    slug: "data-analytics-and-generative-ai-course",
     keyFeatures: [
       "Master Tableau, Power BI & VBA",
       "AI-powered dashboard creation",

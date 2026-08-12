@@ -72,7 +72,7 @@ const IVY_COURSES: Course[] = [
     name: 'Data Analytics and Generative AI Course',
     description: 'Develop skills in creating compelling data visualizations using tools like Tableau and Power BI.',
     keywords: ['data visualization', 'tableau', 'power bi', 'reporting', 'dashboards'],
-    link: '/courses/data-visualization-course',
+    link: '/courses/data-analytics-and-generative-ai-course',
   },
   {
     id: 'data-analytics-viz',
