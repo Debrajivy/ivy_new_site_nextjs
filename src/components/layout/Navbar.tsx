@@ -178,21 +178,21 @@ const allCourses = [
   {
     title: "Data Analytics and Generative AI Course",
     href: "/courses/data-analytics-and-generative-ai-course",
-    description: "Deep dive into neural networks and advanced ML techniques",
+    description: "Deep dive into Excel, SQL, Gen AI, Power BI techniques",
     image: DV,
   },
   {
     title: "Data Analytics With Visualization",
     href: "/courses/data-analytics-course",
-    description: "Learn Hadoop, Spark, and big data processing frameworks",
+    description: "Learn Excel, Python, SQL, Power BI and VBA for data analysis",
     image: DA,
   },
-  {
-    title: "Data Analytics and Generative AI Course",
-    href: "/courses/data-analytics-and-generative-ai-course",
-    description: "Strategic AI implementation for executives and managers",
-    image: BA,
-  },
+  // {
+  //   title: "Data Analytics and Generative AI Course",
+  //   href: "/courses/data-analytics-and-generative-ai-course",
+  //   description: "Strategic AI implementation for executives and managers",
+  //   image: BA,
+  // },
   // {
   //   title: "Cloud Data Engineering Course with IIT Guwahati",
   //   href: "/courses/iit-data-engineering-course",
