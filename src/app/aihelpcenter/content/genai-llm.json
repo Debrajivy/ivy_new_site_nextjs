@@ -10,6 +10,23 @@
       "color": "bg-indigo-600",
       "topics": [
         {
+          "id": "how-are-llms-trained",
+          "metaTitle": "How Are LLMs Trained? The LLM Training Process Explained",
+          "title": "How Are LLMs Trained?",
+          "description": "Understand how large language models learn through pretraining, next-token prediction, loss, backpropagation, fine-tuning, and alignment.",
+          "duration": "16 min read",
+          "date": "August 12, 2026",
+          "content": {
+            "hero": {
+              "title": "How Are LLMs Trained? Understanding the Large Language Model Training Process",
+              "author": "Prateek Agarwal",
+              "date": "August 12, 2026",
+              "readTime": "16 minutes"
+            },
+            "sections": []
+          }
+        },
+        {
           "id": "harness-engineering-in-ai",
           "metaTitle": "Harness Engineering in AI: A Guide to Reliable AI Agents",
           "title": "Harness Engineering in AI",
