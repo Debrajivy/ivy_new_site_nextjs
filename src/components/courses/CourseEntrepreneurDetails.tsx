@@ -61,6 +61,7 @@ const highlights = [
 const videos = [
   { title: "AI for Entrepreneurs Course", id: "7xAibAQFCRA", href: "https://www.youtube.com/watch?v=7xAibAQFCRA" },
   { title: "Introductory Session", id: "YertEnxdufk", href: "https://www.youtube.com/watch?v=YertEnxdufk&t=207s" },
+  { title: "Course Experience", id: "_93P-72Tio4", href: "https://www.youtube.com/watch?v=_93P-72Tio4&t=211s" },
 ];
 
 export default function CourseEntrepreneurDetails() {
@@ -147,7 +148,7 @@ Most business owners know AI is important, but struggle with jargon, time constr
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#d98200]">See the program in action</span>
             <h3 className="mt-3 text-3xl font-black text-[#0d2137] sm:text-4xl">Watch the course experience</h3>
           </div>
-          <div className="mx-auto mt-8 grid max-w-5xl gap-6 md:grid-cols-2">
+          <div className="mx-auto mt-8 grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
             {videos.map((video) => (
               <a key={video.id} href={video.href} target="_blank" rel="noopener noreferrer" className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
                 <div className="relative aspect-video overflow-hidden bg-slate-900">
