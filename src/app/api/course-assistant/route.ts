@@ -216,14 +216,20 @@ ${buildCourseContext(course, pageFaqs)}`
 
     if (!openAIResponse.ok) {
       console.error("Course assistant OpenAI error:", openAIResponse.status);
-      return NextResponse.json({ error: "Unable to answer right now" }, { status: 502 })
+      return NextResponse.json(
+        { answer: "I’m unable to answer right now. Please try again shortly or speak with an Ivy counsellor." },
+        { headers: { "Cache-Control": "no-store" } },
+      )
     }
 
     const result = await openAIResponse.json()
     const answer = cleanText(result.choices?.[0]?.message?.content, 1_200)
 
     if (!answer) {
-      return NextResponse.json({ error: "No answer was generated" }, { status: 502 })
+      return NextResponse.json(
+        { answer: "I’m unable to answer right now. Please try again shortly or speak with an Ivy counsellor." },
+        { headers: { "Cache-Control": "no-store" } },
+      )
     }
 
     return NextResponse.json(
