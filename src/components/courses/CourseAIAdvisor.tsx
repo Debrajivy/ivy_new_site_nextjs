@@ -4,7 +4,12 @@ import { FormEvent, useEffect, useRef, useState } from "react"
 import { Bot, Loader2, Send, Sparkles, X } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import { getCoursePageFaqs } from "@/components/courses/CourseFAQ"
-import { COURSE_ENROLLMENT_ANSWER, isCourseEnrollmentQuestion } from "@/lib/courseAssistant"
+import {
+  COURSE_ENROLLMENT_ANSWER,
+  COURSE_PLACEMENT_ASSISTANCE_ANSWER,
+  isCourseEnrollmentQuestion,
+  isCoursePlacementAssistanceQuestion,
+} from "@/lib/courseAssistant"
 
 type ChatMessage = {
   role: "user" | "assistant"
@@ -45,6 +50,13 @@ export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdv
     window.setTimeout(() => inputRef.current?.focus(), 100)
   }
 
+  const showPresetAnswer = async (answer: string) => {
+    setIsLoading(true)
+    await new Promise((resolve) => window.setTimeout(resolve, 650))
+    setMessages((current) => [...current, { role: "assistant", content: answer }])
+    setIsLoading(false)
+  }
+
   const askQuestion = async (question: string) => {
     const trimmedQuestion = question.trim().slice(0, 300)
     if (!trimmedQuestion || isLoading) return
@@ -55,10 +67,12 @@ export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdv
     setMessages((current) => [...current, { role: "user", content: trimmedQuestion }])
 
     if (isCourseEnrollmentQuestion(trimmedQuestion)) {
-      setMessages((current) => [
-        ...current,
-        { role: "assistant", content: COURSE_ENROLLMENT_ANSWER },
-      ])
+      await showPresetAnswer(COURSE_ENROLLMENT_ANSWER)
+      return
+    }
+
+    if (isCoursePlacementAssistanceQuestion(trimmedQuestion)) {
+      await showPresetAnswer(COURSE_PLACEMENT_ASSISTANCE_ANSWER)
       return
     }
 
@@ -171,7 +185,23 @@ export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdv
                           : "bg-slate-100 text-slate-800"
                       }`}
                     >
-                      <ReactMarkdown>{message.content}</ReactMarkdown>
+                      <ReactMarkdown
+                        components={{
+                          h2: ({ children }) => (
+                            <h2 className="mb-2 text-base font-bold text-slate-900">{children}</h2>
+                          ),
+                          p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                          strong: ({ children }) => (
+                            <strong className="font-bold text-slate-900">{children}</strong>
+                          ),
+                          ul: ({ children }) => (
+                            <ul className="mb-2 ml-5 list-disc space-y-1 last:mb-0">{children}</ul>
+                          ),
+                          li: ({ children }) => <li className="pl-0.5">{children}</li>,
+                        }}
+                      >
+                        {message.content}
+                      </ReactMarkdown>
                     </div>
                   </div>
                 ))}

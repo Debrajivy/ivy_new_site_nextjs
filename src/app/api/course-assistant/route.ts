@@ -2,7 +2,12 @@ import { NextRequest, NextResponse } from "next/server"
 import { fetchCourseById } from "@/lib/api"
 import { getCoursePricing } from "@/lib/coursePricing"
 import { ENTREPRENEUR_PROJECTS, getCourseDurationHours, hasCourseEmi } from "@/lib/coursePageFacts"
-import { COURSE_ENROLLMENT_ANSWER, isCourseEnrollmentQuestion } from "@/lib/courseAssistant"
+import {
+  COURSE_ENROLLMENT_ANSWER,
+  COURSE_PLACEMENT_ASSISTANCE_ANSWER,
+  isCourseEnrollmentQuestion,
+  isCoursePlacementAssistanceQuestion,
+} from "@/lib/courseAssistant"
 import { getCourseAssistantAlumni, getCoursePlacementFacts } from "@/lib/courseAssistantEvidence"
 
 type SafeMessage = {
@@ -155,6 +160,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    if (isCoursePlacementAssistanceQuestion(message)) {
+      return NextResponse.json(
+        { answer: COURSE_PLACEMENT_ASSISTANCE_ANSWER },
+        { headers: { "Cache-Control": "no-store" } },
+      )
+    }
+
     if (!process.env.OPENAI_API_KEY) {
       return NextResponse.json({ error: "AI assistant is not configured" }, { status: 503 })
     }
@@ -187,6 +199,7 @@ ANSWERING RULES:
 6. Only when the requested fact is genuinely absent after checking all COURSE DATA, say: "That detail is not listed on this course page." You may then suggest contacting an Ivy counsellor. Never say "I don't know" when COURSE DATA contains the answer.
 7. Do not claim to have browsed the live page or the internet.
 8. For any question asking how or where to enroll, register, apply, join, or sign up, answer exactly: "${COURSE_ENROLLMENT_ANSWER}"
+9. For any question about placement assistance, job assistance, job guarantees, placement assurances, hiring support, or whether Ivy will secure a job, answer exactly with the approved placement-assistance response supplied by the application. Never claim or imply that Ivy guarantees a job.
 
 If asked about anything unrelated, reply:
 "I can only help with questions about ${course.title.trim()}. Ask me about its curriculum, eligibility, projects, duration, or outcomes."
