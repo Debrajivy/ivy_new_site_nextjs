@@ -225,6 +225,14 @@ const allCourses = [
   // }
 ]
 
+const enterprisePrograms = [
+  { title: "AI for Leaders & CXOs", href: "/enterprise/ai-for-leaders-and-cxos", description: "Turn AI awareness into responsible, measurable enterprise action." },
+  { title: "AI for Finance Team", href: "/enterprise/ai-for-finance-team", description: "Apply AI to analysis, reporting, controls, and finance workflows." },
+  { title: "AI for HR Team", href: "/enterprise/ai-for-hr-team", description: "Build safer, faster, people-first HR workflows with AI." },
+  { title: "AI for Sales", href: "/enterprise/ai-for-sales", description: "Use AI across prospecting, account planning, and sales execution." },
+  { title: "AI for Marketing", href: "/enterprise/ai-for-marketing", description: "Scale research, content, campaigns, and marketing intelligence." },
+]
+
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a"> & {
@@ -618,9 +626,32 @@ const Navbar = () => {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="/enterprise" className="flex items-center px-3 py-2 text-sm font-medium">
+                  <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium">
                     Enterprise
-                  </Link>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-[680px] rounded-xl border border-sky-100 bg-white p-5 shadow-2xl">
+                      <div className="mb-4 flex items-center justify-between border-b border-slate-100 pb-4">
+                        <div>
+                          <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#009fda]">Enterprise AI programs</p>
+                          <p className="mt-1 text-sm text-slate-500">Role-specific capability building for business teams.</p>
+                        </div>
+                        <Link href="/enterprise" className="text-sm font-bold text-[#013a81] hover:text-[#009fda]">Enterprise overview →</Link>
+                      </div>
+                      <ul className="grid grid-cols-2 gap-2">
+                        {enterprisePrograms.map((program, index) => (
+                          <li key={program.title} className={index === 0 ? "col-span-2" : ""}>
+                            <NavigationMenuLink asChild>
+                              <Link href={program.href} className="group flex h-full items-start gap-3 rounded-lg border border-slate-100 p-4 transition hover:border-[#009fda]/40 hover:bg-sky-50 hover:shadow-sm">
+                                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#009fda]/10 text-sm font-extrabold text-[#009fda] group-hover:bg-[#009fda] group-hover:text-white">{String(index + 1).padStart(2, "0")}</span>
+                                <span><strong className="block text-sm text-slate-900">{program.title}</strong><small className="mt-1 block leading-5 text-slate-500">{program.description}</small></span>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
                 {/* <NavigationMenuItem>
                   <Link href="/verify-certificate" className="flex items-center px-3 py-2 text-sm font-medium">
@@ -754,6 +785,17 @@ const Navbar = () => {
                   <Building className="h-5 w-5 text-green-600" />
                   <span style={{ fontWeight: 'bold' }} className="font-medium text-gray-800">Enterprise</span>
                 </Link>
+                {enterprisePrograms.map((program) => (
+                  <Link
+                    key={program.title}
+                    href={program.href}
+                    className="ml-5 flex items-center gap-3 rounded-lg border border-sky-100 bg-sky-50/50 px-4 py-3 text-sm font-semibold text-gray-800 hover:border-ivy-blue hover:text-ivy-blue"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <ChevronRight className="h-4 w-4 text-[#009fda]" />
+                    {program.title}
+                  </Link>
+                ))}
 
                 {/* Blog */}
                 <a
