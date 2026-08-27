@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ArrowRight, Check, ShieldCheck, Sparkles } from "lucide-react";
 import styles from "./leaders.module.css";
+import ProgramGallery from "./ProgramGallery";
 import aiLeaders1 from "@/assests/aileaders1.jpeg";
 import aiLeaders2 from "@/assests/aileaders2.jpeg";
 import aiLeaders3 from "@/assests/aileaders3.jpeg";
@@ -96,7 +97,7 @@ const clientLogos = [
 
 const faqs = [
   ["Who is the AI for Leaders and CXOs program designed for?", "The program is designed for CXOs, business heads, senior managers and enterprise decision-makers who need to evaluate AI opportunities, guide adoption and manage risk without becoming technical specialists."],
-  ["Do participants need a technical or coding background?", "No. The program focuses on leadership judgment, practical business workflows and responsible AI adoption. Concepts, demonstrations and exercises are configured for the cohort's existing level."],
+  ["Do participants need any prior AI tools knowledge or prompting experience?", "No. The program focuses on leadership judgment, practical business workflows and responsible AI adoption. Concepts, demonstrations and exercises are configured for the cohort's existing level."],
   ["Can the AI leadership training be customized for our organization?", "Yes. Ivy Professional School assesses business priorities, participant maturity, approved tools, data boundaries and target functions before configuring the curriculum, use cases and success measures."],
   ["What business outcomes does the program target?", "Typical targets include stronger AI fluency, completion of hands-on workflows, a scored AI opportunity map, improved adoption and a shortlist of pilot-ready use cases with owners and measurement criteria."],
   ["Which AI topics are covered?", "The program covers generative AI, agentic AI, prompting, hallucination control, responsible AI, data privacy, functional use cases, workflow design, AI economics and use-case prioritization."],
@@ -110,6 +111,7 @@ const structuredData = {
   ],
 };
 
+
 export default function LeadersPage() {
   return <div className={styles.page}>
     <Navbar />
@@ -122,7 +124,7 @@ export default function LeadersPage() {
 
       <section className={styles.proof}><div className={styles.shell + " " + styles.proofGrid}>{[["8 hours","Flagship workshop"],["12","Functional use-case labs"],["3–5","Pilot-ready opportunities"],["30 days","Activation pulse"]].map(x=><div key={x[0]}><strong>{x[0]}</strong><span>{x[1]}</span></div>)}</div></section>
 
-      <section className={styles.photoSection} id="program-photos"><div className={styles.shell}><div className={styles.photoIntro}><div><p className={styles.eyebrow}>PREVIOUS PROGRAM HIGHLIGHTS</p><h2>Leaders learning through real business application.</h2></div><p>Immersive sessions built around live demonstrations, collaborative problem-solving and practical AI workflows that leaders can take back to their teams.</p></div><div className={styles.programGallery}>{programPhotos.map((photo, index)=><figure className={`${styles.photoCard} ${photo.wide ? styles.photoWide : ""}`} key={photo.alt}><Image src={photo.src} alt={photo.alt} sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 50vw" priority={index === 0} /><span>{String(index + 1).padStart(2, "0")}</span></figure>)}</div></div></section>
+      <section className={styles.photoSection} id="program-photos"><div className={styles.photoGlow} aria-hidden="true"/><div className={styles.shell}><div className={styles.photoIntro}><div><p className={styles.eyebrow}>PREVIOUS PROGRAM HIGHLIGHTS</p><h2>Leaders learning through <span>real business application.</span></h2></div><div className={styles.photoSummary}><p>Immersive sessions built around live demonstrations, collaborative problem-solving and practical AI workflows that leaders can take back to their teams.</p><span>Explore the moments <ArrowRight size={15}/></span></div></div><ProgramGallery photos={programPhotos}/><p className={styles.swipeHint}>Swipe to explore <ArrowRight size={14}/></p></div></section>
 
       <section className={styles.section}><div className={styles.shell + " " + styles.twoCol}><div><p className={styles.eyebrow}>WHY THIS PROGRAM</p><h2>Leadership judgment is the real AI advantage.</h2></div><div className={styles.leadCopy}><p>Leaders need enough AI fluency to ask sharper questions, choose worthwhile opportunities, set responsible boundaries, and sponsor adoption with confidence.</p><p>The program connects technology to business decisions, using examples that feel familiar to each participant&apos;s function and industry.</p></div></div></section>
 
