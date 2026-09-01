@@ -72,3 +72,64 @@
 .faqList details[open] summary:after{content:"−"}
 .faqList p{max-width:900px;margin:0;padding:0 50px 24px 0;color:var(--muted);font-size:15px;line-height:1.75}
 @media(max-width:600px){.faqSection{padding:65px 0}.faqList summary{font-size:16px}}
+
+/* Keep the page compact without changing its visual system or interactions. */
+.section,
+.takeaways,
+.economics,
+.faqSection{padding:64px 0}
+.custom{padding:58px 0}
+.logoSection{padding:52px 0}
+.photoSection{padding:76px 0}
+.roadmap{padding:58px 0}
+.cta{padding:70px 0}
+.heroGrid{min-height:auto;padding:56px 0}
+.heading{margin-bottom:36px}
+.photoIntro{margin-bottom:38px}
+.faqHead{margin-bottom:30px}
+
+@media(max-width:900px){
+  .heroGrid{gap:34px;padding:46px 0}
+  .twoCol,.customGrid,.heading,.economicsGrid,.roadmapGrid{gap:30px}
+}
+
+@media(max-width:600px){
+  .section,
+  .takeaways,
+  .economics,
+  .faqSection{padding:32px 0}
+  .custom,.logoSection,.roadmap,.cta{padding:32px 0}
+  .photoSection{padding:38px 0}
+  .heroGrid{gap:28px;padding:38px 0}
+  .heading,.photoIntro,.faqHead{margin-bottom:20px}
+  .diagnostic article{min-height:auto;padding:20px 18px}
+  .diagnostic b{margin-bottom:12px}
+  .diagnostic h3{margin-bottom:7px}
+  .configNote{gap:14px;margin-top:16px}
+  .configNote article{padding:20px 18px}
+}
+
+.assetSection{background:white}
+.testimonialGrid,.linkedinGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.testimonialSlot{min-height:290px;padding:26px;border:1px dashed #aabcc9;border-radius:9px;background:white}
+.quoteMark{display:block;color:var(--orange);font-size:44px;line-height:.8}
+.testimonialSlot blockquote{margin:24px 0;color:var(--muted);font-size:16px;line-height:1.7}
+.testimonialSlot footer{padding-top:18px;border-top:1px solid #dbe5ee;color:var(--navy);font-size:12px;line-height:1.6}
+.testimonialSlot footer span{display:block;color:var(--muted);font-size:11px}
+.internalOwner{display:inline-block;margin-top:12px;color:#93610b;font-size:10px;font-weight:800}
+.linkedinSection{background:var(--navy);color:white}
+.linkedinSection h2{color:white}
+.linkedinSection .heading>p{color:#a9bdce}
+.linkedinGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.linkedinSlot{min-height:285px;padding:24px;border:1px dashed #ffffff52;border-radius:9px;background:#ffffff0d}
+.linkedinTop{display:flex;justify-content:space-between;align-items:center;color:#75d2f4;font-size:9px;font-weight:900;letter-spacing:.1em}
+.linkedinBadge{display:grid;place-items:center;width:34px;height:34px;border-radius:5px;background:#0a66c2;color:white;font-size:16px;font-weight:900;letter-spacing:0}
+.linkedinSlot h3{margin:38px 0 10px;color:white;font-size:18px}
+.linkedinSlot p{margin:0;color:#afc1ce;font-size:12px;line-height:1.65}
+.linkPlaceholder{display:inline-block;margin-top:24px;padding-bottom:3px;border-bottom:1px solid #ffffff61;color:white;font-size:11px;font-weight:800}
+.linkedinSection .assetNote{background:#ffffff0d;color:#c4d2dd}
+.linkedinSection .assetNote strong{color:white}
+.linkedinSection .internalOwner{color:var(--orange)}
+
+@media(max-width:900px){.testimonialGrid,.linkedinGrid{grid-template-columns:1fr}}
+@media(max-width:600px){.testimonialSlot,.linkedinSlot{min-height:auto;padding:20px 18px}.testimonialSlot blockquote{margin:18px 0}.linkedinSlot h3{margin-top:24px}}
