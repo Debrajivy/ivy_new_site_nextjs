@@ -144,17 +144,26 @@ export default function LeadersPage() {
 
       <section className={styles.outcomes} id="outcomes"><div className={styles.shell + " " + styles.section}><div className={styles.heading}><div><p className={styles.eyebrow}>OUTCOMES & IMPACT METRICS</p><h2>Targets that a corporate sponsor can track.</h2></div><p>Final targets are agreed after the maturity assessment and adjusted to the cohort baseline, program duration, tool access and selected workflows.</p></div><div className={styles.metricGrid}>{metrics.map(m=><article key={m[2]}><strong>{m[0]}</strong><small>{m[1]}</small><h3>{m[2]}</h3><p>{m[3]}</p><span>MEASURED & REPORTED</span></article>)}<div className={styles.note}><ShieldCheck/> These percentages are proposed program targets, not universal performance claims. Final targets are customized after baseline assessment.</div></div></div></section>
 
-      <section className={styles.assetSection} id="testimonials"><div className={styles.shell + " " + styles.section}><div className={styles.heading}><div><span className={styles.placeholderLabel}>CONTENT PLACEHOLDER · TESTIMONIALS REQUIRED</span><p className={styles.eyebrow}>WHAT CLIENTS SAY</p><h2>Leadership perspectives after the program.</h2></div><p>Use short, outcome-oriented testimonials from program sponsors, L&amp;D leaders, business heads or participants. Every quote should have explicit approval for publication.</p></div><div className={styles.testimonialGrid}>{[
-        ["Insert an approved client quote describing the relevance, customization, hands-on experience or business impact of the program.","CLIENT NAME / SPOKESPERSON"],
-        ["Insert an approved quote showing how leaders gained confidence, identified use cases or changed their approach to enterprise AI.","CLIENT NAME / SPOKESPERSON"],
-        ["Insert an approved quote covering the facilitator quality, industry relevance, practical exercises or measurable learning outcome.","CLIENT NAME / SPOKESPERSON"]
-      ].map(([quote,name])=><article className={styles.testimonialSlot} key={quote}><span className={styles.quoteMark}>“</span><blockquote>{quote}</blockquote><footer>{name}<span>Designation · Organization · Program</span></footer></article>)}</div><div className={styles.assetNote}><strong>Content required:</strong> Verbatim quote, spokesperson name, designation, organization, related program, headshot if approved, testimonial date and written publication approval. <span className={styles.internalOwner}>OWNER: TO BE ASSIGNED</span></div></div></section>
-
       <section className={styles.linkedinSection} id="linkedin-posts"><div className={styles.shell + " " + styles.section}><div className={styles.heading}><div><p className={styles.eyebrow}>CLIENTS MENTIONING IVY</p><h2>See the programs through our clients&apos; LinkedIn posts.</h2></div><p>Explore the professionals and client organizations connected with Ivy Professional School&apos;s leadership programs.</p></div><div className={styles.linkedinGrid}>{[
-        ["01","Preeti N Shah","Bennett Coleman & Co. Ltd.","https://www.linkedin.com/in/preetinshah241528/"],
-        ["02","Kanchan Bose","MSP Steel","https://www.linkedin.com/in/kanchan88/"],
-        ["03","Shyam Soni","Bennett Coleman & Co. Ltd.","https://www.linkedin.com/in/shyam-soni-46a5aa86/"]
-      ].map(([number,name,company,url])=><article className={styles.linkedinSlot} key={url}><div className={styles.linkedinTop}><span className={styles.linkedinBadge}>in</span><span>CLIENT PROFILE {number}</span></div><h3>{name}</h3><p>{company}</p><a className={styles.linkPlaceholder} href={url} target="_blank" rel="noopener noreferrer">VIEW LINKEDIN PROFILE →</a></article>)}</div></div></section>
+          {
+            name: "Preeti N Shah",
+            company: "Bennett Coleman & Co. Ltd.",
+            quote: <>A big thank you to <a href="https://www.linkedin.com/in/prateekagrawal/" target="_blank" rel="noopener noreferrer">Prateek Agrawal</a> for making the sessions so fun, practical, thought-provoking &amp; easy to connect with real-world HR challenges.</>,
+            postUrl: "https://lnkd.in/p/dD-u32YW"
+          },
+          {
+            name: "Kanchan Bose",
+            company: "MSP Steel",
+            quote: <>A big thank you to Mr. <a href="https://www.linkedin.com/in/prateekagrawal/" target="_blank" rel="noopener noreferrer">Prateek Agrawal</a> for delivering highly practical sessions focused on real business applications of AI. It was great to explore how AI can enhance productivity, automate routine tasks, and support better decision-making.</>,
+            postUrl: "https://www.linkedin.com/posts/kanchan88_%F0%9D%90%80%F0%9D%90%88-%F0%9D%90%A2%F0%9D%90%AC-%F0%9D%90%82%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A0-%F0%9D%90%96%F0%9D%90%A8%F0%9D%90%AB%F0%9D%90%A4-%F0%9D%90%8B%F0%9D%90%9E-activity-7484436858446344192-KiVa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC34cOQBDR1p3gUboUFNElELdETV4v0D9r4"
+          },
+          {
+            name: "Devanganaa Sharma",
+            company: "Bennett Coleman & Co. Ltd.",
+            quote: <>The AI for HR workshop was less about learning another tool and more about understanding what’s becoming possible.<br/><br/>A special thanks to <a href="https://www.linkedin.com/in/prateekagrawal/" target="_blank" rel="noopener noreferrer">Prateek Agrawal</a> for spending these two days with us and generously sharing his knowledge, perspectives and, quite literally, some serious AI wisdom!</>,
+            postUrl: "https://lnkd.in/p/dXZZbJfb"
+          }
+        ].map(({name,company,quote,postUrl})=><article className={styles.linkedinSlot} key={postUrl}><h3>{name}</h3><p className={styles.clientCompany}>{company}</p><blockquote><span className={styles.quoteMark}>“</span>{quote}</blockquote><a className={styles.linkPlaceholder} href={postUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${name}'s LinkedIn post`}>VIEW LINKEDIN POST →</a></article>)}</div></div></section>
 
       <section className={styles.roadmap}><div className={styles.shell + " " + styles.roadmapGrid}><div><p className={styles.eyebrow}>FROM WORKSHOP TO SCALE</p><h2>A phased enterprise journey</h2></div>{[["PHASE 1","Leadership alignment","Shared vocabulary, responsible-use clarity and opportunity discovery."],["PHASE 2","Functional capability","Role-specific training using real documents, workflows and approved tools."],["PHASE 3","AI pilots","Design, test and scale selected agents and AI-enabled workflows."]].map(x=><article key={x[0]}><span>{x[0]}</span><h3>{x[1]}</h3><p>{x[2]}</p></article>)}</div></section>
 

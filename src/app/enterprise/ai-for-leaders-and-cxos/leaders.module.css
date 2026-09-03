@@ -121,15 +121,17 @@
 .linkedinSection h2{color:white}
 .linkedinSection .heading>p{color:#a9bdce}
 .linkedinGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.linkedinSlot{min-height:285px;padding:24px;border:1px dashed #ffffff52;border-radius:9px;background:#ffffff0d}
-.linkedinTop{display:flex;justify-content:space-between;align-items:center;color:#75d2f4;font-size:9px;font-weight:900;letter-spacing:.1em}
-.linkedinBadge{display:grid;place-items:center;width:34px;height:34px;border-radius:5px;background:#0a66c2;color:white;font-size:16px;font-weight:900;letter-spacing:0}
-.linkedinSlot h3{margin:38px 0 10px;color:white;font-size:18px}
-.linkedinSlot p{margin:0;color:#afc1ce;font-size:12px;line-height:1.65}
+.linkedinSlot{display:flex;min-height:360px;padding:28px 24px;border:1px solid #ffffff2e;border-radius:9px;background:#ffffff0d;flex-direction:column}
+.linkedinSlot h3{margin:0 0 6px;color:white;font-size:18px}
+.linkedinSlot .clientCompany{margin:0;color:#afc1ce;font-size:12px;line-height:1.65}
+.linkedinSlot blockquote{position:relative;margin:28px 0 24px;padding-top:20px;color:#dce7ee;font-size:14px;line-height:1.7;flex:1}
+.linkedinSlot blockquote .quoteMark{position:absolute;top:-14px;left:0;color:var(--orange);font-family:Georgia,serif;font-size:46px;line-height:1}
+.linkedinSlot blockquote a{color:#75d2f4;font-weight:700;text-decoration:none}
+.linkedinSlot blockquote a:hover{text-decoration:underline}
 .linkPlaceholder{display:inline-block;margin-top:24px;padding-bottom:3px;border-bottom:1px solid #ffffff61;color:white;font-size:11px;font-weight:800}
 .linkedinSection .assetNote{background:#ffffff0d;color:#c4d2dd}
 .linkedinSection .assetNote strong{color:white}
 .linkedinSection .internalOwner{color:var(--orange)}
 
 @media(max-width:900px){.testimonialGrid,.linkedinGrid{grid-template-columns:1fr}}
-@media(max-width:600px){.testimonialSlot,.linkedinSlot{min-height:auto;padding:20px 18px}.testimonialSlot blockquote{margin:18px 0}.linkedinSlot h3{margin-top:24px}}
+@media(max-width:600px){.testimonialSlot,.linkedinSlot{min-height:auto;padding:20px 18px}.testimonialSlot blockquote{margin:18px 0}}
