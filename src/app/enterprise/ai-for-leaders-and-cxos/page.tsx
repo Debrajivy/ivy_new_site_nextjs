@@ -1,3 +1,4 @@
+import UseCaseCards from "./UseCaseCards";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
@@ -16,6 +17,7 @@ import cxo3 from "@/assests/cxo3.jpeg";
 import cxo4 from "@/assests/cxo4.jpeg";
 import cxo5 from "@/assests/cxo5.jpeg";
 import cxo6 from "@/assests/cxo6.jpeg";
+import aiHr from "@/assests/aihr.jpeg";
 import atlasCopcoLogo from "@/assests/Atlas Copco Logotype for white BG_CMYK.png";
 import bcclLogo from "@/assests/BCCL - Times of India.webp";
 import canonLogo from "@/assests/Canon.png";
@@ -80,6 +82,7 @@ const programPhotos = [
   { src: cxo4, alt: "CXO cohort exploring business applications of AI", wide: true },
   { src: cxo5, alt: "Enterprise leaders engaged in an instructor-led AI session", wide: true },
   { src: cxo6, alt: "Executives taking part in the AI for Leaders learning experience", wide: true },
+  { src: aiHr, alt: "Group photograph of participants at an Ivy enterprise AI program", wide: true },
 ];
 
 const clientLogos = [
@@ -136,7 +139,7 @@ export default function LeadersPage() {
 
       <section className={styles.section} id="outline"><div className={styles.shell}><div className={styles.heading}><div><p className={styles.eyebrow}>FLAGSHIP OUTLINE</p><h2>Eight hours.<br/>From context to commitment.</h2></div><p>The full-day format blends leadership context, live demonstrations, guided practice and structured opportunity discovery. Modular and multi-day formats are also available.</p></div><div className={styles.modules}>{modules.map(m=><article key={m[0]}><span>{m[0]}</span><div><h3>{m[1]}</h3><p>{m[2]}</p></div><b>{m[3]}</b></article>)}</div></div></section>
 
-      <section className={styles.dark} id="cases"><div className={styles.shell + " " + styles.section}><div className={styles.heading}><div><p className={styles.eyebrow}>USE-CASE LIBRARY</p><h2>Business work becomes the learning material.</h2></div><p>Participants build and test role-specific copilots using synthetic or approved client inputs. Each activity includes embedded rules, validation criteria, guardrails and mandatory human review.</p></div><div className={styles.caseGrid}>{cases.map(c=><article key={c[1]}><span>{c[0]}</span><h3>{c[1]}</h3><p>{c[2]}</p></article>)}</div></div></section>
+      <section className={styles.dark} id="cases"><div className={`${styles.shell} ${styles.section} ${styles.casesShell}`}><div className={styles.heading}><div><p className={styles.eyebrow}>USE-CASE LIBRARY</p><h2>Business work becomes the learning material.</h2></div><p>Participants build and test role-specific copilots using synthetic or approved client inputs. Each activity includes embedded rules, validation criteria, guardrails and mandatory human review.</p></div><UseCaseCards cases={cases} /></div></section>
 
       <section className={styles.economics}><div className={styles.shell + " " + styles.economicsGrid}><div><p className={styles.eyebrow}>AI COST ECONOMICS</p><h2>Leaders learn to judge value before approving scale.</h2></div><div><p className={styles.leadCopy}>AI economics extends beyond a licence price. Leaders examine the full cost-to-value equation, compare build, buy and configure choices, and learn when a promising demo is commercially ready for an enterprise pilot.</p><div className={styles.costGrid}>{[["DIRECT COSTS","Licences, model usage, compute and platforms"],["IMPLEMENTATION COSTS","Integration, workflow design, testing and support"],["READINESS COSTS","Data preparation, access, security and governance"],["ADOPTION COSTS","Training, process redesign and human oversight"],["VALUE DRIVERS","Time saved, quality, consistency and avoided risk"],["UNIT ECONOMICS","Cost per user, task or decision versus benefit"]].map(x=><div key={x[0]}><strong>{x[0]}</strong><span>{x[1]}</span></div>)}</div></div></div></section>
 

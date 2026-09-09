@@ -135,3 +135,7 @@
 
 @media(max-width:900px){.testimonialGrid,.linkedinGrid{grid-template-columns:1fr}}
 @media(max-width:600px){.testimonialSlot,.linkedinSlot{min-height:auto;padding:20px 18px}.testimonialSlot blockquote{margin:18px 0}}
+
+/* Full-width use-case carousel, contained within responsive page gutters. */
+.casesShell{width:calc(100% - 64px);max-width:none}
+@media(max-width:600px){.casesShell{width:calc(100% - 30px)}}

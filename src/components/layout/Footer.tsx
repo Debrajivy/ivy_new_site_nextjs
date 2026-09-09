@@ -1,281 +1,130 @@
+﻿import Link from 'next/link';
+import { ArrowUpRight, BarChart3, BriefcaseBusiness, Building2, ChevronRight, Facebook, GraduationCap, Instagram, Linkedin, Mail, MapPin, Phone, Star, Twitter, Youtube } from 'lucide-react';
+import styles from './Footer.module.css';
 
-import React from 'react';
-import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Youtube, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+const programs = [
+  ['Data Science', '/courses/data-science-and-ml-course'],
+  ['Data Analytics', '/courses/data-analytics-course'],
+  ['Generative AI', '/courses/generative-ai-course'],
+  ['Data Engineering', '/courses/data-engineering-course'],
+  ['Machine Learning & AI', '/courses/ai-machine-learning-course'],
+  ['Data Analytics & Gen AI', '/courses/data-analytics-and-generative-ai-course'],
+  ['Data Science (Pay after placement)', '/courses/no-upfront-fees-data-science-and-ml-course'],
+];
 
-const Footer = () => {
-  const officeLocations = [
-    {
-      city: "Kolkata",
-      address: "14B, Camac St (5th Floor)"
-    },
-    {
-      city: "Pune",
-      address: "Shivajinagar, Maharashtra 411016"
-    },
-    {
-      city: "Bangalore",
-      address: "George Thangaiah Complex, Kalyan Nagar, Indira Nagar 1st Stage, H Colony, Indiranagar, Bengaluru, Karnataka 560038"
-    },
-    {
-      city: "Delhi",
-      address: "Start Works, 1st Floor DCM Building Barakhamba Road"
-    }
-  ];
+const business = [
+  ['Enterprise Training', '/enterprise'],
+  ['AI for Leaders & CXOs', '/enterprise/ai-for-leaders-and-cxos'],
+  ['AI for Sales', '/enterprise/ai-for-sales'],
+  ['AI for HR Teams', '/enterprise/ai-for-hr-team'],
+];
 
+const company = [
+  ['About / Enterprise', '/enterprise'],
+  ['Testimonials', '/alumni'],
+  ['Verify Certificate', '/verify-certificate'],
+  ['YouTube Channel', 'https://youtube.com/ivyproschool'],
+  ['Contact Us', '/contact-us'],
+];
+
+const offices = [
+  { city: 'Kolkata', address: '14B, Camac St (5th Floor)' },
+  { city: 'Bangalore', address: 'George Thangaiah Complex, Kalyan Nagar, Indira Nagar 1st Stage, H Colony, Indiranagar, Bengaluru, Karnataka 560038' },
+  { city: 'Delhi', address: 'Start Works, 1st Floor DCM Building Barakhamba Road' },
+  { city: 'Pune', address: 'Shivajinagar, Maharashtra 411016' },
+];
+
+const cities = ['Kolkata', 'Delhi', 'Bangalore', 'Mumbai', 'Pune', 'Chennai'];
+const directories = [
+  { title: 'Data Science Courses', slug: 'data-science-course' },
+  { title: 'Data Analytics Courses', slug: 'data-analytics-course' },
+  { title: 'Data Engineering Courses', slug: 'data-engineering-course' },
+  { title: 'Gen AI Courses', slug: 'generative-ai-course' },
+];
+
+const socials = [
+  { label: 'LinkedIn', href: 'https://in.linkedin.com/school/ivy-professional-school', Icon: Linkedin },
+  { label: 'Twitter', href: 'https://twitter.com/ivyproschool', Icon: Twitter },
+  { label: 'Facebook', href: 'https://facebook.com/ivyproschool', Icon: Facebook },
+  { label: 'YouTube', href: 'https://youtube.com/ivyproschool', Icon: Youtube },
+  { label: 'Instagram', href: 'https://instagram.com/ivyproschool', Icon: Instagram },
+];
+
+function FooterLinks({ links }: { links: string[][] }) {
+  return <ul className={styles.links}>{links.map(([label, href]) => (
+    <li key={href}><Link href={href}><span>{label}</span><ChevronRight size={13} aria-hidden="true" /></Link></li>
+  ))}</ul>;
+}
+
+export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-6">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div className="mb-6">
-              <Link href="/" className="flex items-center">
-                <img
-                  src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png"
-                  alt="Ivy Professional School"
-                  className="h-12 mb-3"
-                />
-              </Link>
-              <div className="mt-2 flex items-center">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} xmlns="http://w3.org/2000/svg" className="h-4 w-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="ml-2 text-sm">4.8/5 (2,250+ reviews)</span>
-              </div>
+    <footer className={styles.footer}>
+      <div className={styles.shell}>
+        <div className={styles.main}>
+          <div className={styles.brand}>
+            <Link href="/" aria-label="Ivy Professional School home" className={styles.logo}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png" alt="Ivy Professional School" width="82" height="64" />
+            </Link>
+            <p className={styles.tagline}>Empowering professionals with Data, AI & emerging technology skills since 2008.</p>
+            <div className={styles.rating}>
+              <span className={styles.stars} aria-hidden="true">{Array.from({ length: 5 }, (_, index) => <Star key={index} size={14} fill="currentColor" />)}</span>
+              <span>4.8/5 from 2,250+ reviews</span>
             </div>
-            <p className="text-gray-300 mb-4">
-              Leading the way in data science and AI education since 2008, empowering professionals to transform their careers.
-            </p>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com/ivyproschool" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="https://twitter.com/ivyproschool" aria-label="Twitter" className="text-gray-300 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="https://in.linkedin.com/school/ivy-professional-school" aria-label="LinkedIn" className="text-gray-300 hover:text-white transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://youtube.com/ivyproschool" aria-label="YouTube" className="text-gray-300 hover:text-white transition-colors">
-                <Youtube size={20} />
-              </a>
-              <a href="https://instagram.com/ivyproschool" aria-label="Instagram" className="text-gray-300 hover:text-white transition-colors">
-                <Instagram size={20} />
-              </a>
+            <div className={styles.community}>
+              <p>Join our learning community</p>
+              <div className={styles.socials}>{socials.map(({ label, href, Icon }) => <a href={href} aria-label={label} key={label}><Icon size={17} aria-hidden="true" /></a>)}</div>
             </div>
           </div>
 
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Courses</h3>
-            <ul className="space-y-2">
-              <li><Link href="/courses/data-science-and-ml-course" className="text-gray-300 hover:text-white transition-colors"> Data Science</Link></li>
-              <li><Link href="/courses/data-engineering-course"> Data Engineering</Link></li>
-              <li><Link href="/courses/generative-ai-course" className="text-gray-300 hover:text-white transition-colors"> Generative AI</Link></li>
-              <li><Link href="/courses/ai-machine-learning-course" className="text-gray-300 hover:text-white transition-colors">Machine Learning & AI</Link></li>
-              {/* <li><Link href="/courses/iit-data-engineering-course" className="text-gray-300 hover:text-white transition-colors">IIT Data Engineering</Link></li> */}
-              <li><Link href="/courses/data-analytics-course" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
-              <li><Link href="/courses/data-analytics-and-generative-ai-course" className="text-gray-300 hover:text-white transition-colors">Data Analytics and Gen AI </Link></li>
-              <li><Link href="/courses/no-upfront-fees-data-science-and-ml-course" className="text-gray-300 hover:text-white transition-colors">Data Science (Pay after placement)</Link></li>
-              {/* <li><Link href="/categories/deep-learning" className="text-gray-300 hover:text-white transition-colors">Deep Learning</Link></li>
-              <li><Link href="/categories" className="text-gray-300 hover:text-white transition-colors">All Courses</Link></li> */}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
-            <ul className="space-y-2">
-              {/* <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/about#founders" className="text-gray-300 hover:text-white transition-colors">Our Founders</Link></li>
-              <li><Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li> */}
-              <li><Link href="/enterprise" className="text-gray-300 hover:text-white transition-colors">Enterprise</Link></li>
-              <li><Link href="/alumni" className="text-gray-300 hover:text-white transition-colors">Testimonials</Link></li>
-              <li><Link href="https://youtube.com/ivyproschool" className="text-gray-300 hover:text-white transition-colors">YouTube Channel</Link></li>
-              <li><Link href="/contact-us" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link></li>
-              <li><Link href="/verify-certificate" className="text-gray-300 hover:text-white transition-colors">Verify Certificate</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            {/* <h3 className="font-semibold text-lg mb-4">Subscribe</h3> */}
-            {/* <p className="text-gray-300 mb-4">
-              Stay updated with our latest courses and AI news.
-            </p>
-            <div className="flex flex-col space-y-2">
-              <Input 
-                type="email" 
-                placeholder="Your email" 
-                className="bg-gray-800 border-gray-700"
-              />
-              <Button className="bg-ivy-blue text-white hover:bg-opacity-90">Subscribe</Button>
-            </div> */}
-            <div className="mt-6 space-y-2">
-              <div className="flex items-center">
-                <Mail size={16} className="mr-2" />
-                <span className="text-gray-300">info@ivyproschool.com</span>
-              </div>
-              <div className="flex items-center">
-                <Phone size={16} className="mr-2" />
-                <span className="text-gray-300">+91 7676882222</span>
-              </div>
-            </div>
-
-            <div className="mt-6">
-              <h4 className="text-sm font-semibold mb-3">Our Offices</h4>
-              <div className="grid grid-cols-2 gap-2">
-                {officeLocations.map((office, index) => (
-                  <div key={index} className="flex items-start">
-                    <MapPin size={14} className="mr-1 flex-shrink-0 mt-0.5 text-gray-400" />
-                    <div className="text-sm">
-                      <span className="text-gray-300 font-medium">{office.city}</span>
-                      <p className="text-gray-400 text-xs">{office.address}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <nav className={styles.column} aria-label="Footer programs">
+            <div className={styles.columnHead}><span className={styles.icon}><GraduationCap size={21} aria-hidden="true" /></span><h2>Programs</h2></div>
+            <p className={styles.intro}>Future-ready skills for a brighter career.</p>
+            <FooterLinks links={programs} />
+          </nav>
+          <nav className={styles.column} aria-label="Footer business">
+            <div className={styles.columnHead}><span className={styles.icon}><BriefcaseBusiness size={20} aria-hidden="true" /></span><h2>For Business</h2></div>
+            <p className={styles.intro}>Practical AI learning for forward-thinking teams.</p>
+            <FooterLinks links={business} />
+          </nav>
+          <nav className={styles.column} aria-label="Footer company">
+            <div className={styles.columnHead}><span className={styles.icon}><Building2 size={20} aria-hidden="true" /></span><h2>Company</h2></div>
+            <p className={styles.intro}>People, purpose and progress.</p>
+            <FooterLinks links={company} />
+          </nav>
+          <div className={`${styles.column} ${styles.contact}`}>
+            <div className={styles.columnHead}><span className={styles.icon}><Phone size={19} aria-hidden="true" /></span><h2>Let’s connect</h2></div>
+            <p className={styles.intro}>Your next chapter starts with a conversation.</p>
+            <a className={styles.contactLink} href="mailto:info@ivyproschool.com"><Mail size={17} aria-hidden="true" /><span>info@ivyproschool.com</span></a>
+            <a className={styles.contactLink} href="tel:+917676882222"><Phone size={16} aria-hidden="true" /><span>+91 7676882222</span></a>
+            <Link href="/contact-us" className={styles.contactCta}>Find your next step <ArrowUpRight size={16} aria-hidden="true" /></Link>
           </div>
         </div>
 
-        {/* <div className="border-t border-gray-800 mt-8 pt-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="flex flex-wrap justify-center items-center gap-y-2 text-[10px] md:text-xs text-gray-400 mb-6 px-4">
+        <section className={styles.locations} aria-labelledby="footer-locations">
+          <div className={styles.sectionLabel}><MapPin size={25} aria-hidden="true" /><div><h2 id="footer-locations">Our locations</h2><p>Learning hubs across India</p></div></div>
+          <div className={styles.cityList}>{offices.map(({ city, address }) => (
+            <a key={city} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Ivy Professional School ${address} ${city}`)}`} title={`${city}: ${address}`} target="_blank" rel="noopener noreferrer"><Building2 size={20} aria-hidden="true" /><div className={styles.officeDetails}><strong>{city}</strong><address>{address}</address></div><ArrowUpRight size={12} aria-hidden="true" /></a>
+          ))}</div>
+          <Link href="/contact-us" className={styles.allLocations}>View all locations <ArrowUpRight size={16} aria-hidden="true" /></Link>
+        </section>
 
-              <Link href="/courses/data-engineering-course-kolkata" className="hover:text-white transition-colors whitespace-nowrap">
-                Data Engineering Course in Kolkata
-              </Link>
-              <span className="mx-2 text-gray-700">|</span>
-
-              <Link href="/courses/data-science-course-kolkata" className="hover:text-white transition-colors whitespace-nowrap">
-                Data Science Course in Kolkata
-              </Link>
-              <span className="mx-2 text-gray-700">|</span>
-
-              <Link href="/courses/data-science-course-delhi" className="hover:text-white transition-colors whitespace-nowrap">
-                Data Science with Machine Learning & AI Course in Delhi              </Link>
-              <span className="mx-2 text-gray-700">|</span>
-
-              <Link href="/courses/data-science-course-pune" className="hover:text-white transition-colors whitespace-nowrap">
-                Data Science with Machine Learning & AI Course in Pune              </Link>
-              <span className="mx-2 text-gray-700">|</span>
-              <Link href="/courses/data-science-course-chennai" className="hover:text-white transition-colors whitespace-nowrap">
-                Data Science with Machine Learning & AI Course in Chennai             </Link>
-              <span className="mx-2 text-gray-700">|</span>
-              <Link href="/courses/data-science-course-bangalore" className="hover:text-white transition-colors whitespace-nowrap">
-                Data Science with Machine Learning & AI Course in Bangalore             </Link>
-              <span className="mx-2 text-gray-700">|</span>
-              <Link href="/courses/data-science-course-mumbai" className="hover:text-white transition-colors whitespace-nowrap">
-                Data Science with Machine Learning & AI Course in Mumbai             </Link>
-              <span className="mx-2 text-gray-700">|</span>
-
-              <Link href="/courses/big-data-certification" className="hover:text-white transition-colors whitespace-nowrap">
-                Big Data Certification
-              </Link>
-
-            </div>
-
-            <div className="flex justify-center">
-              <p className="text-gray-400 text-sm">
-                &copy; {new Date().getFullYear()} Ivy Professional School. All rights reserved.
-              </p>
-            </div>
-
-            <div className="flex justify-center md:justify-end space-x-4 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</Link>
-              <Link href="/sitemap.xml" className="text-gray-400 text-sm hover:text-white transition-colors">Sitemap</Link>
-            </div>
-          </div>
-        </div> */}
-
-
-        <div className="border-t border-gray-800 mt-6 pt-10 pb-8 bg-[#0a0a0c]">
-          <div className="max-w-7xl mx-auto px-4">
-
-            {/* 1. Main Course Directory (The 20+ Links) */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-
-              {/* Example Category: Data Science by City */}
-              <div className="flex flex-col space-y-3">
-                <h4 className="text-white text-xs font-bold uppercase tracking-wider">Data Science Courses</h4>
-                <ul className="space-y-2 text-gray-400 text-xs">
-                  <li><Link href="/courses/data-science-course-kolkata" className="hover:text-blue-400 transition-colors">  Data Science with Machine Learning & AI Course in Kolkata</Link></li>
-                  <li><Link href="/courses/data-science-course-delhi" className="hover:text-blue-400 transition-colors">  Data Science with Machine Learning & AI Course in Delhi </Link>    </li>
-                  <li><Link href="/courses/data-science-course-bangalore" className="hover:text-blue-400 transition-colors">Data Science with Machine Learning & AI Course in Bangalore</Link></li>
-                  <li><Link href="/courses/data-science-course-mumbai" className="hover:text-blue-400 transition-colors">Data Science with Machine Learning & AI Course in Mumbai</Link></li>
-                  <li><Link href="/courses/data-science-course-pune" className="hover:text-blue-400 transition-colors">Data Science with Machine Learning & AI Course in Pune</Link></li>
-                  <li><Link href="/courses/data-science-course-chennai" className="hover:text-blue-400 transition-colors">Data Science with Machine Learning & AI Course in Chennai</Link></li>
-                </ul>
-              </div>
-              <div className="flex flex-col space-y-3">
-                <h4 className="text-white text-xs font-bold uppercase tracking-wider">Data Engineering Courses</h4>
-                <ul className="space-y-2 text-gray-400 text-xs">
-                  <li><Link href="/courses/data-engineering-course-kolkata" className="hover:text-blue-400 transition-colors"> Data Engineering Course in Kolkata</Link></li>
-                  <li><Link href="/courses/data-engineering-course-delhi" className="hover:text-blue-400 transition-colors"> Data Engineering Course in Delhi</Link></li>
-                  <li><Link href="/courses/data-engineering-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Engineering Course in Bangalore</Link></li>
-                  <li><Link href="/courses/data-engineering-course-mumbai" className="hover:text-blue-400 transition-colors">Data Engineering Course in Mumbai</Link></li>
-                  <li><Link href="/courses/data-engineering-course-pune" className="hover:text-blue-400 transition-colors">Data Engineering Course in Pune</Link></li>
-                  <li><Link href="/courses/data-engineering-course-chennai" className="hover:text-blue-400 transition-colors">Data Engineering Course in Chennai</Link></li>
-
-                </ul>
-              </div>
-              <div className="flex flex-col space-y-3">
-                <h4 className="text-white text-xs font-bold uppercase tracking-wider">Data Analytics Courses</h4>
-                <ul className="space-y-2 text-gray-400 text-xs">
-                  <li><Link href="/courses/data-analytics-course-kolkata" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Kolkata</Link></li>
-                  <li><Link href="/courses/data-analytics-course-delhi" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Delhi</Link></li>
-                  <li><Link href="/courses/data-analytics-course-bangalore" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Bangalore</Link></li>
-                  <li><Link href="/courses/data-analytics-course-mumbai" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Mumbai</Link></li>
-                  <li><Link href="/courses/data-analytics-course-pune" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Pune</Link></li>
-                  <li><Link href="/courses/data-analytics-course-chennai" className="hover:text-blue-400 transition-colors"> Data Analytics With Visualization in Chennai</Link></li>
-           
-
-                </ul>
-              </div>
-              <div className="flex flex-col space-y-3">
-                <h4 className="text-white text-xs font-bold uppercase tracking-wider">Gen AI Courses</h4>
-                <ul className="space-y-2 text-gray-400 text-xs">
-                  <li><Link href="/courses/generative-ai-course-kolkata" className="hover:text-blue-400 transition-colors"> Gen AI Course in Kolkata</Link></li>
-                  <li><Link href="/courses/generative-ai-course-delhi" className="hover:text-blue-400 transition-colors"> Gen AI Course in Delhi</Link></li>
-                  <li><Link href="/courses/generative-ai-course-bangalore" className="hover:text-blue-400 transition-colors"> Gen AI Course in Bangalore</Link></li>
-                  <li><Link href="/courses/generative-ai-course-mumbai" className="hover:text-blue-400 transition-colors"> Gen AI Course in Mumbai</Link></li>
-                  <li><Link href="/courses/generative-ai-course-pune" className="hover:text-blue-400 transition-colors"> Gen AI Course in Pune</Link></li>
-                  <li><Link href="/courses/generative-ai-course-chennai" className="hover:text-blue-400 transition-colors"> Gen AI Course in Chennai</Link></li>
-                 
-           
-
-                </ul>
-              </div>
-
-              {/* Repeat for other categories like 'Engineering', 'Big Data', 'Certifications' */}
-              {/* This allows you to scale to 40+ links without it looking cluttered */}
-
-            </div>
-
-            {/* 2. Bottom Bar: Copyright & Legal */}
-            <div className="border-t border-gray-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="text-gray-500 text-xs">
-                &copy; {new Date().getFullYear()} Ivy Professional School. All rights reserved.
-              </div>
-
-              <div className="flex space-x-6 text-gray-500 text-xs">
-                <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
-                <Link href="/terms" className="hover:text-white">Terms of Service</Link>
-                <Link href="/sitemap" className="hover:text-white">Sitemap</Link>
-              </div>
-            </div>
-          </div>
+        <section className={styles.directory} aria-labelledby="footer-directory">
+          <div className={styles.sectionLabel}><BarChart3 size={25} aria-hidden="true" /><div><h2 id="footer-directory">Popular courses by city</h2><p>Find your program, closer to you.</p></div></div>
+          <div className={styles.directoryGrid}>{directories.map(({ title, slug }) => (
+            <nav className={styles.cityCourses} aria-label={title + ' by city'} key={slug}>
+              <h3>{title}</h3>
+              <ul className={styles.links}>{cities.map(city => <li key={city}><Link href={`/courses/${slug}-${city.toLowerCase()}`} aria-label={`${title} in ${city}`}><span>In {city}</span><ChevronRight size={12} aria-hidden="true" /></Link></li>)}</ul>
+            </nav>
+          ))}</div>
+        </section>
+      </div>
+      <div className={styles.bottom}>
+        <div className={styles.shell}>
+          <p>© {new Date().getFullYear()} Ivy Professional School. All rights reserved.</p>
+          <nav aria-label="Footer legal"><Link href="/privacy">Privacy Policy</Link><Link href="/terms">Terms of Service</Link><Link href="/sitemap.xml">Sitemap</Link></nav>
         </div>
-
-
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

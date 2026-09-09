@@ -981,12 +981,14 @@ const TopicPage = ({ params }: PageProps) => {
                                                 <Terminal size={14} className="text-gray-500 flex-shrink-0" />
                                             </div>
                                             <pre className="p-4 sm:p-6 md:p-8 leading-6 sm:leading-8 overflow-x-auto text-gray-100" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-                                                <code dangerouslySetInnerHTML={{
+                                                {item.plainText ? <code>{item.code}</code> : (
+<code dangerouslySetInnerHTML={{
                                                     __html: categorySlug === 'genai-llm' ? highlightGenAICode(item.code) :
                                                         (categorySlug === 'visualization' && topicSlug === 'yoy-growth-powerbi-dax') ? highlightDAXCode(item.code) :
                                                         categorySlug === 'visualization' ? highlightTableauCode(item.code) :
                                                             highlightPythonCode(item.code)
                                                 }} />
+)}
                                             </pre>
                                         </div>
                                     );

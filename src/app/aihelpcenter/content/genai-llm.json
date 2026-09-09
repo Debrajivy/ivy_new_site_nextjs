@@ -10,6 +10,544 @@
       "color": "bg-indigo-600",
       "topics": [
         {
+          "id": "how-do-llm-context-windows-work",
+          "metaTitle": "How Do LLM Context Windows Work? A Simple Guide to Context, Tokens, and Memory",
+          "title": "How Do LLM Context Windows Work? A Simple Guide to Context, Tokens, and Memory",
+          "description": "Understand LLM context windows, tokens, context limits, conversational history, retrieval, and the difference between active context and stored memory.",
+          "duration": "12 min read",
+          "date": "September 9, 2026",
+          "content": {
+            "hero": {
+              "title": "How Do LLM Context Windows Work? A Simple Guide to Context, Tokens, and Memory",
+              "author": "Ivy Professional School",
+              "date": "September 9, 2026",
+              "readTime": "12 minutes"
+            },
+            "sections": [
+              {
+                "id": "intro",
+                "title": "Introduction",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Understanding how LLM context windows work is one of the easiest ways to understand why a Large Language Model can follow a long conversation, analyze documents, write code based on earlier instructions, and sometimes appear to “forget” information you gave it before."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Imagine you are having a conversation with someone while both of you are looking at a whiteboard. Everything currently written on that whiteboard can influence the next thing the person says. As more information is added, space begins to run out. Eventually, some older information may need to be removed, compressed, summarized, or otherwise handled differently."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "An LLM context window works in a broadly similar way."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "It represents the amount of information a language model can consider while generating its next response. Understanding this concept becomes especially useful when working with long conversations, large documents, AI agents, coding assistants, research workflows, and enterprise AI applications."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Let's build the idea from the ground up."
+                  }
+                ]
+              },
+              {
+                "id": "what-is-a-context-window-in-an-llm",
+                "title": "What Is a Context Window in an LLM?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "If you are wondering what is a context window in LLM, think of it as the model's active working space."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "When you send a message to a Large Language Model, the model does not look only at your latest sentence. Depending on the application, it may receive several pieces of information together:"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Your current prompt",
+                      "Previous messages in the conversation",
+                      "System-level instructions",
+                      "Uploaded or retrieved information",
+                      "Tool outputs",
+                      "Relevant documents",
+                      "Other contextual information supplied by the application"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The model processes this available information before producing its next output."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The maximum amount of information that can fit into this active working space is commonly described as the LLM context length."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "A Simple Example"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Suppose you tell an AI:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Example prompt",
+                    "code": "My company sells industrial pumps.\n\n\nOur main customers are manufacturing companies.\n\n\nWe want to increase sales in eastern India.\n\n\nSuggest three marketing strategies.",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The AI needs the earlier statements to understand the final request. If it processed only the final sentence, the answer would be far more generic. The surrounding information gives meaning to the request. That surrounding information is context."
+                  }
+                ]
+              },
+              {
+                "id": "how-do-llm-context-windows-work",
+                "title": "How Do LLM Context Windows Work?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "To understand how LLM context windows work, we first need to understand that language models generally process text as tokens, rather than simply counting words."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "A token is a small unit of text. Depending on the tokenizer used by a model, a token might represent:"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "A complete word",
+                      "Part of a word",
+                      "Punctuation",
+                      "A number",
+                      "A symbol",
+                      "Whitespace combined with text"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "For example, a sentence such as “AI is transforming businesses.” might be divided internally into several tokens. The exact tokenization depends on the model. The important idea is simple: the context window has a limited token capacity."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Think of the Context Window as a Container"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Imagine a model has a theoretical context capacity of 10,000 tokens. The application might send the model:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Token budget",
+                    "code": "System instructions        = 1,000 tokens\nConversation history       = 3,000 tokens\nUploaded document content  = 4,000 tokens\nCurrent user prompt        =   500 tokens\n-----------------------------------------\nTotal                      = 8,500 tokens",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "That information already occupies most of the available context. The model also needs room to generate its response, depending on how the model and application manage input and output limits. This is why context management becomes important in larger AI workflows."
+                  }
+                ]
+              },
+              {
+                "id": "how-are-tokens-related-to-an-llm-context-window",
+                "title": "How Are Tokens Related to an LLM Context Window?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Tokens are essentially the units used to measure how much text the model is processing. A simple conceptual Python example can demonstrate the idea."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Python example",
+                    "code": "context_limit = 10000\n\n\nsystem_tokens = 1000\nconversation_tokens = 3000\ndocument_tokens = 4000\nprompt_tokens = 500\n\n\nused_tokens = (\n    system_tokens\n    + conversation_tokens\n    + document_tokens\n    + prompt_tokens\n)\n\n\nremaining_tokens = context_limit - used_tokens\n\n\nprint(\"Used:\", used_tokens)\nprint(\"Remaining:\", remaining_tokens)",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The output would be:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Output",
+                    "code": "Used: 8500\nRemaining: 1500",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "What Is Happening Behind the Code?"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The variable context_limit = 10000 represents the maximum context capacity in our simplified example. Each following variable represents a different source of information being passed to the model. The code adds them together and then subtracts the used tokens from the total limit to estimate how much theoretical space remains."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Real LLM systems are more sophisticated, but this example demonstrates the underlying constraint clearly. This is also why the LLM token limit matters when designing prompts and AI applications."
+                  }
+                ]
+              },
+              {
+                "id": "how-do-large-language-models-process-context",
+                "title": "How Do Large Language Models Process Context?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Understanding how large language models process context requires looking at what happens after text enters the model. At a simplified level, the process looks like this:"
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 1: Text Is Tokenized"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Your text is divided into tokens. Conceptually:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Illustrative tokenization",
+                    "code": "text = \"The customer wants faster delivery\"\n\n\ntokens = [\n    \"The\",\n    \" customer\",\n    \" wants\",\n    \" faster\",\n    \" delivery\"\n]",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This is only an illustrative example. Real tokenizers may split the sentence differently."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 2: Tokens Are Converted Into Numerical Representations"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Language models operate mathematically. Each token is represented in a numerical form that the model can process. Instead of directly working with words such as customer, delivery, and sales, the model works with mathematical representations associated with those tokens and their relationships."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 3: The Model Examines Relationships Between Tokens"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "A key part of transformer-based language models involves attention mechanisms. Attention helps the model determine which parts of the available context are relevant when processing other parts."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Consider: “Riya submitted the proposal to Neha because she requested it.” To interpret the sentence, the model must use surrounding information to understand relationships between words such as Riya, Neha, she, proposal, and requested. Longer contexts make this task much larger because many more tokens may potentially relate to each other."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Step 4: The Model Predicts What Comes Next"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "An LLM generates text progressively. Given a context such as “The capital of France is”, the model evaluates likely next tokens and may produce “Paris”. It then uses the expanded sequence as context for generating the following token. This process continues until the response is complete."
+                  }
+                ]
+              },
+              {
+                "id": "why-do-context-window-limits-matter-in-large-language-models",
+                "title": "Why Do Context Window Limits Matter in Large Language Models?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "The context window in AI places a practical boundary around how much information the model can actively consider during a particular generation. This matters when working with:"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Long research papers",
+                      "Legal documents",
+                      "Books",
+                      "Large codebases",
+                      "Extended conversations",
+                      "Customer histories",
+                      "Enterprise knowledge bases",
+                      "Agent workflows"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Suppose you upload hundreds of pages and ask the model to compare every contractual obligation mentioned throughout those documents. If all relevant content cannot be made available within the model's usable context, the application needs a strategy for selecting or organizing the information."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This is where techniques such as document chunking, retrieval, summarization, and structured context management become useful."
+                  }
+                ]
+              },
+              {
+                "id": "what-happens-when-an-llm-exceeds-its-context-window",
+                "title": "What Happens When an LLM Exceeds Its Context Window?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "A model cannot simply process unlimited text. When the available information becomes larger than its supported context, the application surrounding the model must decide what information to send."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Python example",
+                    "code": "messages = [\n    \"Message 1\",\n    \"Message 2\",\n    \"Message 3\",\n    \"Message 4\",\n    \"Message 5\"\n]\n\n\nmax_messages = 3\n\n\nrecent_context = messages[-max_messages:]\n\n\nprint(recent_context)",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Output:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Output",
+                    "code": "['Message 3', 'Message 4', 'Message 5']",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "What Is Happening Behind This Code?"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The expression messages[-max_messages:] keeps only the last three messages. It represents a simple version of a sliding-window strategy. As new information comes in, older information falls outside the active window."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Real conversational AI products may use more advanced techniques. They might summarize earlier conversations, retrieve important information, prioritize certain instructions, or manage context through application-specific logic. This explains why very long conversations can sometimes behave differently from short ones."
+                  }
+                ]
+              },
+              {
+                "id": "how-do-llms-remember-information-within-a-conversation",
+                "title": "How Do LLMs Remember Information Within a Conversation?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "The word “remember” can be misleading when discussing language models. Within a conversation, information can appear to be remembered because earlier messages are being supplied again as part of the current context."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Conversation example",
+                    "code": "User: My project is called Project Atlas.\n\n\nUser: It helps hospitals analyze operational data.\n\n\nUser: Create a tagline for my project.",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "If the previous messages remain available in context, the model can understand what “my project” refers to. It might answer: “Project Atlas: Turning Hospital Data Into Better Decisions.” The model appears to remember the project because the relevant information is available during generation."
+                  }
+                ]
+              },
+              {
+                "id": "what-is-the-difference-between-context-window-and-memory-in-ai",
+                "title": "What Is the Difference Between Context Window and Memory in AI?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "A context window is the information available to the model during a particular interaction or generation. Memory usually refers to information stored outside that immediate context and later brought back when needed."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Consider an application that stores customer preferences in a database:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Python example",
+                    "code": "customer_memory = {\n    \"name\": \"Arjun\",\n    \"industry\": \"manufacturing\",\n    \"preferred_report\": \"weekly summary\"\n}",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Later, the application might retrieve those values and construct a prompt:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Python example",
+                    "code": "prompt = f\"\"\"\nCustomer: {customer_memory['name']}\nIndustry: {customer_memory['industry']}\nPreferred report: {customer_memory['preferred_report']}\n\n\nPrepare this week's business summary.\n\"\"\"",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "What Happens Behind the Code?"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The language model itself does not need to permanently hold the dictionary shown above. The application stores the information. When required, that information is retrieved and placed into the prompt. At that moment, the retrieved memory becomes part of the model's context."
+                  },
+                  {
+                    "type": "code",
+                    "title": "Memory and context workflow",
+                    "code": "Stored Memory\n     |\n     v\nInformation Retrieved\n     |\n     v\nAdded to Current Context\n     |\n     v\nLLM Generates Response",
+                    "borderColor": "blue",
+                    "plainText": true
+                  }
+                ]
+              },
+              {
+                "id": "does-a-larger-context-window-make-an-llm-better",
+                "title": "Does a Larger Context Window Make an LLM Better?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "A larger context window can make certain tasks easier because more information can potentially be provided during one interaction. For example, a larger context can help when analyzing longer documents, extended conversations, larger sets of source material, complex code, and multi-step workflows."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "However, context size is only one part of model quality. Suppose you give someone a library containing 10,000 books. Having access to every book does not automatically mean the person will identify the correct paragraph for every question. Similarly, an LLM must still identify relevant information inside the available context."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The quality of the model, prompt structure, placement of important information, retrieval strategy, and application design can all affect the result. Understanding this point is central to understanding how LLM context windows work in real applications."
+                  }
+                ]
+              },
+              {
+                "id": "what-are-the-limitations-of-large-context-windows",
+                "title": "What Are the Limitations of Large Context Windows?",
+                "content": [
+                  {
+                    "type": "subtitle",
+                    "text": "More Context Means More Information to Process"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "If an application sends a very large amount of irrelevant information, the model still has to process that material. A prompt containing 100 useful lines may be more effective than one containing thousands of loosely related lines."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Important Information Can Become Harder to Surface"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Imagine searching for one important sentence inside a 300-page document. The sentence may technically exist in the material, but locating and using it correctly is a separate challenge. The same principle applies to long-context AI systems."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Context Must Be Managed Intelligently"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Instead of continuously sending everything available, many systems try to provide the most relevant information for the current task. A simplified retrieval workflow might look like:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Python example",
+                    "code": "user_question = \"What was our revenue target for Q4?\"\n\n\ndocuments = [\n    \"Marketing campaign notes\",\n    \"Q4 financial planning document\",\n    \"Employee onboarding policy\",\n    \"Product design document\"\n]\n\n\nrelevant_document = \"Q4 financial planning document\"\n\n\ncontext = relevant_document + \"\\n\" + user_question",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The important step is not simply giving the model more context. It is giving the model relevant context."
+                  }
+                ]
+              },
+              {
+                "id": "how-can-you-use-an-llm-context-window-more-effectively",
+                "title": "How Can You Use an LLM Context Window More Effectively?",
+                "content": [
+                  {
+                    "type": "subtitle",
+                    "text": "Put Relevant Information Close to the Task"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Instead of asking “Analyze this,” provide useful context:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Example prompt",
+                    "code": "You are analyzing monthly sales performance.\n\n\nTarget: ₹50 lakh\nActual sales: ₹42 lakh\nPrimary audience: Regional Sales Manager\n\n\nIdentify the top three issues and recommend actions for next month.",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The second version gives the model enough information to understand the problem."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Remove Unnecessary Material"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "More text does not automatically produce a stronger answer. If fifty pages are irrelevant to the question, including them may add complexity without adding value."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Structure Long Context Clearly"
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Use clear headings such as OBJECTIVE, BACKGROUND, DATA, CONSTRAINTS, and REQUIRED OUTPUT. This makes the context easier to navigate."
+                  },
+                  {
+                    "type": "subtitle",
+                    "text": "Break Large Tasks Into Stages"
+                  },
+                  {
+                    "type": "list",
+                    "items": [
+                      "Step 1: Extract relevant information.",
+                      "Step 2: Categorize the information.",
+                      "Step 3: Identify patterns.",
+                      "Step 4: Generate recommendations.",
+                      "Step 5: Review recommendations against the source."
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "This provides clearer intermediate goals and makes complex workflows easier to manage."
+                  }
+                ]
+              },
+              {
+                "id": "a-practical-mental-model-for-context-windows",
+                "title": "A Practical Mental Model for Context Windows",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "You can now picture an LLM interaction as a simple pipeline:"
+                  },
+                  {
+                    "type": "code",
+                    "title": "Context window pipeline",
+                    "code": "Your Question\n      +\nConversation History\n      +\nInstructions\n      +\nRetrieved Information\n      +\nDocuments\n      |\n      v\n-----------------------\n   CONTEXT WINDOW\n-----------------------\n      |\n      v\nLanguage Model\n      |\n      v\nGenerated Response",
+                    "borderColor": "blue",
+                    "plainText": true
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The context window is the temporary working area in which the model receives the information needed to produce its response. The model's output depends heavily on what enters that window. Give it focused, structured context and it has a stronger basis for producing a useful response."
+                  }
+                ]
+              },
+              {
+                "id": "context-windows-become-more-important-as-ai-systems-grow",
+                "title": "Context Windows Become More Important as AI Systems Grow",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Context windows influence almost every practical use of modern language models. They help explain why AI can continue conversations, work with documents, follow complex instructions, analyze retrieved information, and support multi-step applications."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "They also explain why AI systems increasingly need good context management. As AI applications evolve from simple question-answering interfaces into assistants, research systems, coding tools, and agents, developers need to decide what information should enter the context at each stage."
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "The key idea is straightforward: an LLM needs the right information, presented clearly, at the right moment. Once you understand tokens, context limits, conversational history, retrieval, and the distinction between active context and stored memory, how LLM context windows work becomes much easier to understand and much more useful when designing prompts or working with AI systems."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
           "id": "how-are-llms-trained",
           "metaTitle": "How Are LLMs Trained? The LLM Training Process Explained",
           "title": "How Are LLMs Trained?",
