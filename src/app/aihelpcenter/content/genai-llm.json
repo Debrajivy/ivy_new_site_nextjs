@@ -30,7 +30,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Understanding how LLM context windows work is one of the easiest ways to understand why a Large Language Model can follow a long conversation, analyze documents, write code based on earlier instructions, and sometimes appear to “forget” information you gave it before."
+                    "text": "Understanding how LLM context windows work is one of the easiest ways to understand why a Large Language Model can follow a long conversation, analyze documents, write code based on earlier instructions, and sometimes appear to â€œforgetâ€ information you gave it before."
                   },
                   {
                     "type": "paragraph",
@@ -128,7 +128,7 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "For example, a sentence such as “AI is transforming businesses.” might be divided internally into several tokens. The exact tokenization depends on the model. The important idea is simple: the context window has a limited token capacity."
+                    "text": "For example, a sentence such as â€œAI is transforming businesses.â€ might be divided internally into several tokens. The exact tokenization depends on the model. The important idea is simple: the context window has a limited token capacity."
                   },
                   {
                     "type": "subtitle",
@@ -236,7 +236,7 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "Consider: “Riya submitted the proposal to Neha because she requested it.” To interpret the sentence, the model must use surrounding information to understand relationships between words such as Riya, Neha, she, proposal, and requested. Longer contexts make this task much larger because many more tokens may potentially relate to each other."
+                    "text": "Consider: â€œRiya submitted the proposal to Neha because she requested it.â€ To interpret the sentence, the model must use surrounding information to understand relationships between words such as Riya, Neha, she, proposal, and requested. Longer contexts make this task much larger because many more tokens may potentially relate to each other."
                   },
                   {
                     "type": "subtitle",
@@ -244,7 +244,7 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "An LLM generates text progressively. Given a context such as “The capital of France is”, the model evaluates likely next tokens and may produce “Paris”. It then uses the expanded sequence as context for generating the following token. This process continues until the response is complete."
+                    "text": "An LLM generates text progressively. Given a context such as â€œThe capital of France isâ€, the model evaluates likely next tokens and may produce â€œParisâ€. It then uses the expanded sequence as context for generating the following token. This process continues until the response is complete."
                   }
                 ]
               },
@@ -325,7 +325,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "The word “remember” can be misleading when discussing language models. Within a conversation, information can appear to be remembered because earlier messages are being supplied again as part of the current context."
+                    "text": "The word â€œrememberâ€ can be misleading when discussing language models. Within a conversation, information can appear to be remembered because earlier messages are being supplied again as part of the current context."
                   },
                   {
                     "type": "code",
@@ -336,7 +336,7 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "If the previous messages remain available in context, the model can understand what “my project” refers to. It might answer: “Project Atlas: Turning Hospital Data Into Better Decisions.” The model appears to remember the project because the relevant information is available during generation."
+                    "text": "If the previous messages remain available in context, the model can understand what â€œmy projectâ€ refers to. It might answer: â€œProject Atlas: Turning Hospital Data Into Better Decisions.â€ The model appears to remember the project because the relevant information is available during generation."
                   }
                 ]
               },
@@ -456,12 +456,12 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "Instead of asking “Analyze this,” provide useful context:"
+                    "text": "Instead of asking â€œAnalyze this,â€ provide useful context:"
                   },
                   {
                     "type": "code",
                     "title": "Example prompt",
-                    "code": "You are analyzing monthly sales performance.\n\n\nTarget: ₹50 lakh\nActual sales: ₹42 lakh\nPrimary audience: Regional Sales Manager\n\n\nIdentify the top three issues and recommend actions for next month.",
+                    "code": "You are analyzing monthly sales performance.\n\n\nTarget: â‚¹50 lakh\nActual sales: â‚¹42 lakh\nPrimary audience: Regional Sales Manager\n\n\nIdentify the top three issues and recommend actions for next month.",
                     "borderColor": "blue",
                     "plainText": true
                   },
@@ -586,14 +586,14 @@
           "metaTitle": "What Is Generative AI? Beginner's Guide + Hands-On Exercise | Ivy Pro School",
           "title": "Generative AI Beginner's Guide: Your First Hands-On Exercise",
           "description": "Learn what generative AI is, how it differs from traditional AI, where LLMs fit in, and complete your first practical experiment.",
-          "duration": "10–12 min read",
+          "duration": "10â€“12 min read",
           "date": "July 29, 2026",
           "content": {
             "hero": {
               "title": "What Is Generative AI? A Beginner's Guide With Your First Hands-On Exercise",
               "author": "Prateek Agarwal",
               "date": "July 29, 2026",
-              "readTime": "10–12 minutes"
+              "readTime": "10â€“12 minutes"
             },
             "video": {
               "youtubeId": "sUemPHucvrc",
@@ -606,7 +606,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "<strong>Quick answer:</strong> Generative AI is a category of artificial intelligence that creates new content—text, images, code, audio, and video—instead of only analysing or classifying existing data. It works by learning statistical patterns from enormous datasets and then producing original outputs that follow those patterns. Tools like ChatGPT, Claude, and Gemini are generative AI applications built on large language models (LLMs).",
+                    "text": "<strong>Quick answer:</strong> Generative AI is a category of artificial intelligence that creates new contentâ€”text, images, code, audio, and videoâ€”instead of only analysing or classifying existing data. It works by learning statistical patterns from enormous datasets and then producing original outputs that follow those patterns. Tools like ChatGPT, Claude, and Gemini are generative AI applications built on large language models (LLMs).",
                     "hasBar": true
                   },
                   {
@@ -646,9 +646,9 @@
                   {
                     "type": "callout",
                     "variant": "info",
-                    "icon": "✨",
+                    "icon": "âœ¨",
                     "title": "The formal definition",
-                    "content": "Generative AI refers to machine learning models that learn the underlying distribution of their training data well enough to generate new samples from it. In plain English, the model has read so much text—or seen so many images—that it can produce new content that plausibly could have existed in that data, but did not."
+                    "content": "Generative AI refers to machine learning models that learn the underlying distribution of their training data well enough to generate new samples from it. In plain English, the model has read so much textâ€”or seen so many imagesâ€”that it can produce new content that plausibly could have existed in that data, but did not."
                   },
                   {
                     "type": "subtitle",
@@ -701,7 +701,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "\"Generative AI,\" \"LLM,\" \"ChatGPT,\" and \"AI agent\" are often used interchangeably, but they are not the same thing. The hierarchy is: <strong>Artificial Intelligence → Machine Learning → Deep Learning → Generative AI</strong>."
+                    "text": "\"Generative AI,\" \"LLM,\" \"ChatGPT,\" and \"AI agent\" are often used interchangeably, but they are not the same thing. The hierarchy is: <strong>Artificial Intelligence â†’ Machine Learning â†’ Deep Learning â†’ Generative AI</strong>."
                   },
                   {
                     "type": "steps",
@@ -727,7 +727,7 @@
                   {
                     "type": "callout",
                     "variant": "tip",
-                    "icon": "💡",
+                    "icon": "ðŸ’¡",
                     "title": "Remember this",
                     "content": "An LLM is one type of generative AI. ChatGPT is a product, not a model. An AI agent is an LLM-powered system that can take actions using tools."
                   }
@@ -739,7 +739,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "You do not need the mathematics to use generative AI well, but you do need an accurate mental model. The simplest useful model is <strong>Train → Prompt → Generate → Refine</strong>."
+                    "text": "You do not need the mathematics to use generative AI well, but you do need an accurate mental model. The simplest useful model is <strong>Train â†’ Prompt â†’ Generate â†’ Refine</strong>."
                   },
                   {
                     "type": "steps",
@@ -754,7 +754,7 @@
                       },
                       {
                         "title": "Generation",
-                        "description": "The model produces a response one token—roughly three-quarters of a word—at a time, based on everything before it."
+                        "description": "The model produces a response one tokenâ€”roughly three-quarters of a wordâ€”at a time, based on everything before it."
                       }
                     ]
                   },
@@ -790,7 +790,7 @@
                   {
                     "type": "callout",
                     "variant": "tip",
-                    "icon": "🎯",
+                    "icon": "ðŸŽ¯",
                     "title": "The pattern to notice",
                     "content": "The human sets direction and reviews the output while AI produces the first draft. Generative AI is a draft engine, not a decision engine."
                   }
@@ -811,11 +811,11 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "Free access to any one—ideally two—of <a href=\"https://chatgpt.com\" target=\"_blank\" rel=\"noopener noreferrer\">ChatGPT</a>, <a href=\"https://claude.ai\" target=\"_blank\" rel=\"noopener noreferrer\">Claude</a>, or <a href=\"https://gemini.google.com\" target=\"_blank\" rel=\"noopener noreferrer\">Gemini</a>. No paid plan is required."
+                    "text": "Free access to any oneâ€”ideally twoâ€”of <a href=\"https://chatgpt.com\" target=\"_blank\" rel=\"noopener noreferrer\">ChatGPT</a>, <a href=\"https://claude.ai\" target=\"_blank\" rel=\"noopener noreferrer\">Claude</a>, or <a href=\"https://gemini.google.com\" target=\"_blank\" rel=\"noopener noreferrer\">Gemini</a>. No paid plan is required."
                   },
                   {
                     "type": "subtitle",
-                    "text": "Round 1 — Vague prompt"
+                    "text": "Round 1 â€” Vague prompt"
                   },
                   {
                     "type": "quote",
@@ -827,7 +827,7 @@
                   },
                   {
                     "type": "subtitle",
-                    "text": "Round 2 — Specific prompt"
+                    "text": "Round 2 â€” Specific prompt"
                   },
                   {
                     "type": "quote",
@@ -835,7 +835,7 @@
                   },
                   {
                     "type": "subtitle",
-                    "text": "Round 3 — Specific prompt + role + format"
+                    "text": "Round 3 â€” Specific prompt + role + format"
                   },
                   {
                     "type": "quote",
@@ -850,16 +850,16 @@
                     "title": "Prompt Experiment Scorecard",
                     "headers": ["Criterion", "Round 1", "Round 2", "Round 3"],
                     "rows": [
-                      ["Relevance to a real reader", "1–5", "1–5", "1–5"],
-                      ["Specificity: numbers, names, actions", "1–5", "1–5", "1–5"],
-                      ["Usable as-is without editing", "1–5", "1–5", "1–5"],
-                      ["Correct tone for the audience", "1–5", "1–5", "1–5"]
+                      ["Relevance to a real reader", "1â€“5", "1â€“5", "1â€“5"],
+                      ["Specificity: numbers, names, actions", "1â€“5", "1â€“5", "1â€“5"],
+                      ["Usable as-is without editing", "1â€“5", "1â€“5", "1â€“5"],
+                      ["Correct tone for the audience", "1â€“5", "1â€“5", "1â€“5"]
                     ]
                   },
                   {
                     "type": "callout",
                     "variant": "tip",
-                    "icon": "🧪",
+                    "icon": "ðŸ§ª",
                     "title": "What you should observe",
                     "content": "Round 3 will usually score much higher than Round 1 using the same model, at the same cost, in the same minute. The model did not get smarter; your instruction did. Specificity, role assignment, and output format are the foundations of prompt engineering."
                   },
@@ -880,7 +880,7 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "It models language statistically. The outputs can look like understanding, but the mechanism is pattern prediction—which is why verification remains your responsibility."
+                    "text": "It models language statistically. The outputs can look like understanding, but the mechanism is pattern predictionâ€”which is why verification remains your responsibility."
                   },
                   {
                     "type": "subtitle",
@@ -917,7 +917,7 @@
                     "items": [
                       {
                         "question": "What is generative AI in simple words?",
-                        "answer": "Generative AI is software that creates new content—text, images, code, or audio—from instructions you give it in plain language, based on patterns learned from massive training datasets."
+                        "answer": "Generative AI is software that creates new contentâ€”text, images, code, or audioâ€”from instructions you give it in plain language, based on patterns learned from massive training datasets."
                       },
                       {
                         "question": "Is ChatGPT the same as generative AI?",
@@ -945,7 +945,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "You now have the vocabulary, the mental model—train, prompt, generate—and practical evidence that prompting is a real skill."
+                    "text": "You now have the vocabulary, the mental modelâ€”train, prompt, generateâ€”and practical evidence that prompting is a real skill."
                   },
                   {
                     "type": "paragraph",
@@ -954,7 +954,7 @@
                   {
                     "type": "checklist",
                     "items": [
-                      { "checked": true, "text": "What Is Generative AI? — You are here" },
+                      { "checked": true, "text": "What Is Generative AI? â€” You are here" },
                       { "checked": false, "text": "How LLMs Actually Work" },
                       { "checked": false, "text": "Prompt Engineering Basics" },
                       { "checked": false, "text": "Advanced Prompting Techniques" },
@@ -1137,7 +1137,7 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "In fine-tuning, the model is exposed to many examples of input–output pairs. Over time, it learns to replicate these patterns more accurately. Once fine-tuned, the model produces responses based on its updated internal knowledge, without retrieving external documents at inference time."
+                    "text": "In fine-tuning, the model is exposed to many examples of inputâ€“output pairs. Over time, it learns to replicate these patterns more accurately. Once fine-tuned, the model produces responses based on its updated internal knowledge, without retrieving external documents at inference time."
                   },
                   {
                     "type": "code",
@@ -1212,7 +1212,7 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "Action: Collect \"Prompt–Response\" pairs. Goal: Create a high-quality dataset that reflects the exact behavior or tone you want Llama 2 to learn (e.g., medical summaries or professional tone)."
+                    "text": "Action: Collect \"Promptâ€“Response\" pairs. Goal: Create a high-quality dataset that reflects the exact behavior or tone you want Llama 2 to learn (e.g., medical summaries or professional tone)."
                   },
                   {
                     "type": "subtitle",
@@ -1418,7 +1418,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Most businesses today are sitting on more data than ever before. Sales transactions, customer feedback, website behavior, operations logs, support tickets, marketing performance — everything is being tracked. Yet, despite all this data, many teams still struggle to answer simple questions like what exactly is going wrong, why performance changed, or what should be done next.",
+                    "text": "Most businesses today are sitting on more data than ever before. Sales transactions, customer feedback, website behavior, operations logs, support tickets, marketing performance â€” everything is being tracked. Yet, despite all this data, many teams still struggle to answer simple questions like what exactly is going wrong, why performance changed, or what should be done next.",
                     "hasBar": true
                   },
                   {
@@ -1431,7 +1431,7 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "This article explores how LLMs can be used to generate high-impact business insights in a practical, realistic way — without hype, and without treating AI as a replacement for human thinking."
+                    "text": "This article explores how LLMs can be used to generate high-impact business insights in a practical, realistic way â€” without hype, and without treating AI as a replacement for human thinking."
                   }
                 ]
               },
@@ -1521,23 +1521,23 @@
                     "rows": [
                       [
                         "What happened?",
-                        "✓ Shows clearly",
-                        "✓ Shows clearly"
+                        "âœ“ Shows clearly",
+                        "âœ“ Shows clearly"
                       ],
                       [
                         "Why did it happen?",
-                        "✗ No explanation",
-                        "✓ Explains drivers"
+                        "âœ— No explanation",
+                        "âœ“ Explains drivers"
                       ],
                       [
                         "Which segment is affected?",
-                        "Partial — requires manual drill-down",
-                        "✓ Highlights automatically"
+                        "Partial â€” requires manual drill-down",
+                        "âœ“ Highlights automatically"
                       ],
                       [
                         "What should we do next?",
-                        "✗ Not answered",
-                        "✓ Suggests focus areas"
+                        "âœ— Not answered",
+                        "âœ“ Suggests focus areas"
                       ]
                     ]
                   },
@@ -1579,9 +1579,9 @@
                   },
                   {
                     "type": "code",
-                    "title": "Prompt Template — Business Insight Generation",
+                    "title": "Prompt Template â€” Business Insight Generation",
                     "language": "python",
-                    "code": "# Example: Sending business data summary to an LLM for insight generation\nimport openai\n\n# Step 1: Prepare your data summary (from SQL, pandas, or a BI export)\ndata_summary = \"\"\"\nMonthly Sales Report — Q4 2025\n- Total Revenue: $2.1M (down 12% vs Q3)\n- Region breakdown: North +3%, South -28%, East -8%, West +1%\n- Top declining product: Premium Plan (down 35% in South region)\n- Average order value: $420 (down from $490 in Q3)\n- New customers: 310 | Returning customers: 180 (down from 250 in Q3)\n\"\"\"\n\n# Step 2: Add business context so the LLM understands the definitions\nbusiness_context = \"\"\"\nContext:\n- 'Premium Plan' launched in South region in September 2025\n- Company target is 15% QoQ revenue growth\n- Returning customer rate below 40% triggers a retention review\n\"\"\"\n\n# Step 3: Write a clear insight-generation prompt\nprompt = f\"\"\"\nYou are a business analyst. Based on the data below, identify:\n1. The main drivers of the revenue decline\n2. Which segments need immediate attention\n3. Two specific recommended actions\n\nData:\n{data_summary}\n\n{business_context}\n\nProvide a clear, concise analysis in plain language.\n\"\"\"\n\n# Step 4: Call the LLM\nresponse = openai.chat.completions.create(\n    model=\"gpt-4o\",\n    messages=[{\"role\": \"user\", \"content\": prompt}]\n)\n\nprint(response.choices[0].message.content)",
+                    "code": "# Example: Sending business data summary to an LLM for insight generation\nimport openai\n\n# Step 1: Prepare your data summary (from SQL, pandas, or a BI export)\ndata_summary = \"\"\"\nMonthly Sales Report â€” Q4 2025\n- Total Revenue: $2.1M (down 12% vs Q3)\n- Region breakdown: North +3%, South -28%, East -8%, West +1%\n- Top declining product: Premium Plan (down 35% in South region)\n- Average order value: $420 (down from $490 in Q3)\n- New customers: 310 | Returning customers: 180 (down from 250 in Q3)\n\"\"\"\n\n# Step 2: Add business context so the LLM understands the definitions\nbusiness_context = \"\"\"\nContext:\n- 'Premium Plan' launched in South region in September 2025\n- Company target is 15% QoQ revenue growth\n- Returning customer rate below 40% triggers a retention review\n\"\"\"\n\n# Step 3: Write a clear insight-generation prompt\nprompt = f\"\"\"\nYou are a business analyst. Based on the data below, identify:\n1. The main drivers of the revenue decline\n2. Which segments need immediate attention\n3. Two specific recommended actions\n\nData:\n{data_summary}\n\n{business_context}\n\nProvide a clear, concise analysis in plain language.\n\"\"\"\n\n# Step 4: Call the LLM\nresponse = openai.chat.completions.create(\n    model=\"gpt-4o\",\n    messages=[{\"role\": \"user\", \"content\": prompt}]\n)\n\nprint(response.choices[0].message.content)",
                     "borderColor": "indigo"
                   },
                   {
@@ -1601,7 +1601,7 @@
                   },
                   {
                     "type": "subtitle",
-                    "text": "Step 1 — Data Collection"
+                    "text": "Step 1 â€” Data Collection"
                   },
                   {
                     "type": "paragraph",
@@ -1609,7 +1609,7 @@
                   },
                   {
                     "type": "subtitle",
-                    "text": "Step 2 — Data Preparation"
+                    "text": "Step 2 â€” Data Preparation"
                   },
                   {
                     "type": "paragraph",
@@ -1617,14 +1617,14 @@
                   },
                   {
                     "type": "code",
-                    "title": "Data Preparation with Python — Aggregating KPIs for LLM Input",
+                    "title": "Data Preparation with Python â€” Aggregating KPIs for LLM Input",
                     "language": "python",
                     "code": "import pandas as pd\n\n# Load raw sales data\ndf = pd.read_csv('sales_data.csv', parse_dates=['order_date'])\n\n# Aggregate monthly KPIs by region\nmonthly_kpis = (\n    df.groupby(['region', pd.Grouper(key='order_date', freq='ME')])\n    .agg(\n        total_revenue=('revenue', 'sum'),\n        order_count=('order_id', 'count'),\n        avg_order_value=('revenue', 'mean'),\n        unique_customers=('customer_id', 'nunique')\n    )\n    .reset_index()\n)\n\n# Calculate month-over-month change\nmonthly_kpis['revenue_mom_pct'] = (\n    monthly_kpis.groupby('region')['total_revenue']\n    .pct_change() * 100\n).round(1)\n\n# Format as a readable summary string for LLM input\ndef format_for_llm(df, months=2):\n    recent = df[df['order_date'] >= df['order_date'].max() - pd.DateOffset(months=months)]\n    lines = []\n    for _, row in recent.iterrows():\n        lines.append(\n            f\"{row['region']} ({row['order_date'].strftime('%b %Y')}): \"\n            f\"Revenue ${row['total_revenue']:,.0f}, \"\n            f\"MoM {row['revenue_mom_pct']:+.1f}%, \"\n            f\"Avg order ${row['avg_order_value']:,.0f}\"\n        )\n    return '\\n'.join(lines)\n\nprint(format_for_llm(monthly_kpis))",
                     "borderColor": "blue"
                   },
                   {
                     "type": "subtitle",
-                    "text": "Step 3 — BI Layer"
+                    "text": "Step 3 â€” BI Layer"
                   },
                   {
                     "type": "paragraph",
@@ -1632,7 +1632,7 @@
                   },
                   {
                     "type": "subtitle",
-                    "text": "Step 4 — Context Layer"
+                    "text": "Step 4 â€” Context Layer"
                   },
                   {
                     "type": "paragraph",
@@ -1640,7 +1640,7 @@
                   },
                   {
                     "type": "subtitle",
-                    "text": "Step 5 — LLM Processing"
+                    "text": "Step 5 â€” LLM Processing"
                   },
                   {
                     "type": "paragraph",
@@ -1648,7 +1648,7 @@
                   },
                   {
                     "type": "subtitle",
-                    "text": "Step 6 — Output"
+                    "text": "Step 6 â€” Output"
                   },
                   {
                     "type": "paragraph",
@@ -1679,7 +1679,7 @@
                   },
                   {
                     "type": "paragraph",
-                    "text": "Marketing teams often deal with fragmented data — campaign metrics in one place, website analytics in another, and customer feedback somewhere else."
+                    "text": "Marketing teams often deal with fragmented data â€” campaign metrics in one place, website analytics in another, and customer feedback somewhere else."
                   },
                   {
                     "type": "paragraph",
@@ -1720,7 +1720,7 @@
                     "type": "code",
                     "title": "Exporting Power BI Summary to LLM via Python",
                     "language": "python",
-                    "code": "import requests\nimport json\n\n# Step 1: Pull aggregated data from your BI tool or database\n# (Here shown as a dict — in practice this comes from a SQL query or API)\nbi_summary = {\n    \"period\": \"Q4 2025\",\n    \"total_revenue\": 2100000,\n    \"revenue_change_pct\": -12,\n    \"top_declining_region\": \"South (-28%)\",\n    \"top_declining_product\": \"Premium Plan\",\n    \"returning_customer_rate\": 37,\n    \"avg_order_value\": 420\n}\n\n# Step 2: Build the LLM prompt with the BI data\nprompt = f\"\"\"\nAnalyze this quarterly business performance summary and identify:\n1. The 2-3 most critical issues requiring action\n2. Likely root causes based on the data patterns\n3. Recommended next steps for the leadership team\n\nData: {json.dumps(bi_summary, indent=2)}\n\nWrite in plain language suitable for an executive briefing.\n\"\"\"\n\n# Step 3: Call the LLM API (Claude example)\nresponse = requests.post(\n    'https://api.anthropic.com/v1/messages',\n    headers={\n        'x-api-key': 'YOUR_API_KEY',\n        'anthropic-version': '2023-06-01',\n        'content-type': 'application/json'\n    },\n    json={\n        'model': 'claude-opus-4-6',\n        'max_tokens': 1024,\n        'messages': [{'role': 'user', 'content': prompt}]\n    }\n)\n\ninsight = response.json()['content'][0]['text']\nprint(insight)",
+                    "code": "import requests\nimport json\n\n# Step 1: Pull aggregated data from your BI tool or database\n# (Here shown as a dict â€” in practice this comes from a SQL query or API)\nbi_summary = {\n    \"period\": \"Q4 2025\",\n    \"total_revenue\": 2100000,\n    \"revenue_change_pct\": -12,\n    \"top_declining_region\": \"South (-28%)\",\n    \"top_declining_product\": \"Premium Plan\",\n    \"returning_customer_rate\": 37,\n    \"avg_order_value\": 420\n}\n\n# Step 2: Build the LLM prompt with the BI data\nprompt = f\"\"\"\nAnalyze this quarterly business performance summary and identify:\n1. The 2-3 most critical issues requiring action\n2. Likely root causes based on the data patterns\n3. Recommended next steps for the leadership team\n\nData: {json.dumps(bi_summary, indent=2)}\n\nWrite in plain language suitable for an executive briefing.\n\"\"\"\n\n# Step 3: Call the LLM API (Claude example)\nresponse = requests.post(\n    'https://api.anthropic.com/v1/messages',\n    headers={\n        'x-api-key': 'YOUR_API_KEY',\n        'anthropic-version': '2023-06-01',\n        'content-type': 'application/json'\n    },\n    json={\n        'model': 'claude-opus-4-6',\n        'max_tokens': 1024,\n        'messages': [{'role': 'user', 'content': prompt}]\n    }\n)\n\ninsight = response.json()['content'][0]['text']\nprint(insight)",
                     "borderColor": "purple"
                   },
                   {
@@ -1852,17 +1852,17 @@
                     "items": [
                       "Start with a specific business question, not open-ended exploration",
                       "Ensure your data is clean and aggregated before passing it to the LLM",
-                      "Provide business context and definitions — the LLM only knows what you tell it",
+                      "Provide business context and definitions â€” the LLM only knows what you tell it",
                       "Always validate LLM outputs against source data before acting on them",
                       "Treat LLM outputs as a starting point for investigation, not a final answer",
-                      "Iterate on your prompts — small wording changes can significantly improve output quality"
+                      "Iterate on your prompts â€” small wording changes can significantly improve output quality"
                     ]
                   },
                   {
                     "type": "code",
-                    "title": "Prompt Engineering Tips — Before vs After",
+                    "title": "Prompt Engineering Tips â€” Before vs After",
                     "language": "python",
-                    "code": "# ✗ WEAK PROMPT — too vague, no context, no structure\nweak_prompt = \"Analyze my sales data and tell me what's wrong.\"\n\n# ✓ STRONG PROMPT — specific question, structured data, clear output format\nstrong_prompt = \"\"\"\nYou are a senior business analyst. Review the sales performance data below.\n\nTask:\n- Identify the single biggest driver of revenue decline this quarter\n- Explain in 2 sentences why this is happening based on the data\n- Suggest one specific, actionable recommendation\n\nData:\n- Q4 Revenue: $2.1M (down 12% vs Q3)\n- South region: -28% (Premium Plan launch in Sept)\n- Returning customers: 37% of orders (target: 50%)\n- Avg order value: $420 (down from $490 in Q3)\n\nFormat your answer as:\n1. Root Cause: ...\n2. Explanation: ...\n3. Recommended Action: ...\n\"\"\"\n\n# The strong prompt produces focused, actionable output every time.",
+                    "code": "# âœ— WEAK PROMPT â€” too vague, no context, no structure\nweak_prompt = \"Analyze my sales data and tell me what's wrong.\"\n\n# âœ“ STRONG PROMPT â€” specific question, structured data, clear output format\nstrong_prompt = \"\"\"\nYou are a senior business analyst. Review the sales performance data below.\n\nTask:\n- Identify the single biggest driver of revenue decline this quarter\n- Explain in 2 sentences why this is happening based on the data\n- Suggest one specific, actionable recommendation\n\nData:\n- Q4 Revenue: $2.1M (down 12% vs Q3)\n- South region: -28% (Premium Plan launch in Sept)\n- Returning customers: 37% of orders (target: 50%)\n- Avg order value: $420 (down from $490 in Q3)\n\nFormat your answer as:\n1. Root Cause: ...\n2. Explanation: ...\n3. Recommended Action: ...\n\"\"\"\n\n# The strong prompt produces focused, actionable output every time.",
                     "borderColor": "emerald"
                   },
                   {
@@ -1878,7 +1878,7 @@
               "checklist": [
                 {
                   "item": "Add a reasoning layer",
-                  "text": "Use LLMs on top of existing BI tools — don't replace dashboards, augment them"
+                  "text": "Use LLMs on top of existing BI tools â€” don't replace dashboards, augment them"
                 },
                 {
                   "item": "Prepare your data first",
@@ -1894,10 +1894,10 @@
                 },
                 {
                   "item": "Start small",
-                  "text": "Pick one business question and iterate — don't automate everything at once"
+                  "text": "Pick one business question and iterate â€” don't automate everything at once"
                 }
               ],
-              "finalNote": "They don't replace analytics — they complete it.",
+              "finalNote": "They don't replace analytics â€” they complete it.",
               "finalParagraph": "In a world overflowing with data, the real advantage belongs to those who can turn information into insight. LLMs are becoming one of the most powerful tools to do exactly that. If you are ready to lead this change, explore a formal Data Science or AI career path today."
             }
           }
@@ -1913,7 +1913,7 @@
           "id": "connecting-llms-to-sql",
           "metaTitle": "Connecting LLMs to SQL Using Text-to-SQL Agents | GenAI Guide",
           "title": "Connecting LLMs to SQL Using Text-to-SQL Agents",
-          "description": "A practical guide to conversational database intelligence — query any SQL database using plain English with AI-powered Text-to-SQL agents",
+          "description": "A practical guide to conversational database intelligence â€” query any SQL database using plain English with AI-powered Text-to-SQL agents",
           "duration": "12 min read",
           "date": "March 13, 2026",
           "content": {
@@ -1930,7 +1930,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Data is often called the new oil, but in most organizations, it behaves more like crude oil locked deep underground. Businesses store massive amounts of valuable information in SQL databases, yet only a small group of technical experts can extract insights from them. Executives, managers, and operational teams depend heavily on data analysts to write SQL queries and generate reports — slowing decision-making and limiting agility.",
+                    "text": "Data is often called the new oil, but in most organizations, it behaves more like crude oil locked deep underground. Businesses store massive amounts of valuable information in SQL databases, yet only a small group of technical experts can extract insights from them. Executives, managers, and operational teams depend heavily on data analysts to write SQL queries and generate reports â€” slowing decision-making and limiting agility.",
                     "hasBar": true
                   },
                   {
@@ -1972,9 +1972,9 @@
                   {
                     "type": "callout",
                     "variant": "info",
-                    "icon": "💡",
+                    "icon": "ðŸ’¡",
                     "title": "Key Insight:",
-                    "content": "This dual ability — understanding both human language and programming syntax — makes LLMs the perfect bridge between business users and databases."
+                    "content": "This dual ability â€” understanding both human language and programming syntax â€” makes LLMs the perfect bridge between business users and databases."
                   }
                 ]
               },
@@ -1991,15 +1991,15 @@
                     "icon": "Database",
                     "title": "Traditional vs AI-Powered Data Workflow",
                     "content": {
-                      "main": "The way organizations access data is undergoing a fundamental transformation. The AI-powered workflow removes the analyst bottleneck entirely — making data accessible to every business user.",
+                      "main": "The way organizations access data is undergoing a fundamental transformation. The AI-powered workflow removes the analyst bottleneck entirely â€” making data accessible to every business user.",
                       "cards": [
                         {
                           "title": "Traditional Workflow",
-                          "content": "Business user asks a question → Routes to data analyst → Analyst writes SQL query → Runs against database → Prepares a report → Business user receives insights. This introduces delays, dependency on technical teams, and limits how quickly decisions can be made."
+                          "content": "Business user asks a question â†’ Routes to data analyst â†’ Analyst writes SQL query â†’ Runs against database â†’ Prepares a report â†’ Business user receives insights. This introduces delays, dependency on technical teams, and limits how quickly decisions can be made."
                         },
                         {
                           "title": "AI-Powered Workflow",
-                          "content": "Business user asks in plain English → Text-to-SQL agent understands the question → Automatically generates SQL in the background → Executes and delivers instant insight. SQL still powers the database — but becomes completely invisible to the user."
+                          "content": "Business user asks in plain English â†’ Text-to-SQL agent understands the question â†’ Automatically generates SQL in the background â†’ Executes and delivers instant insight. SQL still powers the database â€” but becomes completely invisible to the user."
                         }
                       ]
                     }
@@ -2021,9 +2021,9 @@
                   {
                     "type": "callout",
                     "variant": "warn",
-                    "icon": "⚠️",
+                    "icon": "âš ï¸",
                     "title": "The Real Bottleneck:",
-                    "content": "The problem is not the question — it's the gap between business intent and technical execution. Text-to-SQL agents eliminate this gap by translating natural language directly into database queries."
+                    "content": "The problem is not the question â€” it's the gap between business intent and technical execution. Text-to-SQL agents eliminate this gap by translating natural language directly into database queries."
                   }
                 ]
               },
@@ -2033,18 +2033,18 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Text-to-SQL is an AI-driven process where a natural language question is automatically converted into a valid SQL query. The user asks a question conversationally, and the system generates structured database commands to retrieve the required data — without any manual SQL writing."
+                    "text": "Text-to-SQL is an AI-driven process where a natural language question is automatically converted into a valid SQL query. The user asks a question conversationally, and the system generates structured database commands to retrieve the required data â€” without any manual SQL writing."
                   },
                   {
                     "type": "callout",
                     "variant": "tip",
-                    "icon": "✅",
+                    "icon": "âœ…",
                     "title": "Example in Action:",
-                    "content": "Asking 'Show me revenue by region for last month' results in a SQL query that aggregates revenue, filters by date, and groups by region — all automatically. The user speaks naturally while the system handles all technical complexity."
+                    "content": "Asking 'Show me revenue by region for last month' results in a SQL query that aggregates revenue, filters by date, and groups by region â€” all automatically. The user speaks naturally while the system handles all technical complexity."
                   },
                   {
                     "type": "code",
-                    "title": "Natural Language → SQL Query (Auto-Generated by Agent)",
+                    "title": "Natural Language â†’ SQL Query (Auto-Generated by Agent)",
                     "language": "sql",
                     "borderColor": "indigo",
                     "code": "-- User asks: \"Show me revenue by region for last month\"\n-- Text-to-SQL Agent auto-generates:\n\nSELECT\n    region,\n    SUM(revenue)             AS total_revenue,\n    COUNT(DISTINCT order_id) AS total_orders,\n    ROUND(AVG(revenue), 2)   AS avg_order_value\nFROM sales_transactions\nWHERE\n    order_date >= DATEADD(month, -1, DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1))\n    AND order_date < DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1)\nGROUP BY region\nORDER BY total_revenue DESC;"
@@ -2057,34 +2057,34 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "A Text-to-SQL agent is not just a language translator — it is an intelligent, multi-layer workflow system. The user experiences a simple conversation, but beneath the surface a structured and controlled pipeline ensures secure and trustworthy results."
+                    "text": "A Text-to-SQL agent is not just a language translator â€” it is an intelligent, multi-layer workflow system. The user experiences a simple conversation, but beneath the surface a structured and controlled pipeline ensures secure and trustworthy results."
                   },
                   {
                     "type": "subtitle",
-                    "text": "The Agent Architecture — Layer by Layer"
+                    "text": "The Agent Architecture â€” Layer by Layer"
                   },
                   {
                     "type": "steps",
                     "items": [
                       {
                         "title": "User Interface",
-                        "description": "The user submits a question in natural language through a chat interface. This is the only layer the user directly touches — no SQL knowledge required."
+                        "description": "The user submits a question in natural language through a chat interface. This is the only layer the user directly touches â€” no SQL knowledge required."
                       },
                       {
                         "title": "LLM Engine",
-                        "description": "The question is sent to the LLM Engine, which interprets the intent behind the request and maps it to the database schema — identifying relevant tables, columns, and relationships."
+                        "description": "The question is sent to the LLM Engine, which interprets the intent behind the request and maps it to the database schema â€” identifying relevant tables, columns, and relationships."
                       },
                       {
                         "title": "Agent Logic Layer",
-                        "description": "The real intelligence lives here. This layer identifies user intent, validates the generated SQL query for correctness and safety, and retries or corrects the query if errors occur — ensuring reliability before any data is touched."
+                        "description": "The real intelligence lives here. This layer identifies user intent, validates the generated SQL query for correctness and safety, and retries or corrects the query if errors occur â€” ensuring reliability before any data is touched."
                       },
                       {
                         "title": "SQL Database",
-                        "description": "Once validated, the query executes against the SQL database with read-only permissions. The actual enterprise data — sales, HR, finance, operations — lives here."
+                        "description": "Once validated, the query executes against the SQL database with read-only permissions. The actual enterprise data â€” sales, HR, finance, operations â€” lives here."
                       },
                       {
                         "title": "Response Formatter",
-                        "description": "Raw database output is converted into a structured, human-readable answer and returned to the user interface — often as a formatted table, summary, or highlighted insight."
+                        "description": "Raw database output is converted into a structured, human-readable answer and returned to the user interface â€” often as a formatted table, summary, or highlighted insight."
                       }
                     ]
                   },
@@ -2101,7 +2101,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "The process begins when a user submits a natural language question. The LLM interprets intent, references database schema metadata — table names, column relationships, data types — generates a SQL query, and passes it through validation before execution."
+                    "text": "The process begins when a user submits a natural language question. The LLM interprets intent, references database schema metadata â€” table names, column relationships, data types â€” generates a SQL query, and passes it through validation before execution."
                   },
                   {
                     "type": "steps",
@@ -2112,7 +2112,7 @@
                       },
                       {
                         "title": "Intent Interpretation",
-                        "description": "The LLM analyzes the question and maps it to database schema metadata — identifying the right tables, columns, filters, and aggregations needed."
+                        "description": "The LLM analyzes the question and maps it to database schema metadata â€” identifying the right tables, columns, filters, and aggregations needed."
                       },
                       {
                         "title": "SQL Generation",
@@ -2140,7 +2140,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Text-to-SQL agents create measurable value across every business function — from finance to HR to supply chain — by removing the technical barrier between business users and their data."
+                    "text": "Text-to-SQL agents create measurable value across every business function â€” from finance to HR to supply chain â€” by removing the technical barrier between business users and their data."
                   },
                   {
                     "type": "table",
@@ -2196,8 +2196,8 @@
                   {
                     "type": "list",
                     "items": [
-                      "Accelerates insight generation — reduces reporting cycles from days to seconds",
-                      "Democratizes data access — empowers non-technical stakeholders to query data independently",
+                      "Accelerates insight generation â€” reduces reporting cycles from days to seconds",
+                      "Democratizes data access â€” empowers non-technical stakeholders to query data independently",
                       "Improves analyst productivity by eliminating repetitive, routine query work",
                       "Enables conversational analytics as a core competitive advantage",
                       "Aligns with digital transformation initiatives focused on AI integration and automation",
@@ -2208,9 +2208,9 @@
                   {
                     "type": "callout",
                     "variant": "tip",
-                    "icon": "🚀",
+                    "icon": "ðŸš€",
                     "title": "Strategic Shift:",
-                    "content": "Conversational analytics is no longer experimental — it is becoming a core competitive advantage. Organizations deploying Text-to-SQL agents report faster decision cycles and more empowered business teams at every level."
+                    "content": "Conversational analytics is no longer experimental â€” it is becoming a core competitive advantage. Organizations deploying Text-to-SQL agents report faster decision cycles and more empowered business teams at every level."
                   }
                 ]
               },
@@ -2290,11 +2290,11 @@
                       },
                       {
                         "title": "Define SQL Execution as a Tool",
-                        "description": "Configure SQL execution as a callable tool or function that the LLM agent can invoke — keeping reasoning and execution cleanly separated for auditability."
+                        "description": "Configure SQL execution as a callable tool or function that the LLM agent can invoke â€” keeping reasoning and execution cleanly separated for auditability."
                       },
                       {
                         "title": "Provide Schema Context",
-                        "description": "Supply the model with database schema metadata — table names, column descriptions, relationships, and sample data — to guide accurate query generation."
+                        "description": "Supply the model with database schema metadata â€” table names, column descriptions, relationships, and sample data â€” to guide accurate query generation."
                       },
                       {
                         "title": "Generate SQL via Structured Tool Calling",
@@ -2315,7 +2315,7 @@
                     "title": "Cloud-Based Text-to-SQL Agent (Azure AI + LangChain)",
                     "language": "python",
                     "borderColor": "blue",
-                    "code": "# Cloud-Based Text-to-SQL Agent — Azure AI + LangChain\nfrom langchain_openai import AzureChatOpenAI\nfrom langchain_community.utilities import SQLDatabase\nfrom langchain_community.agent_toolkits import create_sql_agent\n\n# Connect to Azure SQL Database (read-only credentials)\ndb = SQLDatabase.from_uri(\n    'mssql+pyodbc://readonly_user:pass@server/database'\n)\n\n# Initialize Azure OpenAI LLM\nllm = AzureChatOpenAI(\n    azure_deployment='gpt-4o',\n    azure_endpoint='https://your-resource.openai.azure.com/',\n    api_version='2024-02-01',\n    temperature=0\n)\n\n# Create the SQL Agent with schema context\nagent = create_sql_agent(\n    llm=llm,\n    db=db,\n    verbose=True,\n    top_k=10  # Limit rows returned for safety\n)\n\n# Ask in plain natural language\nresponse = agent.invoke(\n    'What were the top 5 regions by revenue last month?'\n)\nprint(response['output'])"
+                    "code": "# Cloud-Based Text-to-SQL Agent â€” Azure AI + LangChain\nfrom langchain_openai import AzureChatOpenAI\nfrom langchain_community.utilities import SQLDatabase\nfrom langchain_community.agent_toolkits import create_sql_agent\n\n# Connect to Azure SQL Database (read-only credentials)\ndb = SQLDatabase.from_uri(\n    'mssql+pyodbc://readonly_user:pass@server/database'\n)\n\n# Initialize Azure OpenAI LLM\nllm = AzureChatOpenAI(\n    azure_deployment='gpt-4o',\n    azure_endpoint='https://your-resource.openai.azure.com/',\n    api_version='2024-02-01',\n    temperature=0\n)\n\n# Create the SQL Agent with schema context\nagent = create_sql_agent(\n    llm=llm,\n    db=db,\n    verbose=True,\n    top_k=10  # Limit rows returned for safety\n)\n\n# Ask in plain natural language\nresponse = agent.invoke(\n    'What were the top 5 regions by revenue last month?'\n)\nprint(response['output'])"
                   },
                   {
                     "type": "subtitle",
@@ -2346,7 +2346,7 @@
                       },
                       {
                         "title": "Return Structured Response",
-                        "description": "Format the result set into structured, human-readable output and deliver it to the user interface — as a table, plain text, or exported report."
+                        "description": "Format the result set into structured, human-readable output and deliver it to the user interface â€” as a table, plain text, or exported report."
                       }
                     ]
                   },
@@ -2355,14 +2355,14 @@
                     "title": "Offline Text-to-SQL Agent (Ollama + SQLite)",
                     "language": "python",
                     "borderColor": "emerald",
-                    "code": "# Offline Text-to-SQL Agent — Ollama + SQLite\nimport ollama, sqlite3, json\n\nconn   = sqlite3.connect('company_data.db')\ncursor = conn.cursor()\n\ndef get_schema():\n    cursor.execute(\"SELECT name FROM sqlite_master WHERE type='table'\")\n    tables = {}\n    for (t,) in cursor.fetchall():\n        cursor.execute('PRAGMA table_info(' + t + ')')\n        tables[t] = [c[1] for c in cursor.fetchall()]\n    return json.dumps(tables, indent=2)\n\ndef generate_sql(question):\n    schema = get_schema()\n    prompt = 'Database schema: ' + schema + ' Convert this to SQL: ' + question\n    result = ollama.chat(\n        model='codellama',\n        messages=[{'role': 'user', 'content': prompt}]\n    )\n    return result['message']['content'].strip()\n\ndef ask(question):\n    sql  = generate_sql(question)\n    print('Generated SQL:', sql)\n    cursor.execute(sql)\n    cols = [d[0] for d in cursor.description]\n    return [dict(zip(cols, row)) for row in cursor.fetchall()]\n\n# Example usage\nfor row in ask('Top 5 products by revenue this quarter'):\n    print(row)"
+                    "code": "# Offline Text-to-SQL Agent â€” Ollama + SQLite\nimport ollama, sqlite3, json\n\nconn   = sqlite3.connect('company_data.db')\ncursor = conn.cursor()\n\ndef get_schema():\n    cursor.execute(\"SELECT name FROM sqlite_master WHERE type='table'\")\n    tables = {}\n    for (t,) in cursor.fetchall():\n        cursor.execute('PRAGMA table_info(' + t + ')')\n        tables[t] = [c[1] for c in cursor.fetchall()]\n    return json.dumps(tables, indent=2)\n\ndef generate_sql(question):\n    schema = get_schema()\n    prompt = 'Database schema: ' + schema + ' Convert this to SQL: ' + question\n    result = ollama.chat(\n        model='codellama',\n        messages=[{'role': 'user', 'content': prompt}]\n    )\n    return result['message']['content'].strip()\n\ndef ask(question):\n    sql  = generate_sql(question)\n    print('Generated SQL:', sql)\n    cursor.execute(sql)\n    cols = [d[0] for d in cursor.description]\n    return [dict(zip(cols, row)) for row in cursor.fetchall()]\n\n# Example usage\nfor row in ask('Top 5 products by revenue this quarter'):\n    print(row)"
                   },
                   {
                     "type": "callout",
                     "variant": "info",
-                    "icon": "🏢",
+                    "icon": "ðŸ¢",
                     "title": "Hybrid Architecture:",
-                    "content": "Many enterprises adopt a hybrid model — the LLM runs in a secure cloud environment while the database remains on-premise, connected via secure APIs. This balances AI scalability with data sovereignty requirements."
+                    "content": "Many enterprises adopt a hybrid model â€” the LLM runs in a secure cloud environment while the database remains on-premise, connected via secure APIs. This balances AI scalability with data sovereignty requirements."
                   }
                 ]
               },
@@ -2386,10 +2386,168 @@
                   {
                     "type": "callout",
                     "variant": "tip",
-                    "icon": "🎯",
+                    "icon": "ðŸŽ¯",
                     "title": "Ready to Build?",
                     "content": "Start with a single business question, implement the cloud-based approach with Azure AI Foundry, validate with real users, and scale from there. The journey to conversational analytics begins with one query."
                   }
+                ]
+              }
+            ]
+          }
+        }
+
+      ,
+        {
+          "id": "what-an-embedding-actually-is",
+          "metaTitle": "What an Embedding Actually Is: How AI Turns Meaning Into Numbers",
+          "title": "What an Embedding Actually Is: How AI Turns Meaning Into Numbers",
+          "description": "Learn how embeddings turn text, images, and other information into vectors that power semantic search, RAG, recommendations, and vector databases.",
+          "duration": "14 min read",
+          "date": "September 21, 2026",
+          "content": {
+            "hero": {
+              "title": "What an Embedding Actually Is: How AI Turns Meaning Into Numbers",
+              "author": "Prateek Agarwal",
+              "date": "September 21, 2026",
+              "readTime": "14 minutes"
+            },
+            "sections": [
+              {
+                "id": "introduction",
+                "title": "Introduction",
+                "content": [
+                  { "type": "paragraph", "text": "What an Embedding Actually Is becomes much easier to understand when you stop thinking of AI as simply reading words and start thinking about how it represents meaning mathematically. When you type a sentence into an AI system, the machine cannot work with that sentence in the intuitive way a person can. Instead, it converts information into numbers that can be compared, searched, stored, and used by machine-learning systems.", "hasBar": true },
+                  { "type": "paragraph", "text": "Those numbers are not a secret translation in which one number means one word. They are coordinates in a learned mathematical representation. The important part is the relationship between coordinates: related ideas tend to occupy nearby regions, while unrelated ideas tend to be farther apart." },
+                  { "type": "callout", "variant": "info", "icon": "ðŸ’¡", "title": "The short version", "content": "An embedding is a learned numerical representation of information that lets software compare meaning mathematically." }
+                ]
+              },
+              {
+                "id": "what-is-an-embedding-in-ai",
+                "title": "What Is an Embedding in AI?",
+                "content": [
+                  { "type": "paragraph", "text": "An embedding is a numerical representation of information that captures useful relationships in that information. For text, an embedding can represent the meaning or context of a word, sentence, paragraph, or document as a vector: an ordered list of numbers." },
+                  { "type": "paragraph", "text": "This is why text embeddings are so useful in modern AI applications. A system can compare numerical representations rather than relying only on exact keyword matches. The same basic idea can apply to images, audio, code, products, users, and other kinds of data when an appropriate model is used." },
+                  { "type": "subtitle", "text": "A Simple Example: Turning a Sentence Into Numbers" },
+                  { "type": "paragraph", "text": "Imagine the sentence, â€˜A puppy is sleeping on the sofa.â€™ An embedding model processes it and produces a list of numbers. The individual values are not normally meaningful to a human; their value comes from their position in a mathematical space and their relationship to other vectors." },
+                  { "type": "code", "title": "Create an embedding", "language": "python", "borderColor": "blue", "code": "sentence = \"A puppy is sleeping on the sofa.\"\nembedding = model.encode(sentence)\n\nprint(embedding)" },
+                  { "type": "paragraph", "text": "Behind model.encode(), an embedding model transforms the sentence into a vector. Real models can produce hundreds or thousands of dimensions. The exact architecture and values depend on the model, but the useful outcome is the same: software has a representation it can compare with other representations." }
+                ]
+              },
+              {
+                "id": "how-ai-embeddings-work",
+                "title": "How Do AI Embeddings Work?",
+                "content": [
+                  { "type": "paragraph", "text": "Think about a map. A physical map places nearby locations close together. An embedding space does something conceptually similar with information: items with related meanings can occupy nearby positions in a high-dimensional mathematical space." },
+                  { "type": "paragraph", "text": "During training, an embedding model learns patterns and relationships from data. Similar concepts can therefore receive representations that are closer together than unrelated concepts. This does not mean the model stores a dictionary definition inside every vector. It is a learned numerical representation, shaped by patterns in the data and the modelâ€™s training objective." },
+                  { "type": "steps", "items": [
+                    { "title": "Provide an item", "description": "The model receives text, an image, audio, code, or another supported input." },
+                    { "title": "Create a vector", "description": "The model converts that input into a fixed-length sequence of numerical values." },
+                    { "title": "Compare relationships", "description": "Software measures distance or directional similarity between vectors to find useful matches." }
+                  ] }
+                ]
+              },
+              {
+                "id": "what-embedding-represents",
+                "title": "What Does an Embedding Actually Represent?",
+                "content": [
+                  { "type": "paragraph", "text": "What an Embedding Actually Is depends partly on the model and the type of data being represented. For text, the vector can encode patterns associated with meaning, context, and relationships learned during training." },
+                  { "type": "paragraph", "text": "For example, â€˜The car needs fuelâ€™ and â€˜The vehicle requires petrolâ€™ may receive vectors that are relatively close because their meanings are related. The vectors do not have to be identical, and proximity does not prove that two sentences mean exactly the same thing. It is a practical signal that depends on the model, its training data, and the task." },
+                  { "type": "callout", "variant": "warning", "icon": "âš ï¸", "title": "A useful limitation", "content": "Vector similarity is not a truth test. Always evaluate an embedding-based system on real examples from your domain." }
+                ]
+              },
+              {
+                "id": "why-text-becomes-vectors",
+                "title": "Why Does AI Convert Text Into Vectors?",
+                "content": [
+                  { "type": "paragraph", "text": "Computers are exceptionally good at mathematical operations on numbers. Converting language into vectors lets AI systems calculate relationships between pieces of information. One common operation is cosine similarity, which compares the angle between two vectors." },
+                  { "type": "code", "title": "Cosine similarity", "language": "python", "borderColor": "blue", "code": "import numpy as np\n\na = np.array([0.8, 0.2, 0.5])\nb = np.array([0.7, 0.3, 0.4])\n\nsimilarity = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))\nprint(similarity)" },
+                  { "type": "paragraph", "text": "The dot product and vector norms calculate cosine similarity. A result closer to 1 generally indicates that the vectors point in similar directions; values closer to 0 indicate less directional similarity. The exact thresholds to use are application-specific, so a production system should test them rather than treating one number as universally correct." }
+                ]
+              },
+              {
+                "id": "embedding-vs-vector",
+                "title": "What Is the Difference Between an Embedding and a Vector?",
+                "content": [
+                  { "type": "paragraph", "text": "A vector is a general mathematical structure: an ordered collection of numbers. An embedding is a vector produced to represent a meaningful object or piece of information in a learned representation space." },
+                  { "type": "paragraph", "text": "In other words, every embedding is represented as a vector, but not every vector is an embedding. The distinction matters because the usefulness of an embedding comes from how the model learned to organize its space, not merely from the fact that it contains numbers." }
+                ]
+              },
+              {
+                "id": "similar-meaning",
+                "title": "How Do Embeddings Recognize Similar Meaning?",
+                "content": [
+                  { "type": "paragraph", "text": "Embeddings do not understand meaning in exactly the same way people do. Instead, an embedding model learns statistical and semantic patterns from training data. Phrases that appear in similar contexts or express related ideas can receive similar numerical representations." },
+                  { "type": "list", "items": ["How can I reset my password?", "I forgot my login password.", "How do I change my account password?"] },
+                  { "type": "paragraph", "text": "A semantic system can recognize that these requests are related even though the wording differs. That ability is one reason embeddings are important for search and knowledge assistants: users do not need to guess the exact phrase that appears in a document." }
+                ]
+              },
+              {
+                "id": "semantic-search",
+                "title": "How Are Embeddings Used in Semantic Search?",
+                "content": [
+                  { "type": "paragraph", "text": "Traditional keyword search often focuses on whether particular words occur in a document. Semantic search uses embeddings to compare the meaning of a query with the meaning of stored content. This can surface a password-reset guide for a query about forgotten login details even when the guide never uses that exact wording." },
+                  { "type": "steps", "items": [
+                    { "title": "Embed documents", "description": "Convert each document or chunk into an embedding vector and retain a reference to the original content." },
+                    { "title": "Embed the query", "description": "Convert the userâ€™s search question into a vector with the same embedding model." },
+                    { "title": "Retrieve close matches", "description": "Compare the query vector with stored vectors and return the most relevant results." }
+                  ] },
+                  { "type": "code", "title": "A simplified semantic-search workflow", "language": "python", "borderColor": "blue", "code": "documents = [\n    \"How to reset your password\",\n    \"How to update billing details\",\n    \"How to create a new user\"\n]\n\ndocument_vectors = model.encode(documents)\nquery = \"I forgot my login password\"\nquery_vector = model.encode(query)" },
+                  { "type": "paragraph", "text": "The next step is to calculate similarity between query_vector and each document vector, then return the closest items. Production systems generally use efficient nearest-neighbour indexing rather than comparing every vector manually." }
+                ]
+              },
+              {
+                "id": "embeddings-in-rag",
+                "title": "How Do Embeddings Work in RAG?",
+                "content": [
+                  { "type": "paragraph", "text": "In Retrieval-Augmented Generation (RAG), embeddings commonly power the retrieval stage. A knowledge base is divided into smaller passages, and each passage is converted into an embedding vector. When someone asks a question, the question is embedded too. The system searches for passages whose vectors are close to the query vector, then supplies those passages to a language model as context for an answer." },
+                  { "type": "callout", "variant": "info", "icon": "â†’", "title": "The RAG pipeline", "content": "Documents â†’ chunks â†’ embedding vectors â†’ searchable index. User question â†’ query embedding â†’ similar chunks â†’ language-model context â†’ generated answer." },
+                  { "type": "paragraph", "text": "Embeddings are the numerical bridge between a natural-language question and the stored knowledge a retrieval system needs to find. Good chunking, appropriate metadata, relevance evaluation, and source citations are also important; embeddings are a core component, not the whole RAG system." }
+                ]
+              },
+              {
+                "id": "vector-databases",
+                "title": "What Is a Vector Database and Why Does It Matter?",
+                "content": [
+                  { "type": "paragraph", "text": "A vector database is designed to store, index, and search vector representations efficiently. It lets an application associate an embedding with the original text chunk and metadata such as a document name, section, author, date, or permission level." },
+                  { "type": "paragraph", "text": "For a small demonstration, an application can compare a handful of vectors directly. As the collection grows, a vector index makes it practical to retrieve nearby vectors quickly. The human-readable text remains available for display; the vector representation is what enables mathematical similarity search." }
+                ]
+              },
+              {
+                "id": "other-data-types",
+                "title": "Can Embeddings Represent Images and Other Types of Data?",
+                "content": [
+                  { "type": "paragraph", "text": "Yes. Embeddings are not limited to text. Depending on the model, images, audio, code, products, users, and other data can also be represented numerically. An image model can create an embedding for an image, while another system may create vectors for text descriptions." },
+                  { "type": "paragraph", "text": "Multimodal models can make it possible to connect different types of information in compatible representation spaces. That opens useful applications such as image search from a text prompt, similar-product recommendations, code search, audio classification, and clustering related items." }
+                ]
+              },
+              {
+                "id": "mini-project",
+                "title": "A Practical Mini-Project: Build a Tiny Semantic Search Demo",
+                "content": [
+                  { "type": "paragraph", "text": "The following example focuses on the retrieval logic rather than a specific embedding provider. The central idea is always the same: create vectors, calculate similarity, and identify the closest content." },
+                  { "type": "code", "title": "Similarity helper", "language": "python", "borderColor": "emerald", "code": "import numpy as np\n\ndocuments = {\n    \"doc1\": \"How to reset your password\",\n    \"doc2\": \"How to update payment information\",\n    \"doc3\": \"How to invite a new team member\"\n}\n\ndef cosine_similarity(a, b):\n    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))" },
+                  { "type": "paragraph", "text": "In a real project, use an embedding model to create a vector for every document and for the incoming question. Score each document vector against the query vector, sort the scores, and show the associated original text. The key separation is between the content people read and the numerical representation the system uses to search." }
+                ]
+              },
+              {
+                "id": "common-misunderstandings",
+                "title": "Common Misunderstandings About Embeddings",
+                "content": [
+                  { "type": "subtitle", "text": "An embedding is not a list of keywords" },
+                  { "type": "paragraph", "text": "An embedding is a learned numerical representation, not a bag of keywords. Its dimensions generally do not map one-to-one to individual words." },
+                  { "type": "subtitle", "text": "Similar vectors do not guarantee identical meaning" },
+                  { "type": "paragraph", "text": "Similarity depends on the model, training data, distance metric, and application. Evaluate with representative examples instead of assuming vector proximity always means correctness." },
+                  { "type": "subtitle", "text": "Embeddings are not generated answers" },
+                  { "type": "paragraph", "text": "An embedding model usually produces a representation for retrieval, comparison, classification, clustering, or another downstream task. A generative language model produces text or other generated output." }
+                ]
+              },
+              {
+                "id": "conclusion",
+                "title": "How to Think About Embeddings as a Beginner",
+                "content": [
+                  { "type": "paragraph", "text": "A helpful mental model is that AI creates a mathematical map of information. The original sentence remains language, but the embedding gives the system a numerical location it can use for comparison. Semantic search uses those locations to find related information. RAG uses them to retrieve relevant context. Vector databases store and search them at scale. Recommendation and clustering systems can use the same principle to compare items." },
+                  { "type": "paragraph", "text": "What an Embedding Actually Is can be summarized in one idea: it is a learned numerical representation that allows an AI system to work with relationships between pieces of information mathematically. Once you understand how meaning is represented as numbers, the role of embeddings in modern AI becomes much less mysteriousâ€”and much easier to apply in practical systems.", "hasBar": true },
+                  { "type": "callout", "variant": "tip", "icon": "ðŸŽ¯", "title": "Next step", "content": "Try a small semantic-search experiment with five to ten documents. Compare its results with keyword search, then inspect where each approach succeeds or fails." }
                 ]
               }
             ]
