@@ -56,6 +56,8 @@ import PAPC from "../../assests/PAPC.jpeg";
 import AIML from "../../assests/AIML.webp";
 import NASSCOMML from "../../assests/NASSCOMML.webp";
 import genaicertificate from "../../assests/genaicertificate.png";
+import nasscomCertificatePageOne from "../../assests/nass1.jpg";
+import nasscomCertificatePageTwo from "../../assests/nass2.jpg";
 
 import Image from 'next/image';
 interface CourseJobSupportProps {
@@ -79,6 +81,10 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                 course.title === "AI for Product Managers" || course.title === "AI for Entrepreneurs" ? Pmc :
                   course.title === "AI and Machine Learning Course" ? AIML :
                     course.title === "Data science course (Pay after Placement)" ? PAPC : null;
+
+  const showNasscomCertificatePages =
+    course.title === "Data Science with Machine Learning & AI Certification" ||
+    course.title === "Data science course (Pay after Placement)";
 
   const partners = [
     { name: 'Accenture', logo: smallaccenture },
@@ -910,7 +916,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '24px',
-                  justifyContent: 'space-between'
+                  justifyContent: 'flex-start'
                 }}>
                   <div style={{
                     backgroundColor: 'white',
@@ -1077,6 +1083,42 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                   </a>
                 </div>
               </div>
+
+              {showNasscomCertificatePages && (
+                <div className="mt-8 border-t border-slate-200 pt-8">
+                  <h3 className="mb-6 text-center text-xl font-semibold text-slate-800">
+                    NASSCOM Certificate &amp; Assessment Details
+                  </h3>
+                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    {[
+                      {
+                        src: nasscomCertificatePageOne,
+                        alt: "NASSCOM Data Science certification certificate",
+                        label: "NASSCOM Certificate",
+                      },
+                      {
+                        src: nasscomCertificatePageTwo,
+                        alt: "NASSCOM Data Science certification assessment details",
+                        label: "Assessment Scorecard",
+                      },
+                    ].map((certificatePage) => (
+                      <figure
+                        key={certificatePage.alt}
+                        className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"
+                      >
+                        <Image
+                          src={certificatePage.src}
+                          alt={certificatePage.alt}
+                          className="h-auto w-full object-contain"
+                        />
+                        <figcaption className="border-t border-slate-200 px-4 py-3 text-center text-sm font-medium text-slate-700">
+                          {certificatePage.label}
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div>
