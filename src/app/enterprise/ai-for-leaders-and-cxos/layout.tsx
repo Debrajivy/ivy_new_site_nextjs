@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI for Leaders & CXOs Training Program | Ivy Professional School",
-  description: "Practical AI training for CXOs and senior leaders covering GenAI, AI agents, responsible AI, business use cases, adoption strategy and measurable enterprise outcomes.",
+  title: "AI for Leaders & CXOs: Executive AI Training & Workshops | Ivy Pro School",
+  description: "Empower decision-makers with hands-on AI tools, ROI modeling, and prompt engineering. Custom 8-hour executive AI leadership program for enterprise teams.",
   keywords: ["AI for leaders", "AI for CXOs", "executive AI training", "enterprise AI training", "generative AI for business leaders", "AI leadership program"],
   alternates: { canonical: "/enterprise/ai-for-leaders-and-cxos" },
   openGraph: {

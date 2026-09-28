@@ -230,7 +230,7 @@ const enterprisePrograms = [
   { title: "AI for Finance Team", href: "/enterprise/ai-for-finance-team", description: "Apply AI to analysis, reporting, controls, and finance workflows." },
   { title: "AI for HR Team", href: "/enterprise/ai-for-hr-team", description: "Build safer, faster, people-first HR workflows with AI." },
   { title: "AI for Sales", href: "/enterprise/ai-for-sales", description: "Use AI across prospecting, account planning, and sales execution." },
-  { title: "AI for Marketing", href: "/enterprise/ai-for-marketing", description: "Scale research, content, campaigns, and marketing intelligence." },
+  // { title: "AI for Marketing", href: "/enterprise/ai-for-marketing", description: "Scale research, content, campaigns, and marketing intelligence." },
 ]
 
 const ListItem = React.forwardRef<
