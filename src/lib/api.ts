@@ -9452,7 +9452,7 @@ const courses: Course[] = [
           { id: "t4", title: "Use NotebookLM to create a source-grounded knowledge and research workspace.", duration: "" },
           { id: "t5", title: "Use Claude Projects and advanced Claude workflows for structured business tasks.", duration: "" },
           { id: "t6", title: "Learn how AI can assist with recurring executive, administrative and documentation work.", duration: "" },
-          { id: "tools", title: "Tools covered: Claude, ChatGPT, Gemini", duration: "" }
+          { id: "tools", title: "Tools covered: Claude, ChatGPT, Gemini, NotebookLM", duration: "" }
         ]
       },
       {
@@ -9495,8 +9495,7 @@ const courses: Course[] = [
           { id: "t3", title: "Build workflows for lead follow-ups, customer enquiries and internal notifications.", duration: "" },
           { id: "t4", title: "Automate data movement, routine documentation and back-office activities.", duration: "" },
           { id: "t5", title: "Connect AI models with everyday business applications.", duration: "" },
-          { id: "t6", title: "Build multi-step workflows using n8n and other automation platforms.", duration: "" },
-          { id: "t7", title: "Understand when to use a simple automation and when an AI agent is more appropriate.", duration: "" },
+          { id: "t6", title: "Understand when to use a simple automation and when an AI agent is more appropriate.", duration: "" },
           { id: "tools", title: "Tools covered: Power Automate, ChatGPT, Claude, Gemini", duration: "" }
         ]
       },
