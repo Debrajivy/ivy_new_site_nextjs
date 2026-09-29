@@ -9426,6 +9426,7 @@ const courses: Course[] = [
     ]
     */
 
+    /* Previous AI for Entrepreneurs curriculum (AI Mindset through 90-Day Roadmap)
     curriculum: [
       {
         id: "m1",
@@ -9559,9 +9560,184 @@ const courses: Course[] = [
         ]
       }
     ]
+    */
 
+    curriculum: [
+      {
+        id: "m1",
+        title: "AI Foundations, Personalisation, Prompting & Business Research",
+        duration: "3 Hours • 2 Sessions",
+        topics: [
+          { id: "t1", title: "Understand how Generative AI and modern AI models can be applied to real business problems.", duration: "" },
+          { id: "t2", title: "Set up and personalise AI tools with relevant business context, goals and working preferences.", duration: "" },
+          { id: "t3", title: "Learn practical prompt structuring for clearer, more useful and more reliable business outputs.", duration: "" },
+          { id: "t4", title: "Compare different AI models and understand where each is most useful.", duration: "" },
+          { id: "t5", title: "Use AI for market, industry, competitor and business research.", duration: "" },
+          { id: "t6", title: "Analyse websites, documents and business information to extract useful insights.", duration: "" },
+          { id: "t7", title: "Understand Projects and other context-based workspaces for organising ongoing business work.", duration: "" },
+          { id: "t8", title: "Identify practical AI opportunities within your own business rather than using AI only for isolated tasks.", duration: "" },
+          { id: "tools", title: "Tools covered: ChatGPT, Claude, Gemini, Perplexity, NotebookLM", duration: "" }
+        ]
+      },
+      {
+        id: "m2",
+        title: "Custom GPTs, Claude Skills & Reusable AI Workflows",
+        duration: "3 Hours • 2 Sessions",
+        topics: [
+          { id: "t1", title: "Move from general AI conversations to specialised AI systems designed for specific business tasks.", duration: "" },
+          { id: "t2", title: "Create Custom GPTs for repetitive business use cases such as research, sales coordination, tender evaluation, client briefs and analysis.", duration: "" },
+          { id: "t3", title: "Understand the difference between a normal AI conversation, a specialised GPT and a reusable AI workflow.", duration: "" },
+          { id: "t4", title: "Learn how to test, refine, save, share and reuse task-specific GPTs.", duration: "" },
+          { id: "t5", title: "Introduce Claude as a business workspace for deeper document, analysis and coding workflows.", duration: "" },
+          { id: "t6", title: "Work with Claude Projects and Desktop workflows.", duration: "" },
+          { id: "t7", title: "Create reusable Claude Skills containing task-specific instructions, knowledge and processes.", duration: "" },
+          { id: "t8", title: "Transfer useful working context and structured instructions between AI platforms where appropriate.", duration: "" },
+          { id: "t9", title: "Understand token usage, model selection and practical usage management.", duration: "" },
+          { id: "t10", title: "Explore connectors and scheduled AI workflows for recurring business activities.", duration: "" },
+          { id: "tools", title: "Tools & concepts covered: ChatGPT, Custom GPTs, Claude, Claude Desktop, Claude Projects, Claude Skills, Connectors, Scheduled Workflows", duration: "" }
+        ]
+      },
+      {
+        id: "m3",
+        title: "Claude Plugins, Multi-Agent Systems & Browser Automation",
+        duration: "3 Hours • 2 Sessions",
+        topics: [
+          { id: "t1", title: "Understand the progression from individual Skills to larger reusable Plugin-based systems.", duration: "" },
+          { id: "t2", title: "Learn how Plugins can combine Skills, specialised agents, instructions and connectors into a complete workflow.", duration: "" },
+          { id: "t3", title: "Design multi-agent systems where different agents handle research, analysis, validation, reporting or other specialist responsibilities.", duration: "" },
+          { id: "t4", title: "Map an end-to-end business process before converting it into an AI system.", duration: "" },
+          { id: "t5", title: "Build structured agent workflows for use cases such as equity research, vendor assessment, tender evaluation and procurement intelligence.", duration: "" },
+          { id: "t6", title: "Download, customise, install and share reusable Plugin components.", duration: "" },
+          { id: "t7", title: "Introduce browser agents for repetitive website and portal activities.", duration: "" },
+          { id: "t8", title: "Automate controlled browser tasks such as data entry, information extraction, form filling, file processing and recurring portal work.", duration: "" },
+          { id: "t9", title: "Identify access, privacy and security considerations before giving AI systems control over business processes.", duration: "" },
+          { id: "t10", title: "Maintain an implementation tracker to monitor AI automation opportunities and progress.", duration: "" },
+          { id: "tools", title: "Tools & concepts covered: Claude Skills, Claude Plugins, Multi-Agent Systems, Browser Agents, Claude Chrome workflows, Connectors", duration: "" }
+        ]
+      },
+      {
+        id: "m4",
+        title: "AI-Powered Business Applications, Artifacts & Vibe Coding",
+        duration: "3 Hours • 2 Sessions",
+        topics: [
+          { id: "t1", title: "Move from AI workflows into practical business applications.", duration: "" },
+          { id: "t2", title: "Understand the difference between an AI conversation, an Artifact, a Project and a standalone application.", duration: "" },
+          { id: "t3", title: "Create interactive Artifacts such as dashboards, trackers and internal business tools.", duration: "" },
+          { id: "t4", title: "Connect application ideas with business data sources such as spreadsheets and cloud information.", duration: "" },
+          { id: "t5", title: "Learn the fundamentals of vibe coding for entrepreneurs who are not traditional programmers.", duration: "" },
+          { id: "t6", title: "Convert a business problem into a clear application requirement.", duration: "" },
+          { id: "t7", title: "Create a Product Requirements Document (PRD) before development.", duration: "" },
+          { id: "t8", title: "Define users, features, workflows, expected outputs and application behaviour.", duration: "" },
+          { id: "t9", title: "Design UI/UX mockups before building the complete application.", duration: "" },
+          { id: "t10", title: "Build practical tools such as CRMs, task trackers, sales dashboards, expense trackers, barcode tools and ERP-style applications.", duration: "" },
+          { id: "t11", title: "Use AI-assisted development workflows to move from prototype to working application.", duration: "" },
+          { id: "t12", title: "Break large application ideas into manageable phases and start with a Minimum Viable Product (MVP).", duration: "" },
+          { id: "t13", title: "Use specialised AI agents to support architecture, development, testing and review.", duration: "" },
+          { id: "tools", title: "Tools & concepts covered: Claude Artifacts, ChatGPT, Claude, Claude Code, ChatGPT/Codex, PRDs, UI/UX, Vibe Coding, Multi-Agent Development", duration: "" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "GitHub, Hosting, Backend & Application Deployment",
+        duration: "3 Hours • 2 Sessions",
+        topics: [
+          { id: "t1", title: "Understand the difference between application code, hosting, backend logic and databases.", duration: "" },
+          { id: "t2", title: "Use GitHub as the central repository for application code and version management.", duration: "" },
+          { id: "t3", title: "Create repositories and upload application files.", duration: "" },
+          { id: "t4", title: "Connect AI development environments with GitHub.", duration: "" },
+          { id: "t5", title: "Understand static websites versus dynamic web applications.", duration: "" },
+          { id: "t6", title: "Deploy websites and applications using platforms such as Netlify and Vercel.", duration: "" },
+          { id: "t7", title: "Build responsive web applications that work across desktop and mobile screens.", duration: "" },
+          { id: "t8", title: "Understand the development sequence from UI/UX and frontend to backend, database, testing and deployment.", duration: "" },
+          { id: "t9", title: "Work with authentication and admin-approval workflows.", duration: "" },
+          { id: "t10", title: "Store credentials and application settings securely using environment variables.", duration: "" },
+          { id: "t11", title: "Understand when larger applications may require cloud infrastructure such as AWS, Microsoft Azure or Google Cloud.", duration: "" },
+          { id: "t12", title: "Develop applications in phases rather than attempting a full business system in one build.", duration: "" },
+          { id: "tools", title: "Tools & concepts covered: GitHub, Git, Netlify, Vercel, Claude Code, ChatGPT/Codex, Backend Development, Databases, Authentication, Environment Variables", duration: "" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "APIs, MCP & Business System Integrations",
+        duration: "1.5 Hours • 1 Session",
+        topics: [
+          { id: "t1", title: "Understand APIs as connectors between AI tools and external software systems.", duration: "" },
+          { id: "t2", title: "Learn how API keys are configured and why credentials must be handled securely.", duration: "" },
+          { id: "t3", title: "Connect AI workflows with business data and applications.", duration: "" },
+          { id: "t4", title: "Explore Gemini API implementation and AI-assisted workflows using Google Sheets.", duration: "" },
+          { id: "t5", title: "Understand MCP (Model Context Protocol) and how it can connect Claude with external business systems.", duration: "" },
+          { id: "t6", title: "Explore practical integration use cases such as Tally Prime with Claude.", duration: "" },
+          { id: "t7", title: "Connect AI with business systems for financial analysis, reporting, payment reminders and operational workflows.", duration: "" },
+          { id: "t8", title: "Build B2B prospecting and lead-generation systems using connected AI tools.", duration: "" },
+          { id: "t9", title: "Use Google Maps and other available business information as part of structured prospecting workflows.", duration: "" },
+          { id: "t10", title: "Plan integrations involving databases, email, WhatsApp and other operational systems.", duration: "" },
+          { id: "t11", title: "Document the required system, credentials, expected output and security considerations before implementation.", duration: "" },
+          { id: "tools", title: "Tools & concepts covered: APIs, Gemini API, Google Sheets, Claude, MCP, Tally Prime, Business-System Integrations", duration: "" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "AI Marketing Foundations, Research & Digital Visibility",
+        duration: "1.5 Hours • 1 Session",
+        topics: [
+          { id: "t1", title: "Understand how digital marketing changes when customers increasingly discover businesses through both search engines and AI platforms.", duration: "" },
+          { id: "t2", title: "Build the marketing foundation before automating content production.", duration: "" },
+          { id: "t3", title: "Research customer and buyer questions using AI.", duration: "" },
+          { id: "t4", title: "Identify long-tail search queries and understand customer search intent.", duration: "" },
+          { id: "t5", title: "Analyse competitors, websites, social media presence and brand mentions.", duration: "" },
+          { id: "t6", title: "Understand AI visibility and how useful, consistent public information can improve business discoverability.", duration: "" },
+          { id: "t7", title: "Maintain consistent business information and messaging across websites, Google Business Profile, social platforms and business listings.", duration: "" },
+          { id: "t8", title: "Build a structured brand fact sheet containing business information, differentiators, target customers, terminology and key messages.", duration: "" },
+          { id: "t9", title: "Define a consistent brand voice for use across ChatGPT, Claude and other AI-assisted marketing workflows.", duration: "" },
+          { id: "t10", title: "Build an FAQ foundation around real customer questions.", duration: "" },
+          { id: "t11", title: "Repurpose useful answers into website, social, newsletter and other content formats.", duration: "" },
+          { id: "t12", title: "Create a structured marketing project database that can be used by AI systems for future execution.", duration: "" },
+          { id: "tools", title: "Tools & concepts covered: ChatGPT, Claude, Gemini, AI Search, Long-Tail Research, Brand Fact Sheets, Brand Voice, Marketing Audits", duration: "" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "AI Marketing Operating System, Content & Creative Automation",
+        duration: "1.5 Hours • 1 Session",
+        topics: [
+          { id: "t1", title: "Turn marketing activity into a repeatable AI-powered Marketing Operating System.", duration: "" },
+          { id: "t2", title: "Build multi-platform content calendars for websites, Instagram, LinkedIn, Facebook, newsletters and other relevant channels.", duration: "" },
+          { id: "t3", title: "Plan content using buyer questions, business priorities and previous performance.", duration: "" },
+          { id: "t4", title: "Create a central content tracker using Google Sheets or similar structured systems.", duration: "" },
+          { id: "t5", title: "Design trackable content calendars and performance-monitoring workflows.", duration: "" },
+          { id: "t6", title: "Explore dashboards combining organic and paid marketing performance.", duration: "" },
+          { id: "t7", title: "Create a reusable brand design system containing logos, fonts, colours, brand assets and visual references.", duration: "" },
+          { id: "t8", title: "Use AI to generate premium branded social-media creatives, campaign visuals, product images and professional marketing assets.", duration: "" },
+          { id: "t9", title: "Manage original image assets carefully to maintain quality and brand consistency.", duration: "" },
+          { id: "t10", title: "Create multiple creative variations from a single campaign requirement.", duration: "" },
+          { id: "t11", title: "Build workflows where planning, creative generation, asset management and publishing operate as connected stages.", duration: "" },
+          { id: "t12", title: "Use AI to support campaign execution while retaining appropriate human approval before public publishing.", duration: "" },
+          { id: "tools", title: "Tools & concepts covered: Claude, ChatGPT, Google Sheets, AI Image Generation, Brand Design Systems, Content Calendars, Marketing Dashboards, Content Automation", duration: "" }
+        ]
+      },
+      {
+        id: "m9",
+        title: "Founder-Led Marketing, Social Media Audits, Meta Ads & AI Video",
+        duration: "1.5 Hours • 1 Session",
+        topics: [
+          { id: "t1", title: "Understand the role of founder visibility in building trust, authority and business credibility.", duration: "" },
+          { id: "t2", title: "Develop a founder-led marketing strategy for platforms such as LinkedIn and Instagram.", duration: "" },
+          { id: "t3", title: "Use AI to audit personal and business social-media profiles.", duration: "" },
+          { id: "t4", title: "Review profile positioning, presentation, content, contact paths, consistency and conversion opportunities.", duration: "" },
+          { id: "t5", title: "Build thought-leadership and founder-content themes around the business.", duration: "" },
+          { id: "t6", title: "Explore AI-assisted workflows connected with Meta Ads and advertising data.", duration: "" },
+          { id: "t7", title: "Create AI avatars using suitable founder reference images.", duration: "" },
+          { id: "t8", title: "Plan short-form founder-led videos scene by scene.", duration: "" },
+          { id: "t9", title: "Generate AI-avatar and presenter-style marketing videos.", duration: "" },
+          { id: "t10", title: "Create and extend multi-scene videos using Google Flow and Veo.", duration: "" },
+          { id: "t11", title: "Add logos and brand elements to AI-generated marketing videos.", duration: "" },
+          { id: "t12", title: "Build repeatable workflows for Reels, promotional videos and founder-led business communication.", duration: "" },
+          { id: "t13", title: "Apply appropriate approval, copyright, image-ownership and platform-access controls when using AI for public marketing execution.", duration: "" },
+          { id: "tools", title: "Tools & concepts covered: Claude, ChatGPT, Meta Ads, Gemini, Google Flow, Veo, AI Avatars, LinkedIn, Instagram", duration: "" }
+        ]
+      }
+    ],
 
-    ,
     projects: [
       {
         id: "p1",
