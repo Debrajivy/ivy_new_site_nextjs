@@ -9452,7 +9452,7 @@ const courses: Course[] = [
           { id: "t4", title: "Use NotebookLM to create a source-grounded knowledge and research workspace.", duration: "" },
           { id: "t5", title: "Use Claude Projects and advanced Claude workflows for structured business tasks.", duration: "" },
           { id: "t6", title: "Learn how AI can assist with recurring executive, administrative and documentation work.", duration: "" },
-          { id: "tools", title: "Tools covered: Claude, ChatGPT, Gemini, NotebookLM", duration: "" }
+          { id: "tools", title: "Tools covered: Claude, ChatGPT, Gemini", duration: "" }
         ]
       },
       {
@@ -9542,7 +9542,7 @@ const courses: Course[] = [
           { id: "t5", title: "Work with databases and application backends where required.", duration: "" },
           { id: "t6", title: "Publish and deploy working applications to the web.", duration: "" },
           { id: "t7", title: "Learn through practical builds such as proposal generators, business dashboards, lead tools and other custom applications.", duration: "" },
-          { id: "tools", title: "Tools covered: Claude Code, Replit, Lovable, ChatGPT/Codex, Supabase, Netlify", duration: "" }
+          { id: "tools", title: "Tools covered: Claude Code, ChatGPT/Codex, Supabase, Netlify", duration: "" }
         ]
       },
       {
