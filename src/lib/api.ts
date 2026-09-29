@@ -9336,6 +9336,7 @@ const courses: Course[] = [
       "Bachelor’s degree or diploma in a STEM or quantitative field.",
       "Logical thinking and willingness to learn through projects."
     ],
+    /* Previous AI for Entrepreneurs curriculum
     curriculum: [
       {
         id: "m1",
@@ -9420,6 +9421,142 @@ const courses: Course[] = [
           { id: "t1", title: "Systematically identifying key problems in your current business model.", duration: "" },
           { id: "t2", title: "Developing a strategic implementation plan for long-term scaling.", duration: "" },
           { id: "t3", title: "Final project: Presenting your business-specific AI Roadmap.", duration: "" }
+        ]
+      }
+    ]
+    */
+
+    curriculum: [
+      {
+        id: "m1",
+        title: "AI Mindset, Prompting & Business Research",
+        duration: "1 Hour",
+        topics: [
+          { id: "t1", title: "Understand how Generative AI, AI agents and modern AI models can be applied in a business.", duration: "" },
+          { id: "t2", title: "Learn practical prompt engineering for better reasoning, research and business outputs.", duration: "" },
+          { id: "t3", title: "Use ChatGPT, Claude, Gemini and Perplexity for business research and decision support.", duration: "" },
+          { id: "t4", title: "Conduct market, industry and competitor research using AI.", duration: "" },
+          { id: "t5", title: "Analyse websites, documents and other business information to extract useful insights.", duration: "" },
+          { id: "t6", title: "Identify high-value AI use cases within your own business and industry.", duration: "" },
+          { id: "tools", title: "Tools covered: ChatGPT, Claude, Gemini", duration: "" }
+        ]
+      },
+      {
+        id: "m2",
+        title: "AI for Business Productivity & Knowledge Workflow",
+        duration: "1.5 Hours",
+        topics: [
+          { id: "t1", title: "Draft professional emails, proposals, reports, SOPs and business documents using AI.", duration: "" },
+          { id: "t2", title: "Work with PDFs, spreadsheets, presentations and large sets of business information.", duration: "" },
+          { id: "t3", title: "Summarise meetings, documents and research into clear action points.", duration: "" },
+          { id: "t4", title: "Use NotebookLM to create a source-grounded knowledge and research workspace.", duration: "" },
+          { id: "t5", title: "Use Claude Projects and advanced Claude workflows for structured business tasks.", duration: "" },
+          { id: "t6", title: "Learn how AI can assist with recurring executive, administrative and documentation work.", duration: "" },
+          { id: "tools", title: "Tools covered: Claude, ChatGPT, Gemini, NotebookLM", duration: "" }
+        ]
+      },
+      {
+        id: "m3",
+        title: "AI Marketing, Branding & Sales",
+        duration: "2 Hours",
+        topics: [
+          { id: "t1", title: "Build brand positioning, messaging and customer personas with AI.", duration: "" },
+          { id: "t2", title: "Conduct competitor intelligence and analyse competitor communication.", duration: "" },
+          { id: "t3", title: "Generate campaign ideas, social media content, ad copy and sales communication.", duration: "" },
+          { id: "t4", title: "Develop founder-led marketing and personal-brand content for LinkedIn, Instagram and Facebook.", duration: "" },
+          { id: "t5", title: "Create sales scripts, follow-up messages, proposals and lead-nurturing content.", duration: "" },
+          { id: "t6", title: "Explore how AI can work with marketing platforms and business accounts, including Meta Ads workflows.", duration: "" },
+          { id: "t7", title: "Design repeatable AI-assisted content and lead-generation systems.", duration: "" },
+          { id: "tools", title: "Tools covered: ChatGPT, Claude, Gemini, Canva, Meta Ads", duration: "" }
+        ]
+      },
+      {
+        id: "m4",
+        title: "AI Image, Video & Content Creation",
+        duration: "3 Hours",
+        topics: [
+          { id: "t1", title: "Generate professional product photographs, campaign creatives and lifestyle visuals using AI.", duration: "" },
+          { id: "t2", title: "Create storyboards and plan multi-scene business videos before production.", duration: "" },
+          { id: "t3", title: "Generate AI videos and extend scenes using Google Flow and Veo.", duration: "" },
+          { id: "t4", title: "Create AI-avatar and presenter-style videos for marketing and business communication.", duration: "" },
+          { id: "t5", title: "Turn scripts and ideas into short-form promotional videos and reels.", duration: "" },
+          { id: "t6", title: "Explore AI-assisted video editing, voice and presentation workflows.", duration: "" },
+          { id: "t7", title: "Build a repeatable content-production workflow instead of creating every asset manually.", duration: "" },
+          { id: "tools", title: "Tools covered: Gemini, Google Flow, Veo, Google Vids, Canva", duration: "" }
+        ]
+      },
+      {
+        id: "m5",
+        title: "AI Automation & Business Workflows",
+        duration: "2.5 Hours",
+        topics: [
+          { id: "t1", title: "Understand triggers, actions, APIs and the basic logic behind business automation.", duration: "" },
+          { id: "t2", title: "Map repetitive business processes before automating them.", duration: "" },
+          { id: "t3", title: "Build workflows for lead follow-ups, customer enquiries and internal notifications.", duration: "" },
+          { id: "t4", title: "Automate data movement, routine documentation and back-office activities.", duration: "" },
+          { id: "t5", title: "Connect AI models with everyday business applications.", duration: "" },
+          { id: "t6", title: "Build multi-step workflows using n8n and other automation platforms.", duration: "" },
+          { id: "t7", title: "Understand when to use a simple automation and when an AI agent is more appropriate.", duration: "" },
+          { id: "tools", title: "Tools covered: Power Automate, ChatGPT, Claude, Gemini", duration: "" }
+        ]
+      },
+      {
+        id: "m6",
+        title: "AI Agents & Multi-Agent Business Systems",
+        duration: "2.5 Hours",
+        topics: [
+          { id: "t1", title: "Understand the difference between AI assistants, automations and autonomous agents.", duration: "" },
+          { id: "t2", title: "Create task-focused agents for real business processes.", duration: "" },
+          { id: "t3", title: "Build AI workflows for lead qualification, customer support, research and follow-ups.", duration: "" },
+          { id: "t4", title: "Explore multi-agent systems, where specialised AI agents collaborate on different parts of a business task.", duration: "" },
+          { id: "t5", title: "Design agents that can use business knowledge, tools and structured instructions.", duration: "" },
+          { id: "t6", title: "Explore voice-based AI workflows for customer interactions.", duration: "" },
+          { id: "t7", title: "Identify where agentic AI can realistically reduce manual effort without adding unnecessary complexity.", duration: "" },
+          { id: "tools", title: "Tools & concepts covered: Claude, ChatGPT, Gemini, AI Agents, Multi-Agent Workflows, Voice AI", duration: "" }
+        ]
+      },
+      {
+        id: "m7",
+        title: "AI Data Intelligence & Business Decision-Making",
+        duration: "2 Hours",
+        topics: [
+          { id: "t1", title: "Analyse sales and operational data using natural-language instructions.", duration: "" },
+          { id: "t2", title: "Ask business questions directly from spreadsheets and structured datasets.", duration: "" },
+          { id: "t3", title: "Identify sales trends, product performance, customer patterns and business anomalies.", duration: "" },
+          { id: "t4", title: "Generate management summaries, charts and decision-ready insights.", duration: "" },
+          { id: "t5", title: "Use AI to support forecasting and business planning.", duration: "" },
+          { id: "t6", title: "Create AI-assisted dashboards and reporting workflows.", duration: "" },
+          { id: "t7", title: "Build practical use cases such as an AI Sales Analyzer & Predictor.", duration: "" },
+          { id: "tools", title: "Tools covered: ChatGPT, Claude, Gemini, Excel/Spreadsheet AI tools", duration: "" }
+        ]
+      },
+      {
+        id: "m8",
+        title: "Vibe Coding --- Build Your Own Business Tools",
+        duration: "",
+        topics: [
+          { id: "t1", title: "Understand vibe coding and how entrepreneurs can build software without being traditional programmers.", duration: "" },
+          { id: "t2", title: "Convert a business problem into a clear application requirement.", duration: "" },
+          { id: "t3", title: "Use AI coding tools to generate, modify and troubleshoot an application.", duration: "" },
+          { id: "t4", title: "Build websites, dashboards, internal tools and simple business applications.", duration: "" },
+          { id: "t5", title: "Work with databases and application backends where required.", duration: "" },
+          { id: "t6", title: "Publish and deploy working applications to the web.", duration: "" },
+          { id: "t7", title: "Learn through practical builds such as proposal generators, business dashboards, lead tools and other custom applications.", duration: "" },
+          { id: "tools", title: "Tools covered: Claude Code, Replit, Lovable, ChatGPT/Codex, Supabase, Netlify", duration: "" }
+        ]
+      },
+      {
+        id: "m9",
+        title: "AI Implementation & 90-Day Business Roadmap",
+        duration: "1.5 Hours",
+        topics: [
+          { id: "t1", title: "Audit your current business processes and identify practical AI opportunities.", duration: "" },
+          { id: "t2", title: "Prioritise use cases based on business value, effort and implementation feasibility.", duration: "" },
+          { id: "t3", title: "Decide which processes need AI assistance, automation, agents or custom tools.", duration: "" },
+          { id: "t4", title: "Create a realistic implementation sequence instead of adopting tools randomly.", duration: "" },
+          { id: "t5", title: "Build a personalised 90-Day AI Roadmap for your business.", duration: "" },
+          { id: "t6", title: "Define immediate quick wins, medium-term projects and longer-term AI initiatives.", duration: "" },
+          { id: "t7", title: "Leave the program with specific AI solutions that can continue to be implemented in your business.", duration: "" }
         ]
       }
     ]
