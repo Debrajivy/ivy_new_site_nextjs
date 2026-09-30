@@ -64,7 +64,7 @@ export default function Footer() {
           <div className={styles.brand}>
             <Link href="/" aria-label="Ivy Professional School home" className={styles.logo}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png" alt="Ivy Professional School" width="82" height="64" />
+              <img src="/lovable-uploads/ff3e5927-bf09-4aeb-a4ff-3583075c362e.png" alt="Ivy Professional School" width="82" height="64" loading="lazy" decoding="async" />
             </Link>
             <p className={styles.tagline}>Empowering professionals with Data, AI & emerging technology skills since 2008.</p>
             <div className={styles.rating}>

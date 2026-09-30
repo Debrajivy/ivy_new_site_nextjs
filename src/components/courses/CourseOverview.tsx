@@ -188,6 +188,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                           <img
                             src={course.instructors?.find(i => i.name === "Prateek Agrawal")?.image}
                             alt="Prateek Agrawal"
+                            loading="lazy"
                             className="w-24 h-24 rounded-full object-cover border-2 border-white shadow-md relative z-10"
                           />
                         </div>
@@ -310,6 +311,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                             <img
                               src={instructor.image}
                               alt={instructor.name}
+                              loading="lazy"
                               className="w-12 h-12 rounded-full object-cover mr-4"
                             />
                             <div>

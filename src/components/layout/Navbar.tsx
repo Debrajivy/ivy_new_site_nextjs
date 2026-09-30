@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap, NotebookPen, Building, Trophy, Users } from "lucide-react"
+import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap, NotebookPen, Building, Trophy, Users, ArrowRight } from "lucide-react"
 import review from "../../assests/review.webp"
 import Image, { StaticImageData } from "next/image"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -226,10 +226,10 @@ const allCourses = [
 ]
 
 const enterprisePrograms = [
-  { title: "AI for Leaders & CXOs", href: "/enterprise/ai-for-leaders-and-cxos", description: "Turn AI awareness into responsible, measurable enterprise action." },
-  { title: "AI for Finance Team", href: "/enterprise/ai-for-finance-team", description: "Apply AI to analysis, reporting, controls, and finance workflows." },
-  { title: "AI for HR Team", href: "/enterprise/ai-for-hr-team", description: "Build safer, faster, people-first HR workflows with AI." },
-  { title: "AI for Sales", href: "/enterprise/ai-for-sales", description: "Use AI across prospecting, account planning, and sales execution." },
+  { title: "AI for Leaders & CXOs", href: "/enterprise/ai-for-leaders-and-cxos", description: "Turn AI awareness into responsible, measurable enterprise action.", icon: Trophy },
+  { title: "AI for Finance Team", href: "/enterprise/ai-for-finance-team", description: "Apply AI to analysis, reporting, controls, and finance workflows.", icon: Building },
+  { title: "AI for HR Team", href: "/enterprise/ai-for-hr-team", description: "Build safer, faster, people-first HR workflows with AI.", icon: Users },
+  { title: "AI for Sales", href: "/enterprise/ai-for-sales", description: "Use AI across prospecting, account planning, and sales execution.", icon: Briefcase },
   // { title: "AI for Marketing", href: "/enterprise/ai-for-marketing", description: "Scale research, content, campaigns, and marketing intelligence." },
 ]
 
@@ -625,33 +625,60 @@ const Navbar = () => {
                     About Us
                   </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="px-3 py-2 text-sm font-medium">
+                <NavigationMenuItem className="group/enterprise relative">
+                  <button
+                    type="button"
+                    className="inline-flex h-10 items-center justify-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-slate-100 hover:text-[#013a81] focus-visible:bg-slate-100 focus-visible:text-[#013a81] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#009fda]/30"
+                    aria-haspopup="true"
+                  >
                     Enterprise
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[680px] rounded-xl border border-sky-100 bg-white p-5 shadow-2xl">
-                      <div className="mb-4 flex items-center justify-between border-b border-slate-100 pb-4">
-                        <div>
-                          <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#009fda]">Enterprise AI programs</p>
-                          <p className="mt-1 text-sm text-slate-500">Role-specific capability building for business teams.</p>
+                    <ChevronDown className="ml-1 h-3.5 w-3.5 transition-transform duration-200 group-hover/enterprise:rotate-180 group-focus-within/enterprise:rotate-180" />
+                  </button>
+
+                  <div className="pointer-events-none invisible absolute right-0 top-full z-[100] w-[620px] max-w-[calc(100vw-2rem)] translate-y-2 pt-2 opacity-0 transition-all duration-200 ease-out group-hover/enterprise:pointer-events-auto group-hover/enterprise:visible group-hover/enterprise:translate-y-0 group-hover/enterprise:opacity-100 group-focus-within/enterprise:pointer-events-auto group-focus-within/enterprise:visible group-focus-within/enterprise:translate-y-0 group-focus-within/enterprise:opacity-100">
+                    <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_24px_70px_-24px_rgba(15,23,42,0.45)]">
+                      <div className="flex items-center justify-between gap-5 bg-gradient-to-r from-[#013a81] to-[#009fda] px-5 py-4 text-white">
+                        <div className="flex items-center gap-3">
+                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/20">
+                            <Building className="h-5 w-5" />
+                          </span>
+                          <div>
+                            <p className="text-sm font-bold">Enterprise AI Programs</p>
+                            <p className="mt-0.5 text-xs text-sky-100">Practical capability building for every business team.</p>
+                          </div>
                         </div>
-                        <Link href="/enterprise" className="text-sm font-bold text-[#013a81] hover:text-[#009fda]">Enterprise overview →</Link>
+                        <Link
+                          href="/enterprise"
+                          className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-white px-3 py-2 text-xs font-bold text-[#013a81] transition hover:bg-sky-50"
+                        >
+                          View overview <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
                       </div>
-                      <ul className="grid grid-cols-2 gap-2">
-                        {enterprisePrograms.map((program, index) => (
-                          <li key={program.title} className={index === 0 ? "col-span-2" : ""}>
-                            <NavigationMenuLink asChild>
-                              <Link href={program.href} className="group flex h-full items-start gap-3 rounded-lg border border-slate-100 p-4 transition hover:border-[#009fda]/40 hover:bg-sky-50 hover:shadow-sm">
-                                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#009fda]/10 text-sm font-extrabold text-[#009fda] group-hover:bg-[#009fda] group-hover:text-white">{String(index + 1).padStart(2, "0")}</span>
-                                <span><strong className="block text-sm text-slate-900">{program.title}</strong><small className="mt-1 block leading-5 text-slate-500">{program.description}</small></span>
+
+                      <ul className="grid grid-cols-2 gap-3 p-4">
+                        {enterprisePrograms.map((program) => {
+                          const ProgramIcon = program.icon
+                          return (
+                            <li key={program.title}>
+                              <Link
+                                href={program.href}
+                                className="group/card flex h-full items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 text-left transition duration-200 hover:-translate-y-0.5 hover:border-[#009fda]/50 hover:bg-sky-50/70 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#009fda]/30"
+                              >
+                                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-50 text-[#009fda] transition-colors group-hover/card:bg-[#009fda] group-hover/card:text-white">
+                                  <ProgramIcon className="h-5 w-5" />
+                                </span>
+                                <span className="min-w-0 flex-1">
+                                  <strong className="block text-sm font-bold text-slate-900 group-hover/card:text-[#013a81]">{program.title}</strong>
+                                  <small className="mt-1 block text-xs leading-5 text-slate-500">{program.description}</small>
+                                </span>
+                                <ChevronRight className="mt-1 h-4 w-4 shrink-0 text-slate-300 transition group-hover/card:translate-x-0.5 group-hover/card:text-[#009fda]" />
                               </Link>
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
+                            </li>
+                          )
+                        })}
                       </ul>
                     </div>
-                  </NavigationMenuContent>
+                  </div>
                 </NavigationMenuItem>
                 {/* <NavigationMenuItem>
                   <Link href="/verify-certificate" className="flex items-center px-3 py-2 text-sm font-medium">

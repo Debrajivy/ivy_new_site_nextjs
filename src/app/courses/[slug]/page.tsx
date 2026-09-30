@@ -3,10 +3,10 @@ import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import CourseHero from "@/components/courses/CourseHero"
 import CourseOverview from "@/components/courses/CourseOverview"
-import CourseCurriculum from "@/components/courses/CourseCurriculum"
+import DeferredCourseCurriculum from "@/components/courses/DeferredCourseCurriculum"
 import CourseProjects from "@/components/courses/CourseProjects"
-import CourseAlumni from "@/components/courses/CourseAlumni"
-import CourseFAQ from "@/components/courses/CourseFAQ"
+import DeferredCourseAlumni from "@/components/courses/DeferredCourseAlumni"
+import DeferredCourseFAQ from "@/components/courses/DeferredCourseFAQ"
 import CourseAccreditation from "@/components/courses/CourseAccreditation"
 import CourseEnrollCTA from "@/components/courses/CourseEnrollCTA"
 import CourseJobSupport from "@/components/courses/CourseJobSupport"
@@ -15,7 +15,7 @@ import { fetchCourseById, fetchCourses } from "@/lib/api"
 // Prefer the alias to avoid fragile relatives
 import CourseSubNavigation from "@/components/CourseSubNavigation"
 import CourseRelatedLinks from "@/components/courses/CourseRelatedLinks"
-import CourseAIAdvisor from "@/components/courses/CourseAIAdvisor"
+import CourseAIAdvisorShell from "@/components/courses/CourseAIAdvisorShell"
 import CourseEntrepreneurDetails from "@/components/courses/CourseEntrepreneurDetails"
 
 // Types that match Next's generated PageProps
@@ -80,11 +80,11 @@ export default async function CoursePage({ params }: AsyncPageProps) {
       <>
         <Navbar />
         <main>
-          <CourseHero course={course} />
+          <CourseHero course={{ title: course.title, description: course.description, slug: course.slug }} />
 
           {/* Sticky sub-nav */}
-          <CourseSubNavigation course={course} />
-          <CourseAIAdvisor courseTitle={course.title} courseSlug={course.slug} />
+          <CourseSubNavigation course={{ title: course.title }} />
+          <CourseAIAdvisorShell courseTitle={course.title} courseSlug={course.slug} />
           {/* Anchor targets */}
           <div id="course-accreditation-section">
             <CourseAccreditation />
@@ -93,7 +93,11 @@ export default async function CoursePage({ params }: AsyncPageProps) {
             <CourseOverview course={course} />
           </div>
           <div id="course-curriculum-section" className="course-deferred-section">
-            <CourseCurriculum course={course} />
+            <DeferredCourseCurriculum course={{
+              title: course.title,
+              duration: course.duration,
+              curriculum: course.curriculum,
+            }} />
           </div>
           <div id="course-projects-section" className="course-deferred-section">
             <CourseProjects course={course} />
@@ -104,10 +108,10 @@ export default async function CoursePage({ params }: AsyncPageProps) {
           </div>
 
           <div id="course-alumni-section" className="course-deferred-section">
-            <CourseAlumni courseId={course.id} />
+            <DeferredCourseAlumni courseId={course.id} />
           </div>
           <div id="course-faq-section" className="course-deferred-section">
-            <CourseFAQ course={course} />
+            <DeferredCourseFAQ course={{ title: course.title, slug: course.slug }} />
           </div>
           <div id="course-enrollcta-section" className="course-deferred-section">
             <CourseEnrollCTA course={course} />

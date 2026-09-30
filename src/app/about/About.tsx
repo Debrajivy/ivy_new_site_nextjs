@@ -15,8 +15,8 @@ import {
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import aboutIvy from "@/assests/aboutusivy.jpeg";
-import eeshani from "@/assests/eeshani.webp";
-import prateek from "@/assests/pratilk.webp";
+import eeshani from "@/assests/Mamimg.jpg.jpeg";
+import prateek from "@/assests/Sirimg.jpg.jpeg";
 
 const ventures = [
   {
@@ -118,22 +118,22 @@ export default function About() {
     <>
       <Navbar />
       <main className="bg-white text-slate-900">
-        <section className="relative overflow-hidden border-b border-slate-100 bg-white">
+        <section className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-sky-50 via-white to-white">
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-ivy-blue via-ivy-blue to-ivy-orange" />
-          <div className="container mx-auto px-4 py-20 text-center sm:py-24 lg:py-28">
+          <div className="container mx-auto px-4 pb-10 pt-12 text-center sm:pb-12 sm:pt-14 lg:pt-16">
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-ivy-blue">
               About Ivy Professional School
             </p>
-            <h1 className="mx-auto mt-6 max-w-5xl text-4xl font-bold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:text-7xl">
+            <h1 className="mx-auto mt-4 max-w-4xl text-4xl font-bold leading-[1.08] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
               It started with a classroom.
               <span className="block text-ivy-blue">It grew into an ecosystem.</span>
             </h1>
-            <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl">
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg">
               Since 2008, Ivy has helped people turn emerging technology into
               practical opportunity. Today, that same thinking powers ventures
               across AI, education, mobility and real estate.
             </p>
-            <div className="mt-9 flex flex-wrap justify-center gap-3">
+            <div className="mt-7 flex flex-wrap justify-center gap-3">
               <Link
                 href="#our-story"
                 className="inline-flex items-center gap-2 rounded-md bg-ivy-blue px-6 py-3.5 font-semibold text-white transition hover:bg-[#008cc1]"
@@ -147,32 +147,32 @@ export default function About() {
                 Explore our ventures
               </Link>
             </div>
+
+            <figure className="mx-auto mt-10 max-w-7xl overflow-hidden rounded-2xl border border-slate-200 bg-white p-1.5 shadow-[0_18px_55px_-28px_rgba(15,23,42,0.35)]">
+              <Image
+                src={aboutIvy}
+                alt="The Ivy Professional School community"
+                className="block h-auto w-full rounded-xl"
+                priority
+                sizes="(max-width: 1280px) calc(100vw - 32px), 1280px"
+              />
+              <figcaption className="sr-only">
+                The people and community behind Ivy Professional School
+              </figcaption>
+            </figure>
           </div>
         </section>
 
-        <figure className="w-full bg-slate-50">
-          <Image
-            src={aboutIvy}
-            alt="The Ivy Professional School community"
-            className="block h-auto w-full"
-            priority
-            sizes="100vw"
-          />
-          <figcaption className="border-y border-slate-100 bg-white px-4 py-4 text-center text-sm font-medium text-slate-500">
-            The people and community behind Ivy Professional School
-          </figcaption>
-        </figure>
-
-        <section id="our-story" className="scroll-mt-20 py-20 lg:py-28">
-          <div className="container mx-auto grid gap-12 px-4 lg:grid-cols-12 lg:gap-16">
+        <section id="our-story" className="scroll-mt-20 py-14 sm:py-16 lg:py-20">
+          <div className="container mx-auto grid gap-9 px-4 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-4">
               <p className="text-sm font-bold uppercase tracking-[0.22em] text-ivy-blue">
                 Our story
               </p>
-              <h2 className="mt-5 text-3xl leading-tight sm:text-4xl">
+              <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
                 One belief has guided every chapter.
               </h2>
-              <div className="mt-8 flex items-center gap-4 border-t border-slate-200 pt-6">
+              <div className="mt-6 flex items-center gap-4 border-t border-slate-200 pt-5">
                 <span className="text-4xl font-bold text-ivy-orange">2008</span>
                 <span className="max-w-[150px] text-sm font-medium leading-5 text-slate-500">
                   The year the Ivy journey began
@@ -180,8 +180,8 @@ export default function About() {
               </div>
             </div>
 
-            <div className="space-y-6 text-lg leading-8 text-slate-600 lg:col-span-7 lg:col-start-6">
-              <p className="text-2xl font-medium leading-9 text-slate-900">
+            <div className="space-y-4 text-base leading-7 text-slate-600 sm:text-lg lg:col-span-7 lg:col-start-6">
+              <p className="text-xl font-medium leading-8 text-slate-900 sm:text-2xl">
                 Education works best when it is connected to the world outside
                 the classroom.
               </p>
@@ -197,7 +197,7 @@ export default function About() {
                 needed cleaner fleets. Families needed thoughtful schools and
                 spaces.
               </p>
-              <blockquote className="border-l-4 border-ivy-orange bg-amber-50/70 px-6 py-5 font-semibold text-slate-900">
+              <blockquote className="rounded-r-lg border-l-4 border-ivy-orange bg-amber-50/70 px-5 py-4 font-semibold text-slate-900">
                 Understand the real problem. Combine technology with human
                 insight. Build for lasting impact.
               </blockquote>
@@ -207,27 +207,27 @@ export default function About() {
 
         <section
           id="our-ventures"
-          className="scroll-mt-20 border-y border-slate-200 bg-slate-50 py-20 lg:py-28"
+          className="scroll-mt-20 border-y border-slate-200 bg-slate-50 py-14 sm:py-16 lg:py-20"
         >
           <div className="container mx-auto px-4">
-            <div className="grid gap-8 border-b border-slate-300 pb-10 lg:grid-cols-2 lg:items-end">
+            <div className="grid gap-5 border-b border-slate-300 pb-8 lg:grid-cols-2 lg:items-end">
               <div>
                 <p className="text-sm font-bold uppercase tracking-[0.22em] text-ivy-blue">
                   The Ivy ecosystem
                 </p>
-                <h2 className="mt-5 text-3xl sm:text-4xl">
+                <h2 className="mt-3 text-3xl sm:text-4xl">
                   Different businesses.
                   <br />
                   One shared purpose.
                 </h2>
               </div>
-              <p className="max-w-xl text-lg leading-8 text-slate-600 lg:justify-self-end">
+              <p className="max-w-xl text-base leading-7 text-slate-600 sm:text-lg lg:justify-self-end">
                 Each venture serves a different part of life, connected by a
                 practical, technology-forward approach to progress.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {ventures.map((venture, index) => {
                 const Icon = venture.icon;
                 return (
@@ -236,7 +236,7 @@ export default function About() {
                     href={venture.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative min-h-[320px] border-b border-slate-200 px-1 py-9 transition md:px-8 md:odd:border-r xl:border-r xl:px-9 xl:[&:nth-child(3n)]:border-r-0"
+                    className="group relative flex min-h-[260px] flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-ivy-blue/40 hover:shadow-lg"
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-sm font-semibold text-slate-400">
@@ -246,14 +246,14 @@ export default function About() {
                         <Icon className="h-5 w-5" />
                       </div>
                     </div>
-                    <p className="mt-10 text-xs font-bold uppercase tracking-[0.17em] text-ivy-blue">
+                    <p className="mt-6 text-xs font-bold uppercase tracking-[0.17em] text-ivy-blue">
                       {venture.label}
                     </p>
                     <h3 className="mt-3 flex items-center gap-2 text-2xl transition group-hover:text-ivy-blue">
                       {venture.name}
                       <ExternalLink className="h-4 w-4 opacity-0 transition group-hover:opacity-100" />
                     </h3>
-                    <p className="mt-4 leading-7 text-slate-600">
+                    <p className="mt-3 leading-6 text-slate-600">
                       {venture.description}
                     </p>
                     {venture.stat && (
@@ -268,29 +268,29 @@ export default function About() {
           </div>
         </section>
 
-        <section id="leadership" className="scroll-mt-20 py-20 lg:py-28">
+        <section id="leadership" className="scroll-mt-20 py-14 sm:py-16 lg:py-20">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-sm font-bold uppercase tracking-[0.22em] text-ivy-blue">
                 Leadership
               </p>
-              <h2 className="mt-5 text-3xl sm:text-4xl">
+              <h2 className="mt-3 text-3xl sm:text-4xl">
                 Educators at heart. Entrepreneurs in action.
               </h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600">
+              <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
                 Prateek and Eeshani combine deep industry experience with a
                 shared love for teaching—an outlook that shapes every Ivy
                 initiative.
               </p>
             </div>
 
-            <div className="mx-auto mt-14 max-w-6xl divide-y divide-slate-200 border-y border-slate-200">
+            <div className="mx-auto mt-10 grid max-w-6xl gap-5">
               {leaders.map((leader, index) => (
                 <article
                   key={leader.name}
-                  className="grid gap-8 py-10 md:grid-cols-[220px_1fr] md:items-center lg:gap-14"
+                  className="grid gap-7 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:grid-cols-[180px_1fr] md:items-center lg:gap-10 lg:p-8"
                 >
-                  <div className="relative mx-auto w-full max-w-[220px]">
+                  <div className="relative mx-auto w-full max-w-[180px]">
                     <div
                       className={`absolute -bottom-3 -right-3 h-full w-full rounded-md ${
                         index === 0 ? "bg-ivy-blue" : "bg-ivy-orange"
@@ -300,7 +300,8 @@ export default function About() {
                       src={leader.image}
                       alt={leader.name}
                       className="relative aspect-square w-full rounded-md object-cover"
-                      sizes="220px"
+                      sizes="180px"
+                      style ={{height:300}}
                     />
                   </div>
                   <div>
@@ -319,10 +320,10 @@ export default function About() {
                         <Linkedin className="h-4 w-4" />
                       </a>
                     </div>
-                    <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+                    <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg">
                       {leader.bio}
                     </p>
-                    <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                    <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
                       {leader.highlights.map((highlight) => (
                         <span
                           key={highlight}
@@ -340,22 +341,22 @@ export default function About() {
           </div>
         </section>
 
-        <section className="border-t border-slate-100 bg-sky-50 py-20">
+        <section className="border-t border-slate-200 bg-sky-50 py-14 sm:py-16">
           <div className="container mx-auto px-4 text-center">
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-ivy-blue">
               The next chapter
             </p>
-            <h2 className="mx-auto mt-5 max-w-4xl text-3xl leading-tight sm:text-5xl">
+            <h2 className="mx-auto mt-3 max-w-4xl text-3xl leading-tight sm:text-4xl">
               The future is built by people willing to keep learning.
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
               Whether you are beginning a career, transforming a team or
               exploring what AI can make possible, there is a place for you in
               the Ivy story.
             </p>
             <Link
               href="/courses"
-              className="mt-8 inline-flex items-center gap-2 rounded-md bg-ivy-blue px-7 py-3.5 font-semibold text-white transition hover:bg-[#008cc1]"
+              className="mt-6 inline-flex items-center gap-2 rounded-md bg-ivy-blue px-7 py-3.5 font-semibold text-white transition hover:bg-[#008cc1]"
             >
               Explore Ivy courses <ArrowRight className="h-4 w-4" />
             </Link>

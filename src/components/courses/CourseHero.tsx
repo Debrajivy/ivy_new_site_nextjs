@@ -206,7 +206,7 @@ function getHeroAlumni(courseTitle: string): HeroAlumni[] | null {
 }
 
 interface CourseHeroProps {
-  course: Course;
+  course: Pick<Course, "title" | "description" | "slug">;
 }
 
 
@@ -1537,11 +1537,14 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
         className="relative cursor-pointer group"
         onClick={() => setVideoPlaying(true)}
       >
-        <img
+        <Image
           src="https://img.youtube.com/vi/7xAibAQFCRA/hqdefault.jpg"
           alt="AI for Entrepreneurs video thumbnail"
-          className="w-full object-cover"
-          style={{ height: 340 }}
+          width={480}
+          height={340}
+          sizes="(max-width: 1024px) calc(100vw - 32px), 50vw"
+          priority
+          className="h-[340px] w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
           <div className="bg-red-600 rounded-full p-4 shadow-xl group-hover:scale-110 transition-transform">

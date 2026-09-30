@@ -147,7 +147,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const courseSlug = cleanText(body.courseSlug, 120)
     const message = cleanText(body.message, 300)
-    const pageFaqs = readPageFaqs(body.courseFaqs)
 
     if (!courseSlug || !message) {
       return NextResponse.json({ error: "Course and question are required" }, { status: 400 })
@@ -175,6 +174,10 @@ export async function POST(request: NextRequest) {
     if (!course) {
       return NextResponse.json({ error: "Course not found" }, { status: 404 })
     }
+
+    // Read FAQ data from the server-side course record so the large FAQ UI
+    // module never has to ship with the initial course-page bundle.
+    const pageFaqs = readPageFaqs(course.faq)
 
     const history: SafeMessage[] = Array.isArray(body.history)
       ? body.history

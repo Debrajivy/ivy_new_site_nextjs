@@ -5,7 +5,7 @@ import { X } from 'lucide-react'; // Removed Menu as it's no longer used for mob
 import type { Course } from '@/lib/api';
 
 interface CourseOverviewProps {
-  course: Course;
+  course: Pick<Course, "title">;
 }
 
 

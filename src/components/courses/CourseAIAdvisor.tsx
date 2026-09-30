@@ -3,7 +3,6 @@
 import { FormEvent, useEffect, useRef, useState } from "react"
 import { Bot, Loader2, Send, Sparkles, X } from "lucide-react"
 import ReactMarkdown from "react-markdown"
-import { getCoursePageFaqs } from "@/components/courses/CourseFAQ"
 import {
   COURSE_ENROLLMENT_ANSWER,
   COURSE_PLACEMENT_ASSISTANCE_ANSWER,
@@ -19,6 +18,7 @@ type ChatMessage = {
 interface CourseAIAdvisorProps {
   courseTitle: string
   courseSlug: string
+  initiallyOpen?: boolean
 }
 
 const QUICK_QUESTIONS = [
@@ -28,8 +28,8 @@ const QUICK_QUESTIONS = [
   "What are the prerequisites?",
 ]
 
-export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdvisorProps) {
-  const [isOpen, setIsOpen] = useState(false)
+export default function CourseAIAdvisor({ courseTitle, courseSlug, initiallyOpen = false }: CourseAIAdvisorProps) {
+  const [isOpen, setIsOpen] = useState(initiallyOpen)
   const [input, setInput] = useState("")
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -86,7 +86,6 @@ export default function CourseAIAdvisor({ courseTitle, courseSlug }: CourseAIAdv
           courseSlug,
           message: trimmedQuestion,
           history: previousMessages,
-          courseFaqs: getCoursePageFaqs(courseTitle, courseSlug),
         }),
       })
 

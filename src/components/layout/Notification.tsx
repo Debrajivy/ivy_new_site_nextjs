@@ -387,8 +387,33 @@ function PromptLibraryModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
 /* ════════════════════════════════════════════════════════════════════
    MAIN COMPONENT
    ════════════════════════════════════════════════════════════════════ */
-const Notifications = () => {
+type PromptPackButtonProps = {
+  className?: string;
+  label?: string;
+};
+
+export function PromptPackButton({
+  className = "inline-flex items-center gap-1.5 text-[#013a81] text-[12px] font-semibold px-4 py-1.5 rounded-full border border-[#f7af34] bg-[#f7af34] hover:bg-[#ffc85c] transition whitespace-nowrap",
+  label = "Get the Prompt Pack",
+}: PromptPackButtonProps) {
   const [modalOpen, setModalOpen] = useState(false);
+
+  return (
+    <>
+      <button type="button" onClick={() => setModalOpen(true)} className={className}>
+        {label}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </button>
+      <PromptLibraryModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+    </>
+  );
+}
+
+const Notifications = () => {
 
   const duplicatedAnnouncements = useMemo(() => {
     return [...ANNOUNCEMENTS, ...ANNOUNCEMENTS, ...ANNOUNCEMENTS, ...ANNOUNCEMENTS];
@@ -428,23 +453,11 @@ const Notifications = () => {
 
           {/* CTA only — no cross icon */}
           <div className="flex items-center pr-4 pl-2 flex-shrink-0 bg-[#013a81] relative z-10">
-            <button
-              onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-1.5 text-white text-[12px] font-semibold px-4 py-1.5 rounded-full border border-white/50 bg-white/15 hover:bg-white/30 transition whitespace-nowrap"
-            >
-              Get the Prompt Pack
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
+            <PromptPackButton />
           </div>
         </div>
       </div>
 
-      {/* Popup */}
-      <PromptLibraryModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </>
   );
 };

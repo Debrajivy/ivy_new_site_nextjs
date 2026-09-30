@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -103,9 +101,10 @@
   overflow: visible !important;
 }
 
-/* Course content must remain visible to non-JS renderers and search crawlers. */
+/* Keep below-the-fold content in the DOM while skipping its initial paint/layout work. */
 .course-deferred-section {
-  content-visibility: visible;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 @layer base {
   * {
