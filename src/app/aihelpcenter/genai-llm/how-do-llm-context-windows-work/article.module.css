@@ -91,10 +91,44 @@
   font-size: 12px;
 }
 
-.meta span {
+.meta > span {
   padding: 4px 12px;
   border-radius: 999px;
   background: var(--grey);
+}
+
+.authorMeta {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.authorMeta a {
+  color: var(--deep);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.authorMeta a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.authorAvatars {
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.authorAvatars img {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.authorAvatars img + img {
+  margin-left: -8px;
 }
 
 .heroCard {
@@ -141,6 +175,12 @@
   border-radius: 10px;
   background: #ffffff;
   font-size: 16.5px;
+}
+
+.answer a {
+  color: var(--deep);
+  font-weight: 700;
+  text-underline-offset: 3px;
 }
 
 .card {
@@ -400,6 +440,92 @@
 
 .author strong {
   display: block;
+}
+
+.authorCard {
+  display: grid;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #e3eaf1;
+  border-radius: 12px;
+  background: #f8fbfd;
+  grid-template-columns: 52px minmax(0, 1fr) 30px;
+  align-items: center;
+  gap: 10px;
+}
+
+.authorCard > img {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #cdeaf5;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.authorCard p {
+  margin: 2px 0 0;
+  color: #687583;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.authorName {
+  color: var(--ink) !important;
+  font-size: 13px !important;
+  font-weight: 800;
+  line-height: 1.3 !important;
+}
+
+.authorName:hover {
+  color: var(--deep) !important;
+}
+
+.linkedin {
+  display: flex !important;
+  width: 30px;
+  height: 30px;
+  padding: 6px !important;
+  border: 0 !important;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  background: #e8f3ff;
+  color: #0a66c2 !important;
+}
+
+.linkedin:hover {
+  background: #d7ebff;
+}
+
+.linkedin svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.companyLinkedin {
+  display: flex !important;
+  margin-top: 12px;
+  padding: 9px 10px !important;
+  border: 0 !important;
+  border-radius: 9px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: #0a66c2;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 700;
+}
+
+.companyLinkedin:hover {
+  background: #084f96;
+}
+
+.companyLinkedin svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
 }
 
 @media (max-width: 900px) {

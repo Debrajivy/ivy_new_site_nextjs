@@ -1,4 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
+import PrateekAgrawal from "@/assests/pratilk.webp";
+import EeshaniAgrawal from "@/assests/eeshani.webp";
 import styles from "./article.module.css";
 
 const canonicalUrl =
@@ -65,13 +68,14 @@ const structuredData = {
       datePublished: "2026-09-09",
       dateModified: "2026-10-04",
       author: [
-        { "@type": "Person", name: "Prateek Agrawal" },
-        { "@type": "Person", name: "Eeshani Agrawal" },
+        { "@type": "Person", name: "Prateek Agrawal", sameAs: "https://www.linkedin.com/in/prateekagrawal" },
+        { "@type": "Person", name: "Eeshani Agrawal", sameAs: "https://www.linkedin.com/in/eeshani-agrawal-b674045" },
       ],
       publisher: {
         "@type": "EducationalOrganization",
         name: "Ivy Professional School",
         url: "https://ivyproschool.com",
+        sameAs: "https://www.linkedin.com/school/ivy-professional-school",
       },
       articleSection: "GenAI / LLM",
       keywords: [
@@ -104,6 +108,12 @@ const structuredData = {
     },
   ],
 };
+
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M6.5 8.3H3.2V19h3.3V8.3ZM4.8 3A1.9 1.9 0 1 0 4.8 6.8 1.9 1.9 0 0 0 4.8 3ZM19 12.9c0-3.2-1.7-4.9-4-4.9-1.8 0-2.7 1-3.1 1.7V8.3H8.6V19h3.3v-5.3c0-1.4.3-2.8 2-2.8 1.7 0 1.7 1.6 1.7 2.9V19H19v-6.1Z" />
+  </svg>
+);
 
 function DataTable({
   headers,
@@ -207,7 +217,16 @@ export default function ContextWindowsArticlePage() {
             <h1>How Do LLM Context Windows Work? Tokens, Limits and Why AI Forgets</h1>
             <p className={styles.subtitle}>What fills a model&apos;s working space, what happens when it overflows, and when a bigger window is the wrong fix.</p>
             <div className={styles.meta}>
-              <span>By Prateek Agrawal &amp; Eeshani Agrawal</span>
+              <span className={styles.authorMeta}>
+                <span className={styles.authorAvatars} aria-hidden="true">
+                  <Image src={PrateekAgrawal} alt="" width={28} height={28} />
+                  <Image src={EeshaniAgrawal} alt="" width={28} height={28} />
+                </span>
+                By&nbsp;
+                <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer">Prateek Agrawal</a>
+                &nbsp;&amp;&nbsp;
+                <a href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer">Eeshani Agrawal</a>
+              </span>
               <span>12 min read</span>
               <span>Published 9 Sep 2026</span>
               <span>Last reviewed 4 Oct 2026</span>
@@ -224,13 +243,14 @@ export default function ContextWindowsArticlePage() {
 
       <div className={styles.layout}>
         <main className={styles.article}>
-          <p className={styles.answer}>An LLM context window is the maximum amount of text a large language model can work with in one request, measured in tokens. Your prompt, earlier messages, uploaded files, system instructions and the model&apos;s own answer all have to fit inside it. Anything outside the window does not exist for the model while it writes that answer.</p>
+          <p className={styles.answer}>An <Link href="/aihelpcenter/genai-llm/how-do-llm-context-windows-work">LLM</Link> context window is the maximum amount of text a <Link href="/aihelpcenter/genai-llm/how-are-llms-trained">large language model</Link> can work with in one request, measured in tokens. Your prompt, earlier messages, uploaded files, system instructions and the model&apos;s own answer all have to fit inside it. Anything outside the window does not exist for the model while it writes that answer.</p>
 
           <section className={styles.card} id="what-is-a-context-window-in-an-llm">
             <div className={styles.pill}>GenAI / LLM</div>
             <h2>What is a context window in an LLM?</h2>
             <p><strong>A context window is the model&apos;s active working space: everything it can read while producing one response.</strong> A large language model (LLM) is a model trained on huge amounts of text to predict the next piece of text; ChatGPT, Claude and Gemini are all built on LLMs.</p>
             <p>Picture two people discussing a project in front of a whiteboard. Whatever is written on the board shapes what each person says next. As the discussion runs on, the board fills up, and older notes have to be rubbed out or squeezed into a summary. A context window works the same way.</p>
+            <p>Understanding this limit becomes especially useful when working with long conversations, large documents, <Link href="/aihelpcenter/genai-llm/harness-engineering-in-ai">AI agents</Link>, coding assistants, research workflows and <Link href="/enterprise/ai-for-finance-team">enterprise AI</Link> applications.</p>
             <p>Context is what gives a request its meaning. Compare these two prompts:</p>
             <div className={styles.prompt}><div className={styles.eyebrow}>Example prompt · Prompt A</div>Suggest three marketing strategies.</div>
             <div className={styles.prompt}><div className={styles.eyebrow}>Example prompt · Prompt B</div>My company sells industrial pumps.<br />Our main customers are manufacturing companies.<br />We want to increase sales in eastern India.<br />Suggest three marketing strategies.</div>
@@ -255,6 +275,7 @@ export default function ContextWindowsArticlePage() {
             <div className={styles.pill}>GenAI / LLM</div>
             <h2>How does a context window work in practice?</h2>
             <p><strong>The context window is a shared token budget: everything the application sends, plus the answer the model writes, draws from the same pool.</strong> Many models also cap the answer separately, at a smaller number.</p>
+            <p>A <Link href="/aihelpcenter/genai-llm/how-llms-generate-insights">large language model</Link> generates its response from the information available inside that budget, which is why the content selected for the window directly affects the quality of the result.</p>
             <p>Here is a simplified budget for a model with a 10,000-token window:</p>
             <DataTable headers={["What the application sends", "Tokens"]} rows={[
               ["System instructions (rules the app gives the model)", "1,000"],
@@ -426,8 +447,23 @@ export default function ContextWindowsArticlePage() {
             </nav>
             <div className={`${styles.sideBox} ${styles.author}`}>
               <div className={styles.sideLabel}>WRITTEN BY</div>
-              <p><strong>Prateek Agrawal</strong>Founder, Ivy Professional School · 20+ yrs in AI/ML</p>
-              <p><strong>Eeshani Agrawal</strong>Co-founder, Ivy Professional School · 20+ yrs in Data/AI</p>
+              <div className={styles.authorCard}>
+                <Image src={PrateekAgrawal} alt="Prateek Agrawal" width={52} height={52} />
+                <div>
+                  <a className={styles.authorName} href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer">Prateek Agrawal</a>
+                  <p>Founder · 20+ yrs in AI/ML</p>
+                </div>
+                <a className={styles.linkedin} href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" aria-label="Prateek Agrawal on LinkedIn"><LinkedInIcon /></a>
+              </div>
+              <div className={styles.authorCard}>
+                <Image src={EeshaniAgrawal} alt="Eeshani Agrawal" width={52} height={52} />
+                <div>
+                  <a className={styles.authorName} href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer">Eeshani Agrawal</a>
+                  <p>Co-founder · 20+ yrs in Data/AI</p>
+                </div>
+                <a className={styles.linkedin} href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer" aria-label="Eeshani Agrawal on LinkedIn"><LinkedInIcon /></a>
+              </div>
+              <a className={styles.companyLinkedin} href="https://www.linkedin.com/school/ivy-professional-school" target="_blank" rel="noopener noreferrer"><LinkedInIcon /> Follow Ivy Professional School</a>
             </div>
           </div>
         </aside>
