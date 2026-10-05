@@ -571,7 +571,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
           <div className="flex items-center gap-2">
             <Image src={ivy} alt="Ivy Pro School" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border-2 border-blue-200" />
             <span className="text-xs font-semibold text-gray-900">Ivy Pro School</span>
-            <span className="text-xs text-gray-500">· 17+ yrs · IIT Certified · NASSCOM Accredited</span>
+            <span className="text-xs text-gray-500">· 18+ yrs · IIT Certified · NASSCOM Accredited</span>
           </div>
         </div>
       </div>
@@ -1298,7 +1298,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                 <div className="flex-1">
                   <div className="font-bold text-gray-900 text-base mb-0.5">Ivy Pro School Editorial Team</div>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Ivy Pro School is India&apos;s #1 Data Science &amp; GenAI Training Institute with 17+ years of experience, IIT-certified curriculum, and a track record of placing 37,500+ students at top companies. Instructors have trained professionals at{" "}
+                    Ivy Pro School is India&apos;s #1 Data Science &amp; GenAI Training Institute with 18+ years of experience, IIT-certified curriculum, and a track record of placing 37,500+ students at top companies. Instructors have trained professionals at{" "}
                     <a href="https://ivyproschool.com/alumni" className="font-semibold hover:underline" style={{ color: ACCENT }}>PwC, HSBC, Accenture, Genpact</a>, and more.{" "}
                     <Link href="/about" className="font-semibold hover:underline" style={{ color: ACCENT }}>
                       Learn more →

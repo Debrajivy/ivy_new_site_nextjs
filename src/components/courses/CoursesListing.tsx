@@ -458,7 +458,7 @@ const faqs = [
   },
   {
     q: "What makes Ivy Pro School different from other data science institutes?",
-    a: "Ivy Pro School offers IIT & IIM faculty (not just industry trainers), 1:1 doubt resolution with dedicated TAs, 30-minute practice sessions every day, PrepAI career copilot, lifetime recording access, and the only Pay-After-Placement program in India. With 17+ years of experience and 37,500+ alumni placed, Ivy is India's most trusted Data & AI training institute.",
+    a: "Ivy Pro School offers IIT & IIM faculty (not just industry trainers), 1:1 doubt resolution with dedicated TAs, 30-minute practice sessions every day, PrepAI career copilot, lifetime recording access, and the only Pay-After-Placement program in India. With 18+ years of experience and 37,500+ alumni placed, Ivy is India's most trusted Data & AI training institute.",
   },
 ];
 

@@ -1010,7 +1010,7 @@ const Enterprise = () => {
               {[
                 { value: '500+', label: 'Companies Trained', icon: Building },
                 { value: '6', label: 'Industry Verticals', icon: Globe2 },
-                { value: '17+', label: 'Years of Excellence', sub: '(est. 2007)', icon: MapPin },
+                { value: '18+', label: 'Years of Excellence', sub: '(est. 2007)', icon: MapPin },
               ].map((stat, i) => {
                 const Icon = stat.icon;
                 return (

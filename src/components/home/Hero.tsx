@@ -154,7 +154,7 @@ const Hero = () => {
               <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-sm">
                 <Award className="text-primary" size={18} />
                 <div>
-                  <div className="font-bold text-md">17+</div>
+                  <div className="font-bold text-md">18+</div>
                   <div className="text-xs text-gray-500">Years Experience</div>
                 </div>
               </div>

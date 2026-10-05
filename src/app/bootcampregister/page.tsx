@@ -371,7 +371,7 @@ const BootcampRegister = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { value: "17+", label: "Years of Excellence" },
+                { value: "18+", label: "Years of Excellence" },
                 { value: "33,500+", label: "Alumni Network" },
                 { value: "400+", label: "Expert Educators" },
                 { value: "280+", label: "Partner Companies" },
