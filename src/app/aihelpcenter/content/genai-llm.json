@@ -11,15 +11,15 @@
       "topics": [
         {
           "id": "how-do-llm-context-windows-work",
-          "metaTitle": "How Do LLM Context Windows Work? A Simple Guide to Context, Tokens, and Memory",
-          "title": "How Do LLM Context Windows Work? A Simple Guide to Context, Tokens, and Memory",
-          "description": "Understand LLM context windows, tokens, context limits, conversational history, retrieval, and the difference between active context and stored memory.",
+          "metaTitle": "How Do LLM Context Windows Work? Tokens & Limits",
+          "title": "How Do LLM Context Windows Work? Tokens, Limits and Why AI Forgets",
+          "description": "An LLM context window is the token limit a model can read and write in one request. Learn why AI forgets and when a bigger window will not help.",
           "duration": "12 min read",
           "date": "September 9, 2026",
           "content": {
             "hero": {
-              "title": "How Do LLM Context Windows Work? A Simple Guide to Context, Tokens, and Memory",
-              "author": "Ivy Professional School",
+              "title": "How Do LLM Context Windows Work? Tokens, Limits and Why AI Forgets",
+              "author": "Prateek Agrawal and Eeshani Agrawal",
               "date": "September 9, 2026",
               "readTime": "12 minutes"
             },
