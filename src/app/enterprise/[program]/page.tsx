@@ -6,7 +6,6 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const programs: Record<string, { title: string; audience: string }> = {
   "ai-for-finance-team": { title: "AI for Finance Team", audience: "finance leaders and teams" },
-  "ai-for-hr-team": { title: "AI for HR Team", audience: "HR leaders and people teams" },
   "ai-for-sales": { title: "AI for Sales", audience: "sales leaders and revenue teams" },
   // "ai-for-marketing": { title: "AI for Marketing", audience: "marketing leaders and growth teams" },
 };
