@@ -19,7 +19,7 @@
           "content": {
             "hero": {
               "title": "How to Calculate YoY Growth in Power BI: A Guide for Calendar & Financial Years",
-              "author": "Power BI Expert",
+              "author": "Prateek Agrawal",
               "date": "March 6, 2026",
               "readTime": "12 min read"
             },
@@ -575,6 +575,37 @@
                     "content": "In Power BI Desktop, go to your Date Table → click the FY Quarter column → Modeling tab → Sort By Column → select FY Month Number. This ensures Q1 (April) always appears before Q4 (January) in every visual and slicer on your dashboard."
                   }
                 ]
+              },
+              {
+                "id": "when-not-to-use-yoy",
+                "title": "When should you not use YoY growth?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Do not make YoY your only performance measure when the business is new, the prior-year baseline is missing or abnormal, the product has changed materially, or recent month-over-month movement matters more. In those cases, show the underlying values and add a shorter-period comparison or target-based measure."
+                  },
+                  {
+                    "type": "note",
+                    "title": "Honest limitation",
+                    "content": "A mathematically correct YoY percentage can still mislead when the previous-year value is unusually small, negative, incomplete, or affected by a one-off event. Always display the current and prior values beside the percentage."
+                  }
+                ]
+              },
+              {
+                "id": "sources-related-yoy",
+                "title": "Sources and related reading",
+                "content": [
+                  {
+                    "type": "list",
+                    "items": [
+                      "<a href=\"https://learn.microsoft.com/en-us/dax/sameperiodlastyear-function-dax\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Learn: SAMEPERIODLASTYEAR</a>",
+                      "<a href=\"https://learn.microsoft.com/en-us/dax/dateadd-function-dax\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Learn: DATEADD</a>",
+                      "<a href=\"https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-date-tables\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft Learn: Date tables in Power BI Desktop</a>",
+                      "<a href=\"/aihelpcenter/visualization/dual-axis-charts\">How to create dual-axis charts in Tableau</a>",
+                      "<a href=\"/aihelpcenter/python-basics/polars-library\">Polars DataFrame library guide</a>"
+                    ]
+                  }
+                ]
               }
             ],
             "troubleshooting": {
@@ -652,7 +683,7 @@
           "content": {
             "hero": {
               "title": "How to Create Dual-Axis Charts in Tableau: Complete Guide",
-              "author": "Tableau Expert",
+              "author": "Prateek Agrawal",
               "date": "March 15, 2026",
               "readTime": "12 min read"
             },
@@ -667,7 +698,7 @@
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "If you work with business data long enough, a stakeholder will eventually ask: \"Can we see both numbers together on one chart?\" This exact question is why dual-axis charts in Tableau exist.",
+                    "text": "A dual-axis chart in Tableau layers two measures in one view so they share an X-axis while retaining separate Y-axes. Use it only when the measures are logically related and the combined view is clearer than two separate charts.",
                     "hasBar": true
                   },
                   {
@@ -1464,6 +1495,48 @@
                   {
                     "type": "paragraph",
                     "text": "Dual-axis charts are like sharp tools. Used correctly, they reveal hidden relationships, reduce cognitive load, and drive better decisions. Used poorly, they mislead stakeholders, manipulate perception, and destroy credibility. Master them responsibly."
+                  }
+                ]
+              },
+              {
+                "id": "faq",
+                "title": "Frequently asked questions",
+                "content": [
+                  {
+                    "type": "faq",
+                    "items": [
+                      {
+                        "question": "What is a dual-axis chart in Tableau?",
+                        "answer": "It is a layered chart in which two measures share the same X-axis but use separate Y-axes, allowing different mark types such as bars and a line in one view."
+                      },
+                      {
+                        "question": "Should you always synchronize the two axes?",
+                        "answer": "No. Synchronize axes only when the measures use comparable units and the shared scale is meaningful. Otherwise, clearly label both axes and test whether separate charts would be easier to interpret."
+                      },
+                      {
+                        "question": "When is a dual-axis chart misleading?",
+                        "answer": "It can mislead when unrelated measures are combined, axis ranges exaggerate correlation, units are unclear, or overlapping marks hide important values."
+                      },
+                      {
+                        "question": "What is a safer alternative to a dual-axis chart?",
+                        "answer": "Use two aligned charts with the same X-axis, a small-multiple layout, or an indexed comparison when readers may confuse the two scales."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sources-related",
+                "title": "Sources and related reading",
+                "content": [
+                  {
+                    "type": "list",
+                    "items": [
+                      "<a href=\"https://help.tableau.com/current/pro/desktop/en-us/multiple_measures.htm\" target=\"_blank\" rel=\"noopener noreferrer\">Tableau Help: Compare measures using dual axes</a>",
+                      "<a href=\"https://help.tableau.com/current/pro/desktop/en-us/viewparts_marks_marktypes.htm\" target=\"_blank\" rel=\"noopener noreferrer\">Tableau Help: Change the mark type</a>",
+                      "<a href=\"/aihelpcenter/visualization/yoy-growth-powerbi-dax\">How to calculate YoY growth in Power BI</a>",
+                      "<a href=\"/aihelpcenter/career/how-to-build-a-data-science-portfolio-without-experience\">How to build a data science portfolio without experience</a>"
+                    ]
                   }
                 ]
               }

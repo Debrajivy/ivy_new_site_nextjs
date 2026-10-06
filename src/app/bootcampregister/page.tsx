@@ -198,7 +198,7 @@ const BootcampRegister = () => {
                       Data Storyteller | Excel & Power BI Specialist
                     </p>
                     <p className="text-gray-600">
-                      Coached 9000+ professionals | Consulted 50+ Fortune 500
+                      Co-founder of Ivy Professional School | Data and AI consultant
                       Companies
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">

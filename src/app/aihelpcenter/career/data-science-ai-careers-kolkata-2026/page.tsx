@@ -11,7 +11,6 @@ import {
   BookOpen,
   Target,
   Star,
-  ChevronDown,
   ArrowUpRight,
   ShieldCheck,
   Briefcase,
@@ -366,12 +365,10 @@ const FAQS = [
 /* ─── sub-components ────────────────────────────────── */
 
 const FaqItem = ({ item, index }: { item: typeof FAQS[0]; index: number }) => {
-  const [open, setOpen] = useState(false);
   return (
     <div
-      className="rounded-2xl border bg-white shadow-sm overflow-hidden cursor-pointer hover:shadow-md transition-shadow"
-      style={{ borderColor: open ? ACCENT : "#e5e7eb" }}
-      onClick={() => setOpen(!open)}
+      className="rounded-2xl border bg-white shadow-sm overflow-hidden"
+      style={{ borderColor: `${ACCENT}55` }}
     >
       <div className="flex items-center gap-4 px-5 py-4">
         <div
@@ -381,16 +378,8 @@ const FaqItem = ({ item, index }: { item: typeof FAQS[0]; index: number }) => {
           {index + 1}
         </div>
         <h3 className="flex-1 text-sm sm:text-base font-bold text-gray-900">{item.q}</h3>
-        <ChevronDown
-          size={16}
-          className="text-gray-400 transition-transform duration-200 flex-shrink-0"
-          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
-        />
       </div>
-      <div
-        className="overflow-hidden transition-all duration-300 px-5"
-        style={{ maxHeight: open ? "400px" : "0px", paddingBottom: open ? "16px" : "0px" }}
-      >
+      <div className="px-5 pb-4">
         <p className="text-sm text-gray-600 leading-relaxed border-t pt-3" style={{ borderColor: `${ACCENT}30` }}>
           {item.a}
         </p>
@@ -604,9 +593,9 @@ export default function DataScienceAICareersKolkataPage() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <Image src={PrateekAgarwal} alt="Prateek Agarwal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border-2 border-blue-200" />
-            <span className="text-xs font-semibold text-gray-900">Prateek Agarwal</span>
-            <span className="text-xs text-gray-500">· 20+ yrs AI/ML Leader</span>
+            <Image src={PrateekAgarwal} alt="Prateek Agrawal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border-2 border-blue-200" />
+            <span className="text-xs font-semibold text-gray-900">Prateek Agrawal</span>
+            <span className="text-xs text-gray-500">· AI/ML Leader</span>
             <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" className="ml-1 text-blue-600 hover:text-blue-800">
               <LinkedInSVG className="h-3.5 w-3.5" />
             </a>

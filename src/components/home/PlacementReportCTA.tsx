@@ -64,8 +64,8 @@ const PlacementReportCTA = () => {
                       <div className="font-semibold">120+</div>
                     </div>
                     <div className="bg-gray-50 p-3 rounded-lg">
-                      <div className="text-sm text-gray-500 mb-1">Highest Package</div>
-                      <div className="font-semibold">₹42 LPA</div>
+                      <div className="text-sm text-gray-500 mb-1">Years of Ivy</div>
+                      <div className="font-semibold">18+</div>
                     </div>
                   </div>
 

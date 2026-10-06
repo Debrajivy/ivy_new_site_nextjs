@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ArticleStructuredData from "@/components/seo/ArticleStructuredData";
 import {
   ChevronRight,
   ArrowRight,
@@ -12,7 +13,6 @@ import {
   Zap,
   Target,
   Star,
-  ChevronDown,
   ArrowUpRight,
   ShieldCheck,
   Briefcase,
@@ -58,6 +58,27 @@ const ROADMAP_SECTIONS = [
   { id: "when-to-use", title: "When to Use Which" },
   { id: "pros-cons", title: "Advantages & Disadvantages" },
   { id: "conclusion", title: "Conclusion" },
+  { id: "faq", title: "Frequently Asked Questions" },
+  { id: "sources", title: "Sources & Related Reading" },
+];
+
+const ARTICLE_FAQS = [
+  {
+    question: "What is the main difference between a Decision Tree and a Random Forest?",
+    answer: "A Decision Tree makes one sequence of branching decisions. A Random Forest combines predictions from many trees trained on varied samples and feature subsets, which usually reduces overfitting at the cost of speed and interpretability.",
+  },
+  {
+    question: "Which model should a beginner try first?",
+    answer: "Start with a Decision Tree to understand the rules and establish a transparent baseline. Then compare a tuned Random Forest using cross-validation and the metric that matters for the problem.",
+  },
+  {
+    question: "When should you not use a Random Forest?",
+    answer: "Avoid it when decisions must be explained as a short rule set, prediction latency or model size is tightly constrained, or a simpler model performs just as well after validation.",
+  },
+  {
+    question: "Can a Random Forest still overfit?",
+    answer: "Yes. It is usually more resistant to overfitting than one deep tree, but leakage, weak validation, noisy labels, and poorly chosen hyperparameters can still produce misleading results.",
+  },
 ];
 
 /* ─── use cases tabs ─────────────────────────────── */
@@ -138,15 +159,13 @@ const USE_CASES = [
 
 /* ─── accordion ──────────────────────────────────── */
 const AccordionCard = ({ title, children, color, index }: { title: string; children: React.ReactNode; color: string; index: number }) => {
-  const [open, setOpen] = useState(false);
   return (
-    <div className="rounded-2xl border bg-white shadow-sm overflow-hidden cursor-pointer hover:shadow-md transition-shadow" style={{ borderColor: open ? color : "#e5e7eb" }} onClick={() => setOpen(!open)}>
+    <div className="rounded-2xl border bg-white shadow-sm overflow-hidden" style={{ borderColor: `${color}55` }}>
       <div className="flex items-center gap-4 px-5 py-4">
         <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-xs font-bold" style={{ backgroundColor: `${color}18`, color }}>{index + 1}</div>
         <h3 className="flex-1 text-sm sm:text-base font-bold text-gray-900">{title}</h3>
-        <ChevronDown size={16} className="text-gray-400 flex-shrink-0 transition-transform duration-200" style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }} />
       </div>
-      <div className="overflow-hidden transition-all duration-300 px-5" style={{ maxHeight: open ? "400px" : "0px", paddingBottom: open ? "16px" : "0px" }}>
+      <div className="px-5 pb-4">
         <div className="text-sm text-gray-600 leading-relaxed border-t pt-3" style={{ borderColor: `${color}30` }}>{children}</div>
       </div>
     </div>
@@ -215,6 +234,20 @@ export default function DecisionTreeVsRandomForestPage() {
 
   return (
     <div className="min-h-screen bg-[#f0fdf9]">
+      <ArticleStructuredData
+        title="Decision Tree vs Random Forest: Differences, Use Cases and When to Use Each"
+        description="Compare Decision Trees and Random Forests, including accuracy, interpretability, overfitting, use cases, and practical model-selection limits."
+        url="/aihelpcenter/machine-learning/decision-tree-vs-random-forest"
+        datePublished="2026-04-13"
+        authorName="Prateek Agrawal"
+        authorUrl="https://www.linkedin.com/in/prateekagrawal/"
+        breadcrumbs={[
+          { name: "AI Help Center", url: "/aihelpcenter" },
+          { name: "Machine Learning", url: "/aihelpcenter/machine-learning" },
+          { name: "Decision Tree vs Random Forest", url: "/aihelpcenter/machine-learning/decision-tree-vs-random-forest" },
+        ]}
+        faqs={ARTICLE_FAQS}
+      />
 
       {/* ── Scroll Progress ─────────────────────── */}
       <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-gray-200">
@@ -356,10 +389,10 @@ export default function DecisionTreeVsRandomForestPage() {
             <span className="text-xs font-bold text-purple-900 uppercase tracking-wide">Authored by Ivy Pro School Founders</span>
           </div>
           <div className="flex items-center gap-2">
-            <Image src={PrateekAgarwal} alt="Prateek Agarwal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border border-purple-200" />
+            <Image src={PrateekAgarwal} alt="Prateek Agrawal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border border-purple-200" />
             <div className="flex items-center gap-1">
-              <span className="text-xs font-semibold text-gray-900">Prateek Agarwal</span>
-              <span className="text-xs text-gray-500"> · 20+ yrs AI/ML Leader</span>
+              <span className="text-xs font-semibold text-gray-900">Prateek Agrawal</span>
+              <span className="text-xs text-gray-500"> · AI/ML Leader</span>
               <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" className="ml-1 text-purple-600 hover:text-purple-800">
                 <LinkedInSVG className="h-3.5 w-3.5" />
               </a>
@@ -401,11 +434,11 @@ export default function DecisionTreeVsRandomForestPage() {
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Introduction</h2>
                 <p className="text-base sm:text-lg border-l-4 border-[#7c3aed] pl-4 italic text-gray-700 mb-5">
-                  &ldquo;Understanding the difference between Decision Tree and Random Forest is critical for choosing the right model for your machine learning project.&rdquo;
+                  &ldquo;Use a Decision Tree when transparent rules matter most; use a Random Forest when predictive stability and accuracy matter more than a simple explanation.&rdquo;
                 </p>
                 <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
                   <p>
-                    Machine learning is rapidly becoming the backbone of data-driven decision-making across industries. Among the most widely used algorithms are <strong className="text-gray-800">Decision Trees</strong> and <strong className="text-gray-800">Random Forests</strong> — two powerful models that help businesses solve classification and regression problems efficiently.
+                    A <strong className="text-gray-800">Decision Tree</strong> is one interpretable set of branching rules. A <strong className="text-gray-800">Random Forest</strong> combines many varied trees and aggregates their predictions, which usually improves generalisation but makes the model slower and harder to explain.
                   </p>
                   <p>
                     While both algorithms are closely related, they differ significantly in terms of accuracy, interpretability, and real-world performance. In this guide, you will learn how these algorithms work, their key differences, performance comparisons, and when to use each one in practical scenarios.
@@ -431,7 +464,7 @@ export default function DecisionTreeVsRandomForestPage() {
               <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4" style={{ backgroundColor: "#e0f2fe", color: "#0369a1" }}>
                 <GitBranch size={12} /> Algorithm 1
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">1. What is a Decision Tree?</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">What is a Decision Tree?</h2>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-5">
                 A <strong className="text-gray-800">Decision Tree</strong> is a supervised machine learning algorithm used for both classification and regression tasks. It works like a flowchart — starting from a root decision and branching down to final predictions.
               </p>
@@ -486,7 +519,7 @@ export default function DecisionTreeVsRandomForestPage() {
               <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4" style={{ backgroundColor: "#ede9fe", color: "#7c3aed" }}>
                 <Layers size={12} /> Algorithm 2
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">2. What is a Random Forest?</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">What is a Random Forest?</h2>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-5">
                 A <strong className="text-gray-800">Random Forest</strong> is an ensemble learning algorithm that builds multiple decision trees and combines their outputs to improve accuracy. Instead of relying on a single model, it uses multiple trees, random subsets of data (bagging), and random feature selection.
               </p>
@@ -532,7 +565,7 @@ export default function DecisionTreeVsRandomForestPage() {
               <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4" style={{ backgroundColor: "#dbeafe", color: "#1d4ed8" }}>
                 <BarChart3 size={12} /> Comparison
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">3. Decision Tree vs Random Forest: Key Differences</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">How do Decision Trees and Random Forests differ?</h2>
               <p className="text-gray-500 text-sm sm:text-base mb-6">A side-by-side comparison across all critical dimensions.</p>
 
               <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
@@ -570,7 +603,7 @@ export default function DecisionTreeVsRandomForestPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white/70 mb-5">
                 <Zap size={12} className="text-[#009fda]" /> Core Concept
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">4. What is the Main Difference?</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">What is the main difference?</h2>
               <p className="text-white/70 text-sm sm:text-base mb-7 max-w-xl">
                 The main difference between Decision Tree and Random Forest lies in how predictions are made.
               </p>
@@ -608,7 +641,7 @@ export default function DecisionTreeVsRandomForestPage() {
               <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4" style={{ backgroundColor: "#ede9fe", color: "#7c3aed" }}>
                 <TrendingUp size={12} /> Improvement
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">5. How Random Forest Improves Decision Trees</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">How does a Random Forest improve on a Decision Tree?</h2>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
                 Random Forest solves the biggest problem of decision trees: <strong className="text-gray-800">overfitting</strong>. It improves performance using two core techniques.
               </p>
@@ -650,7 +683,7 @@ export default function DecisionTreeVsRandomForestPage() {
               <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4" style={{ backgroundColor: "#dbeafe", color: "#1d4ed8" }}>
                 <BarChart3 size={12} /> Performance
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">6. Performance Metrics Comparison</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">How should you compare model performance?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {/* Classification */}
                 <div className="rounded-xl bg-blue-50 border border-blue-100 p-5">
@@ -697,7 +730,7 @@ export default function DecisionTreeVsRandomForestPage() {
                 <div className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#7c3aed] mb-4">
                   <Target size={12} /> Use Cases
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">7. Real-World Use Cases</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Where are these models used?</h2>
                 <p className="text-gray-500 text-sm sm:text-base max-w-xl">Explore how each algorithm is used in real industry scenarios. Select a use case to see the full breakdown.</p>
               </div>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
@@ -731,7 +764,7 @@ export default function DecisionTreeVsRandomForestPage() {
               <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4" style={{ backgroundColor: "#e0e7ff", color: "#4338ca" }}>
                 <CheckSquare size={12} /> Decision Guide
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">8. When to Use Decision Tree vs Random Forest</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">When should you use a Decision Tree or Random Forest?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="rounded-2xl border-2 border-[#009fda]/30 bg-[#009fda]/05 p-5">
                   <div className="flex items-center gap-2 mb-4">
@@ -781,7 +814,7 @@ export default function DecisionTreeVsRandomForestPage() {
               <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4" style={{ backgroundColor: "#dbeafe", color: "#1d4ed8" }}>
                 <BarChart3 size={12} /> Advantages &amp; Disadvantages
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">9. Advantages and Disadvantages</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">What are the advantages and disadvantages?</h2>
               <div className="space-y-3">
                 <AccordionCard title="Decision Tree — Advantages" color="#009fda" index={0}>
                   <div className="space-y-2 mt-1">
@@ -867,7 +900,7 @@ export default function DecisionTreeVsRandomForestPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-widest mb-5">
                 <BookOpen size={12} /> Conclusion
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">10. Conclusion</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Which model should you choose?</h2>
               <div className="space-y-4 text-sm sm:text-base text-white/85 leading-relaxed mb-7">
                 <p>
                   Choosing between Decision Tree and Random Forest depends on your specific problem and priorities. If interpretability and simplicity are important, a Decision Tree is a great starting point.
@@ -903,6 +936,28 @@ export default function DecisionTreeVsRandomForestPage() {
                   IIT Data Science Course <ArrowUpRight size={14} />
                 </Link>
               </div>
+            </section>
+
+            <section id="faq" className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
+              <div className="space-y-6">
+                {ARTICLE_FAQS.map((faq) => (
+                  <div key={faq.question}>
+                    <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
+                    <p className="text-sm sm:text-base leading-relaxed text-gray-600">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section id="sources" className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">Sources and related reading</h2>
+              <ul className="space-y-3 text-sm sm:text-base text-gray-700">
+                <li><a className="text-[#013a81] underline" href="https://scikit-learn.org/stable/modules/tree.html" target="_blank" rel="noopener noreferrer">Scikit-learn: Decision Trees</a></li>
+                <li><a className="text-[#013a81] underline" href="https://scikit-learn.org/stable/modules/ensemble.html#forest" target="_blank" rel="noopener noreferrer">Scikit-learn: Forests of randomized trees</a></li>
+                <li><Link className="text-[#013a81] underline" href="/aihelpcenter/python-basics/polars-library">Polars DataFrame library guide</Link></li>
+                <li><Link className="text-[#013a81] underline" href="/aihelpcenter/career/how-to-build-a-data-science-portfolio-without-experience">How to build a data science portfolio without experience</Link></li>
+              </ul>
             </section>
 
             {/* ── Back links ─────────────────────── */}
@@ -967,18 +1022,18 @@ export default function DecisionTreeVsRandomForestPage() {
                     <div className="flex items-center gap-3">
                       <div className="relative">
                         <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-purple-200">
-                          <Image src={PrateekAgarwal} alt="Prateek Agarwal" className="w-full h-full object-cover" width={56} height={56} loading="lazy" />
+                          <Image src={PrateekAgarwal} alt="Prateek Agrawal" className="w-full h-full object-cover" width={56} height={56} loading="lazy" />
                         </div>
                         <div className="absolute -bottom-1 -right-1 bg-purple-600 rounded-full p-1">
                           <Star className="h-3 w-3 text-white" />
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agarwal</h4>
+                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agrawal</h4>
                         <p className="text-gray-600 text-xs truncate">Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                           <div className="h-1.5 w-1.5 rounded-full bg-[#7c3aed]" />
-                          <span className="text-xs text-gray-500">20+ years as an AI/ML Leader</span>
+                          <span className="text-xs text-gray-500">AI/ML Leader</span>
                         </div>
                       </div>
                       <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" className="flex-shrink-0 bg-purple-50 hover:bg-purple-100 p-2 rounded-lg transition-colors">
@@ -1004,7 +1059,7 @@ export default function DecisionTreeVsRandomForestPage() {
                         <p className="text-gray-600 text-xs truncate">Co-Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                           <div className="h-1.5 w-1.5 rounded-full bg-[#009fda]" />
-                          <span className="text-xs text-gray-500">20+ years as a Data/AI Consultant</span>
+                          <span className="text-xs text-gray-500">Data/AI Consultant</span>
                         </div>
                       </div>
                       <a href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer" className="flex-shrink-0 bg-blue-50 hover:bg-blue-100 p-2 rounded-lg transition-colors">
@@ -1012,14 +1067,14 @@ export default function DecisionTreeVsRandomForestPage() {
                       </a>
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100">
-                      <p className="text-gray-700 text-xs">Trained 9,000+ professionals across Top IITs, IIMs, and ISI</p>
+                      <p className="text-gray-700 text-xs">Co-founder of Ivy Pro School and an educator in analytics, data science, and AI.</p>
                     </div>
                   </div>
                 </div>
                 <div className="mt-4 pt-4 border-t border-purple-100">
                   <div className="flex items-center justify-between text-xs text-gray-600">
                     <div className="flex items-center gap-2"><Briefcase className="h-4 w-4 text-purple-500" /><span>Industry Experts</span></div>
-                    <div className="flex items-center gap-2"><GraduationCap className="h-4 w-4 text-purple-500" /><span>20+ Years Each</span></div>
+                    <div className="flex items-center gap-2"><GraduationCap className="h-4 w-4 text-purple-500" /><span>Ivy Pro School · 18+ Years</span></div>
                   </div>
                   <p className="text-xs text-center text-gray-500 mt-3 italic">All content reviewed by Ivy&apos;s expert faculty team</p>
                 </div>

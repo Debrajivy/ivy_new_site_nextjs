@@ -451,7 +451,7 @@ export default function ContextWindowsArticlePage() {
                 <Image src={PrateekAgrawal} alt="Prateek Agrawal" width={52} height={52} />
                 <div>
                   <a className={styles.authorName} href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer">Prateek Agrawal</a>
-                  <p>Founder · 20+ yrs in AI/ML</p>
+                  <p>Founder · AI/ML Leader</p>
                 </div>
                 <a className={styles.linkedin} href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" aria-label="Prateek Agrawal on LinkedIn"><LinkedInIcon /></a>
               </div>
@@ -459,7 +459,7 @@ export default function ContextWindowsArticlePage() {
                 <Image src={EeshaniAgrawal} alt="Eeshani Agrawal" width={52} height={52} />
                 <div>
                   <a className={styles.authorName} href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer">Eeshani Agrawal</a>
-                  <p>Co-founder · 20+ yrs in Data/AI</p>
+                  <p>Co-founder · Data/AI Consultant</p>
                 </div>
                 <a className={styles.linkedin} href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer" aria-label="Eeshani Agrawal on LinkedIn"><LinkedInIcon /></a>
               </div>

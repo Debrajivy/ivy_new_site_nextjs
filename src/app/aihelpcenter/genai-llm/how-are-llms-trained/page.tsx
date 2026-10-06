@@ -41,8 +41,8 @@ const LinkedInIcon = () => <svg viewBox="0 0 24 24" className="h-4 w-4" fill="cu
 
 function AuthorityBox() {
   const people = [
-    { name: "Prateek Agarwal", role: "Founder · 20+ years as an AI/ML Leader", image: PrateekAgarwal, href: "https://www.linkedin.com/in/prateekagrawal" },
-    { name: "Eeshani Agrawal", role: "Co-Founder · 20+ years as a Data/AI Consultant", image: eeshani, href: "https://www.linkedin.com/in/eeshani-agrawal-b674045" },
+    { name: "Prateek Agrawal", role: "Founder · AI/ML Leader", image: PrateekAgarwal, href: "https://www.linkedin.com/in/prateekagrawal" },
+    { name: "Eeshani Agrawal", role: "Co-Founder · Data/AI Consultant", image: eeshani, href: "https://www.linkedin.com/in/eeshani-agrawal-b674045" },
   ];
   return <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-50 p-5 shadow-lg">
     <h3 className="mb-1 flex items-center justify-center gap-2 font-bold text-gray-900"><ShieldCheck className="h-5 w-5 text-blue-600"/> Industry Authority</h3>
@@ -67,7 +67,7 @@ export default function HowAreLLMsTrainedPage() {
       <div className="relative mx-auto max-w-7xl"><div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200"><BrainCircuit size={16}/> LLM fundamentals</div>
         <h1 className="max-w-5xl text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">How Are LLMs Trained?</h1>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-blue-100 sm:text-xl">Understanding the large language model training process—from tokens and predictions to fine-tuning and alignment.</p>
-        <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-white/15 pt-6 text-sm text-blue-100"><div className="flex items-center gap-2"><Image src={PrateekAgarwal} alt="Prateek Agarwal" width={40} height={40} className="h-10 w-10 rounded-full border-2 border-cyan-300 object-cover"/><span>By <strong className="text-white">Prateek Agarwal</strong></span></div><span className="flex items-center gap-2 sm:border-l sm:border-white/20 sm:pl-4"><Calendar size={15}/> August 12, 2026</span><span className="flex items-center gap-2 sm:border-l sm:border-white/20 sm:pl-4"><Clock size={15}/> 16 min read</span></div>
+        <div className="mt-8 flex flex-wrap items-center gap-4 border-t border-white/15 pt-6 text-sm text-blue-100"><div className="flex items-center gap-2"><Image src={PrateekAgarwal} alt="Prateek Agrawal" width={40} height={40} className="h-10 w-10 rounded-full border-2 border-cyan-300 object-cover"/><span>By <strong className="text-white">Prateek Agrawal</strong></span></div><span className="flex items-center gap-2 sm:border-l sm:border-white/20 sm:pl-4"><Calendar size={15}/> August 12, 2026</span><span className="flex items-center gap-2 sm:border-l sm:border-white/20 sm:pl-4"><Clock size={15}/> 16 min read</span></div>
       </div>
     </header>
 

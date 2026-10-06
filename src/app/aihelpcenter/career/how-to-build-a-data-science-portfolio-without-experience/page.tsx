@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ArticleStructuredData from "@/components/seo/ArticleStructuredData";
 import {
   ChevronRight,
   ArrowRight,
@@ -13,7 +14,6 @@ import {
   Database,
   AlertCircle,
   Star,
-  ChevronDown,
   ArrowUpRight,
   ShieldCheck,
   Briefcase,
@@ -49,12 +49,12 @@ const ACCENT_DARK = "#013a81";
 const ACCENT_LIGHT = "#dbeafe";
 
 const PUBLISHED_BY = {
-  tagline: "Published by practitioners who've helped 37,500+ professionals build job-ready data science portfolios",
+  tagline: "Published by practitioners at Ivy Pro School, supporting a community of 37,500+ alumni",
   authors: [
     {
-      name: "Prateek Agarwal",
+      name: "Prateek Agrawal",
       role: "Founder, Ivy Pro School",
-      badge: "20+ yrs AI/ML Leader",
+      badge: "AI/ML Leader",
       img: "PrateekAgarwal" as const,
       linkedin: "https://www.linkedin.com/in/prateekagrawal",
       accentColor: "#009fda",
@@ -77,6 +77,28 @@ const ARTICLE_SECTIONS = [
   { id: "amplify",          title: "Portfolio Amplification" },
   { id: "checklist",        title: "Pre-Launch Checklist" },
   { id: "stack",            title: "Recommended Tech Stack" },
+  { id: "limits",           title: "When a Portfolio Is Not Enough" },
+  { id: "faq",              title: "Frequently Asked Questions" },
+  { id: "sources",          title: "Sources" },
+];
+
+const ARTICLE_FAQS = [
+  {
+    question: "Can you build a data science portfolio without work experience?",
+    answer: "Yes. Use self-directed projects with real, messy data and document the business question, decisions, validation, limitations, and result. The evidence of how you work matters more than inventing a client history.",
+  },
+  {
+    question: "How many projects should a beginner portfolio include?",
+    answer: "Three strong, distinct projects are usually enough: one data-cleaning pipeline, one analysis or dashboard, and one end-to-end model or application. Depth and clarity matter more than project count.",
+  },
+  {
+    question: "Should every portfolio project be deployed?",
+    answer: "No. Deploy the project when interaction adds value. A reproducible repository and a concise case study can be stronger than a fragile demo that does not improve the explanation.",
+  },
+  {
+    question: "What should you avoid in a data science portfolio?",
+    answer: "Avoid copied tutorials, unexplained notebooks, unverified metrics, confidential data, broken links, and projects that show a model without explaining the decision it supports or its limitations.",
+  },
 ];
 
 const ARCHETYPE_DATA = [
@@ -300,12 +322,10 @@ const ArchetypeTab = ({
 );
 
 const ErrorCard = ({ item }: { item: typeof ERRORS_DATA[0] }) => {
-  const [open, setOpen] = useState(false);
   return (
     <div
-      className="rounded-2xl border bg-white shadow-sm overflow-hidden cursor-pointer hover:shadow-md transition-shadow"
-      style={{ borderColor: open ? item.color : "#e5e7eb" }}
-      onClick={() => setOpen(!open)}
+      className="rounded-2xl border bg-white shadow-sm overflow-hidden"
+      style={{ borderColor: `${item.color}55` }}
     >
       <div className="flex items-center gap-4 px-5 py-4">
         <div
@@ -315,16 +335,8 @@ const ErrorCard = ({ item }: { item: typeof ERRORS_DATA[0] }) => {
           {item.code}
         </div>
         <h3 className="text-sm sm:text-base font-bold text-gray-900 flex-1">{item.title}</h3>
-        <ChevronDown
-          size={16}
-          className="text-gray-400 transition-transform duration-200 flex-shrink-0"
-          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
-        />
       </div>
-      <div
-        className="overflow-hidden transition-all duration-300 px-5"
-        style={{ maxHeight: open ? "220px" : "0px", paddingBottom: open ? "16px" : "0px" }}
-      >
+      <div className="px-5 pb-4">
         <p className="text-sm text-gray-600 leading-relaxed border-t pt-3" style={{ borderColor: `${item.color}30` }}>
           {item.body}
         </p>
@@ -388,6 +400,20 @@ export default function HowToBuildDataSciencePortfolioPage() {
 
   return (
     <div className="min-h-screen bg-[#f0f8ff]">
+      <ArticleStructuredData
+        title="How to Build a Data Science Portfolio Without Experience"
+        description="A practical guide to building a credible data science portfolio with real projects, business-focused case studies, honest limitations, and reproducible work."
+        url="/aihelpcenter/career/how-to-build-a-data-science-portfolio-without-experience"
+        datePublished="2026-03-01"
+        authorName="Prateek Agrawal"
+        authorUrl="https://www.linkedin.com/in/prateekagrawal/"
+        breadcrumbs={[
+          { name: "AI Help Center", url: "/aihelpcenter" },
+          { name: "Career", url: "/aihelpcenter/career" },
+          { name: "Build a Data Science Portfolio", url: "/aihelpcenter/career/how-to-build-a-data-science-portfolio-without-experience" },
+        ]}
+        faqs={ARTICLE_FAQS}
+      />
 
       {/* ── Scroll Progress Bar ─────────────────────── */}
       <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-gray-200">
@@ -605,7 +631,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                     <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-blue-200">
                       <Image
                         src={PrateekAgarwal}
-                        alt="Prateek Agarwal"
+                        alt="Prateek Agrawal"
                         className="w-full h-full object-cover"
                         width={40}
                         height={40}
@@ -1070,7 +1096,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                 The Four Critical Errors That Kill Portfolios
               </h2>
               <p className="text-gray-500 text-sm sm:text-base mb-6 max-w-2xl">
-                Even technically excellent projects get rejected by hiring managers because of avoidable presentation errors. Click each to expand.
+                Even technically excellent projects get rejected by hiring managers because of avoidable presentation errors.
               </p>
               <div className="space-y-3">
                 {ERRORS_DATA.map((item, i) => (
@@ -1099,10 +1125,10 @@ export default function HowToBuildDataSciencePortfolioPage() {
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
                   {[
-                    { value: "37,500+", label: "Students Trained" },
-                    { value: "82%", label: "Placement Rate" },
-                    { value: "59%", label: "Avg. Salary Hike" },
-                    { value: "₹42 LPA", label: "Highest Package" },
+                    { value: "37,500+", label: "Alumni" },
+                    { value: "67%", label: "Avg. Salary Hike" },
+                    { value: "18+", label: "Years of Ivy" },
+                    { value: "IIT", label: "Certified Curriculum" },
                   ].map((stat, i) => (
                     <div
                       key={i}
@@ -1272,6 +1298,39 @@ export default function HowToBuildDataSciencePortfolioPage() {
               </div>
             </section>
 
+            <section id="limits" className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">When is a portfolio not enough?</h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
+                A portfolio demonstrates how you think and build; it does not replace core statistics, SQL, communication, interview practice, or evidence that you can work with a team. It also cannot guarantee a job offer.
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Do not publish employer data, personal data, API keys, or work you cannot legally share. If a project uses synthetic or public data, label it clearly and explain what would need to change before production use.
+              </p>
+            </section>
+
+            <section id="faq" className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
+              <div className="space-y-6">
+                {ARTICLE_FAQS.map((faq) => (
+                  <div key={faq.question}>
+                    <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
+                    <p className="text-sm sm:text-base leading-relaxed text-gray-600">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section id="sources" className="rounded-2xl bg-white border border-gray-200 shadow-sm p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">Sources and related reading</h2>
+              <ul className="space-y-3 text-sm sm:text-base text-gray-700">
+                <li><a className="underline" style={{ color: ACCENT_DARK }} href="https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme" target="_blank" rel="noopener noreferrer">GitHub Docs: Managing your profile README</a></li>
+                <li><a className="underline" style={{ color: ACCENT_DARK }} href="https://docs.streamlit.io/deploy" target="_blank" rel="noopener noreferrer">Streamlit Docs: Deploy your app</a></li>
+                <li><Link className="underline" style={{ color: ACCENT_DARK }} href="/aihelpcenter/machine-learning/decision-tree-vs-random-forest">Decision Tree vs Random Forest</Link></li>
+                <li><Link className="underline" style={{ color: ACCENT_DARK }} href="/aihelpcenter/python-basics/polars-library">Polars DataFrame library guide</Link></li>
+                <li><Link className="underline" style={{ color: ACCENT_DARK }} href="/aihelpcenter/sql-db/duckdb-vs-sqlite">DuckDB vs SQLite</Link></li>
+              </ul>
+            </section>
+
             {/* ── Tags ─────────────────────────────────── */}
             <div className="flex flex-wrap gap-2">
               {["data science", "portfolio", "machine learning", "career guide", "github", "data science jobs 2026", "Ivy Pro School"].map((tag) => (
@@ -1298,7 +1357,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                 <div className="flex-1">
                   <div className="font-bold text-gray-900 text-base mb-0.5">Ivy Pro School Editorial Team</div>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Ivy Pro School is India&apos;s #1 Data Science &amp; GenAI Training Institute with 18+ years of experience, IIT-certified curriculum, and a track record of placing 37,500+ students at top companies. Instructors have trained professionals at{" "}
+                    Ivy Pro School is a Data Science &amp; GenAI training institute with 18+ years of experience, IIT-certified curriculum, a 37,500+ alumni community, and a reported 67% average salary hike. Alumni work at{" "}
                     <a href="https://ivyproschool.com/alumni" className="font-semibold hover:underline" style={{ color: ACCENT }}>PwC, HSBC, Accenture, Genpact</a>, and more.{" "}
                     <Link href="/about" className="font-semibold hover:underline" style={{ color: ACCENT }}>
                       Learn more →
@@ -1348,7 +1407,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
               >
                 <div className="text-white font-bold text-sm mb-2">Ready to Build Your Portfolio?</div>
                 <p className="text-blue-100 text-xs leading-relaxed mb-4">
-                  Join 37,500+ students who built job-ready data science portfolios with Ivy Pro School.
+                  Join Ivy Pro School&apos;s community of 37,500+ alumni and build job-ready data science projects.
                 </p>
                 <Link
                   href="/courses/data-science-and-ml-course"
@@ -1373,18 +1432,18 @@ export default function HowToBuildDataSciencePortfolioPage() {
                     <div className="flex items-center gap-3">
                       <div className="relative">
                         <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-blue-200">
-                          <Image src={PrateekAgarwal} alt="Prateek Agarwal" className="w-full h-full object-cover" width={56} height={56} loading="lazy" />
+                          <Image src={PrateekAgarwal} alt="Prateek Agrawal" className="w-full h-full object-cover" width={56} height={56} loading="lazy" />
                         </div>
                         <div className="absolute -bottom-1 -right-1 rounded-full p-1" style={{ backgroundColor: ACCENT }}>
                           <Star className="h-3 w-3 text-white" />
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agarwal</h4>
+                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agrawal</h4>
                         <p className="text-gray-600 text-xs truncate">Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                           <div className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: ACCENT }} />
-                          <span className="text-xs text-gray-500">20+ years as an AI/ML Leader</span>
+                          <span className="text-xs text-gray-500">AI/ML Leader</span>
                         </div>
                       </div>
                       <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" className="flex-shrink-0 bg-blue-50 hover:bg-blue-100 p-2 rounded-lg transition-colors">
@@ -1392,7 +1451,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                       </a>
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100">
-                      <p className="text-gray-700 text-xs">Worked with 50+ global firms, trained students from IIT KGP, IIM Kolkata, IIT Delhi</p>
+                      <p className="text-gray-700 text-xs">Co-founder of Ivy Pro School and an educator in data science, AI, and machine learning.</p>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
@@ -1410,7 +1469,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                         <p className="text-gray-600 text-xs truncate">Co-Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                           <div className="h-1.5 w-1.5 rounded-full bg-orange-400" />
-                          <span className="text-xs text-gray-500">20+ years Data/AI Consultant</span>
+                          <span className="text-xs text-gray-500">Data/AI Consultant</span>
                         </div>
                       </div>
                       <a href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer" className="flex-shrink-0 bg-orange-50 hover:bg-orange-100 p-2 rounded-lg transition-colors">
@@ -1418,7 +1477,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                       </a>
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100">
-                      <p className="text-gray-700 text-xs">Trained 9,000+ professionals across Top IITs, IIMs, and ISI</p>
+                      <p className="text-gray-700 text-xs">Co-founder of Ivy Pro School and an educator in analytics, data science, and AI.</p>
                     </div>
                   </div>
                 </div>
@@ -1430,7 +1489,7 @@ export default function HowToBuildDataSciencePortfolioPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <BookOpen className="h-4 w-4" style={{ color: ACCENT }} />
-                      <span>16+ Years Each</span>
+                      <span>Ivy Pro School · 18+ Years</span>
                     </div>
                   </div>
                   <p className="text-xs text-center text-gray-500 mt-3 italic">All content reviewed by Ivy&apos;s expert faculty team</p>

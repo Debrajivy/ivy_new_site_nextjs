@@ -324,7 +324,7 @@
           "content": {
             "hero": {
               "title": "Polars DataFrame Library: A Complete Guide for Data Scientists Who Work with Large Data",
-              "author": "Prateek Agarwal",
+              "author": "Prateek Agrawal",
               "date": "June 9, 2026",
               "readTime": "18 min read"
             },
@@ -336,11 +336,11 @@
                   {
                     "type": "paragraph",
                     "hasBar": true,
-                    "text": "Data scientists love Pandas because it is simple, familiar, and powerful. But the moment your dataset becomes too large, notebooks slow down, memory usage shoots up, and every transformation starts feeling heavier than it should."
+                    "text": "Polars is a high-performance DataFrame library for Python that is best suited to larger, transformation-heavy workloads where Pandas becomes slow or memory-intensive."
                   },
                   {
                     "type": "paragraph",
-                    "text": "This is where Polars enters the picture. Polars is a fast, modern, Rust-powered DataFrame library designed for people who want Pandas-like comfort with much better speed, memory efficiency, and scalability."
+                    "text": "It uses a Rust-based, columnar execution engine, supports parallel work, and can optimize a complete query before running it. This guide shows how it works, where it is a better fit than Pandas, and where switching is not worth the cost."
                   }
                 ]
               },
@@ -404,12 +404,24 @@
                   {
                     "id": "when-to-use",
                     "label": "When should you use Polars instead of Pandas?"
+                  },
+                  {
+                    "id": "when-not-to-use",
+                    "label": "When should you not use Polars?"
+                  },
+                  {
+                    "id": "faq",
+                    "label": "Frequently asked questions"
+                  },
+                  {
+                    "id": "sources-related",
+                    "label": "Sources and related reading"
                   }
                 ]
               },
               {
                 "id": "what-is-polars",
-                "title": "1. What is Polars?",
+                "title": "What is Polars?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -453,7 +465,7 @@
               },
               {
                 "id": "why-popular",
-                "title": "2. Why is Polars becoming popular?",
+                "title": "Why is Polars becoming popular?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -501,7 +513,7 @@
               },
               {
                 "id": "polars-vs-pandas",
-                "title": "3. Polars vs Pandas: Key differences",
+                "title": "How is Polars different from Pandas?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -567,7 +579,7 @@
               },
               {
                 "id": "install-polars",
-                "title": "4. How to install Polars",
+                "title": "How do you install Polars?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -584,7 +596,7 @@
               },
               {
                 "id": "creating-dataframe",
-                "title": "5. Creating a DataFrame in Polars",
+                "title": "How do you create a DataFrame in Polars?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -637,7 +649,7 @@
               },
               {
                 "id": "reading-files",
-                "title": "6. Reading CSV, JSON, and Parquet files",
+                "title": "How do you read CSV, JSON, and Parquet files?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -670,7 +682,7 @@
               },
               {
                 "id": "select-filter-transform",
-                "title": "7. Selecting, filtering, and transforming data",
+                "title": "How do you select, filter, and transform data?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -693,7 +705,7 @@
               },
               {
                 "id": "missing-values",
-                "title": "8. Handling missing values",
+                "title": "How do you handle missing values?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -736,7 +748,7 @@
               },
               {
                 "id": "grouping-aggregation",
-                "title": "9. Grouping and aggregation",
+                "title": "How do grouping and aggregation work?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -783,7 +795,7 @@
               },
               {
                 "id": "joining-dataframes",
-                "title": "10. Joining DataFrames",
+                "title": "How do you join DataFrames?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -830,7 +842,7 @@
               },
               {
                 "id": "dates-strings",
-                "title": "11. Working with dates and strings",
+                "title": "How do you work with dates and strings?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -847,7 +859,7 @@
               },
               {
                 "id": "lazy-evaluation",
-                "title": "12. Lazy evaluation in Polars",
+                "title": "How does lazy evaluation work in Polars?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -909,7 +921,7 @@
               },
               {
                 "id": "beginner-examples",
-                "title": "13. Polars code examples for beginners",
+                "title": "What Polars examples should beginners try?",
                 "content": [
                   {
                     "type": "subtitle",
@@ -937,7 +949,7 @@
               },
               {
                 "id": "when-to-use",
-                "title": "14. When should you use Polars instead of Pandas?",
+                "title": "When should you use Polars instead of Pandas?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -985,6 +997,64 @@
                     "type": "note",
                     "title": "Practical takeaway",
                     "content": "The best data professionals should know both Pandas and Polars. Pandas gives you breadth and ecosystem support; Polars gives you speed, memory efficiency, and modern pipeline design."
+                  }
+                ]
+              },
+              {
+                "id": "when-not-to-use",
+                "title": "When should you not use Polars?",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Do not switch to Polars only because it is newer. Pandas is often the better choice for small datasets, quick exploratory notebooks, teaching beginners, or projects whose downstream libraries expect Pandas objects. Polars also requires a different expression-based style, and some lazy operations cannot be planned when the output schema is unknown in advance."
+                  },
+                  {
+                    "type": "note",
+                    "title": "Honest limitation",
+                    "content": "Benchmark your real workload before migrating. Faster execution does not automatically repay the cost of rewriting stable code, retraining a team, or bridging ecosystem compatibility gaps."
+                  }
+                ]
+              },
+              {
+                "id": "faq",
+                "title": "Frequently asked questions",
+                "content": [
+                  {
+                    "type": "faq",
+                    "items": [
+                      {
+                        "question": "Is Polars a replacement for Pandas?",
+                        "answer": "Not for every project. Polars is compelling for performance-heavy transformations and lazy pipelines, while Pandas remains a practical default for smaller analyses and libraries built around the Pandas ecosystem."
+                      },
+                      {
+                        "question": "Should a beginner learn Pandas or Polars first?",
+                        "answer": "Learn Pandas first if you are new to Python data analysis, then add Polars when you understand DataFrame operations and need more speed or lower memory use."
+                      },
+                      {
+                        "question": "What is the difference between read_csv and scan_csv in Polars?",
+                        "answer": "read_csv loads data eagerly. scan_csv creates a lazy query so Polars can push filters and column selection into the file scan before the query runs."
+                      },
+                      {
+                        "question": "Can Polars process data larger than memory?",
+                        "answer": "Many lazy queries can run with Polars' streaming engine in batches, but not every operation supports streaming. Inspect and test the query plan for your workload."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sources-related",
+                "title": "Sources and related reading",
+                "content": [
+                  {
+                    "type": "list",
+                    "items": [
+                      "<a href=\"https://docs.pola.rs/user-guide/concepts/lazy-api/\" target=\"_blank\" rel=\"noopener noreferrer\">Polars User Guide: Lazy API</a>",
+                      "<a href=\"https://docs.pola.rs/user-guide/concepts/streaming/\" target=\"_blank\" rel=\"noopener noreferrer\">Polars User Guide: Streaming</a>",
+                      "<a href=\"https://docs.pola.rs/user-guide/migration/pandas/\" target=\"_blank\" rel=\"noopener noreferrer\">Polars User Guide: Coming from Pandas</a>",
+                      "<a href=\"/aihelpcenter/sql-db/duckdb-vs-sqlite\">DuckDB vs SQLite for local data workflows</a>",
+                      "<a href=\"/aihelpcenter/career/how-to-build-a-data-science-portfolio-without-experience\">How to build a data science portfolio without experience</a>"
+                    ]
                   }
                 ]
               }

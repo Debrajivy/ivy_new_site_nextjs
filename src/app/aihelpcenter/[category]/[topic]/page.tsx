@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, use } from 'react';
 import Link from 'next/link';
+import ArticleStructuredData from '@/components/seo/ArticleStructuredData';
 import {
     FileStack,
     GraduationCap,
@@ -568,27 +569,18 @@ const StepsBlock = ({ items }: { items: { title: string; description: string }[]
     </div>
 );
 
-// FAQ Accordion component
+// Keep answers visible in the document for readers, crawlers, and assistive tech.
 const FAQAccordion = ({ items }: { items: { question: string; answer: string }[] }) => {
-    const [openIdx, setOpenIdx] = React.useState<number | null>(null);
     return (
         <div className="my-6 space-y-3">
             {items.map((item, idx) => (
                 <div key={idx} className="rounded-xl border border-gray-200 bg-white overflow-hidden">
-                    <button
-                        className="w-full flex items-center justify-between px-4 sm:px-6 py-4 text-left font-semibold text-gray-900 text-sm sm:text-base hover:bg-gray-50 transition-colors"
-                        onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                    >
-                        <span>{item.question}</span>
-                        <span className="ml-4 flex-shrink-0 text-lg" style={{ color: '#009fda' }}>
-                            {openIdx === idx ? '−' : '+'}
-                        </span>
-                    </button>
-                    {openIdx === idx && (
-                        <div className="px-4 sm:px-6 pb-4 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
-                            {item.answer}
-                        </div>
-                    )}
+                    <h3 className="px-4 sm:px-6 pt-4 pb-3 font-semibold text-gray-900 text-sm sm:text-base">
+                        {item.question}
+                    </h3>
+                    <div className="px-4 sm:px-6 pb-4 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
+                        {item.answer}
+                    </div>
                 </div>
             ))}
         </div>
@@ -657,14 +649,14 @@ const AuthorityBox = () => (
         </div>
 
         <div className="space-y-4">
-            {/* Prateek Agarwal Card */}
+            {/* Prateek Agrawal Card */}
             <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3">
                     <div className="relative">
                         <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-blue-200">
                             <Image
                                 src={PrateekAgarwal}
-                                alt="Prateek Agarwal"
+                                alt="Prateek Agrawal"
                                 className="w-full h-full object-cover"
                                 width={56}
                                 height={56}
@@ -676,11 +668,11 @@ const AuthorityBox = () => (
                         </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agarwal</h4>
+                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agrawal</h4>
                         <p className="text-gray-600 text-xs truncate">Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                             <div className="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
-                            <span className="text-xs text-gray-500">20+ years experience as an AI/ML Leader</span>
+                            <span className="text-xs text-gray-500">AI/ML Leader</span>
                         </div>
                     </div>
                     <a
@@ -695,7 +687,7 @@ const AuthorityBox = () => (
                 </div>
                 <div className="mt-3 pt-3 border-t border-gray-100">
                     <p className="text-gray-700 text-xs">
-                        Worked with 50+ global firms, trained students from IIT KGP, IIM Kolkata, IIT Delhi
+                        Co-founder of Ivy Pro School and an educator in data science, AI, and machine learning.
                     </p>
                 </div>
             </div>
@@ -723,7 +715,7 @@ const AuthorityBox = () => (
                         <p className="text-gray-600 text-xs truncate">Co-Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                             <div className="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
-                            <span className="text-xs text-gray-500">20+ years Data/AI Consultant</span>
+                            <span className="text-xs text-gray-500">Data/AI Consultant</span>
                         </div>
                     </div>
                     <a
@@ -738,7 +730,7 @@ const AuthorityBox = () => (
                 </div>
                 <div className="mt-3 pt-3 border-t border-gray-100">
                     <p className="text-gray-700 text-xs">
-                        Trained 9,000+ professionals across Top IITs, IIMs, and ISI
+                        Co-founder of Ivy Pro School and an educator in analytics, data science, and AI.
                     </p>
                 </div>
             </div>
@@ -752,7 +744,7 @@ const AuthorityBox = () => (
                 </div>
                 <div className="flex items-center gap-2">
                     <GraduationCap className="h-4 w-4 text-blue-500" />
-                    <span>16+ Years Each</span>
+                    <span>Ivy Pro School · 18+ Years</span>
                 </div>
             </div>
             <p className="text-xs text-center text-gray-500 mt-3 italic">
@@ -849,6 +841,22 @@ const TopicPage = ({ params }: PageProps) => {
             </div>
         );
     }
+
+    const declaredAuthor = topicData.content?.hero?.author || 'Prateek Agrawal';
+    const isEeshaniAuthor = declaredAuthor.toLowerCase().includes('eeshani');
+    const articleAuthor = isEeshaniAuthor ? 'Eeshani Agrawal' : 'Prateek Agrawal';
+    const articleAuthorUrl = isEeshaniAuthor
+        ? 'https://www.linkedin.com/in/eeshani-agrawal-b674045/'
+        : 'https://www.linkedin.com/in/prateekagrawal/';
+    const articleFaqs = (topicData.content?.sections || []).flatMap((section: any) =>
+        (Array.isArray(section.content) ? section.content : [])
+            .filter((item: any) => item.type === 'faq')
+            .flatMap((item: any) => item.items || [])
+    );
+    const publishedDate = new Date(topicData.content?.hero?.date || topicData.date);
+    const schemaPublishedDate = Number.isNaN(publishedDate.getTime())
+        ? topicData.date
+        : publishedDate.toISOString().slice(0, 10);
 
     const scrollTo = (id: string) => {
         const element = document.getElementById(id);
@@ -1307,6 +1315,20 @@ const TopicPage = ({ params }: PageProps) => {
 
     return (
         <div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-700">
+            <ArticleStructuredData
+                title={topicData.content.hero.title}
+                description={topicData.description}
+                url={`/aihelpcenter/${categorySlug}/${topicSlug}`}
+                datePublished={schemaPublishedDate}
+                authorName={articleAuthor}
+                authorUrl={articleAuthorUrl}
+                breadcrumbs={[
+                    { name: 'AI Help Center', url: '/aihelpcenter' },
+                    { name: category.title, url: `/aihelpcenter/${categorySlug}` },
+                    { name: topicData.title, url: `/aihelpcenter/${categorySlug}/${topicSlug}` },
+                ]}
+                faqs={articleFaqs}
+            />
             <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-gray-200">
                 <div
                     className="h-full transition-all duration-300"
@@ -1384,12 +1406,10 @@ const TopicPage = ({ params }: PageProps) => {
                         <div className="flex items-center gap-2">
                             <div className="relative">
                                 <div className="h-8 sm:h-10 w-8 sm:w-10 rounded-full overflow-hidden border-2 border-blue-200">
-                                    {categorySlug === 'genai-llm' ||
-                                        categorySlug === 'ai-strategy-pm' ||
-                                        categorySlug === 'mlops' ? (
+                                    {!isEeshaniAuthor ? (
                                         <Image
                                             src={PrateekAgarwal}
-                                            alt="Prateek Agarwal"
+                                            alt="Prateek Agrawal"
                                             className="w-full h-full object-cover"
                                             width={40}
                                             height={40}
@@ -1413,19 +1433,10 @@ const TopicPage = ({ params }: PageProps) => {
                             <div>
                                 <div className="flex items-center gap-2">
                                     <span>By <span className="text-gray-900 font-semibold">
-                                        {categorySlug === 'genai-llm' ||
-                                            categorySlug === 'ai-strategy-pm' ||
-                                            categorySlug === 'mlops' ?
-                                            'Prateek Agarwal' : 'Eeshani Agrawal'}
+                                        {articleAuthor}
                                     </span></span>
                                     <a
-                                        href={
-                                            categorySlug === 'genai-llm' ||
-                                                categorySlug === 'ai-strategy-pm' ||
-                                                categorySlug === 'mlops'
-                                                ? "https://www.linkedin.com/in/prateekagrawal/"
-                                                : "https://www.linkedin.com/in/eeshani-agrawal-b674045/"
-                                        }
+                                        href={articleAuthorUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-blue-600 hover:text-blue-800 transition-colors"
@@ -1437,10 +1448,7 @@ const TopicPage = ({ params }: PageProps) => {
                                 <div className="flex items-center gap-1">
                                     <div className="h-1 w-1 rounded-full bg-emerald-500"></div>
                                     <span className="text-xs text-gray-500">
-                                        {categorySlug === 'genai-llm' ||
-                                            categorySlug === 'ai-strategy-pm' ||
-                                            categorySlug === 'mlops' ?
-                                            '20+ yrs · AI/ML Leader' : '20+ yrs · Data/AI Consultant'}
+                                        {isEeshaniAuthor ? 'Data/AI Consultant' : 'AI/ML Leader'}
                                     </span>
                                 </div>
                             </div>
@@ -1468,11 +1476,11 @@ const TopicPage = ({ params }: PageProps) => {
                     <div className="flex flex-wrap items-center gap-3 sm:gap-5">
                         <div className="flex items-center gap-2">
                             <div className="w-7 h-7 rounded-full overflow-hidden border border-blue-200 flex-shrink-0">
-                                <Image src={PrateekAgarwal} alt="Prateek Agarwal" width={28} height={28} className="w-full h-full object-cover" loading="lazy" />
+                                <Image src={PrateekAgarwal} alt="Prateek Agrawal" width={28} height={28} className="w-full h-full object-cover" loading="lazy" />
                             </div>
                             <div className="flex items-center gap-1">
-                                <span className="text-xs font-semibold text-gray-900">Prateek Agarwal</span>
-                                <span className="text-xs text-gray-500"> · 20+ yrs AI/ML Leader</span>
+                                <span className="text-xs font-semibold text-gray-900">Prateek Agrawal</span>
+                                <span className="text-xs text-gray-500"> · AI/ML Leader</span>
                                 <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" title="View LinkedIn Profile" className="ml-1 text-blue-600 hover:text-blue-800">
                                     <LinkedInSVG className="h-3.5 w-3.5" />
                                 </a>
@@ -1484,7 +1492,7 @@ const TopicPage = ({ params }: PageProps) => {
                             </div>
                             <div className="flex items-center gap-1">
                                 <span className="text-xs font-semibold text-gray-900">Eeshani Agrawal</span>
-                                <span className="text-xs text-gray-500"> · 20+ yrs Data/AI Consultant</span>
+                                <span className="text-xs text-gray-500"> · Data/AI Consultant</span>
                                 <a href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer" title="View LinkedIn Profile" className="ml-1 text-blue-600 hover:text-blue-800">
                                     <LinkedInSVG className="h-3.5 w-3.5" />
                                 </a>

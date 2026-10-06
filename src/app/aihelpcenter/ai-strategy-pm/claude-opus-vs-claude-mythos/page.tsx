@@ -12,7 +12,6 @@ import {
   Zap,
   Target,
   Star,
-  ChevronDown,
   ArrowUpRight,
   ShieldCheck,
   Briefcase,
@@ -342,15 +341,13 @@ const InsightCard = ({
   text: string;
   index: number;
 }) => {
-  const [open, setOpen] = useState(false);
   const colors = ["#009fda", "#013a81", "#0369a1", "#009fda", "#013a81"];
   const color = colors[index % colors.length];
   const parts = text.split(" — ");
   return (
     <div
-      className="rounded-2xl border bg-white shadow-sm overflow-hidden cursor-pointer hover:shadow-md transition-shadow"
-      style={{ borderColor: open ? color : "#e5e7eb" }}
-      onClick={() => setOpen(!open)}
+      className="rounded-2xl border bg-white shadow-sm overflow-hidden"
+      style={{ borderColor: `${color}55` }}
     >
       <div className="flex items-center gap-4 px-5 py-4">
         <div
@@ -370,20 +367,9 @@ const InsightCard = ({
             {parts[0]}
           </h3>
         </div>
-        <ChevronDown
-          size={16}
-          className="text-gray-400 transition-transform duration-200 flex-shrink-0"
-          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
-        />
       </div>
       {parts[1] && (
-        <div
-          className="overflow-hidden transition-all duration-300 px-5"
-          style={{
-            maxHeight: open ? "200px" : "0px",
-            paddingBottom: open ? "16px" : "0px",
-          }}
-        >
+        <div className="px-5 pb-4">
           <p
             className="text-sm text-gray-600 leading-relaxed border-t pt-3"
             style={{ borderColor: `${color}30` }}
@@ -634,14 +620,14 @@ export default function ClaudeOpusVsMythosPage() {
           <div className="flex items-center gap-2">
             <Image
               src={PrateekAgarwal}
-              alt="Prateek Agarwal"
+              alt="Prateek Agrawal"
               width={28}
               height={28}
               className="rounded-full object-cover flex-shrink-0 border border-blue-200"
             />
             <div className="flex items-center gap-1">
-              <span className="text-xs font-semibold text-gray-900">Prateek Agarwal</span>
-              <span className="text-xs text-gray-500"> · 20+ yrs AI/ML Leader</span>
+              <span className="text-xs font-semibold text-gray-900">Prateek Agrawal</span>
+              <span className="text-xs text-gray-500"> · AI/ML Leader</span>
               <a
                 href="https://www.linkedin.com/in/prateekagrawal"
                 target="_blank"
@@ -1407,7 +1393,7 @@ export default function ClaudeOpusVsMythosPage() {
                         <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-blue-200">
                           <Image
                             src={PrateekAgarwal}
-                            alt="Prateek Agarwal"
+                            alt="Prateek Agrawal"
                             className="w-full h-full object-cover"
                             width={56}
                             height={56}
@@ -1419,11 +1405,11 @@ export default function ClaudeOpusVsMythosPage() {
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agarwal</h4>
+                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agrawal</h4>
                         <p className="text-gray-600 text-xs truncate">Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                           <div className="h-1.5 w-1.5 rounded-full bg-[#009fda]" />
-                          <span className="text-xs text-gray-500">20+ years as an AI/ML Leader</span>
+                          <span className="text-xs text-gray-500">AI/ML Leader</span>
                         </div>
                       </div>
                       <a
@@ -1437,7 +1423,7 @@ export default function ClaudeOpusVsMythosPage() {
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100">
                       <p className="text-gray-700 text-xs">
-                        Worked with 50+ global firms, trained students from IIT KGP, IIM Kolkata, IIT Delhi
+                        Co-founder of Ivy Pro School and an educator in data science, AI, and machine learning.
                       </p>
                     </div>
                   </div>
@@ -1464,7 +1450,7 @@ export default function ClaudeOpusVsMythosPage() {
                         <p className="text-gray-600 text-xs truncate">Co-Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                           <div className="h-1.5 w-1.5 rounded-full bg-[#009fda]" />
-                          <span className="text-xs text-gray-500">20+ years as a Data/AI Consultant</span>
+                          <span className="text-xs text-gray-500">Data/AI Consultant</span>
                         </div>
                       </div>
                       <a
@@ -1478,7 +1464,7 @@ export default function ClaudeOpusVsMythosPage() {
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100">
                       <p className="text-gray-700 text-xs">
-                        Trained 9,000+ professionals across Top IITs, IIMs, and ISI
+                        Co-founder of Ivy Pro School and an educator in analytics, data science, and AI.
                       </p>
                     </div>
                   </div>

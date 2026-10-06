@@ -35,7 +35,7 @@
           "content": {
             "hero": {
               "title": "ETL vs ELT: What's the Difference and Which One Should You Use in 2026?",
-              "author": "Prateek Agarwal",
+              "author": "Prateek Agrawal",
               "date": "May 25, 2026",
               "readTime": "~12 minutes"
             },
@@ -382,7 +382,7 @@
           "content": {
             "hero": {
               "title": "Building Scalable Data Pipelines with Apache Airflow and Python: A Beginner-Friendly Guide to Modern ETL Workflows",
-              "author": "Prateek Agarwal",
+              "author": "Prateek Agrawal",
               "date": "May 25, 2026",
               "readTime": "~15 minutes"
             },

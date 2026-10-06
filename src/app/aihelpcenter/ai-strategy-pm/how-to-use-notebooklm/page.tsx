@@ -12,7 +12,6 @@ import {
   Zap,
   Target,
   Star,
-  ChevronDown,
   ArrowUpRight,
   ShieldCheck,
   Briefcase,
@@ -273,12 +272,10 @@ const COURSES = [
 
 /* ─── accordion ──────────────────────────────────── */
 const PracticeCard = ({ item, index }: { item: typeof BEST_PRACTICES[0]; index: number }) => {
-  const [open, setOpen] = useState(false);
   return (
     <div
-      className="rounded-2xl border bg-white shadow-sm overflow-hidden cursor-pointer hover:shadow-md transition-shadow"
-      style={{ borderColor: open ? item.color : "#e5e7eb" }}
-      onClick={() => setOpen(!open)}
+      className="rounded-2xl border bg-white shadow-sm overflow-hidden"
+      style={{ borderColor: `${item.color}55` }}
     >
       <div className="flex items-center gap-4 px-5 py-4">
         <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${item.color}18`, color: item.color }}>
@@ -288,9 +285,8 @@ const PracticeCard = ({ item, index }: { item: typeof BEST_PRACTICES[0]; index: 
           <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ backgroundColor: `${item.color}18`, color: item.color }}>#{index + 1}</span>
           <h3 className="text-sm sm:text-base font-bold text-gray-900">{item.title}</h3>
         </div>
-        <ChevronDown size={16} className="text-gray-400 transition-transform duration-200 flex-shrink-0" style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }} />
       </div>
-      <div className="overflow-hidden transition-all duration-300 px-5" style={{ maxHeight: open ? "200px" : "0px", paddingBottom: open ? "16px" : "0px" }}>
+      <div className="px-5 pb-4">
         <p className="text-sm text-gray-600 leading-relaxed border-t pt-3" style={{ borderColor: `${item.color}30` }}>{item.body}</p>
       </div>
     </div>
@@ -489,10 +485,10 @@ export default function NotebookLMPage() {
             <span className="text-xs font-bold text-blue-900 uppercase tracking-wide">Authored by Ivy Pro School Founders</span>
           </div>
           <div className="flex items-center gap-2">
-            <Image src={PrateekAgarwal} alt="Prateek Agarwal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border border-blue-200" />
+            <Image src={PrateekAgarwal} alt="Prateek Agrawal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border border-blue-200" />
             <div className="flex items-center gap-1">
-              <span className="text-xs font-semibold text-gray-900">Prateek Agarwal</span>
-              <span className="text-xs text-gray-500"> · 20+ yrs AI/ML Leader</span>
+              <span className="text-xs font-semibold text-gray-900">Prateek Agrawal</span>
+              <span className="text-xs text-gray-500"> · AI/ML Leader</span>
               <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" className="ml-1 text-blue-600 hover:text-blue-800">
                 <LinkedInSVG className="h-3.5 w-3.5" />
               </a>
@@ -895,18 +891,18 @@ export default function NotebookLMPage() {
                     <div className="flex items-center gap-3">
                       <div className="relative">
                         <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-blue-200">
-                          <Image src={PrateekAgarwal} alt="Prateek Agarwal" className="w-full h-full object-cover" width={56} height={56} loading="lazy" />
+                          <Image src={PrateekAgarwal} alt="Prateek Agrawal" className="w-full h-full object-cover" width={56} height={56} loading="lazy" />
                         </div>
                         <div className="absolute -bottom-1 -right-1 bg-blue-600 rounded-full p-1">
                           <Star className="h-3 w-3 text-white" />
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agarwal</h4>
+                        <h4 className="font-bold text-gray-900 text-sm truncate">Prateek Agrawal</h4>
                         <p className="text-gray-600 text-xs truncate">Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                           <div className="h-1.5 w-1.5 rounded-full bg-[#009fda]" />
-                          <span className="text-xs text-gray-500">20+ years as an AI/ML Leader</span>
+                          <span className="text-xs text-gray-500">AI/ML Leader</span>
                         </div>
                       </div>
                       <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" className="flex-shrink-0 bg-blue-50 hover:bg-blue-100 p-2 rounded-lg transition-colors">
@@ -914,7 +910,7 @@ export default function NotebookLMPage() {
                       </a>
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100">
-                      <p className="text-gray-700 text-xs">Worked with 50+ global firms, trained students from IIT KGP, IIM Kolkata, IIT Delhi</p>
+                      <p className="text-gray-700 text-xs">Co-founder of Ivy Pro School and an educator in data science, AI, and machine learning.</p>
                     </div>
                   </div>
                   {/* Eeshani */}
@@ -933,7 +929,7 @@ export default function NotebookLMPage() {
                         <p className="text-gray-600 text-xs truncate">Co-Founder, Ivy Pro School</p>
                         <div className="flex items-center gap-1 mt-1">
                           <div className="h-1.5 w-1.5 rounded-full bg-[#009fda]" />
-                          <span className="text-xs text-gray-500">20+ years as a Data/AI Consultant</span>
+                          <span className="text-xs text-gray-500">Data/AI Consultant</span>
                         </div>
                       </div>
                       <a href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer" className="flex-shrink-0 bg-blue-50 hover:bg-blue-100 p-2 rounded-lg transition-colors">
@@ -941,7 +937,7 @@ export default function NotebookLMPage() {
                       </a>
                     </div>
                     <div className="mt-3 pt-3 border-t border-gray-100">
-                      <p className="text-gray-700 text-xs">Trained 9,000+ professionals across Top IITs, IIMs, and ISI</p>
+                      <p className="text-gray-700 text-xs">Co-founder of Ivy Pro School and an educator in analytics, data science, and AI.</p>
                     </div>
                   </div>
                 </div>

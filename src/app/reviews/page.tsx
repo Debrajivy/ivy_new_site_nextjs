@@ -597,14 +597,14 @@ export default function ReviewsPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#f7af34]/10 to-[#009fda]/10 text-[#013a81] text-sm font-bold px-4 py-2 rounded-full mb-6 border border-[#f7af34]/30">
-                  <Award className="w-4 h-4 text-[#f7af34]" /> Trusted by 37,500+ Professionals
+                  <Award className="w-4 h-4 text-[#f7af34]" /> A Community of 37,500+ Alumni
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-4 leading-[1.2]">
                   Turn Potential into               <span className="bg-gradient-to-r from-[#009fda] to-[#013a81] bg-clip-text text-transparent"> Proven Careers    </span>
                 </h1>
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  Join <strong className="text-[#009fda]"> 37,500+ professionals </strong>  who have successfully transitioned into high-growth roles in
-                  <strong className="text-[#013a81]">  Data Science, Generative AI, and Analytics with Ivy Professional School.</strong>.  Explore real learner journeys through in-depth reviews, career transformation stories, and video testimonials.
+                  Explore stories from Ivy Professional School&apos;s <strong className="text-[#009fda]">37,500+ alumni community</strong>, including learner journeys, career transformations, and video testimonials in
+                  <strong className="text-[#013a81]"> Data Science, Generative AI, and Analytics.</strong>
                 </p>
                 <div className="flex flex-wrap gap-4 mb-8 items-center">
                   {/* Read Reviews Button */}

@@ -458,7 +458,7 @@ const faqs = [
   },
   {
     q: "What makes Ivy Pro School different from other data science institutes?",
-    a: "Ivy Pro School offers IIT & IIM faculty (not just industry trainers), 1:1 doubt resolution with dedicated TAs, 30-minute practice sessions every day, PrepAI career copilot, lifetime recording access, and the only Pay-After-Placement program in India. With 18+ years of experience and 37,500+ alumni placed, Ivy is India's most trusted Data & AI training institute.",
+    a: "Ivy Pro School offers IIT & IIM faculty, 1:1 doubt resolution with dedicated TAs, daily practice sessions, PrepAI career copilot, lifetime recording access, and a Pay-After-Placement program for eligible learners. Ivy has 18+ years of experience and a 37,500+ alumni community.",
   },
 ];
 
@@ -614,7 +614,7 @@ export default function CoursesListing() {
               {
                 icon: <Briefcase size={28} />,
                 title: '100% Placement',
-                stat: '37,500+ Placed',
+                stat: '37,500+ Alumni',
                 desc: 'PrepAI career copilot: AI resume builder, mock interviews, recruiter network & dedicated placement managers',
                 color: '#f7af34',
               },
@@ -673,7 +673,7 @@ export default function CoursesListing() {
           {/* aggregate stats under alumni */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { value: '37,500+', label: 'Alumni Placed' },
+              { value: '37,500+', label: 'Alumni' },
               { value: '₹8–35 LPA', label: 'Placement Range' },
               { value: '67%', label: 'Avg. Salary Hike' },
               { value: '4.8 / 5', label: 'Alumni Rating' },
@@ -766,7 +766,7 @@ export default function CoursesListing() {
             Start Your Data &amp; AI Career Today
           </h2>
           <p className="text-blue-200 mb-8 text-base max-w-xl mx-auto">
-            Join 37,500+ professionals who transformed their careers with Ivy Pro School's certified programs
+            Join Ivy Pro School&apos;s community of 37,500+ alumni
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link

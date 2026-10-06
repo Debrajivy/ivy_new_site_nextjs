@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -24,7 +24,6 @@ import {
   BarChart3,
   Code2,
   Workflow,
-  ChevronDown,
   GraduationCap,
 } from "lucide-react";
 
@@ -156,11 +155,9 @@ const SectionLabel = ({ children, color = "#6366f1" }: { children: React.ReactNo
 );
 
 const ToolCard = ({ tool, index }: { tool: typeof AI_TOOLS[0]; index: number }) => {
-  const [expanded, setExpanded] = useState(false);
   return (
     <div
-      className="relative rounded-2xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer bg-white"
-      onClick={() => setExpanded(!expanded)}
+      className="relative rounded-2xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 group bg-white"
     >
       {/* gradient top strip */}
       <div className={`h-1.5 w-full bg-gradient-to-r ${tool.gradient}`} />
@@ -185,11 +182,6 @@ const ToolCard = ({ tool, index }: { tool: typeof AI_TOOLS[0]; index: number }) 
               <p className="text-xs text-gray-400 font-medium">{tool.company}</p>
             </div>
           </div>
-          <ChevronDown
-            size={18}
-            className="text-gray-400 transition-transform duration-300 flex-shrink-0 mt-1"
-            style={{ transform: expanded ? "rotate(180deg)" : "rotate(0deg)" }}
-          />
         </div>
 
         {/* best for */}
@@ -206,19 +198,12 @@ const ToolCard = ({ tool, index }: { tool: typeof AI_TOOLS[0]; index: number }) 
           ))}
         </div>
 
-        {/* expandable description */}
-        <div
-          className="overflow-hidden transition-all duration-300"
-          style={{ maxHeight: expanded ? "300px" : "0px", opacity: expanded ? 1 : 0 }}
-        >
+        <div>
           <p className="text-sm text-gray-600 leading-relaxed pt-2 border-t border-gray-100">
             {tool.description}
           </p>
         </div>
 
-        <p className="text-xs mt-2" style={{ color: tool.accent }}>
-          {expanded ? "Click to collapse ↑" : "Click to read more ↓"}
-        </p>
       </div>
     </div>
   );
@@ -322,10 +307,10 @@ export default function BestAITools2026Page() {
           </div>
           <div className="flex flex-wrap items-center gap-3 sm:gap-5">
             <div className="flex items-center gap-2">
-              <Image src={PrateekAgarwal} alt="Prateek Agarwal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border border-blue-200" />
+              <Image src={PrateekAgarwal} alt="Prateek Agrawal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border border-blue-200" />
               <div className="flex items-center gap-1">
-                <span className="text-xs font-semibold text-gray-900">Prateek Agarwal</span>
-                <span className="text-xs text-gray-500"> · 20+ yrs AI/ML Leader</span>
+                <span className="text-xs font-semibold text-gray-900">Prateek Agrawal</span>
+                <span className="text-xs text-gray-500"> · AI/ML Leader</span>
                 <a href="https://www.linkedin.com/in/prateekagrawal" target="_blank" rel="noopener noreferrer" title="View LinkedIn Profile" className="ml-1 text-blue-600 hover:text-blue-800">
                   <LinkedInSVG className="h-3.5 w-3.5" />
                 </a>
@@ -335,7 +320,7 @@ export default function BestAITools2026Page() {
               <Image src={eeshani} alt="Eeshani Agrawal" width={28} height={28} className="rounded-full object-cover flex-shrink-0 border border-orange-200" />
               <div className="flex items-center gap-1">
                 <span className="text-xs font-semibold text-gray-900">Eeshani Agrawal</span>
-                <span className="text-xs text-gray-500"> · 20+ yrs Data/AI Consultant</span>
+                <span className="text-xs text-gray-500"> · Data/AI Consultant</span>
                 <a href="https://www.linkedin.com/in/eeshani-agrawal-b674045" target="_blank" rel="noopener noreferrer" title="View LinkedIn Profile" className="ml-1 text-blue-600 hover:text-blue-800">
                   <LinkedInSVG className="h-3.5 w-3.5" />
                 </a>
@@ -706,8 +691,8 @@ export default function BestAITools2026Page() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { name: "Prateek Agarwal", role: "Founder, Ivy Pro School", exp: "20+ yrs AI/ML leader · implements scalable systems, consults strategy", img: PrateekAgarwal },
-              { name: "Eeshani Agrawal", role: "Co-Founder, Ivy Pro School", exp: "20+ yrs data/AI consultant · implements analytics, advises enterprises", img: eeshani },
+              { name: "Prateek Agrawal", role: "Founder, Ivy Pro School", exp: "AI/ML leader · implements scalable systems and consults on strategy", img: PrateekAgarwal },
+              { name: "Eeshani Agrawal", role: "Co-Founder, Ivy Pro School", exp: "Data/AI consultant · implements analytics and advises enterprises", img: eeshani },
             ].map((f, i) => (
               <div key={i} className="bg-white rounded-xl p-4 flex items-center gap-3 shadow-sm">
                 <Image src={f.img} alt={f.name} width={44} height={44} className="rounded-full object-cover flex-shrink-0" />

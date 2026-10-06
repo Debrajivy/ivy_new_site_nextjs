@@ -19,7 +19,7 @@
           "content": {
             "hero": {
               "title": "DuckDB vs SQLite: A Practical Comparison for AI, ML, and Data Analytics Workflows",
-              "author": "Prateek Agarwal",
+              "author": "Prateek Agrawal",
               "date": "June 10, 2026",
               "readTime": "14 min read"
             },
@@ -31,11 +31,11 @@
                   {
                     "type": "paragraph",
                     "hasBar": true,
-                    "text": "AI and machine learning teams often work with local datasets before moving anything to production. They clean CSV files, explore customer data, engineer features, test SQL logic, build quick dashboards, and create model-ready datasets."
+                    "text": "Choose SQLite for embedded application storage and frequent row-level transactions. Choose DuckDB for analytical queries over local files and larger datasets."
                   },
                   {
                     "type": "paragraph",
-                    "text": "For this kind of work, using a full database server is often unnecessary. This is where embedded databases become useful. <strong>SQLite</strong> and <strong>DuckDB</strong> both run inside your application without requiring a separate database server, but they solve different problems."
+                    "text": "Both run inside your application without a separate database server, but they are designed around different workloads: SQLite is row-oriented and transaction-focused, while DuckDB is column-oriented and analytics-focused."
                   },
                   {
                     "type": "paragraph",
@@ -61,7 +61,8 @@
                   { "id": "when-duckdb", "label": "When Should You Use DuckDB?" },
                   { "id": "ai-ml", "label": "SQLite vs DuckDB for AI and ML Projects" },
                   { "id": "verdict", "label": "Final Verdict" },
-                  { "id": "faq", "label": "Frequently Asked Questions" }
+                  { "id": "faq", "label": "Frequently Asked Questions" },
+                  { "id": "sources-related", "label": "Sources and Related Reading" }
                 ]
               },
               {
@@ -85,7 +86,7 @@
               },
               {
                 "id": "what-is-sqlite",
-                "title": "1. What is SQLite?",
+                "title": "What is SQLite?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -117,7 +118,7 @@
               },
               {
                 "id": "what-is-duckdb",
-                "title": "2. What is DuckDB?",
+                "title": "What is DuckDB?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -157,7 +158,7 @@
               },
               {
                 "id": "quick-comparison",
-                "title": "3. DuckDB vs SQLite: Quick Comparison Table",
+                "title": "How do DuckDB and SQLite compare at a glance?",
                 "content": [
                   {
                     "type": "table",
@@ -182,7 +183,7 @@
               },
               {
                 "id": "architecture",
-                "title": "4. Architecture Difference: Row-Based vs Columnar Storage",
+                "title": "How do row-based and columnar storage differ?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -214,7 +215,7 @@
               },
               {
                 "id": "execution",
-                "title": "5. Query Execution: Row Processing vs Vectorized Processing",
+                "title": "How does query execution differ?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -240,7 +241,7 @@
               },
               {
                 "id": "sqlite-python",
-                "title": "6. Python Example Using SQLite",
+                "title": "How do you use SQLite with Python?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -268,7 +269,7 @@
               },
               {
                 "id": "duckdb-python",
-                "title": "7. Python Example Using DuckDB",
+                "title": "How do you use DuckDB with Python?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -303,7 +304,7 @@
               },
               {
                 "id": "duckdb-files",
-                "title": "8. Querying CSV and Pandas DataFrames with DuckDB",
+                "title": "How do you query CSV and Pandas DataFrames with DuckDB?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -343,7 +344,7 @@
               },
               {
                 "id": "performance",
-                "title": "9. Performance and Use Case Differences",
+                "title": "How do performance and use cases differ?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -379,7 +380,7 @@
               },
               {
                 "id": "when-sqlite",
-                "title": "10. When Should You Use SQLite?",
+                "title": "When should you use SQLite?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -415,7 +416,7 @@
               },
               {
                 "id": "when-duckdb",
-                "title": "11. When Should You Use DuckDB?",
+                "title": "When should you use DuckDB?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -452,7 +453,7 @@
               },
               {
                 "id": "ai-ml",
-                "title": "12. SQLite vs DuckDB for AI and ML Projects",
+                "title": "How do SQLite and DuckDB fit AI and ML projects?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -495,7 +496,7 @@
               },
               {
                 "id": "verdict",
-                "title": "13. Final Verdict",
+                "title": "Which database should you choose?",
                 "content": [
                   {
                     "type": "paragraph",
@@ -561,6 +562,23 @@
                         "question": "Which database is better for feature engineering?",
                         "answer": "DuckDB is usually better for feature engineering because it is optimized for joins, aggregations, filtering, and large local analytical datasets."
                       }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "sources-related",
+                "title": "Sources and related reading",
+                "content": [
+                  {
+                    "type": "list",
+                    "items": [
+                      "<a href=\"https://duckdb.org/docs/stable/\" target=\"_blank\" rel=\"noopener noreferrer\">DuckDB official documentation</a>",
+                      "<a href=\"https://duckdb.org/docs/stable/data/overview\" target=\"_blank\" rel=\"noopener noreferrer\">DuckDB data import and query overview</a>",
+                      "<a href=\"https://www.sqlite.org/whentouse.html\" target=\"_blank\" rel=\"noopener noreferrer\">SQLite: Appropriate Uses</a>",
+                      "<a href=\"https://www.sqlite.org/transactional.html\" target=\"_blank\" rel=\"noopener noreferrer\">SQLite transactional guarantees</a>",
+                      "<a href=\"/aihelpcenter/python-basics/polars-library\">Polars DataFrame library guide</a>",
+                      "<a href=\"/aihelpcenter/career/how-to-build-a-data-science-portfolio-without-experience\">How to build a data science portfolio without experience</a>"
                     ]
                   }
                 ]

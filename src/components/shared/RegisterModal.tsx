@@ -32,7 +32,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose }) => {
   const benefits = [
     { Icon: GraduationCap, text: "Live classes with IIT & IIM faculty" },
     { Icon: Shield, text: "NASSCOM, IBM & MEITY certified" },
-    { Icon: Users, text: "37,500+ professionals trained" },
+    { Icon: Users, text: "37,500+ alumni community" },
     { Icon: Award, text: "100% placement support" },
     { Icon: TrendingUp, text: "67% average salary hike" },
     { Icon: Clock, text: "Flexible weekend & weekday batches" },
