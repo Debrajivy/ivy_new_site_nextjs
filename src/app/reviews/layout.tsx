@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Student Reviews & Success Stories | Ivy Professional School | 4.9★ Rated",
+  title: "Student Reviews & Success Stories | Ivy Professional School | 4.8★ Rated",
   description:
     "Read 1,300+ verified student reviews of Ivy Professional School's Data Science, Generative AI & Analytics courses. Watch video testimonials from alumni placed at Amazon, Google, IBM, Deloitte & 500+ firms.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "best data science institute Kolkata",
   ],
   openGraph: {
-    title: "Student Reviews & Success Stories | Ivy Professional School | 4.9★ Rated",
+    title: "Student Reviews & Success Stories | Ivy Professional School | 4.8★ Rated",
     description:
       "1,300+ real student reviews. Watch video stories from alumni now at Amazon, Google, Deloitte & IBM. See how Ivy Pro's Data Science & AI courses transform careers.",
     url: "https://ivyproschool.com/reviews",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Student Reviews | Ivy Pro School — 4.9★ from 1,300+ students",
+    title: "Student Reviews | Ivy Pro School — 4.8★ from 1,300+ students",
     description:
-      "Real reviews from students now working at Amazon, Google, IBM & Deloitte. Ivy Pro School's Data Science & AI courses — rated 4.9/5.",
+      "Real reviews from students now working at Amazon, Google, IBM & Deloitte. Ivy Pro School's Data Science & AI courses — rated 4.8/5.",
     site: "@IvyProSchool",
     images: ["https://ivyproschool.com/assets/logo.webp"],
   },

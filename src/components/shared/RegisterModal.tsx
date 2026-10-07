@@ -108,7 +108,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <span className="text-white font-bold text-sm">4.8 / 5</span>
-                <span className="text-blue-200 text-xs ml-1.5">from 2,250+ reviews</span>
+                <span className="text-blue-200 text-xs ml-1.5">from 1,300+ reviews</span>
               </div>
             </div>
           </div>

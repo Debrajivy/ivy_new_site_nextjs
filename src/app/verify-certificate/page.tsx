@@ -370,7 +370,7 @@ const Footer: React.FC<PageProps> = ({ navigate }) => {
                                         </svg>
                                     ))}
                                 </div>
-                                <span className="ml-2 text-sm">4.8/5 (2,250+ reviews)</span>
+                                <span className="ml-2 text-sm">4.8/5 (1,300+ reviews)</span>
                             </div>
                         </div>
                         <p className="text-gray-300 mb-4 text-sm">

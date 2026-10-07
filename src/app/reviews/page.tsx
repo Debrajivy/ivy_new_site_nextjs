@@ -445,7 +445,7 @@ const FAQ_DATA = [
   {
     question: "Is Ivy Professional School legitimate and trustworthy?",
     answer:
-      "**Yes.** Ivy Professional School has been operating since **2008** with **37,500+ alumni** now placed at companies like **Amazon, Google, IBM, Deloitte, PwC, and LinkedIn**. The institute is rated **4.9/5** across 1,300+ verified student reviews. Courses are co-certified with **IIT Guwahati** and endorsed by **NASSCOM and IBM**.",
+      "**Yes.** Ivy Professional School has been operating since **2008** with **37,500+ alumni** now placed at companies like **Amazon, Google, IBM, Deloitte, PwC, and LinkedIn**. The institute is rated **4.8/5** across 1,300+ verified student reviews. Courses are co-certified with **IIT Guwahati** and endorsed by **NASSCOM and IBM**.",
   },
   {
     question: "What is the average salary hike after completing an Ivy Pro School course?",

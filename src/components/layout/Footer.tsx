@@ -69,7 +69,7 @@ export default function Footer() {
             <p className={styles.tagline}>Empowering professionals with Data, AI & emerging technology skills since 2008.</p>
             <div className={styles.rating}>
               <span className={styles.stars} aria-hidden="true">{Array.from({ length: 5 }, (_, index) => <Star key={index} size={14} fill="currentColor" />)}</span>
-              <span>4.8/5 from 2,250+ reviews</span>
+              <span>4.8/5 from 1,300+ reviews</span>
             </div>
             <div className={styles.community}>
               <p>Join our learning community</p>

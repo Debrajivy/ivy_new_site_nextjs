@@ -114,7 +114,7 @@ const PlacementReportCTA = () => {
                 <CheckCircle className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold">Rated 4.8/5 on Google</h3>
-                  <p className="text-gray-600">Highly rated on Google by more than 1250+ of students accross different industries.</p>
+                  <p className="text-gray-600">Highly rated on Google by more than 1,300+ of students accross different industries.</p>
                 </div>
               </div>
               <div className="flex items-start">

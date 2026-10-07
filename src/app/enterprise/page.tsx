@@ -551,7 +551,7 @@ const Enterprise = () => {
               <div className="space-y-6 sm:space-y-8 order-1">
                 <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
                   <Trophy className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-blue-400" />
-                  <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-blue-200">Established 2007</span>
+                  <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-blue-200">Established 2008</span>
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tighter">
@@ -1010,7 +1010,7 @@ const Enterprise = () => {
               {[
                 { value: '500+', label: 'Companies Trained', icon: Building },
                 { value: '6', label: 'Industry Verticals', icon: Globe2 },
-                { value: '18+', label: 'Years of Excellence', sub: '(est. 2007)', icon: MapPin },
+                { value: '18+', label: 'Years of Excellence', sub: '(est. 2008)', icon: MapPin },
               ].map((stat, i) => {
                 const Icon = stat.icon;
                 return (
@@ -1041,7 +1041,7 @@ const Enterprise = () => {
                   Why Enterprises Choose Ivy Pro School?
                 </h2>
                 <p className="text-sm sm:text-base text-slate-600 max-w-3xl mx-auto">
-                  Ivy Professional School is a top-ranked Data & AI professional education provider and corporate training partner, focused on measurable business impact since 2007.
+                  Ivy Professional School is a top-ranked Data & AI professional education provider and corporate training partner, focused on measurable business impact since 2008.
                 </p>
               </div>
 
@@ -1058,7 +1058,7 @@ const Enterprise = () => {
                           </div>
                           <div>
                             <h3 className="text-lg sm:text-xl font-bold text-slate-900">Proven track record</h3>
-                            <p className="text-sm text-slate-600">Trusted by industry leaders since 2007</p>
+                            <p className="text-sm text-slate-600">Trusted by industry leaders since 2008</p>
                           </div>
                         </div>
                         {openPillar === 'pillar1' ? (
@@ -1723,7 +1723,7 @@ const Enterprise = () => {
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
                     Ivy Pro School Enterprise
                   </h3>
-                  <p className="text-blue-600 font-semibold text-sm sm:text-base">Since 2007</p>
+                  <p className="text-blue-600 font-semibold text-sm sm:text-base">Since 2008</p>
                   <p className="text-slate-600 text-xs sm:text-sm mt-2">Top-ranked Data & AI training partner</p>
                 </div>
 
