@@ -5,6 +5,8 @@ import Footer from "@/components/layout/Footer";
 import { ArrowRight, Check, ShieldCheck, Sparkles } from "lucide-react";
 import styles from "../ai-for-leaders-and-cxos/leaders.module.css";
 import ProgramGallery from "../ai-for-leaders-and-cxos/ProgramGallery";
+import CategoryFaq from "@/components/shared/CategoryFaq";
+import { financeFaqCategories } from "./faqData";
 import aiLeaders1 from "@/assests/aileaders1.jpeg";
 import aiLeaders2 from "@/assests/aileaders2.jpeg";
 import aiLeaders3 from "@/assests/aileaders3.jpeg";
@@ -87,6 +89,7 @@ export default function FinancePage() {
     <section className={styles.takeaways}><div className={styles.shell + " " + styles.twoCol}><div><p className={styles.eyebrow}>WHAT PARTICIPANTS TAKE BACK</p><h2>A finance toolkit ready for recurring work.</h2></div><div>{takeaways.map((item, index) => <p key={item[0]}><b>{String(index + 1).padStart(2, "0")}</b><span><strong>{item[0]}</strong>{item[1]}</span></p>)}</div></div></section>
     <section className={styles.roadmap}><div className={styles.shell + " " + styles.roadmapGrid}><div><p className={styles.eyebrow}>FROM WORKSHOP TO SCALE</p><h2>A phased finance journey</h2></div>{[["PHASE 1", "Quick wins", "Read-only analysis, reconciliation, prompt libraries and recurring reporting support."], ["PHASE 2", "Controlled workflows", "Projects, agents, Skills, document intake, approvals and exception routing."], ["PHASE 3", "Integrated automation", "Governed ERP or Tally connectivity, monitored performance and approved write-back."]].map(item => <article key={item[0]}><span>{item[0]}</span><h3>{item[1]}</h3><p>{item[2]}</p></article>)}</div></section>
     <section className={styles.proof}><div className={styles.shell + " " + styles.proofGrid}><div><strong>Enterprise capability building by Ivy Professional School</strong></div><div><strong>18+</strong><span>Years in education</span></div><div><strong>37,500+</strong><span>Learners and alumni</span></div><div><strong>400+</strong><span>Educators</span></div><div><strong>300+</strong><span>Corporate recruiters</span></div></div></section>
+    <CategoryFaq eyebrow="AI FOR FINANCE FAQs" heading="Questions finance teams ask before starting." description="Explore the programme by topic, from practical finance applications and control requirements to customization, delivery and measurable outcomes." categories={financeFaqCategories}/>
     <section className={styles.cta}><div className={styles.shell}><p className={styles.eyebrow}>DESIGN YOUR PROGRAM</p><h2>Bring your finance priorities.<br/>We will build the learning around them.</h2><p>Share your finance functions, approved AI stack, systems, reporting cycles and priority workflows.</p><a className={styles.button} href="mailto:corporate@ivyproschool.com">Discuss your AI for Finance program <ArrowRight size={17}/></a></div></section>
   </main><Footer/></div>;
 }

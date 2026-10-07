@@ -554,6 +554,46 @@ const Enterprise = () => {
                   <span className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase text-blue-200">Established 2008</span>
                 </div>
 
+                <nav
+                  aria-label="Enterprise AI programs"
+                  className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#071F38] p-3 shadow-[0_18px_45px_rgba(0,0,0,0.3)] sm:p-4"
+                >
+                  <div className="absolute -right-8 -top-10 h-24 w-24 rounded-full bg-[#009fda]/20 blur-2xl" aria-hidden="true" />
+                  <div className="relative mb-3 flex items-center gap-3 px-1">
+                    <span className="h-px w-7 bg-[#009fda]" aria-hidden="true" />
+                    <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-sky-100">
+                      Choose your team program
+                    </p>
+                  </div>
+                  <div className="relative grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+                    {[
+                      { label: 'AI for Leaders', href: '/enterprise/ai-for-leaders-and-cxos', icon: Trophy },
+                      { label: 'AI for Finance', href: '/enterprise/ai-for-finance-team', icon: Building },
+                      { label: 'AI for HR', href: '/enterprise/ai-for-hr-team', icon: Users },
+                      { label: 'AI for Sales', href: '/enterprise/ai-for-sales', icon: Briefcase },
+                    ].map((program) => {
+                      const ProgramIcon = program.icon;
+
+                      return (
+                        <Link
+                          key={program.href}
+                          href={program.href}
+                          className="group relative flex min-h-[5.25rem] flex-col justify-between overflow-hidden rounded-xl border border-white/10 bg-[#082039] px-3 py-3 text-left text-sm font-bold leading-tight text-white shadow-[0_6px_18px_rgba(0,0,0,0.18)] transition-all duration-200 hover:-translate-y-1 hover:border-[#009fda]/70 hover:bg-[#0b2b4c] hover:shadow-[0_12px_24px_rgba(0,159,218,0.14)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#009fda] focus-visible:ring-offset-2 focus-visible:ring-offset-[#071F38]"
+                        >
+                          <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-[#009fda] transition-transform duration-200 group-hover:scale-x-100" aria-hidden="true" />
+                          <span className="flex w-full items-start justify-between gap-2">
+                            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/10 text-[#54c8f2] ring-1 ring-white/10 transition-all group-hover:bg-[#009fda] group-hover:text-white group-hover:ring-[#009fda]">
+                              <ProgramIcon className="h-3.5 w-3.5" aria-hidden="true" />
+                            </span>
+                            <ChevronRight className="h-3.5 w-3.5 shrink-0 text-white/35 transition-all group-hover:translate-x-0.5 group-hover:text-[#54c8f2]" aria-hidden="true" />
+                          </span>
+                          <span>{program.label}</span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </nav>
+
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tighter">
                   Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">AI & GenAI</span>
                   <span className="block mt-1 sm:mt-2">Upskilling for</span>

@@ -5,6 +5,8 @@ import Footer from "@/components/layout/Footer";
 import { ArrowRight, Check, ShieldCheck, Sparkles } from "lucide-react";
 import styles from "../ai-for-leaders-and-cxos/leaders.module.css";
 import ProgramGallery from "../ai-for-leaders-and-cxos/ProgramGallery";
+import CategoryFaq from "@/components/shared/CategoryFaq";
+import { salesFaqCategories } from "./faqData";
 import aiLeaders1 from "@/assests/aileaders1.jpeg";
 import aiLeaders2 from "@/assests/aileaders2.jpeg";
 import aiLeaders3 from "@/assests/aileaders3.jpeg";
@@ -82,13 +84,7 @@ const programPhotos = [aiLeaders1,aiLeaders2,aiLeaders3,aiLeaders4,aiLeaders5,cx
 programPhotos.push({ src: aiHr, alt: "Group photograph of participants at an Ivy enterprise AI program" });
 const clientLogos = [{src:atlasCopcoLogo,name:"Atlas Copco"},{src:bcclLogo,name:"BCCL – The Times of India"},{src:canonLogo,name:"Canon"},{src:bridgestoneLogo,name:"Bridgestone"},{src:capgeminiLogo,name:"Capgemini"},{src:genpactLogo,name:"Genpact"},{src:tataSteelLogo,name:"Tata Steel"},{src:itcLogo,name:"ITC"},{src:honeywellLogo,name:"Honeywell"},{src:mspSteelLogo,name:"MSP Steel"}];
 
-const faqs = [
-  ["Who is this AI for Sales and MIS program designed for?", "The program is designed for Sales teams, MIS owners, commercial managers, finance-linked Sales operations and business leaders responsible for recurring reporting, reconciliation and follow-up workflows."],
-  ["Which tools are used during the program?", "The program is configured around the client's approved AI and Microsoft 365 environment, including Excel and Copilot where available. Exercises can use actual approved files or sanitized equivalents."],
-  ["Does the workshop automate our full production process?", "No. The workshop creates guided prototypes and repeatable workflow designs. Production automation requires stable inputs, integration, testing, monitoring, governance, ownership and approval controls."],
-  ["How is financial and customer data protected?", "Activities use approved or sanitized data, preserve source-total validation and keep customer mapping, financial adjustment, credit, ownership and external communication decisions under human control."],
-  ["What do participants take back after the workshop?", "Participants receive reusable prompts, reconciliation and validation checklists, reporting templates, a Sales MIS Copilot Agent blueprint and a 30-day implementation plan."],
-] as const;
+const faqs = salesFaqCategories[0].items;
 
 const structuredData = {"@context":"https://schema.org","@graph":[{"@type":"Course",name:"AI for Sales & MIS Automation",description:"A customized enterprise AI program for recurring Sales and MIS reporting, reconciliation, analysis and follow-up workflows.",provider:{"@type":"Organization",name:"Ivy Professional School",url:"https://ivyproschool.com"},teaches:["Sales automation","MIS automation","Microsoft 365 Copilot","Debtor reporting","Sales performance reporting","AI agents"]},{"@type":"FAQPage",mainEntity:faqs.map(([question,answer])=>({"@type":"Question",name:question,acceptedAnswer:{"@type":"Answer",text:answer}}))}]};
 
@@ -146,7 +142,7 @@ export default function SalesPage() {
 
       <section className={styles.roadmap}><div className={`${styles.shell} ${styles.roadmapGrid}`}><div><p className={styles.eyebrow}>FROM WORKSHOP TO CONTROLLED AUTOMATION</p><h2>A phased Sales transformation journey</h2></div>{[["PHASE 1","Capability + baseline","Build common workflow language, document recurring tasks and validate a guided prototype using approved files."],["PHASE 2","Workflow pilots","Stabilize data inputs, rules, refresh steps, controls and ownership for selected high-frequency Sales and MIS processes."],["PHASE 3","Copilot Agent rollout","Deploy approved knowledge and instructions with monitoring, human approvals and periodic review before wider scale."]].map(item=><article key={item[0]}><span>{item[0]}</span><h3>{item[1]}</h3><p>{item[2]}</p></article>)}</div></section>
 
-      <section className={styles.faqSection} aria-labelledby="faq-heading"><div className={styles.shell}><div className={styles.faqHead}><p className={styles.eyebrow}>FREQUENTLY ASKED QUESTIONS</p><h2 id="faq-heading">AI for Sales and MIS automation, answered.</h2></div><div className={styles.faqList}>{faqs.map(([question,answer])=><details key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></div></section>
+      <CategoryFaq eyebrow="AI FOR SALES FAQs" heading="Questions Sales and MIS teams ask before starting." description="Explore the programme by topic, from Sales and MIS workflows and system requirements to governance, delivery and measurable outcomes." categories={salesFaqCategories}/>
 
       <section className={styles.cta}><div className={styles.shell}><p className={styles.eyebrow}>DESIGN YOUR PROGRAM</p><h2>Bring your Sales workflows.<br/>We will build the learning around them.</h2><p>Share your ERP and reporting environment, approved AI tools, recurring MIS outputs, Sales priorities and the workflows you want to simplify.</p><a className={styles.button} href="mailto:corporate@ivyproschool.com">Discuss your AI for Sales program <ArrowRight size={17}/></a></div></section>
     </main>
