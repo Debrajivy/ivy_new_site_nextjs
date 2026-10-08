@@ -127,6 +127,23 @@ export default function CategoryPage({ params }: PageProps) {
     });
   }
 
+  if (categorySlug === 'genai-llm') {
+    const topicOrder = [
+      'what-is-generative-ai',
+      'what-an-embedding-actually-is',
+      'how-are-llms-trained',
+      'how-do-llm-context-windows-work',
+      'harness-engineering-in-ai',
+      'rag-vs-finetuning',
+      'how-llms-generate-insights',
+      'connecting-llms-to-sql',
+    ];
+
+    allTopics.sort(
+      (a, b) => topicOrder.indexOf(a.id) - topicOrder.indexOf(b.id)
+    );
+  }
+
   return (
     <>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-4 sm:pt-6">
