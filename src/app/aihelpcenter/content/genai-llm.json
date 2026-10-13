@@ -10,6 +10,14 @@
       "color": "bg-indigo-600",
       "topics": [
         {
+          "id": "do-llms-remember-previous-conversations",
+          "metaTitle": "Do LLMs Remember Previous Conversations? AI Memory Explained",
+          "title": "Do LLMs Remember Previous Conversations? How AI Memory Really Works",
+          "description": "Why a model starts every request blank, how apps create memory with chat history and saved notes, and when no memory is the better choice.",
+          "duration": "10 min read",
+          "date": "October 7, 2026"
+        },
+        {
           "id": "how-do-llm-context-windows-work",
           "metaTitle": "How Do LLM Context Windows Work? Tokens & Limits",
           "title": "How Do LLM Context Windows Work? Tokens, Limits and Why AI Forgets",

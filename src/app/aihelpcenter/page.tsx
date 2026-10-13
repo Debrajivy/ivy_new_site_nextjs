@@ -2,120 +2,68 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  FileStack,
-  GraduationCap,
-  Database,
-  AlertCircle,
   ArrowRight,
-  Code,
-  Play,
-  Clock,
-  Calendar,
-  ChevronRight,
-  Terminal,
-  Layers,
-  BookOpen,
-  Cpu,
   BarChart3,
-  Server,
+  BookOpen,
   Briefcase,
+  Code,
+  Cpu,
+  Database,
+  Layout,
+  Layers,
+  MessageSquare,
+  Server,
   ShieldCheck,
   Zap,
-  Layout,
-  MessageSquare,
-  Search,
-  FileText,
-  Star,
-  Table,
-  Image as ImageIcon,
-  Check,
-  AlertTriangle,
-  Scissors,
-  AlignLeft,
-  MessageCircle,
-  Palette,
-  Gauge,
-  Linkedin
 } from 'lucide-react';
 import { data } from './lib/data';
 
-// Icon mapping
 const iconMap: Record<string, React.ReactNode> = {
-  "Code": <Code />,
-  "Database": <Database />,
-  "AlertCircle": <AlertCircle />,
-  "ArrowRight": <ArrowRight />,
-  "Play": <Play />,
-  "Clock": <Clock />,
-  "Calendar": <Calendar />,
-  "ChevronRight": <ChevronRight />,
-  "Terminal": <Terminal />,
-  "Layers": <Layers />,
-  "BookOpen": <BookOpen />,
-  "Cpu": <Cpu />,
-  "BarChart3": <BarChart3 />,
-  "Server": <Server />,
-  "Briefcase": <Briefcase />,
-  "ShieldCheck": <ShieldCheck />,
-  "Zap": <Zap />,
-  "Layout": <Layout />,
-  "MessageSquare": <MessageSquare />,
-  "Search": <Search />,
-  "FileText": <FileText />,
-  "FileStack": <FileStack />,
-  "Star": <Star />,
-  "Table": <Table />,
-  "ImageIcon": <ImageIcon />,
-  "Check": <Check />,
-  "AlertTriangle": <AlertTriangle />,
-  "Scissors": <Scissors />,
-  "AlignLeft": <AlignLeft />,
-  "MessageCircle": <MessageCircle />,
-  "Palette": <Palette />,
-  "Gauge": <Gauge />,
-  "Linkedin": <Linkedin />
-};
-
-// Theme Colors
-const themeColors = {
-  primary: '#009fda',
-  secondary: '#f7af34',
-  darkBlue: '#013a81',
-  dark: '#111827',
-  light: '#f8fafc'
+  BarChart3: <BarChart3 />,
+  BookOpen: <BookOpen />,
+  Briefcase: <Briefcase />,
+  Code: <Code />,
+  Cpu: <Cpu />,
+  Database: <Database />,
+  Layout: <Layout />,
+  Layers: <Layers />,
+  MessageSquare: <MessageSquare />,
+  Server: <Server />,
+  ShieldCheck: <ShieldCheck />,
+  Zap: <Zap />,
 };
 
 const AIHelpCenterLanding = () => {
   return (
     <>
-      <header className="px-4 sm:px-6 pt-12 sm:pt-16 pb-8 sm:pb-12 text-center max-w-4xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-gray-900 mb-4 sm:mb-6">What would you like to learn today?</h1>
-        <p className="text-lg sm:text-xl text-gray-600">Browse our comprehensive library of AI and data science tutorials</p>
+      <header className="mx-auto max-w-4xl px-4 pb-8 pt-10 text-center sm:px-6 sm:pb-10 sm:pt-14">
+        <span className="mb-3 inline-flex rounded-full bg-sky-100 px-4 py-1.5 text-sm font-bold text-[#007fb5]">
+          AI Help Center
+        </span>
+        <h1 className="text-3xl font-black tracking-tight text-gray-900 sm:text-4xl md:text-5xl">What would you like to learn today?</h1>
+        <p className="mt-4 text-base text-gray-600 sm:text-lg">Browse our comprehensive library of AI and data science tutorials</p>
       </header>
 
       <main className="mx-auto max-w-7xl px-4 sm:px-6 pb-16 sm:pb-24">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
           {Object.entries(data.categories).map(([id, cat]: [string, any]) => (
             <Link
               key={id}
               href={`/aihelpcenter/${id}`}
-              className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-gray-200 transition-all hover:shadow-lg sm:hover:shadow-xl hover:-translate-y-1 cursor-pointer block`}
+              className="group relative block overflow-hidden rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#009fda] focus-visible:ring-offset-2 sm:rounded-3xl sm:p-6"
             >
-              <div className="mb-3 sm:mb-4 inline-flex h-10 sm:h-12 w-10 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl text-white shadow-lg" style={{ backgroundColor: themeColors.primary }}>
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#009fda] text-white shadow-lg sm:mb-4 sm:h-12 sm:w-12 sm:rounded-2xl">
                 {iconMap[cat.icon]}
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{cat.title}</h3>
-              <p className="mt-1 text-xs sm:text-sm text-gray-500 font-medium">{cat.count}</p>
-              {(cat as any).latestTopic && (
-                <div className="mt-3 sm:mt-4 flex items-center gap-2 rounded-lg sm:rounded-xl bg-blue-50 p-2 sm:p-3">
-                  <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 animate-pulse rounded-full" style={{ backgroundColor: themeColors.primary }}></div>
-                  <span className="text-xs font-bold text-blue-700">Latest: {(cat as any).latestTopic.title}</span>
-                  <ArrowRight size={12} className="ml-auto text-blue-400" />
+              <h2 className="text-base font-bold text-gray-900 transition-colors group-hover:text-blue-600 sm:text-lg">{cat.title}</h2>
+              <p className="mt-1 text-xs font-medium text-gray-500 sm:text-sm">{cat.count}</p>
+              {cat.latestTopic && (
+                <div className="mt-3 flex items-center gap-2 rounded-lg bg-blue-50 p-2 sm:mt-4 sm:rounded-xl sm:p-3">
+                  <span className="h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-[#009fda] sm:h-2 sm:w-2" />
+                  <span className="line-clamp-2 text-xs font-bold text-blue-700">Latest: {cat.latestTopic.title}</span>
+                  <ArrowRight size={12} className="ml-auto shrink-0 text-blue-400 transition-transform group-hover:translate-x-0.5" />
                 </div>
               )}
-              <div className="absolute top-3 sm:top-4 right-3 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <ChevronRight size={20} className="text-gray-300" />
-              </div>
             </Link>
           ))}
         </div>

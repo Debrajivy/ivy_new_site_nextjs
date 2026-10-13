@@ -215,6 +215,25 @@
   margin-bottom: 0;
 }
 
+.card > ul,
+.card > ol {
+  margin: 12px 0 14px;
+  padding-left: 24px;
+}
+
+.card > ul {
+  list-style: disc;
+}
+
+.card > ol {
+  list-style: decimal;
+}
+
+.card > ul li,
+.card > ol li {
+  margin: 6px 0;
+}
+
 .card a,
 .cta a {
   color: var(--deep);
@@ -282,6 +301,36 @@
   font-size: 0.9em;
 }
 
+.codeBlock {
+  overflow: hidden;
+  margin: 12px 0;
+  border: 1px solid #1c2b3a;
+  border-radius: 10px;
+}
+
+.fileName {
+  padding: 6px 12px;
+  background: #1c2b3a;
+  color: #9fd3ea;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.codeBlock pre {
+  overflow-x: auto;
+  margin: 0;
+  padding: 14px;
+  background: #0f1b27;
+  color: #e6eef5;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.codeBlock code {
+  font-family: var(--font-geist-mono), monospace;
+}
+
 .diagram {
   overflow-x: auto;
   margin: 16px 0;
@@ -335,6 +384,14 @@
 .conclusion .pill {
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
+}
+
+.conclusion .prompt {
+  color: var(--ink);
+}
+
+.conclusion .prompt .eyebrow {
+  color: var(--deep);
 }
 
 .checklist {
