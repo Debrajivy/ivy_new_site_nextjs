@@ -17,6 +17,15 @@
           "duration": "12 min read",
           "date": "April 13, 2026",
           "content": {}
+        },
+        {
+          "id": "random-forest-vs-xgboost",
+          "metaTitle": "Random Forest vs XGBoost: Differences, Use Cases & When to Use Each | Ivy Professional School",
+          "title": "Random Forest vs XGBoost: Differences, Use Cases & When to Use Each",
+          "description": "Compare Random Forest and XGBoost, understand bagging versus boosting, review tested results, and learn when to use each model.",
+          "duration": "10 min read",
+          "date": "October 13, 2026",
+          "content": {}
         }
       ]
     }
