@@ -26,6 +26,23 @@
           "duration": "10 min read",
           "date": "October 13, 2026",
           "content": {}
+        },
+        {
+          "id": "bagging-vs-boosting-machine-learning",
+          "metaTitle": "Bagging vs Boosting in Machine Learning: Differences and When to Use Each | Ivy Professional School",
+          "title": "Bagging vs Boosting in Machine Learning",
+          "description": "Bagging trains models in parallel to cut variance. Boosting trains them in sequence to cut bias. Learn how each works, how they differ, and when to use which.",
+          "duration": "15 min read",
+          "date": "October 15, 2026",
+          "content": {
+            "hero": {
+              "title": "Bagging vs Boosting in Machine Learning: Differences and When to Use Each",
+              "author": "Eeshani Agrawal",
+              "date": "October 15, 2026",
+              "readTime": "15 min read"
+            },
+            "sections": []
+          }
         }
       ]
     }

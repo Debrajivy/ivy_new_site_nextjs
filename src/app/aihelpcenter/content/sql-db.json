@@ -587,6 +587,30 @@
           }
         }
       ]
+    },
+    "sql-fundamentals": {
+      "title": "SQL Fundamentals",
+      "icon": "Table",
+      "color": "bg-orange-500",
+      "topics": [
+        {
+          "id": "sql-window-functions-explained",
+          "metaTitle": "SQL Window Functions Explained: ROW_NUMBER, RANK, LAG and LEAD with Examples | Ivy Professional School",
+          "title": "SQL Window Functions Explained",
+          "description": "A SQL window function calculates a value for each row without collapsing rows. Learn OVER, PARTITION BY, ROW_NUMBER, RANK, LAG, LEAD and running totals with worked examples.",
+          "duration": "16 min read",
+          "date": "October 15, 2026",
+          "content": {
+            "hero": {
+              "title": "SQL Window Functions Explained: ROW_NUMBER, RANK, LAG and LEAD with Examples",
+              "author": "Prateek Agrawal",
+              "date": "October 15, 2026",
+              "readTime": "16 min read"
+            },
+            "sections": []
+          }
+        }
+      ]
     }
   }
 }
