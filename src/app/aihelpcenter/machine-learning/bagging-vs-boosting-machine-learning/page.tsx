@@ -111,13 +111,13 @@ const articleHtml = `
     <li><strong>Bias</strong> is error from a model being too simple to capture the pattern. A shallow tree on a complex problem has high bias. It underfits.</li>
     <li><strong>Variance</strong> is error from a model being too sensitive to the exact training sample. A deep, unpruned tree has high variance. It overfits, so a small change in the data gives a very different tree.</li>
   </ul>
-  <p>Bagging is mainly a variance-reduction technique. Boosting is mainly a bias-reduction technique. If you want a fuller treatment of the trade-off, read our explainer on the <a href="/ai-help-center/bias-variance-tradeoff">bias-variance trade-off</a>.</p>
+  <p>Bagging is mainly a variance-reduction technique. Boosting is mainly a bias-reduction technique. If you want a fuller treatment of the trade-off, read our explainer on the bias-variance trade-off.</p>
 
   <h2 id="how-does-bagging-work">How does bagging work?</h2>
   <p>Bagging, short for bootstrap aggregating, trains many models independently on different random samples of the training data and combines their outputs by averaging (regression) or majority vote (classification). Leo Breiman introduced it in 1996.</p>
   <ol>
     <li>Draw a <strong>bootstrap sample</strong> from the training set. This means sampling rows at random with replacement, so some rows appear more than once and others not at all. A bootstrap sample contains roughly 63.2% of the distinct rows; the remaining 36.8% are left out.</li>
-    <li>Train one model, usually a deep <a href="/ai-help-center/decision-trees-explained">decision tree</a>, on that sample.</li>
+    <li>Train one model, usually a deep decision tree, on that sample.</li>
     <li>Repeat for 100 to 500 samples. Each model is trained independently, so the work can run in parallel across CPU cores.</li>
     <li>Combine the predictions by averaging or voting.</li>
   </ol>
@@ -252,7 +252,7 @@ models = {
 for name, model in models.items():
     scores = cross_val_score(model, X, y, cv=5, scoring="roc_auc")
     print(f"{name}: mean AUC {scores.mean():.3f} (std {scores.std():.3f})")</code></pre>
-  <p>Look at both the mean and the spread across folds. A slightly higher mean with a much larger spread is a warning sign. See our guide to <a href="/ai-help-center/cross-validation-explained">cross-validation</a> for how to read these numbers.</p>
+  <p>Look at both the mean and the spread across folds. A slightly higher mean with a much larger spread is a warning sign. See our guide to cross-validation for how to read these numbers.</p>
 
   <h2 id="when-should-you-not-use-bagging-or-boosting">When should you not use bagging or boosting?</h2>
   <p>You may not need either. An ensemble is a tool for a specific problem, and several common situations do not call for one.</p>
@@ -270,9 +270,9 @@ for name, model in models.items():
   <ol>
     <li><strong>Get a baseline.</strong> Train a single decision tree and a Random Forest on your data with default settings. Note training and validation scores.</li>
     <li><strong>Diagnose before you choose.</strong> If training is far above validation, you have a variance problem, so stay with bagging or add regularisation. If both are low, you have a bias problem, so try boosting.</li>
-    <li><strong>Tune boosting with discipline.</strong> Fix a low learning rate (0.05 to 0.1), set a large number of trees, and use early stopping on a validation set. Then tune tree depth and regularisation. Our guide on <a href="/ai-help-center/hyperparameter-tuning">hyperparameter tuning</a> walks through the order.</li>
+    <li><strong>Tune boosting with discipline.</strong> Fix a low learning rate (0.05 to 0.1), set a large number of trees, and use early stopping on a validation set. Then tune tree depth and regularisation. Our guide on hyperparameter tuning walks through the order.</li>
   </ol>
-  <p>If you want to practise this on real business datasets with a trainer reviewing your work, see how Random Forest and XGBoost compare in our <a href="/aihelpcenter/machine-learning/random-forest-vs-xgboost">Random Forest vs XGBoost guide</a>. Ivy has been teaching data science and AI since 2008 and has trained 37,500+ alumni.</p>
+  <p>If you want to practise this on real business datasets with a trainer reviewing your work, see how Random Forest and XGBoost compare in our Random Forest vs XGBoost guide. Ivy has been teaching data science and AI since 2008 and has trained 37,500+ alumni.</p>
 
   <section class="faq">
     <h2 id="frequently-asked-questions">Frequently asked questions</h2>
