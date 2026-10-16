@@ -17,6 +17,7 @@ import CourseSubNavigation from "@/components/CourseSubNavigation"
 import CourseRelatedLinks from "@/components/courses/CourseRelatedLinks"
 import CourseAIAdvisorShell from "@/components/courses/CourseAIAdvisorShell"
 import CourseEntrepreneurDetails from "@/components/courses/CourseEntrepreneurDetails"
+import CourseEntrepreneurTestimonials from "@/components/courses/CourseEntrepreneurTestimonials"
 
 // Types that match Next's generated PageProps
 type Params = { slug: string }
@@ -92,6 +93,7 @@ export default async function CoursePage({ params }: AsyncPageProps) {
           <div id="course-overview-section" className="course-deferred-section">
             <CourseOverview course={course} />
           </div>
+          {course.title === "AI for Entrepreneurs" && <CourseEntrepreneurTestimonials />}
           <div id="course-curriculum-section" className="course-deferred-section">
             <DeferredCourseCurriculum course={{
               title: course.title,
