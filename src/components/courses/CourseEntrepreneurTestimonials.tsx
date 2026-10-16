@@ -24,6 +24,7 @@ interface TestimonialStory {
   description?: string;
   poster: string;
   videoSrc?: string;
+  youtubeId?: string;
   linkedinUrl?: string;
 }
 
@@ -35,7 +36,7 @@ const upcomingStories: TestimonialStory[] = [
     description:
       "Anand Methi transformed his dispatch workflow with AI, automating order tracking, freight costs, and accounting. Go paperless. Automate operations. Grow with AI!",
     poster: "/videos/anand-methi-testimonial-poster.jpeg",
-    videoSrc: "/videos/anand-methi-testimonial.mp4?v=7516784925459808256",
+    youtubeId: "To4sj_LHvTo",
     linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7516784925459808256",
   },
   {
@@ -45,7 +46,7 @@ const upcomingStories: TestimonialStory[] = [
     description:
       "Palash, Director at Vedas Exports, transformed his SEO, content, and Meta Ads with AI. Make your brand visible on Google and AI platforms. Grow your business with AI!",
     poster: "/videos/palash-testimonial-poster.jpeg",
-    videoSrc: "/videos/palash-testimonial.mp4?v=7516775701237329920",
+    youtubeId: "r2mGbTPkkfw",
     linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7516775701237329920/",
   },
   {
@@ -55,7 +56,7 @@ const upcomingStories: TestimonialStory[] = [
     description:
       "Rakesh Pradhan, Performance Marketer, uses AI workflows to automate reporting and connect tools like Meta Ads, Google Analytics, and Search Console. Automate the routine. Focus on growth with AI!",
     poster: "/videos/rakesh-pradhan-testimonial-poster.jpeg",
-    videoSrc: "/videos/rakesh-pradhan-testimonial.mp4?v=7516771834504347648",
+    youtubeId: "Str8WoEigKk",
     linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7516771834504347648",
   },
 ];
@@ -133,6 +134,51 @@ function TestimonialVideo({ name, src, poster }: TestimonialVideoProps) {
   );
 }
 
+interface TestimonialYoutubeProps {
+  name: string;
+  videoId: string;
+  poster: string;
+}
+
+function TestimonialYoutube({ name, videoId, poster }: TestimonialYoutubeProps) {
+  const [hasStarted, setHasStarted] = useState(false);
+
+  return (
+    <div className="relative aspect-square shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_35px_rgba(15,23,42,0.1)]">
+      <img
+        src={poster}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-xl"
+      />
+      {hasStarted ? (
+        <iframe
+          className="absolute inset-y-0 left-1/2 aspect-[9/16] h-full -translate-x-1/2"
+          src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&modestbranding=1&rel=0`}
+          title={`${name}'s AI for Entrepreneurs testimonial`}
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+          allowFullScreen
+        />
+      ) : (
+        <button
+          type="button"
+          onClick={() => setHasStarted(true)}
+          aria-label={`Play ${name}'s testimonial video`}
+          className="absolute inset-0 cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-[#009fda]"
+        >
+          <img
+            src={poster}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-y-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2"
+          />
+          <span className="sr-only">Play testimonial video</span>
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function CourseEntrepreneurTestimonials() {
 
   return (
@@ -171,9 +217,9 @@ export default function CourseEntrepreneurTestimonials() {
 
         <div className="mt-9 grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
           <article className="flex h-full w-full max-w-[340px] flex-col justify-self-center">
-            <TestimonialVideo
+            <TestimonialYoutube
               name="Manish Prasad"
-              src="/videos/manish-ai-for-entrepreneurs.mp4?v=7516764153634811919"
+              videoId="5bPHckjhgVI"
               poster="/videos/manish-testimonial-poster.jpeg?v=20261016-131300"
             />
 
@@ -216,7 +262,13 @@ export default function CourseEntrepreneurTestimonials() {
               key={story.name}
               className="flex h-full w-full max-w-[340px] flex-col justify-self-center"
             >
-              {story.videoSrc ? (
+              {story.youtubeId ? (
+                <TestimonialYoutube
+                  name={story.name}
+                  videoId={story.youtubeId}
+                  poster={story.poster}
+                />
+              ) : story.videoSrc ? (
                 <TestimonialVideo
                   name={story.name}
                   src={story.videoSrc}

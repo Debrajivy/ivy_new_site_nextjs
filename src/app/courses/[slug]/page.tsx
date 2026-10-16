@@ -85,6 +85,7 @@ export default async function CoursePage({ params }: AsyncPageProps) {
 
           {/* Sticky sub-nav */}
           <CourseSubNavigation course={{ title: course.title }} />
+          {course.title === "AI for Entrepreneurs" && <CourseEntrepreneurTestimonials />}
           <CourseAIAdvisorShell courseTitle={course.title} courseSlug={course.slug} />
           {/* Anchor targets */}
           <div id="course-accreditation-section">
@@ -93,7 +94,6 @@ export default async function CoursePage({ params }: AsyncPageProps) {
           <div id="course-overview-section" className="course-deferred-section">
             <CourseOverview course={course} />
           </div>
-          {course.title === "AI for Entrepreneurs" && <CourseEntrepreneurTestimonials />}
           <div id="course-curriculum-section" className="course-deferred-section">
             <DeferredCourseCurriculum course={{
               title: course.title,
