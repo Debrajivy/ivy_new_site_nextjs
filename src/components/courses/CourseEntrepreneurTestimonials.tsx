@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight,
   Building2,
   Linkedin,
   MessageCircle,
+  Play,
   Quote,
   Volume2,
   VolumeX,
@@ -92,6 +93,16 @@ const upcomingStories: TestimonialStory[] = [
   },
 ];
 
+function PlayBadge() {
+  return (
+    <span className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
+      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-black/40 text-white/90 shadow-md backdrop-blur-sm transition group-hover:bg-black/55">
+        <Play size={24} fill="currentColor" className="ml-1" />
+      </span>
+    </span>
+  );
+}
+
 interface TestimonialVideoProps {
   name: string;
   src: string;
@@ -146,8 +157,9 @@ function TestimonialVideo({ name, src, poster }: TestimonialVideoProps) {
           type="button"
           onClick={startVideo}
           aria-label={`Play ${name}'s testimonial video`}
-          className="absolute inset-0 cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-[#009fda]"
+          className="group absolute inset-0 cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-[#009fda]"
         >
+          <PlayBadge />
           <span className="sr-only">Play testimonial video</span>
         </button>
       )}
@@ -172,7 +184,70 @@ interface TestimonialYoutubeProps {
 }
 
 function TestimonialYoutube({ name, videoId, poster }: TestimonialYoutubeProps) {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const [hasStarted, setHasStarted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [playBlocked, setPlayBlocked] = useState(false);
+  const isPlayingRef = useRef(false);
+  const playCheckRef = useRef<number | undefined>(undefined);
+
+  useEffect(() => () => window.clearTimeout(playCheckRef.current), []);
+
+  // Track the player's state through the YouTube iframe API messages
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    const handleMessage = (event: MessageEvent) => {
+      if (event.source !== iframeRef.current?.contentWindow) return;
+      try {
+        const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+        const state = data?.info?.playerState;
+        if (typeof state === "number") {
+          const playing = state === 1 || state === 3;
+          isPlayingRef.current = playing;
+          setIsPlaying(playing);
+          // Playback works again, so bring back the one-tap layer
+          if (playing) setPlayBlocked(false);
+        }
+      } catch {
+        // Ignore messages that are not from the player
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, [hasStarted]);
+
+  const sendCommand = (func: string) => {
+    iframeRef.current?.contentWindow?.postMessage(
+      JSON.stringify({ event: "command", func, args: [] }),
+      "*"
+    );
+  };
+
+  const togglePlayback = () => {
+    if (isPlaying) {
+      sendCommand("pauseVideo");
+      isPlayingRef.current = false;
+      setIsPlaying(false);
+      return;
+    }
+
+    sendCommand("playVideo");
+    setIsPlaying(true);
+    // If the phone blocks playback, step aside so the tap reaches YouTube's own button
+    window.clearTimeout(playCheckRef.current);
+    playCheckRef.current = window.setTimeout(() => {
+      if (!isPlayingRef.current) setPlayBlocked(true);
+    }, 1500);
+  };
+
+  const subscribeToPlayer = () => {
+    iframeRef.current?.contentWindow?.postMessage(
+      JSON.stringify({ event: "listening", id: videoId }),
+      "*"
+    );
+  };
 
   return (
     <div className="relative aspect-square shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_35px_rgba(15,23,42,0.1)]">
@@ -183,19 +258,39 @@ function TestimonialYoutube({ name, videoId, poster }: TestimonialYoutubeProps) 
         className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-xl"
       />
       {hasStarted ? (
-        <iframe
-          className="absolute inset-y-0 left-1/2 aspect-[9/16] h-full -translate-x-1/2"
-          src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&modestbranding=1&rel=0`}
-          title={`${name}'s AI for Entrepreneurs testimonial`}
-          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-          allowFullScreen
-        />
+        <>
+          <iframe
+            ref={iframeRef}
+            className="absolute inset-y-0 left-1/2 aspect-[9/16] h-full -translate-x-1/2"
+            src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&modestbranding=1&rel=0&enablejsapi=1`}
+            title={`${name}'s AI for Entrepreneurs testimonial`}
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+            allowFullScreen
+            onLoad={subscribeToPlayer}
+          />
+          {/* One tap toggles play/pause. Bottom strip stays free for YouTube's own controls. */}
+          {!playBlocked && (
+            <button
+              type="button"
+              onClick={togglePlayback}
+              aria-label={`${isPlaying ? "Pause" : "Play"} ${name}'s testimonial video`}
+              className="group absolute inset-x-0 top-0 bottom-12 cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-[#009fda]"
+            >
+              {!isPlaying && <PlayBadge />}
+              <span className="sr-only">{isPlaying ? "Pause" : "Play"} testimonial video</span>
+            </button>
+          )}
+        </>
       ) : (
         <button
           type="button"
-          onClick={() => setHasStarted(true)}
+          onClick={() => {
+            // The video autoplays as soon as the player loads
+            setHasStarted(true);
+            setIsPlaying(true);
+          }}
           aria-label={`Play ${name}'s testimonial video`}
-          className="absolute inset-0 cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-[#009fda]"
+          className="group absolute inset-0 cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-[#009fda]"
         >
           <img
             src={poster}
@@ -203,6 +298,7 @@ function TestimonialYoutube({ name, videoId, poster }: TestimonialYoutubeProps) 
             aria-hidden="true"
             className="absolute inset-y-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2"
           />
+          <PlayBadge />
           <span className="sr-only">Play testimonial video</span>
         </button>
       )}

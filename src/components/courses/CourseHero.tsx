@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Star, Award, X, ChevronRight, NotebookPen, Wrench } from "lucide-react";
+import { Clock, Users, Star, Award, X, ChevronRight, NotebookPen, Play, Wrench } from "lucide-react";
 
 /* Official WhatsApp logo path from SimpleIcons */
 const WhatsAppIcon = ({ size = 28 }: { size?: number }) => (
@@ -1223,7 +1223,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               {
                 course.title === "AI for Entrepreneurs" ? (
                   <div className="text-white text-sm font-medium">
-                    AI Training delivered to
+                    AI Implemented at
                   </div>
                 ) : course.title === "AI for Beginners" ? (
                   <div className="text-white text-sm font-medium">
@@ -1424,13 +1424,20 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                         <div className="relative h-20 w-full overflow-hidden rounded-lg bg-white">
                           <img
                             src={founder.poster}
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            className="absolute inset-0 h-full w-full scale-110 object-cover opacity-50 blur-md"
+                          />
+                          <img
+                            src={founder.poster}
                             alt={founder.name}
                             loading="lazy"
-                            className="h-full w-full object-cover object-top"
+                            className="relative h-full w-full object-contain"
                           />
                           <span className="absolute inset-0 flex items-center justify-center">
-                            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white">
-                              <ChevronRight size={18} />
+                            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white/90 shadow-sm">
+                              <Play size={14} fill="currentColor" className="ml-0.5" />
                             </span>
                           </span>
                         </div>
