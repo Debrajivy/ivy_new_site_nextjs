@@ -580,7 +580,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
 
       {/* BUSINESS IMPACT - FULL WIDTH, OUTSIDE GRID */}
       {course.title === "AI for Entrepreneurs" && (
-        <section className="w-full py-20 bg-gradient-to-r from-[#009FDA] to-[#F8A320]">
+        <section id="why-this-program" className="w-full py-20 bg-gradient-to-r from-[#009FDA] to-[#F8A320]">
           <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
 
             {/* Header */}

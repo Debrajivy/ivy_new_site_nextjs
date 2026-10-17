@@ -66,6 +66,10 @@ export function getCoursePlacementFacts(courseTitle: string) {
   if (courseTitle.trim() === "AI for Beginners") return [
     "The page describes learning support, live doubt-clearing, community and networking, and resume building; it does not present the 94% full-time placement statistic for this course.",
   ]
+  if (courseTitle.trim() === "AI for Entrepreneurs") return [
+    "This page is aimed at business owners and offers AI Implementation Support rather than job placement.",
+    "The page's Why This Program button scrolls to the 'Why Choose This Program' section on the same page.",
+  ]
   return [
     "The course page says Ivy provides end-to-end career support from resume building to job placement.",
     "The Job Placement Program works with 500+ hiring partners.",

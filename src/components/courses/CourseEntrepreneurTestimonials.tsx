@@ -28,6 +28,37 @@ interface TestimonialStory {
   linkedinUrl?: string;
 }
 
+export const getFounderStoryId = (name: string) =>
+  `founder-story-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+
+// Short versions for the hero cards on small screens
+export const founderStoryCards = [
+  {
+    name: "Manish Prasad",
+    role: "Infrastructure business owner",
+    quote: "This is the most structured AI program...",
+    poster: "/videos/manish-testimonial-poster.jpeg?v=20261016-131300",
+  },
+  {
+    name: "Anand Methi",
+    role: "Participant, AI for Entrepreneurs",
+    quote: "My entire dispatch plan went digital!",
+    poster: "/videos/anand-methi-testimonial-poster.jpeg",
+  },
+  {
+    name: "Palash",
+    role: "Director, Vedas Exports",
+    quote: "I showed him how to do SEO, and he was amazed!",
+    poster: "/videos/palash-testimonial-poster.jpeg",
+  },
+  {
+    name: "Rakesh Pradhan",
+    role: "Performance Marketer",
+    quote: "I automated my daily and monthly reports!",
+    poster: "/videos/rakesh-pradhan-testimonial-poster.jpeg",
+  },
+];
+
 const upcomingStories: TestimonialStory[] = [
   {
     name: "Anand Methi",
@@ -216,7 +247,10 @@ export default function CourseEntrepreneurTestimonials() {
         </div>
 
         <div className="mt-9 grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          <article className="flex h-full w-full max-w-[340px] flex-col justify-self-center">
+          <article
+            id={getFounderStoryId("Manish Prasad")}
+            className="flex h-full w-full max-w-[340px] flex-col justify-self-center"
+          >
             <TestimonialYoutube
               name="Manish Prasad"
               videoId="5bPHckjhgVI"
@@ -260,6 +294,7 @@ export default function CourseEntrepreneurTestimonials() {
           {upcomingStories.map((story) => (
             <article
               key={story.name}
+              id={getFounderStoryId(story.name)}
               className="flex h-full w-full max-w-[340px] flex-col justify-self-center"
             >
               {story.youtubeId ? (

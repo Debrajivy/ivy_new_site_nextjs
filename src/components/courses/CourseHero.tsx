@@ -99,6 +99,7 @@ import SamikBhattacharyyaCurImg from "@/assests/company/SamikBhattacharyyaCur.we
 import SouvikBoseImg from "@/assests/alumni/SouvikBose.webp";
 import SouvikBoseCurImg from "@/assests/company/SouvikBosecur.webp";
 import type { StaticImageData } from "next/image";
+import { founderStoryCards, getFounderStoryId } from "@/components/courses/CourseEntrepreneurTestimonials";
 
 interface HeroAlumni {
   name: string;
@@ -1075,13 +1076,35 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       : "Ivy Professional School Certification"}
               </div>
 
-              <Link
-                href="/alumni"
-                className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#013a81] shadow-sm transition-all hover:bg-blue-100 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#013a81]"
-              >
-                <Award size={16} className="mr-2" />
-                Placement Support
-              </Link>
+              {course.title === "AI for Entrepreneurs" ? (
+                <a
+                  href="#why-this-program"
+                  onClick={(e) => {
+                    const target = document.getElementById("why-this-program");
+                    if (!target) return;
+                    e.preventDefault();
+                    // Clear the sticky navbar, plus the sticky sub-nav on desktop
+                    const navbarHeight = document.querySelector("header")?.offsetHeight ?? 60;
+                    const subNavHeight = window.innerWidth >= 1024 ? 60 : 0;
+                    window.scrollTo({
+                      top: target.getBoundingClientRect().top + window.scrollY - navbarHeight - subNavHeight - 16,
+                      behavior: "smooth",
+                    });
+                  }}
+                  className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#013a81] shadow-sm transition-all hover:bg-blue-100 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#013a81]"
+                >
+                  <Award size={16} className="mr-2" />
+                  Why This Program
+                </a>
+              ) : (
+                <Link
+                  href="/alumni"
+                  className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#013a81] shadow-sm transition-all hover:bg-blue-100 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#013a81]"
+                >
+                  <Award size={16} className="mr-2" />
+                  Placement Support
+                </Link>
+              )}
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -1367,6 +1390,64 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
 
 
 
+
+            {/* Founder story cards - AI for Entrepreneurs, small screens only */}
+            {course.title === "AI for Entrepreneurs" && (
+              <div className="mt-4 lg:hidden">
+                <div className="text-white text-sm font-medium">Founder stories</div>
+                <div className="mt-2 grid grid-cols-2 gap-2">
+                  {founderStoryCards.map((founder, index) => {
+                    const s = [
+                      { bg: "from-[#dff0fb] to-white", border: "border-[#a8d8f0]", roleColor: "text-[#0077b6]" },
+                      { bg: "from-[#eee6ff] to-white", border: "border-[#ccb8f7]", roleColor: "text-[#6d28d9]" },
+                      { bg: "from-[#d9f5e8] to-white", border: "border-[#9ddbbf]", roleColor: "text-[#0e7c46]" },
+                      { bg: "from-[#fff0d9] to-white", border: "border-[#f5cc88]", roleColor: "text-[#b45309]" },
+                    ][index % 4];
+                    const storyId = getFounderStoryId(founder.name);
+                    return (
+                      <a
+                        key={founder.name}
+                        href={`#${storyId}`}
+                        onClick={(e) => {
+                          const target = document.getElementById(storyId);
+                          if (!target) return;
+                          e.preventDefault();
+                          const navbarHeight = document.querySelector("header")?.offsetHeight ?? 60;
+                          window.scrollTo({
+                            top: target.getBoundingClientRect().top + window.scrollY - navbarHeight - 16,
+                            behavior: "smooth",
+                          });
+                        }}
+                        aria-label={`Watch ${founder.name}'s founder story`}
+                        className={`bg-gradient-to-b ${s.bg} rounded-xl p-2 flex flex-col items-center text-center gap-1.5 shadow-md border ${s.border} transition-all hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white`}
+                      >
+                        <div className="relative h-20 w-full overflow-hidden rounded-lg bg-white">
+                          <img
+                            src={founder.poster}
+                            alt={founder.name}
+                            loading="lazy"
+                            className="h-full w-full object-cover object-top"
+                          />
+                          <span className="absolute inset-0 flex items-center justify-center">
+                            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white">
+                              <ChevronRight size={18} />
+                            </span>
+                          </span>
+                        </div>
+                        <div className="w-full">
+                          <p className="font-bold text-gray-800 text-[12px] leading-tight line-clamp-1">{founder.name}</p>
+                          <p className={`text-[10px] font-semibold mt-0.5 line-clamp-1 ${s.roleColor}`}>{founder.role}</p>
+                        </div>
+                        <p className={`w-full border-t ${s.border} pt-1 min-h-[34px] text-[10px] leading-snug text-gray-600 line-clamp-2`}>
+                          &ldquo;{founder.quote}&rdquo;
+                        </p>
+                        <span className="text-[10px] font-bold text-[#013a81]">Watch story</span>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Alumni Cards - shown for all applicable courses */}
             {(() => {
