@@ -34,8 +34,17 @@ interface TestimonialStory {
 export const getFounderStoryId = (name: string) =>
   `founder-story-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 
+interface FounderStoryCard {
+  name: string;
+  role: string;
+  quote: string;
+  poster: string;
+  blurBackground?: boolean;
+  centerCropThumbnail?: boolean;
+}
+
 // Short versions for the hero cards on small screens
-export const founderStoryCards = [
+export const founderStoryCards: FounderStoryCard[] = [
   
   {
     name: "Manish Prasad",
@@ -66,12 +75,16 @@ export const founderStoryCards = [
     role: "Interior & Building Materials, Guwahati",
     quote: "I was already using AI. I was just using it wrong.",
     poster: "https://img.youtube.com/vi/Up7kgOB3OxA/hqdefault.jpg",
+    blurBackground: false,
+    centerCropThumbnail: true,
   },
   {
     name: "Chirag Maheshwari",
     role: "Handmade Carpets Exporter, Varanasi",
     quote: "Now I know where AI fits in my business.",
     poster: "https://img.youtube.com/vi/1tPV2TYjBUQ/hqdefault.jpg",
+    blurBackground: false,
+    centerCropThumbnail: true,
   },
 ];
 

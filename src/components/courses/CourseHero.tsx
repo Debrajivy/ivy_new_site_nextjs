@@ -1422,19 +1422,32 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                         className={`bg-gradient-to-b ${s.bg} rounded-xl p-2 flex flex-col items-center text-center gap-1.5 shadow-md border ${s.border} transition-all hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white`}
                       >
                         <div className="relative h-20 w-full overflow-hidden rounded-lg bg-white">
-                          <img
-                            src={founder.poster}
-                            alt=""
-                            aria-hidden="true"
-                            loading="lazy"
-                            className="absolute inset-0 h-full w-full scale-110 object-cover opacity-50 blur-md"
-                          />
-                          <img
-                            src={founder.poster}
-                            alt={founder.name}
-                            loading="lazy"
-                            className="relative h-full w-full object-contain"
-                          />
+                          {founder.blurBackground !== false && (
+                            <img
+                              src={founder.poster}
+                              alt=""
+                              aria-hidden="true"
+                              loading="lazy"
+                              className="absolute inset-0 h-full w-full scale-110 object-cover opacity-50 blur-md"
+                            />
+                          )}
+                          {founder.centerCropThumbnail ? (
+                            <span className="absolute inset-y-0 left-1/2 aspect-[9/16] h-full -translate-x-1/2 overflow-hidden bg-white">
+                              <img
+                                src={founder.poster}
+                                alt={founder.name}
+                                loading="lazy"
+                                className="absolute inset-y-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2 object-cover"
+                              />
+                            </span>
+                          ) : (
+                            <img
+                              src={founder.poster}
+                              alt={founder.name}
+                              loading="lazy"
+                              className="relative h-full w-full object-contain"
+                            />
+                          )}
                           <span className="absolute inset-0 flex items-center justify-center">
                             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white/90 shadow-sm">
                               <Play size={14} fill="currentColor" className="ml-0.5" />
