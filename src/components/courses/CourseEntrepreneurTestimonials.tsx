@@ -78,7 +78,7 @@ const upcomingStories: TestimonialStory[] = [
     description:
       "Palash, Director at Vedas Exports, transformed his SEO, content, and Meta Ads with AI. Make your brand visible on Google and AI platforms. Grow your business with AI!",
     poster: "/videos/palash-testimonial-poster.jpeg",
-    youtubeId: "r2mGbTPkkfw",
+    youtubeId: "ZxQoAOG9sw0",
     linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7516775701237329920/",
   },
   {
@@ -88,7 +88,7 @@ const upcomingStories: TestimonialStory[] = [
     description:
       "Rakesh Pradhan, Performance Marketer, uses AI workflows to automate reporting and connect tools like Meta Ads, Google Analytics, and Search Console. Automate the routine. Focus on growth with AI!",
     poster: "/videos/rakesh-pradhan-testimonial-poster.jpeg",
-    youtubeId: "Str8WoEigKk",
+    youtubeId: "IdYNUNU-NZM",
     linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7516771834504347648",
   },
 ];
@@ -180,10 +180,9 @@ function TestimonialVideo({ name, src, poster }: TestimonialVideoProps) {
 interface TestimonialYoutubeProps {
   name: string;
   videoId: string;
-  poster: string;
 }
 
-function TestimonialYoutube({ name, videoId, poster }: TestimonialYoutubeProps) {
+function TestimonialYoutube({ name, videoId }: TestimonialYoutubeProps) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [hasStarted, setHasStarted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -251,12 +250,6 @@ function TestimonialYoutube({ name, videoId, poster }: TestimonialYoutubeProps) 
 
   return (
     <div className="relative aspect-square shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_35px_rgba(15,23,42,0.1)]">
-      <img
-        src={poster}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-xl"
-      />
       {hasStarted ? (
         <>
           <iframe
@@ -292,12 +285,14 @@ function TestimonialYoutube({ name, videoId, poster }: TestimonialYoutubeProps) 
           aria-label={`Play ${name}'s testimonial video`}
           className="group absolute inset-0 cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-[#009fda]"
         >
-          <img
-            src={poster}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-y-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2"
-          />
+          <span className="absolute inset-y-0 left-1/2 aspect-[9/16] h-full -translate-x-1/2 overflow-hidden bg-white">
+            <img
+              src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-y-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2"
+            />
+          </span>
           <PlayBadge />
           <span className="sr-only">Play testimonial video</span>
         </button>
@@ -350,7 +345,6 @@ export default function CourseEntrepreneurTestimonials() {
             <TestimonialYoutube
               name="Manish Prasad"
               videoId="5bPHckjhgVI"
-              poster="/videos/manish-testimonial-poster.jpeg?v=20261016-131300"
             />
 
             <div className="flex flex-1 flex-col px-1 pt-4">
@@ -397,7 +391,6 @@ export default function CourseEntrepreneurTestimonials() {
                 <TestimonialYoutube
                   name={story.name}
                   videoId={story.youtubeId}
-                  poster={story.poster}
                 />
               ) : story.videoSrc ? (
                 <TestimonialVideo
