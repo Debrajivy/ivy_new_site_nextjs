@@ -40,6 +40,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
     setShowApplyModal(true)
   }, [])
 
+  
   const ApplyNowModal = ({ onClose }: { onClose: () => void }) => {
     useEffect(() => {
       // This is the container element where the iframe will be added
