@@ -86,6 +86,14 @@ export const founderStoryCards: FounderStoryCard[] = [
     blurBackground: false,
     centerCropThumbnail: true,
   },
+  {
+    name: "Piyush Karnani",
+    role: "AI for Entrepreneurs participant",
+    quote: "Same AI. Better prompt. Completely different output.",
+    poster: "https://img.youtube.com/vi/G4oPRPuIk9Q/hqdefault.jpg",
+    blurBackground: false,
+    centerCropThumbnail: true,
+  },
 ];
 
 const upcomingStories: TestimonialStory[] = [
@@ -138,6 +146,17 @@ const upcomingStories: TestimonialStory[] = [
     youtubeId: "1tPV2TYjBUQ",
     linkedinUrl:
       "https://www.linkedin.com/posts/ivy-professional-school_aiforentrepreneurs-ivyproschool-businessgrowth-activity-7519323107245842432-4lw2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC34cOQBDR1p3gUboUFNElELdETV4v0D9r4",
+  },
+  {
+    name: "Piyush Karnani",
+    role: "AI for Entrepreneurs participant",
+    quote: "Same AI. Better prompt. Completely different output.",
+    description:
+      "Listen to Piyush Karnani share how learning structured prompt engineering transformed how he uses AI across marketing, strategy, and business operations!",
+    poster: "https://img.youtube.com/vi/G4oPRPuIk9Q/hqdefault.jpg",
+    youtubeId: "G4oPRPuIk9Q",
+    linkedinUrl:
+      "https://www.linkedin.com/posts/ivy-professional-school_aiforentrepreneurs-ivyproschool-promptengineering-activity-7519336069226610688-78EP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC34cOQBDR1p3gUboUFNElELdETV4v0D9r4",
   },
 ];
 
