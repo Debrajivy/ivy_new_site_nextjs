@@ -34,6 +34,7 @@ export const getFounderStoryId = (name: string) =>
 
 // Short versions for the hero cards on small screens
 export const founderStoryCards = [
+  
   {
     name: "Manish Prasad",
     role: "Infrastructure business owner",
