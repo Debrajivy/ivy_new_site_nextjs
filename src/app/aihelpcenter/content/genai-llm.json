@@ -10,6 +10,14 @@
       "color": "bg-indigo-600",
       "topics": [
         {
+          "id": "prompt-engineering-basics",
+          "metaTitle": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",
+          "title": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",
+          "description": "A step-by-step guide for students: how to tell an AI tool what you need, so you get clear, useful answers.",
+          "duration": "12 min read",
+          "date": "October 23, 2026"
+        },
+        {
           "id": "do-llms-remember-previous-conversations",
           "metaTitle": "Do LLMs Remember Previous Conversations? AI Memory Explained",
           "title": "Do LLMs Remember Previous Conversations? How AI Memory Really Works",

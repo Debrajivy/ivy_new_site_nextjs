@@ -17,6 +17,14 @@
           "duration": "15 min read",
           "date": "May 5, 2026",
           "content": {}
+        },
+        {
+          "id": "data-lake-vs-data-warehouse-vs-data-lakehouse",
+          "metaTitle": "Data Lake vs Data Warehouse vs Data Lakehouse: A Simple Guide for Beginners",
+          "title": "Data Lake vs Data Warehouse vs Data Lakehouse: A Simple Guide for Beginners",
+          "description": "Data warehouse, data lake and data lakehouse explained in simple words with everyday examples, a comparison table, and a guide to choosing the right one.",
+          "duration": "10 min read",
+          "date": "October 23, 2026"
         }
       ]
     },

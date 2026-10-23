@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight,
   Building2,
+  ChevronLeft,
+  ChevronRight,
   Linkedin,
   MessageCircle,
   Play,
@@ -59,6 +61,18 @@ export const founderStoryCards = [
     quote: "I automated my daily and monthly reports!",
     poster: "/videos/rakesh-pradhan-testimonial-poster.jpeg",
   },
+  {
+    name: "Sahil Jain",
+    role: "Interior & Building Materials, Guwahati",
+    quote: "I was already using AI. I was just using it wrong.",
+    poster: "https://img.youtube.com/vi/Up7kgOB3OxA/hqdefault.jpg",
+  },
+  {
+    name: "Chirag Maheshwari",
+    role: "Handmade Carpets Exporter, Varanasi",
+    quote: "Now I know where AI fits in my business.",
+    poster: "https://img.youtube.com/vi/1tPV2TYjBUQ/hqdefault.jpg",
+  },
 ];
 
 const upcomingStories: TestimonialStory[] = [
@@ -91,6 +105,26 @@ const upcomingStories: TestimonialStory[] = [
     poster: "/videos/rakesh-pradhan-testimonial-poster.jpeg",
     youtubeId: "IdYNUNU-NZM",
     linkedinUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7516771834504347648",
+  },
+  {
+    name: "Sahil Jain",
+    role: "Interior & Building Materials, Guwahati",
+    quote: "I was already using AI. I was just using it wrong.",
+    description:
+      "Hear how Sahil Jain (Interior & Building Materials, Guwahati) transformed his entire workflow after joining our AI for Entrepreneurs program!",
+    poster: "https://img.youtube.com/vi/Up7kgOB3OxA/hqdefault.jpg",
+    youtubeId: "Up7kgOB3OxA",
+  },
+  {
+    name: "Chirag Maheshwari",
+    role: "Handmade Carpets Exporter, Varanasi",
+    quote: "Now I know where AI fits in my business.",
+    description:
+      "Hear how Chirag Maheshwari, a Handmade Carpets Exporter from Varanasi, transformed his daily business operations with our AI for Entrepreneurs program!",
+    poster: "https://img.youtube.com/vi/1tPV2TYjBUQ/hqdefault.jpg",
+    youtubeId: "1tPV2TYjBUQ",
+    linkedinUrl:
+      "https://www.linkedin.com/posts/ivy-professional-school_aiforentrepreneurs-ivyproschool-businessgrowth-activity-7519323107245842432-4lw2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC34cOQBDR1p3gUboUFNElELdETV4v0D9r4",
   },
 ];
 
@@ -303,6 +337,24 @@ function TestimonialYoutube({ name, videoId }: TestimonialYoutubeProps) {
 }
 
 export default function CourseEntrepreneurTestimonials() {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isAtStart, setIsAtStart] = useState(true);
+  const [isAtEnd, setIsAtEnd] = useState(false);
+
+  const updateCarouselEdges = () => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    setIsAtStart(carousel.scrollLeft <= 1);
+    setIsAtEnd(carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1);
+  };
+
+  const slideCarousel = (direction: -1 | 1) => {
+    const carousel = carouselRef.current;
+    const firstCard = carousel?.firstElementChild as HTMLElement | null;
+    if (!carousel || !firstCard) return;
+    const gap = Number.parseFloat(getComputedStyle(carousel).columnGap) || 20;
+    carousel.scrollBy({ left: direction * (firstCard.offsetWidth + gap), behavior: "smooth" });
+  };
 
   return (
     <section
@@ -338,10 +390,35 @@ export default function CourseEntrepreneurTestimonials() {
           </a>
         </div>
 
-        <div className="mt-9 grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-7 flex justify-end gap-2" aria-label="Testimonial carousel controls">
+          <button
+            type="button"
+            onClick={() => slideCarousel(-1)}
+            disabled={isAtStart}
+            aria-label="Show previous testimonials"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-[#007eae] shadow-sm transition hover:bg-[#eef8fc] disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            <ChevronLeft size={20} aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            onClick={() => slideCarousel(1)}
+            disabled={isAtEnd}
+            aria-label="Show more testimonials"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-[#007eae] shadow-sm transition hover:bg-[#eef8fc] disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            <ChevronRight size={20} aria-hidden="true" />
+          </button>
+        </div>
+
+        <div
+          ref={carouselRef}
+          onScroll={updateCarouselEdges}
+          className="mt-3 flex snap-x snap-mandatory items-stretch gap-5 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
           <article
             id={getFounderStoryId("Manish Prasad")}
-            className="flex h-full w-full max-w-[340px] flex-col justify-self-center"
+            className="flex h-full w-[min(84vw,340px)] shrink-0 snap-start flex-col sm:basis-[calc((100%-1.25rem)/2)] xl:basis-[calc((100%-3.75rem)/4)]"
           >
             <TestimonialYoutube
               name="Manish Prasad"
@@ -386,7 +463,7 @@ export default function CourseEntrepreneurTestimonials() {
             <article
               key={story.name}
               id={getFounderStoryId(story.name)}
-              className="flex h-full w-full max-w-[340px] flex-col justify-self-center"
+              className="flex h-full w-[min(84vw,340px)] shrink-0 snap-start flex-col sm:basis-[calc((100%-1.25rem)/2)] xl:basis-[calc((100%-3.75rem)/4)]"
             >
               {story.youtubeId ? (
                 <TestimonialYoutube
