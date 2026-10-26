@@ -1813,16 +1813,16 @@ const courses: Course[] = [
         //   { id: "t4", title: "Creating Dashboards (Forms, Dynamic Charts)", duration: "4.5 hrs" }
         // ]
         topics: [
-          { "id": "t1", "title": "Foundations of Artificial Intelligence, Machine Learning & Generative AI", "duration": "" },
-          { "id": "t2", "title": "Understanding Large Language Models (LLMs) and how tools like ChatGPT work", "duration": "" },
-          { "id": "t3", "title": "Prompt Engineering for effective AI interactions and content generation", "duration": "" },
-          { "id": "t4", "title": "AI-powered research, summarization and knowledge management", "duration": "" },
-          { "id": "t5", "title": "Creating text, presentations, reports and professional documents using AI", "duration": "" },
-          { "id": "t6", "title": "Image generation and visual content creation with Generative AI tools", "duration": "" },
-          { "id": "t7", "title": "AI for productivity, workplace automation and task optimization", "duration": "" },
-          { "id": "t8", "title": "Building custom AI assistants and no-code AI applications", "duration": "" },
-          { "id": "t9", "title": "AI for data analysis, insights generation and decision support", "duration": "" },
-          { "id": "t10", "title": "Responsible AI, ethics, privacy and best practices", "duration": "" }
+          { "id": "t1", "title": "Understanding AI and Generative AI: AI vs ML vs GenAI, how LLMs work, tokens and context windows", "duration": "" },
+          { "id": "t2", "title": "Working with ChatGPT, Claude and Gemini: model selection, memory, projects, connected apps", "duration": "" },
+          { "id": "t3", "title": "Prompt Engineering Fundamentals: RICF/RICI framework, zero-shot, few-shot, role prompting", "duration": "" },
+          { "id": "t4", "title": "AI Research, Documents and Presentations: deep research, summarisation, research-to-PPT", "duration": "" },
+          { "id": "t5", "title": "Data Analysis with AI and Excel: data cleaning, formulas, dashboards, insight generation", "duration": "" },
+          { "id": "t6", "title": "AI for Business Operations: bank reconciliation, report comparison, document analysis", "duration": "" },
+          { "id": "t7", "title": "AI Agents and Knowledge Assistants: knowledge bases, tools, scheduled agents", "duration": "" },
+          { "id": "t8", "title": "Skills, Custom GPTs and Gems: Claude Skills, Custom GPTs, Gemini Gems", "duration": "" },
+          { "id": "t9", "title": "Building Business Web Applications with AI: app UI, forms, workflows, HTML dashboards", "duration": "" },
+          { "id": "t10", "title": "Enterprise AI Applications and Capstone Project: APIs, LLM integration, responsible deployment", "duration": "" }
         ]
 
       },

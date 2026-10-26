@@ -52,6 +52,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/courses/iit-data-engineering-course",
+        destination: "/courses/data-engineering-course",
+        permanent: true,
+      },
+      {
         source: "/data-analytics-certification-course",
         destination: "/courses/data-analytics-course",
         permanent: true,

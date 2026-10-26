@@ -27,7 +27,7 @@ const dataEngineeringLinks = [
   related("Data Engineering Course in Kolkata", "/courses/data-engineering-course-kolkata"),
   related("Data Engineering Course in Bangalore", "/courses/data-engineering-course-bangalore"),
   related("Data Engineering Course in Delhi", "/courses/data-engineering-course-delhi"),
-  related("IIT Guwahati Data Engineering Course", "/courses/iit-data-engineering-course"),
+  related("Data Engineering Course", "/courses/data-engineering-course"),
   related("Star Schema vs Snowflake Schema", "/aihelpcenter/data-engineering/star-schema-vs-snowflake-schema"),
   related("Data Analytics Course", "/courses/data-analytics-course"),
 ]
