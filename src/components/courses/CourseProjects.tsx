@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Course } from '@/lib/api';
+import type { Course, Project } from '@/lib/api';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -29,6 +29,26 @@ import Image from 'next/image';
 interface CourseProjectsProps {
   course: Course;
 }
+
+const ProjectDifficultyBadge = ({ difficulty }: { difficulty: Project['difficulty'] }) => {
+  const isProgression = difficulty.includes(' to ');
+  const progressionStyle = difficulty.startsWith('Intermediate')
+    ? 'border-indigo-200 bg-gradient-to-r from-indigo-50 to-violet-50 text-indigo-700'
+    : 'border-sky-200 bg-gradient-to-r from-sky-50 to-blue-50 text-[#013a81]';
+
+  return (
+    <Badge
+      variant={isProgression ? 'outline' :
+        difficulty === 'Beginner' ? 'secondary' :
+          difficulty === 'Intermediate' ? 'default' : 'destructive'}
+      className={isProgression
+        ? `self-start shrink-0 whitespace-nowrap px-3 py-1 text-[11px] font-bold tracking-tight shadow-sm sm:ml-3 sm:self-auto ${progressionStyle}`
+        : 'self-start sm:self-auto'}
+    >
+      {isProgression ? difficulty.replace(' to ', ' → ') : difficulty}
+    </Badge>
+  );
+};
 
 const CourseProjects = ({ course }: CourseProjectsProps) => {
   if (!course.projects || course.projects.length === 0) {
@@ -128,13 +148,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                           <CardContent className="pt-6 flex-grow">
                             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 gap-2 sm:gap-0">
                               <h4 className="font-bold text-lg">{project.title}</h4>
-                              <Badge
-                                variant={project.difficulty === 'Beginner' ? 'secondary' :
-                                  project.difficulty === 'Intermediate' ? 'default' : 'destructive'}
-                                className="self-start sm:self-auto"
-                              >
-                                {project.difficulty}
-                              </Badge>
+                              <ProjectDifficultyBadge difficulty={project.difficulty} />
                             </div>
                             <p className="text-gray-600 text-sm mb-4">{project.description}</p>
                             <div className="flex flex-wrap gap-2 mb-4">
@@ -210,13 +224,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                               <CardContent className="pt-6 flex-grow">
                                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 gap-2 sm:gap-0">
                                   <h4 className="font-bold text-lg">{project.title}</h4>
-                                  <Badge
-                                    variant={project.difficulty === 'Beginner' ? 'secondary' :
-                                      project.difficulty === 'Intermediate' ? 'default' : 'destructive'}
-                                    className="self-start sm:self-auto"
-                                  >
-                                    {project.difficulty}
-                                  </Badge>
+                                  <ProjectDifficultyBadge difficulty={project.difficulty} />
                                 </div>
                                 <p className="text-gray-600 text-sm mb-4">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 mb-4">
@@ -297,13 +305,7 @@ const CourseProjects = ({ course }: CourseProjectsProps) => {
                               <CardContent className="pt-6 flex-grow">
                                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 gap-2 sm:gap-0">
                                   <h4 className="font-bold text-lg">{project.title}</h4>
-                                  <Badge
-                                    variant={project.difficulty === 'Beginner' ? 'secondary' :
-                                      project.difficulty === 'Intermediate' ? 'default' : 'destructive'}
-                                    className="self-start sm:self-auto"
-                                  >
-                                    {project.difficulty}
-                                  </Badge>
+                                  <ProjectDifficultyBadge difficulty={project.difficulty} />
                                 </div>
                                 <p className="text-gray-600 text-sm mb-4">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 mb-4">
