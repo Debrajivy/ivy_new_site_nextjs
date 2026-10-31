@@ -94,6 +94,14 @@ export const founderStoryCards: FounderStoryCard[] = [
     blurBackground: false,
     centerCropThumbnail: true,
   },
+  {
+    name: "Raja Banka",
+    role: "Director, Shree Consultants",
+    quote: "AI doesn't know your industry. Your prompt has to.",
+    poster: "https://img.youtube.com/vi/EouiOPke9LM/hqdefault.jpg",
+    blurBackground: false,
+    centerCropThumbnail: true,
+  },
 ];
 
 const upcomingStories: TestimonialStory[] = [
@@ -157,6 +165,16 @@ const upcomingStories: TestimonialStory[] = [
     youtubeId: "G4oPRPuIk9Q",
     linkedinUrl:
       "https://www.linkedin.com/posts/ivy-professional-school_aiforentrepreneurs-ivyproschool-promptengineering-activity-7519336069226610688-78EP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC34cOQBDR1p3gUboUFNElELdETV4v0D9r4",
+  },
+  {
+    name: "Raja Banka",
+    role: "Director, Shree Consultants",
+    quote: "AI doesn't know your industry. Your prompt has to.",
+    description:
+      "Raja, an alumnus of Ivy's AI for Entrepreneurs course, transformed tedious Excel reporting for his team. You don't need a tech background to build custom AI tools tailored to your business operations.",
+    poster: "https://img.youtube.com/vi/EouiOPke9LM/hqdefault.jpg",
+    youtubeId: "EouiOPke9LM",
+    linkedinUrl: "https://www.linkedin.com/in/raja-banka-b2a36587/",
   },
 ];
 
