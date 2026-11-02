@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import styles from "./article.module.css";
 import { articleMarkup } from "./article-markup";
+import TutorialVideo from "./TutorialVideo";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -124,6 +125,10 @@ export const metadata: Metadata = {
 };
 
 export default function PandasDataCleaningTutorialPage() {
+  const heroEnd = articleMarkup.indexOf("</header>") + "</header>".length;
+  const heroMarkup = articleMarkup.slice(0, heroEnd);
+  const bodyMarkup = articleMarkup.slice(heroEnd);
+
   return (
     <>
       <script
@@ -134,10 +139,11 @@ export default function PandasDataCleaningTutorialPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
-      <div
-        className={`${styles.page} ${montserrat.variable} ${poppins.variable}`}
-        dangerouslySetInnerHTML={{ __html: articleMarkup }}
-      />
+      <div className={`${styles.page} ${montserrat.variable} ${poppins.variable}`}>
+        <div dangerouslySetInnerHTML={{ __html: heroMarkup }} />
+        <TutorialVideo />
+        <div dangerouslySetInnerHTML={{ __html: bodyMarkup }} />
+      </div>
     </>
   );
 }

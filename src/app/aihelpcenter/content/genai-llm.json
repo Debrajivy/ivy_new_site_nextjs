@@ -18,6 +18,14 @@
           "date": "October 23, 2026"
         },
         {
+          "id": "advanced-prompting",
+          "metaTitle": "Advanced Prompting: Few-Shot, Chain-of-Thought and Structured Outputs",
+          "title": "Advanced Prompting: Few-Shot Examples, Chain-of-Thought and Structured Outputs",
+          "description": "Use few-shot examples, directed reasoning, structured outputs and prompt chains to make AI responses more dependable.",
+          "duration": "14 min read",
+          "date": "November 2, 2026"
+        },
+        {
           "id": "do-llms-remember-previous-conversations",
           "metaTitle": "Do LLMs Remember Previous Conversations? AI Memory Explained",
           "title": "Do LLMs Remember Previous Conversations? How AI Memory Really Works",
@@ -1927,11 +1935,11 @@
       "topics": [
         {
           "id": "connecting-llms-to-sql",
-          "metaTitle": "Connecting LLMs to SQL Using Text-to-SQL Agents | GenAI Guide",
-          "title": "Connecting LLMs to SQL Using Text-to-SQL Agents",
-          "description": "A practical guide to conversational database intelligence â€” query any SQL database using plain English with AI-powered Text-to-SQL agents",
-          "duration": "12 min read",
-          "date": "March 13, 2026",
+          "metaTitle": "Connecting LLMs to SQL Using Text-to-SQL Agents: A Beginner's Guide",
+          "title": "Connecting LLMs to SQL Using Text-to-SQL Agents: A Beginner's Guide",
+          "description": "Learn how a text-to-SQL agent turns plain-English questions into checked SQL queries, where it can fail, and how to build one safely.",
+          "duration": "18 min read",
+          "date": "November 2, 2026",
           "content": {
             "hero": {
               "title": "Connecting LLMs to SQL Using Text-to-SQL Agents",
