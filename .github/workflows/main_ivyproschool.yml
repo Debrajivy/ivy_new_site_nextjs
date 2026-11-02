@@ -54,9 +54,7 @@ jobs:
           NEXT_PUBLIC_LEAD_SQUARED_SECRET_KEY: ${{ secrets.NEXT_PUBLIC_LEAD_SQUARED_SECRET_KEY }}
         run: npm run build
 
-      - name: Remove dev dependencies
-        run: npm prune --omit=dev
-
+      # Do NOT prune devDependencies: `next start` needs TypeScript to read next.config.ts.
       # One zip file uploads far faster than thousands of loose node_modules files.
       - name: Zip app for deployment
         run: zip -r -q -y release.zip . -x ".git/*" ".github/*" ".next/cache/*"
@@ -85,4 +83,7 @@ jobs:
           app-name: 'ivyproschool'
           slot-name: 'Production'
           package: release.zip
+          type: ZIP
+          clean: true
+          restart: true
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A6EEFF2DAFDF41C6850CCCC675805C05 }}
