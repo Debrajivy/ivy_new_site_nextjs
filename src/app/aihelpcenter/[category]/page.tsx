@@ -125,6 +125,7 @@ export default function CategoryPage({ params }: PageProps) {
       'do-llms-remember-previous-conversations',
       'what-is-generative-ai',
       'what-an-embedding-actually-is',
+      'rag-explained-how-to-make-ai-answer-from-your-data',
       'how-are-llms-trained',
       'how-do-llm-context-windows-work',
       'harness-engineering-in-ai',

@@ -1,10 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Badge } from "@/components/ui/badge";
+import AgentHeroImage from "@/assests/agent.png";
 import {
   ArrowRight,
   CalendarDays,
@@ -37,7 +39,120 @@ interface UpcomingBootcamp {
   outcomes: string[];
 }
 
+interface CountdownState {
+  status: "upcoming" | "live" | "ended";
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+const zoomMeetingUrl =
+  "https://us02web.zoom.us/j/88210597294?pwd=uWE5rS4XBvPPysH3TNtDvmi4ehJeCO.1";
+const sessionStartTime = new Date("2026-11-04T19:00:00+05:30").getTime();
+const sessionEndTime = new Date("2026-11-04T20:00:00+05:30").getTime();
+
+const getCountdown = (): CountdownState => {
+  const now = Date.now();
+
+  if (now >= sessionEndTime) {
+    return { status: "ended", days: 0, hours: 0, minutes: 0, seconds: 0 };
+  }
+
+  if (now >= sessionStartTime) {
+    return { status: "live", days: 0, hours: 0, minutes: 0, seconds: 0 };
+  }
+
+  const remaining = sessionStartTime - now;
+
+  return {
+    status: "upcoming",
+    days: Math.floor(remaining / 86_400_000),
+    hours: Math.floor((remaining / 3_600_000) % 24),
+    minutes: Math.floor((remaining / 60_000) % 60),
+    seconds: Math.floor((remaining / 1_000) % 60),
+  };
+};
+
+const LiveSessionCountdown = () => {
+  const [countdown, setCountdown] = useState<CountdownState | null>(null);
+
+  useEffect(() => {
+    const updateCountdown = () => setCountdown(getCountdown());
+    updateCountdown();
+    const timer = window.setInterval(updateCountdown, 1_000);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
+  if (countdown?.status === "live") {
+    return (
+      <a
+        href={zoomMeetingUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 flex w-full max-w-2xl items-center justify-center gap-3 rounded-xl border border-red-300/40 bg-red-500 px-5 py-4 text-sm font-black uppercase tracking-wider text-white shadow-lg shadow-red-950/20 transition-transform hover:scale-[1.01]"
+      >
+        <span className="relative flex h-3 w-3">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+          <span className="relative inline-flex h-3 w-3 rounded-full bg-white" />
+        </span>
+        Live now — join the Zoom class
+      </a>
+    );
+  }
+
+  if (countdown?.status === "ended") {
+    return (
+      <div className="mt-6 max-w-2xl rounded-xl border border-white/15 bg-white/10 px-5 py-4 text-center text-sm font-bold text-slate-100">
+        This live session has ended.
+      </div>
+    );
+  }
+
+  const units = [
+    { label: "Days", value: countdown?.days },
+    { label: "Hours", value: countdown?.hours },
+    { label: "Minutes", value: countdown?.minutes },
+    { label: "Seconds", value: countdown?.seconds },
+  ];
+
+  return (
+    <div className="mt-6 max-w-2xl rounded-xl border border-white/15 bg-slate-950/20 p-4 backdrop-blur-sm">
+      <p className="mb-3 text-center text-xs font-bold uppercase tracking-[0.2em] text-cyan-200">Class starts in</p>
+      <div className="grid grid-cols-4 gap-2 sm:gap-3">
+        {units.map((unit) => (
+          <div key={unit.label} className="rounded-lg border border-white/10 bg-white/10 px-2 py-3 text-center">
+            <p className="text-xl font-black tabular-nums text-white sm:text-2xl">
+              {unit.value === undefined ? "--" : String(unit.value).padStart(2, "0")}
+            </p>
+            <p className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-slate-300 sm:text-xs">{unit.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const latestRecordings: BootcampRecording[] = [
+  {
+    id: "prompt-ai-like-pro",
+    videoId: "hrI8UfZg9A4",
+    title: "How to Prompt AI Like a Pro at Work | Full Masterclass with Arpan Saxena",
+    category: "AI Apps",
+    youtubeUrl: "https://www.youtube.com/live/hrI8UfZg9A4?si=Pnr_KGZJ2jm8B2ug",
+    thumbnail: "https://i.ytimg.com/vi/hrI8UfZg9A4/hqdefault.jpg",
+    summary: "Learn practical prompting techniques for getting clearer, more useful results from AI in everyday professional workflows.",
+  },
+  {
+    id: "rag-ai-agents-agentic-ai",
+    videoId: "o6ZjB25OmFE",
+    title: "RAG vs. AI Agents vs. Agentic AI Explained LIVE | Free Bootcamp by Ivy Professional School",
+    category: "AI Agent",
+    youtubeUrl: "https://www.youtube.com/live/o6ZjB25OmFE?si=9IQYqT_lfTkjvUTT",
+    thumbnail: "https://i.ytimg.com/vi/o6ZjB25OmFE/hqdefault.jpg",
+    summary: "Understand the differences between RAG, AI agents, and agentic AI through a practical live bootcamp.",
+  },
   {
     id: "de-ai-era",
     videoId: "gJaAinGssMY",
@@ -86,14 +201,14 @@ const latestRecordings: BootcampRecording[] = [
 ];
 
 const upcomingBootcamp: UpcomingBootcamp = {
-  title: "Live Data & AI Career Bootcamp",
-  date: "New schedule opening soon",
-  time: "Evening live session",
+  title: "FREE Live Session: Build Your First AI Agent Live, No Heavy Coding",
+  date: "4 November 2026 (Wednesday)",
+  time: "7:00 PM – 8:00 PM IST",
   mentor: "Ivy Professional School faculty",
   outcomes: [
-    "Understand current Data, AI, and Analytics career paths",
-    "See practical workflows used by working professionals",
-    "Get a clear next-step roadmap for hands-on learning",
+    "Build your first working AI agent during the live class",
+    "Understand the agent workflow without heavy coding",
+    "Leave with a practical roadmap for building more AI agents",
   ],
 };
 
@@ -108,12 +223,10 @@ const categoryStyles: Record<BootcampCategory, string> = {
 const stats = [
   { label: "Learners reached", value: "1 Lakh+" },
   { label: "Success alumni", value: "37K+" },
-  { label: "Latest recordings", value: "5" },
+  { label: "Latest recordings", value: "7" },
 ];
 
 const BootcampPage = () => {
-  const featuredRecording = latestRecordings[0];
-
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <Navbar />
@@ -137,25 +250,34 @@ const BootcampPage = () => {
 
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-sm text-slate-100">
-                <Sparkles className="h-4 w-4 text-[#7dd3e8]" />
-                Free live workshops and recorded masterclasses
+              <div className="mb-4 inline-flex animate-pulse items-center gap-2 rounded-full border border-red-300/40 bg-red-500/20 px-3 py-1 text-sm font-bold text-white">
+                <span className="relative flex h-3 w-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-300 opacity-75" />
+                  <span className="relative inline-flex h-3 w-3 rounded-full bg-red-400" />
+                </span>
+                FREE live session today
               </div>
               <h1 className="max-w-3xl text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
-                Data & AI bootcamps built for serious upskilling
+                FREE Live Session: Build Your First AI Agent Live, No Heavy Coding
               </h1>
               <p className="mt-5 max-w-2xl text-base leading-7 text-slate-200 md:text-lg">
-                Join practical sessions on Data Engineering, AI agents, SQL, Claude AI, and analytics workflows. Learn through real demos instead of generic lectures.
+                <strong className="text-white">Wednesday, 4 November 2026</strong>
+                <span className="mx-2 text-cyan-300">•</span>
+                Class starts from <strong className="text-white">7:00 PM – 8:00 PM IST</strong>
               </p>
 
+              <LiveSessionCountdown />
+
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/bootcampregister"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#4eaec3] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-black/10 transition-colors hover:bg-[#3f9db1]"
+                <a
+                  href={zoomMeetingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex animate-pulse items-center justify-center gap-2 rounded-lg bg-red-500 px-5 py-3 text-sm font-black text-white shadow-lg shadow-red-950/30 transition-all hover:animate-none hover:bg-red-400"
                 >
-                  Register for next bootcamp
+                  Join Live Class on Zoom
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
                 <a
                   href="#recordings"
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/10 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-white/15"
@@ -176,28 +298,31 @@ const BootcampPage = () => {
             </div>
 
             <a
-              href={featuredRecording.youtubeUrl}
+              href={zoomMeetingUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group block overflow-hidden rounded-2xl border border-white/15 bg-white shadow-2xl shadow-black/20"
             >
               <div className="relative aspect-video overflow-hidden bg-slate-900">
-                <img
-                  src={featuredRecording.thumbnail}
-                  alt={featuredRecording.title}
+                <Image
+                  src={AgentHeroImage}
+                  alt="Build your first AI Agent live with Ivy Professional School"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 46vw, 100vw"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  onError={(event) => {
-                    event.currentTarget.src = `https://img.youtube.com/vi/${featuredRecording.videoId}/hqdefault.jpg`;
-                  }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
                 <div className="absolute left-5 top-5">
-                  <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-900">Latest bootcamp</span>
+                  <span className="inline-flex animate-pulse items-center gap-2 rounded-full bg-red-500 px-3 py-1 text-xs font-black uppercase tracking-wide text-white shadow-lg">
+                    <span className="h-2 w-2 rounded-full bg-white" />
+                    Free live session
+                  </span>
                 </div>
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
-                  <p className="text-lg font-bold leading-snug text-white">{featuredRecording.title}</p>
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#4eaec3] text-white shadow-lg transition-transform group-hover:scale-105">
-                    <PlayCircle className="h-6 w-6" />
+                  <p className="text-lg font-bold leading-snug text-white">Click to join the live class on Zoom</p>
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red-500 text-white shadow-lg transition-transform group-hover:scale-110">
+                    <ArrowRight className="h-6 w-6" />
                   </span>
                 </div>
               </div>
@@ -239,15 +364,17 @@ const BootcampPage = () => {
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4eaec3]">Next live bootcamp</p>
               <h2 className="mt-3 text-3xl font-extrabold text-slate-900 md:text-4xl">{upcomingBootcamp.title}</h2>
               <p className="mt-4 text-slate-600">
-                A focused learning session for people who want to understand where data and AI skills are moving, and what to practice next.
+                Join this free hands-on class to build your first AI agent live. No heavy coding experience is required.
               </p>
-              <Link
-                href="/bootcampregister"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#013a81] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#0b4c9a]"
+              <a
+                href={zoomMeetingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-red-500 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-red-600"
               >
-                Register interest
+                Join on Zoom
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
             </div>
 
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -271,7 +398,7 @@ const BootcampPage = () => {
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#4eaec3]">Past bootcamps</p>
                 <h2 className="mt-3 text-3xl font-extrabold text-slate-900 md:text-4xl">Latest session recordings</h2>
                 <p className="mt-3 max-w-2xl text-slate-600">
-                  Watch the five most recent hands-on bootcamps from Ivy Professional School.
+                  Watch the seven most recent hands-on bootcamps from Ivy Professional School.
                 </p>
               </div>
               <a

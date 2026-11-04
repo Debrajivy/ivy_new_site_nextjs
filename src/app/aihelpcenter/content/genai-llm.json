@@ -10,6 +10,14 @@
       "color": "bg-indigo-600",
       "topics": [
         {
+          "id": "rag-explained-how-to-make-ai-answer-from-your-data",
+          "metaTitle": "RAG Explained: How to Make AI Answer From Your Data",
+          "title": "RAG Explained: How to Make AI Answer From Your Data",
+          "description": "Learn how retrieval-augmented generation grounds AI answers in your documents, where RAG fails, and how to build a mini-RAG.",
+          "duration": "12–14 min read",
+          "date": "November 4, 2026"
+        },
+        {
           "id": "prompt-engineering-basics",
           "metaTitle": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",
           "title": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",
