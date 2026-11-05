@@ -100,6 +100,8 @@ import SouvikBoseImg from "@/assests/alumni/SouvikBose.webp";
 import SouvikBoseCurImg from "@/assests/company/SouvikBosecur.webp";
 import type { StaticImageData } from "next/image";
 import { founderStoryCards, getFounderStoryId } from "@/components/courses/CourseEntrepreneurTestimonials";
+import CourseHeroBootcamps from "@/components/courses/CourseHeroBootcamps";
+import { showsBootcampRecordings } from "@/data/bootcamps";
 
 interface HeroAlumni {
   name: string;
@@ -505,13 +507,14 @@ const CourseHero = ({ course }: CourseHeroProps) => {
     course.title === "Data Science with Machine Learning & AI Certification" ||
     course.title === "Generative AI Course" ||
     course.title === "Cloud Data Engineering Course with IIT Guwahati";
+  const showBootcamps = showsBootcampRecordings(course.slug);
   return (
     <section
       style={{ marginTop: -30 }}
       className="py-10 text-white bg-gradient-to-r from-ivy-blue to-ivy-orange"
     >
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 ${showBootcamps ? "items-stretch" : "items-center"}`}>
           <div className="space-y-6">
             <div style={{ marginTop: 10 }} className="flex flex-col">
               <Badge
@@ -1618,7 +1621,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
 
           </div>
 
-          <div style={{ marginTop: 30 }}>
+          <div style={{ marginTop: 30 }} className={showBootcamps ? "lg:flex lg:flex-col" : undefined}>
 
             {course.title === "AI for Entrepreneurs" && (
   <div className="mb-4 rounded-xl overflow-hidden shadow-lg">
@@ -1743,7 +1746,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                 )}
               </div>
             )} */}
-            <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-6 w-full h-full flex flex-col">
+            <div className={`bg-white border border-gray-200 rounded-xl shadow-lg p-6 w-full flex flex-col ${showBootcamps ? "" : "h-full"}`}>
               <div className="text-center mb-6">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                   Join Two Classes for{" "}
@@ -1934,6 +1937,8 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
 
               </form>
             </div>
+            {/* AI for Beginners has a short left column; show the full-size card there even though the hero grows */}
+            {showBootcamps && <CourseHeroBootcamps fitToSpace={course.slug !== "ai-for-beginners-course"} />}
           </div>
         </div>
       </div>
