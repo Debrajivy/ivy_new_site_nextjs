@@ -323,6 +323,14 @@
           "date": "October 29, 2026"
         },
         {
+          "id": "reshaping-dataframes-melt-pivot",
+          "metaTitle": "Reshaping DataFrames in Pandas Using melt and pivot",
+          "title": "Reshaping DataFrames in Pandas Using melt and pivot",
+          "description": "Switch between wide and long data with melt and pivot, fix the duplicate-entries error, and know when to use pivot_table instead.",
+          "duration": "9 min read",
+          "date": "November 10, 2026"
+        },
+        {
           "id": "polars-library",
           "metaTitle": "Polars Library in Python | Complete DataFrame Guide",
           "title": "Polars Library",
