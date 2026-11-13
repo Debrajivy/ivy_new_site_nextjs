@@ -10,6 +10,7 @@ import { MessageCircle } from 'lucide-react';
 // Data & Components
 import { allAlumni, filterCategories, type AlumniData } from "@/lib/alumni-data"
 import AlumniProfileSidebar from "@/components/AlumniProfileSidebar"
+import RegisterModal from "@/components/shared/RegisterModal"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import Placeholder from "@/assests/placeholder.png"
@@ -47,6 +48,7 @@ const Alumni = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [visibleCount, setVisibleCount] = useState(9)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768
 
   // --- SEO SCHEMA GENERATION ---
@@ -245,16 +247,29 @@ const Alumni = () => {
                 </div>
 
                 <div className="mb-6 text-center">
-                  <div className={`inline-block px-5 py-2 rounded-full text-[11px] font-extrabold ${alumni.name === "Abhinav Sinha" || alumni.name === "Priti Jha"
-                    ? "bg-[#e8f5e9] text-[#2e7d32]" : "bg-gray-100 text-gray-500"}`}>
-                    {alumni.name === "Abhinav Sinha" ? "400% hike after Ivy Pro School" :
-                      alumni.name === "Priti Jha" ? "200% hike after Ivy Pro School" :
-                        "Connect to see Salary Hike"}
-                  </div>
+                  {alumni.name === "Abhinav Sinha" || alumni.name === "Priti Jha" ? (
+                    <div className="inline-block px-5 py-2 rounded-full text-[11px] font-extrabold bg-[#e8f5e9] text-[#2e7d32]">
+                      {alumni.name === "Abhinav Sinha" ? "400% hike after Ivy Pro School" : "200% hike after Ivy Pro School"}
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setShowRegisterModal(true)}
+                      className="inline-block px-5 py-2 rounded-full text-[11px] font-extrabold bg-gray-100 text-gray-500 hover:bg-[#009fda] hover:text-white transition-colors cursor-pointer"
+                    >
+                      Connect to see Salary Hike
+                    </button>
+                  )}
                 </div>
 
                 <div className="mt-auto flex border-t border-gray-100 pt-4 items-center justify-between">
-                  <button className="text-[11px] font-black text-gray-800 hover:text-[#009fda]">CONNECT {">"}</button>
+                  <button
+                    type="button"
+                    onClick={() => setShowRegisterModal(true)}
+                    className="text-[11px] font-black text-gray-800 hover:text-[#009fda]"
+                  >
+                    CONNECT {">"}
+                  </button>
                   <button
                     onClick={() => { setSelectedAlumni(alumni); setIsSidebarOpen(true) }}
                     className="text-[11px] font-black text-[#009fda] hover:underline"
@@ -322,6 +337,10 @@ const Alumni = () => {
 
         {selectedAlumni && (
           <AlumniProfileSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} alumnus={selectedAlumni} />
+        )}
+
+        {showRegisterModal && (
+          <RegisterModal onClose={() => setShowRegisterModal(false)} />
         )}
       </div>
       <Footer />

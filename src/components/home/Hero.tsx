@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import AutpPlayYoutube from '../AutoPlayYoutube';
 import Link from 'next/link';
 import RegisterModal from '@/components/shared/RegisterModal';
+import { trackOpenAILead } from '@/lib/openaiPixel';
 
 const Hero = () => {
 
@@ -106,6 +107,7 @@ const Hero = () => {
         if (result && result.Status === "Success") {
           setSubmitStatus('success');
           setSubmitMessage('Form submitted successfully!');
+          trackOpenAILead(); // OpenAI Ads: lead confirmed by LeadSquared
 
           // ✅ Redirect to Thank You page after submission
           setTimeout(() => {

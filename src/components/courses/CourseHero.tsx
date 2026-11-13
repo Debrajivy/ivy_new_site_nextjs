@@ -63,8 +63,8 @@ import TanmayChakrabortyImg from "@/assests/alumni/TanmayChakraborty.webp";
 import TanmayChakrabortyCurImg from "@/assests/company/TanmayChakrabortyCur.webp";
 import TaniaLahaImg from "@/assests/alumni/TaniaLaha.webp";
 import TaniaLahaCurImg from "@/assests/company/TaniaLahaCur.webp";
-import SatyajitPramanikImg from "@/assests/alumni/SatyajitPramanik.webp";
-import SatyajitPramanikCurImg from "@/assests/company/SatyajitPramanikCur.webp";
+import ShamboSekharGhoshImg from "@/assests/alumni/ShamboSekharGhosh.webp";
+import ShamboSekharGhoshCurImg from "@/assests/company/ShamboSekharGhoshCur.webp";
 import PritiJhaCurImg from "@/assests/company/PritiJhaCur.webp";
 import AnishBanerjeeCurImg from "@/assests/company/AnishBanerjeeCur.webp";
 import PranabKumarPaulCurImg from "@/assests/company/PranabKumarPaulCur.webp";
@@ -74,8 +74,6 @@ import RajdeepTaluckdarImg from "@/assests/alumni/RajdeepTaluckdar.webp";
 import RajdeepTaluckdarCurImg from "@/assests/company/RajdeepTaluckdarCur.webp";
 import SohiniDasImg from "@/assests/alumni/SohiniDas.webp";
 import SohiniDasCurImg from "@/assests/company/SohiniDasCur.webp";
-import AnimeshSinghImg from "@/assests/alumni/AnimeshSingh.webp";
-import AnimeshSinghCurImg from "@/assests/company/AnimeshSinghCur.webp";
 import MrinalDharImg from "@/assests/alumni/MrinalDhar.webp";
 import MrinalDharCurImg from "@/assests/company/MrinalDharCur.webp";
 import AnkitaPaulImg from "@/assests/alumni/AnkitaPaul.webp";
@@ -102,6 +100,7 @@ import type { StaticImageData } from "next/image";
 import { founderStoryCards, getFounderStoryId } from "@/components/courses/CourseEntrepreneurTestimonials";
 import CourseHeroBootcamps from "@/components/courses/CourseHeroBootcamps";
 import { showsBootcampRecordings } from "@/data/bootcamps";
+import { trackOpenAILead } from "@/lib/openaiPixel";
 
 interface HeroAlumni {
   name: string;
@@ -114,7 +113,7 @@ const dsAlumni: HeroAlumni[] = [
   { name: "Aditya Kumar Barik", role: "Data Scientist", image: AdityaKumarBarikImg, company: AdityaKumarBarikCurImg },
   { name: "Tanmay Chakraborty", role: "ML Engineer", image: TanmayChakrabortyImg, company: TanmayChakrabortyCurImg },
   { name: "Tania Laha", role: "Decision Scientist", image: TaniaLahaImg, company: TaniaLahaCurImg },
-  { name: "Satyajit Pramanik", role: "Data Analyst", image: SatyajitPramanikImg, company: SatyajitPramanikCurImg },
+  { name: "Shambo Sekhar Ghosh", role: "Data Scientist", image: ShamboSekharGhoshImg, company: ShamboSekharGhoshCurImg },
 ];
 const genAIAlumni: HeroAlumni[] = [
   { name: "Priti Jha", role: "Business Analyst", image: PritiJha, company: PritiJhaCurImg },
@@ -132,7 +131,7 @@ const dataEngAlumni: HeroAlumni[] = [
   { name: "Rajdeep Taluckdar", role: "Data Engineer", image: RajdeepTaluckdarImg, company: RajdeepTaluckdarCurImg },
   { name: "Kinjal Dasgupta", role: "Data Engineer (BI)", image: KinjalDasguptaImg, company: KinjalDasguptaCurImg },
   { name: "Sohini Das", role: "Data Engineer", image: SohiniDasImg, company: SohiniDasCurImg },
-  { name: "Animesh Singh", role: "Information Analyst II", image: AnimeshSinghImg, company: AnimeshSinghCurImg },
+  { name: "Pranab Kumar Paul", role: "Cloud Big-Data Engineer", image: PranabKumarPaul, company: PranabKumarPaulCurImg },
 ];
 const dataVizAlumni: HeroAlumni[] = [
   { name: "Sayan Nayak", role: "Senior Analyst-Decision Science", image: SayanNayakImg, company: SayanNayakCurImg },
@@ -168,14 +167,13 @@ const heroAlumniReviews: Record<string, string> = {
   "Aditya Kumar Barik": "Ivy helped me move from Python development into a Data Scientist role.",
   "Tanmay Chakraborty": "The ML training helped me grow into a Machine Learning Engineer.",
   "Tania Laha": "Ivy's data science learning path supported my move into decision science.",
-  "Satyajit Pramanik": "The program helped me transition from risk analysis to data analytics.",
+  "Shambo Sekhar Ghosh": "Ivy helped me move from business analysis into a Data Scientist role.",
   "Priti Jha": "Ivy helped me build the analytics confidence for my Business Analyst role.",
   "Anish Banerjee": "The training helped me move from data quality work into an Associate role.",
   "Pranab Kumar Paul": "Ivy helped me shift from process operations into cloud big-data engineering.",
   "Kinjal Dasgupta": "The data training helped me grow into a Data Engineer BI role.",
   "Rajdeep Taluckdar": "Ivy helped me transition from risk operations to data engineering.",
   "Sohini Das": "The program helped me move from market research into data engineering.",
-  "Animesh Singh": "Ivy's analytics training helped me step into an Information Analyst role.",
   "Sayan Nayak": "The visualization training helped me grow in decision science analytics.",
   "Soumalya Dutta": "Ivy helped me move from software testing into research analytics.",
   "Senjuti Das": "The data visualization path supported my growth into consulting.",
@@ -435,6 +433,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
         const result = await response.json();
 
         if (result && result.Status === "Success") {
+          trackOpenAILead(); // OpenAI Ads: lead confirmed by LeadSquared (enquiry + brochure)
           setSubmitStatus("success");
           setSubmitMessage(
             pendingSyllabusUrl

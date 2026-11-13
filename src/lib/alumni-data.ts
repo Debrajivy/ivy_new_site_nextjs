@@ -256,6 +256,19 @@ import SayaniHaldar from "@/assests/alumni/SayaniHaldar.webp";
 import SKFerozAli from "@/assests/alumni/SKFerozAli.webp";
 import SoumyadeepSen from "@/assests/alumni/SoumyadeepSen.webp";
 import TanmayChakraborty from "@/assests/alumni/TanmayChakraborty.webp";
+// Recent alumni (Nov 2026)
+import ManasKumar from "@/assests/alumni/Manas_Kumar_Profile_Picture.jpg";
+import ManasKumarPre from "@/assests/alumni/Manas_Kumar_Previous_Company_HUL_logo.jpg";
+import ManasKumarCur from "@/assests/alumni/Manas_Kumar_Current_Company_SITA_Fashions_logo.webp";
+import SrinjanaDatta from "@/assests/alumni/Srinjana_Datta_Profile_Picture.png";
+import SrinjanaDattaPre from "@/assests/alumni/Srinjana_Datta_Previous_Company_Reddensoft_logo.jpg";
+import SrinjanaDattaCur from "@/assests/alumni/Srinjana_Datta_Current_Company_Coalsale_logo.jpg";
+import DaipayanChatterjee from "@/assests/alumni/Daipayan_Chatterjee_Profile_Picture.jpg";
+import DaipayanChatterjeePre from "@/assests/alumni/Daipayan_Chatterjee_Previous_Company_NbliK_AI_logo.jpg";
+import DaipayanChatterjeeCur from "@/assests/alumni/Daipayan_Chatterjee_Current_Company_Skipper_logo.jpg";
+import NabanitaMandal from "@/assests/alumni/Nabanita_Mandal_Profile_Picture.jpg";
+import NabanitaMandalPre from "@/assests/alumni/Nabanita_Mandal_Previous_Company_Handshake_logo.jpg";
+import NabanitaMandalCur from "@/assests/alumni/Nabanita_Mandal_Current_Company_Vision_Sponge_Iron_logo.webp";
 import type { StaticImageData } from "next/image"
 
 // Define the AlumniData type
@@ -278,6 +291,73 @@ export interface AlumniData {
 }
 
 export const allAlumni: AlumniData[] = [
+
+  // ---- Recent alumni (added 13 Nov 2026) ----
+  {
+    "name": "Manas Kumar",
+    "title": "MIS Executive",
+    "location": "Kolkata",
+    "rating": 5,
+    "image": ManasKumar,
+    "previousCompany": {
+      "company": ManasKumarPre,
+      "role": "MIS Executive"
+    },
+    "currentCompany": {
+      "company": ManasKumarCur,
+      "role": "MIS Executive"
+    },
+    "categories": ["Data Analytics"]
+  },
+  {
+    "name": "Srinjana Datta",
+    "title": "MIS Intern",
+    "location": "Burdwan",
+    "rating": 5,
+    "image": SrinjanaDatta,
+    "previousCompany": {
+      "company": SrinjanaDattaPre,
+      "role": "Email Marketing Executive"
+    },
+    "currentCompany": {
+      "company": SrinjanaDattaCur,
+      "role": "MIS Intern"
+    },
+    "categories": ["Data Analytics"]
+  },
+  {
+    "name": "Daipayan Chatterjee",
+    "title": "AI & Automation Generalist",
+    "location": "Kolkata",
+    "rating": 5,
+    "image": DaipayanChatterjee,
+    "previousCompany": {
+      "company": DaipayanChatterjeePre,
+      "role": "Business Development Manager (Intern)"
+    },
+    "currentCompany": {
+      "company": DaipayanChatterjeeCur,
+      "role": "AI & Automation Generalist"
+    },
+    "categories": []
+  },
+  {
+    "name": "Nabanita Mandal",
+    "title": "AI Generalist",
+    "location": "Kolkata",
+    "rating": 5,
+    "image": NabanitaMandal,
+    "previousCompany": {
+      "company": NabanitaMandalPre,
+      "role": "AI Evaluation Specialist"
+    },
+    "currentCompany": {
+      "company": NabanitaMandalCur,
+      "role": "AI Generalist"
+    },
+    "categories": ["Data Visualization"]
+  },
+  // ---- End recent alumni ----
 
   {
     "name": "Priti Jha",
