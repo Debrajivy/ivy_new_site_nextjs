@@ -269,6 +269,11 @@ import DaipayanChatterjeeCur from "@/assests/alumni/Daipayan_Chatterjee_Current_
 import NabanitaMandal from "@/assests/alumni/Nabanita_Mandal_Profile_Picture.jpg";
 import NabanitaMandalPre from "@/assests/alumni/Nabanita_Mandal_Previous_Company_Handshake_logo.jpg";
 import NabanitaMandalCur from "@/assests/alumni/Nabanita_Mandal_Current_Company_Vision_Sponge_Iron_logo.webp";
+import ArnabChakraborty from "@/assests/alumni/Arnab_Chakraborty_Profile_Picture.jpg";
+import ArnabChakrabortyCur from "@/assests/alumni/Arnab_Chakraborty_Current_Company_Dynamic_Engineers_logo.jpg";
+import SwarnavaMitra from "@/assests/alumni/Swarnava_Mitra_Profile_Picture.jpg";
+import SwarnavaMitraPre from "@/assests/alumni/Swarnava_Mitra_Previous_Company_SB_Learning_Ventures_logo.jpg";
+import SwarnavaMitraCur from "@/assests/alumni/Swarnava_Mitra_Current_Company_WriteX_logo.jpg";
 import type { StaticImageData } from "next/image"
 
 // Define the AlumniData type
@@ -299,6 +304,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": ManasKumar,
+    "linkedin": "https://www.linkedin.com/in/manas-kumar-5aaab1261/",
     "previousCompany": {
       "company": ManasKumarPre,
       "role": "MIS Executive"
@@ -315,6 +321,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Burdwan",
     "rating": 5,
     "image": SrinjanaDatta,
+    "linkedin": "https://www.linkedin.com/in/srinjana-datta-77b507220/",
     "previousCompany": {
       "company": SrinjanaDattaPre,
       "role": "Email Marketing Executive"
@@ -331,6 +338,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": DaipayanChatterjee,
+    "linkedin": "https://www.linkedin.com/in/daipayan-chatterjee-b2b083424/",
     "previousCompany": {
       "company": DaipayanChatterjeePre,
       "role": "Business Development Manager (Intern)"
@@ -347,6 +355,7 @@ export const allAlumni: AlumniData[] = [
     "location": "Kolkata",
     "rating": 5,
     "image": NabanitaMandal,
+    "linkedin": "https://www.linkedin.com/in/nabanita-mandal-652050219/",
     "previousCompany": {
       "company": NabanitaMandalPre,
       "role": "AI Evaluation Specialist"
@@ -356,6 +365,40 @@ export const allAlumni: AlumniData[] = [
       "role": "AI Generalist"
     },
     "categories": ["Data Visualization"]
+  },
+  {
+    "name": "Arnab Chakraborty",
+    "title": "AI Generalist and MIS",
+    "location": "Kolkata",
+    "rating": 5,
+    "image": ArnabChakraborty,
+    "linkedin": "https://www.linkedin.com/in/arnabchakraborty99/",
+    "previousCompany": {
+      "company": Fresher,
+      "role": ""
+    },
+    "currentCompany": {
+      "company": ArnabChakrabortyCur,
+      "role": "AI Generalist and MIS"
+    },
+    "categories": ["Data Analytics", "Fresher to First Job"]
+  },
+  {
+    "name": "Swarnava Mitra",
+    "title": "Data Analyst",
+    "location": "Kolkata",
+    "rating": 5,
+    "image": SwarnavaMitra,
+    "linkedin": "https://www.linkedin.com/in/swarnava-mitra-3b7244221/",
+    "previousCompany": {
+      "company": SwarnavaMitraPre,
+      "role": "Team Lead"
+    },
+    "currentCompany": {
+      "company": SwarnavaMitraCur,
+      "role": "Data Analyst"
+    },
+    "categories": ["Data Analytics"]
   },
   // ---- End recent alumni ----
 

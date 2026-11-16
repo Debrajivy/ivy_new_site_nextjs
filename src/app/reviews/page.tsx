@@ -34,6 +34,12 @@ import AninditaMaity from "@/assests/alumni/AninditaMaity.webp";
 import PathikritGanguly from "@/assests/alumni/PathikritGanguly.webp";
 import ShrutiBanerjee from "@/assests/alumni/ShrutiBanerjee.webp";
 import NaiwritaBoral from "@/assests/alumni/NaiwritaBoral.webp";
+import ManasKumar from "@/assests/alumni/Manas_Kumar_Profile_Picture.jpg";
+import SrinjanaDatta from "@/assests/alumni/Srinjana_Datta_Profile_Picture.png";
+import DaipayanChatterjee from "@/assests/alumni/Daipayan_Chatterjee_Profile_Picture.jpg";
+import NabanitaMandal from "@/assests/alumni/Nabanita_Mandal_Profile_Picture.jpg";
+import ArnabChakraborty from "@/assests/alumni/Arnab_Chakraborty_Profile_Picture.jpg";
+import SwarnavaMitra from "@/assests/alumni/Swarnava_Mitra_Profile_Picture.jpg";
 import type { StaticImageData } from "next/image";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -74,6 +80,7 @@ interface FeaturedLinkedInReview {
   review: string;
   linkedin: string;
   linkedinHandle: string;
+  image?: StaticImageData;
 }
 
 // ─── VIDEO REVIEW DATA ────────────────────────────────────────────────────────
@@ -173,6 +180,68 @@ const videoReviews: VideoReview[] = [
 
 // ─── WRITTEN REVIEW DATA ──────────────────────────────────────────────────────
 const writtenReviews: WrittenReview[] = [
+  // ---- Latest placements (Nov 2026) ----
+  {
+    id: "w-manas",
+    name: "Manas Kumar Chatterjee",
+    role: "MIS",
+    company: "Sita Fashion Pvt. Ltd.",
+    course: "Data Visualization and Reporting",
+    courseSlug: "data-visualization-course",
+    image: ManasKumar,
+    rating: 5,
+    review:
+      "Prateek sir and Eeshani mam taught me Excel, SQL, Power BI and VBA, and the Ivy team shared valuable job opportunities. The skills and projects I developed played a key role in my application.",
+    location: "Kolkata",
+    category: "Data Analytics",
+    linkedin: "https://www.linkedin.com/in/manas-kumar-5aaab1261/",
+  },
+  {
+    id: "w-srinjana",
+    name: "Srinjana Datta",
+    role: "MIS Executive Intern",
+    company: "Coalsale",
+    course: "Data Analysis and Visualization (Power BI)",
+    courseSlug: "data-analytics-visualization-course",
+    image: SrinjanaDatta,
+    rating: 5,
+    review:
+      "The Data Analytics course at Ivy Professional School helped me build strong practical knowledge and improve my confidence in working with data and industry-related tools.",
+    location: "Burdwan",
+    category: "Data Analytics",
+    linkedin: "https://www.linkedin.com/in/srinjana-datta-77b507220/",
+  },
+  {
+    id: "w-daipayan",
+    name: "Daipayan Chatterjee",
+    role: "AI & Automation Generalist",
+    company: "Skipper",
+    course: "Data Science with Machine Learning & AI",
+    courseSlug: "data-science-course",
+    image: DaipayanChatterjee,
+    rating: 5,
+    review:
+      "Ivy Professional School played a defining role in my career journey. The project-based learning pushed me to build a genuine portfolio of analytics and AI work, and that portfolio is what carried me through interviews and into this role.",
+    location: "Kolkata",
+    category: "Data Science",
+    linkedin: "https://www.linkedin.com/in/daipayan-chatterjee-b2b083424/",
+  },
+  {
+    id: "w-nabanita",
+    name: "Nabanita Mandal",
+    role: "AI Generalist",
+    company: "Vision Sponge Iron Pvt. Ltd.",
+    course: "Data Analytics",
+    courseSlug: "data-analytics-course",
+    image: NabanitaMandal,
+    rating: 5,
+    review:
+      "Completing my training at Ivy Professional School has been a pivotal stepping stone in my career journey. The hands-on curriculum, practical exposure, and continuous mentorship helped build a solid foundation for my professional growth.",
+    location: "Kolkata",
+    category: "Data Analytics",
+    linkedin: "https://www.linkedin.com/in/nabanita-mandal-652050219/",
+  },
+  // ---- End latest placements ----
   {
     id: "w1",
     name: "Ankita Paul",
@@ -386,6 +455,61 @@ const writtenReviews: WrittenReview[] = [
 ];
 
 const featuredLinkedInReviews: FeaturedLinkedInReview[] = [
+  // ---- Latest placements (Nov 2026) ----
+  {
+    name: "Manas Kumar Chatterjee",
+    role: "MIS",
+    company: "Sita Fashion Pvt. Ltd.",
+    review: "Prateek sir and Eeshani mam taught me Excel, SQL, Power BI and VBA, and the Ivy team shared valuable job opportunities. The skills and projects I developed played a key role in my application.",
+    linkedin: "https://www.linkedin.com/in/manas-kumar-5aaab1261/",
+    linkedinHandle: "manas-kumar-5aaab1261",
+    image: ManasKumar,
+  },
+  {
+    name: "Srinjana Datta",
+    role: "MIS Executive Intern",
+    company: "Coalsale",
+    review: "The Data Analytics course at Ivy Professional School helped me build strong practical knowledge and improve my confidence in working with data and industry-related tools.",
+    linkedin: "https://www.linkedin.com/in/srinjana-datta-77b507220/",
+    linkedinHandle: "srinjana-datta-77b507220",
+    image: SrinjanaDatta,
+  },
+  {
+    name: "Daipayan Chatterjee",
+    role: "AI & Automation Generalist",
+    company: "Skipper",
+    review: "Ivy Professional School played a defining role in my career journey. The project-based learning pushed me to build a genuine portfolio of analytics and AI work, and that portfolio is what carried me through interviews and into this role.",
+    linkedin: "https://www.linkedin.com/in/daipayan-chatterjee-b2b083424/",
+    linkedinHandle: "daipayan-chatterjee-b2b083424",
+    image: DaipayanChatterjee,
+  },
+  {
+    name: "Nabanita Mandal",
+    role: "AI Generalist",
+    company: "Vision Sponge Iron Pvt. Ltd.",
+    review: "Completing my training at Ivy Professional School has been a pivotal stepping stone in my career journey. The hands-on curriculum, practical exposure, and continuous mentorship helped build a solid foundation for my professional growth.",
+    linkedin: "https://www.linkedin.com/in/nabanita-mandal-652050219/",
+    linkedinHandle: "nabanita-mandal-652050219",
+    image: NabanitaMandal,
+  },
+  {
+    name: "Debjani Saha",
+    role: "MIS Intern",
+    company: "Style Baazar Pvt. Ltd.",
+    review: "I would like to sincerely thank Eashani Ma'am and Prateek Sir for their excellent teaching, guidance, and constant support throughout my learning journey. Their support helped me build confidence and strengthen my skills.",
+    linkedin: "https://www.linkedin.com/in/debjani-saha-145334351/",
+    linkedinHandle: "debjani-saha-145334351",
+  },
+  {
+    name: "Arnab Chakraborty",
+    role: "AI Generalist and MIS",
+    company: "Dynamic Engineers",
+    review: "Thanks to Ivy Proschool's guidance, I secured my role as an AI Generalist and MIS Specialist! Special thanks to Prateek Sir and Eeshani Ma'am, for their constant support from learning to placement.",
+    linkedin: "https://www.linkedin.com/in/arnabchakraborty99/",
+    linkedinHandle: "arnabchakraborty99",
+    image: ArnabChakraborty,
+  },
+  // ---- End latest placements ----
   {
     name: "Menakshi Naskar",
     role: "Analyst",
@@ -396,10 +520,12 @@ const featuredLinkedInReviews: FeaturedLinkedInReview[] = [
   },
   {
     name: "Swarnava Mitra",
-    role: "Data Analyst Expert",
-    review: "I completed the Data Science and Visualization Certification from Ivy Professional School, where I built strong foundations in Python, SQL, Power BI, Tableau, Excel, and analytics.",
+    role: "Data Analyst",
+    company: "WriteX LLC",
+    review: "Ivy Professional School played a key role in shaping my technical expertise and industry readiness, giving me the practical skills and confidence to grow into a leadership role in data analytics.",
     linkedin: "https://www.linkedin.com/in/swarnava-mitra-3b7244221/",
     linkedinHandle: "swarnava-mitra-3b7244221",
+    image: SwarnavaMitra,
   },
   {
     name: "Siddhartha Das",
@@ -753,17 +879,29 @@ export default function ReviewsPage() {
                 <a href={review.linkedin} target="_blank" rel="noopener noreferrer" className="mt-6 flex items-center gap-3 border-t border-[#009fda]/10 pt-4 group/profile">
                   <span className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[#009fda] to-[#013a81] text-sm font-bold text-white ring-2 ring-cyan-100">
                     {review.name.split(" ").map((part) => part[0]).join("").slice(0, 2)}
-                    <img
-                      src={`https://unavatar.io/linkedin/${review.linkedinHandle}`}
-                      alt={`${review.name} LinkedIn profile`}
-                      className="absolute inset-0 h-full w-full object-cover"
-                      onError={(event) => { event.currentTarget.style.display = "none"; }}
-                    />
+                    {review.image ? (
+                      <Image
+                        src={review.image}
+                        alt={review.name}
+                        fill
+                        sizes="56px"
+                        className="object-cover"
+                      />
+                    ) : (
+                      <img
+                        src={`https://unavatar.io/linkedin/${review.linkedinHandle}`}
+                        alt={`${review.name} LinkedIn profile`}
+                        className="absolute inset-0 h-full w-full object-cover"
+                        onError={(event) => { event.currentTarget.style.display = "none"; }}
+                      />
+                    )}
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="flex items-center gap-2 font-bold text-[#013a81] group-hover/profile:text-[#009fda]">
                       {review.name}
-                      <ExternalLink className="h-3.5 w-3.5" />
+                      <svg className="h-4 w-4 shrink-0 text-[#0077B5]" viewBox="0 0 24 24" fill="currentColor" aria-label="LinkedIn">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
                     </span>
                     <span className="block text-xs font-semibold text-slate-600">
                       {review.role}{review.company ? ` · ${review.company}` : ""}

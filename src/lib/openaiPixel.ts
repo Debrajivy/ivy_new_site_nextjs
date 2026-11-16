@@ -4,6 +4,7 @@
 //     'Ivy Website Pixel' > Setup code > Copy, into OPENAI_PIXEL_SNIPPET below.
 //     Paste ONLY the JavaScript that sits between <script> and </script>, not the tags.
 //     While this is empty, nothing is injected and trackOpenAILead() is a silent no-op.
+//     NOTE: the Pixel ID alone is NOT enough. Paste the full setup code (several lines).
 export const OPENAI_PIXEL_SNIPPET = ``
 
 type Oaiq = (command: string, event: string, params?: Record<string, unknown>) => void
@@ -21,7 +22,11 @@ export function trackOpenAILead() {
   const fire = () => {
     const oaiq = (window as unknown as { oaiq?: Oaiq }).oaiq
     if (typeof oaiq !== "function") return false
-    oaiq("measure", "lead_created", { type: "customer_action" })
+    try {
+      oaiq("measure", "lead_created", { type: "customer_action" })
+    } catch {
+      // Never let a tracking error affect the form; the lead is already saved.
+    }
     return true
   }
 
