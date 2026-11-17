@@ -5,7 +5,7 @@
 //     Paste ONLY the JavaScript that sits between <script> and </script>, not the tags.
 //     While this is empty, nothing is injected and trackOpenAILead() is a silent no-op.
 //     NOTE: the Pixel ID alone is NOT enough. Paste the full setup code (several lines).
-export const OPENAI_PIXEL_SNIPPET = ``
+export const OPENAI_PIXEL_SNIPPET = `!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"DnBPQUkh5e9gJiwDr2YJ5X",debug:true});`
 
 type Oaiq = (command: string, event: string, params?: Record<string, unknown>) => void
 

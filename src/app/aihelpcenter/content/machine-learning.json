@@ -45,6 +45,22 @@
           }
         }
       ]
+    },
+    "model-tuning": {
+      "title": "Model Tuning",
+      "icon": "BarChart3",
+      "color": "bg-purple-400",
+      "topics": [
+        {
+          "id": "hyperparameter-tuning-grid-search-python",
+          "metaTitle": "Hyperparameter Tuning Using Grid Search in Python",
+          "title": "Hyperparameter Tuning Using Grid Search in Python",
+          "description": "GridSearchCV in scikit-learn, with the pipeline rule that stops silent data leakage. Verified on scikit-learn 1.9.1, including a leak that inflated a score by 0.20.",
+          "duration": "10 min read",
+          "date": "November 17, 2026",
+          "content": {}
+        }
+      ]
     }
   }
 }
