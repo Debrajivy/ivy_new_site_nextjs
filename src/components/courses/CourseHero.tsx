@@ -96,6 +96,19 @@ import SamikBhattacharyyaImg from "@/assests/alumni/SamikBhattacharyya.webp";
 import SamikBhattacharyyaCurImg from "@/assests/company/SamikBhattacharyyaCur.webp";
 import SouvikBoseImg from "@/assests/alumni/SouvikBose.webp";
 import SouvikBoseCurImg from "@/assests/company/SouvikBosecur.webp";
+// Latest placements (Nov 2026)
+import ManasKumarImg from "@/assests/alumni/Manas_Kumar_Profile_Picture.jpg";
+import ManasKumarCurImg from "@/assests/alumni/Manas_Kumar_Current_Company_SITA_Fashions_logo.webp";
+import SrinjanaDattaImg from "@/assests/alumni/Srinjana_Datta_Profile_Picture.png";
+import SrinjanaDattaCurImg from "@/assests/alumni/Srinjana_Datta_Current_Company_Coalsale_logo.jpg";
+import DaipayanChatterjeeImg from "@/assests/alumni/Daipayan_Chatterjee_Profile_Picture.jpg";
+import DaipayanChatterjeeCurImg from "@/assests/alumni/Daipayan_Chatterjee_Current_Company_Skipper_logo.jpg";
+import NabanitaMandalImg from "@/assests/alumni/Nabanita_Mandal_Profile_Picture.jpg";
+import NabanitaMandalCurImg from "@/assests/alumni/Nabanita_Mandal_Current_Company_Vision_Sponge_Iron_logo.webp";
+import ArnabChakrabortyImg from "@/assests/alumni/Arnab_Chakraborty_Profile_Picture.jpg";
+import ArnabChakrabortyCurImg from "@/assests/alumni/Arnab_Chakraborty_Current_Company_Dynamic_Engineers_logo.jpg";
+import SwarnavaMitraImg from "@/assests/alumni/Swarnava_Mitra_Profile_Picture.jpg";
+import SwarnavaMitraCurImg from "@/assests/alumni/Swarnava_Mitra_Current_Company_WriteX_logo.jpg";
 import type { StaticImageData } from "next/image";
 import { founderStoryCards, getFounderStoryId } from "@/components/courses/CourseEntrepreneurTestimonials";
 import CourseHeroBootcamps from "@/components/courses/CourseHeroBootcamps";
@@ -110,6 +123,7 @@ interface HeroAlumni {
 }
 
 const dsAlumni: HeroAlumni[] = [
+  { name: "Daipayan Chatterjee", role: "AI & Automation Generalist", image: DaipayanChatterjeeImg, company: DaipayanChatterjeeCurImg },
   { name: "Aditya Kumar Barik", role: "Data Scientist", image: AdityaKumarBarikImg, company: AdityaKumarBarikCurImg },
   { name: "Tanmay Chakraborty", role: "ML Engineer", image: TanmayChakrabortyImg, company: TanmayChakrabortyCurImg },
   { name: "Tania Laha", role: "Decision Scientist", image: TaniaLahaImg, company: TaniaLahaCurImg },
@@ -134,12 +148,17 @@ const dataEngAlumni: HeroAlumni[] = [
   { name: "Pranab Kumar Paul", role: "Cloud Big-Data Engineer", image: PranabKumarPaul, company: PranabKumarPaulCurImg },
 ];
 const dataVizAlumni: HeroAlumni[] = [
+  { name: "Swarnava Mitra", role: "Data Analyst", image: SwarnavaMitraImg, company: SwarnavaMitraCurImg },
+  { name: "Nabanita Mandal", role: "AI Generalist", image: NabanitaMandalImg, company: NabanitaMandalCurImg },
+  { name: "Srinjana Datta", role: "MIS Intern", image: SrinjanaDattaImg, company: SrinjanaDattaCurImg },
   { name: "Sayan Nayak", role: "Senior Analyst-Decision Science", image: SayanNayakImg, company: SayanNayakCurImg },
   { name: "Soumalya Dutta", role: "Research Associate", image: SoumalyaDuttaImg, company: SoumalyaDuttaCurImg },
   { name: "Senjuti Das", role: "Senior Consultant", image: SenjutiDasImg, company: SenjutiDasCurImg },
   { name: "Abhinav Sinha", role: "HR Analytics", image: AbhinavSinhaImg, company: AbhinavSinhaCurImg },
 ];
 const dataAnalyticsGenAIAlumni: HeroAlumni[] = [
+  { name: "Arnab Chakraborty", role: "AI Generalist and MIS", image: ArnabChakrabortyImg, company: ArnabChakrabortyCurImg },
+  { name: "Manas Kumar", role: "MIS Executive", image: ManasKumarImg, company: ManasKumarCurImg },
   { name: "Mrinal Dhar", role: "Senior Analyst", image: MrinalDharImg, company: MrinalDharCurImg },
   { name: "Ankita Paul", role: "Analyst", image: AnkitaPaulImg, company: AnkitaPaulCurImg },
   { name: "Arpan Basu", role: "Analyst-MMA", image: ArpanBasuImg, company: ArpanBasuCurImg },
@@ -185,6 +204,12 @@ const heroAlumniReviews: Record<string, string> = {
   "Abhishek Bhadra": "Ivy helped me move from management trainee to senior associate.",
   "Samik Bhattacharyya": "The analytics foundation helped me grow into cybersecurity leadership.",
   "Souvik Bose": "Ivy helped me build the foundation for data science consulting.",
+  "Daipayan Chatterjee": "Project-based learning at Ivy helped me build the AI portfolio that got me hired.",
+  "Swarnava Mitra": "Ivy shaped my technical skills and industry readiness for data analytics.",
+  "Nabanita Mandal": "Ivy's hands-on curriculum and mentorship built the foundation for my growth.",
+  "Srinjana Datta": "The Data Analytics course built my practical skills and confidence with data tools.",
+  "Arnab Chakraborty": "Ivy's guidance helped me secure my role as an AI Generalist and MIS Specialist.",
+  "Manas Kumar": "Ivy taught me Excel, SQL, Power BI and VBA and shared valuable job opportunities.",
 };
 
 function getHeroAlumni(courseTitle: string): HeroAlumni[] | null {
@@ -1482,49 +1507,49 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                 { bg: "from-[#fff0d9] to-white", border: "border-[#f5cc88]", ring: "ring-[#f59e0b]", roleColor: "text-[#b45309]" },
               ];
               return (
-                <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  {heroAlumni.map((alumni, index) => {
-                    const s = cardStyles[index % 4];
-                    return (
-                      <div
-                        key={alumni.name}
-                        role="button"
-                        tabIndex={0}
-                        onClick={() => router.push(`/alumni#${getAlumniCardId(alumni.name)}`)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" || e.key === " ") {
-                            e.preventDefault();
-                            router.push(`/alumni#${getAlumniCardId(alumni.name)}`);
-                          }
-                        }}
-                        className={`bg-gradient-to-b ${s.bg} rounded-xl p-2 flex flex-col items-center text-center gap-1.5 shadow-md border ${s.border} cursor-pointer transition-all hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white`}
-                        aria-label={`View ${alumni.name} on alumni page`}
-                      >
-                        <div className={`relative w-10 h-10 rounded-full overflow-hidden ring-2 ${s.ring} flex-shrink-0`}>
-                          <Image src={alumni.image} alt={alumni.name} fill sizes="40px" className="object-cover" />
-                        </div>
-                        <div className="w-full">
-                          <p className="font-bold text-gray-800 text-[12px] leading-tight line-clamp-2">{alumni.name}</p>
-                          <p className={`text-[10px] font-semibold mt-0.5 line-clamp-1 ${s.roleColor}`}>{alumni.role}</p>
-                        </div>
-                        <div className={`w-full border-t ${s.border} pt-1`}>
-                          <div className="relative h-12 w-full">
-                            <Image src={alumni.company} alt={`${alumni.name}'s company`} fill sizes="140px" className="object-contain" />
+                <div className="mt-4">
+                  {/* Single line: cards share the row equally on desktop; scroll sideways on small screens */}
+                  <div className="flex gap-1.5 overflow-x-auto pb-1 snap-x sm:overflow-visible sm:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                    {heroAlumni.map((alumni, index) => {
+                      const s = cardStyles[index % 4];
+                      const quote = heroAlumniReviews[alumni.name] || "Ivy helped me build practical skills for my career move.";
+                      return (
+                        <div
+                          key={alumni.name}
+                          role="button"
+                          tabIndex={0}
+                          title={`${alumni.name}: "${quote}"`}
+                          onClick={() => router.push(`/alumni#${getAlumniCardId(alumni.name)}`)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                              e.preventDefault();
+                              router.push(`/alumni#${getAlumniCardId(alumni.name)}`);
+                            }
+                          }}
+                          className={`snap-start shrink-0 w-[84px] sm:w-auto sm:flex-1 sm:basis-0 min-w-0 bg-gradient-to-b ${s.bg} rounded-lg px-1 py-1.5 flex flex-col items-center text-center gap-1 shadow-md border ${s.border} cursor-pointer transition-all hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white`}
+                          aria-label={`View ${alumni.name} on alumni page`}
+                        >
+                          <div className={`relative w-9 h-9 rounded-full overflow-hidden ring-2 ${s.ring} flex-shrink-0`}>
+                            <Image src={alumni.image} alt={alumni.name} fill sizes="36px" className="object-cover" />
+                          </div>
+                          <div className="w-full min-h-[38px]">
+                            <p className="font-bold text-gray-800 text-[10.5px] leading-tight line-clamp-2 break-words">{alumni.name}</p>
+                            <p className={`text-[9px] font-semibold mt-0.5 leading-tight line-clamp-2 ${s.roleColor}`}>{alumni.role}</p>
+                          </div>
+                          <div className={`w-full border-t ${s.border} pt-1 mt-auto`}>
+                            <div className="relative h-7 w-full">
+                              <Image src={alumni.company} alt={`${alumni.name}'s company`} fill sizes="100px" className="object-contain" />
+                            </div>
                           </div>
                         </div>
-                        <p className="min-h-[34px] text-[10px] leading-snug text-gray-600 line-clamp-2">
-                          &ldquo;{heroAlumniReviews[alumni.name] || "Ivy helped me build practical skills for my career move."}&rdquo;
-                        </p>
-                        <Link
-                          href="/reviews"
-                          onClick={(e) => e.stopPropagation()}
-                          className="text-[10px] font-bold text-[#013a81] hover:underline"
-                        >
-                          Show more reviews
-                        </Link>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
+                  <div className="mt-2 text-center">
+                    <Link href="/reviews" className="text-[11px] font-bold text-white/90 hover:text-white hover:underline">
+                      Show more reviews &rarr;
+                    </Link>
+                  </div>
                 </div>
               );
             })()}
