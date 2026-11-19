@@ -34,6 +34,22 @@
           "date": "November 8, 2026"
         },
         {
+          "id": "multi-agent-systems-explained",
+          "metaTitle": "Multi-Agent Systems: Patterns, Costs, Risks | Ivy Pro School",
+          "title": "Multi-Agent Systems Explained: When One AI Agent Isn't Enough",
+          "description": "Multi-agent systems split work across specialised AI agents. Learn the main patterns, real costs, why they fail, and when a single agent is the better choice.",
+          "duration": "11 min read",
+          "date": "November 8, 2026"
+        },
+        {
+          "id": "what-is-model-context-protocol-mcp",
+          "metaTitle": "What Is MCP? Model Context Protocol Guide | Ivy Pro School",
+          "title": "What Is MCP (Model Context Protocol)? A Plain-English Guide With Code",
+          "description": "MCP (Model Context Protocol) is an open standard that connects AI apps to tools and data. How hosts, clients and servers work, with Python code and risks.",
+          "duration": "13 min read",
+          "date": "November 8, 2026"
+        },
+        {
           "id": "prompt-engineering-basics",
           "metaTitle": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",
           "title": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",
