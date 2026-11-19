@@ -1924,7 +1924,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
                           ? "New batch starting from 26th October, 2026"
                           : course.title === "AI for Beginners"
                             ? "Batch Starting From 4th May, 2026"
-                            : "New batch starting 16th August, 2026"
+                            : "New batch starting 28th November, 2026"
                       }
 
                     </span>
