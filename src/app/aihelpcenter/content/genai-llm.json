@@ -50,6 +50,22 @@
           "date": "November 8, 2026"
         },
         {
+          "id": "build-your-first-ai-agent-python-langgraph",
+          "metaTitle": "Build an AI Agent in Python with LangGraph | Ivy Pro School",
+          "title": "How to Build Your First AI Agent in Python with LangGraph",
+          "description": "Build an AI agent in Python with LangGraph: tools, a StateGraph with ToolNode and tools_condition, step limits and human approval. Full, tested code.",
+          "duration": "14 min read",
+          "date": "November 8, 2026"
+        },
+        {
+          "id": "why-llms-hallucinate-and-how-to-reduce-it",
+          "metaTitle": "Why LLMs Hallucinate and How to Reduce It | Ivy Pro School",
+          "title": "Why Do LLMs Hallucinate, and How Do You Reduce It?",
+          "description": "Why LLMs hallucinate: next-token prediction, rare facts, scoring that rewards guessing and missing context. Plus a mitigation ladder and a Python check.",
+          "duration": "13 min read",
+          "date": "November 8, 2026"
+        },
+        {
           "id": "prompt-engineering-basics",
           "metaTitle": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",
           "title": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",
