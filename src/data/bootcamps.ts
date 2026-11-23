@@ -32,6 +32,15 @@ export const youtubeChannelUrl = "https://youtube.com/ivyproschool";
 
 export const latestRecordings: BootcampRecording[] = [
   {
+    id: "rag-chatbot-pdfs",
+    videoId: "XdA_c5ARAhA",
+    title: "RAG Explained: Build a Chatbot That Answers From Your PDFs",
+    category: "AI Apps",
+    youtubeUrl: "https://www.youtube.com/watch?v=XdA_c5ARAhA&t=81s",
+    thumbnail: "https://i.ytimg.com/vi/XdA_c5ARAhA/hqdefault.jpg",
+    summary: "Learn how retrieval-augmented generation works and build a chatbot that answers questions from your own PDF documents.",
+  },
+  {
     id: "prompt-ai-like-pro",
     videoId: "hrI8UfZg9A4",
     title: "How to Prompt AI Like a Pro at Work | Full Masterclass with Arpan Saxena",

@@ -6,7 +6,7 @@ import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Badge } from "@/components/ui/badge";
-import AgentHeroImage from "@/assests/agent.png";
+import BootcampPosterImage from "@/assests/fine-tuning-bootcamp.jpeg";
 import {
   ArrowRight,
   CalendarDays,
@@ -101,7 +101,7 @@ const getSessionAction = (session: LiveSession, status: SessionStatus): SessionA
 
   return {
     href: bootcampRegisterUrl,
-    label: "Register for Free",
+    label: "Reserve your Seat",
     badge: "Upcoming free live session",
     cardText: "Click to register for the free live session",
   };
@@ -257,36 +257,15 @@ const BootcampPageClient = ({ session, initialStatus }: BootcampPageClientProps)
               </div>
             </div>
 
-            <a
-              href={action.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block overflow-hidden rounded-2xl border border-white/15 bg-white shadow-2xl shadow-black/20"
-            >
-              <div className="relative aspect-video overflow-hidden bg-slate-900">
-                <Image
-                  src={AgentHeroImage}
-                  alt={session.title}
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 46vw, 100vw"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-                <div className="absolute left-5 top-5">
-                  <span className="inline-flex animate-pulse items-center gap-2 rounded-full bg-red-500 px-3 py-1 text-xs font-black uppercase tracking-wide text-white shadow-lg">
-                    <span className="h-2 w-2 rounded-full bg-white" />
-                    {action.badge}
-                  </span>
-                </div>
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
-                  <p className="text-lg font-bold leading-snug text-white">{action.cardText}</p>
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red-500 text-white shadow-lg transition-transform group-hover:scale-110">
-                    <ArrowRight className="h-6 w-6" />
-                  </span>
-                </div>
-              </div>
-            </a>
+            <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-white/15 bg-slate-950 shadow-2xl shadow-black/20">
+              <Image
+                src={BootcampPosterImage}
+                alt="Free bootcamp: Fine-Tuning vs RAG vs Prompting, which one does your use case need?"
+                priority
+                sizes="(min-width: 1024px) 448px, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
