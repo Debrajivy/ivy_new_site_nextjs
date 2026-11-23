@@ -66,6 +66,22 @@
           "date": "November 8, 2026"
         },
         {
+          "id": "fine-tuning-llms-lora-qlora",
+          "metaTitle": "LoRA and QLoRA Fine-Tuning for LLMs | Ivy Pro School",
+          "title": "Fine-Tuning LLMs with LoRA and QLoRA: A Practical Guide",
+          "description": "LoRA and QLoRA fine-tuning explained: when to fine-tune vs prompt or RAG, rank and alpha, 4-bit NF4, data prep, GPU memory and Hugging Face TRL code.",
+          "duration": "13 min read",
+          "date": "November 23, 2026"
+        },
+        {
+          "id": "how-to-evaluate-llm-applications",
+          "metaTitle": "LLM Evaluation: Evals, Metrics and Judges | Ivy Pro School",
+          "title": "How to Evaluate LLM Applications: Evals, Metrics and LLM-as-a-Judge",
+          "description": "LLM evaluation explained: golden datasets, offline vs online evals, faithfulness and recall@k, LLM-as-a-judge biases, regression tests and a Python harness.",
+          "duration": "14 min read",
+          "date": "November 23, 2026"
+        },
+        {
           "id": "prompt-engineering-basics",
           "metaTitle": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",
           "title": "Prompt Engineering Basics: The 5-Part Framework for Better AI Answers",

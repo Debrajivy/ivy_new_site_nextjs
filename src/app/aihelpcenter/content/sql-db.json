@@ -594,6 +594,14 @@
       "color": "bg-orange-500",
       "topics": [
         {
+          "id": "normalization-vs-denormalization-data-warehousing",
+          "metaTitle": "Normalization vs Denormalization in Data Warehousing | Ivy Pro School",
+          "title": "Normalization vs Denormalization in Data Warehousing: A Practical Tutorial",
+          "description": "A SQL tutorial on normalization and denormalization in data warehousing: normalize to 3NF step by step, build the star schema from it, and know which layer needs which.",
+          "duration": "11 min read",
+          "date": "November 23, 2026"
+        },
+        {
           "id": "sql-window-functions-explained",
           "metaTitle": "SQL Window Functions Explained: ROW_NUMBER, RANK, LAG and LEAD with Examples | Ivy Professional School",
           "title": "SQL Window Functions Explained",

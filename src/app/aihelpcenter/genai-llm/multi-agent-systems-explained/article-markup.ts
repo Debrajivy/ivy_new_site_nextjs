@@ -162,7 +162,7 @@ if __name__ == "__main__":
 <li><a href="/aihelpcenter/genai-llm/build-your-first-ai-agent-python-langgraph">Build your first AI agent in Python with LangGraph</a></li>
 <li><a href="/aihelpcenter/genai-llm/what-is-model-context-protocol-mcp">What is MCP (Model Context Protocol)?</a></li>
 <li><a href="/aihelpcenter/genai-llm/rag-vs-ai-agents-vs-agentic-ai">RAG vs AI agents vs agentic AI</a></li>
-<li><a href="/aihelpcenter/mlops/how-to-evaluate-llm-applications">How to evaluate LLM applications</a></li>
+<li><a href="/aihelpcenter/genai-llm/how-to-evaluate-llm-applications">How to evaluate LLM applications</a></li>
 <li><a href="/aihelpcenter/genai-llm/harness-engineering-in-ai">Harness engineering in AI</a></li>
 </ul>
 <p>More in <a href="/aihelpcenter/genai-llm">GenAI / LLM</a>.</p>

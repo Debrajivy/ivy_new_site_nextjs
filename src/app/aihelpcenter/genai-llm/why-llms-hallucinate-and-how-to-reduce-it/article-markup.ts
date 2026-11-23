@@ -161,7 +161,7 @@ print(unsupported_numbers(answer, source, calculator_output))
 print(unsupported_numbers("Turnover rose to 1.25 lakh", "Turnover: Rs 1,25,000"))
 # []</code></pre></div>
 <p>The function normalises Indian formats, so ₹1,25,000 and 1.25 lakh match. In the example, the GST arithmetic is flagged until you add the calculator's output as evidence, which leaves only the invented due date (15 instead of 5). Derived numbers must come from a tool you trust.</p>
-<p>Know the limits: the check confirms a number exists in the evidence, not that it is used correctly. Pair it with other cheap checks (cited IDs exist, quotes appear verbatim, JSON matches the schema). For meaning-level checks, use an LLM judge validated against human labels, as our guide on <a href="/aihelpcenter/mlops/how-to-evaluate-llm-applications">evaluating LLM applications</a> explains. With no source to compare against, consistency checks such as SelfCheckGPT treat disagreement between sampled answers as a warning sign.</p>
+<p>Know the limits: the check confirms a number exists in the evidence, not that it is used correctly. Pair it with other cheap checks (cited IDs exist, quotes appear verbatim, JSON matches the schema). For meaning-level checks, use an LLM judge validated against human labels, as our guide on <a href="/aihelpcenter/genai-llm/how-to-evaluate-llm-applications">evaluating LLM applications</a> explains. With no source to compare against, consistency checks such as SelfCheckGPT treat disagreement between sampled answers as a warning sign.</p>
 </section>
 
 <section class="card" id="worked-example-how-would-a-kolkata-ca-firm-catch-a-made-up-gst-figure"><div class="pill">Worked example</div><h2>Worked example: how would a Kolkata CA firm catch a made-up GST figure?</h2>
@@ -212,7 +212,7 @@ print(unsupported_numbers("Turnover rose to 1.25 lakh", "Turnover: Rs 1,25,000")
 
 <section class="card" id="related-articles"><div class="pill">Keep reading</div><h2>Related articles</h2><ul>
 <li><a href="/aihelpcenter/genai-llm/rag-explained-how-to-make-ai-answer-from-your-data">RAG explained: how to make AI answer from your data</a></li>
-<li><a href="/aihelpcenter/mlops/how-to-evaluate-llm-applications">How to evaluate LLM applications</a></li>
+<li><a href="/aihelpcenter/genai-llm/how-to-evaluate-llm-applications">How to evaluate LLM applications</a></li>
 <li><a href="/aihelpcenter/genai-llm/build-your-first-ai-agent-python-langgraph">Build your first AI agent in Python with LangGraph</a></li>
 <li><a href="/aihelpcenter/genai-llm/fine-tuning-llms-lora-qlora">Fine-tuning LLMs with LoRA and QLoRA</a></li>
 <li><a href="/aihelpcenter/genai-llm/how-are-llms-trained">How are LLMs trained?</a></li>

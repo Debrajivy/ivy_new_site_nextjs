@@ -383,7 +383,7 @@ if __name__ == "__main__":
 <p><strong>Make this agent trustworthy before making it bigger.</strong> Tests, limits and approvals are also the habits our <a href="/aihelpcenter/career/how-to-become-an-ai-engineer">AI engineer roadmap</a> puts ahead of new frameworks.</p>
 <div class="check"><ul>
 <li>Swap the DataFrame for a read-only connection to a test invoice table.</li>
-<li>Write ten test questions with known answers, two of them with invoice numbers that do not exist, and rerun them after every change (see <a href="/aihelpcenter/mlops/how-to-evaluate-llm-applications">evaluating LLM applications</a>).</li>
+<li>Write ten test questions with known answers, two of them with invoice numbers that do not exist, and rerun them after every change (see <a href="/aihelpcenter/genai-llm/how-to-evaluate-llm-applications">evaluating LLM applications</a>).</li>
 <li>Set recursion_limit on every call and log every GraphRecursionError.</li>
 <li>Put every write action behind interrupt() approval with a database-backed checkpointer.</li>
 <li>Expose the agent through an API such as FastAPI only after the tests pass.</li>
@@ -418,7 +418,7 @@ if __name__ == "__main__":
 <li><a href="/aihelpcenter/genai-llm/rag-vs-ai-agents-vs-agentic-ai">RAG vs AI agents vs agentic AI</a></li>
 <li><a href="/aihelpcenter/genai-llm/multi-agent-systems-explained">Multi-agent systems explained</a></li>
 <li><a href="/aihelpcenter/genai-llm/what-is-model-context-protocol-mcp">What is MCP (Model Context Protocol)?</a></li>
-<li><a href="/aihelpcenter/mlops/how-to-evaluate-llm-applications">How to evaluate LLM applications</a></li>
+<li><a href="/aihelpcenter/genai-llm/how-to-evaluate-llm-applications">How to evaluate LLM applications</a></li>
 <li><a href="/aihelpcenter/genai-llm/harness-engineering-in-ai">Harness engineering in AI</a></li>
 </ul>
 <p>More in <a href="/aihelpcenter/genai-llm">GenAI / LLM</a>.</p>

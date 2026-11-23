@@ -841,6 +841,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ivyproschool.com/aihelpcenter/genai-llm/fine-tuning-llms-lora-qlora</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ivyproschool.com/aihelpcenter/genai-llm/how-to-evaluate-llm-applications</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ivyproschool.com/aihelpcenter/sql-db/normalization-vs-denormalization-data-warehousing</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ivyproschool.com/aihelpcenter/machine-learning/bagging-vs-boosting-machine-learning</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
