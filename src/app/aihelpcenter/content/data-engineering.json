@@ -381,6 +381,14 @@
           }
         },
         {
+          "id": "data-engineering-for-generative-ai",
+          "metaTitle": "Data Engineering for GenAI: RAG Pipelines | Ivy Pro School",
+          "title": "Data Engineering for Generative AI: Pipelines That Feed RAG and Agents",
+          "description": "Data engineering for generative AI: how to extract, clean, mask PII, chunk, embed and refresh company data so RAG systems and AI agents answer correctly.",
+          "duration": "15 min read",
+          "date": "November 24, 2026"
+        },
+        {
           "id": "apache-airflow-python-data-pipelines",
           "metaTitle": "Building Scalable Data Pipelines with Apache Airflow and Python | Data Engineering | Ivy Pro School",
           "title": "Building Scalable Data Pipelines with Apache Airflow and Python",

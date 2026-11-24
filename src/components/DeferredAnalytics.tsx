@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Script from "next/script"
+import { OPENAI_PIXEL_SNIPPET } from "@/lib/openaiPixel"
 
 const DEFER_MS = 10_000
 
@@ -35,6 +36,12 @@ export default function DeferredAnalytics() {
 
   return (
     <>
+      {/* OpenAI Ads pixel. Previously loaded in <head> ahead of the page; now deferred
+          with the other trackers. Any click or keypress loads it immediately, so lead
+          events from forms (trackOpenAILead) are still captured. */}
+      {OPENAI_PIXEL_SNIPPET.trim() ? (
+        <Script id="openai-pixel" strategy="afterInteractive">{OPENAI_PIXEL_SNIPPET}</Script>
+      ) : null}
       <Script src="https://www.googletagmanager.com/gtag/js?id=AW-981187918" strategy="afterInteractive" />
       <Script id="google-ads" strategy="afterInteractive">{`
         window.dataLayer = window.dataLayer || [];

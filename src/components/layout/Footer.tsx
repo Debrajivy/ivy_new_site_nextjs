@@ -1,6 +1,11 @@
-﻿import Link from 'next/link';
+﻿import NextLink from 'next/link';
+import type { ComponentProps } from 'react';
 import { ArrowUpRight, BarChart3, BriefcaseBusiness, Building2, ChevronRight, Facebook, GraduationCap, Instagram, Linkedin, Mail, MapPin, Phone, Star, Twitter, Youtube } from 'lucide-react';
 import styles from './Footer.module.css';
+
+// Footer links must not prefetch: there are dozens of them (incl. city pages) and
+// Next.js would fetch each one in the background as the footer scrolls into view.
+const Link = (props: ComponentProps<typeof NextLink>) => <NextLink prefetch={false} {...props} />;
 
 const programs = [
   ['Data Science', '/courses/data-science-and-ml-course'],

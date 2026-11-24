@@ -1,7 +1,8 @@
 import Link from "next/link"
 import Navbar from "@/components/layout/Navbar"
-import Footer from "@/components/layout/Footer"
 
+// Kept deliberately light: Next.js embeds this tree in every course page's
+// payload, so it must not render the full Footer (that added ~28 KB per page).
 export default function NotFound() {
   return (
     <>
@@ -20,7 +21,6 @@ export default function NotFound() {
           </Link>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

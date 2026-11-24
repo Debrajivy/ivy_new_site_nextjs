@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect, useCallback } from "react"
-import Link from "next/link"
+import NextLink from "next/link"
 import { Button } from "@/components/ui/button"
 import { Phone, Menu, X, ChevronDown, Briefcase, BookOpen, ChevronRight, GraduationCap, NotebookPen, Building, Trophy, Users, ArrowRight } from "lucide-react"
 import review from "../../assests/review.webp"
@@ -29,6 +29,12 @@ import AIPM from "@/assests/AIPM.webp"
 import AIE from "@/assests/AIE.webp";
 import icon from "../../assests/icon.webp"
 import AIB from "../../assests/AIB.webp";
+
+// Header links must not prefetch: the menu (including hidden dropdowns) links to
+// 10+ pages, and Next.js would fetch all of them in the background on every page
+// load, competing with the page the visitor actually opened. Pages still load
+// normally on click.
+const Link = (props: React.ComponentProps<typeof NextLink>) => <NextLink prefetch={false} {...props} />
 
 const courseCategories = {
 

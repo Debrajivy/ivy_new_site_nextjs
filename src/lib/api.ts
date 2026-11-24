@@ -1,7 +1,6 @@
 import { Figma } from "lucide-react";
 import { topics } from "./mockTopicsData";
 import { title } from "process";
-import Loading from "@/app/courses/[slug]/loading";
 
 // Mock API functions to simulate data fetching
 export interface Course {

@@ -936,23 +936,23 @@ export const allAlumni: AlumniData[] = [
     },
     "categories": ["Business Analytics"]
   },
-  {
-    "name": "Sovan Nayak",
-    "title": "Jr Data Scientist",
-    "location": "Kolkata",
-    "rating": 5,
-    "image": SovanNayak,
-    "linkedin": "https://linkedin.com/in/sovan-nayak-/",
-    "previousCompany": {
-      "company": Fresher,
-      "role": ""
-    },
-    "currentCompany": {
-      "company": SovanNayakCur,
-      "role": "Jr Data Scientist"
-    },
-    "categories": ["Business Analytics", "Fresher to First Job"]
-  },
+  // {
+  //   "name": "Sovan Nayak",
+  //   "title": "Jr Data Scientist",
+  //   "location": "Kolkata",
+  //   "rating": 5,
+  //   "image": SovanNayak,
+  //   "linkedin": "https://linkedin.com/in/sovan-nayak-/",
+  //   "previousCompany": {
+  //     "company": Fresher,
+  //     "role": ""
+  //   },
+  //   "currentCompany": {
+  //     "company": SovanNayakCur,
+  //     "role": "Jr Data Scientist"
+  //   },
+  //   "categories": ["Business Analytics", "Fresher to First Job"]
+  // },
   {
     "name": "Debapriya Ghosh",
     "title": "Analyst",
