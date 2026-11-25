@@ -197,7 +197,7 @@ const EMPLOYERS = [
 const IVY_HIGHLIGHTS = [
   { value: COMPANY.placementPctLabel, label: "Placement Rate" },
   { value: "₹8.5 LPA", label: "Avg. Starting CTC" },
-  { value: "200+",   label: "Hiring Partners" },
+  { value: COMPANY.hiringCompaniesLabel, label: "Hiring Partners" },
   { value: "5,000+", label: "Alumni Placed" },
 ];
 
