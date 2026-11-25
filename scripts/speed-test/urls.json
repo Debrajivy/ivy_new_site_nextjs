@@ -1,0 +1,16 @@
+{
+  "_comment": "Pages tested by the weekly speed test. Add or remove URLs here. Each URL is tested on mobile and desktop.",
+  "urls": [
+    "https://ivyproschool.com/",
+    "https://ivyproschool.com/courses",
+    "https://ivyproschool.com/courses/generative-ai-course",
+    "https://ivyproschool.com/courses/data-science-and-ml-course",
+    "https://ivyproschool.com/enterprise",
+    "https://ivyproschool.com/alumni",
+    "https://ivyproschool.com/about",
+    "https://ivyproschool.com/bootcamp",
+    "https://ivyproschool.com/contact-us",
+    "https://ivyproschool.com/aihelpcenter",
+    "https://ivyproschool.com/aihelpcenter/genai-llm/what-is-agentic-ai"
+  ]
+}
