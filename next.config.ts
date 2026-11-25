@@ -18,6 +18,22 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Files in /public are not content-hashed, and Next.js serves them with
+  // "max-age=0" by default, so Cloudflare never caches them. Give them a cache
+  // lifetime. Browsers keep them for 1 day, Cloudflare for 30 days. If you
+  // replace a file under these folders, purge it in Cloudflare.
+  async headers() {
+    const staticAssetCache = {
+      key: "Cache-Control",
+      value: "public, max-age=86400, s-maxage=2592000, stale-while-revalidate=86400",
+    }
+    return [
+      { source: "/assets/:path*", headers: [staticAssetCache] },
+      { source: "/images/:path*", headers: [staticAssetCache] },
+      { source: "/lovable-uploads/:path*", headers: [staticAssetCache] },
+      { source: "/videos/:path*", headers: [staticAssetCache] },
+    ]
+  },
   async redirects() {
     return [
       {
