@@ -5,7 +5,7 @@
 - SEO_AUTOPILOT_DIR: `D:/02-02-2026-ivyprofessionalschool/ivy-seo-autopilot`
 - Tracker: https://docs.google.com/spreadsheets/d/1jKgkaGZRsO55s4RqP-9TMYdZTUiAUWA8w9nbs56Wzzs/edit
 - SEO fixes follow the `/seo-fix` skill. Approved batches only, one branch per batch, PR for review.
-- Deploy command (developer fills): `<e.g. GitHub Actions on merge to main / az webapp deploy ...>`
+- Deploy command: Netlify auto-deploys on merge to main (preview deploy on every PR).
 - Cloudflare caches course and main pages for 4 hours. After deploy, purge the changed URLs.
 - Path note: this repo keeps source under `src/` and maps `@/*` to `./src/*`. Wherever the autopilot kit or the `/seo-fix` skill says `lib/company-facts.ts`, use `src/lib/company-facts.ts` (import as `@/lib/company-facts`).
 
