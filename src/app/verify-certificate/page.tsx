@@ -1,4 +1,5 @@
 "use client";
+import { COMPANY } from "@/lib/company-facts";
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { Facebook, Twitter, Linkedin, Youtube, Instagram, Mail, Phone, MapPin, Search, CheckCircle, XCircle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar'; 
@@ -370,7 +371,7 @@ const Footer: React.FC<PageProps> = ({ navigate }) => {
                                         </svg>
                                     ))}
                                 </div>
-                                <span className="ml-2 text-sm">4.8/5 (1,300+ reviews)</span>
+                                <span className="ml-2 text-sm">{COMPANY.googleRating}/5 ({COMPANY.googleReviewsLabel} Google reviews)</span>
                             </div>
                         </div>
                         <p className="text-gray-300 mb-4 text-sm">

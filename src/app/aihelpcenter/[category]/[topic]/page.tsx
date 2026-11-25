@@ -1,4 +1,5 @@
 "use client";
+import { COMPANY } from "@/lib/company-facts";
 import React, { useState, useEffect, use } from 'react';
 import Link from 'next/link';
 import ArticleStructuredData from '@/components/seo/ArticleStructuredData';
@@ -1294,7 +1295,7 @@ const TopicPage = ({ params }: PageProps) => {
                         <p className="text-blue-100 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 max-w-3xl leading-relaxed">
                             Take personalized quizzes tailored to your domain, topic, and difficulty level.
                             Get detailed feedback on your strengths and weaknesses. Receive a customized
-                            learning plan to improve based on your quiz performance. Join 50,000+ learners
+                            learning plan to improve based on your quiz performance. Join the learners
                             who've improved their skills with <strong><a href="https://prepai.ivyproschool.com/diagnose" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-yellow-300">PrepAI Diagnose</a></strong>.
                         </p>
 

@@ -1,3 +1,4 @@
+import { COMPANY } from "@/lib/company-facts";
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Briefcase, FileText, Users, Award, BarChart, GraduationCap, Zap, GitBranch, Headset, UserRound, TrendingUp, Video,ClipboardCheck, FileSpreadsheet, Mic, Cpu,UserCheck } from 'lucide-react';
@@ -668,7 +669,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       <h3 className="text-xl font-bold mb-2">Job Placement Program</h3>
                       <p className="text-gray-600">
                         Our dedicated placement team works with 500+ hiring partners to help you find the right job opportunities.
-                        We have a 94% placement rate for our full-time program graduates.
+                        We have a {COMPANY.cohortPlacementLabel}.
                       </p>
                     </div>
                   </div>
@@ -1039,7 +1040,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                                           (course.title === "Data Engineering Course" || course.title === "Data Engineering Course in Kolkata") ?
                                             "Show recruiters you're cloud-ready, with hands-on skills in AWS, GCP, and Azure. This certification validates your ability to design scalable pipelines and apply data engineering tools to real-world projects." :
                                             course.title === "Data Analytics and Generative AI Course" ?
-                                              "Trusted by 100+ recruiters, this certificate shows your hands-on mastery in data storytelling and analytics tools—validated through real-world projects in telecom, pharma, retail, and BFSI sectors." :
+                                              "Trusted by recruiters, this certificate shows your hands-on mastery in data storytelling and analytics tools—validated through real-world projects in telecom, pharma, retail, and BFSI sectors." :
                                               course.title === "AI for Product Managers" ?
                                                 "By completing certifications for product management, you gain hands-on expertise in AI adoption frameworks, prompt engineering, and GenAI strategy." :
                                                 "Validates your ability to implement machine learning algorithms and AI solutions to solve complex business problems."

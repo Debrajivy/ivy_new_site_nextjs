@@ -1,4 +1,5 @@
 "use client";
+import { COMPANY } from "@/lib/company-facts";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
@@ -283,7 +284,7 @@ const COURSES: Course[] = [
     slug: "no-upfront-fees-data-science-and-ml-course",
     keyFeatures: [
       "Pay fees only after getting placed",
-      "100% placement guarantee",
+      COMPANY.placementAssistanceLabel,
       "Full data science + ML curriculum",
     ],
     tools: ["Python", "SQL", "ML", "TensorFlow", "Tableau", "Scikit-Learn"],
@@ -434,15 +435,15 @@ const faqs = [
   },
   {
     q: "Are Ivy Professional School courses NASSCOM and IBM certified?",
-    a: "Yes. Ivy Pro School is one of India's few institutes with certifications from NASSCOM (India's premier IT body), IBM, IIT Guwahati (for premium programs), and Govt. of India MEITY. These certifications are recognized by 700+ hiring partners including TCS, Infosys, Accenture, Deloitte, PwC, Capgemini, JP Morgan, Google, and Amazon.",
+    a: "Yes. Ivy Pro School is one of India's few institutes with certifications from NASSCOM (India's premier IT body), IBM, IIT Guwahati (for premium programs), and Govt. of India MEITY. These certifications are recognized by our " + COMPANY.hiringCompaniesLabel + " hiring partners including TCS, Infosys, Accenture, Deloitte, PwC, Capgemini, JP Morgan, Google, and Amazon.",
   },
   {
     q: "What is the duration of data science courses at Ivy Pro School?",
     a: "Courses range from 6 weeks (AI for Beginners, AI for Entrepreneurs) to 12 months (Data Science Pay After Placement). Most popular programs run 7–11 months. Weekend batches (Sat–Sun), weekday batches (Mon–Fri), and hybrid batches are all available to suit working professionals.",
   },
   {
-    q: "Does Ivy Pro School offer 100% placement support?",
-    a: "Yes. All students get access to PrepAI — Ivy's career copilot — which includes AI-powered resume building, mock interview practice, recruiter connects, and a dedicated placement manager. Over 37,500 professionals have been placed at companies like TCS, Wipro, Cognizant, Barclays, PwC, Ecolab, and more.",
+    q: "Does Ivy Pro School offer 100% placement assistance?",
+    a: "Yes. All students get access to PrepAI — Ivy's career copilot — which includes AI-powered resume building, mock interview practice, recruiter connects, and a dedicated placement manager. Our " + COMPANY.alumniLabel + " alumni work at companies like TCS, Wipro, Cognizant, Barclays, PwC, Ecolab, and more.",
   },
   {
     q: "Can I pay course fees in installments or EMI?",
@@ -494,7 +495,7 @@ export default function CoursesListing() {
       <div className="bg-white py-10 border-b border-gray-100">
         <div className="container mx-auto px-4 mb-6 text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Our Students Are Placed At</p>
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900">700+ Hiring Partners Across India &amp; Globally</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900">{COMPANY.hiringCompaniesLabel} Hiring Partners Across India &amp; Globally</h2>
         </div>
 
         <div className="overflow-hidden relative">
@@ -608,13 +609,13 @@ export default function CoursesListing() {
                 icon: <ShieldCheck size={28} />,
                 title: 'Multi-Body Certified',
                 stat: 'NASSCOM + IBM + MEITY',
-                desc: 'Globally recognized certifications accepted by 700+ companies including TCS, Wipro, Accenture, Deloitte',
+                desc: 'Globally recognized certifications accepted by employers including TCS, Wipro, Accenture, Deloitte',
                 color: '#009fda',
               },
               {
                 icon: <Briefcase size={28} />,
-                title: '100% Placement',
-                stat: '37,500+ Alumni',
+                title: '100% Placement Assistance',
+                stat: `${COMPANY.alumniLabel} Alumni`,
                 desc: 'PrepAI career copilot: AI resume builder, mock interviews, recruiter network & dedicated placement managers',
                 color: '#f7af34',
               },

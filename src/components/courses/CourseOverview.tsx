@@ -1,3 +1,4 @@
+import { COMPANY } from "@/lib/company-facts";
 import React from 'react';
 import type { Course } from '@/lib/api';
 import { Card, CardContent } from '@/components/ui/card';
@@ -267,7 +268,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                           <div className="bg-white p-3 rounded-lg border border-slate-100">
                             <Award size={14} className="text-blue-500 mb-2" />
                             <div className="font-bold text-[13px] mb-1">Placement</div>
-                            <p className="text-slate-500 text-[11px] leading-snug">94% rate | 4-5 LPA avg | 17k+ jobs in India.</p>
+                            <p className="text-slate-500 text-[11px] leading-snug">{COMPANY.cohortPlacementLabel} | 4-5 LPA avg | 17k+ jobs in India.</p>
                           </div>
                           <div className="bg-white p-3 rounded-lg border border-slate-100">
                             <Users size={14} className="text-blue-500 mb-2" />
@@ -430,7 +431,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                               <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
                               <div>
                                 <div className="font-medium">Hiring Partners</div>
-                                <p className="text-sm text-gray-600"> 94% Placement Rate | 4-5 LPA avg salary | 17,000+ job openings in India</p>
+                                <p className="text-sm text-gray-600"> {COMPANY.cohortPlacementLabel} | 4-5 LPA avg salary | 17,000+ job openings in India</p>
                               </div>
 
                             </div>
@@ -476,7 +477,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                               <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
                               <div>
                                 <div className="font-medium">Hiring Partners</div>
-                                <p className="text-sm text-gray-600"> 94% Placement Rate | 4-5 LPA avg salary | 17,000+ job openings in India</p>
+                                <p className="text-sm text-gray-600"> {COMPANY.cohortPlacementLabel} | 4-5 LPA avg salary | 17,000+ job openings in India</p>
                               </div>
                             </div>
 
@@ -510,7 +511,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                   <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
                   <div>
                     <div className="font-medium">Hiring Partners</div>
-                    <p className="text-sm text-gray-600"> 94% Placement Rate | 4-5 LPA avg salary | 17,000+ job openings in India</p>
+                    <p className="text-sm text-gray-600"> {COMPANY.cohortPlacementLabel} | 4-5 LPA avg salary | 17,000+ job openings in India</p>
                   </div>
                 </div>
                 <div className="flex items-start">
