@@ -1,5 +1,6 @@
 "use client";
 
+import { COMPANY } from "@/lib/company-facts";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -194,7 +195,7 @@ const EMPLOYERS = [
 ];
 
 const IVY_HIGHLIGHTS = [
-  { value: "93%",    label: "Placement Rate" },
+  { value: COMPANY.placementPctLabel, label: "Placement Rate" },
   { value: "₹8.5 LPA", label: "Avg. Starting CTC" },
   { value: "200+",   label: "Hiring Partners" },
   { value: "5,000+", label: "Alumni Placed" },
@@ -204,7 +205,7 @@ const IVY_FEATURES = [
   "Industry-Aligned Curriculum",
   "Expert Faculty & Mentors",
   "Live Projects & Capstone",
-  "100% Placement Support",
+  "100% Placement Assistance",
   "Flexible EMI Plans",
   "Hybrid & Weekend Batches",
   "4.8★ Student Rating",
@@ -321,7 +322,7 @@ const STEPS = [
   {
     num: 5,
     title: "Apply with Ivy's Placement Support",
-    desc: "Ivy's dedicated placement cell connects you with 200+ hiring partners, organises campus interviews, and provides one-on-one resume and interview coaching. The average Ivy student receives their first job offer within 45 days of program completion.",
+    desc: "Ivy's dedicated placement cell connects you with " + COMPANY.hiringCompaniesLabel + " hiring partners, organises campus interviews, and provides one-on-one resume and interview coaching. The average Ivy student receives their first job offer within 45 days of program completion.",
     color: "#ef4444",
     bg: "#fee2e2",
   },
@@ -338,7 +339,7 @@ const FAQS = [
   },
   {
     q: "Which is the best Data Science institute in Kolkata?",
-    a: "Ivy Professional School is consistently ranked as Kolkata's top Data Science and AI training institution. With a 93% placement rate, 4.8-star student rating, 200+ hiring partners, and industry-aligned curriculum, Ivy offers the most comprehensive and career-focused Data Science education in the city.",
+    a: "Ivy Professional School is consistently ranked as Kolkata's top Data Science and AI training institution. With an " + COMPANY.placementPctLabel + " overall placement rate, 4.8-star student rating, " + COMPANY.hiringCompaniesLabel + " hiring partners, and industry-aligned curriculum, Ivy offers the most comprehensive and career-focused Data Science education in the city.",
   },
   {
     q: "Can I learn Data Science without a technical background?",
@@ -350,7 +351,7 @@ const FAQS = [
   },
   {
     q: "Does Ivy Professional School offer job placement assistance?",
-    a: "Yes, Ivy offers 100% placement assistance to all program graduates. This includes resume building, LinkedIn profile optimization, mock interviews, access to Ivy's network of 200+ hiring partners, and dedicated placement coordinators who actively connect students with relevant job opportunities in Kolkata and across India.",
+    a: "Yes, Ivy offers 100% placement assistance to all program graduates. This includes resume building, LinkedIn profile optimization, mock interviews, access to Ivy's network of " + COMPANY.hiringCompaniesLabel + " hiring partners, and dedicated placement coordinators who actively connect students with relevant job opportunities in Kolkata and across India.",
   },
   {
     q: "What are the fees for Data Science courses at Ivy Professional School?",
@@ -1256,7 +1257,7 @@ export default function DataScienceAICareersKolkataPage() {
                     { icon: <DollarSign size={14} />, label: "Starting Salaries", val: "₹4–12 LPA for freshers", color: "#f59e0b" },
                     { icon: <Building2 size={14} />, label: "Top Employers", val: "TCS, Wipro, Infosys, IBM", color: "#8b5cf6" },
                     { icon: <Clock size={14} />, label: "Time to Job-Ready", val: "4–12 months with Ivy", color: "#ef4444" },
-                    { icon: <Award size={14} />, label: "Ivy Placement Rate", val: "93% within 45 days", color: "#6366f1" },
+                    { icon: <Award size={14} />, label: "Ivy Placement Rate", val: `${COMPANY.placementPctLabel} overall since 2008`, color: "#6366f1" },
                   ].map((fact, i) => (
                     <div key={i} className="flex items-start gap-2.5">
                       <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: fact.color + "15", color: fact.color }}>
@@ -1282,7 +1283,7 @@ export default function DataScienceAICareersKolkataPage() {
                     Start Your Data Science Career in Kolkata
                   </h3>
                   <p className="text-blue-100 text-xs mb-4 leading-relaxed">
-                    93% placement rate. ₹8.5 LPA average CTC. 200+ hiring partners across Kolkata and India.
+                    {COMPANY.placementPctLabel} placement rate (overall since 2008). ₹8.5 LPA average CTC. {COMPANY.hiringCompaniesLabel} hiring partners across Kolkata and India.
                   </p>
                   <div className="flex flex-col gap-2">
                     <a

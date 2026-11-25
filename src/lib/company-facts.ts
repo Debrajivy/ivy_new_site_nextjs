@@ -20,6 +20,7 @@ export const COMPANY = {
   avgSalaryHikeLabel: "67%",
   googleRating: 4.8,
   googleReviewsLabel: "2,250+",
+  googleReviewsCount: 2250, // numeric form for JSON-LD ratingCount
   recognition: "Recognised by MeitY",
   cities: ["Kolkata", "Bangalore", "Delhi", "Pune", "Mumbai"],
   // TODO developer: confirm official profile URLs

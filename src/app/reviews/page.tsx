@@ -1,5 +1,6 @@
 "use client";
 
+import { COMPANY } from "@/lib/company-facts";
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -576,7 +577,7 @@ const FAQ_DATA = [
   {
     question: "What is the average salary hike after completing an Ivy Pro School course?",
     answer:
-      "Students typically report **40%–60% salary hikes** after completing an Ivy Pro School course. Top performers transitioning from non-tech backgrounds into Data Science roles have reported hikes of **200%–400%**. For example, Priti Jha achieved a **200% hike** and Abhinav Sinha achieved a **400% hike** after placement at HSBC and Amazon respectively.",
+      "Ivy alumni report an **average salary hike of " + COMPANY.avgSalaryHikeLabel + "** after completing an Ivy Pro School course. Top performers transitioning from non-tech backgrounds into Data Science roles have reported hikes of **200%–400%**. For example, Priti Jha achieved a **200% hike** and Abhinav Sinha achieved a **400% hike** after placement at HSBC and Amazon respectively.",
   },
   {
     question: "Are the reviews on Ivy Professional School's website verified?",
@@ -608,7 +609,7 @@ const FAQ_DATA = [
 const FILTER_CATEGORIES = ["All", "Data Science", "Data Analytics", "Generative AI", "Data Engineering"];
 
 const STARS_OVERALL = 4.8;
-const TOTAL_REVIEWS = 1300;
+const TOTAL_REVIEWS = COMPANY.googleReviewsCount;
 
 // ─── Component ────────────────────────────────────────────────────────────────
 export default function ReviewsPage() {
@@ -771,20 +772,20 @@ export default function ReviewsPage() {
                     <div className="flex gap-1">
                       {[1, 2, 3, 4, 5].map(s => <Star key={s} className="w-5 h-5 fill-[#f7af34] text-[#f7af34]" />)}
                     </div>
-                    <p className="text-sm text-gray-500">{TOTAL_REVIEWS.toLocaleString()}+ Verified Reviews</p>
+                    <p className="text-sm text-gray-500">{COMPANY.googleReviewsLabel} Google Reviews</p>
                   </div>
                 </div>
                 <div className="space-y-3">
                   {[
-                    { label: "Placement Rate", value: "93%", color: "#009fda" },
+                    { label: "Placement Rate", value: COMPANY.placementPctLabel, color: "#009fda" },
                     { label: "Average Starting Package", value: "₹8.5 LPA", color: "#013a81" },
-                    { label: "Alumni Network", value: "37,500+", color: "#f7af34" }
+                    { label: "Alumni Network", value: COMPANY.alumniLabel, color: "#f7af34" }
                   ].map(stat => (
                     <div key={stat.label} className="flex justify-between items-center">
                       <span className="text-gray-600 text-sm">{stat.label}</span>
                       <span className="font-bold text-gray-900">{stat.value}</span>
                       <div className="w-24 h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                        <div className="h-full rounded-full" style={{ width: stat.value === "93%" ? "93%" : stat.value === "₹8.5 LPA" ? "85%" : "100%", backgroundColor: stat.color }}></div>
+                        <div className="h-full rounded-full" style={{ width: stat.value === COMPANY.placementPctLabel ? COMPANY.placementPctLabel : stat.value === "₹8.5 LPA" ? "85%" : "100%", backgroundColor: stat.color }}></div>
                       </div>
                     </div>
                   ))}

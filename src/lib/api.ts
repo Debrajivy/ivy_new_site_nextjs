@@ -1,3 +1,4 @@
+import { COMPANY } from "@/lib/company-facts";
 import { Figma } from "lucide-react";
 import { topics } from "./mockTopicsData";
 import { title } from "process";
@@ -7903,7 +7904,7 @@ const courses: Course[] = [
     students: 5876,
     metaData: {
       title: "Generative AI Course in Bangalore with Placement Assistance | Ivy Professional School",
-      description: "Enroll in Ivy Professional School’s Generative AI Course in Bangalore. Master AI tools, build real-world projects & get certified with 100% placement support.",
+      description: "Enroll in Ivy Professional School’s Generative AI Course in Bangalore. Master AI tools, build real-world projects & get certified with 100% placement assistance.",
       bio: "Learn advanced Gen AI skills, build super-functional apps, get certified by IVY, and become the perfect job candidate in 18 weeks."
 
     },

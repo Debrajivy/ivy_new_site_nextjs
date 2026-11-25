@@ -1,5 +1,6 @@
 "use client";
 
+import { COMPANY } from "@/lib/company-facts";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -168,7 +169,7 @@ const sessionOutcomes = [
 
 const stats = [
   { label: "Learners reached", value: "1 Lakh+" },
-  { label: "Success alumni", value: "37K+" },
+  { label: "Success alumni", value: COMPANY.alumniLabel },
   { label: "Latest recordings", value: String(latestRecordings.length) },
 ];
 

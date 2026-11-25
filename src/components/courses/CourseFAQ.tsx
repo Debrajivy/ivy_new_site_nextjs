@@ -1,4 +1,5 @@
 "use client";
+import { COMPANY } from "@/lib/company-facts";
 import React, { useState, useEffect, useMemo } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
@@ -777,7 +778,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What is the placement success rate?",
-        answer: "94% for full-time graduates.",
+        answer: `Ivy reports a ${COMPANY.cohortPlacementLabel}.`,
         category: "placement"
       },
       {
@@ -1888,7 +1889,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What is Ivy’s placement rate?",
-        answer: "94% of the learners are successfully placed.",
+        answer: `Ivy reports a ${COMPANY.cohortPlacementLabel}.`,
         category: "placement"
       },
       {
@@ -3262,7 +3263,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What is Ivy’s placement rate?",
-        answer: "94% of the learners are successfully placed.",
+        answer: `Ivy reports a ${COMPANY.cohortPlacementLabel}.`,
         category: "placement"
       },
       {
@@ -3453,7 +3454,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What is the placement success rate?",
-        answer: "94% of Ivy’s full-time program learners are successfully placed.",
+        answer: `Ivy reports a ${COMPANY.cohortPlacementLabel}.`,
         category: "job and career"
       },
       {
@@ -3890,7 +3891,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What is the placement rate?",
-        answer: "Ivy reports a 94% placement rate for full-time program graduates.",
+        answer: `Ivy reports a ${COMPANY.cohortPlacementLabel}.`,
         category: "placement"
       },
       {
@@ -4095,7 +4096,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       },
       {
         question: "What is the placement rate?",
-        answer: "Ivy has a 94% placement rate.",
+        answer: `Ivy reports a ${COMPANY.cohortPlacementLabel}.`,
         category: "job and career"
       },
       {
@@ -4915,7 +4916,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       // Placement-related FAQs (New/SEO Optimized)
       {
         question: "How does placement assistance work in Bangalore?",
-        answer: "We offer 100% placement support with a focus on the Bangalore market. This includes mock interviews with AI leads from top MNCs, exclusive hiring drives in Koramangala and Manyata Tech Park, and personalized resume reviews to highlight your GenAI expertise.",
+        answer: "We offer 100% placement assistance with a focus on the Bangalore market. This includes mock interviews with AI leads from top MNCs, exclusive hiring drives in Koramangala and Manyata Tech Park, and personalized resume reviews to highlight your GenAI expertise.",
         category: "placement"
       },
       {
@@ -5141,7 +5142,7 @@ const courseData: { [key: string]: CourseFAQData } = {
       // Placement-related FAQs (Mumbai-Specific & SEO Updated)
       {
         question: "How does the placement support benefit Mumbai-based students?",
-        answer: "We offer 100% placement support through exclusive hiring drives in major Mumbai business districts like Bandra-Kurla Complex (BKC) and Andheri East. Our career cell connects you with top-tier firms including Jio, TCS, and boutique AI startups in Navi Mumbai.",
+        answer: "We offer 100% placement assistance through exclusive hiring drives in major Mumbai business districts like Bandra-Kurla Complex (BKC) and Andheri East. Our career cell connects you with top-tier firms including Jio, TCS, and boutique AI startups in Navi Mumbai.",
         category: "placement"
       },
       {

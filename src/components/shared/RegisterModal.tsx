@@ -1,4 +1,5 @@
 "use client";
+import { COMPANY } from "@/lib/company-facts";
 import React, { useEffect } from 'react';
 import { X, CheckCircle, Award, Users, Clock, Shield, Star, GraduationCap, TrendingUp } from 'lucide-react';
 import icon from "@/assests/icon.webp";
@@ -33,7 +34,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose }) => {
     { Icon: GraduationCap, text: "Live classes with IIT & IIM faculty" },
     { Icon: Shield, text: "NASSCOM, IBM & MEITY certified" },
     { Icon: Users, text: "37,500+ alumni community" },
-    { Icon: Award, text: "100% placement support" },
+    { Icon: Award, text: COMPANY.placementAssistanceLabel },
     { Icon: TrendingUp, text: "67% average salary hike" },
     { Icon: Clock, text: "Flexible weekend & weekday batches" },
   ];
@@ -108,7 +109,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose }) => {
               </div>
               <div>
                 <span className="text-white font-bold text-sm">4.8 / 5</span>
-                <span className="text-blue-200 text-xs ml-1.5">from 1,300+ reviews</span>
+                <span className="text-blue-200 text-xs ml-1.5">from {COMPANY.googleReviewsLabel} Google reviews</span>
               </div>
             </div>
           </div>

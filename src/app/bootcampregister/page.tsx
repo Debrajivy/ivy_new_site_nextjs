@@ -1,3 +1,4 @@
+import { COMPANY } from "@/lib/company-facts";
 import React from "react";
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
@@ -372,9 +373,9 @@ const BootcampRegister = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 { value: "18+", label: "Years of Excellence" },
-                { value: "33,500+", label: "Alumni Network" },
+                { value: COMPANY.alumniLabel, label: "Alumni Network" },
                 { value: "400+", label: "Expert Educators" },
-                { value: "280+", label: "Partner Companies" },
+                { value: COMPANY.hiringCompaniesLabel, label: "Hiring Companies" },
               ].map((stat, index) => (
                 <div
                   key={index}

@@ -1,5 +1,6 @@
 "use client"
 
+import { COMPANY } from "@/lib/company-facts";
 import type React from "react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -257,7 +258,7 @@ const BootcampClient: React.FC<BootcampClientProps> = ({ bootcamps }) => {
                   <span className="text-sm mt-1 opacity-80">Attendees Till Date</span>
                 </div>
                 <div className="bg-white/10 text-white p-6 rounded-xl shadow-xl flex flex-col items-center border border-white/20 animate-fade-in-up delay-200 transform hover:scale-105 transition-transform duration-300 backdrop-blur-sm">
-                  <span className="text-4xl font-bold text-yellow-300">37K+</span>
+                  <span className="text-4xl font-bold text-yellow-300">{COMPANY.alumniLabel}</span>
                   <span className="text-sm mt-1 opacity-80">Success Alumni</span>
                 </div>
               </div>
