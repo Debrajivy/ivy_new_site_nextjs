@@ -18,6 +18,12 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // The default CSS chunking merged the HR, leaders and help-centre FAQ page
+  // styles into one file that every page loaded as render-blocking CSS.
+  // "strict" keeps each page's CSS to what that page imports.
+  experimental: {
+    cssChunking: "strict",
+  },
   // Files in /public are not content-hashed, and Next.js serves them with
   // "max-age=0" by default, so Cloudflare never caches them. Give them a cache
   // lifetime. Browsers keep them for 1 day, Cloudflare for 30 days. If you
