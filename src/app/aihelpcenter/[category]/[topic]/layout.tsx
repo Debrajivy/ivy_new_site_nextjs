@@ -17,6 +17,7 @@ export async function generateMetadata(
     const found = (subcat as any).topics?.find((t: any) => t.id === topic);
     if (found) {
       return {
+        alternates: { canonical: `https://ivyproschool.com/aihelpcenter/${category}/${topic}` },
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         title: (found as any).metaTitle ?? `${found.title} | Ivy Pro School`,
         description: found.description,

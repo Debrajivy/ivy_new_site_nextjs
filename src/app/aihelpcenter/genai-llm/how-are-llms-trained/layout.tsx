@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://ivyproschool.com/aihelpcenter/genai-llm/how-are-llms-trained" },
   title: "How Are LLMs Trained? The LLM Training Process Explained",
   description: "Learn how large language models are trained through tokenization, next-token prediction, loss, backpropagation, pretraining, fine-tuning, and alignment.",
 };

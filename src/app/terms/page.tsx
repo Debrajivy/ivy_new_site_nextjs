@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -154,3 +155,7 @@ const termsConditions = () => {
 };
 
 export default termsConditions;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://ivyproschool.com/terms" },
+};

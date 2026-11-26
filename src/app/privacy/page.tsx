@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -158,3 +159,7 @@ const PrivacyPolicy = () => {
     }
     
     export default PrivacyPolicy;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://ivyproschool.com/privacy" },
+};
