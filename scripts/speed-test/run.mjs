@@ -1,11 +1,16 @@
 // Automated speed test using the Google PageSpeed Insights API.
 //
+// Tests every page listed in the sitemap(s) named in urls.json, on mobile and desktop.
+// The "bothDevices" pages are shown in their own table in the summary.
+//
 // Usage:
 //   PSI_API_KEY=xxxx node scripts/speed-test/run.mjs
+//   node scripts/speed-test/run.mjs --dry-run              (list what would be tested)
 //   node scripts/speed-test/run.mjs --urls=https://ivyproschool.com/ --strategies=mobile
+//   node scripts/speed-test/run.mjs --mobile-only          (quicker, mobile for every page)
+//   node scripts/speed-test/run.mjs --fail-below=70        (exit 1 if any page scores lower)
 //
 // Writes into speed-results/ (JSON, CSV and a Markdown summary).
-// Exit code is 1 only if --fail-below=<score> is given and a page scores under it.
 
 import { readFileSync, mkdirSync, writeFileSync } from "node:fs"
 import { dirname, join } from "node:path"
@@ -20,22 +25,81 @@ const args = Object.fromEntries(
 )
 
 const apiKey = process.env.PSI_API_KEY || ""
-const urls = args.urls
-  ? args.urls.split(",")
-  : JSON.parse(readFileSync(join(here, "urls.json"), "utf8")).urls
-const strategies = (args.strategies || "mobile,desktop").split(",")
-const failBelow = args["fail-below"] ? Number(args["fail-below"]) : null
+const config = JSON.parse(readFileSync(join(here, "urls.json"), "utf8"))
+const failBelow = args["fail-below"] && !isNaN(Number(args["fail-below"])) ? Number(args["fail-below"]) : null
 const outDir = args.out || "speed-results"
-const delayMs = Number(args.delay || 3000)
+const concurrency = Number(args.concurrency || 3)
+const delayMs = Number(args.delay || 1000)
+const dryRun = args["dry-run"] === "true"
+// Every page is tested on mobile and desktop. Use --mobile-only for a quicker run.
+const allDevices = args["mobile-only"] !== "true"
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
+// ---------- Build the list of tests ----------
+
+async function readSitemap(url) {
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(`Could not read sitemap ${url}: HTTP ${res.status}`)
+  const xml = await res.text()
+  return [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => m[1])
+}
+
+function normalise(url) {
+  try {
+    const u = new URL(url)
+    u.hash = ""
+    return u.toString()
+  } catch {
+    return null
+  }
+}
+
+async function buildPlan() {
+  if (args.urls) {
+    const strategies = (args.strategies || "mobile,desktop").split(",")
+    return args.urls.split(",").flatMap((url) => strategies.map((strategy) => ({ url, strategy })))
+  }
+
+  let pages = []
+  for (const sm of config.sitemaps || []) {
+    const found = await readSitemap(sm)
+    console.log(`Sitemap ${sm}: ${found.length} URLs`)
+    pages.push(...found)
+  }
+  pages.push(...(config.extraUrls || []), ...(config.bothDevices || []))
+
+  const exclude = (config.exclude || []).map((p) => p.toLowerCase())
+  const seen = new Set()
+  const clean = []
+  for (const raw of pages) {
+    const url = normalise(raw)
+    if (!url || seen.has(url)) continue
+    const { hostname, pathname } = new URL(url)
+    // Only test our own pages, not blog or other hosts.
+    if (hostname !== "ivyproschool.com") continue
+    if (pathname.startsWith("/blog")) continue
+    if (exclude.some((e) => pathname.toLowerCase().startsWith(e))) continue
+    seen.add(url)
+    clean.push(url)
+  }
+
+  const both = new Set((config.bothDevices || []).map(normalise))
+  const plan = []
+  for (const url of clean) {
+    plan.push({ url, strategy: "mobile" })
+    if (allDevices || both.has(url)) plan.push({ url, strategy: "desktop" })
+  }
+  return plan
+}
+
+// ---------- PageSpeed API ----------
+
 // Google's published Core Web Vitals thresholds.
 const THRESHOLDS = {
-  lcp: [2500, 4000], // ms
+  lcp: [2500, 4000],
   cls: [0.1, 0.25],
-  tbt: [200, 600], // ms, lab proxy for responsiveness
-  fcp: [1800, 3000], // ms
+  tbt: [200, 600],
 }
 function rate(metric, value) {
   if (value == null) return "n/a"
@@ -64,10 +128,11 @@ async function runOne(url, strategy) {
       }
     } catch (err) {
       lastError = String(err.message || err)
+      if (/^HTTP 4\d\d/.test(lastError) && !lastError.startsWith("HTTP 429")) break
     }
     await sleep(attempt * 8000)
   }
-  throw new Error(`PageSpeed API failed for ${url} (${strategy}): ${lastError}`)
+  throw new Error(`PageSpeed API failed: ${lastError}`)
 }
 
 function summarise(url, strategy, data) {
@@ -90,46 +155,82 @@ function summarise(url, strategy, data) {
     speedIndexMs: num("speed-index"),
     ttfbMs: num("server-response-time"),
     fieldLcpMs: field.LARGEST_CONTENTFUL_PAINT_MS?.percentile ?? null,
-    fieldCls: field.CUMULATIVE_LAYOUT_SHIFT_SCORE?.percentile != null
-      ? field.CUMULATIVE_LAYOUT_SHIFT_SCORE.percentile / 100
-      : null,
+    fieldCls:
+      field.CUMULATIVE_LAYOUT_SHIFT_SCORE?.percentile != null
+        ? field.CUMULATIVE_LAYOUT_SHIFT_SCORE.percentile / 100
+        : null,
     fieldInpMs: field.INTERACTION_TO_NEXT_PAINT?.percentile ?? null,
     fieldVerdict: data.loadingExperience?.overall_category ?? null,
     fetchedAt: lh.fetchTime,
   }
 }
 
-const sec = (ms) => (ms == null ? "n/a" : `${(ms / 1000).toFixed(1)} s`)
-const ms = (v) => (v == null ? "n/a" : `${Math.round(v)} ms`)
+// ---------- Report ----------
 
-function toMarkdown(rows, errors) {
+const sec = (v) => (v == null ? "n/a" : `${(v / 1000).toFixed(1)} s`)
+const ms = (v) => (v == null ? "n/a" : `${Math.round(v)} ms`)
+const pathOf = (url) => url.replace(/^https?:\/\/[^/]+/, "") || "/"
+const avg = (rows, key) => (rows.length ? Math.round(rows.reduce((s, r) => s + r[key], 0) / rows.length) : null)
+
+function tableRows(rows) {
+  return rows.map(
+    (r) =>
+      `| ${pathOf(r.url)} | ${r.performance} | ${sec(r.lcpMs)} (${rate("lcp", r.lcpMs)}) | ${sec(r.fcpMs)} | ${ms(r.tbtMs)} | ${
+        r.cls == null ? "n/a" : r.cls.toFixed(3)
+      } (${rate("cls", r.cls)}) | ${ms(r.ttfbMs)} | ${r.seo} | ${r.accessibility} |`,
+  )
+}
+const HEADER = [
+  "| Page | Score | LCP | FCP | TBT | CLS | TTFB | SEO | Access. |",
+  "|---|---|---|---|---|---|---|---|---|",
+]
+
+function toMarkdown(rows, errors, plannedCount) {
   const date = new Date().toISOString().slice(0, 10)
   const lines = [`# Speed test ${date}`, ""]
-  for (const strategy of strategies) {
-    const subset = rows.filter((r) => r.strategy === strategy)
-    if (!subset.length) continue
-    lines.push(`## ${strategy[0].toUpperCase() + strategy.slice(1)}`, "")
-    lines.push(
-      "| Page | Score | LCP | FCP | TBT | CLS | TTFB | SEO | Access. |",
-      "|---|---|---|---|---|---|---|---|---|",
-    )
-    for (const r of subset) {
-      const path = r.url.replace(/^https?:\/\/[^/]+/, "") || "/"
-      lines.push(
-        `| ${path} | ${r.performance} | ${sec(r.lcpMs)} (${rate("lcp", r.lcpMs)}) | ${sec(r.fcpMs)} | ${ms(r.tbtMs)} | ${
-          r.cls == null ? "n/a" : r.cls.toFixed(3)
-        } (${rate("cls", r.cls)}) | ${ms(r.ttfbMs)} | ${r.seo} | ${r.accessibility} |`,
-      )
-    }
-    const avg = Math.round(subset.reduce((s, r) => s + r.performance, 0) / subset.length)
-    lines.push("", `Average performance score: **${avg}** across ${subset.length} pages.`, "")
-  }
+  const mobile = rows.filter((r) => r.strategy === "mobile")
+  const desktop = rows.filter((r) => r.strategy === "desktop")
+
   lines.push(
+    `Tested ${rows.length} of ${plannedCount} planned runs: ${mobile.length} mobile and ${desktop.length} desktop.`,
+    "",
+    "## Overview",
+    "",
+    "| Device | Pages | Average score | Score 90+ | Score 50 to 89 | Score under 50 |",
+    "|---|---|---|---|---|---|",
+  )
+  for (const [name, set] of [["Mobile", mobile], ["Desktop", desktop]]) {
+    if (!set.length) continue
+    lines.push(
+      `| ${name} | ${set.length} | ${avg(set, "performance")} | ${set.filter((r) => r.performance >= 90).length} | ${
+        set.filter((r) => r.performance >= 50 && r.performance < 90).length
+      } | ${set.filter((r) => r.performance < 50).length} |`,
+    )
+  }
+  lines.push("")
+
+  if (mobile.length) {
+    const worst = [...mobile].sort((a, b) => a.performance - b.performance).slice(0, 15)
+    lines.push("## 15 slowest pages on mobile", "", ...HEADER, ...tableRows(worst), "")
+  }
+
+  const both = new Set((config.bothDevices || []).map(normalise))
+  const key = rows.filter((r) => both.has(normalise(r.url)))
+  for (const strategy of ["mobile", "desktop"]) {
+    const subset = key.filter((r) => r.strategy === strategy)
+    if (!subset.length) continue
+    lines.push(`## Key pages, ${strategy}`, "", ...HEADER, ...tableRows(subset), "")
+  }
+
+  lines.push(
+    "The full list of every page is in the CSV file in the downloadable report.",
+    "",
     "Scores are Lighthouse lab results from Google PageSpeed Insights (0 to 100, higher is better).",
     "LCP under 2.5 s, CLS under 0.1 and TBT under 200 ms are rated Good.",
   )
   if (errors.length) {
-    lines.push("", "## Pages that could not be tested", "", ...errors.map((e) => `- ${e}`))
+    lines.push("", `## Tests that could not be completed (${errors.length})`, "", ...errors.slice(0, 40).map((e) => `- ${e}`))
+    if (errors.length > 40) lines.push(`- and ${errors.length - 40} more, see the log`)
   }
   return lines.join("\n") + "\n"
 }
@@ -140,33 +241,48 @@ function toCsv(rows) {
   return [cols.join(","), ...rows.map((r) => cols.map((c) => esc(r[c])).join(","))].join("\n") + "\n"
 }
 
+// ---------- Main ----------
+
 async function main() {
-  if (!apiKey) {
-    console.warn("PSI_API_KEY is not set. Google will rate limit keyless requests heavily.")
+  const plan = await buildPlan()
+  const pages = new Set(plan.map((p) => p.url)).size
+  console.log(`Plan: ${pages} pages, ${plan.length} tests (concurrency ${concurrency}).`)
+
+  if (dryRun) {
+    for (const p of plan) console.log(`${p.strategy.padEnd(8)} ${p.url}`)
+    return
   }
+  if (!apiKey) console.warn("PSI_API_KEY is not set. Google will rate limit keyless requests heavily.")
+
   const rows = []
   const errors = []
-  for (const url of urls) {
-    for (const strategy of strategies) {
+  let done = 0
+  const queue = [...plan]
+
+  async function worker() {
+    while (queue.length) {
+      const { url, strategy } = queue.shift()
       try {
-        console.log(`Testing ${strategy} ${url}`)
         const data = await runOne(url, strategy)
         const row = summarise(url, strategy, data)
         rows.push(row)
-        console.log(`  score ${row.performance}, LCP ${sec(row.lcpMs)}, CLS ${row.cls?.toFixed(3)}`)
+        console.log(`[${++done}/${plan.length}] ${strategy} ${pathOf(url)} score ${row.performance}, LCP ${sec(row.lcpMs)}`)
       } catch (err) {
-        console.error(`  failed: ${err.message}`)
-        errors.push(`${url} (${strategy}): ${err.message}`)
+        console.error(`[${++done}/${plan.length}] ${strategy} ${pathOf(url)} failed: ${err.message}`)
+        errors.push(`${pathOf(url)} (${strategy}): ${err.message}`)
       }
       await sleep(delayMs)
     }
   }
+  await Promise.all(Array.from({ length: Math.max(1, concurrency) }, worker))
+
+  rows.sort((a, b) => a.url.localeCompare(b.url) || a.strategy.localeCompare(b.strategy))
 
   mkdirSync(outDir, { recursive: true })
   const stamp = new Date().toISOString().slice(0, 10)
   writeFileSync(join(outDir, `speed-${stamp}.json`), JSON.stringify(rows, null, 2))
   if (rows.length) writeFileSync(join(outDir, `speed-${stamp}.csv`), toCsv(rows))
-  const md = toMarkdown(rows, errors)
+  const md = toMarkdown(rows, errors, plan.length)
   writeFileSync(join(outDir, "summary.md"), md)
   console.log("\n" + md)
 
@@ -183,4 +299,7 @@ async function main() {
   }
 }
 
-main()
+main().catch((err) => {
+  console.error(err)
+  process.exit(1)
+})

@@ -1,4 +1,5 @@
-# Weekly automated speed test of ivyproschool.com using Google PageSpeed Insights.
+# Weekly automated speed test of every page in the sitemap, using Google PageSpeed Insights.
+# Every page is tested on both mobile and desktop.
 # Results appear on the run page (summary table) and as a downloadable CSV/JSON report.
 # Needs a repository secret named PSI_API_KEY (see scripts/speed-test/README.md).
 
@@ -18,7 +19,8 @@ on:
 jobs:
   speed-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # Tests every sitemap page on mobile and desktop (about 310 tests). Allow plenty of time.
+    timeout-minutes: 120
     permissions:
       contents: read
 

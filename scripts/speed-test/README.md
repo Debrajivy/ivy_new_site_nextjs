@@ -1,7 +1,20 @@
 # Automated speed test
 
-Tests the pages in `urls.json` on mobile and desktop using Google PageSpeed
-Insights, every Monday at 03:00 IST. It can also be run by hand.
+Tests every page in the sitemap using Google PageSpeed Insights, every Monday
+at 03:00 IST. It can also be run by hand.
+
+## What is tested
+
+- Every page listed in `https://ivyproschool.com/sitemap-main.xml` is tested on
+  **mobile and desktop** (about 156 pages, 312 tests). New pages are picked up
+  automatically once they are in the sitemap.
+- The key pages listed under `bothDevices` in `urls.json` get their own table in
+  the summary.
+- Blog pages (`/blog`) and other hosts are skipped.
+- To test a page the sitemap does not list, add it to `extraUrls` in `urls.json`.
+  To skip a path, add it to `exclude`.
+- A full run takes roughly 30 to 60 minutes. For a quicker run on your computer,
+  add `--mobile-only`.
 
 ## One-time setup
 
@@ -17,16 +30,20 @@ Never put the key in the code or in a message.
 ## Running it
 
 - **Automatic:** the "Weekly speed test" workflow runs every Monday.
-- **On demand:** GitHub, Actions, "Weekly speed test", Run workflow. Enter a
-  score in "fail_below" if you want the run to fail when any page scores lower.
+- **On demand:** GitHub, Actions, "Weekly speed test", Run workflow.
+  Leave "fail_below" empty to only report. If you enter a score, the run turns
+  red when any page scores lower than that.
 - **On your computer:** `PSI_API_KEY=your-key node scripts/speed-test/run.mjs`
-  (add `--urls=https://ivyproschool.com/ --strategies=mobile` to test one page).
+  - `--dry-run` lists what would be tested without calling Google.
+  - `--urls=https://ivyproschool.com/ --strategies=mobile` tests one page.
+  - `--mobile-only` tests every page on mobile only (about half the time).
 
 ## Where to see results
 
-- The run page in GitHub shows a table of scores per page.
-- The "speed-report" download on the run page has CSV and JSON for the full
-  detail. It is kept for 90 days.
+- The run page in GitHub shows an overview, the 15 slowest mobile pages and the
+  key pages table.
+- The "speed-report" download on the run page has the full CSV and JSON for
+  every page. It is kept for 90 days.
 
 ## What the numbers mean
 

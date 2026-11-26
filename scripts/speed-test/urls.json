@@ -1,6 +1,9 @@
 {
-  "_comment": "Pages tested by the weekly speed test. Add or remove URLs here. Each URL is tested on mobile and desktop.",
-  "urls": [
+  "_comment": "The speed test reads every page from the sitemaps below and tests each on mobile AND desktop. Pages in bothDevices get their own table in the summary. Add anything the sitemap misses to extraUrls. Add paths to exclude to skip them.",
+  "sitemaps": [
+    "https://ivyproschool.com/sitemap-main.xml"
+  ],
+  "bothDevices": [
     "https://ivyproschool.com/",
     "https://ivyproschool.com/courses",
     "https://ivyproschool.com/courses/generative-ai-course",
@@ -12,5 +15,7 @@
     "https://ivyproschool.com/contact-us",
     "https://ivyproschool.com/aihelpcenter",
     "https://ivyproschool.com/aihelpcenter/genai-llm/what-is-agentic-ai"
-  ]
+  ],
+  "extraUrls": [],
+  "exclude": []
 }
