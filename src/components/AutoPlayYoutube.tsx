@@ -6,7 +6,7 @@ export default function AutoPlayYouTube({
   title = "YouTube video",
   className = "",
   aspect = 16 / 9,
-  delay = 800, // ms delay before injecting iframe
+  delay = 800, // ms to wait after the page has loaded before injecting the iframe
 }: { id: string; title?: string; className?: string; aspect?: number; delay?: number }) {
   const [active, setActive] = useState(false);
   const paddingTop = `${100 / aspect}%`;
@@ -17,9 +17,28 @@ export default function AutoPlayYouTube({
     [id]
   );
 
+  // The YouTube player is about 1.5 MB (scripts + video). Start it only after
+  // the page has finished loading and the browser is idle, so it does not
+  // compete with the page's own files. The thumbnail shows until then.
   useEffect(() => {
-    const t = setTimeout(() => setActive(true), delay);
-    return () => clearTimeout(t);
+    let timer: number | undefined;
+    let idle: number | undefined;
+    const start = () => {
+      timer = window.setTimeout(() => {
+        if ("requestIdleCallback" in window) {
+          idle = window.requestIdleCallback(() => setActive(true), { timeout: 2000 });
+        } else {
+          setActive(true);
+        }
+      }, delay);
+    };
+    if (document.readyState === "complete") start();
+    else window.addEventListener("load", start, { once: true });
+    return () => {
+      window.removeEventListener("load", start);
+      if (timer !== undefined) window.clearTimeout(timer);
+      if (idle !== undefined && "cancelIdleCallback" in window) window.cancelIdleCallback(idle);
+    };
   }, [delay]);
 
   return (
@@ -38,7 +57,7 @@ export default function AutoPlayYouTube({
           src={poster}
           alt={title}
           className="absolute top-0 left-0 w-full h-full object-cover"
-          loading="lazy"
+          loading="eager"
           decoding="async"
         />
       )}
