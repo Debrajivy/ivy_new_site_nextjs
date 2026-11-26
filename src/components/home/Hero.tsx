@@ -7,8 +7,11 @@ import { CheckCircle } from "lucide-react"
 import { useRouter } from 'next/navigation';
 import AutpPlayYoutube from '../AutoPlayYoutube';
 import Link from 'next/link';
-import RegisterModal from '@/components/shared/RegisterModal';
+import dynamic from 'next/dynamic';
 import { trackOpenAILead } from '@/lib/openaiPixel';
+
+// Loaded only when a visitor opens the register modal.
+const RegisterModal = dynamic(() => import('@/components/shared/RegisterModal'), { ssr: false });
 
 const Hero = () => {
 
