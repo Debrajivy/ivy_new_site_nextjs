@@ -3,7 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { CalendarCheck, Sparkles } from 'lucide-react';
-import AssessmentModal from './AssessmentModal'; // Import the new AssessmentModal
+import dynamic from 'next/dynamic';
+
+// The assessment modal (with its markdown renderer) is loaded only when a
+// visitor is about to open it, not with the homepage.
+const loadAssessmentModal = () => import('./AssessmentModal');
+const AssessmentModal = dynamic(loadAssessmentModal, { ssr: false });
 
 const CallToAction: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -108,18 +113,26 @@ const CallToAction: React.FC = () => {
             </div>
 
             {/* This button now opens the AssessmentModal */}
-            <Button className="w-full mt-8" size="lg" onClick={() => setIsAssessmentModalOpen(true)}>
+            <Button
+              className="w-full mt-8"
+              size="lg"
+              onClick={() => setIsAssessmentModalOpen(true)}
+              onPointerEnter={loadAssessmentModal}
+              onFocus={loadAssessmentModal}
+            >
               Start Assessment
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Render the Assessment Modal */}
-      <AssessmentModal
-        isOpen={isAssessmentModalOpen}
-        onClose={() => setIsAssessmentModalOpen(false)}
-      />
+      {/* Render the Assessment Modal (it resets itself on every open) */}
+      {isAssessmentModalOpen && (
+        <AssessmentModal
+          isOpen={isAssessmentModalOpen}
+          onClose={() => setIsAssessmentModalOpen(false)}
+        />
+      )}
     </section>
   );
 };

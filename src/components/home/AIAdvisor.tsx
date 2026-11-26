@@ -4,7 +4,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Bot, Send, MessageSquare, Phone, ShieldCheck } from "lucide-react"
-import ReactMarkdown from "react-markdown"
+import dynamic from "next/dynamic"
+
+// The markdown renderer is only needed for real chat replies. Load it when the
+// visitor starts using the chat, not with the homepage. The fixed greeting is
+// plain text and renders as the same <p> ReactMarkdown would produce.
+const loadMarkdown = () => import("react-markdown")
+const ReactMarkdown = dynamic(loadMarkdown, { ssr: false })
 
 interface ChatMessage {
   role: "user" | "assistant"
@@ -383,7 +389,7 @@ If unsure:
                       className={`max-w-[80%] rounded-lg px-4 py-2 whitespace-pre-wrap ${message.role === "user" ? "bg-primary text-white" : "bg-gray-100 text-gray-800"
                         }`}
                     >
-                      <ReactMarkdown>{message.content}</ReactMarkdown>
+                      {index === 0 ? <p>{message.content}</p> : <ReactMarkdown>{message.content}</ReactMarkdown>}
                     </div>
                   </div>
                 ))}
@@ -400,6 +406,7 @@ If unsure:
                 <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
+                  onFocus={loadMarkdown}
                   placeholder="Tell me about your background..."
                   className="flex-grow"
                   onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
