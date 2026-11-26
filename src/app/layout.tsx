@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DeferredAnalytics from "@/components/DeferredAnalytics";
+import { COMPANY } from "@/lib/company-facts";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
@@ -47,34 +48,60 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.ico" },
 };
 
-const schemaData = {
-  "@context": "https://schema.org",
+// One JSON-LD block: the EducationalOrganization and the WebSite, linked by @id.
+// Every value comes from src/lib/company-facts.ts.
+type PostalAddress = {
+  "@type": "PostalAddress";
+  streetAddress: string;
+  addressLocality: string;
+  addressRegion?: string;
+  postalCode?: string;
+  addressCountry: "IN";
+};
+
+const ORG_ID = `${COMPANY.url}/#organization`;
+
+const addresses: PostalAddress[] = COMPANY.offices.map((o) => ({
+  "@type": "PostalAddress",
+  streetAddress: o.streetAddress,
+  addressLocality: o.city,
+  ...("addressRegion" in o ? { addressRegion: o.addressRegion } : {}),
+  ...("postalCode" in o ? { postalCode: o.postalCode } : {}),
+  addressCountry: "IN",
+}));
+
+const organization = {
   "@type": "EducationalOrganization",
-  name: "Ivy Professional School",
-  url: "https://ivyproschool.com/",
-  logo: "https://ivyproschool.com/assets/logo.png",
-  sameAs: [
-    "https://www.facebook.com/ivyproschool",
-    "https://x.com/ivyproschool",
-    "https://www.linkedin.com/school/ivy-professional-school",
-    "https://www.youtube.com/ivyproschool",
-    "https://www.instagram.com/ivyproschool",
-  ],
-  description:
-    "Advance your career in Data Science with Ivy Pro, trusted by 37,500+ alumni across 500+ firms. Rated 4.8/5. Industry-led training since 2008.",
-  foundingDate: "2008",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Kolkata",
-    addressRegion: "West Bengal",
-    addressCountry: "India",
-  },
+  "@id": ORG_ID,
+  name: COMPANY.name,
+  legalName: COMPANY.legalName,
+  url: `${COMPANY.url}/`,
+  logo: { "@type": "ImageObject", url: COMPANY.logo },
+  sameAs: [...COMPANY.sameAs],
+  description: `Advance your career in Data Science with Ivy Pro, trusted by ${COMPANY.alumniLabel} alumni across ${COMPANY.hiringCompaniesLabel} firms. Rated ${COMPANY.googleRating}/5. Industry-led training since ${COMPANY.foundingYear}.`,
+  foundingDate: String(COMPANY.foundingYear),
+  founder: { "@type": "Person", name: COMPANY.founder },
+  address: addresses,
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
     telephone: "+91 7676882222",
     areaServed: "IN",
   },
+};
+
+const website = {
+  "@type": "WebSite",
+  "@id": `${COMPANY.url}/#website`,
+  url: `${COMPANY.url}/`,
+  name: COMPANY.name,
+  publisher: { "@id": ORG_ID },
+  inLanguage: "en-IN",
+};
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [organization, website],
 };
 
 // --- ROOT LAYOUT COMPONENT ---
