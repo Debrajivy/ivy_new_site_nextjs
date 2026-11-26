@@ -41,9 +41,11 @@ export async function generateMetadata(
   { params }: { params: Promise<{ category: string }> }
 ): Promise<Metadata> {
   const { category } = await params;
+  const canonical = `https://ivyproschool.com/aihelpcenter/${category}`;
 
   if (categoryMeta[category]) {
     return {
+      alternates: { canonical },
       title: categoryMeta[category].title,
       description: categoryMeta[category].description,
     };
@@ -54,6 +56,7 @@ export async function generateMetadata(
   const categoryDesc = (categoryData as any)?.description ?? "";
 
   return {
+    alternates: { canonical },
     title: `${categoryTitle} Tutorials | AI Help Center | Ivy Pro School`,
     description: categoryDesc
       ? `${categoryDesc} — Free tutorials and learning resources from Ivy Pro School's AI Help Center.`

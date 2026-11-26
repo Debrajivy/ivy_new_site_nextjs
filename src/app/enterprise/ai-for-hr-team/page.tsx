@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import { PromptPackButton } from "@/components/layout/Notification";
 import Footer from "@/components/layout/Footer";
@@ -85,3 +86,7 @@ export default function AIForHRPage(){return <div className={styles.page}><Navba
   <HRFaq/>
   <section className={styles.cta} id="contact"><div className={styles.shell}><p className={styles.eyebrow}>BUILD YOUR HR AI PROGRAMME</p><h2>Start with the workflows your HR team needs to improve now.</h2><p>We will assess participant maturity, data readiness, tool access and business priorities, then configure the programme, case materials, deliverables and measurement plan.</p><a className={styles.button} href="mailto:corporate@ivyproschool.com?subject=AI%20for%20HR%20Programme">Book a Conversation <ArrowRight size={17}/></a></div></section>
  </main><Footer/></div>}
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://ivyproschool.com/enterprise/ai-for-hr-team" },
+};

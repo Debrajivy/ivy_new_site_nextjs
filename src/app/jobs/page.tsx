@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer"
 import JobBoardClient from "./job-board-client"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://ivyproschool.com/jobs" },
   title: "AI-Powered Job Board | Ivy Professional School",
   description:
     "Find your dream job in data science, AI, machine learning and more. Get AI-powered job recommendations tailored to your skills and career goals.",

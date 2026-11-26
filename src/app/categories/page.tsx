@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
@@ -94,3 +95,7 @@ const Categories = () => {
 };
 
 export default Categories;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://ivyproschool.com/categories" },
+};

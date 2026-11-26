@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     images: ["https://ivyproschool.com/assets/logo.webp"],
   },
   icons: { icon: "/favicon.ico" },
-  alternates: { canonical: "https://ivyproschool.com/" },
 };
 
 const schemaData = {
