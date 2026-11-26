@@ -41,6 +41,12 @@ const nextConfig: NextConfig = {
         destination: "/courses/iit-data-science-course",
         permanent: true, // 308 redirect
       },
+      // Old demo page (hard-coded test students) removed; the real one is /verify-certificate.
+      {
+        source: "/certificateVerification",
+        destination: "/verify-certificate",
+        permanent: true,
+      },
       // {
       //   source: "/iit-data-engineering-course",
       //   destination: "/courses/iit-data-engineering-course",
