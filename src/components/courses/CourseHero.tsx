@@ -12,6 +12,7 @@ const WhatsAppIcon = ({ size = 28 }: { size?: number }) => (
   </svg>
 );
 import type { Course } from "@/lib/api";
+import { DE_BRAND, DE_EXTRA_BADGES, DE_HIGHLIGHTS, DE_RATING_BADGE, deH1, isDataEngineeringSlug } from "@/lib/data-engineering-course";
 import { getCourseDurationHours } from "@/lib/coursePageFacts";
 import ibm from "@/assests/IBM2.webp";
 import deloitte from "@/assests/deloitte.webp";
@@ -559,6 +560,11 @@ const CourseHero = ({ course }: CourseHeroProps) => {
               </Badge>
               {/* City specific content */}
               {
+                isDataEngineeringSlug(course.slug) ?
+                  <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                    {deH1(course.slug)}
+                  </h1>
+                  :
                 course.title != "Data Engineering Course in Kolkata" ?
 
                   <h1 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -972,6 +978,15 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                                     </div>
                                   </>
                                   :
+                                  isDataEngineeringSlug(course.slug) ?
+                                  <div className="space-y-6">
+                                    {DE_HIGHLIGHTS.map((h) => (
+                                      <p key={h} style={{ fontSize: 17 }} className="font-normal  text-white">
+                                        ⦿ {h}
+                                      </p>
+                                    ))}
+                                  </div>
+                                  :
                                   <div className="space-y-6">
 
                                     <p style={{ fontSize: 17 }} className="font-normal  text-white" >
@@ -1050,7 +1065,7 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                         : course.title === "Data Science with Machine Learning & AI Certification"
                           ? "4.8 (230 reviews)"
                           : course.title === " Data Engineering Course" || course.title === "Data Engineering Course in Kolkata" || course.title === "Data Engineering Course in Delhi" || course.title === "Data Engineering Course in Pune" || course.title === "Data Engineering Course in Chennai" || course.title === "Data Engineering Course in Bangalore" || course.title === "Data Engineering Course in Mumbai"
-                            ? "4.7 (198 reviews)"
+                            ? DE_RATING_BADGE
                             : course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
                               "4.8 (324 reviews)"
                               : course.title === "Data Analytics and Generative AI Course"
@@ -1102,6 +1117,13 @@ const CourseHero = ({ course }: CourseHeroProps) => {
                       ? "Ivy Professional School Certification"
                       : "Ivy Professional School Certification"}
               </div>
+
+              {isDataEngineeringSlug(course.slug) && DE_EXTRA_BADGES.map((badge) => (
+                <div key={badge} className="flex items-center bg-white/20 rounded-full px-4 py-2">
+                  <Award size={16} className="mr-2" />
+                  {badge}
+                </div>
+              ))}
 
               {course.title === "AI for Entrepreneurs" ? (
                 <a
@@ -2123,7 +2145,7 @@ max-w-[90px] sm:max-w-[120px] lg:max-w-[150px]
             <div className="px-4 py-3 flex items-center gap-3" style={{ background: "#25D366" }}>
               <WhatsAppIcon size={24} />
               <div className="flex-1">
-                <p className="font-semibold text-white text-sm leading-tight">Ivy Pro School</p>
+                <p className="font-semibold text-white text-sm leading-tight">{isDataEngineeringSlug(course.slug) ? DE_BRAND : "Ivy Pro School"}</p>
                 <p className="text-[10px] text-green-100 mt-0.5">● Typically replies in minutes</p>
               </div>
               <button
