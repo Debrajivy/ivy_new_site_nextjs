@@ -7,7 +7,7 @@ import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Badge } from "@/components/ui/badge";
-import BootcampPosterImage from "@/assests/fine-tuning-bootcamp.jpeg";
+import BootcampPosterImage from "@/assests/Ivy_Bootcamp_AI_Roles_2Dec.jpeg";
 import {
   ArrowRight,
   CalendarDays,
@@ -261,7 +261,7 @@ const BootcampPageClient = ({ session, initialStatus }: BootcampPageClientProps)
             <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-white/15 bg-slate-950 shadow-2xl shadow-black/20">
               <Image
                 src={BootcampPosterImage}
-                alt="Free bootcamp: Fine-Tuning vs RAG vs Prompting, which one does your use case need?"
+                alt="Free live bootcamp: How to Crack AI Roles, What Companies Actually Look For, with Rushabh Mehta, 2nd Dec, 7:00 PM to 8:00 PM"
                 priority
                 sizes="(min-width: 1024px) 448px, 100vw"
                 className="h-auto w-full"
