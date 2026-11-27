@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import { COMPANY } from "@/lib/company-facts";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -526,6 +527,7 @@ export default function DataScienceAICareersKolkataPage() {
                 Kolkata
               </span>
             </h1>
+            <ArticleDates path="/aihelpcenter/career/data-science-ai-careers-kolkata-2026" className="text-sm text-gray-500 mb-4" />
 
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               Everything you need to know about the booming Data Science, Machine Learning, and AI job market in Kolkata — top roles, salary ranges, must-have skills, and how to launch your career.

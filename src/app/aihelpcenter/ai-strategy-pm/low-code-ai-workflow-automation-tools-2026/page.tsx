@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -440,6 +441,7 @@ export default function LowCodeAIWorkflowPage() {
               </span>{" "}
               Automation Tools in 2026 + How to Implement Them
             </h1>
+            <ArticleDates path="/aihelpcenter/ai-strategy-pm/low-code-ai-workflow-automation-tools-2026" className="text-sm text-gray-500 mb-4" />
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               From AI experiments to AI-driven operations — discover the top low-code tools, understand the full landscape, and learn how to build your first AI workflow step by step.
             </p>

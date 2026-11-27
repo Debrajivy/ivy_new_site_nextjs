@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -394,6 +395,7 @@ export default function ClaudeInExcelPage() {
               </span>{" "}
               for Data Analytics
             </h1>
+            <ArticleDates path="/aihelpcenter/ai-strategy-pm/how-to-use-claude-in-excel-for-data-analytics" className="text-sm text-gray-500 mb-4" />
 
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               A complete guide to your AI co-analyst inside Microsoft Excel — from data cleaning to trend interpretation, all without leaving your spreadsheet.

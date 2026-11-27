@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -410,6 +411,7 @@ export default function ClaudeAILikeAProPage() {
               </span>{" "}
               Like a Pro: Complete Beginner to Advanced Guide
             </h1>
+            <ArticleDates path="/aihelpcenter/ai-strategy-pm/how-to-use-claude-ai-like-a-pro" className="text-sm text-gray-500 mb-4" />
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               From basic Claude Chat to advanced Claude Code and MCP integrations — master every level of Claude&apos;s capabilities with this comprehensive guide for professionals.
             </p>

@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -416,6 +417,7 @@ export default function NotebookLMPage() {
               </span>
               : Complete Guide to Features, Pricing &amp; Best Practices
             </h1>
+            <ArticleDates path="/aihelpcenter/ai-strategy-pm/how-to-use-notebooklm" className="text-sm text-gray-500 mb-4" />
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               Google&apos;s AI-powered research tool — learn how to use NotebookLM for document analysis, audio overviews, slide decks, mind maps, and more. Everything from free plan to enterprise in one guide.
             </p>

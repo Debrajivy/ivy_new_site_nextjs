@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -260,6 +261,7 @@ export default function BestAITools2026Page() {
             </span>{" "}
             for 2026
           </h1>
+          <ArticleDates path="/aihelpcenter/ai-for-product-managers/best-ai-tools-2026" className="text-sm text-white/70 mb-6" />
 
           <p className="text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl mb-8">
             Transforming How We Work, Create, Innovate, and Automate. A complete guide for product managers to understand and leverage the most powerful AI tools reshaping the workplace.
