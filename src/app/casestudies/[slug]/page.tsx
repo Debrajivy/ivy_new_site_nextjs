@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CaseStudiesPage from "../page";
+import { ArticleDatesJsonLd } from "@/components/seo/ArticleDates";
 
 type Params = { slug: string };
 type AsyncPageProps = { params: Promise<Params> };
@@ -93,5 +94,10 @@ export default async function CaseStudyDetailPage({ params }: AsyncPageProps) {
     notFound();
   }
 
-  return <CaseStudiesPage initialSlug={normalizedSlug} />;
+  return (
+    <>
+      <ArticleDatesJsonLd path={`/casestudies/${normalizedSlug}`} />
+      <CaseStudiesPage initialSlug={normalizedSlug} />
+    </>
+  );
 }

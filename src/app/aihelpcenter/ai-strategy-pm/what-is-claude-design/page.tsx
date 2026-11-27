@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -531,6 +532,7 @@ export default function ClaudeDesignPage() {
                 The AI-Powered Visual Tool for Every Professional
               </span>
             </h1>
+            <ArticleDates path="/aihelpcenter/ai-strategy-pm/what-is-claude-design" className="text-sm text-gray-500 mb-4" />
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               Anthropic launched Claude Design on April 17, 2026 — powered by
               Claude Opus 4.7. This comprehensive guide covers what it is, how

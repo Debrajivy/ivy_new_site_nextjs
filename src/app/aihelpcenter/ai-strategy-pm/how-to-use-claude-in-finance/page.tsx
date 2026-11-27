@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -384,6 +385,7 @@ export default function ClaudeInFinancePage() {
               {": "}
               AI for Financial Analysis, Modeling &amp; Automation
             </h1>
+            <ArticleDates path="/aihelpcenter/ai-strategy-pm/how-to-use-claude-in-finance" className="text-sm text-gray-500 mb-4" />
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               A complete guide to using Claude as an{" "}
               <a href="https://ivyproschool.com/courses/generative-ai-course" target="_blank" rel="noopener noreferrer" className="text-[#009fda] font-semibold hover:underline">

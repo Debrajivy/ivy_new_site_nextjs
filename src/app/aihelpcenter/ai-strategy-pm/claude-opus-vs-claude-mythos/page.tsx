@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -528,6 +529,7 @@ export default function ClaudeOpusVsMythosPage() {
                 Every Benchmark, Explained
               </span>
             </h1>
+            <ArticleDates path="/aihelpcenter/ai-strategy-pm/claude-opus-vs-claude-mythos" className="text-sm text-gray-500 mb-4" />
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               Anthropic just released Claude Opus 4.7 — a major upgrade for
               coding, vision, and instruction following. But there&apos;s a bigger,

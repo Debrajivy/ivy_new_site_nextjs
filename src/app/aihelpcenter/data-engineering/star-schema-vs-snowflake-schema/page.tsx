@@ -1,5 +1,6 @@
 "use client";
 
+import ArticleDates from "@/components/seo/ArticleDates";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -539,6 +540,7 @@ export default function StarSchemaVsSnowflakePage() {
               </span>
               : Differences, Use Cases, SQL Examples &amp; How to Choose
             </h1>
+            <ArticleDates path="/aihelpcenter/data-engineering/star-schema-vs-snowflake-schema" className="text-sm text-gray-500 mb-4" />
             <p className="text-gray-500 text-base sm:text-lg leading-relaxed mb-7">
               The schema you choose decides whether your queries run in seconds or minutes, whether dashboards feel smooth or frustrating. This guide covers everything you need to make the right call.
             </p>
