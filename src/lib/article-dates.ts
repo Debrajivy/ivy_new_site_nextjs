@@ -11,24 +11,42 @@
  * - When you change an article's text, update its `modified` date here.
  *
  * Dates are YYYY-MM-DD. The commit is noted next to each entry so it can be checked.
+ *
+ * Article schema (SEO-011): for standalone pages that have no data file, the entry also
+ * holds the headline (the page's H1 text) and the authors named in the byline under the
+ * H1. Keep them in step with the page. Entries without `authors` use the organisation.
+ * Never add a name that is not shown on the page.
  */
-export type ArticleDates = { published: string; modified: string };
+export type ArticleAuthor = { name: string; url?: string };
+
+export type ArticleDates = {
+  published: string;
+  modified: string;
+  headline?: string;
+  authors?: ArticleAuthor[];
+};
+
+/** People named as authors on article pages, with the profile link the page shows. */
+export const AUTHORS = {
+  prateek: { name: "Prateek Agrawal", url: "https://www.linkedin.com/in/prateekagrawal" },
+  nawid: { name: "Nawid Khichi" }, // byline "April 2026 · Nawid Khichi"; no profile link on the page
+} satisfies Record<string, ArticleAuthor>;
 
 export const ARTICLE_DATES: Record<string, ArticleDates> = {
   // ---------- AI Help Center (standalone article pages) ----------
-  "/aihelpcenter/ai-for-product-managers/best-ai-tools-2026": { published: "2026-03-16", modified: "2026-03-16" }, // ae6a67f
-  "/aihelpcenter/ai-strategy-pm/claude-opus-vs-claude-mythos": { published: "2026-04-21", modified: "2026-04-21" }, // 9a277e5
-  "/aihelpcenter/ai-strategy-pm/how-to-use-claude-ai-like-a-pro": { published: "2026-04-13", modified: "2026-04-13" }, // 7014ce0
-  "/aihelpcenter/ai-strategy-pm/how-to-use-claude-in-excel-for-data-analytics": { published: "2026-03-17", modified: "2026-03-17" }, // d6e275c
-  "/aihelpcenter/ai-strategy-pm/how-to-use-claude-in-finance": { published: "2026-04-13", modified: "2026-04-13" }, // 7014ce0
-  "/aihelpcenter/ai-strategy-pm/how-to-use-notebooklm": { published: "2026-04-13", modified: "2026-04-13" }, // 7014ce0
-  "/aihelpcenter/ai-strategy-pm/low-code-ai-workflow-automation-tools-2026": { published: "2026-04-16", modified: "2026-04-16" }, // 5981bc2
-  "/aihelpcenter/ai-strategy-pm/what-is-claude-design": { published: "2026-04-21", modified: "2026-04-21" }, // 9a277e5
-  "/aihelpcenter/career/data-science-ai-careers-kolkata-2026": { published: "2026-04-13", modified: "2026-11-25" }, // 7014ce0; figures updated in 1ab8c86 (SEO-001)
-  "/aihelpcenter/career/data-science-for-commerce-students": { published: "2026-04-07", modified: "2026-04-07" }, // 8848ed6
-  "/aihelpcenter/data-engineering/star-schema-vs-snowflake-schema": { published: "2026-05-05", modified: "2026-05-05" }, // 519a7f1
-  "/aihelpcenter/genai-llm/harness-engineering-in-ai": { published: "2026-08-06", modified: "2026-08-06" }, // 42e971f
-  "/aihelpcenter/genai-llm/how-are-llms-trained": { published: "2026-08-12", modified: "2026-08-12" }, // 1ab124a
+  "/aihelpcenter/ai-for-product-managers/best-ai-tools-2026": { published: "2026-03-16", modified: "2026-03-16", headline: "The Best AI Tools for 2026", authors: [AUTHORS.prateek] }, // ae6a67f
+  "/aihelpcenter/ai-strategy-pm/claude-opus-vs-claude-mythos": { published: "2026-04-21", modified: "2026-04-21", headline: "Claude Opus 4.7 vs. Claude Mythos: Every Benchmark, Explained", authors: [AUTHORS.nawid, AUTHORS.prateek] }, // 9a277e5
+  "/aihelpcenter/ai-strategy-pm/how-to-use-claude-ai-like-a-pro": { published: "2026-04-13", modified: "2026-04-13", headline: "How to Use Claude AI Like a Pro: Complete Beginner to Advanced Guide", authors: [AUTHORS.prateek] }, // 7014ce0
+  "/aihelpcenter/ai-strategy-pm/how-to-use-claude-in-excel-for-data-analytics": { published: "2026-03-17", modified: "2026-03-17", headline: "How to Use Claude in Excel for Data Analytics", authors: [AUTHORS.prateek] }, // d6e275c
+  "/aihelpcenter/ai-strategy-pm/how-to-use-claude-in-finance": { published: "2026-04-13", modified: "2026-04-13", headline: "How to Use Claude in Finance: AI for Financial Analysis, Modeling & Automation", authors: [AUTHORS.prateek] }, // 7014ce0
+  "/aihelpcenter/ai-strategy-pm/how-to-use-notebooklm": { published: "2026-04-13", modified: "2026-04-13", headline: "How to Use NotebookLM: Complete Guide to Features, Pricing & Best Practices", authors: [AUTHORS.prateek] }, // 7014ce0
+  "/aihelpcenter/ai-strategy-pm/low-code-ai-workflow-automation-tools-2026": { published: "2026-04-16", modified: "2026-04-16", headline: "Top Low-Code AI Workflow Automation Tools in 2026 + How to Implement Them", authors: [AUTHORS.prateek] }, // 5981bc2
+  "/aihelpcenter/ai-strategy-pm/what-is-claude-design": { published: "2026-04-21", modified: "2026-04-21", headline: "What is Claude Design? The AI-Powered Visual Tool for Every Professional", authors: [AUTHORS.nawid, AUTHORS.prateek] }, // 9a277e5
+  "/aihelpcenter/career/data-science-ai-careers-kolkata-2026": { published: "2026-04-13", modified: "2026-11-25", headline: "Data Science & AI Careers in Kolkata", authors: [AUTHORS.prateek] }, // 7014ce0; figures updated in 1ab8c86 (SEO-001)
+  "/aihelpcenter/career/data-science-for-commerce-students": { published: "2026-04-07", modified: "2026-04-07", headline: "Is Data Science a Good Career for Commerce Students?", authors: [AUTHORS.prateek] }, // 8848ed6
+  "/aihelpcenter/data-engineering/star-schema-vs-snowflake-schema": { published: "2026-05-05", modified: "2026-05-05", headline: "Star Schema vs Snowflake Schema: Differences, Use Cases, SQL Examples & How to Choose", authors: [AUTHORS.prateek] }, // 519a7f1
+  "/aihelpcenter/genai-llm/harness-engineering-in-ai": { published: "2026-08-06", modified: "2026-08-06", headline: "Harness Engineering in AI", authors: [AUTHORS.prateek] }, // 42e971f
+  "/aihelpcenter/genai-llm/how-are-llms-trained": { published: "2026-08-12", modified: "2026-08-12", headline: "How Are LLMs Trained?", authors: [AUTHORS.prateek] }, // 1ab124a
 
   // ---------- Case studies: corporate (content in casestudies/page.tsx) ----------
   "/casestudies/enterprise-wide-training-in-data-analytics-data-science-and-ai": { published: "2025-11-11", modified: "2025-11-11" }, // b76c0da
