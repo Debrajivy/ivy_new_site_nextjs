@@ -18,6 +18,14 @@ export interface BootcampRecording {
 export const bootcampRegisterUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLScGHiuSIQfwayT9WspvAs5AXqFnQE9uHmb4K3Sbr63JD7XiHg/viewform";
 
+// Next session set in code. /bootcamp uses it whenever it is later than the session the
+// Google Form describes, so the countdown and "Reserve your Seat" button work even before
+// the form text is updated. Date and times are IST.
+export const scheduledSession = {
+  title: "FREE Live Session: How to Crack AI Roles, What Companies Actually Look For",
+  description: "Date: 2nd December 2026\nTime: 7 PM – 8 PM",
+};
+
 // Shown on /bootcamp while a session is live.
 export const liveSessionZoomUrl =
   "https://us02web.zoom.us/j/88210597294?pwd=uWE5rS4XBvPPysH3TNtDvmi4ehJeCO.1";

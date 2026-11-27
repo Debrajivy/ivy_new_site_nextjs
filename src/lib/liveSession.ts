@@ -1,4 +1,4 @@
-import { bootcampRegisterUrl } from "@/data/bootcamps";
+import { bootcampRegisterUrl, scheduledSession } from "@/data/bootcamps";
 
 // Reads the next live session's title, date and time from the Google Form's share preview
 // (og:title / og:description), e.g.
@@ -117,7 +117,22 @@ export const parseSessionDescription = (description: string) => {
   };
 };
 
+// The session set in code (src/data/bootcamps.ts), or null if its date/time can't be read.
+const getScheduledSession = (): LiveSession | null => {
+  const parsed = parseSessionDescription(scheduledSession.description);
+  return parsed ? { title: scheduledSession.title, ...parsed } : null;
+};
+
+// Use whichever session starts later: the code one or the one in the Google Form.
 export async function fetchLiveSession(): Promise<LiveSession> {
+  const formSession = await fetchFormSession();
+  const scheduled = getScheduledSession();
+  if (!scheduled || scheduled.startTime === null) return formSession;
+  if (formSession.startTime !== null && formSession.startTime >= scheduled.startTime) return formSession;
+  return scheduled;
+}
+
+async function fetchFormSession(): Promise<LiveSession> {
   try {
     const response = await fetch(bootcampRegisterUrl, {
       next: { revalidate: 300 },
