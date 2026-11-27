@@ -59,14 +59,11 @@ export const ARTICLE_DATES: Record<string, ArticleDates> = {
   "/casestudies/skeleton-crew": { published: "2026-04-10", modified: "2026-04-10" }, // 5734838
   "/casestudies/rank-and-file": { published: "2026-04-10", modified: "2026-04-10" }, // 5734838
   "/casestudies/performance-trends": { published: "2026-04-30", modified: "2026-04-30" }, // dda1e7b
-  "/casestudies/sales-and-aov-trends": { published: "2026-05-06", modified: "2026-05-06" }, // 97017e7
   "/casestudies/merchandising": { published: "2026-05-06", modified: "2026-05-06" }, // 97017e7
   "/casestudies/cohort-analysis": { published: "2026-05-06", modified: "2026-05-06" }, // 97017e7
   "/casestudies/inventory-vs-sales-demand-alignment": { published: "2026-05-06", modified: "2026-05-06" }, // 97017e7
   "/casestudies/web-event-analysis": { published: "2026-05-06", modified: "2026-05-06" }, // 97017e7
   "/casestudies/advertisement-analysis": { published: "2026-05-06", modified: "2026-05-06" }, // 97017e7
-  "/casestudies/department-salary-analysis": { published: "2026-06-10", modified: "2026-06-10" }, // e757732
-  "/casestudies/departments-with-less-than-2-employees": { published: "2026-06-10", modified: "2026-06-10" }, // e757732
   "/casestudies/department-wise-salary-ranking": { published: "2026-06-10", modified: "2026-06-10" }, // e757732
   "/casestudies/vehicle-capacity-allocation": { published: "2026-06-10", modified: "2026-06-10" }, // e757732
   "/casestudies/quarter-wise-salesman-bonus-analysis": { published: "2026-06-10", modified: "2026-06-10" }, // e757732
