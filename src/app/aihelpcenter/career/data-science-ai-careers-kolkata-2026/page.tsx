@@ -1,6 +1,7 @@
 "use client";
 
 import ArticleDates from "@/components/seo/ArticleDates";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import { COMPANY } from "@/lib/company-facts";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -1185,6 +1186,7 @@ export default function DataScienceAICareersKolkataPage() {
                     11. Frequently Asked Questions
                   </h2>
                 </div>
+                <FaqJsonLd items={FAQS.map((f) => ({ question: f.q, answer: f.a }))} />
                 <div className="space-y-3">
                   {FAQS.map((faq, i) => (
                     <FaqItem key={i} item={faq} index={i} />

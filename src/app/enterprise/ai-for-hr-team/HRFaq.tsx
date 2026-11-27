@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import styles from "./hr.module.css";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 
 const faqCategories = [
   {
@@ -183,6 +184,7 @@ export default function HRFaq() {
 
   return (
     <section className={`${styles.section} ${styles.faqSection}`} id="faqs">
+      <FaqJsonLd items={faqCategories.flatMap((c) => c.items.map(({ question, answer }) => ({ question, answer })))} />
       <div className={styles.shell}>
         <div className={styles.faqIntro}>
           <p className={styles.eyebrow}>AI FOR HR FAQs</p>

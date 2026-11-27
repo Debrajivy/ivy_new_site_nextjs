@@ -7,6 +7,8 @@ import DeferredCourseCurriculum from "@/components/courses/DeferredCourseCurricu
 import CourseProjects from "@/components/courses/CourseProjects"
 import DeferredCourseAlumni from "@/components/courses/DeferredCourseAlumni"
 import DeferredCourseFAQ from "@/components/courses/DeferredCourseFAQ"
+import FaqJsonLd from "@/components/seo/FaqJsonLd"
+import { getCoursePageFaqs } from "@/lib/course-faqs"
 import CourseAccreditation from "@/components/courses/CourseAccreditation"
 import CourseEnrollCTA from "@/components/courses/CourseEnrollCTA"
 import CourseJobSupport from "@/components/courses/CourseJobSupport"
@@ -113,6 +115,8 @@ export default async function CoursePage({ params }: AsyncPageProps) {
             <DeferredCourseAlumni courseId={course.id} />
           </div>
           <div id="course-faq-section" className="course-deferred-section">
+            {/* Same data and lookup as the visible FAQ in CourseFAQ.tsx */}
+            <FaqJsonLd items={getCoursePageFaqs(course.title, course.slug)} />
             <DeferredCourseFAQ course={{ title: course.title, slug: course.slug }} />
           </div>
           <div id="course-enrollcta-section" className="course-deferred-section">

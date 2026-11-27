@@ -45,6 +45,7 @@ import PwcLogo    from "@/assests/Pwctra.webp";
 import Tata       from "@/assests/Tatatra1.webp";
 import Tesco      from "@/assests/Tescotra.webp";
 import GoogleLogo from "@/assests/Google.webp";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 
 /* ─────────────────────────────────────── */
 /* Types                                   */
@@ -732,6 +733,7 @@ export default function CoursesListing() {
               Everything you need to know about Ivy Pro School courses &amp; admissions
             </p>
           </div>
+          <FaqJsonLd items={faqs.map((f) => ({ question: f.q, answer: f.a }))} />
           <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (
               <AccordionItem

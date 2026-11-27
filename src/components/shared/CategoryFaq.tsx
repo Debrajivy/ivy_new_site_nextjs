@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import styles from "./CategoryFaq.module.css";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 
 export type FaqCategory = {
   id: string;
@@ -16,9 +17,11 @@ type CategoryFaqProps = {
   heading: string;
   description: string;
   categories: readonly FaqCategory[];
+  /** Output FAQPage JSON-LD for all categories. Set false only if the page already outputs its own FAQPage. */
+  faqSchema?: boolean;
 };
 
-export default function CategoryFaq({ eyebrow, heading, description, categories }: CategoryFaqProps) {
+export default function CategoryFaq({ eyebrow, heading, description, categories, faqSchema = true }: CategoryFaqProps) {
   const [activeCategory, setActiveCategory] = useState(0);
   const [openQuestion, setOpenQuestion] = useState<number | null>(0);
   const category = categories[activeCategory];
@@ -32,6 +35,9 @@ export default function CategoryFaq({ eyebrow, heading, description, categories 
 
   return (
     <section className={styles.section} id="faqs">
+      {faqSchema && (
+        <FaqJsonLd items={categories.flatMap((c) => c.items.map(([question, answer]) => ({ question, answer })))} />
+      )}
       <div className={styles.shell}>
         <div className={styles.intro}>
           <p className={styles.eyebrow}>{eyebrow}</p>
