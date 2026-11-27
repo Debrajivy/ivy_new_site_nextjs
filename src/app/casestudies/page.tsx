@@ -464,151 +464,6 @@ ORDER BY department_name;`,
       ] as Record<string, string>[],
     },
   },
-  'sql-drill-5': {
-    id: 'sql-drill-5',
-    number: 5,
-    title: 'Sales & AOV Trends',
-    tool: 'SQL' as const,
-    difficulty: 'Intermediate' as Difficulty,
-    skills: ['Window Functions', 'LAG', 'CTE', 'GROUP BY'],
-    description: 'Analyze monthly sales performance, revenue movement, quantity sold, and AOV trends using SQL window functions.',
-    setup: "Your dataset contains two tables from an e-commerce platform:\n\n1. An Orders table with order_id, customer_id, order_date, and status for each order\n2. An Order_Items table with order_item_id, order_id, product_id, quantity, and line_amount for each line item",
-    schema: {
-      Orders: [
-        { name: 'order_id', type: 'INT', constraint: 'PK' },
-        { name: 'customer_id', type: 'INT', constraint: '' },
-        { name: 'order_date', type: 'DATE', constraint: '' },
-        { name: 'status', type: 'VARCHAR(50)', constraint: '' },
-      ],
-      Order_Items: [
-        { name: 'order_item_id', type: 'INT', constraint: 'PK' },
-        { name: 'order_id', type: 'INT', constraint: 'FK' },
-        { name: 'product_id', type: 'INT', constraint: '' },
-        { name: 'quantity', type: 'INT', constraint: '' },
-        { name: 'line_amount', type: 'DECIMAL(10,2)', constraint: '' },
-      ],
-    },
-    sampleTables: [
-      {
-        name: 'Orders',
-        rowCount: 'sample',
-        headers: ['order_id', 'customer_id', 'order_date', 'status'],
-        rows: [
-          [1001, 101, '2024-01-10', 'Completed'],
-          [1002, 102, '2024-01-18', 'Completed'],
-          [1003, 103, '2024-02-05', 'Completed'],
-          [1004, 101, '2024-02-20', 'Completed'],
-          [1005, 104, '2024-03-08', 'Completed'],
-          [1006, 105, '2024-03-19', 'Cancelled'],
-          [1007, 102, '2024-04-11', 'Completed'],
-          [1008, 106, '2024-04-25', 'Completed'],
-        ],
-      },
-      {
-        name: 'Order_Items',
-        rowCount: 'sample',
-        headers: ['order_item_id', 'order_id', 'product_id', 'quantity', 'line_amount'],
-        rows: [
-          [1, 1001, 201, 3, '3,000.00'],
-          [2, 1001, 202, 2, '1,600.00'],
-          [3, 1002, 203, 4, '4,000.00'],
-          [4, 1003, 201, 5, '5,000.00'],
-          [5, 1004, 204, 2, '2,400.00'],
-          [6, 1005, 202, 6, '4,800.00'],
-          [7, 1006, 205, 3, '2,700.00'],
-          [8, 1007, 203, 5, '5,000.00'],
-          [9, 1008, 201, 4, '4,000.00'],
-        ],
-      },
-    ],
-    departmentData: [] as { id: number; name: string }[],
-    employeeData: [] as { id: number; name: string; salary: string; joining_date: string; department_id: number }[],
-    task: 'This drill has two tasks:\n\n1. Monthly Sales Trend — How have total quantity sold and revenue changed month-over-month in the last 12 months? Your result table should have: month_year, revenue, MoM_rev, qty, MoM_qty_sold.\n\n2. Average Order Value (AOV) Trend — How is AOV (revenue ÷ number of orders) trending by month? Your result table should have: month_year, AOV, MoM_AOV.',
-    outputColumns: ['month_year', 'revenue', 'MoM_rev', 'qty', 'MoM_qty_sold'],
-    expectedOutputPreview: [
-      { month_year: 'January, 2024', revenue: '8,600', MoM_rev: 'NULL', qty: '9', MoM_qty_sold: 'NULL' },
-      { month_year: 'February, 2024', revenue: '7,400', MoM_rev: '-13.95%', qty: '7', MoM_qty_sold: '-22.22%' },
-      { month_year: '…', revenue: '…', MoM_rev: '…', qty: '…', MoM_qty_sold: '…' },
-    ] as Record<string, string>[],
-    hint: [
-      "Use a CTE to aggregate orders joined with order_items by year and month. Exclude cancelled orders using WHERE status <> 'Cancelled'.",
-      "LAG() accesses the previous row's value in a defined ORDER BY — no self-join needed. Use ORDER BY yr, mnth (integer columns) rather than the formatted month string to ensure correct chronological ordering.",
-      "For AOV (Query 2), compute revenue ÷ COUNT(DISTINCT order_id) inside the CTE, then apply LAG() in the outer query to find the month-over-month change.",
-    ] as string[] | undefined,
-    hintTitle: 'Hints' as string | undefined,
-    solution: {
-      sql: `-- Query 1: Monthly Sales Trend
-WITH c AS (
-  SELECT YEAR(order_date)  AS yr,
-         MONTH(order_date) AS mnth,
-         CONCAT(MONTHNAME(order_date), ', ', YEAR(order_date)) AS mnthyr,
-         ROUND(SUM(line_amount)) AS revenue,
-         SUM(quantity) AS qty
-  FROM orders AS o
-  INNER JOIN order_items AS oi ON oi.order_id = o.order_id
-  WHERE status <> 'Cancelled'
-  GROUP BY yr, mnth, mnthyr
-)
-SELECT mnthyr AS month_year,
-       revenue,
-       CONCAT(ROUND(((revenue - LAG(revenue) OVER (ORDER BY yr, mnth))
-              / LAG(revenue) OVER (ORDER BY yr, mnth)) * 100, 2), '%') AS MoM_rev,
-       qty,
-       CONCAT(ROUND(((qty - LAG(qty) OVER (ORDER BY yr, mnth))
-              / LAG(qty) OVER (ORDER BY yr, mnth)) * 100, 2), '%') AS MoM_qty_sold
-FROM c;
-
--- Query 2: Average Order Value (AOV) Trend
-WITH c AS (
-  SELECT YEAR(order_date)  AS yr,
-         MONTH(order_date) AS mnth,
-         CONCAT(MONTHNAME(order_date), ', ', YEAR(order_date)) AS mnthyr,
-         ROUND(SUM(line_amount)) AS revenue,
-         COUNT(DISTINCT oi.order_id) AS count_of_orders,
-         ROUND(SUM(line_amount) / COUNT(DISTINCT oi.order_id)) AS AOV
-  FROM orders AS o
-  INNER JOIN order_items AS oi ON oi.order_id = o.order_id
-  WHERE status <> 'Cancelled'
-  GROUP BY yr, mnth, mnthyr
-)
-SELECT mnthyr AS month_year,
-       AOV,
-       CONCAT(ROUND(((AOV - LAG(AOV) OVER (ORDER BY yr, mnth))
-              / LAG(revenue) OVER (ORDER BY yr, mnth)) * 100, 4), '%') AS MoM_AOV
-FROM c;`,
-      howItWorks: [
-        "Query 1 — CTE c: Aggregates orders joined with order_items, grouping by year and month. Excludes cancelled orders using status <> 'Cancelled'. Computes revenue (rounded sum of line_amount) and total quantity sold per month.",
-        'Query 1 — MoM_rev: Uses LAG() OVER (ORDER BY yr, mnth) to get the previous month\'s revenue, then calculates the percentage change formatted as a string with a % sign.',
-        'Query 1 — MoM_qty_sold: Same LAG() approach applied to qty — divides the change in quantity by the prior month\'s quantity and formats as a percentage.',
-        'Query 2 — CTE c: Same base aggregation as Query 1, but also counts distinct orders per month (count_of_orders) and computes AOV as revenue ÷ count_of_orders.',
-        'Query 2 — MoM_AOV: Calculates the month-over-month change in AOV relative to the prior month\'s revenue. ROUND() with 4 decimal places preserves precision since AOV deltas are typically smaller in magnitude than raw revenue deltas.',
-      ],
-      commonMistake: {
-        title: 'Why LAG() and not a self-join?',
-        points: [
-          'A self-join on the prior month requires matching on computed date parts, which is verbose and error-prone at year boundaries (e.g., Dec → Jan).',
-          'LAG() is a window function that cleanly accesses the previous row in a defined order — no join, no subquery, and no edge-case month arithmetic needed.',
-          'Use ORDER BY yr, mnth (separate integer columns) rather than ORDER BY mnthyr (string) to ensure correct chronological ordering.',
-          'For the first month in the result, LAG() returns NULL, so MoM columns will show NULL — this is the expected and correct behavior.',
-        ],
-      } as { title: string; points: string[] } | undefined,
-      observation: {
-        title: 'Query 2 — AOV Trend Sample Output',
-        points: [
-          'January, 2024  | AOV: 4,300 | MoM_AOV: NULL',
-          'February, 2024 | AOV: 3,700 | MoM_AOV: -6.9767%',
-          'March, 2024    | AOV: 4,800 | MoM_AOV: 14.8649%',
-          'April, 2024    | AOV: 4,500 | MoM_AOV: -6.2500%',
-        ],
-      } as { title: string; points: string[] } | undefined,
-      result: [
-        { month_year: 'January, 2024', revenue: '8,600', MoM_rev: 'NULL', qty: '9', MoM_qty_sold: 'NULL' },
-        { month_year: 'February, 2024', revenue: '7,400', MoM_rev: '-13.95%', qty: '7', MoM_qty_sold: '-22.22%' },
-        { month_year: 'March, 2024', revenue: '4,800', MoM_rev: '-35.14%', qty: '6', MoM_qty_sold: '-14.29%' },
-        { month_year: 'April, 2024', revenue: '9,000', MoM_rev: '87.50%', qty: '9', MoM_qty_sold: '50.00%' },
-      ] as Record<string, string>[],
-    },
-  },
   'sql-drill-4': {
     id: 'sql-drill-4',
     number: 4,
@@ -1604,236 +1459,6 @@ group by customer_id;`,
         { customer_id: 'C001' },
         { customer_id: 'C003' },
         { customer_id: 'C004' },
-      ] as Record<string, string>[],
-    },
-  },
-  'sql-drill-11': {
-    id: 'sql-drill-11',
-    number: 11,
-    title: 'Department Salary Analysis',
-    tool: 'SQL' as const,
-    difficulty: 'Beginner' as Difficulty,
-    skills: ['INNER JOIN', 'GROUP BY', 'SUM', 'Department Analysis'],
-    description: 'Find the total salary paid by each department using SQL joins and aggregation.',
-    setup: "Your dataset contains two tables from a company's HR database:\n\n1. A Department table with the ID and name of each department\n2. An Employee table with the ID, name, salary, joining date, and department reference for each employee\n\nAnalyze department-wise salary cost using employee and department data.",
-    schema: {
-      Department: [
-        { name: 'id', type: 'INT', constraint: 'PK' },
-        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
-      ],
-      Employee: [
-        { name: 'id', type: 'INT', constraint: 'PK' },
-        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
-        { name: 'salary', type: 'DECIMAL(10,2)', constraint: '' },
-        { name: 'joining_date', type: 'DATE', constraint: '' },
-        { name: 'department_id', type: 'INT', constraint: 'FK' },
-      ],
-    },
-    departmentData: [
-      { id: 1, name: 'HR' },
-      { id: 2, name: 'Engineering' },
-      { id: 3, name: 'Marketing' },
-      { id: 4, name: 'Sales' },
-      { id: 5, name: 'IT' },
-      { id: 6, name: 'Finance' },
-      { id: 7, name: 'Graphic Designer' },
-      { id: 8, name: 'Data Analyst' },
-    ],
-    employeeData: [
-      { id: 1, name: 'Alice', salary: '70000', joining_date: '2020-01-15', department_id: 1 },
-      { id: 2, name: 'Bob', salary: '85000', joining_date: '2019-03-22', department_id: 2 },
-      { id: 3, name: 'Charlie', salary: '60000', joining_date: '2021-05-18', department_id: 1 },
-      { id: 4, name: 'David', salary: '95000', joining_date: '2018-07-11', department_id: 3 },
-      { id: 5, name: 'Eva', salary: '80000', joining_date: '2017-09-09', department_id: 2 },
-      { id: 6, name: 'Frank', salary: '75000', joining_date: '2016-11-14', department_id: 3 },
-      { id: 7, name: 'Grace', salary: '90000', joining_date: '2015-02-23', department_id: 1 },
-      { id: 8, name: 'Henry', salary: '68000', joining_date: '2021-04-30', department_id: 2 },
-      { id: 9, name: 'Irene', salary: '72000', joining_date: '2020-06-25', department_id: 1 },
-      { id: 10, name: 'Jack', salary: '78000', joining_date: '2019-08-19', department_id: 3 },
-      { id: 11, name: 'Karen', salary: '83000', joining_date: '2018-10-07', department_id: 4 },
-      { id: 12, name: 'Leo', salary: '95000', joining_date: '2017-12-13', department_id: 1 },
-      { id: 13, name: 'Mona', salary: '87000', joining_date: '2016-03-21', department_id: 2 },
-      { id: 14, name: 'Nick', salary: '63000', joining_date: '2015-05-29', department_id: 5 },
-      { id: 15, name: 'Olivia', salary: '77000', joining_date: '2014-07-15', department_id: 1 },
-      { id: 16, name: 'Peter', salary: '82000', joining_date: '2021-01-18', department_id: 2 },
-      { id: 17, name: 'Quinn', salary: '91000', joining_date: '2020-03-12', department_id: 6 },
-      { id: 18, name: 'Rachel', salary: '88000', joining_date: '2019-09-28', department_id: 1 },
-      { id: 19, name: 'Steve', salary: '93000', joining_date: '2018-11-06', department_id: 2 },
-      { id: 20, name: 'Tina', salary: '76000', joining_date: '2017-04-16', department_id: 3 },
-    ],
-    task: 'Department Salary Analysis: What is the total salary for each department?\n\nThe result table should have department_name and total_salary columns.',
-    outputColumns: ['department_name', 'total_salary'],
-    expectedOutputPreview: [
-      { department_name: 'Engineering', total_salary: '495000' },
-      { department_name: 'Finance', total_salary: '91000' },
-      { department_name: 'HR', total_salary: '552000' },
-    ] as Record<string, string>[],
-    hint: [
-      'Join Department and Employee using Employee.department_id = Department.id.',
-      'Use SUM(e.salary) to calculate department-wise salary cost.',
-      'Use GROUP BY d.name so the salary is aggregated per department.',
-    ] as string[] | undefined,
-    hintTitle: 'Before You Solve' as string | undefined,
-    solution: {
-      sql: `/* Department Salary Analysis
-
-Question:
-Based on the given information, find the total salary for each department.
-The result table should have department_name and total_salary columns. */
-
-select
-    d.name as department_name,
-    sum(e.salary) as total_salary
-from department d
-inner join employee e
-    on e.department_id = d.id
-group by d.name;`,
-      howItWorks: [
-        'The Department table stores department names.',
-        'The Employee table stores employee salary and department reference.',
-        'INNER JOIN connects employees with their respective departments using department_id.',
-        'SUM(e.salary) calculates the total salary paid within each department.',
-        'GROUP BY d.name ensures the salary is aggregated department-wise.',
-        'Departments with no employees will not appear because an INNER JOIN is used.',
-      ],
-      commonMistake: undefined as { title: string; points: string[] } | undefined,
-      observation: {
-        title: 'Optional: Include Departments With No Employees',
-        points: [
-          'If you want to show all departments, including departments with no employees, use LEFT JOIN instead of INNER JOIN.',
-          'Use COALESCE(SUM(e.salary), 0) so Graphic Designer and Data Analyst appear with salary as 0.',
-          `select
-    d.name as department_name,
-    coalesce(sum(e.salary), 0) as total_salary
-from department d
-left join employee e
-    on e.department_id = d.id
-group by d.name;`,
-        ],
-      } as { title: string; points: string[] } | undefined,
-      result: [
-        { department_name: 'Engineering', total_salary: '495000' },
-        { department_name: 'Finance', total_salary: '91000' },
-        { department_name: 'HR', total_salary: '552000' },
-        { department_name: 'IT', total_salary: '63000' },
-        { department_name: 'Marketing', total_salary: '324000' },
-        { department_name: 'Sales', total_salary: '83000' },
-      ] as Record<string, string>[],
-    },
-  },
-  'sql-drill-12': {
-    id: 'sql-drill-12',
-    number: 12,
-    title: 'Departments With Less Than 2 Employees',
-    tool: 'SQL' as const,
-    difficulty: 'Beginner' as Difficulty,
-    skills: ['RIGHT JOIN', 'LEFT JOIN', 'GROUP BY', 'HAVING', 'COUNT', 'Department Analysis'],
-    description: 'Identify departments that have fewer than 2 employees using SQL joins, grouping, and filtering.',
-    setup: "Your dataset contains two tables from a company's HR database:\n\n1. A Department table with the ID and name of each department\n2. An Employee table with the ID, name, salary, joining date, and department reference for each employee\n\nAnalyze employee count department-wise and identify departments with very low employee strength.",
-    schema: {
-      Department: [
-        { name: 'id', type: 'INT', constraint: 'PK' },
-        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
-      ],
-      Employee: [
-        { name: 'id', type: 'INT', constraint: 'PK' },
-        { name: 'name', type: 'VARCHAR(50)', constraint: '' },
-        { name: 'salary', type: 'DECIMAL(10,2)', constraint: '' },
-        { name: 'joining_date', type: 'DATE', constraint: '' },
-        { name: 'department_id', type: 'INT', constraint: 'FK' },
-      ],
-    },
-    departmentData: [
-      { id: 1, name: 'HR' },
-      { id: 2, name: 'Engineering' },
-      { id: 3, name: 'Marketing' },
-      { id: 4, name: 'Sales' },
-      { id: 5, name: 'IT' },
-      { id: 6, name: 'Finance' },
-      { id: 7, name: 'Graphic Designer' },
-      { id: 8, name: 'Data Analyst' },
-    ],
-    employeeData: [
-      { id: 1, name: 'Alice', salary: '70000', joining_date: '2020-01-15', department_id: 1 },
-      { id: 2, name: 'Bob', salary: '85000', joining_date: '2019-03-22', department_id: 2 },
-      { id: 3, name: 'Charlie', salary: '60000', joining_date: '2021-05-18', department_id: 1 },
-      { id: 4, name: 'David', salary: '95000', joining_date: '2018-07-11', department_id: 3 },
-      { id: 5, name: 'Eva', salary: '80000', joining_date: '2017-09-09', department_id: 2 },
-      { id: 6, name: 'Frank', salary: '75000', joining_date: '2016-11-14', department_id: 3 },
-      { id: 7, name: 'Grace', salary: '90000', joining_date: '2015-02-23', department_id: 1 },
-      { id: 8, name: 'Henry', salary: '68000', joining_date: '2021-04-30', department_id: 2 },
-      { id: 9, name: 'Irene', salary: '72000', joining_date: '2020-06-25', department_id: 1 },
-      { id: 10, name: 'Jack', salary: '78000', joining_date: '2019-08-19', department_id: 3 },
-      { id: 11, name: 'Karen', salary: '83000', joining_date: '2018-10-07', department_id: 4 },
-      { id: 12, name: 'Leo', salary: '95000', joining_date: '2017-12-13', department_id: 1 },
-      { id: 13, name: 'Mona', salary: '87000', joining_date: '2016-03-21', department_id: 2 },
-      { id: 14, name: 'Nick', salary: '63000', joining_date: '2015-05-29', department_id: 5 },
-      { id: 15, name: 'Olivia', salary: '77000', joining_date: '2014-07-15', department_id: 1 },
-      { id: 16, name: 'Peter', salary: '82000', joining_date: '2021-01-18', department_id: 2 },
-      { id: 17, name: 'Quinn', salary: '91000', joining_date: '2020-03-12', department_id: 6 },
-      { id: 18, name: 'Rachel', salary: '88000', joining_date: '2019-09-28', department_id: 1 },
-      { id: 19, name: 'Steve', salary: '93000', joining_date: '2018-11-06', department_id: 2 },
-      { id: 20, name: 'Tina', salary: '76000', joining_date: '2017-04-16', department_id: 3 },
-    ],
-    task: 'Departments With Less Than 2 Employees: Which departments have fewer than 2 employees?\n\nThe final result table should have department_name and count_of_employees columns.',
-    outputColumns: ['department_name', 'count_of_employees'],
-    expectedOutputPreview: [
-      { department_name: 'Sales', count_of_employees: '1' },
-      { department_name: 'IT', count_of_employees: '1' },
-      { department_name: 'Finance', count_of_employees: '1' },
-    ] as Record<string, string>[],
-    hint: [
-      'Use an outer join so departments with zero employees are not removed.',
-      'COUNT(e.id) counts only matching employee rows, so departments with no employees return 0.',
-      'Use HAVING after GROUP BY because the filter depends on an aggregate count.',
-    ] as string[] | undefined,
-    hintTitle: 'Before You Solve' as string | undefined,
-    solution: {
-      sql: `/* Departments With Less Than 2 Employees
-
-Question:
-Find out the names of the departments which have less than 2 employees.
-The final result table should have department_name and count_of_employees. */
-
-select
-    d.name as department_name,
-    count(e.id) as count_of_employees
-from employee e
-right join department d
-    on e.department_id = d.id
-group by d.name
-having count(e.id) < 2;`,
-      howItWorks: [
-        'The Department table contains all departments in the company.',
-        'The Employee table contains employee details and the department each employee belongs to.',
-        'RIGHT JOIN ensures all departments are included, even if no employee belongs to that department.',
-        'COUNT(e.id) counts the number of employees in each department.',
-        'GROUP BY d.name groups the result department-wise.',
-        'HAVING count(e.id) < 2 filters only those departments where the employee count is less than 2.',
-        'Departments with zero employees are also included because of the outer join.',
-      ],
-      commonMistake: undefined as { title: string; points: string[] } | undefined,
-      observation: {
-        title: 'Alternative Recommended Query',
-        points: [
-          'A LEFT JOIN from Department to Employee is usually easier to read because the analysis starts from the department table.',
-          `select
-    d.name as department_name,
-    count(e.id) as count_of_employees
-from department d
-left join employee e
-    on e.department_id = d.id
-group by d.name
-having count(e.id) < 2;`,
-          'This gives the same result and is generally the cleaner approach for this type of question.',
-        ],
-      } as { title: string; points: string[] } | undefined,
-      result: [
-        { department_name: 'Sales', count_of_employees: '1' },
-        { department_name: 'IT', count_of_employees: '1' },
-        { department_name: 'Finance', count_of_employees: '1' },
-        { department_name: 'Graphic Designer', count_of_employees: '0' },
-        { department_name: 'Data Analyst', count_of_employees: '0' },
       ] as Record<string, string>[],
     },
   },
@@ -3405,9 +3030,10 @@ const DRILLS_PER_BATCH = 3;
 
 type LearningDrill = typeof learningDrills[keyof typeof learningDrills];
 
-const DrillCard: React.FC<{ drill: LearningDrill }> = ({ drill }) => (
+const DrillCard: React.FC<{ drill: LearningDrill; hidden?: boolean }> = ({ drill, hidden = false }) => (
   <Link
     href={`/casestudies/${slugifyCaseStudyTitle(drill.title)}`}
+    hidden={hidden}
     className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-lg hover:border-indigo-300 transition-all duration-300 cursor-pointer group"
   >
     <div className="relative bg-[#013a81] px-6 pt-6 pb-8 overflow-hidden">
@@ -3982,23 +3608,23 @@ const CaseStudiesPage = (props: any = {}) => {
   const corporateList = Object.values(corporateCaseStudies);
   const sqlDrillList = Object.values(sqlDrills).sort((a, b) => a.number - b.number);
   const pythonDrillList = Object.values(pythonDrills).sort((a, b) => a.number - b.number);
-  const activeLearningCategory = activeCategory === 'python' ? 'python' : 'sql';
-  const drillList = activeLearningCategory === 'python' ? pythonDrillList : sqlDrillList;
-  const activeLearningTitle = activeLearningCategory === 'python' ? 'Python Data Drills' : 'SQL Data Drills';
-  const activeLearningDescription = activeLearningCategory === 'python'
-    ? 'Hands-on Python, Pandas, ML, and statistics drills organized by difficulty for applied analytics practice.'
-    : 'Hands-on SQL challenges organized by difficulty, so learners can progress from fundamentals to advanced analytical problem solving.';
-  const drillGroups = difficultyOrder.map((difficulty) => {
-    const drills = drillList.filter((drill) => drill.difficulty === difficulty);
-    const visibleCount = visibleDrillCounts[activeLearningCategory][difficulty];
-
+  // All tabs and all drill cards are rendered in the server HTML so every drill page has a normal
+  // <a href> link (SEO-013). Inactive tabs and cards beyond "View more" are hidden, as before.
+  const learningView = (category: LearningCategory) => {
+    const list = category === 'python' ? pythonDrillList : sqlDrillList;
     return {
-      difficulty,
-      drills,
-      visibleDrills: drills.slice(0, visibleCount),
-      hiddenCount: Math.max(drills.length - visibleCount, 0),
+      drillList: list,
+      title: category === 'python' ? 'Python Data Drills' : 'SQL Data Drills',
+      description: category === 'python'
+        ? 'Hands-on Python, Pandas, ML, and statistics drills organized by difficulty for applied analytics practice.'
+        : 'Hands-on SQL challenges organized by difficulty, so learners can progress from fundamentals to advanced analytical problem solving.',
+      groups: difficultyOrder.map((difficulty) => {
+        const drills = list.filter((drill) => drill.difficulty === difficulty);
+        const visibleCount = visibleDrillCounts[category][difficulty];
+        return { difficulty, drills, visibleCount, hiddenCount: Math.max(drills.length - visibleCount, 0) };
+      }),
     };
-  });
+  };
 
   return (
     <>
@@ -4085,8 +3711,7 @@ const CaseStudiesPage = (props: any = {}) => {
         <div className="container mx-auto px-4 py-10 md:py-14">
 
           {/* ─── CORPORATE TAB ─── */}
-          {activeCategory === 'corporate' && (
-            <div>
+          <div hidden={activeCategory !== 'corporate'}>
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-slate-800 mb-1">Corporate Case Studies</h2>
                 <p className="text-slate-500">Real-world enterprise training engagements and their outcomes.</p>
@@ -4138,11 +3763,12 @@ const CaseStudiesPage = (props: any = {}) => {
                 ))}
               </div>
             </div>
-          )}
 
           {/* ─── LEARNING DRILLS TABS ─── */}
-          {(activeCategory === 'sql' || activeCategory === 'python') && (
-            <div>
+          {(['sql', 'python'] as const).map((activeLearningCategory) => {
+            const { drillList, title: activeLearningTitle, description: activeLearningDescription, groups: drillGroups } = learningView(activeLearningCategory);
+            return (
+            <div key={activeLearningCategory} hidden={activeCategory !== activeLearningCategory}>
               <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
                 <div>
                   <h2 className="text-2xl font-bold text-slate-800 mb-1">{activeLearningTitle}</h2>
@@ -4164,7 +3790,7 @@ const CaseStudiesPage = (props: any = {}) => {
               </div>
 
               <div className="space-y-8">
-                {drillGroups.map(({ difficulty, drills, visibleDrills, hiddenCount }) => {
+                {drillGroups.map(({ difficulty, drills, visibleCount, hiddenCount }) => {
                   if (drills.length === 0) return null;
 
                   const section = difficultySectionStyles[difficulty];
@@ -4183,14 +3809,14 @@ const CaseStudiesPage = (props: any = {}) => {
                         <div className="flex items-center gap-2 md:justify-end">
                           <DifficultyBadge difficulty={difficulty} />
                           <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-slate-600 border border-slate-200">
-                            Showing {visibleDrills.length} of {drills.length}
+                            Showing {Math.min(visibleCount, drills.length)} of {drills.length}
                           </span>
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                        {visibleDrills.map((drill) => (
-                          <DrillCard key={drill.id} drill={drill as LearningDrill} />
+                        {drills.map((drill, index) => (
+                          <DrillCard key={drill.id} drill={drill as LearningDrill} hidden={index >= visibleCount} />
                         ))}
                       </div>
 
@@ -4230,7 +3856,8 @@ const CaseStudiesPage = (props: any = {}) => {
                 </div>
               </div>
             </div>
-          )}
+            );
+          })}
 
         </div>
       </div>

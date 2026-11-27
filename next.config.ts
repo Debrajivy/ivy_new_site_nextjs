@@ -104,7 +104,15 @@ const nextConfig: NextConfig = {
       //   permanent: true,
       // },
 
- 
+      // SEO-013: removed orphan, demo and duplicate pages (301 to the closest live page)
+      { source: "/jobs", destination: "/alumni", statusCode: 301 },
+      { source: "/youtube", destination: "/bootcamp", statusCode: 301 },
+      { source: "/categories", destination: "/courses", statusCode: 301 },
+      { source: "/categories/:slug*", destination: "/courses", statusCode: 301 },
+      { source: "/bootcamp/live-masterclass", destination: "/bootcamp", statusCode: 301 },
+      { source: "/casestudies/department-salary-analysis", destination: "/casestudies/department-payroll", statusCode: 301 },
+      { source: "/casestudies/departments-with-less-than-2-employees", destination: "/casestudies/skeleton-crew", statusCode: 301 },
+      { source: "/casestudies/sales-and-aov-trends", destination: "/casestudies/performance-trends", statusCode: 301 },
     ]
   },
 }
