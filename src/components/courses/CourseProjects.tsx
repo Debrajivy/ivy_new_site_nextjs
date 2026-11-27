@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, Play, Github, Activity, BarChart, GraduationCap, Award, PlayCircle } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { DE_PROJECTS, isDataEngineeringSlug } from '@/lib/data-engineering-course';
 import Crop from "../../assests/Crop.webp";
 import FaceMask from "../../assests/FaceMask.webp";
 import Nasscomcustomer from "../../assests/Nasscom-customer.webp";
@@ -50,7 +51,69 @@ const ProjectDifficultyBadge = ({ difficulty }: { difficulty: Project['difficult
   );
 };
 
+// Data Engineering pages: Showcase, Practice and Capstone tabs filled from the change brief.
+// All three tabs are in the server HTML (forceMount); inactive tabs are hidden.
+const DataEngineeringProjects = () => {
+  const tabs = [
+    { value: "course-projects", short: "Showcase", long: "Alumni Showcase", title: "Showcase", data: DE_PROJECTS.showcase, outro: "" },
+    { value: "practice", short: "Practice", long: "Try Before Enrolling", title: "Practice", data: DE_PROJECTS.practice, outro: "" },
+    { value: "capstone", short: "Capstone", long: "Capstone Projects", title: "Capstone", data: DE_PROJECTS.capstone, outro: DE_PROJECTS.capstone.outro },
+  ];
+  return (
+    <section className="py-10">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">What real-world projects will I work on during the course?</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto px-4">
+            Build a professional portfolio with real-world projects designed in collaboration with industry experts.
+            Apply your knowledge to solve actual business problems and showcase your skills to potential employers.
+          </p>
+        </div>
+        <Tabs defaultValue="course-projects" className="max-w-5xl mx-auto">
+          <TabsList
+            className="flex w-full justify-center items-center overflow-x-auto pb-2 gap-4 no-scrollbar"
+            style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', padding: '0 16px' }}
+          >
+            {tabs.map((t) => (
+              <TabsTrigger
+                key={t.value}
+                value={t.value}
+                className="px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium flex-1 max-w-[180px] text-center bg-white shadow-sm"
+              >
+                <span className="inline sm:hidden">{t.short}</span>
+                <span className="hidden sm:inline">{t.long}</span>
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          {tabs.map((t) => (
+            <TabsContent key={t.value} value={t.value} forceMount className="data-[state=inactive]:hidden">
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold mb-3">{t.title}</h3>
+                  <p className="text-gray-700 mb-4">{t.data.intro}</p>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {t.data.items.map((item) => (
+                      <li key={item} className="flex items-start text-gray-700">
+                        <GraduationCap size={18} className="text-[#009fda] mr-2 mt-1 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {t.outro && <p className="text-gray-700 mt-4">{t.outro}</p>}
+                </CardContent>
+              </Card>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </div>
+    </section>
+  );
+};
+
 const CourseProjects = ({ course }: CourseProjectsProps) => {
+  if (isDataEngineeringSlug(course.slug)) {
+    return <DataEngineeringProjects />;
+  }
   if (!course.projects || course.projects.length === 0) {
     return null;
   }

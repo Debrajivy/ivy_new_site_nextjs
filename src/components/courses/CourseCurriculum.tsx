@@ -16,6 +16,7 @@ import TaniaLahaCurImg from '@/assests/company/TaniaLahaCur.webp';
 import SatyajitPramanikImg from '@/assests/alumni/SatyajitPramanik.webp';
 import SatyajitPramanikCurImg from '@/assests/company/SatyajitPramanikCur.webp';
 import { coursePricing as pricingDetails } from '@/lib/coursePricing';
+import { DE_BRAND, DE_TOOLS, isDataEngineeringTitle } from '@/lib/data-engineering-course';
 
 interface CourseCurriculumProps {
   course: Course;
@@ -158,6 +159,16 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
               <p className="text-gray-600">
                 The curriculum is carefully designed to move from fundamentals to advanced concepts in a structured manner:              </p>}
 
+            {isDataEngineeringTitle(course.title) && (
+              <ul className="mt-6 flex flex-wrap justify-center gap-2" aria-label="Tools covered">
+                {DE_TOOLS.map((tool) => (
+                  <li key={tool} className="rounded-full border border-[#009fda]/30 bg-white px-3 py-1 text-sm font-medium text-[#013a81]">
+                    {tool}
+                  </li>
+                ))}
+              </ul>
+            )}
+
 
 
           </div>
@@ -199,12 +210,17 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                           <Clock size={14} className="mr-1" />
                           <span className="no-underline hover:no-underline">{module.duration}</span>
 
-                          <span className="mx-2">•</span>
+                          {/* Data Engineering pages show title and hours only (topic groups are not lessons) */}
+                          {!isDataEngineeringTitle(course.title) && (
+                            <>
+                              <span className="mx-2">•</span>
 
-                          <FileText size={14} className="mr-1" />
-                          <span className="no-underline hover:no-underline">
-                            {module.topics.filter((t: any) => t.id.startsWith('t')).length} lessons
-                          </span>
+                              <FileText size={14} className="mr-1" />
+                              <span className="no-underline hover:no-underline">
+                                {module.topics.filter((t: any) => t.id.startsWith('t')).length} lessons
+                              </span>
+                            </>
+                          )}
 
                           {/* Conditional Project Logic */}
                           {(() => {
@@ -313,7 +329,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
               {course.title !== "Data science course (Pay after Placement)"
                 ? (
                   <>
-                    <h2 className="text-2xl font-bold mb-4 text-center">Is the Ivy Pro School <span className="text-[#00a0da]">{course.title}</span> course fee affordable?</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-center">Is the {isDataEngineeringTitle(course.title) ? DE_BRAND : "Ivy Pro School"} <span className="text-[#00a0da]">{course.title}</span> course fee affordable?</h2>
 
                   </>
                 )
@@ -753,7 +769,7 @@ const CourseCurriculum = ({ course }: CourseCurriculumProps) => {
                       <span className="text-gray-500">Other Institutes</span>
                     </h2>
                     <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
-                      See why serious learners choose Ivy Pro School for their Data Engineering journey
+                      See why serious learners choose {isDataEngineeringTitle(course.title) ? DE_BRAND : "Ivy Pro School"} for their Data Engineering journey
                     </p>
                   </div>
 

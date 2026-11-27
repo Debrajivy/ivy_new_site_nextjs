@@ -9,6 +9,7 @@ import DeferredCourseAlumni from "@/components/courses/DeferredCourseAlumni"
 import DeferredCourseFAQ from "@/components/courses/DeferredCourseFAQ"
 import FaqJsonLd from "@/components/seo/FaqJsonLd"
 import { getCoursePageFaqs } from "@/lib/course-faqs"
+import { DE_BRAND, deMetaDescription, isDataEngineeringSlug } from "@/lib/data-engineering-course"
 import CourseAccreditation from "@/components/courses/CourseAccreditation"
 import CourseEnrollCTA from "@/components/courses/CourseEnrollCTA"
 import CourseJobSupport from "@/components/courses/CourseJobSupport"
@@ -47,20 +48,23 @@ export async function generateMetadata(
 
     if (!course) return { title: "Course Not Found | Ivy Professional School" }
 
+    // Data Engineering pages: meta description from the change brief (differs from the hero subheadline)
+    const metaDescription = isDataEngineeringSlug(slug) ? deMetaDescription(slug) : course.description
+
     return {
       title: `${course?.metaData?.title ? course?.metaData?.title : `${course.title} | Ivy Professional School`}`,
-      description: course.description,
+      description: metaDescription,
       keywords: `${course.title}, ${course.category}, Ivy Professional School, Data Science, AI, Machine Learning, Course, Training`,
       openGraph: {
         title: `${course?.metaData?.title ? course?.metaData?.title : `${course.title} | Ivy Professional School`}`,
-        description: course.description,
+        description: metaDescription,
         images: [course.image],
         type: "website",
       },
       twitter: {
         card: "summary_large_image",
         title: `${course?.metaData?.title ? course?.metaData?.title : `${course.title} | Ivy Professional School`}`,
-        description: course.description,
+        description: metaDescription,
         images: [course.image],
       },
       alternates: {
@@ -112,7 +116,7 @@ export default async function CoursePage({ params }: AsyncPageProps) {
           </div>
 
           <div id="course-alumni-section" className="course-deferred-section">
-            <DeferredCourseAlumni courseId={course.id} />
+            <DeferredCourseAlumni courseId={course.id} brandName={isDataEngineeringSlug(course.slug) ? DE_BRAND : undefined} />
           </div>
           <div id="course-faq-section" className="course-deferred-section">
             {/* Same data and lookup as the visible FAQ in CourseFAQ.tsx */}

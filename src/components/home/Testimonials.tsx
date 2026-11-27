@@ -328,7 +328,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   )
 }
 
-const Testimonials = () => {
+const Testimonials = ({ brandName = "Ivy Pro School" }: { brandName?: string } = {}) => {
   const [showContactOptions, setShowContactOptions] = useState(false);
   const [showCaptcha, setShowCaptcha] = useState(false);
   const [captchaCode, setCaptchaCode] = useState("");
@@ -377,7 +377,7 @@ const Testimonials = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div className="text-center md:text-left w-full md:w-auto">
             <h2 className="text-4xl font-bold mb-4 text-[#030712]">
-              What are alumni says about Ivy Pro School reviews            </h2>
+              What are alumni says about {brandName} reviews            </h2>
             <p className="max-w-2xl mx-auto md:mx-0 text-lg" style={{ color: "#79808a" }}>
               These reviews show how our faculty, curriculum, and teaching methods, real world projects have helped our students learn the right skills, gain practical experience to find jobs in top companies.
             </p>

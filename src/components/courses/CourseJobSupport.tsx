@@ -1,4 +1,5 @@
 import { COMPANY } from "@/lib/company-facts";
+import { DE_BRAND, DE_CERTIFICATE_LINES, isDataEngineeringSlug } from "@/lib/data-engineering-course";
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Briefcase, FileText, Users, Award, BarChart, GraduationCap, Zap, GitBranch, Headset, UserRound, TrendingUp, Video,ClipboardCheck, FileSpreadsheet, Mic, Cpu,UserCheck } from 'lucide-react';
@@ -558,7 +559,7 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
             
           {
             course.title!="AI for Beginners"?
-            <h2 className="text-3xl font-bold mb-4">What kind of career support does Ivy Pro School provide?</h2>
+            <h2 className="text-3xl font-bold mb-4">What kind of career support does {isDataEngineeringSlug(course.slug) ? DE_BRAND : "Ivy Pro School"} provide?</h2>
             :
                    <h2 className="text-3xl font-bold mb-4">What kind of support does Ivy Pro School provide?</h2>
           }
@@ -950,7 +951,8 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       </div>
                     </div>
                     <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0, textShadow: '1px 1px 1px rgba(135, 206, 235, 0.2)' }}>
-                      {course.title === " Advanced Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ?
+                      {isDataEngineeringSlug(course.slug) ? DE_CERTIFICATE_LINES[0] :
+                        course.title === " Advanced Generative AI Course" || course.title === "Generative AI Course in Kolkata" || course.title === "Generative AI Course in Delhi" || course.title === "Generative AI Course in Pune" || course.title === "Generative AI Course in Chennai" || course.title === "Generative AI Course in Bangalore" || course.title === "Generative AI Course in Mumbai" ?
                         "The Executive Certification in GenAI ensures quality and comprehensiveness of content coverage as well as ample credibility in the Gen AI field." :
                         course.title === "Data Science with Machine Learning & AI Certification" || course.title === "Data Science with Machine Learning & AI Course in Kolkata" || course.title === "Data Science with Machine Learning & AI Course in Delhi" || course.title === "Data Science with Machine Learning & AI Course in Pune" || course.title === "Data Science with Machine Learning & AI Course in Chennai" || course.title === "Data Science with Machine Learning & AI Course in Bangalore" || course.title === "Data Science with Machine Learning & AI Course in Mumbai" ?
                           "The Executive Certification in Data Science, widely regarded as one of the best data science courses in India. This program ensures a high standard of quality and comprehensive content coverage, making it a top choice for those seeking credibility and expertise in the field of Data Science." :
@@ -1016,7 +1018,8 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                       </div>
                     </div>
                     <p style={{ fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
-                      {(course.title === " Advanced Generative AI Course" || course.title === "Data Science with Machine Learning & AI Certification") ?
+                      {isDataEngineeringSlug(course.slug) ? DE_CERTIFICATE_LINES[1] :
+                        (course.title === " Advanced Generative AI Course" || course.title === "Data Science with Machine Learning & AI Certification") ?
                         "A stamp of approval from Ivy, tells prospective recruiters that your skillset is held to a high standard compared to regular certifications which will help in landing your well-paying dream job!" :
                         course.title === "Data Science Course in Kolkata" ?
                           "On successful completion, students receive a Data Science Certification from Ivy Professional School, validating their skills in analytics, machine learning, and AI. This certification strengthens resumes and improves employability in competitive job markets." :
@@ -1123,8 +1126,28 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-center">Who are Ivy Pro School's hiring partners and where can I get placed?</h3>
+              <h3 className="text-2xl font-bold mb-4 text-center">Who are {isDataEngineeringSlug(course.slug) ? DE_BRAND : "Ivy Pro School"}'s hiring partners and where can I get placed?</h3>
 
+              {isDataEngineeringSlug(course.slug) ? (
+                /* Data Engineering pages: each logo once (brief section 12) */
+                <div className="bg-white rounded-lg py-6 px-4">
+                  <ul className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-x-6 gap-y-4 items-center">
+                    {partners.map((partner) => (
+                      <li key={partner.name} className="flex items-center justify-center h-16">
+                        <Image
+                          width={100}
+                          height={100}
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="max-h-full max-w-full object-contain"
+                          loading="lazy"
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+              <>
               <div style={{ backgroundColor: 'white' }} className="relative overflow-hidden h-28 w-screen -ml-[calc(50vw-50%)] logo-fade-mask">
                 <div className="absolute flex items-center animate-scroll-left space-x-4" style={{ width: '200%' }}>
                   {partners.concat(partners).map((partner, index) => (
@@ -1158,6 +1181,8 @@ const CourseJobSupport = ({ course }: CourseJobSupportProps) => {
                   ))}
                 </div>
               </div>
+              </>
+              )}
             </div>
 
           </TabsContent>

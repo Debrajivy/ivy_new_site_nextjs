@@ -5,14 +5,15 @@ import StudentTestimonials from "../home/StudentTestimonials" // Import the Stud
 
 interface CourseAlumniProps {
   courseId: string
+  brandName?: string
 }
 
-const CourseAlumni = ({ courseId }: CourseAlumniProps) => {
+const CourseAlumni = ({ courseId, brandName }: CourseAlumniProps) => {
   // Add logic: if courseId is 9, show StudentTestimonials, otherwise show Testimonials
   if (courseId === "9") {
     return <StudentTestimonials />
   } else {
-    return <Testimonials />
+    return <Testimonials brandName={brandName} />
   }
 }
 

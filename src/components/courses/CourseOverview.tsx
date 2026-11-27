@@ -1,4 +1,5 @@
 import { COMPANY } from "@/lib/company-facts";
+import { DE_AVG_SALARY, DE_BRAND, DE_WHO_SHOULD_JOIN, isDataEngineeringSlug } from "@/lib/data-engineering-course";
 import React from 'react';
 import type { Course } from '@/lib/api';
 import { Card, CardContent } from '@/components/ui/card';
@@ -101,7 +102,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-4">
-                  What will I learn in Ivy Pro School{" "}
+                  What will I learn in {isDataEngineeringSlug(course.slug) ? DE_BRAND : "Ivy Pro School"}{" "}
                   {
                     course.title !== "Data science course (Pay after Placement)" ?
                       <span className="text-[#00a0da]">{course.title} course?</span> : <span className="text-[#00a0da]"> Data Science Course?</span>
@@ -116,6 +117,20 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                   ))}
                 </div>
               </div>
+
+              {isDataEngineeringSlug(course.slug) && (
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Who should join this course?</h3>
+                  <ul className="space-y-3">
+                    {DE_WHO_SHOULD_JOIN.map((line) => (
+                      <li key={line} className="flex items-start">
+                        <CheckCircle size={18} style={{ color: '#009fda' }} className="mr-2 mt-1 shrink-0" />
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {
                 course.title === "AI for Entrepreneurs" || course.title === "AI for Beginners" ?
@@ -477,7 +492,7 @@ const CourseOverview = ({ course }: CourseOverviewProps) => {
                               <Briefcase size={25} className="text-ivy-blue mr-3 mt-1" />
                               <div>
                                 <div className="font-medium">Hiring Partners</div>
-                                <p className="text-sm text-gray-600"> {COMPANY.cohortPlacementLabel} | 4-5 LPA avg salary | 17,000+ job openings in India</p>
+                                <p className="text-sm text-gray-600"> {COMPANY.cohortPlacementLabel} | {isDataEngineeringSlug(course.slug) ? DE_AVG_SALARY : "4-5 LPA"} avg salary | 17,000+ job openings in India</p>
                               </div>
                             </div>
 

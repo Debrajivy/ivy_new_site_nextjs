@@ -8,7 +8,7 @@ const CourseAlumni = dynamic(() => import("./CourseAlumni"), {
   loading: () => <div className="min-h-[560px] bg-white" aria-hidden="true" />,
 })
 
-export default function DeferredCourseAlumni({ courseId }: { courseId: string }) {
+export default function DeferredCourseAlumni({ courseId, brandName }: { courseId: string; brandName?: string }) {
   const rootRef = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
 
@@ -37,5 +37,5 @@ export default function DeferredCourseAlumni({ courseId }: { courseId: string })
     return () => observer.disconnect()
   }, [])
 
-  return <div ref={rootRef}>{visible ? <CourseAlumni courseId={courseId} /> : <div className="min-h-[560px]" />}</div>
+  return <div ref={rootRef}>{visible ? <CourseAlumni courseId={courseId} brandName={brandName} /> : <div className="min-h-[560px]" />}</div>
 }

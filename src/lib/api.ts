@@ -1,4 +1,5 @@
 import { COMPANY } from "@/lib/company-facts";
+import { DE_CURRICULUM, DE_OUTCOMES, DE_OVERVIEW, DE_SUBHEADLINE, deMetaDescription, dePageTitle } from "@/lib/data-engineering-course";
 import { Figma } from "lucide-react";
 import { topics } from "./mockTopicsData";
 import { title } from "process";
@@ -630,13 +631,13 @@ const courses: Course[] = [
   {
     id: '3',
     title: " Data Engineering Course",
-    description: "Learn how to design cloud architecture, manage enterprise databases, and build reliable big data pipelines.",
+    description: DE_SUBHEADLINE,
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Data Engineering",
     students: 1549,
     metaData: {
-      title: "Data Engineering Course with Placement Support | Ivy Professional School",
-      description: "Master cloud data engineering and big data analytics with hands-on training in Hadoop, Spark, Kafka, Hive, and modern data tools.",
+      title: dePageTitle("data-engineering-course"),
+      description: deMetaDescription("data-engineering-course"),
       bio: "Get coached by IIT professors, learn industry-relevant data engineering skills, complete 30+ real-life projects, and become job-ready in just 45 weeks."
 
     },
@@ -645,15 +646,8 @@ const courses: Course[] = [
     reviewCount: 345,
     isFeatured: true,
     slug: "data-engineering-course",
-    longDescription: "This course helps you master data engineering from scratch. First, you learn the fundamentals like database management with MySQL, data structures, data manipulation, Python libraries like Pandas and NumPy, etc. \n\nThen, you learn advanced skills like big data fundamentals, Hadoop and ecosystem, MongoDB, Kafka core concepts, real-time data processing, cloud essentials, and big data in Azure.\n\nThe curriculum also lets you work on 10+ industry projects, 30+ case studies, and 50+ assignments so that you can implement your theoretical knowledge. This way, you solidify your skills, get practical experience, and gain the confidence to solve real-world business problems.\n\nApart from the technical knowledge, the course also helps you learn job-oriented skills like writing your resume, excelling in interviews, optimizing your LinkedIn, building your network, etc. The course also helps you prepare for AWS and GCP certifications.",
-    outcomes: [
-      "Build scalable data pipelines using tools like Hadoop, Spark, Kafka, and Hive",
-      "Manage structured and unstructured data with MySQL, MongoDB, and real-time processing systems",
-      "Implement big data solutions on the cloud using Azure, AWS, and GCP platforms",
-      "Solve complex business problems with 30+ case studies and 10+ industry-aligned capstone projects",
-      "Prepare for top certifications like AWS and GCP with guided mentoring and hands-on labs",
-      "Get lifetime access to recordings and 1:1 expert mentorship to support your learning and job prep"
-    ],
+    longDescription: DE_OVERVIEW.join("\n\n"),
+    outcomes: DE_OUTCOMES,
     instructors: [
       {
         id: "i1",
@@ -675,187 +669,7 @@ const courses: Course[] = [
 
 
 
-    "curriculum": [
-      {
-        "id": "m1",
-        "title": "Advanced SQL",
-        "duration": "32 hrs",
-        "topics": [
-          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
-          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
-          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
-          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
-          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
-          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
-          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
-          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
-          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
-          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
-        ]
-      },
-      {
-        "id": "m2",
-        "title": "Python programming for Beginners",
-        "duration": "20 hrs",
-        "topics": [
-          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
-          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
-          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
-          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
-          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
-          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
-          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
-          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
-        ]
-      },
-      {
-        "id": "m3",
-        "title": "Big Data Terminologies",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
-          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
-          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
-          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
-          { "id": "t5", "title": "File Compressions Techniques" },
-          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
-        ]
-      },
-      {
-        "id": "m4",
-        "title": "Data Warehousing",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Facts" },
-          { "id": "t2", "title": "OLAPS" },
-          { "id": "t3", "title": "Dimensions" },
-          { "id": "t4", "title": "Star Schema" },
-          { "id": "t5", "title": "Snowflake Schema" },
-          { "id": "t6", "title": "Data Model Types" },
-          { "id": "t7", "title": "Data Integrity" },
-          { "id": "t8", "title": "Metadata" },
-          { "id": "t9", "title": "Slowly Changing Dimensions" },
-          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
-          { "id": "t11", "title": "Understanding of all theoretical concepts" },
-          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
-        ]
-      },
-      {
-        "id": "m5",
-        "title": "Hadoop",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Map-Reduce Functioning" },
-          { "id": "t3", "title": "HDFS" },
-          { "id": "t4", "title": "YARN" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
-          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
-          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
-        ]
-      },
-      {
-        "id": "m6",
-        "title": "Apache Hive",
-        "duration": "12 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Hive Installation" },
-          { "id": "t2", "title": "Query Syntax" },
-          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
-          { "id": "t4", "title": "Internal Vs External Tables" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning" },
-          { "id": "t6", "title": "Bucketing" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
-          { "id": "t8", "title": "Hive SerDe" },
-          { "id": "t9", "title": "UDF's in Hive" },
-          { "id": "t10", "title": "Query Optimization" },
-          { "id": "t11", "title": "Setup hive in local machine" },
-          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
-          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
-          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
-        ]
-      },
-      {
-        "id": "m8",
-        "title": "Spark",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Spark Core" },
-          { "id": "t3", "title": "RDDs" },
-          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
-          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
-          { "id": "t6", "title": "Spark Read/Write operations" },
-          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
-          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
-          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
-          { "id": "t10", "title": "Spark Submit Command Options" },
-          { "id": "t11", "title": "Job optimization techniques" },
-          { "id": "t12", "title": "Spark Catalyst Optimizer" },
-          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
-          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
-          { "id": "t15", "title": "Setup spark in local mode" },
-          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
-          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
-        ]
-      },
-      {
-        "id": "m9",
-        "title": "Kafka",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Producer" },
-          { "id": "t2", "title": "Consumer" },
-          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
-          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
-          { "id": "t5", "title": "Consumer Group" },
-          { "id": "t6", "title": "ZooKeeper" },
-          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
-        ]
-      },
-      {
-        "id": "m10",
-        "title": "Cloud Essentials & Fundamentals of AZURE",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
-          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
-          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
-          { "id": "t4", "title": "Microsoft Azure Key Vault" },
-          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
-          { "id": "t6", "title": "Azure CLI Commands" },
-          { "id": "t7", "title": "Azure Virtual Machine" }
-        ]
-      },
-      {
-        "id": "m11",
-        "title": "BigData in AZURE",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Blob/queue/table" },
-          { "id": "t2", "title": "Azure SQL database" },
-          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
-          { "id": "t4", "title": "Azure Synapse analytics" },
-          { "id": "t5", "title": "Azure Cosmos DB" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
-          { "id": "t7", "title": "Azure Event Hubs" },
-          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
-          { "id": "t9", "title": "Azure Scaling and Monitoring" },
-          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
-          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
-          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
-          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
-        ]
-      }
-    ]
+    "curriculum": DE_CURRICULUM
 
 
     ,
@@ -2763,7 +2577,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Kolkata",
-    description: "Build a job-ready career in data engineering with practical training in cloud architecture, enterprise databases, and reliable big data pipelines. Learn MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks through hands-on projects and placement-focused guidance in Kolkata.",
+    description: DE_SUBHEADLINE,
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -2773,12 +2587,12 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-kolkata",
     metaData: {
-      title: "Data Engineering Course in Kolkata with Placement Support | Ivy Professional School",
-      description: "Join Ivy Professional School’s Data Engineering Course in Kolkata with real-world projects, industry tools, expert mentors & career support. Enroll now!",
+      title: dePageTitle("data-engineering-course-kolkata"),
+      description: deMetaDescription("data-engineering-course-kolkata"),
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
     },
-    longDescription: "Ready to build a high-paying career in tech? Enroll in Ivy Pro School's Data Engineering Course in Kolkata, a NASSCOM Certified program trusted by 6,000+ professionals. Designed for career changers and IT professionals alike, our curriculum equips you with job-ready skills using real-world projects and tools like Python, SQL, Hadoop, Spark, and cloud platforms.\n\n "
+    longDescription: DE_OVERVIEW.join("\n\n")
     , instructors: [
       {
         id: "i1",
@@ -2798,187 +2612,7 @@ const courses: Course[] = [
       }
     ],
 
-    "curriculum": [
-      {
-        "id": "m1",
-        "title": "Advanced SQL",
-        "duration": "32 hrs",
-        "topics": [
-          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
-          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
-          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
-          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
-          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
-          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
-          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
-          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
-          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
-          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
-        ]
-      },
-      {
-        "id": "m2",
-        "title": "Python programming for Beginners",
-        "duration": "20 hrs",
-        "topics": [
-          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
-          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
-          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
-          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
-          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
-          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
-          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
-          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
-        ]
-      },
-      {
-        "id": "m3",
-        "title": "Big Data Terminologies",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
-          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
-          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
-          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
-          { "id": "t5", "title": "File Compressions Techniques" },
-          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
-        ]
-      },
-      {
-        "id": "m4",
-        "title": "Data Warehousing",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Facts" },
-          { "id": "t2", "title": "OLAPS" },
-          { "id": "t3", "title": "Dimensions" },
-          { "id": "t4", "title": "Star Schema" },
-          { "id": "t5", "title": "Snowflake Schema" },
-          { "id": "t6", "title": "Data Model Types" },
-          { "id": "t7", "title": "Data Integrity" },
-          { "id": "t8", "title": "Metadata" },
-          { "id": "t9", "title": "Slowly Changing Dimensions" },
-          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
-          { "id": "t11", "title": "Understanding of all theoretical concepts" },
-          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
-        ]
-      },
-      {
-        "id": "m5",
-        "title": "Hadoop",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Map-Reduce Functioning" },
-          { "id": "t3", "title": "HDFS" },
-          { "id": "t4", "title": "YARN" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
-          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
-          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
-        ]
-      },
-      {
-        "id": "m6",
-        "title": "Apache Hive",
-        "duration": "12 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Hive Installation" },
-          { "id": "t2", "title": "Query Syntax" },
-          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
-          { "id": "t4", "title": "Internal Vs External Tables" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning" },
-          { "id": "t6", "title": "Bucketing" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
-          { "id": "t8", "title": "Hive SerDe" },
-          { "id": "t9", "title": "UDF's in Hive" },
-          { "id": "t10", "title": "Query Optimization" },
-          { "id": "t11", "title": "Setup hive in local machine" },
-          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
-          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
-          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
-        ]
-      },
-      {
-        "id": "m8",
-        "title": "Spark",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Spark Core" },
-          { "id": "t3", "title": "RDDs" },
-          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
-          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
-          { "id": "t6", "title": "Spark Read/Write operations" },
-          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
-          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
-          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
-          { "id": "t10", "title": "Spark Submit Command Options" },
-          { "id": "t11", "title": "Job optimization techniques" },
-          { "id": "t12", "title": "Spark Catalyst Optimizer" },
-          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
-          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
-          { "id": "t15", "title": "Setup spark in local mode" },
-          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
-          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
-        ]
-      },
-      {
-        "id": "m9",
-        "title": "Kafka",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Producer" },
-          { "id": "t2", "title": "Consumer" },
-          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
-          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
-          { "id": "t5", "title": "Consumer Group" },
-          { "id": "t6", "title": "ZooKeeper" },
-          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
-        ]
-      },
-      {
-        "id": "m10",
-        "title": "Cloud Essentials & Fundamentals of AZURE",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
-          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
-          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
-          { "id": "t4", "title": "Microsoft Azure Key Vault" },
-          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
-          { "id": "t6", "title": "Azure CLI Commands" },
-          { "id": "t7", "title": "Azure Virtual Machine" }
-        ]
-      },
-      {
-        "id": "m11",
-        "title": "BigData in AZURE",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Blob/queue/table" },
-          { "id": "t2", "title": "Azure SQL database" },
-          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
-          { "id": "t4", "title": "Azure Synapse analytics" },
-          { "id": "t5", "title": "Azure Cosmos DB" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
-          { "id": "t7", "title": "Azure Event Hubs" },
-          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
-          { "id": "t9", "title": "Azure Scaling and Monitoring" },
-          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
-          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
-          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
-          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
-        ]
-      }
-    ]
+    "curriculum": DE_CURRICULUM
     ,
     projects: [
       {
@@ -3039,17 +2673,7 @@ const courses: Course[] = [
       //   videoId: "sVXjAIa7YBs"
       // }
     ],
-    outcomes: [
-      "Build distributed data processing systems using Hadoop and Apache Spark",
-      "Implement real-time and batch data processing architectures",
-      "Gain hands-on exposure to cloud data platforms and modern data warehouses",
-      "Optimize data storage, performance, and data quality for enterprise use cases",
-      "Develop industry-ready skills aligned with Data Engineer roles in Kolkata and India",
-      "Design and implement scalable ETL and ELT data pipelines",
-      "Work with relational and NoSQL databases for structured and unstructured data",
-      "Apply Python and SQL for data transformation and automation",
-      "Build distributed data processing systems using Hadoop and Apache Spark"
-    ],
+    outcomes: DE_OUTCOMES,
 
 
   },
@@ -3059,7 +2683,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Delhi",
-    description: "Prepare for high-demand data engineering roles in Delhi NCR with a practical, project-driven course focused on enterprise databases, cloud data platforms, and scalable data pipelines. Master MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks with structured placement support.",
+    description: DE_SUBHEADLINE,
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -3069,12 +2693,12 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-delhi",
     metaData: {
-      title: "Data Engineering Course in Delhi with Placement Support | Ivy Professional School",
-      description: "Enroll in Ivy Professional School’s Data Engineering Course in Delhi with hands-on projects, big data tools, cloud training & career support.",
+      title: dePageTitle("data-engineering-course-delhi"),
+      description: deMetaDescription("data-engineering-course-delhi"),
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Kolkata by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
     },
-    longDescription: "A Data Engineering course in Delhi is the ultimate gateway to mastering the high-performance data pipelines driving the 2025 AI revolution. This specialized training focuses on technical architecture using Python, SQL, Spark, and Cloud to ensure data is clean and accessible at scale. \n\n Delhi-NCR has emerged as a premier hub for these roles, with Noida and Gurgaon seeing massive annual growth in job listings across Global Capability Centers. By specializing in this recession-proof field, you bridge the talent gap in sectors like BFSI and retail where demand currently far exceeds supply. "
+    longDescription: DE_OVERVIEW.join("\n\n")
     , instructors: [
       {
         id: "i1",
@@ -3094,187 +2718,7 @@ const courses: Course[] = [
       }
     ],
 
-    "curriculum": [
-      {
-        "id": "m1",
-        "title": "Advanced SQL",
-        "duration": "32 hrs",
-        "topics": [
-          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
-          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
-          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
-          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
-          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
-          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
-          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
-          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
-          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
-          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
-        ]
-      },
-      {
-        "id": "m2",
-        "title": "Python programming for Beginners",
-        "duration": "20 hrs",
-        "topics": [
-          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
-          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
-          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
-          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
-          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
-          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
-          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
-          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
-        ]
-      },
-      {
-        "id": "m3",
-        "title": "Big Data Terminologies",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
-          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
-          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
-          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
-          { "id": "t5", "title": "File Compressions Techniques" },
-          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
-        ]
-      },
-      {
-        "id": "m4",
-        "title": "Data Warehousing",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Facts" },
-          { "id": "t2", "title": "OLAPS" },
-          { "id": "t3", "title": "Dimensions" },
-          { "id": "t4", "title": "Star Schema" },
-          { "id": "t5", "title": "Snowflake Schema" },
-          { "id": "t6", "title": "Data Model Types" },
-          { "id": "t7", "title": "Data Integrity" },
-          { "id": "t8", "title": "Metadata" },
-          { "id": "t9", "title": "Slowly Changing Dimensions" },
-          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
-          { "id": "t11", "title": "Understanding of all theoretical concepts" },
-          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
-        ]
-      },
-      {
-        "id": "m5",
-        "title": "Hadoop",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Map-Reduce Functioning" },
-          { "id": "t3", "title": "HDFS" },
-          { "id": "t4", "title": "YARN" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
-          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
-          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
-        ]
-      },
-      {
-        "id": "m6",
-        "title": "Apache Hive",
-        "duration": "12 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Hive Installation" },
-          { "id": "t2", "title": "Query Syntax" },
-          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
-          { "id": "t4", "title": "Internal Vs External Tables" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning" },
-          { "id": "t6", "title": "Bucketing" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
-          { "id": "t8", "title": "Hive SerDe" },
-          { "id": "t9", "title": "UDF's in Hive" },
-          { "id": "t10", "title": "Query Optimization" },
-          { "id": "t11", "title": "Setup hive in local machine" },
-          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
-          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
-          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
-        ]
-      },
-      {
-        "id": "m8",
-        "title": "Spark",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Spark Core" },
-          { "id": "t3", "title": "RDDs" },
-          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
-          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
-          { "id": "t6", "title": "Spark Read/Write operations" },
-          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
-          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
-          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
-          { "id": "t10", "title": "Spark Submit Command Options" },
-          { "id": "t11", "title": "Job optimization techniques" },
-          { "id": "t12", "title": "Spark Catalyst Optimizer" },
-          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
-          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
-          { "id": "t15", "title": "Setup spark in local mode" },
-          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
-          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
-        ]
-      },
-      {
-        "id": "m9",
-        "title": "Kafka",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Producer" },
-          { "id": "t2", "title": "Consumer" },
-          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
-          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
-          { "id": "t5", "title": "Consumer Group" },
-          { "id": "t6", "title": "ZooKeeper" },
-          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
-        ]
-      },
-      {
-        "id": "m10",
-        "title": "Cloud Essentials & Fundamentals of AZURE",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
-          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
-          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
-          { "id": "t4", "title": "Microsoft Azure Key Vault" },
-          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
-          { "id": "t6", "title": "Azure CLI Commands" },
-          { "id": "t7", "title": "Azure Virtual Machine" }
-        ]
-      },
-      {
-        "id": "m11",
-        "title": "BigData in AZURE",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Blob/queue/table" },
-          { "id": "t2", "title": "Azure SQL database" },
-          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
-          { "id": "t4", "title": "Azure Synapse analytics" },
-          { "id": "t5", "title": "Azure Cosmos DB" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
-          { "id": "t7", "title": "Azure Event Hubs" },
-          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
-          { "id": "t9", "title": "Azure Scaling and Monitoring" },
-          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
-          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
-          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
-          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
-        ]
-      }
-    ]
+    "curriculum": DE_CURRICULUM
     ,
     projects: [
       {
@@ -3335,17 +2779,7 @@ const courses: Course[] = [
       //   videoId: "sVXjAIa7YBs"
       // }
     ],
-    outcomes: [
-      "Understand the end-to-end data engineering lifecycle",
-      "Design and implement ETL and ELT data pipelines",
-      "Work with SQL and Python for data transformation and automation",
-      "Manage relational and NoSQL databases efficiently",
-      "Build distributed data processing systems using Hadoop and Apache Spark",
-      "Implement batch and real-time data processing solutions",
-      "Work with cloud-based data platforms and data warehouses",
-      "Ensure data quality, scalability, and performance",
-      "Prepare for Data Engineer roles in Delhi’s competitive job market"
-    ],
+    outcomes: DE_OUTCOMES,
 
 
   },
@@ -3354,7 +2788,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Bangalore",
-    description: "Launch your data engineering career in India’s technology hub with hands-on training in cloud architecture, big data systems, and production-ready data pipelines. Learn MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks through real-world projects built for modern tech teams.",
+    description: DE_SUBHEADLINE,
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -3364,12 +2798,12 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-bangalore",
     metaData: {
-      title: "Data Engineering Course in Bangalore with placement support | Ivy Professional School",
-      description: "Build a job-ready data engineering career in Bangalore. Learn scalable pipelines, big data tools, and real-world skills used by top tech companies.",
+      title: dePageTitle("data-engineering-course-bangalore"),
+      description: deMetaDescription("data-engineering-course-bangalore"),
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Bangalore by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
     },
-    longDescription: "The Data Engineering Course in Bangalore provides end-to-end training on designing, building, and maintaining enterprise-grade data infrastructure. The program combines strong theoretical foundations with extensive hands-on practice to ensure learners are job-ready. \n\n With Bangalore hosting global technology companies and data-driven startups, this course aligns with real-world use cases and industry workflows. Learners gain exposure to batch and real-time data processing, cloud-based data platforms, and distributed systems that power modern analytics and AI applications. "
+    longDescription: DE_OVERVIEW.join("\n\n")
     , instructors: [
       {
         id: "i1",
@@ -3389,187 +2823,7 @@ const courses: Course[] = [
       }
     ],
 
-    "curriculum": [
-      {
-        "id": "m1",
-        "title": "Advanced SQL",
-        "duration": "32 hrs",
-        "topics": [
-          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
-          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
-          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
-          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
-          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
-          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
-          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
-          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
-          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
-          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
-        ]
-      },
-      {
-        "id": "m2",
-        "title": "Python programming for Beginners",
-        "duration": "20 hrs",
-        "topics": [
-          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
-          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
-          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
-          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
-          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
-          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
-          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
-          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
-        ]
-      },
-      {
-        "id": "m3",
-        "title": "Big Data Terminologies",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
-          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
-          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
-          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
-          { "id": "t5", "title": "File Compressions Techniques" },
-          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
-        ]
-      },
-      {
-        "id": "m4",
-        "title": "Data Warehousing",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Facts" },
-          { "id": "t2", "title": "OLAPS" },
-          { "id": "t3", "title": "Dimensions" },
-          { "id": "t4", "title": "Star Schema" },
-          { "id": "t5", "title": "Snowflake Schema" },
-          { "id": "t6", "title": "Data Model Types" },
-          { "id": "t7", "title": "Data Integrity" },
-          { "id": "t8", "title": "Metadata" },
-          { "id": "t9", "title": "Slowly Changing Dimensions" },
-          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
-          { "id": "t11", "title": "Understanding of all theoretical concepts" },
-          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
-        ]
-      },
-      {
-        "id": "m5",
-        "title": "Hadoop",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Map-Reduce Functioning" },
-          { "id": "t3", "title": "HDFS" },
-          { "id": "t4", "title": "YARN" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
-          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
-          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
-        ]
-      },
-      {
-        "id": "m6",
-        "title": "Apache Hive",
-        "duration": "12 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Hive Installation" },
-          { "id": "t2", "title": "Query Syntax" },
-          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
-          { "id": "t4", "title": "Internal Vs External Tables" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning" },
-          { "id": "t6", "title": "Bucketing" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
-          { "id": "t8", "title": "Hive SerDe" },
-          { "id": "t9", "title": "UDF's in Hive" },
-          { "id": "t10", "title": "Query Optimization" },
-          { "id": "t11", "title": "Setup hive in local machine" },
-          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
-          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
-          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
-        ]
-      },
-      {
-        "id": "m8",
-        "title": "Spark",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Spark Core" },
-          { "id": "t3", "title": "RDDs" },
-          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
-          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
-          { "id": "t6", "title": "Spark Read/Write operations" },
-          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
-          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
-          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
-          { "id": "t10", "title": "Spark Submit Command Options" },
-          { "id": "t11", "title": "Job optimization techniques" },
-          { "id": "t12", "title": "Spark Catalyst Optimizer" },
-          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
-          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
-          { "id": "t15", "title": "Setup spark in local mode" },
-          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
-          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
-        ]
-      },
-      {
-        "id": "m9",
-        "title": "Kafka",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Producer" },
-          { "id": "t2", "title": "Consumer" },
-          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
-          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
-          { "id": "t5", "title": "Consumer Group" },
-          { "id": "t6", "title": "ZooKeeper" },
-          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
-        ]
-      },
-      {
-        "id": "m10",
-        "title": "Cloud Essentials & Fundamentals of AZURE",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
-          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
-          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
-          { "id": "t4", "title": "Microsoft Azure Key Vault" },
-          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
-          { "id": "t6", "title": "Azure CLI Commands" },
-          { "id": "t7", "title": "Azure Virtual Machine" }
-        ]
-      },
-      {
-        "id": "m11",
-        "title": "BigData in AZURE",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Blob/queue/table" },
-          { "id": "t2", "title": "Azure SQL database" },
-          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
-          { "id": "t4", "title": "Azure Synapse analytics" },
-          { "id": "t5", "title": "Azure Cosmos DB" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
-          { "id": "t7", "title": "Azure Event Hubs" },
-          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
-          { "id": "t9", "title": "Azure Scaling and Monitoring" },
-          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
-          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
-          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
-          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
-        ]
-      }
-    ]
+    "curriculum": DE_CURRICULUM
     ,
     projects: [
       {
@@ -3630,22 +2884,14 @@ const courses: Course[] = [
       //   videoId: "sVXjAIa7YBs"
       // }
     ],
-    outcomes: [
-      "Design and implement robust ETL and ELT data pipelines",
-      "Work with SQL, Python, and data transformation techniques",
-      "Build and optimize big data systems using Hadoop and Apache Spark",
-      "Implement batch and real-time data processing frameworks",
-      "Prepare for Data Engineer roles in Bangalore’s competitive job market",
-      "Ensure data quality, scalability, and performance in production systems",
-
-    ],
+    outcomes: DE_OUTCOMES,
 
 
   },
   {
     id: '11',
     title: "Data Engineering Course in Mumbai",
-    description: "Build practical data engineering skills for analytics, BFSI, consulting, and enterprise technology roles in Mumbai. Learn how to manage databases, design cloud data architecture, and build reliable big data pipelines using MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks.",
+    description: DE_SUBHEADLINE,
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -3655,12 +2901,12 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-mumbai",
     metaData: {
-      title: "Data Engineering Course in Mumbai with Placement Support | Ivy Professional School",
-      description: "Join Ivy Professional School’s Data Engineering Course in Mumbai with hands-on projects, big data & cloud tools, expert mentors, and career support.",
+      title: dePageTitle("data-engineering-course-mumbai"),
+      description: deMetaDescription("data-engineering-course-mumbai"),
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Mumbai by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
     },
-    longDescription: "The Data Engineering Course in Mumbai offers end-to-end training on designing, building, and managing enterprise-grade data infrastructure. The curriculum blends strong fundamentals with hands-on implementation to ensure learners are job-ready. \n\n With Mumbai hosting major banks, financial institutions, consulting firms, and large enterprises, the course emphasizes real-world use cases such as transactional data processing, analytics pipelines, and cloud data warehousing. Learners gain exposure to batch and real-time data processing, distributed systems, and modern data architectures. \n\n The program is delivered through instructor-led sessions, practical labs, and industry-aligned case studies, making it suitable for both freshers and working professionals in Mumbai."
+    longDescription: DE_OVERVIEW.join("\n\n")
     , instructors: [
       {
         id: "i1",
@@ -3680,187 +2926,7 @@ const courses: Course[] = [
       }
     ],
 
-    "curriculum": [
-      {
-        "id": "m1",
-        "title": "Advanced SQL",
-        "duration": "32 hrs",
-        "topics": [
-          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
-          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
-          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
-          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
-          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
-          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
-          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
-          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
-          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
-          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
-        ]
-      },
-      {
-        "id": "m2",
-        "title": "Python programming for Beginners",
-        "duration": "20 hrs",
-        "topics": [
-          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
-          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
-          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
-          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
-          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
-          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
-          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
-          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
-        ]
-      },
-      {
-        "id": "m3",
-        "title": "Big Data Terminologies",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
-          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
-          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
-          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
-          { "id": "t5", "title": "File Compressions Techniques" },
-          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
-        ]
-      },
-      {
-        "id": "m4",
-        "title": "Data Warehousing",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Facts" },
-          { "id": "t2", "title": "OLAPS" },
-          { "id": "t3", "title": "Dimensions" },
-          { "id": "t4", "title": "Star Schema" },
-          { "id": "t5", "title": "Snowflake Schema" },
-          { "id": "t6", "title": "Data Model Types" },
-          { "id": "t7", "title": "Data Integrity" },
-          { "id": "t8", "title": "Metadata" },
-          { "id": "t9", "title": "Slowly Changing Dimensions" },
-          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
-          { "id": "t11", "title": "Understanding of all theoretical concepts" },
-          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
-        ]
-      },
-      {
-        "id": "m5",
-        "title": "Hadoop",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Map-Reduce Functioning" },
-          { "id": "t3", "title": "HDFS" },
-          { "id": "t4", "title": "YARN" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
-          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
-          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
-        ]
-      },
-      {
-        "id": "m6",
-        "title": "Apache Hive",
-        "duration": "12 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Hive Installation" },
-          { "id": "t2", "title": "Query Syntax" },
-          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
-          { "id": "t4", "title": "Internal Vs External Tables" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning" },
-          { "id": "t6", "title": "Bucketing" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
-          { "id": "t8", "title": "Hive SerDe" },
-          { "id": "t9", "title": "UDF's in Hive" },
-          { "id": "t10", "title": "Query Optimization" },
-          { "id": "t11", "title": "Setup hive in local machine" },
-          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
-          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
-          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
-        ]
-      },
-      {
-        "id": "m8",
-        "title": "Spark",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Spark Core" },
-          { "id": "t3", "title": "RDDs" },
-          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
-          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
-          { "id": "t6", "title": "Spark Read/Write operations" },
-          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
-          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
-          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
-          { "id": "t10", "title": "Spark Submit Command Options" },
-          { "id": "t11", "title": "Job optimization techniques" },
-          { "id": "t12", "title": "Spark Catalyst Optimizer" },
-          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
-          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
-          { "id": "t15", "title": "Setup spark in local mode" },
-          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
-          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
-        ]
-      },
-      {
-        "id": "m9",
-        "title": "Kafka",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Producer" },
-          { "id": "t2", "title": "Consumer" },
-          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
-          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
-          { "id": "t5", "title": "Consumer Group" },
-          { "id": "t6", "title": "ZooKeeper" },
-          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
-        ]
-      },
-      {
-        "id": "m10",
-        "title": "Cloud Essentials & Fundamentals of AZURE",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
-          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
-          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
-          { "id": "t4", "title": "Microsoft Azure Key Vault" },
-          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
-          { "id": "t6", "title": "Azure CLI Commands" },
-          { "id": "t7", "title": "Azure Virtual Machine" }
-        ]
-      },
-      {
-        "id": "m11",
-        "title": "BigData in AZURE",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Blob/queue/table" },
-          { "id": "t2", "title": "Azure SQL database" },
-          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
-          { "id": "t4", "title": "Azure Synapse analytics" },
-          { "id": "t5", "title": "Azure Cosmos DB" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
-          { "id": "t7", "title": "Azure Event Hubs" },
-          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
-          { "id": "t9", "title": "Azure Scaling and Monitoring" },
-          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
-          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
-          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
-          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
-        ]
-      }
-    ]
+    "curriculum": DE_CURRICULUM
     ,
     projects: [
       {
@@ -3921,15 +2987,7 @@ const courses: Course[] = [
       //   videoId: "sVXjAIa7YBs"
       // }
     ],
-    outcomes: [
-      "Understand the complete data engineering lifecycle",
-      "Design and implement ETL and ELT data pipelines",
-      "Use SQL and Python for data processing and automation",
-      "Work with relational and NoSQL databases",
-      "Build distributed data systems using Hadoop and Apache Spark",
-      "Implement batch and real-time data processing frameworks",
-
-    ],
+    outcomes: DE_OUTCOMES,
 
 
   },
@@ -3937,7 +2995,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Pune",
-    description: "Develop job-ready data engineering capabilities for Pune’s growing IT, analytics, and product ecosystem. Gain hands-on experience in MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks while learning to design scalable databases, cloud architecture, and big data pipelines.",
+    description: DE_SUBHEADLINE,
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -3947,12 +3005,12 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-pune",
     metaData: {
-      title: "Data Engineering Course in Pune with Placement Support | Ivy Professional Schoo",
-      description: "Join Ivy Professional School’s Data Engineering Course in Pune with hands-on projects, big data & cloud tools, expert mentors, and career support.",
+      title: dePageTitle("data-engineering-course-pune"),
+      description: deMetaDescription("data-engineering-course-pune"),
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Pune by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
     },
-    longDescription: "The Data Engineering Course in Pune provides comprehensive training on building reliable, scalable, and high-performance data infrastructure. The course combines strong foundational concepts with hands-on implementation of real-world data engineering workflows. \n\n With Pune hosting leading IT services firms, product companies, and analytics-driven startups, the course emphasizes practical use cases such as data warehousing, cloud-based data platforms, and distributed data processing systems. Learners gain exposure to both batch and real-time data processing architectures that support analytics and AI initiatives. \n\n The program is delivered through instructor-led sessions, practical labs, and industry-aligned case studies, making it suitable for freshers as well as working professionals in Pune."
+    longDescription: DE_OVERVIEW.join("\n\n")
     , instructors: [
       {
         id: "i1",
@@ -3972,187 +3030,7 @@ const courses: Course[] = [
       }
     ],
 
-    "curriculum": [
-      {
-        "id": "m1",
-        "title": "Advanced SQL",
-        "duration": "32 hrs",
-        "topics": [
-          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
-          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
-          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
-          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
-          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
-          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
-          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
-          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
-          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
-          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
-        ]
-      },
-      {
-        "id": "m2",
-        "title": "Python programming for Beginners",
-        "duration": "20 hrs",
-        "topics": [
-          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
-          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
-          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
-          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
-          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
-          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
-          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
-          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
-        ]
-      },
-      {
-        "id": "m3",
-        "title": "Big Data Terminologies",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
-          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
-          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
-          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
-          { "id": "t5", "title": "File Compressions Techniques" },
-          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
-        ]
-      },
-      {
-        "id": "m4",
-        "title": "Data Warehousing",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Facts" },
-          { "id": "t2", "title": "OLAPS" },
-          { "id": "t3", "title": "Dimensions" },
-          { "id": "t4", "title": "Star Schema" },
-          { "id": "t5", "title": "Snowflake Schema" },
-          { "id": "t6", "title": "Data Model Types" },
-          { "id": "t7", "title": "Data Integrity" },
-          { "id": "t8", "title": "Metadata" },
-          { "id": "t9", "title": "Slowly Changing Dimensions" },
-          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
-          { "id": "t11", "title": "Understanding of all theoretical concepts" },
-          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
-        ]
-      },
-      {
-        "id": "m5",
-        "title": "Hadoop",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Map-Reduce Functioning" },
-          { "id": "t3", "title": "HDFS" },
-          { "id": "t4", "title": "YARN" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
-          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
-          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
-        ]
-      },
-      {
-        "id": "m6",
-        "title": "Apache Hive",
-        "duration": "12 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Hive Installation" },
-          { "id": "t2", "title": "Query Syntax" },
-          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
-          { "id": "t4", "title": "Internal Vs External Tables" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning" },
-          { "id": "t6", "title": "Bucketing" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
-          { "id": "t8", "title": "Hive SerDe" },
-          { "id": "t9", "title": "UDF's in Hive" },
-          { "id": "t10", "title": "Query Optimization" },
-          { "id": "t11", "title": "Setup hive in local machine" },
-          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
-          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
-          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
-        ]
-      },
-      {
-        "id": "m8",
-        "title": "Spark",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Spark Core" },
-          { "id": "t3", "title": "RDDs" },
-          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
-          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
-          { "id": "t6", "title": "Spark Read/Write operations" },
-          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
-          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
-          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
-          { "id": "t10", "title": "Spark Submit Command Options" },
-          { "id": "t11", "title": "Job optimization techniques" },
-          { "id": "t12", "title": "Spark Catalyst Optimizer" },
-          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
-          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
-          { "id": "t15", "title": "Setup spark in local mode" },
-          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
-          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
-        ]
-      },
-      {
-        "id": "m9",
-        "title": "Kafka",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Producer" },
-          { "id": "t2", "title": "Consumer" },
-          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
-          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
-          { "id": "t5", "title": "Consumer Group" },
-          { "id": "t6", "title": "ZooKeeper" },
-          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
-        ]
-      },
-      {
-        "id": "m10",
-        "title": "Cloud Essentials & Fundamentals of AZURE",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
-          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
-          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
-          { "id": "t4", "title": "Microsoft Azure Key Vault" },
-          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
-          { "id": "t6", "title": "Azure CLI Commands" },
-          { "id": "t7", "title": "Azure Virtual Machine" }
-        ]
-      },
-      {
-        "id": "m11",
-        "title": "BigData in AZURE",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Blob/queue/table" },
-          { "id": "t2", "title": "Azure SQL database" },
-          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
-          { "id": "t4", "title": "Azure Synapse analytics" },
-          { "id": "t5", "title": "Azure Cosmos DB" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
-          { "id": "t7", "title": "Azure Event Hubs" },
-          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
-          { "id": "t9", "title": "Azure Scaling and Monitoring" },
-          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
-          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
-          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
-          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
-        ]
-      }
-    ]
+    "curriculum": DE_CURRICULUM
     ,
     projects: [
       {
@@ -4213,15 +3091,7 @@ const courses: Course[] = [
       //   videoId: "sVXjAIa7YBs"
       // }
     ],
-    outcomes: [
-      "Understand the complete data engineering lifecycle",
-      "Design and implement ETL and ELT data pipelines",
-      "Use SQL and Python for data processing and automation",
-      "Work with relational and NoSQL databases",
-      "Build distributed data processing systems using Hadoop and Apache Spark",
-      "Implement batch and real-time data processing frameworks",
-
-    ],
+    outcomes: DE_OUTCOMES,
 
 
   },
@@ -4229,7 +3099,7 @@ const courses: Course[] = [
   {
     id: '11',
     title: "Data Engineering Course in Chennai",
-    description: "Start a career-ready journey in data engineering with practical training designed for Chennai’s IT, manufacturing, BFSI, and enterprise analytics sectors. Learn to manage databases, process large-scale data, and build secure cloud pipelines using MySQL, Python, Hadoop, Spark, Kafka, Azure Data Factory, Data Lake, and Databricks.",
+    description: DE_SUBHEADLINE,
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
     category: "Deep Learning",
     students: 1098,
@@ -4239,12 +3109,12 @@ const courses: Course[] = [
     isFeatured: true,
     slug: "data-engineering-course-chennai",
     metaData: {
-      title: "Data Engineering Course in Chennai with Placement Support | Ivy Professional School",
-      description: "Enroll in Ivy Professional School’s Data Engineering Course in Chennai with hands-on projects, big data & cloud tools, expert mentors, and career support.",
+      title: dePageTitle("data-engineering-course-chennai"),
+      description: deMetaDescription("data-engineering-course-chennai"),
       bio: "Looking to build a high-growth career in analytics, Machine Learning, and Artificial Intelligence? The Data Science Course in Chennai by Ivy Professional School is designed to help students and working professionals master industry-relevant data science skills with hands-on projects, expert faculty, and career-focused training.\n\n Kolkata is fast emerging as a technology and analytics hub, and our Data Science program equips you with practical knowledge, real-world exposure, and placement assistance to compete in top data-driven roles across India."
 
     },
-    longDescription: "The Data Engineering Course in Chennai offers end-to-end training on building robust, scalable, and high-performance data infrastructure. The course focuses on real-world data engineering workflows, combining strong theoretical foundations with hands-on practical implementation. \n\n With Chennai hosting leading IT services firms, global technology centers, and analytics-driven organizations, the course emphasizes practical use cases such as enterprise data pipelines, cloud data warehousing, and distributed data processing. Learners gain exposure to both batch and real-time data processing systems that support analytics and AI applications."
+    longDescription: DE_OVERVIEW.join("\n\n")
     , instructors: [
       {
         id: "i1",
@@ -4264,187 +3134,7 @@ const courses: Course[] = [
       }
     ],
 
-    "curriculum": [
-      {
-        "id": "m1",
-        "title": "Advanced SQL",
-        "duration": "32 hrs",
-        "topics": [
-          { "id": "t1", "title": "Relational Database Concepts – Fundamentals, Normalization, Keys, and Table Relationships" },
-          { "id": "t2", "title": "Database Fundamentals – Work with structured data using relationships, keys, and normalization" },
-          { "id": "t3", "title": "SQL for Data Analysis – Joins, subqueries, filtering, and data retrieval from real datasets" },
-          { "id": "t4", "title": "Advanced SQL – CTEs, window functions, and views for complex problem-solving" },
-          { "id": "t5", "title": "Analytical SQL – Aggregations, case statements, and time-based analysis for business insights" },
-          { "id": "t6", "title": "Data Handling – Managing large datasets, imports/exports, and structured operations" },
-          { "id": "t7", "title": "Performance Optimization – Indexing and query tuning for faster execution" },
-          { "id": "t8", "title": "AI in SQL – Generate and optimize queries using AI tools" },
-          { "id": "p1", "title": "Project: Customer Insights Database - Designed a Customer Insights Database and extracted KPIs using complex JOIN queries." },
-          { "id": "p2", "title": "Project: Sales Trend Analyzer - Built a Sales Trend Analyzer with window functions and aggregate queries." }
-        ]
-      },
-      {
-        "id": "m2",
-        "title": "Python programming for Beginners",
-        "duration": "20 hrs",
-        "topics": [
-          { "id": "t1", "title": "Python Environment: Setup, Jupyter Notebooks, and Virtual Environments" },
-          { "id": "t2", "title": "Core Programming: Syntax, Variables, Data Types, and Built-in Functions" },
-          { "id": "t3", "title": "Collections & Iterations: Strings, Lists, Tuples, Sets, Dictionaries, and Comprehensions" },
-          { "id": "t4", "title": "Control Flow: Conditionals, Loops, and Exception Handling" },
-          { "id": "t5", "title": "Functions & File Handling: Modules, CSV Processing, and Basic Debugging" },
-          { "id": "t6", "title": "AI & App Integration: ChatGPT Debugging, Streamlit, and Generative AI Apps" },
-          { "id": "p1", "title": "Project: Student Grade Calculator (Loops, Averages, and CSV Export)" },
-          { "id": "p2", "title": "Project: Expense Tracker (Categorization and Summarization using Dicts/Lists)" }
-        ]
-      },
-      {
-        "id": "m3",
-        "title": "Big Data Terminologies",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Technical understanding of Distributed Computation & Storage" },
-          { "id": "t2", "title": "Structured, Unstructured, Semi Structured Data" },
-          { "id": "t3", "title": "File Formats : CSV, JSON, Parquet, AVRO, ORC" },
-          { "id": "t4", "title": "Horizontal Vs Vertical Scaling" },
-          { "id": "t5", "title": "File Compressions Techniques" },
-          { "id": "t6", "title": "Understanding of theoretical concepts mentioned in the topics" }
-        ]
-      },
-      {
-        "id": "m4",
-        "title": "Data Warehousing",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Facts" },
-          { "id": "t2", "title": "OLAPS" },
-          { "id": "t3", "title": "Dimensions" },
-          { "id": "t4", "title": "Star Schema" },
-          { "id": "t5", "title": "Snowflake Schema" },
-          { "id": "t6", "title": "Data Model Types" },
-          { "id": "t7", "title": "Data Integrity" },
-          { "id": "t8", "title": "Metadata" },
-          { "id": "t9", "title": "Slowly Changing Dimensions" },
-          { "id": "t10", "title": "Data Warehouse Design Questions (Ex - Design Amazon's Data Warehouse)" },
-          { "id": "t11", "title": "Understanding of all theoretical concepts" },
-          { "id": "t12", "title": "Design dataware house for Ecommerce platform" }
-        ]
-      },
-      {
-        "id": "m5",
-        "title": "Hadoop",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Map-Reduce Functioning" },
-          { "id": "t3", "title": "HDFS" },
-          { "id": "t4", "title": "YARN" },
-          { "id": "t5", "title": "Blocks, Splits, Maps, Data Spilling, Heartbeats, Data Replication, FS Image, Checkpointing, High availibility" },
-          { "id": "t6", "title": "Hadoop Daemons (Namenode, Datanode, Secondry Namenode, Standby Namenode)" },
-          { "id": "t7", "title": "Setup hadoop in pseudo distributed mode in your machine , store large text file on HDFS and write Map-Reduce code to count frequency of each word" }
-        ]
-      },
-      {
-        "id": "m6",
-        "title": "Apache Hive",
-        "duration": "12 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Hive Installation" },
-          { "id": "t2", "title": "Query Syntax" },
-          { "id": "t3", "title": "Bulk Data Load => loading the data from local storage and from hdfs into hive table => load data local inpath / load data" },
-          { "id": "t4", "title": "Internal Vs External Tables" },
-          { "id": "t5", "title": "Static & Dynamic Partitioning" },
-          { "id": "t6", "title": "Bucketing" },
-          { "id": "t7", "title": "Map Side Join, Bucket Join and Sort Merge Bucket Join" },
-          { "id": "t8", "title": "Hive SerDe" },
-          { "id": "t9", "title": "UDF's in Hive" },
-          { "id": "t10", "title": "Query Optimization" },
-          { "id": "t11", "title": "Setup hive in local machine" },
-          { "id": "t12", "title": "Create internal and external tables using data stored in HDFS" },
-          { "id": "t13", "title": "Perform a bulk load with dynamic partitioning" },
-          { "id": "t14", "title": "Use Hive SerDe to create tables in hive for Json data" }
-        ]
-      },
-      {
-        "id": "m8",
-        "title": "Spark",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Complete Architecture" },
-          { "id": "t2", "title": "Spark Core" },
-          { "id": "t3", "title": "RDDs" },
-          { "id": "t4", "title": "Spark SQL - Spark SQL data structures, Advanced data manipulation, Analyzing data" },
-          { "id": "t5", "title": "Building and optimizing Spark SQL applications" },
-          { "id": "t6", "title": "Spark Read/Write operations" },
-          { "id": "t7", "title": "Lineage Graph, Lazy Evaluation" },
-          { "id": "t8", "title": "Actions, Transformations, Optimized Joins, Brodcaster, Accumulator" },
-          { "id": "t9", "title": "Understanding of Spark UI, Stages, Tasks" },
-          { "id": "t10", "title": "Spark Submit Command Options" },
-          { "id": "t11", "title": "Job optimization techniques" },
-          { "id": "t12", "title": "Spark Catalyst Optimizer" },
-          { "id": "t13", "title": "Static and Dynamic Resource allocation" },
-          { "id": "t14", "title": "Understanding Memory Usage in Spark (a) Cache & Persist (b) Java Serializer vs Kryo Serializer" },
-          { "id": "t15", "title": "Setup spark in local mode" },
-          { "id": "t16", "title": "Write Spark application to read CSV file and apply transformations using Spark Core/Sqprk SQL" },
-          { "id": "t17", "title": "Understand different parameters in spark submit command and different optimization technquies" }
-        ]
-      },
-      {
-        "id": "m9",
-        "title": "Kafka",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Producer" },
-          { "id": "t2", "title": "Consumer" },
-          { "id": "t3", "title": "Kafka Cluster, Cluster Setup, Brokers" },
-          { "id": "t4", "title": "Topics, Partitioning, Offset, Polling, Data Replication, Data Retention" },
-          { "id": "t5", "title": "Consumer Group" },
-          { "id": "t6", "title": "ZooKeeper" },
-          { "id": "t7", "title": "Create realtime datapipeline using MySQL as source for incremental data stream, Apache Kafka for messaging Queue and Spark Streaming for data transformation. Store transformed realtime data in any NoSQL database for Analytical queries" }
-        ]
-      },
-      {
-        "id": "m10",
-        "title": "Cloud Essentials & Fundamentals of AZURE",
-        "duration": "5 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Different Services (Iaas,Paas,Saas)" },
-          { "id": "t2", "title": "Azure Managed Identity and active directory management" },
-          { "id": "t3", "title": "Azure Network Security Group with different deployement models (Public, Private, Hybrid)" },
-          { "id": "t4", "title": "Microsoft Azure Key Vault" },
-          { "id": "t5", "title": "Azure Monitor with cost caluclator" },
-          { "id": "t6", "title": "Azure CLI Commands" },
-          { "id": "t7", "title": "Azure Virtual Machine" }
-        ]
-      },
-      {
-        "id": "m11",
-        "title": "BigData in AZURE",
-        "duration": "10 hrs",
-
-        "topics": [
-          { "id": "t1", "title": "Azure Blob/queue/table" },
-          { "id": "t2", "title": "Azure SQL database" },
-          { "id": "t3", "title": "Azure Data Lake gen 1 /gen 2" },
-          { "id": "t4", "title": "Azure Synapse analytics" },
-          { "id": "t5", "title": "Azure Cosmos DB" },
-          { "id": "t6", "title": "Azure Data Factory (Data Pipeline)" },
-          { "id": "t7", "title": "Azure Event Hubs" },
-          { "id": "t8", "title": "Azure Databricks (Data Processing)" },
-          { "id": "t9", "title": "Azure Scaling and Monitoring" },
-          { "id": "t10", "title": "Using ADF copy files from source azure blob to destination database, access on blob should be IAM role based. Lambda should be scheduled using cloudwatch rule." },
-          { "id": "t11", "title": "Setup one virtual machine instance and write one shell script to read text file from azure blob, use CLI commands for file transfer." },
-          { "id": "t12", "title": "Connect A databrick notebook to Azure cloud to run PySpark codes fo processing." },
-          { "id": "t13", "title": "Build real time datapipeline using Azure HDInsight as source , Azure Data Factory as queue and Azure CosmosDB as destination for analytical queries." }
-        ]
-      }
-    ]
+    "curriculum": DE_CURRICULUM
     ,
     projects: [
       {
@@ -4505,15 +3195,7 @@ const courses: Course[] = [
       //   videoId: "sVXjAIa7YBs"
       // }
     ],
-    outcomes: [
-      "Understand the complete data engineering lifecycle from ingestion to analytics-ready data",
-      "Design and implement ETL and ELT data pipelines",
-      "Work with relational and NoSQL databases",
-      "Build distributed data processing systems using Hadoop and Apache Spark",
-      "Implement batch and real-time data processing frameworks",
-      "Prepare for Data Engineer roles in Chennai’s competitive job market",
-
-    ],
+    outcomes: DE_OUTCOMES,
 
 
   },
