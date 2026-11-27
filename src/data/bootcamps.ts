@@ -32,6 +32,15 @@ export const youtubeChannelUrl = "https://youtube.com/ivyproschool";
 
 export const latestRecordings: BootcampRecording[] = [
   {
+    id: "fine-tuning-rag-prompting",
+    videoId: "OwEOZZsJMpE",
+    title: "Fine-Tuning vs RAG vs Prompting: Which Should You Use?",
+    category: "AI Apps",
+    youtubeUrl: "https://www.youtube.com/watch?v=OwEOZZsJMpE",
+    thumbnail: "https://i.ytimg.com/vi/OwEOZZsJMpE/hqdefault.jpg",
+    summary: "Compare prompting, RAG and fine-tuning, and learn how to pick the right approach for your AI use case.",
+  },
+  {
     id: "rag-chatbot-pdfs",
     videoId: "XdA_c5ARAhA",
     title: "RAG Explained: Build a Chatbot That Answers From Your PDFs",
