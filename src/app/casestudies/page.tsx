@@ -3481,7 +3481,7 @@ const CorporateDetailView: React.FC<{ caseStudy: CorporateCaseStudy; onBack: () 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white max-w-4xl mb-4">
             {title}
           </h1>
-          <ArticleDates path={`/casestudies/${detailSlug}`} jsonLd={false} className="text-sm text-slate-300 mb-3" />
+          <ArticleDates path={`/casestudies/${detailSlug}`} headline={title} className="text-sm text-slate-300 mb-3" />
           <p className="text-lg text-slate-300 max-w-3xl italic">{subtitle}</p>
         </div>
       </div>
@@ -3616,7 +3616,7 @@ const DrillDetailView: React.FC<{ drill: LearningDrill; onBack: () => void }> = 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white mb-3">
             {drill.title}
           </h1>
-          <ArticleDates path={`/casestudies/${detailSlug}`} jsonLd={false} className="text-sm text-slate-300 mb-3" />
+          <ArticleDates path={`/casestudies/${detailSlug}`} headline={drill.title} className="text-sm text-slate-300 mb-3" />
           <p className="text-slate-300 text-base mb-6 max-w-2xl">{drill.description}</p>
           <div className="flex flex-wrap items-center gap-2">
             <ToolBadge tool={drill.tool} />
